@@ -19,29 +19,31 @@
   function aggregateWrongAnswers() {
     const map = new Map();
     loadRecords().forEach(r => {
-      (r.wrongAnswers || []).forEach(a => {
-        const key = `${r.difficulty}|${a.question}`;
-        if (!map.has(key)) {
-          map.set(key, {
-            difficulty: r.difficultyLabel || r.difficulty,
-            question: a.question,
-            selectedLetter: a.selectedLetter,
-            selectedText: a.selectedText,
-            correctLetter: a.correctLetter,
-            correctText: a.correctText,
-            explanation: a.explanation,
-            count: 0,
-            last: r.submittedAt
-          });
-        }
-        const x = map.get(key);
-        x.count++;
-        if (r.submittedAt > x.last) {
-          x.last = r.submittedAt;
-          x.selectedLetter = a.selectedLetter;
-          x.selectedText = a.selectedText;
-        }
-      });
+      (r.wrongAnswers || [])
+        .filter(a => a && a.selectedIndex !== null && a.selectedIndex !== undefined && a.selectedLetter)
+        .forEach(a => {
+          const key = `${r.difficulty}|${a.question}`;
+          if (!map.has(key)) {
+            map.set(key, {
+              difficulty: r.difficultyLabel || r.difficulty,
+              question: a.question,
+              selectedLetter: a.selectedLetter,
+              selectedText: a.selectedText,
+              correctLetter: a.correctLetter,
+              correctText: a.correctText,
+              explanation: a.explanation,
+              count: 0,
+              last: r.submittedAt
+            });
+          }
+          const x = map.get(key);
+          x.count++;
+          if (r.submittedAt > x.last) {
+            x.last = r.submittedAt;
+            x.selectedLetter = a.selectedLetter;
+            x.selectedText = a.selectedText;
+          }
+        });
     });
     return [...map.values()].sort((a,b) => b.count - a.count || b.last.localeCompare(a.last));
   }
