@@ -28,7 +28,7 @@ jobs:
         with:
           enablement: true
       - name: Inject exam modules
-        run: sed -i 's#</body>#<script src="exam-option-randomizer.js?v=20260912-1"></script><script src="exam-records.js?v=20260912-2"></script><script src="exam-wrong-ui.js?v=20260912-1"></script><script src="exam-records-clear.js?v=20260912-3"></script><script src="exam-gpt-analysis.js?v=20260912-3"></script><script src="exam-catalog.js?v=20260912-1"></script></body>#' index.html
+        run: sed -i 's#</body>#<script src="exam-option-randomizer.js?v=20260912-1"></script><script src="exam-records.js?v=20260912-2"></script><script src="exam-wrong-ui.js?v=20260912-1"></script><script src="exam-records-clear.js?v=20260912-3"></script><script src="exam-gpt-analysis.js?v=20260912-3"></script><script src="exam-catalog.js?v=20260912-1"></script><script src="exam-past-exams.js?v=20260912-1"></script></body>#' index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
