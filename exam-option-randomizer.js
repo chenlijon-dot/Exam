@@ -35,38 +35,35 @@
     banks[key].forEach(shuffleQuestionOptions);
   }
 
-  function difficultyKey(button) {
-    if (button.classList.contains('easy')) return 'easy';
-    if (button.classList.contains('medium')) return 'medium';
-    if (button.classList.contains('hard')) return 'hard';
-    return null;
+  const originalStartExam = window.startExam;
+  if (typeof originalStartExam === 'function') {
+    window.startExam = function(selected) {
+      shuffleBank(selected);
+      return originalStartExam.call(this, selected);
+    };
   }
 
-  document.addEventListener('click', event => {
-    const difficultyButton = event.target.closest?.('.difficulty');
-    if (difficultyButton) {
-      const key = difficultyKey(difficultyButton);
-      if (key) shuffleBank(key);
-      return;
-    }
-
-    const restartButton = event.target.closest?.('#restartBtn');
-    if (!restartButton) return;
-
-    const originalConfirm = window.confirm;
-    window.confirm = message => {
-      const ok = originalConfirm.call(window, message);
-      if (ok && typeof level !== 'undefined') {
+  const originalRestart = window.restart;
+  if (typeof originalRestart === 'function') {
+    window.restart = function() {
+      if (!confirm('確定要清除目前答案，重新作答嗎？')) return;
+      if (typeof level !== 'undefined') {
         shuffleBank(level);
         if (typeof questions !== 'undefined' && typeof banks !== 'undefined') {
           questions = banks[level];
         }
       }
-      return ok;
+      graded = false;
+      render();
+      result.style.display = 'none';
+      document.getElementById('explainBtn').textContent = '顯示詳解';
+      window.scrollTo({top:0,behavior:'smooth'});
     };
 
-    queueMicrotask(() => {
-      window.confirm = originalConfirm;
-    });
-  }, true);
+    const restartBtn = document.getElementById('restartBtn');
+    if (restartBtn) {
+      restartBtn.replaceWith(restartBtn.cloneNode(true));
+      document.getElementById('restartBtn').addEventListener('click', window.restart);
+    }
+  }
 })();
