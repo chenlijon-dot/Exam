@@ -4,135 +4,175 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0f172a" />
-  <title>科學方法模擬考｜20 題</title>
+  <title>科學方法模擬考｜難易度選擇</title>
   <style>
     :root{--bg:#f6f8fb;--card:#fff;--ink:#172033;--muted:#657089;--line:#dfe5ee;--brand:#2563eb;--ok:#15803d;--bad:#b91c1c;--soft:#eef4ff}
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
-    .wrap{max-width:820px;margin:auto;padding:18px 14px 60px}
+    .wrap{max-width:840px;margin:auto;padding:18px 14px 70px}
     header{background:linear-gradient(135deg,#172554,#1d4ed8);color:#fff;border-radius:20px;padding:24px 20px;margin-bottom:16px;box-shadow:0 10px 28px rgba(15,23,42,.14)}
-    h1{font-size:1.65rem;margin:0 0 4px}
+    h1{font-size:1.65rem;margin:0 0 4px} h2{margin:0 0 8px}
     header p{margin:0;opacity:.9}
     .status{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     .pill{background:rgba(255,255,255,.14);padding:6px 10px;border-radius:999px;font-size:.92rem}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;box-shadow:0 4px 14px rgba(15,23,42,.04)}
-    .qtitle{font-weight:750;margin-bottom:12px}
-    .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--soft);color:var(--brand);margin-right:8px}
-    label.option{display:block;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;cursor:pointer;transition:.15s;background:#fff}
-    label.option:hover{border-color:#9db9fb;background:#f8fbff}
-    label.option:has(input:checked){border-color:var(--brand);background:#eff6ff}
+    .panel,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 14px rgba(15,23,42,.04)}
+    .panel{padding:22px;margin:14px 0}.card{padding:18px;margin:12px 0}
+    .difficulty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .difficulty{border:2px solid var(--line);background:#fff;border-radius:16px;padding:18px 14px;text-align:left;cursor:pointer;transition:.16s;min-height:150px}
+    .difficulty:hover{transform:translateY(-2px);border-color:#93b4fb;box-shadow:0 7px 20px rgba(37,99,235,.1)}
+    .difficulty strong{display:block;font-size:1.25rem;margin-bottom:5px}.difficulty span{display:block;color:var(--muted);font-size:.94rem}
+    .easy strong{color:#15803d}.medium strong{color:#b45309}.hard strong{color:#b91c1c}
+    .qtitle{font-weight:750;margin-bottom:12px}.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--soft);color:var(--brand);margin-right:8px}
+    label.option{display:block;border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:8px 0;cursor:pointer;transition:.15s;background:#fff}
+    label.option:hover{border-color:#9db9fb;background:#f8fbff}label.option:has(input:checked){border-color:var(--brand);background:#eff6ff}
     input[type=radio]{margin-right:8px;transform:scale(1.12)}
-    .correct{border-color:#86efac!important;background:#f0fdf4!important}
-    .wrong{border-color:#fca5a5!important;background:#fef2f2!important}
-    .explain{display:none;margin-top:10px;padding:10px 12px;border-left:4px solid #93c5fd;background:#f8fbff;border-radius:8px;color:#334155}
-    .explain.show{display:block}
+    .correct{border-color:#86efac!important;background:#f0fdf4!important}.wrong{border-color:#fca5a5!important;background:#fef2f2!important}
+    .explain{display:none;margin-top:10px;padding:10px 12px;border-left:4px solid #93c5fd;background:#f8fbff;border-radius:8px;color:#334155}.explain.show{display:block}
     .actions{position:sticky;bottom:0;background:rgba(246,248,251,.94);backdrop-filter:blur(10px);padding:12px 0 4px;display:flex;gap:10px;flex-wrap:wrap;z-index:5}
-    button{border:0;border-radius:12px;padding:11px 16px;font-size:1rem;font-weight:700;cursor:pointer}
-    .primary{background:var(--brand);color:white;flex:1;min-width:160px}
-    .secondary{background:#e2e8f0;color:#1e293b}
-    #result{display:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;text-align:center}
-    #result strong{font-size:1.8rem;color:var(--brand)}
-    .tiny{font-size:.9rem;color:var(--muted)}
-    @media (max-width:520px){h1{font-size:1.35rem}.card{padding:15px}.wrap{padding-left:10px;padding-right:10px}}
+    button{border:0;border-radius:12px;padding:11px 16px;font-size:1rem;font-weight:700;cursor:pointer}.primary{background:var(--brand);color:white;flex:1;min-width:160px}.secondary{background:#e2e8f0;color:#1e293b}
+    #result{display:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;text-align:center}#result strong{font-size:1.9rem;color:var(--brand)}
+    .tiny{font-size:.9rem;color:var(--muted)}.hidden{display:none!important}.center{text-align:center}
+    @media(max-width:620px){.difficulty-grid{grid-template-columns:1fr}.difficulty{min-height:auto}h1{font-size:1.38rem}.card{padding:15px}.wrap{padding-left:10px;padding-right:10px}}
   </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1>科學方法模擬考</h1>
-    <p>國一自然｜簡易選擇題 20 題</p>
-    <div class="status"><span class="pill" id="progress">已作答 0 / 20</span><span class="pill">每題 5 分</span><span class="pill">滿分 100 分</span></div>
-  </header>
+  <section id="startScreen">
+    <header><h1>科學方法模擬考</h1><p>國一自然｜選擇難易程度後開始作答</p></header>
+    <div class="panel">
+      <h2 class="center">請選擇難易程度</h2>
+      <p class="center tiny">每個難度 20 題，每題 5 分，滿分 100 分。</p>
+      <div class="difficulty-grid">
+        <button class="difficulty easy" onclick="startExam('easy')"><strong>簡易</strong><span>基本觀念、科學方法步驟、簡單變因判讀。</span></button>
+        <button class="difficulty medium" onclick="startExam('medium')"><strong>中等</strong><span>情境應用、實驗組與對照組、變因與結果判讀。</span></button>
+        <button class="difficulty hard" onclick="startExam('hard')"><strong>困難</strong><span>資料判讀、實驗缺陷、控制變因與結論有效性。</span></button>
+      </div>
+    </div>
+  </section>
 
-  <div id="result"></div>
-  <main id="quiz"></main>
-
-  <div class="actions">
-    <button class="primary" id="submitBtn">交卷看成績</button>
-    <button class="secondary" id="explainBtn">顯示詳解</button>
-    <button class="secondary" id="resetBtn">重新作答</button>
-  </div>
-  <p class="tiny">提示：選完答案後按「交卷看成績」，答錯題會標示紅色，正確答案會標示綠色。</p>
+  <section id="examScreen" class="hidden">
+    <header>
+      <h1 id="examTitle">科學方法模擬考</h1>
+      <p id="examSub">20 題選擇題</p>
+      <div class="status"><span class="pill" id="progress">已作答 0 / 20</span><span class="pill">每題 5 分</span><span class="pill">滿分 100 分</span></div>
+    </header>
+    <div id="result"></div>
+    <main id="quiz"></main>
+    <div class="actions">
+      <button class="primary" id="submitBtn">交卷看成績</button>
+      <button class="secondary" id="explainBtn">顯示詳解</button>
+      <button class="secondary" id="restartBtn">重新作答</button>
+      <button class="secondary" id="backBtn">選擇其他難度</button>
+    </div>
+    <p class="tiny">交卷後，綠色為正確答案，紅色為本次選錯的答案。</p>
+  </section>
 </div>
 <script>
-const questions = [
- {q:'小明看到窗邊的豆苗朝向陽光生長，這個步驟屬於科學方法中的哪一項？',o:['觀察','提出假說','設計實驗','下結論'],a:0,e:'先看到並記錄自然現象，屬於「觀察」。'},
- {q:'小明接著想：「植物是不是會朝有光的方向生長？」這屬於哪一個步驟？',o:['觀察','提出問題','實驗','結論'],a:1,e:'把觀察到的現象轉成想研究的疑問，就是「提出問題」。'},
- {q:'小明推測：「植物會朝向光源生長。」這句話屬於什麼？',o:['觀察結果','提出問題','提出假說','實驗結論'],a:2,e:'在實驗前，對問題提出可驗證的可能解釋，稱為假說。'},
- {q:'若要研究「水溫是否會影響水草產生氧氣的量」，研究者主動改變的條件是什麼？',o:['水草種類','水溫','水量','氧氣產生量'],a:1,e:'研究者刻意改變的因素是操縱變因，本題為水溫。'},
- {q:'承上題，最後測量「氧氣產生量」，這個項目屬於哪一種變因？',o:['操縱變因','控制變因','應變變因','固定變因'],a:2,e:'隨著操縱變因改變而被測量的結果，叫應變變因。'},
- {q:'要比較水溫對水草產生氧氣量的影響，除了水溫不同之外，水草種類、水量等條件應如何處理？',o:['每組都不同','盡量保持相同','不需要注意','隨機改變'],a:1,e:'為了公平比較，其他條件應保持相同，這些是控制變因。'},
- {q:'科學實驗中設置「對照組」最主要的目的是什麼？',o:['讓實驗比較漂亮','增加實驗時間','提供比較的基準','增加操縱變因'],a:2,e:'對照組提供基準，讓研究者判斷實驗處理是否造成差異。'},
- {q:'如果實驗結果和原本的假說不符合，最適當的處理方式是什麼？',o:['修改實驗數據','忽略實驗結果','檢討或修改假說','一定要維持原本假說'],a:2,e:'科學研究應忠實面對結果，必要時檢討實驗或修改假說，不能竄改數據。'},
- {q:'下列哪一個是較合理的科學方法順序？',o:['結論→觀察→假說→實驗','觀察→提出問題→提出假說→實驗','假說→結論→觀察→問題','實驗→問題→觀察→假說'],a:1,e:'常見流程為觀察、提出問題、提出假說、設計並進行實驗、分析結果、形成結論。'},
- {q:'小華想知道肥料是否會影響植物生長。他準備兩盆相同植物，一盆加肥料、一盆不加肥料，其他條件都相同。這樣設計的主要優點是什麼？',o:['可以同時研究很多因素','可以比較肥料是否造成影響','可以讓兩盆植物長得一樣','不需要再觀察結果'],a:1,e:'只有肥料條件不同，才能較清楚判斷肥料是否造成生長差異。'},
- {q:'小美發現冰箱裡的水果比較不容易腐爛，她若要進一步研究，較適合先做什麼？',o:['直接下結論','提出問題','修改數據','停止觀察'],a:1,e:'從觀察到的現象形成可研究的問題，是科學探究的重要起點。'},
- {q:'「溫度越低，水果腐爛得越慢」這句話在實驗前最可能屬於什麼？',o:['假說','實驗結果','觀察紀錄','結論'],a:0,e:'這是尚待實驗驗證的推測，所以屬於假說。'},
- {q:'為了研究光線是否影響植物生長，最適合改變哪一項？',o:['植物種類','光照條件','水量','花盆大小'],a:1,e:'研究光線的影響，就要把光照條件設為操縱變因。'},
- {q:'小華每天量一次豆苗高度，並記錄在表格中。這個動作主要是在做什麼？',o:['蒐集實驗資料','提出假說','提出問題','修改實驗'],a:0,e:'測量與紀錄是蒐集實驗資料。'},
- {q:'實驗完成後，把甲、乙兩組的結果拿來比較，這主要屬於哪個步驟？',o:['分析結果','提出問題','形成假說','準備器材'],a:0,e:'比較各組數據並找出差異，屬於結果分析。'},
- {q:'若要研究「肥料種類是否影響植物高度」，下列哪一項最好保持相同？',o:['肥料種類','植物種類','最後植物高度','實驗結果'],a:1,e:'肥料種類是操縱變因；植物種類應保持相同，避免干擾結果。'},
- {q:'小明連續做三次相同實驗，主要有什麼好處？',o:['增加結果的可靠性','讓假說一定正確','改變更多條件','不需要再分析結果'],a:0,e:'重複實驗有助於降低偶然誤差，讓結果更可靠。'},
- {q:'下列哪一項最適合當作「實驗結果」？',o:['我覺得植物喜歡陽光','植物可能需要水','第5天植物高度為12公分','為什麼植物會長高？'],a:2,e:'實驗結果應盡量是實際觀察或測量得到的資料。'},
- {q:'如果兩組實驗除了水量不同，連植物種類也不同，會造成什麼問題？',o:['比較結果較不容易判斷原因','實驗一定更準確','可以直接得到結論','不影響實驗'],a:0,e:'同時改變兩個因素，就難以判斷究竟是哪個因素造成結果差異。'},
- {q:'科學探究中，下列哪一項最適合放在最後？',o:['觀察現象','提出問題','分析結果後形成結論','提出假說'],a:2,e:'完成實驗並分析資料後，才能依證據形成結論。'}
-];
+const banks={
+ easy:[
+  {q:'小明看到豆苗朝向窗戶生長，這個步驟屬於科學方法中的哪一項？',o:['觀察','提出假說','設計實驗','下結論'],a:0,e:'先看到並記錄自然現象，屬於觀察。'},
+  {q:'「植物為什麼會朝向光源生長？」這句話屬於哪一個步驟？',o:['提出問題','實驗結果','結論','分析資料'],a:0,e:'把觀察到的現象轉成疑問，就是提出問題。'},
+  {q:'「我猜植物會朝光線較強的方向生長。」這句話最接近什麼？',o:['假說','結論','觀察','數據'],a:0,e:'實驗前對問題提出可驗證的推測，稱為假說。'},
+  {q:'若要研究水溫是否影響水草產生氧氣的量，研究者主動改變的是什麼？',o:['水溫','水草種類','水量','氧氣量'],a:0,e:'研究者刻意改變的因素稱為操縱變因，本題是水溫。'},
+  {q:'承上題，實驗最後測量氧氣產生量，氧氣產生量屬於什麼？',o:['操縱變因','應變變因','控制變因','對照組'],a:1,e:'最後觀察或測量的結果稱為應變變因。'},
+  {q:'研究光照對植物生長的影響時，植物種類應如何處理？',o:['每組不同','保持相同','隨機更換','不必理會'],a:1,e:'不是研究重點的條件應盡量保持相同。'},
+  {q:'科學實驗設置對照組的主要目的為何？',o:['增加題目難度','提供比較基準','改變更多條件','讓結果一定正確'],a:1,e:'對照組用來和實驗組比較。'},
+  {q:'如果實驗結果不符合原本假說，應該怎麼做？',o:['修改數據','檢討或修改假說','刪除結果','堅持假說一定正確'],a:1,e:'應忠實面對實驗結果，必要時修改假說或重新設計實驗。'},
+  {q:'下列哪一個順序較合理？',o:['觀察→提出問題→提出假說→實驗','結論→實驗→問題→觀察','假說→結論→觀察→實驗','實驗→結論→觀察→問題'],a:0,e:'科學探究通常由觀察開始，再提出問題與假說並進行實驗。'},
+  {q:'小華每天量豆苗高度並寫在表格中，這是在做什麼？',o:['提出問題','蒐集資料','修改假說','製造結果'],a:1,e:'實際測量並記錄屬於蒐集實驗資料。'},
+  {q:'實驗完成後比較甲、乙兩組數據，主要是在做什麼？',o:['分析結果','提出問題','準備器材','形成觀察'],a:0,e:'比較各組資料屬於分析結果。'},
+  {q:'小明把同一個實驗重複做三次，主要有什麼好處？',o:['增加可靠性','保證假說正確','可以不記錄','可以改更多條件'],a:0,e:'重複實驗可以降低偶然因素造成的影響。'},
+  {q:'下列何者最像實驗數據？',o:['植物好像喜歡陽光','第5天豆苗高12公分','我猜它會長高','為什麼它會長高'],a:1,e:'數據是實際測量或記錄得到的資料。'},
+  {q:'若研究肥料是否影響植物高度，最適合主動改變哪一項？',o:['肥料有無','植物種類','花盆大小','測量方式'],a:0,e:'研究肥料的效果，就以肥料有無或種類作為操縱變因。'},
+  {q:'若研究日照時間是否影響植物生長，最後量植物高度，植物高度是什麼？',o:['應變變因','操縱變因','控制變因','對照條件'],a:0,e:'植物高度是受到日照時間影響而被測量的結果。'},
+  {q:'兩組實驗只讓水量不同，其他條件都相同，這樣做主要是為了什麼？',o:['方便判斷水量的影響','讓植物一定長一樣','增加變因','省略觀察'],a:0,e:'只改一個主要條件，才能較清楚判斷它是否造成差異。'},
+  {q:'「在相同條件下，加肥料的植物平均較高。」這句話若來自實驗結果，最接近什麼？',o:['結論','提出問題','假說','觀察前的猜測'],a:0,e:'依實驗資料整理出的判斷可形成結論。'},
+  {q:'下列何者屬於控制變因？研究水溫對水草產氧量的影響時：',o:['水溫','產生的氧氣量','水草種類','實驗結論'],a:2,e:'水草種類不是研究重點，因此應保持相同。'},
+  {q:'一個好的實驗通常應該讓主要操縱變因有幾個？',o:['一個','越多越好','至少五個','完全不需要'],a:0,e:'基礎控制實驗通常一次只改變一個主要因素。'},
+  {q:'科學探究完成實驗與分析後，最後通常要做什麼？',o:['形成結論','重新提出第一個觀察','刪掉不喜歡的數據','把所有條件改掉'],a:0,e:'分析證據後，再依結果形成結論。'}
+ ],
+ medium:[
+  {q:'小文想研究鹽水濃度是否影響種子發芽率。甲組用清水，乙組用5%鹽水，兩組種子種類與數量相同。操縱變因是什麼？',o:['種子種類','種子數量','鹽水濃度','發芽率'],a:2,e:'研究者主動改變的是鹽水濃度。'},
+  {q:'承上題，最適合作為應變變因的是什麼？',o:['發芽種子的比例','鹽水濃度','種子種類','容器大小'],a:0,e:'發芽率是受鹽水濃度影響而被測量的結果。'},
+  {q:'研究溫度對麵包發霉速度的影響，甲組25°C、乙組5°C。下列哪一項應保持相同？',o:['溫度','麵包種類與大小','發霉速度','實驗結果'],a:1,e:'除了溫度外，麵包本身條件應相同。'},
+  {q:'甲組植物每天澆50 mL水並照光8小時；乙組每天澆100 mL水並照光4小時。若想研究水量的影響，這個設計最大的問題是什麼？',o:['沒有測量高度','同時改變水量和光照時間','水量太少','沒有植物'],a:1,e:'同時改兩個條件，無法判斷結果究竟由哪一因素造成。'},
+  {q:'小美觀察到熱天冰塊融得較快，因此提出「溫度愈高，冰塊融化愈快」。下一步最適合做什麼？',o:['直接宣布一定正確','設計實驗驗證','修改觀察紀錄','停止研究'],a:1,e:'假說提出後，需要透過適當實驗加以驗證。'},
+  {q:'研究光照強度對水草產氧量的影響，最適合如何量化產氧量？',o:['看起來很多或很少','一定時間內計算氣泡數','問同學感覺','只拍一張照片'],a:1,e:'用固定時間內的氣泡數，可得到較客觀的量化資料。'},
+  {q:'某實驗做一次得到結果後就立刻下結論。若要提高可信度，最適合增加哪項做法？',o:['重複實驗','多改幾個條件','刪除不一致數據','改用較漂亮的圖'],a:0,e:'重複實驗可以降低偶然誤差。'},
+  {q:'甲、乙兩盆同種植物，甲加肥料、乙不加肥料，其他相同。乙組的角色最可能是什麼？',o:['操縱變因','對照組','應變變因','實驗結果'],a:1,e:'未接受肥料處理的乙組可提供比較基準。'},
+  {q:'研究咖啡因是否影響心跳速率時，受試者喝咖啡前後都量心跳。心跳速率最接近哪一類？',o:['應變變因','操縱變因','控制變因','假說'],a:0,e:'心跳速率是被觀察與測量的結果。'},
+  {q:'若實驗結果顯示20°C與30°C的水草產氧量相同，最合理的說法是什麼？',o:['一定表示溫度完全沒有影響','在這次實驗條件下未觀察到差異','必須把數據改成不同','假說一定正確'],a:1,e:'科學結論應限制在實驗條件與觀察範圍內。'},
+  {q:'下列哪一項最能算是「操作型定義」？',o:['植物長得好','以7天後植物高度作為生長量指標','植物很健康','葉子看起來漂亮'],a:1,e:'明確說明如何測量某概念，才能客觀比較。'},
+  {q:'某生想研究水量對植物生長的影響，卻讓甲組放窗邊、乙組放暗櫃。這會產生什麼問題？',o:['光照成為干擾因素','水量不存在','植物種類一定不同','不能測量高度'],a:0,e:'光照也不同，使水量以外又多了一個可能影響結果的因素。'},
+  {q:'研究肥料A與肥料B對植物高度的影響時，下列何者最合理？',o:['兩組使用同種植物並給相同水量','兩組使用不同植物較公平','A組每天量、B組不量','A組曬太陽、B組放黑暗處'],a:0,e:'除了肥料種類外，其他重要條件應保持相同。'},
+  {q:'實驗資料：甲組平均高10 cm、乙組平均高15 cm。若甲乙唯一差別是乙有施肥，可先得到哪個結論？',o:['施肥可能促進此條件下的生長','所有植物都一定需要同一肥料','肥料永遠有效','甲組測量一定錯誤'],a:0,e:'資料支持在本次條件下施肥組較高，但不宜無限外推。'},
+  {q:'某同學只挑選符合假說的數據，忽略不符合的數據。這最違反科學研究的哪個原則？',o:['客觀記錄結果','多使用器材','題目要困難','假說必須正確'],a:0,e:'研究應如實呈現觀察與測量結果。'},
+  {q:'想比較30°C和20°C對水草產氧量的影響，哪一組設計最好？',o:['兩組水溫不同，其餘相同','兩組水溫與水草種類都不同','兩組水溫、水量、光線全不同','只做30°C一組'],a:0,e:'只有水溫不同時，才容易把結果差異歸因於水溫。'},
+  {q:'某實驗的結果與假說不一致，下列何者最不適當？',o:['檢查操作是否有問題','重新實驗','修改假說','修改數據使其符合假說'],a:3,e:'數據不可因不符合預期而被竄改。'},
+  {q:'研究不同水溫對魚活動量的影響，何者最適合當控制變因？',o:['水溫','魚的種類與數量','每分鐘游動次數','最後結論'],a:1,e:'魚的種類與數量需要一致，以避免額外因素干擾。'},
+  {q:'一位同學說：「因為昨天吃巧克力後考得比較好，所以巧克力會提升成績。」最大的問題是什麼？',o:['沒有控制其他可能因素，也只有單次觀察','巧克力一定無效','考試不能量化','任何觀察都沒用'],a:0,e:'單次個人觀察無法排除睡眠、準備程度等其他因素。'},
+  {q:'如果想知道一項結論是否受到數據支持，最先應該做什麼？',o:['比較結論與實際實驗結果','看答案字數','看圖表顏色','看同學是否同意'],a:0,e:'科學結論應以實際證據與資料為基礎。'}
+ ],
+ hard:[
+  {q:'甲組：30°C、水蘊草、100 mL水；乙組：20°C、水蘊草、100 mL水；丙組：30°C、金魚藻、100 mL水。若要研究「水溫對水草產氧量的影響」，最佳比較是哪兩組？',o:['甲與乙','甲與丙','乙與丙','三組一起直接比較'],a:0,e:'甲乙只有水溫不同，其他列出的主要條件相同。'},
+  {q:'承上題，若要研究「水草種類對產氧量的影響」，較適合比較哪兩組？',o:['甲與乙','甲與丙','乙與丙','沒有任何兩組可比較'],a:1,e:'甲丙溫度與水量相同，水草種類不同。'},
+  {q:'研究光照時間對豆苗高度的影響。甲組照4小時、乙組照8小時，7天後甲平均8 cm、乙平均12 cm。下列結論何者最恰當？',o:['在本次條件下，較長光照與較高豆苗高度相關','所有植物照8小時一定最高','光照是植物高度唯一因素','任何植物都應照8小時'],a:0,e:'結論不應超出本次實驗的物種、條件與測量範圍。'},
+  {q:'甲組放10粒種子、乙組放100粒種子，最後甲發芽8粒、乙發芽70粒。若要比較發芽表現，最合理的比較方式是什麼？',o:['比較發芽粒數','比較發芽率','只看甲組','只看乙組'],a:1,e:'兩組總數不同，應以比例或發芽率比較。'},
+  {q:'某同學研究肥料濃度對植物生長的影響，使用0%、1%、2%、3%四組。這種設計比只做「有肥料／無肥料」多了什麼資訊？',o:['可觀察不同濃度下的變化趨勢','保證結果一定正確','不需要控制水量','可以不設對照組'],a:0,e:'多個濃度可幫助判斷是否存在劑量與反應的趨勢。'},
+  {q:'某實驗甲乙兩組平均值不同，但每組只測一個樣本。最主要的限制是什麼？',o:['樣本太少，可能受個別差異影響','平均值不能使用','任何差異都一定錯','必須改成三個操縱變因'],a:0,e:'樣本過少時，個別差異或偶然因素可能對結果影響很大。'},
+  {q:'同學想驗證「溫度越高，酵母作用越快」，只測20°C與40°C，發現40°C較快。下列何者不能由此直接推出？',o:['40°C在本次測量中比20°C快','所有更高溫度都一定更快','溫度可能影響反應速度','需要更多溫度點檢驗趨勢'],a:1,e:'只比較兩個溫度，不能推論溫度無限升高都會更快。'},
+  {q:'甲乙兩組條件完全相同，只有甲加藥物。若甲生長較慢，下列哪個說法最符合科學態度？',o:['藥物可能造成生長變慢，仍可重複實驗確認','藥物一定對所有生物有害','乙組一定造假','甲組結果應刪除'],a:0,e:'結果可支持可能的影響，但仍應透過重複與更多證據確認。'},
+  {q:'研究光線顏色對水草產氧量的影響，紅光組燈距10 cm、藍光組燈距30 cm。主要問題是什麼？',o:['燈距也改變，可能造成光強度差異','沒有使用水草','不能測氣泡','顏色不能當操縱變因'],a:0,e:'燈距不同會讓光強度成為額外變因。'},
+  {q:'某同學先看完結果後才改寫假說，使假說完全符合結果，再說「假說已被預測證實」。這樣有何問題？',o:['把事後解釋當成事前預測','不能提出假說','資料太多','實驗一定無效'],a:0,e:'假說應在檢驗前提出，否則不能把事後配合結果的說法當成原先預測。'},
+  {q:'甲組平均12 cm、乙組平均12.2 cm。若測量尺最小刻度為1 cm，下列判斷何者較謹慎？',o:['0.2 cm差異可能小於測量精度，不能過度解讀','乙一定明顯較高','甲一定測錯','0.2 cm表示效果非常巨大'],a:0,e:'測量工具的精度會限制我們解讀細微差異的能力。'},
+  {q:'若同一實驗由不同同學操作得到差異很大的結果，下一步較合理的是什麼？',o:['檢查操作流程是否一致並增加重複次數','選最高的結果','只保留符合假說者','直接宣布任何結果都不可信'],a:0,e:'先檢查方法與操作一致性，再透過重複實驗確認。'},
+  {q:'研究「水溫影響魚每分鐘呼吸次數」，若每次換溫度後立刻測量，可能出現什麼問題？',o:['魚尚未適應新溫度，影響測量','水溫不能改變','呼吸次數不能測','沒有操縱變因'],a:0,e:'實驗程序中的適應時間也可能影響結果，應標準化。'},
+  {q:'甲、乙、丙三組分別用10、20、30 mL水澆同種植物，但花盆大小也分別不同。若生長量不同，為何不能只歸因於水量？',o:['花盆大小也是可能影響生長的變因','水量不是變因','植物不會生長','三組不能做任何比較'],a:0,e:'花盆大小沒有被控制，因此也是可能造成差異的因素。'},
+  {q:'某研究發現「運動較多的學生睡得較久」，下列何者最合理？',o:['只能說兩者在資料中有關聯，不能直接證明運動造成睡眠增加','一定證明運動使人睡久','一定證明睡久使人運動','可忽略其他因素'],a:0,e:'觀察到關聯不一定代表因果，仍可能有其他因素。'},
+  {q:'一項植物實驗中，對照組死亡率也非常高。這通常暗示什麼？',o:['可能有共同環境或操作問題需要檢查','實驗組一定有效','對照組不重要','應刪掉對照組'],a:0,e:'對照組異常可提示培養環境、操作或材料本身可能有問題。'},
+  {q:'若研究者先設定「植物高度增加至少2 cm才算有明顯生長」，這個設定的主要好處是什麼？',o:['使判定標準較明確一致','保證結果正確','可以不測量','可任意更改結果'],a:0,e:'事先定義判定方式可減少主觀判斷。'},
+  {q:'實驗結果甲組5次為9、10、10、11、30，乙組5次為9、10、10、11、10。甲組的30最值得先做什麼？',o:['檢查是否有測量或操作異常，再決定如何處理','立刻刪除','一定保留並當主要結論','把乙組也改成30'],a:0,e:'極端值應先查明原因，不能因不順眼就任意刪除。'},
+  {q:'想驗證「肥料A比肥料B更能促進生長」，下列何者是最直接的實驗設計？',o:['相同植物分組，只改施用A或B，其他條件相同','A用豆苗，B用仙人掌','A放陽光下，B放暗處','A澆水，B完全不澆水'],a:0,e:'只有肥料種類不同，才能較直接比較A與B。'},
+  {q:'某次實驗支持假說，但另三次重複實驗都不支持。最合理的態度是什麼？',o:['綜合所有結果重新評估假說與方法','只保留第一次','把後三次刪掉','假說既然曾成功一次就一定正確'],a:0,e:'科學結論應綜合全部可靠證據，而不是挑選單一有利結果。'}
+ ]
+};
 
-const quiz = document.getElementById('quiz');
-const result = document.getElementById('result');
-const letters = ['A','B','C','D'];
+const names={easy:'簡易',medium:'中等',hard:'困難'};
+const letters=['A','B','C','D'];
+let level='easy';
+let questions=[];
+let graded=false;
+const startScreen=document.getElementById('startScreen');
+const examScreen=document.getElementById('examScreen');
+const quiz=document.getElementById('quiz');
+const result=document.getElementById('result');
 
+function startExam(selected){
+ level=selected; questions=banks[level]; graded=false;
+ startScreen.classList.add('hidden'); examScreen.classList.remove('hidden');
+ document.getElementById('examTitle').textContent=`科學方法模擬考｜${names[level]}`;
+ document.getElementById('examSub').textContent=`${names[level]}程度｜20 題選擇題`;
+ render(); result.style.display='none'; document.getElementById('explainBtn').textContent='顯示詳解';
+ window.scrollTo({top:0,behavior:'smooth'});
+}
 function render(){
-  quiz.innerHTML = questions.map((x,i)=>`<section class="card" data-q="${i}">
-    <div class="qtitle"><span class="num">${i+1}</span>${x.q}</div>
-    ${x.o.map((v,j)=>`<label class="option" data-opt="${j}"><input type="radio" name="q${i}" value="${j}">(${letters[j]}) ${v}</label>`).join('')}
-    <div class="explain"><b>答案：${letters[x.a]}</b>　${x.e}</div>
-  </section>`).join('');
-  bindProgress();
+ quiz.innerHTML=questions.map((x,i)=>`<section class="card" data-q="${i}"><div class="qtitle"><span class="num">${i+1}</span>${x.q}</div>${x.o.map((v,j)=>`<label class="option" data-opt="${j}"><input type="radio" name="q${i}" value="${j}">(${letters[j]}) ${v}</label>`).join('')}<div class="explain"><b>答案：${letters[x.a]}</b>　${x.e}</div></section>`).join('');
+ document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',updateProgress)); updateProgress();
 }
-
-function bindProgress(){
-  document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change', updateProgress));
-  updateProgress();
-}
-function updateProgress(){
-  let n=0; questions.forEach((_,i)=>{if(document.querySelector(`input[name=q${i}]:checked`)) n++;});
-  document.getElementById('progress').textContent=`已作答 ${n} / ${questions.length}`;
-}
-
+function updateProgress(){let n=0;questions.forEach((_,i)=>{if(document.querySelector(`input[name=q${i}]:checked`))n++;});document.getElementById('progress').textContent=`已作答 ${n} / 20`;}
 function grade(){
-  let score=0, answered=0;
-  questions.forEach((x,i)=>{
-    const card=document.querySelector(`[data-q="${i}"]`);
-    const picked=document.querySelector(`input[name=q${i}]:checked`);
-    card.querySelectorAll('.option').forEach(l=>l.classList.remove('correct','wrong'));
-    card.querySelector(`[data-opt="${x.a}"]`).classList.add('correct');
-    if(picked){
-      answered++;
-      if(Number(picked.value)===x.a) score++;
-      else card.querySelector(`[data-opt="${picked.value}"]`).classList.add('wrong');
-    }
-  });
-  const points=score*5;
-  result.style.display='block';
-  result.innerHTML=`<strong>${points} 分</strong><div>答對 ${score} / 20 題${answered<20?`，尚有 ${20-answered} 題未作答`:''}</div>`;
-  result.scrollIntoView({behavior:'smooth',block:'center'});
+ let score=0,answered=0;graded=true;
+ questions.forEach((x,i)=>{const card=document.querySelector(`[data-q="${i}"]`);const picked=document.querySelector(`input[name=q${i}]:checked`);card.querySelectorAll('.option').forEach(l=>l.classList.remove('correct','wrong'));card.querySelector(`[data-opt="${x.a}"]`).classList.add('correct');if(picked){answered++;if(Number(picked.value)===x.a)score++;else card.querySelector(`[data-opt="${picked.value}"]`).classList.add('wrong');}});
+ const points=score*5;let msg=points>=90?'非常穩！':points>=70?'基礎不錯，再看一下錯題。':points>=60?'有抓到重點，錯題值得再複習。':'建議先看詳解，再重新挑戰一次。';
+ result.style.display='block';result.innerHTML=`<strong>${points} 分</strong><div>${names[level]}程度｜答對 ${score} / 20 題${answered<20?`，未作答 ${20-answered} 題`:''}</div><div class="tiny" style="margin-top:6px">${msg}</div>`;result.scrollIntoView({behavior:'smooth',block:'center'});
 }
-
+function toggleExplain(){const boxes=[...document.querySelectorAll('.explain')];const show=boxes.some(x=>!x.classList.contains('show'));boxes.forEach(x=>x.classList.toggle('show',show));document.getElementById('explainBtn').textContent=show?'隱藏詳解':'顯示詳解';}
+function restart(){if(!confirm('確定要清除目前答案，重新作答嗎？'))return;graded=false;render();result.style.display='none';document.getElementById('explainBtn').textContent='顯示詳解';window.scrollTo({top:0,behavior:'smooth'});}
+function backToLevels(){startScreen.classList.remove('hidden');examScreen.classList.add('hidden');result.style.display='none';window.scrollTo({top:0,behavior:'smooth'});}
 document.getElementById('submitBtn').addEventListener('click',grade);
-document.getElementById('explainBtn').addEventListener('click',e=>{
-  const boxes=[...document.querySelectorAll('.explain')];
-  const show=boxes.some(x=>!x.classList.contains('show'));
-  boxes.forEach(x=>x.classList.toggle('show',show));
-  e.target.textContent=show?'隱藏詳解':'顯示詳解';
-});
-document.getElementById('resetBtn').addEventListener('click',()=>{
-  if(!confirm('確定要清除目前答案，重新作答嗎？')) return;
-  render(); result.style.display='none';
-  document.getElementById('explainBtn').textContent='顯示詳解';
-  window.scrollTo({top:0,behavior:'smooth'});
-});
-render();
+document.getElementById('explainBtn').addEventListener('click',toggleExplain);
+document.getElementById('restartBtn').addEventListener('click',restart);
+document.getElementById('backBtn').addEventListener('click',backToLevels);
 </script>
 </body>
 </html>
