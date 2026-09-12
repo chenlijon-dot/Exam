@@ -105,7 +105,7 @@
       unanswered,
       total: answers.length,
       answers,
-      wrongAnswers: answers.filter(a => !a.isCorrect)
+      wrongAnswers: answers.filter(a => a.selectedIndex !== null && !a.isCorrect)
     };
   }
 
@@ -232,7 +232,7 @@
       content.innerHTML = '<p>目前還沒有作答紀錄。完成一次考試後，成績會出現在這裡。</p>';
     } else {
       const avg = Math.round(records.reduce((s,r)=>s+r.score,0) / records.length);
-      content.innerHTML = `<p><b>共 ${records.length} 次</b>｜平均 ${avg} 分</p><table class="record-table"><thead><tr><th>時間</th><th>難度</th><th>分數</th><th>錯題</th><th>時間</th></tr></thead><tbody>${records.map(r=>`<tr><td>${formatLocalTime(r.submittedAt)}</td><td><span class="record-chip">${r.difficultyLabel}</span></td><td><b>${r.score}</b></td><td>${r.incorrect + r.unanswered}</td><td>${Math.floor((r.durationSeconds||0)/60)}分${(r.durationSeconds||0)%60}秒</td></tr>`).join('')}</tbody></table>`;
+      content.innerHTML = `<p><b>共 ${records.length} 次</b>｜平均 ${avg} 分</p><table class="record-table"><thead><tr><th>時間</th><th>難度</th><th>分數</th><th>答錯</th><th>未答</th><th>時間</th></tr></thead><tbody>${records.map(r=>`<tr><td>${formatLocalTime(r.submittedAt)}</td><td><span class="record-chip">${r.difficultyLabel}</span></td><td><b>${r.score}</b></td><td>${r.incorrect || 0}</td><td>${r.unanswered || 0}</td><td>${Math.floor((r.durationSeconds||0)/60)}分${(r.durationSeconds||0)%60}秒</td></tr>`).join('')}</tbody></table>`;
     }
     modal.classList.add('show');
   }
@@ -240,7 +240,7 @@
   function aggregateWrongAnswers() {
     const map = new Map();
     loadRecords().forEach(r => {
-      (r.wrongAnswers || []).forEach(a => {
+      (r.wrongAnswers || []).filter(a => a.selectedIndex !== null && a.selectedLetter !== null).forEach(a => {
         const key = `${r.difficulty}|${a.question}`;
         if (!map.has(key)) map.set(key, { ...a, difficultyLabel:r.difficultyLabel, count:0, last:r.submittedAt });
         const x = map.get(key); x.count++; if (r.submittedAt > x.last) x.last = r.submittedAt;
@@ -254,7 +254,7 @@
     const modal = $('#wrongModal');
     const content = $('.record-content', modal);
     if (!list.length) content.innerHTML = '<p>目前沒有錯題紀錄。漂亮！</p>';
-    else content.innerHTML = `<p>目前累積 <b>${list.length}</b> 個曾答錯題目，依錯誤次數排序。</p>${list.map(x=>`<div class="wrong-item"><div style="display:flex;justify-content:space-between;gap:8px"><b>${x.difficultyLabel}｜${x.question}</b><span class="wrong-count">錯 ${x.count} 次</span></div><div style="margin-top:6px">你最近選：${x.selectedLetter ? `${x.selectedLetter}. ${x.selectedText}` : '未作答'}</div><div>正解：<b>${x.correctLetter}. ${x.correctText}</b></div>${x.explanation ? `<div class="record-note">${x.explanation}</div>` : ''}</div>`).join('')}`;
+    else content.innerHTML = `<p>目前累積 <b>${list.length}</b> 個曾答錯題目，依錯誤次數排序。未作答題目不列入錯題。</p>${list.map(x=>`<div class="wrong-item"><div style="display:flex;justify-content:space-between;gap:8px"><b>${x.difficultyLabel}｜${x.question}</b><span class="wrong-count">錯 ${x.count} 次</span></div><div style="margin-top:6px">你最近選：${x.selectedLetter}. ${x.selectedText}</div><div>正解：<b>${x.correctLetter}. ${x.correctText}</b></div>${x.explanation ? `<div class="record-note">${x.explanation}</div>` : ''}</div>`).join('')}`;
     modal.classList.add('show');
   }
 
