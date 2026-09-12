@@ -104,7 +104,7 @@
       method:'PUT',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        message:`Request GPT wrong-answer analysis ${id}`,
+        message:`Request Gemini wrong-answer analysis ${id}`,
         content:utf8ToBase64(JSON.stringify(payload,null,2)),
         branch:'main'
       })
@@ -127,7 +127,7 @@
 
   async function waitForAnalysis(id, statusEl) {
     for (let i=0; i<36; i++) {
-      statusEl.textContent = `GPT 正在分析錯題… ${i ? `(${i*5} 秒)` : ''}`;
+      statusEl.textContent = `Gemini 正在分析錯題… ${i ? `(${i*5} 秒)` : ''}`;
       const result = await fetchAnalysisResult(id);
       if (result) return result;
       await sleep(5000);
@@ -139,9 +139,9 @@
     if (result.status === 'completed') {
       box.innerHTML = `
         <div style="border:1px solid #bfdbfe;background:#eff6ff;border-radius:14px;padding:14px;margin-top:12px">
-          <div style="font-weight:800;margin-bottom:8px">🤖 GPT 學習診斷</div>
+          <div style="font-weight:800;margin-bottom:8px">🤖 AI 學習診斷</div>
           <div style="white-space:pre-wrap;line-height:1.75">${escapeHtml(result.analysis || '')}</div>
-          <div class="record-note" style="margin-top:8px">模型：${escapeHtml(result.model || 'OpenAI')}</div>
+          <div class="record-note" style="margin-top:8px">模型：${escapeHtml(result.model || 'Gemini')}</div>
         </div>`;
     } else {
       box.innerHTML = `<div style="border:1px solid #fed7aa;background:#fff7ed;border-radius:12px;padding:12px;margin-top:12px;color:#9a3412">分析失敗：${escapeHtml(result.error || '未知錯誤')}</div>`;
@@ -159,7 +159,7 @@
       return;
     }
     if (!getToken()) {
-      alert('請先到「GitHub 同步設定」輸入 Token，GPT 分析會透過私人 Exam-Record 執行。');
+      alert('請先到「GitHub 同步設定」輸入 Token，AI 分析會透過私人 Exam-Record 執行。');
       return;
     }
 
@@ -196,8 +196,8 @@
       area.style.cssText = 'margin:14px 0;padding:12px;border:1px solid #dbeafe;border-radius:14px;background:#f8fbff';
       area.innerHTML = `
         <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
-          <div><b>AI 錯題診斷</b><div class="record-note">讓 GPT 從累積錯題找出共同弱點與複習方向。</div></div>
-          <button id="gptWrongAnalysisBtn" class="record-btn" style="border-color:#93c5fd;color:#1d4ed8">🤖 GPT 分析</button>
+          <div><b>AI 錯題診斷</b><div class="record-note">讓 Gemini 從累積錯題找出共同弱點與複習方向。</div></div>
+          <button id="gptWrongAnalysisBtn" class="record-btn" style="border-color:#93c5fd;color:#1d4ed8">🤖 AI 分析</button>
         </div>
         <div id="gptAnalysisStatus" class="sync-status"></div>
         <div id="gptAnalysisResult"></div>
