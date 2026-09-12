@@ -27,6 +27,8 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Inject record module
+        run: sed -i 's#</body>#<script src="exam-records.js"></script></body>#' index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
