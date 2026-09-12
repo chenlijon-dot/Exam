@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>科學方法模擬考｜20 題</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#fff;--ink:#172033;--muted:#657089;--line:#dfe5ee;--brand:#2563eb;--ok:#15803d;--bad:#b91c1c;--soft:#eef4ff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+    .wrap{max-width:820px;margin:auto;padding:18px 14px 60px}
+    header{background:linear-gradient(135deg,#172554,#1d4ed8);color:#fff;border-radius:20px;padding:24px 20px;margin-bottom:16px;box-shadow:0 10px 28px rgba(15,23,42,.14)}
+    h1{font-size:1.65rem;margin:0 0 4px}
+    header p{margin:0;opacity:.9}
+    .status{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{background:rgba(255,255,255,.14);padding:6px 10px;border-radius:999px;font-size:.92rem}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;box-shadow:0 4px 14px rgba(15,23,42,.04)}
+    .qtitle{font-weight:750;margin-bottom:12px}
+    .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--soft);color:var(--brand);margin-right:8px}
+    label.option{display:block;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;cursor:pointer;transition:.15s;background:#fff}
+    label.option:hover{border-color:#9db9fb;background:#f8fbff}
+    label.option:has(input:checked){border-color:var(--brand);background:#eff6ff}
+    input[type=radio]{margin-right:8px;transform:scale(1.12)}
+    .correct{border-color:#86efac!important;background:#f0fdf4!important}
+    .wrong{border-color:#fca5a5!important;background:#fef2f2!important}
+    .explain{display:none;margin-top:10px;padding:10px 12px;border-left:4px solid #93c5fd;background:#f8fbff;border-radius:8px;color:#334155}
+    .explain.show{display:block}
+    .actions{position:sticky;bottom:0;background:rgba(246,248,251,.94);backdrop-filter:blur(10px);padding:12px 0 4px;display:flex;gap:10px;flex-wrap:wrap;z-index:5}
+    button{border:0;border-radius:12px;padding:11px 16px;font-size:1rem;font-weight:700;cursor:pointer}
+    .primary{background:var(--brand);color:white;flex:1;min-width:160px}
+    .secondary{background:#e2e8f0;color:#1e293b}
+    #result{display:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;text-align:center}
+    #result strong{font-size:1.8rem;color:var(--brand)}
+    .tiny{font-size:.9rem;color:var(--muted)}
+    @media (max-width:520px){h1{font-size:1.35rem}.card{padding:15px}.wrap{padding-left:10px;padding-right:10px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>科學方法模擬考</h1>
+    <p>國一自然｜簡易選擇題 20 題</p>
+    <div class="status"><span class="pill" id="progress">已作答 0 / 20</span><span class="pill">每題 5 分</span><span class="pill">滿分 100 分</span></div>
+  </header>
+
+  <div id="result"></div>
+  <main id="quiz"></main>
+
+  <div class="actions">
+    <button class="primary" id="submitBtn">交卷看成績</button>
+    <button class="secondary" id="explainBtn">顯示詳解</button>
+    <button class="secondary" id="resetBtn">重新作答</button>
+  </div>
+  <p class="tiny">提示：選完答案後按「交卷看成績」，答錯題會標示紅色，正確答案會標示綠色。</p>
+</div>
+<script>
+const questions = [
+ {q:'小明看到窗邊的豆苗朝向陽光生長，這個步驟屬於科學方法中的哪一項？',o:['觀察','提出假說','設計實驗','下結論'],a:0,e:'先看到並記錄自然現象，屬於「觀察」。'},
+ {q:'小明接著想：「植物是不是會朝有光的方向生長？」這屬於哪一個步驟？',o:['觀察','提出問題','實驗','結論'],a:1,e:'把觀察到的現象轉成想研究的疑問，就是「提出問題」。'},
+ {q:'小明推測：「植物會朝向光源生長。」這句話屬於什麼？',o:['觀察結果','提出問題','提出假說','實驗結論'],a:2,e:'在實驗前，對問題提出可驗證的可能解釋，稱為假說。'},
+ {q:'若要研究「水溫是否會影響水草產生氧氣的量」，研究者主動改變的條件是什麼？',o:['水草種類','水溫','水量','氧氣產生量'],a:1,e:'研究者刻意改變的因素是操縱變因，本題為水溫。'},
+ {q:'承上題，最後測量「氧氣產生量」，這個項目屬於哪一種變因？',o:['操縱變因','控制變因','應變變因','固定變因'],a:2,e:'隨著操縱變因改變而被測量的結果，叫應變變因。'},
+ {q:'要比較水溫對水草產生氧氣量的影響，除了水溫不同之外，水草種類、水量等條件應如何處理？',o:['每組都不同','盡量保持相同','不需要注意','隨機改變'],a:1,e:'為了公平比較，其他條件應保持相同，這些是控制變因。'},
+ {q:'科學實驗中設置「對照組」最主要的目的是什麼？',o:['讓實驗比較漂亮','增加實驗時間','提供比較的基準','增加操縱變因'],a:2,e:'對照組提供基準，讓研究者判斷實驗處理是否造成差異。'},
+ {q:'如果實驗結果和原本的假說不符合，最適當的處理方式是什麼？',o:['修改實驗數據','忽略實驗結果','檢討或修改假說','一定要維持原本假說'],a:2,e:'科學研究應忠實面對結果，必要時檢討實驗或修改假說，不能竄改數據。'},
+ {q:'下列哪一個是較合理的科學方法順序？',o:['結論→觀察→假說→實驗','觀察→提出問題→提出假說→實驗','假說→結論→觀察→問題','實驗→問題→觀察→假說'],a:1,e:'常見流程為觀察、提出問題、提出假說、設計並進行實驗、分析結果、形成結論。'},
+ {q:'小華想知道肥料是否會影響植物生長。他準備兩盆相同植物，一盆加肥料、一盆不加肥料，其他條件都相同。這樣設計的主要優點是什麼？',o:['可以同時研究很多因素','可以比較肥料是否造成影響','可以讓兩盆植物長得一樣','不需要再觀察結果'],a:1,e:'只有肥料條件不同，才能較清楚判斷肥料是否造成生長差異。'},
+ {q:'小美發現冰箱裡的水果比較不容易腐爛，她若要進一步研究，較適合先做什麼？',o:['直接下結論','提出問題','修改數據','停止觀察'],a:1,e:'從觀察到的現象形成可研究的問題，是科學探究的重要起點。'},
+ {q:'「溫度越低，水果腐爛得越慢」這句話在實驗前最可能屬於什麼？',o:['假說','實驗結果','觀察紀錄','結論'],a:0,e:'這是尚待實驗驗證的推測，所以屬於假說。'},
+ {q:'為了研究光線是否影響植物生長，最適合改變哪一項？',o:['植物種類','光照條件','水量','花盆大小'],a:1,e:'研究光線的影響，就要把光照條件設為操縱變因。'},
+ {q:'小華每天量一次豆苗高度，並記錄在表格中。這個動作主要是在做什麼？',o:['蒐集實驗資料','提出假說','提出問題','修改實驗'],a:0,e:'測量與紀錄是蒐集實驗資料。'},
+ {q:'實驗完成後，把甲、乙兩組的結果拿來比較，這主要屬於哪個步驟？',o:['分析結果','提出問題','形成假說','準備器材'],a:0,e:'比較各組數據並找出差異，屬於結果分析。'},
+ {q:'若要研究「肥料種類是否影響植物高度」，下列哪一項最好保持相同？',o:['肥料種類','植物種類','最後植物高度','實驗結果'],a:1,e:'肥料種類是操縱變因；植物種類應保持相同，避免干擾結果。'},
+ {q:'小明連續做三次相同實驗，主要有什麼好處？',o:['增加結果的可靠性','讓假說一定正確','改變更多條件','不需要再分析結果'],a:0,e:'重複實驗有助於降低偶然誤差，讓結果更可靠。'},
+ {q:'下列哪一項最適合當作「實驗結果」？',o:['我覺得植物喜歡陽光','植物可能需要水','第5天植物高度為12公分','為什麼植物會長高？'],a:2,e:'實驗結果應盡量是實際觀察或測量得到的資料。'},
+ {q:'如果兩組實驗除了水量不同，連植物種類也不同，會造成什麼問題？',o:['比較結果較不容易判斷原因','實驗一定更準確','可以直接得到結論','不影響實驗'],a:0,e:'同時改變兩個因素，就難以判斷究竟是哪個因素造成結果差異。'},
+ {q:'科學探究中，下列哪一項最適合放在最後？',o:['觀察現象','提出問題','分析結果後形成結論','提出假說'],a:2,e:'完成實驗並分析資料後，才能依證據形成結論。'}
+];
+
+const quiz = document.getElementById('quiz');
+const result = document.getElementById('result');
+const letters = ['A','B','C','D'];
+
+function render(){
+  quiz.innerHTML = questions.map((x,i)=>`<section class="card" data-q="${i}">
+    <div class="qtitle"><span class="num">${i+1}</span>${x.q}</div>
+    ${x.o.map((v,j)=>`<label class="option" data-opt="${j}"><input type="radio" name="q${i}" value="${j}">(${letters[j]}) ${v}</label>`).join('')}
+    <div class="explain"><b>答案：${letters[x.a]}</b>　${x.e}</div>
+  </section>`).join('');
+  bindProgress();
+}
+
+function bindProgress(){
+  document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change', updateProgress));
+  updateProgress();
+}
+function updateProgress(){
+  let n=0; questions.forEach((_,i)=>{if(document.querySelector(`input[name=q${i}]:checked`)) n++;});
+  document.getElementById('progress').textContent=`已作答 ${n} / ${questions.length}`;
+}
+
+function grade(){
+  let score=0, answered=0;
+  questions.forEach((x,i)=>{
+    const card=document.querySelector(`[data-q="${i}"]`);
+    const picked=document.querySelector(`input[name=q${i}]:checked`);
+    card.querySelectorAll('.option').forEach(l=>l.classList.remove('correct','wrong'));
+    card.querySelector(`[data-opt="${x.a}"]`).classList.add('correct');
+    if(picked){
+      answered++;
+      if(Number(picked.value)===x.a) score++;
+      else card.querySelector(`[data-opt="${picked.value}"]`).classList.add('wrong');
+    }
+  });
+  const points=score*5;
+  result.style.display='block';
+  result.innerHTML=`<strong>${points} 分</strong><div>答對 ${score} / 20 題${answered<20?`，尚有 ${20-answered} 題未作答`:''}</div>`;
+  result.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+document.getElementById('submitBtn').addEventListener('click',grade);
+document.getElementById('explainBtn').addEventListener('click',e=>{
+  const boxes=[...document.querySelectorAll('.explain')];
+  const show=boxes.some(x=>!x.classList.contains('show'));
+  boxes.forEach(x=>x.classList.toggle('show',show));
+  e.target.textContent=show?'隱藏詳解':'顯示詳解';
+});
+document.getElementById('resetBtn').addEventListener('click',()=>{
+  if(!confirm('確定要清除目前答案，重新作答嗎？')) return;
+  render(); result.style.display='none';
+  document.getElementById('explainBtn').textContent='顯示詳解';
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+render();
+</script>
+</body>
+</html>
