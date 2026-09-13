@@ -15,6 +15,11 @@
   function nowIso() { return new Date().toISOString(); }
   function pad(n) { return String(n).padStart(2, '0'); }
   function safeJsonParse(s, fallback) { try { return JSON.parse(s); } catch { return fallback; } }
+  function escapeHtml(s) {
+    return String(s ?? '').replace(/[&<>"']/g, ch => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[ch]));
+  }
 
   function loadRecords() {
     return safeJsonParse(localStorage.getItem(RECORDS_KEY) || '[]', []);
@@ -50,15 +55,24 @@
     return { key:'unknown', label:'未分類' };
   }
 
+  function currentContext() {
+    return window.examContextCurrent || {};
+  }
+
   function captureAttempt() {
     const cards = $$('.card[data-q]');
     if (!cards.length) return null;
 
-    const diff = difficultyFromTitle();
+    const ctx = currentContext();
+    const fallbackDiff = difficultyFromTitle();
+    const isAccuracyExam = ctx.scoreMode === 'percent' || ctx.examType === true;
     let correct = 0, incorrect = 0, unanswered = 0;
 
     const answers = cards.map((card, idx) => {
-      const question = $('.qtitle', card)?.textContent.replace(/^\s*\d+\s*/, '').trim() || `第${idx+1}題`;
+      const source = (typeof questions !== 'undefined' && questions[idx]) ? questions[idx] : {};
+      const question = $('.question-text', card)?.textContent.trim()
+        || $('.qtitle', card)?.textContent.replace(/^\s*\d+\s*/, '').trim()
+        || `第${idx+1}題`;
       const selected = $('input[type=radio]:checked', card);
       const selectedIndex = selected ? Number(selected.value) : null;
       const correctLabel = $('.option.correct', card);
@@ -67,13 +81,14 @@
       const explanation = $('.explain', card)?.textContent.replace(/^答案：\s*[A-D]\s*/,'').trim() || '';
       const options = $$('.option', card).map(o => o.textContent.trim().replace(/^\([A-D]\)\s*/, ''));
       const isCorrect = selectedIndex !== null && correctIndex !== null && selectedIndex === correctIndex;
+      const number = Number(card.dataset.questionNumber || source.number || idx + 1);
 
       if (selectedIndex === null) unanswered++;
       else if (isCorrect) correct++;
       else incorrect++;
 
       return {
-        number: idx + 1,
+        number,
         question,
         options,
         selectedIndex,
@@ -83,34 +98,51 @@
         correctLetter: correctIndex === null ? null : LETTERS[correctIndex],
         correctText: correctIndex === null ? null : options[correctIndex],
         isCorrect,
-        explanation
+        explanation,
+        intro: source.intro || '',
+        introLabel: source.introLabel || '',
+        image: source.image || '',
+        imageAlt: source.imageAlt || ''
       };
     });
 
     const submittedAt = nowIso();
     const durationSeconds = examStartedAt ? Math.max(0, Math.round((Date.now() - examStartedAt) / 1000)) : 0;
-    const score = correct * 5;
+    const total = answers.length;
+    const accuracyPercent = total ? Number((correct * 100 / total).toFixed(1)) : 0;
+    const pointsPerQuestion = Number(ctx.pointsPerQuestion ?? 5);
+    const score = isAccuracyExam ? null : correct * pointsPerQuestion;
 
     return {
-      schemaVersion: 1,
-      subject: '國一自然',
-      unit: '科學方法',
-      difficulty: diff.key,
-      difficultyLabel: diff.label,
+      schemaVersion: 2,
+      recordType: isAccuracyExam ? 'past-exam' : 'practice',
+      metricType: isAccuracyExam ? 'accuracy' : 'score',
+      examKey: ctx.key || ctx.difficulty || fallbackDiff.key,
+      examTypeLabel: ctx.examTypeLabel || '',
+      examYear: ctx.examYear ?? null,
+      examSession: ctx.examSession || '',
+      examSessionLabel: ctx.examSessionLabel || '',
+      subject: ctx.subject || (isAccuracyExam ? 'unknown' : 'science'),
+      subjectLabel: ctx.subjectLabel || (isAccuracyExam ? '未分類科目' : '國一自然'),
+      unit: ctx.unit || (isAccuracyExam ? ($('#examTitle')?.textContent || '歷屆考題') : '科學方法'),
+      difficulty: ctx.difficulty || fallbackDiff.key,
+      difficultyLabel: ctx.difficultyLabel || fallbackDiff.label,
+      analysisEligible: ctx.analysisEligible !== false,
       submittedAt,
       durationSeconds,
       score,
+      accuracyPercent,
       correct,
       incorrect,
       unanswered,
-      total: answers.length,
+      total,
       answers,
       wrongAnswers: answers.filter(a => a.selectedIndex !== null && !a.isCorrect)
     };
   }
 
   function makeSignature(attempt) {
-    return `${attempt.difficulty}|${attempt.score}|${attempt.correct}|${attempt.incorrect}|${attempt.unanswered}|${attempt.answers.map(a => a.selectedIndex ?? 'x').join(',')}`;
+    return `${attempt.examKey}|${attempt.metricType}|${attempt.correct}|${attempt.incorrect}|${attempt.unanswered}|${attempt.answers.map(a => a.selectedIndex ?? 'x').join(',')}`;
   }
 
   function storeAttemptLocally(attempt) {
@@ -156,16 +188,20 @@
     const ym = `${d.getFullYear()}-${pad(d.getMonth()+1)}`;
     const ts = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
     const suffix = Math.random().toString(36).slice(2,7);
-    return `records/${ym}/${ts}_${attempt.difficulty}_${suffix}.json`;
+    const key = String(attempt.examKey || attempt.difficulty || 'exam').replace(/[^a-zA-Z0-9_-]+/g,'-');
+    return `records/${ym}/${ts}_${key}_${suffix}.json`;
   }
 
   async function syncAttempt(attempt) {
     const path = recordPath(attempt);
+    const resultLabel = attempt.metricType === 'accuracy'
+      ? `${attempt.correct}/${attempt.total} (${attempt.accuracyPercent}%)`
+      : `${attempt.score} points`;
     return githubApi(`/repos/${RECORD_REPO}/contents/${path}`, {
       method: 'PUT',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
-        message: `Record ${attempt.difficultyLabel} exam score ${attempt.score}`,
+        message: `Record ${attempt.difficultyLabel} result ${resultLabel}`,
         content: utf8ToBase64(JSON.stringify(attempt, null, 2)),
         branch: 'main'
       })
@@ -180,18 +216,22 @@
       .record-btn:hover{background:#f8fbff;border-color:#93b4fb}
       .record-modal{position:fixed;inset:0;background:rgba(15,23,42,.62);display:none;align-items:center;justify-content:center;padding:14px;z-index:9999}
       .record-modal.show{display:flex}
-      .record-box{background:#fff;width:min(760px,100%);max-height:88vh;overflow:auto;border-radius:18px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+      .record-box{background:#fff;width:min(820px,100%);max-height:88vh;overflow:auto;border-radius:18px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
       .record-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
       .record-close{background:#e2e8f0;color:#1e293b;padding:8px 12px;border-radius:10px}
       .record-table{width:100%;border-collapse:collapse;font-size:.94rem}
       .record-table th,.record-table td{border-bottom:1px solid #e5e7eb;padding:9px 7px;text-align:left;vertical-align:top}
       .record-chip{display:inline-block;padding:3px 8px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:.82rem}
+      .record-chip.past{background:#f0fdf4;color:#166534}
       .wrong-item{border:1px solid #e5e7eb;border-radius:12px;padding:12px;margin:9px 0;background:#fff}
-      .wrong-count{font-size:.82rem;background:#fef2f2;color:#b91c1c;padding:3px 7px;border-radius:999px}
+      .wrong-count{font-size:.82rem;background:#fef2f2;color:#b91c1c;padding:3px 7px;border-radius:999px;white-space:nowrap}
       .sync-status{margin-top:8px;font-size:.9rem;color:#657089}
       .token-input{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:10px;font:inherit}
       .record-note{font-size:.88rem;color:#64748b;margin-top:8px}
-      @media(max-width:620px){.record-tools{grid-template-columns:1fr}.record-table{font-size:.86rem}}
+      .wrong-image{margin:10px 0;border:1px solid #dbe3ef;border-radius:10px;padding:7px;background:#fff;text-align:center}
+      .wrong-image img{max-width:100%;height:auto;border-radius:6px}
+      .wrong-passage{white-space:pre-wrap;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px;margin-top:8px;font-size:.9rem;line-height:1.7}
+      @media(max-width:620px){.record-tools{grid-template-columns:1fr}.record-table{font-size:.82rem}.record-table th:nth-child(2),.record-table td:nth-child(2){display:none}}
     `;
     document.head.appendChild(style);
   }
@@ -214,7 +254,7 @@
     tools.id = 'recordTools';
     tools.className = 'record-tools';
     tools.innerHTML = `
-      <button class="record-btn" id="historyBtn">📊 成績紀錄</button>
+      <button class="record-btn" id="historyBtn">📊 作答紀錄</button>
       <button class="record-btn" id="wrongBtn">📝 錯題複習</button>
       <button class="record-btn" id="syncBtn">☁️ GitHub 同步設定</button>
     `;
@@ -224,15 +264,54 @@
     $('#syncBtn').addEventListener('click', showSyncSettings);
   }
 
+  function metricTypeOf(r) {
+    return r.metricType || (r.recordType === 'past-exam' ? 'accuracy' : 'score');
+  }
+
+  function recordTitle(r) {
+    if (r.recordType === 'past-exam' || metricTypeOf(r) === 'accuracy') {
+      const parts = [];
+      if (r.examYear != null) parts.push(`${r.examYear}年`);
+      if (r.examSessionLabel) parts.push(r.examSessionLabel);
+      if (r.subjectLabel) parts.push(r.subjectLabel);
+      return parts.join(' ') || r.unit || r.difficultyLabel || '歷屆考題';
+    }
+    return `${r.subjectLabel || r.subject || '題庫'}｜${r.unit || r.difficultyLabel || ''}`;
+  }
+
+  function resultText(r) {
+    if (metricTypeOf(r) === 'accuracy') {
+      const pct = Number.isFinite(Number(r.accuracyPercent))
+        ? Number(r.accuracyPercent)
+        : (r.total ? Number((Number(r.correct || 0) * 100 / Number(r.total)).toFixed(1)) : 0);
+      return `<b>${Number(r.correct || 0)} / ${Number(r.total || 0)}</b><div class="record-note">正確率 ${pct}%</div>`;
+    }
+    return `<b>${Number(r.score || 0)} 分</b>`;
+  }
+
   function showHistory() {
     const records = loadRecords();
     const modal = $('#historyModal');
     const content = $('.record-content', modal);
     if (!records.length) {
-      content.innerHTML = '<p>目前還沒有作答紀錄。完成一次考試後，成績會出現在這裡。</p>';
+      content.innerHTML = '<p>目前還沒有作答紀錄。完成一次考試後，紀錄會出現在這裡。</p>';
     } else {
-      const avg = Math.round(records.reduce((s,r)=>s+r.score,0) / records.length);
-      content.innerHTML = `<p><b>共 ${records.length} 次</b>｜平均 ${avg} 分</p><table class="record-table"><thead><tr><th>時間</th><th>難度</th><th>分數</th><th>答錯</th><th>未答</th><th>時間</th></tr></thead><tbody>${records.map(r=>`<tr><td>${formatLocalTime(r.submittedAt)}</td><td><span class="record-chip">${r.difficultyLabel}</span></td><td><b>${r.score}</b></td><td>${r.incorrect || 0}</td><td>${r.unanswered || 0}</td><td>${Math.floor((r.durationSeconds||0)/60)}分${(r.durationSeconds||0)%60}秒</td></tr>`).join('')}</tbody></table>`;
+      const past = records.filter(r => metricTypeOf(r) === 'accuracy');
+      const practice = records.filter(r => metricTypeOf(r) !== 'accuracy');
+      const summary = [];
+      summary.push(`<b>共 ${records.length} 次作答</b>`);
+      if (past.length) {
+        const avg = past.reduce((s,r) => s + Number(r.accuracyPercent ?? (r.total ? (r.correct * 100 / r.total) : 0)), 0) / past.length;
+        summary.push(`歷屆平均正確率 ${avg.toFixed(1)}%`);
+      }
+      if (practice.length) {
+        const scored = practice.filter(r => Number.isFinite(Number(r.score)));
+        if (scored.length) summary.push(`練習題平均 ${Math.round(scored.reduce((s,r)=>s+Number(r.score),0)/scored.length)} 分`);
+      }
+      content.innerHTML = `<p>${summary.join('｜')}</p><table class="record-table"><thead><tr><th>時間</th><th>類型</th><th>測驗</th><th>結果</th><th>答錯</th><th>未答</th><th>時間</th></tr></thead><tbody>${records.map(r => {
+        const isPast = metricTypeOf(r) === 'accuracy';
+        return `<tr><td>${formatLocalTime(r.submittedAt)}</td><td><span class="record-chip ${isPast?'past':''}">${isPast?'歷屆':'練習'}</span></td><td>${escapeHtml(recordTitle(r))}</td><td>${resultText(r)}</td><td>${Number(r.incorrect || 0)}</td><td>${Number(r.unanswered || 0)}</td><td>${Math.floor((r.durationSeconds||0)/60)}分${(r.durationSeconds||0)%60}秒</td></tr>`;
+      }).join('')}</tbody></table>`;
     }
     modal.classList.add('show');
   }
@@ -241,20 +320,66 @@
     const map = new Map();
     loadRecords().forEach(r => {
       (r.wrongAnswers || []).filter(a => a.selectedIndex !== null && a.selectedLetter !== null).forEach(a => {
-        const key = `${r.difficulty}|${a.question}`;
-        if (!map.has(key)) map.set(key, { ...a, difficultyLabel:r.difficultyLabel, count:0, last:r.submittedAt });
-        const x = map.get(key); x.count++; if (r.submittedAt > x.last) x.last = r.submittedAt;
+        const key = `${r.examKey || r.difficulty}|${a.number || ''}|${a.question}`;
+        if (!map.has(key)) {
+          map.set(key, {
+            ...a,
+            examKey:r.examKey || r.difficulty,
+            recordType:r.recordType || 'practice',
+            metricType:metricTypeOf(r),
+            examYear:r.examYear,
+            examSessionLabel:r.examSessionLabel,
+            subjectLabel:r.subjectLabel,
+            unit:r.unit,
+            difficultyLabel:r.difficultyLabel,
+            count:0,
+            last:r.submittedAt
+          });
+        }
+        const x = map.get(key);
+        x.count++;
+        if (r.submittedAt > x.last) {
+          x.last = r.submittedAt;
+          x.selectedLetter = a.selectedLetter;
+          x.selectedText = a.selectedText;
+        }
       });
     });
     return [...map.values()].sort((a,b) => b.count - a.count || b.last.localeCompare(a.last));
+  }
+
+  function wrongSourceLabel(x) {
+    if (x.metricType === 'accuracy' || x.recordType === 'past-exam') {
+      const parts = [];
+      if (x.examYear != null) parts.push(`${x.examYear}年`);
+      if (x.examSessionLabel) parts.push(x.examSessionLabel);
+      if (x.subjectLabel) parts.push(x.subjectLabel);
+      if (x.number) parts.push(`第${x.number}題`);
+      return parts.join('｜') || x.difficultyLabel || '歷屆考題';
+    }
+    return `${x.difficultyLabel || '練習'}${x.number ? `｜第${x.number}題` : ''}`;
   }
 
   function showWrongAnswers() {
     const list = aggregateWrongAnswers();
     const modal = $('#wrongModal');
     const content = $('.record-content', modal);
-    if (!list.length) content.innerHTML = '<p>目前沒有錯題紀錄。漂亮！</p>';
-    else content.innerHTML = `<p>目前累積 <b>${list.length}</b> 個曾答錯題目，依錯誤次數排序。未作答題目不列入錯題。</p>${list.map(x=>`<div class="wrong-item"><div style="display:flex;justify-content:space-between;gap:8px"><b>${x.difficultyLabel}｜${x.question}</b><span class="wrong-count">錯 ${x.count} 次</span></div><div style="margin-top:6px">你最近選：${x.selectedLetter}. ${x.selectedText}</div><div>正解：<b>${x.correctLetter}. ${x.correctText}</b></div>${x.explanation ? `<div class="record-note">${x.explanation}</div>` : ''}</div>`).join('')}`;
+    if (!list.length) {
+      content.innerHTML = '<p>目前沒有錯題紀錄。漂亮！</p>';
+    } else {
+      content.innerHTML = `<p>目前累積 <b>${list.length}</b> 個曾答錯題目，依錯誤次數排序。未作答題目不列入錯題。</p>${list.map(x => `
+        <div class="wrong-item">
+          <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+            <div><div class="record-note" style="margin:0 0 4px">${escapeHtml(wrongSourceLabel(x))}</div><b>${escapeHtml(x.question)}</b></div>
+            <span class="wrong-count">錯 ${x.count} 次</span>
+          </div>
+          ${x.intro ? `<details style="margin-top:8px"><summary>查看題組文章</summary><div class="wrong-passage">${escapeHtml(x.intro)}</div></details>` : ''}
+          ${x.image ? `<div class="wrong-image"><img src="${escapeHtml(x.image)}" alt="${escapeHtml(x.imageAlt || '題目附圖')}" loading="lazy"></div>` : ''}
+          <div style="margin-top:7px">你最近選：${escapeHtml(x.selectedLetter)}. ${escapeHtml(x.selectedText)}</div>
+          <div>正解：<b>${escapeHtml(x.correctLetter)}. ${escapeHtml(x.correctText)}</b></div>
+          ${x.explanation ? `<div class="record-note">${escapeHtml(x.explanation)}</div>` : ''}
+        </div>`).join('')}`;
+    }
     modal.classList.add('show');
   }
 
@@ -271,7 +396,7 @@
         <button id="testTokenBtn" class="record-btn">測試連線</button>
         <button id="clearTokenBtn" class="record-btn">清除 Token</button>
       </div>
-      <div class="sync-status" id="syncStatus">目前：${hasToken ? '已設定 Token' : '尚未設定 Token'}。本機成績仍會正常保存。</div>
+      <div class="sync-status" id="syncStatus">目前：${hasToken ? '已設定 Token' : '尚未設定 Token'}。本機紀錄仍會正常保存。</div>
       <div class="record-note">安全設計：Token 只放在 sessionStorage，關閉瀏覽器分頁／工作階段後會消失，不寫入 GitHub 程式碼。</div>
     `;
     $('#saveTokenBtn').onclick = () => {
@@ -305,42 +430,45 @@
     el.textContent = message;
   }
 
+  function resetAttemptTimer() {
+    examStartedAt = Date.now();
+    lastRecordedSignature = '';
+    $('#examSyncToast')?.remove();
+  }
+
   function hookExamStart() {
-    $$('.difficulty').forEach(btn => btn.addEventListener('click', () => {
-      examStartedAt = Date.now();
-      lastRecordedSignature = '';
-      const toast = $('#examSyncToast'); if (toast) toast.remove();
-    }));
-    $('#restartBtn')?.addEventListener('click', () => { examStartedAt = Date.now(); lastRecordedSignature=''; });
+    document.addEventListener('exam:started', resetAttemptTimer);
+    $$('.difficulty').forEach(btn => btn.addEventListener('click', resetAttemptTimer));
   }
 
   function hookSubmission() {
-    const submit = $('#submitBtn');
-    if (!submit) return;
-    submit.addEventListener('click', async () => {
-      await new Promise(r => setTimeout(r, 0));
-      const attempt = captureAttempt();
-      if (!attempt) return;
-      const added = storeAttemptLocally(attempt);
-      if (!added) return;
+    document.addEventListener('click', e => {
+      const submit = e.target.closest?.('#submitBtn');
+      if (!submit) return;
+      setTimeout(async () => {
+        const attempt = captureAttempt();
+        if (!attempt) return;
+        const added = storeAttemptLocally(attempt);
+        if (!added) return;
 
-      if (!getToken()) {
-        showSyncToast('成績與錯題已存到這台裝置。尚未設定 GitHub Token，所以這次未同步到雲端。', false);
-        return;
-      }
-      showSyncToast('本機紀錄已保存，正在同步到 GitHub…');
-      try {
-        await syncAttempt(attempt);
-        showSyncToast('✓ 成績與錯題已同步到私人 GitHub 資料庫。');
-      } catch (e) {
-        showSyncToast(`本機紀錄已保存，但 GitHub 同步失敗：${e.message}`, false);
-      }
+        if (!getToken()) {
+          showSyncToast('作答紀錄與錯題已存到這台裝置。尚未設定 GitHub Token，所以這次未同步到雲端。', false);
+          return;
+        }
+        showSyncToast('本機紀錄已保存，正在同步到 GitHub…');
+        try {
+          await syncAttempt(attempt);
+          showSyncToast('✓ 作答紀錄與錯題已同步到私人 GitHub 資料庫。');
+        } catch (err) {
+          showSyncToast(`本機紀錄已保存，但 GitHub 同步失敗：${err.message}`, false);
+        }
+      }, 0);
     });
   }
 
   function init() {
     injectStyles();
-    makeModal('historyModal', '成績紀錄');
+    makeModal('historyModal', '作答紀錄');
     makeModal('wrongModal', '錯題複習');
     makeModal('syncModal', 'GitHub 同步設定');
     addStartMenuTools();
