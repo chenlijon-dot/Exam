@@ -1,21 +1,27 @@
 # 國中線上題庫 Exam
 
-> 專案狀態、資料規格與工作流程文件。後續新增科目、學期、章節、題庫、歷屆試題、校內段考、教材參考資料、錯題診斷或資料結構時，請同步更新本 README。
+> 專案狀態、資料架構、教材資料庫、題庫與工作流程的主要索引。
+>
+> 後續新增科目、學期、單元、小節、教材照片、canonical 教材知識庫、自編題、各校段考、歷屆試題、AI curriculum 或網站功能時，請同步更新本 README。
 >
 > 最後更新：2026-09-14
 
 ---
 
-## 1. 專案定位
+# 1. 專案定位
 
-本專案不是單純的「考卷收藏」，而是逐步建立一套：
+本專案不是單純收藏考卷，而是逐步建立一套可以長期擴充的「國中教材知識庫 + 線上題庫 + 學習診斷系統」。
 
 ```text
-教材參考知識庫
+原始教材／講義／課堂補充
         ↓
-章節／課次題庫
+Google Drive canonical 教材知識庫
         ↓
-正式歷屆考題 + 各校段考題
+章節／課次 concept mapping
+        ↓
+自編題 + 各校段考題 + 正式歷屆題
+        ↓
+GitHub Pages 線上作答
         ↓
 作答紀錄／錯題
         ↓
@@ -24,99 +30,82 @@ AI 弱點診斷
 
 核心原則：
 
-- 一般題庫依「科目 → 年級／學期 → 課次／章節 → 題目」管理。
-- 正式歷屆考題保留原卷架構，不強迫拆散。
-- 各校段考／公開題庫原始卷保存於 Google Drive，再逐題拆解並歸入真正對應的課次／章節。
-- Google Drive 保存原始教材與參考資料；GitHub `Exam` 保存網站可直接使用的題庫資料。
-- 私人 `Exam-Record` 保存個人作答資料與 AI curriculum。
-- 所有題目都要盡可能保留來源 provenance。
+- 一般教材與題庫依「科目 → 年級／學期 → 單元／課次 → 小節 → concept」管理。
+- Google Drive 保存教材證據、原始參考資料與 canonical 教材知識庫。
+- GitHub `Exam` 保存網站程式與真正可直接作答的題庫資料。
+- Private `Exam-Record` 保存個人作答資料、錯題資料與 AI 使用的 machine-readable curriculum。
+- 正式歷屆題保留原卷結構與原始題序。
+- 各校段考原卷保留於 Drive，再逐題拆解並歸入真正對應的章節／小節。
+- 所有題目盡可能保留 provenance，不讓來源在整理過程中消失。
 
 ---
 
-## 2. 目前網站入口
+# 2. 目前網站主入口
 
 ```text
 國中題庫
 │
-├─ 國文　（六個學期入口已建立，章節待教材確認）
-│  ├─ 七年級上學期／一上
-│  ├─ 七年級下學期／一下
-│  ├─ 八年級上學期／二上
-│  ├─ 八年級下學期／二下
-│  ├─ 九年級上學期／三上
-│  └─ 九年級下學期／三下
-│
-├─ 英文　（建置中）
-├─ 數學　（一般章節題庫建置中；歷屆題已開始匯入）
-│
+├─ 國文
+├─ 英文
+├─ 數學
 ├─ 自然
-│  └─ 七年級上學期／一上
-│     └─ 第 1 章 科學方法
-│        ├─ 簡易：20 題
-│        ├─ 中等：20 題
-│        └─ 困難：20 題
-│
-├─ 社會　（建置中）
-│
+├─ 社會
 └─ 歷屆考題
-   ├─ 國中基本學力測驗（基測）
-   │  └─ 90 年度
-   │     ├─ 第一次
-   │     │  ├─ 國文科：46 題 ✅
-   │     │  └─ 數學科：32 題 ✅
-   │     └─ 第二次
-   │        └─ 國文科：47 題 ✅
-   │
-   └─ 國中教育會考　（待匯入）
 ```
 
-目前正式歷屆題：
+主選單另外提供：
 
 ```text
-國文：46 + 47 = 93 題
-數學：90 年第一次 32 題
-合計：125 題
+☁️ GitHub 同步設定
 ```
+
+章節／課次題庫頁則保留學習相關功能：
+
+```text
+📊 作答紀錄
+📝 錯題複習
+```
+
+GitHub 同步屬於全站設定，不重複放在每一個章節。
 
 ---
 
-## 3. 題目來源分成三類
+# 3. 題目來源分類
 
-系統中的題目來源必須區分：
+系統中的題目必須區分來源：
 
 ```text
 題庫來源
 │
 ├─ 1. 自編題 practice-generated
-│     └─ 依實際教材／講義與 curriculum 建立
+│     └─ 依實際教材、講義與 canonical curriculum 建立
 │
 ├─ 2. 正式歷屆題 official-past-exam
-│     └─ 基測／教育會考等完整官方考試
+│     └─ 基測／教育會考等正式考試
 │
-└─ 3. 校內段考／公開題庫 school-exam
+└─ 3. 各校段考／公開題庫 school-exam
       └─ 各校公開段考、模擬考、複習卷等
 ```
 
-三類題目的來源、保存方式與呈現方式不同，不應全部混成同一種資料。
+三者不可混為同一種資料來源。
 
 ---
 
 # 4. 資料儲存三層架構
 
-本專案正式採用：
-
 ```text
 Google Drive
-→ 原始教材
-→ 各校段考／公開題庫原始檔
-→ 長期參考資料／教材記憶
+→ 原始教材照片／PDF／講義
+→ 各校段考與答案卷原檔
+→ canonical 教材知識庫
+→ 教材長期 reference authority
 
 GitHub: chenlijon-dot/Exam
 → 網站程式
-→ 一般章節題庫
+→ 自編章節題庫
+→ 各校段考拆題後的可作答題目
 → 正式歷屆考題 JSON
-→ 從校內段考拆出的可作答單題
-→ 題目必要圖片 assets
+→ 題目必要 assets
 
 GitHub Private: chenlijon-dot/Exam-Record
 → 個人作答紀錄
@@ -128,733 +117,544 @@ GitHub Private: chenlijon-dot/Exam-Record
 一句話：
 
 ```text
-Drive = 原始資料與記憶
+Drive       = 教材證據與長期記憶
 GitHub Exam = 真正拿來考的題庫
-Exam-Record = 學習結果與 AI 診斷資料
+Exam-Record = 個人學習結果與 AI 診斷
 ```
 
 ---
 
-# 4.1 GitHub-first 工作流程（2026-09-14 起）
+# 5. GitHub-first 工作方式
 
-本專案日常修改的預設 authority 為：
+日常網站與題庫修改的 authority：
 
 ```text
 GitHub: chenlijon-dot/Exam
 branch: main
 ```
 
-本機仍保留 working copy：
+本機工作副本：
 
 ```text
 E:\Exam
 ```
 
-但 `E:\Exam` 不再是日常修改的唯一或優先入口；它改為「需要本機檔案處理時使用的工作副本」。
+一般文字檔、JSON、JavaScript、HTML、CSS、README 優先直接由 GitHub connector 修改。
 
-日常預設流程：
-
-```text
-Google Drive／使用者提供資料
-        ↓
-ChatGPT 先讀 GitHub 最新 main
-        ↓
-直接透過 GitHub connector 修改文字檔／題庫程式
-        ↓
-commit 到 origin/main
-        ↓
-GitHub Pages deployment
-```
-
-換句話說：
-
-```text
-GitHub origin/main = 網站程式與題庫的遠端 authority
-E:\Exam           = 必要時才使用的本機工作副本
-```
-
-## 4.1.1 跨 ChatGPT 對話統一規則
-
-不同科目或不同工作可以在不同 ChatGPT 對話進行。只要要修改 `Exam` repository，預設都先讀 GitHub 最新狀態，再直接對 GitHub 修改。
-
-正式原則：
-
-```text
-預設：GitHub connector 直接修改
-必要時：repo 回 E:\Exam 做本機處理
-```
-
-適合直接在 GitHub 處理：
-
-- README / Markdown
-- JSON 題庫
-- JavaScript
-- HTML / CSS
-- 純文字設定檔
-- 小型 SVG
-- 其他 connector 可穩定讀寫的文字檔
-
-適合改走本機 `E:\Exam`：
+只有下列工作才優先回本機：
 
 - PNG / JPG 等 binary asset
 - PDF 或大型檔案
-- 需要裁圖、壓縮、格式轉換的檔案
-- GitHub connector 無法可靠上傳或更新的檔案
-- 需要本機程式批次處理、實際預覽或大量檔案操作的工作
+- 裁圖、旋轉、壓縮、格式轉換
+- 大量檔案批次處理
+- 需要實際本機預覽的工作
+- connector 無法可靠完成的工作
 
-因此不要為了每一個小修改都先要求使用者 pull / edit / commit / push；能安全直接改 GitHub 的工作，由 ChatGPT 直接完成。
-
-同一個檔案避免同時由「GitHub connector」與「本機 Git」兩邊修改，以免互相踩版本。
-
-## 4.1.2 本機 fallback / repo 回來處理檔案
-
-若工作必須使用本機 `E:\Exam`，開始前先同步遠端。
-
-若 working tree clean：
-
-```powershell
-git -C E:\Exam pull --rebase origin main
-```
-
-若 working tree 有修改：
-
-```text
-先確認本機未提交內容
-→ 不直接硬 pull
-→ 必要時先 commit 或 stash
-→ 再同步 origin/main
-```
-
-本機完成後：
-
-```powershell
-Set-Location E:\Exam
-
-git status
-git diff
-
-git add <修改檔案>
-git commit -m "<清楚描述此次修改>"
-git pull --rebase origin main
-git push origin main
-```
-
-原則上不要使用：
-
-```powershell
-git push --force
-```
-
-除非已明確確認需要改寫 Git history。
-
-若 ChatGPT 已經直接把新 commit 寫到 GitHub，而之後又要回本機工作，先執行：
-
-```powershell
-git -C E:\Exam status
-git -C E:\Exam pull --rebase origin main
-```
-
-如此 `E:\Exam` 才會重新追上最新 `origin/main`。
-
-## 4.1.3 ChatGPT 產生 binary 檔案的匯入方式
-
-若 ChatGPT 產生 PNG、JPG 或其他 connector 不適合直接寫入的檔案，採：
-
-```text
-ChatGPT 產生檔案
-        ↓
-使用者下載到 Windows Downloads
-        ↓
-人工確認檔案正常
-        ↓
-必要時同步 E:\Exam
-        ↓
-Copy-Item 到 repository 正確位置
-        ↓
-修改 JSON / manifest 引用
-        ↓
-本機驗證
-        ↓
-git add / commit / pull --rebase / push
-```
-
-PowerShell 範例：
-
-```powershell
-Copy-Item `
-    "$env:USERPROFILE\Downloads\q26-options.png" `
-    "E:\Exam\past-exams\bct\90\first\assets\math\q26-options.png" `
-    -Force
-```
-
-本機流程是 binary / 大型檔案的 fallback，不是所有修改的必經步驟。
-
-## 4.1.4 數學歷屆考題圖片規則
-
-數學歷屆考題的圖形本身可能就是題意的一部分，因此必須以「還原原卷」為優先。
-
-正式原則：
-
-```text
-原卷可直接裁圖
-→ 優先使用原卷裁圖
-
-不是：
-原圖 → AI 猜測 → 重新生成近似圖
-```
-
-適用於：
-
-- 幾何圖
-- 座標圖
-- 方格圖
-- 相似形
-- 圓
-- 摺紙圖
-- 統計圖
-- 圖形選項
-- 流程圖
-- 天平等題意示意圖
-
-尤其涉及：
-
-```text
-長度比例
-角度
-格點位置
-相似關係
-交點
-圖形方向
-```
-
-時，不得自行重新生成一張「看起來差不多」的圖。
-
-圖片格式原則：
-
-```text
-原卷掃描／裁切圖
-→ PNG 優先
-
-真正的向量圖
-→ 可使用 SVG
-```
-
-避免：
-
-```text
-SVG
-└─ 再內嵌 data:image/...;base64 raster image
-```
-
-這種作法在不同瀏覽器與 GitHub Pages 上可能產生相容性問題。
-
-因此像：
-
-```text
-past-exams/bct/90/first/assets/math/q26-options.png
-```
-
-這類原卷裁圖，直接以 PNG asset 儲存並由 JSON 引用。
-
-題庫仍保持：
-
-```text
-題幹文字 → HTML / KaTeX
-公式 → KaTeX
-原始圖形 → PNG asset
-答案 → JSON
-```
-
-如此既能保留原卷精確性，也保留文字搜尋、錯題分析與未來 AI curriculum 的能力。
+若回本機工作，開始前先確認 `E:\Exam` 已同步最新 `origin/main`。
 
 ---
-# 5. Google Drive：教材參考知識庫
 
-## 5.1 適合放什麼
+# 6. 教材資料庫正式建立方式
 
-- 使用者拍攝的課本照片
-- 講義照片
-- 課本／講義 PDF
-- PPT
-- Word
-- 老師補充資料
-- 課堂筆記
-- 考前整理
-- 原始圖片
-- ChatGPT 整理後的 canonical Google Doc
+從 2026-09-14 起，教材資料庫統一採用「國文〈夏夜〉已實作成功的 canonical 模式」。
 
-Google Drive 的角色：
+往後所有科目原則相同：
 
 ```text
-原始教材庫
-+
-長期教材記憶庫
+使用者提供教材照片／PDF／講義
+        ↓
+確認科目、年級學期、單元／課次、小節
+        ↓
+原始資料分類保存
+        ↓
+建立或更新該小節唯一一份 canonical 教材知識庫
+        ↓
+整理核心概念、考點、迷思、題型、concept ID
+        ↓
+作為自編題、段考拆題與 AI curriculum 的共同依據
 ```
 
-網站作答時不應每次直接去 Drive 抓整份 PDF；Drive 是出題、校對、分析時的 reference authority。
+## 6.1 一小節／一課一份 canonical
 
-## 5.2 建議資料夾
+原則：
 
 ```text
-國中教材參考資料/
-├─ 國文/
-│  ├─ 七年級上/
-│  │  ├─ 第一課_課名/
-│  │  │  ├─ 原始資料/
-│  │  │  └─ 整理資料/
-│  │  │     └─ 國文_七上_第一課_教材知識庫
-│  │  └─ ...
-│  └─ ...
-├─ 英文/
-├─ 數學/
-├─ 自然/
-└─ 社會/
+同一小節／同一課
+→ 維持一份主 canonical Google Doc
 ```
 
-未確認課名時不要憑印象預建完整課表。
-
-## 5.3 一課一份 canonical 教材知識庫
-
-同一課維持一份主文件。
-
-收到新照片／講義時：
+後續有新照片、新講義、老師補充資料時：
 
 ```text
 新資料
 → 閱讀
 → 判斷新增／重複／衝突
-→ 整併進同一份 canonical Doc
+→ 整併進既有 canonical
 → 保留來源註記
 ```
 
-不要每次新增資料就另外生一份互相重疊的整理文件。
+不要每收到一次資料就另外建立一份互相重疊的整理文件。
 
-## 5.4 canonical Doc 建議內容
+## 6.2 Google Drive 標準目錄
+
+```text
+國中教材參考資料/
+└─ <科目>/
+   └─ <年級學期>/
+      └─ <單元／課次>/
+         └─ <小節>/
+            ├─ 原始資料/
+            └─ 整理資料/
+               └─ <科目>_<年級>_<小節>_教材知識庫
+```
+
+若數張資料屬於跨小節、單元綜合題，可另外建立：
+
+```text
+單元X_綜合複習/
+├─ 原始資料/
+└─ 整理資料/
+   └─ 單元X_綜合複習_教材知識庫
+```
+
+不要為了方便而把跨章資料硬塞進單一小節。
+
+---
+
+# 7. 教材影像處理規則
+
+教材照片本身是 evidence，因此影像處理以「保留原始內容」為最高原則。
+
+允許的處理：
+
+```text
+旋轉翻正
+必要的透視校正
+裁掉少量無關背景
+適度亮度／對比調整
+檔名與頁碼整理
+```
+
+不應做的事：
+
+```text
+AI 重新生成整頁教材
+AI 改寫圖片中的文字
+刪除原本的手寫註記
+重畫教材圖而取代原圖作為證據
+```
+
+正式 archival/reference 版本應使用「原始像素旋轉／裁切」等 deterministic 處理，而不是生成式重繪。
+
+學生／老師手寫的 A、B、C、D、圈選、訂正與筆記：
+
+```text
+可以保留
+但只能視為學習痕跡／補充線索
+不能直接視為官方答案
+```
+
+答案仍須由課本解答、教師版、正式答案卷或可核對來源確認。
+
+---
+
+# 8. canonical 教材知識庫標準內容
+
+每一份 canonical 文件依科目調整細節，但至少包含：
 
 ```text
 【基本資料】
 科目
 年級／學期
-課次
-課名
-出版社／版本
-作者
-文體
+單元／課次
+小節／課名
+版本／來源範圍
+資料狀態
 
 【來源資料】
 照片／PDF／講義名稱
-頁碼
+教材頁碼
 新增日期
+來源說明
 
-【教材核心】
-課文／教材內容
-段落重點
-主旨
-重要概念
-作者／背景
+【核心教材內容】
+正式定義
+流程
+重要知識
+圖表／實驗／例子
 
 【考試重點】
-字音
-字形
-字義
-詞語
-成語
-修辭
-句型
-國學常識
-重要文句
+常考概念
+判讀規則
+常見題型
+資料題／圖表題能力
+
+【常見迷思】
+學生容易混淆的概念
+錯誤推論
 常見陷阱
 
-【老師補充】
-講義內容
-課堂筆記
-考前提醒
-
 【題庫建置】
-適合出題的概念
 concept ID 候選
 已有題型
 待補題型
+各校段考可對應概念
+
+【來源影像】
+翻正後的教材頁面
 ```
 
----
-
-# 6. 使用者拍攝教材 → Google Drive SOP
+canonical 文件的用途不是只供人閱讀，它還是後續：
 
 ```text
-1. 使用者上傳照片／PDF／講義
-        ↓
-2. 確認科目、學期、課次／章節
-        ↓
-3. 完整閱讀原始資料
-        ↓
-4. 區分正文、補充、字音字形、考點等
-        ↓
-5. 原始資料保存到 Drive/原始資料
-        ↓
-6. 更新該課 canonical 教材知識庫
-        ↓
-7. 保留來源檔名／頁碼／照片範圍
-        ↓
-8. 出題時重新查該課 Drive knowledge base
-        ↓
-9. 題目整理後寫入 GitHub Exam
+出題
+題目校對
+chapter mapping
+concept mapping
+AI curriculum 萃取
+錯題診斷
 ```
 
-不得因為模型本身「知道」課文，就取代使用者實際提供的教材內容。
+的主要 reference authority。
 
 ---
 
-# 7. 校內段考／線上公開題庫：儲存原則
+# 9. 自然科教材資料庫目前實作
 
-各校公開的段考卷、模擬卷、複習卷通常數量大、格式不一，也可能包含 PDF、Word、掃描圖或網站列印版。
-
-正式原則：
-
-```text
-原始段考卷 → Google Drive
-拆解後可作答題目 → GitHub Exam
-```
-
-原因：
-
-- Drive 適合保存大量原卷與來源資料。
-- 原卷日後可重新核對 OCR、題號、圖表與答案。
-- GitHub 不需要塞入大量原始 PDF。
-- 同一份段考往往跨多課，不適合直接當成單一章節題庫。
-- 真正有價值的是「拆題後重新掛到課次／概念」。
-
----
-
-# 8. Google Drive：校內段考建議目錄
+Google Drive 已建立：
 
 ```text
 國中教材參考資料/
-└─ 校內段考資料/
-   ├─ 國文/
-   │  ├─ 七年級上/
-   │  │  ├─ A國中_114上_第一次段考/
-   │  │  │  ├─ 原始資料/
-   │  │  │  │  ├─ 試題.pdf
-   │  │  │  │  ├─ 答案.pdf
-   │  │  │  │  └─ 來源資訊
-   │  │  │  └─ 整理資料/
-   │  │  │     └─ 題目拆解整理
-   │  │  └─ ...
-   │  └─ ...
-   ├─ 英文/
-   ├─ 數學/
-   ├─ 自然/
-   └─ 社會/
+└─ 自然/
+   └─ 七年級上/
+      └─ 單元1_生命現象與科學探究/
+         ├─ 1-2_科學方法/
+         │  ├─ 原始資料/
+         │  └─ 整理資料/
+         │     └─ 自然_七上_1-2_科學方法_教材知識庫
+         │
+         ├─ 1-3_認識實驗室/
+         │  ├─ 原始資料/
+         │  └─ 整理資料/
+         │     └─ 自然_七上_1-3_認識實驗室_教材知識庫
+         │
+         └─ 單元1_綜合複習/
+            ├─ 原始資料/
+            └─ 整理資料/
+               └─ 自然_七上_單元1_綜合複習_教材知識庫
 ```
 
-不要依網站名稱當主要分類；主要分類仍是：
+## 9.1 1-2 科學方法 canonical
 
-```text
-科目 → 年級／學期 → 學校／年度／考試次別
-```
+目前已整理：
+
+- 科學探究流程
+- 觀察／提出問題／假說／實驗／分析／結論
+- 操縱變因
+- 應變變因
+- 控制變因
+- 實驗組與對照組
+- 公平實驗設計
+- 實驗結果與結論
+- 山崩模型題
+- 水草氧氣實驗
+- 種子發芽實驗
+- 大白鼠資料分析
+- 常見迷思
+- 考試重點
+- concept ID 候選
+
+## 9.2 1-3 認識實驗室 canonical
+
+目前已整理：
+
+- 酒精燈
+- 試管／試管架
+- 燒杯
+- 錐形瓶
+- 陶瓷纖維網／三腳架
+- 量筒
+- 培養皿
+- 滴管
+- 載玻片／蓋玻片
+- 複式顯微鏡
+- 解剖顯微鏡
+- 目鏡／物鏡／總放大倍率
+- 高倍／低倍觀察
+- 粗調節輪／細調節輪
+- 光圈與光源
+- 複式顯微鏡成像方向
+- 玻片移動方向
+- 複式與解剖顯微鏡比較
+
+## 9.3 單元 1 綜合複習
+
+跨 1-1～1-3 的混合資料不要強制塞回單一小節。
+
+目前綜合複習資料包含：
+
+- 生命現象
+- 生物與環境
+- 科學方法
+- 實驗變因
+- 實驗資料判讀
+- 顯微鏡
+- 實驗室操作
+- 綜合應用題
 
 ---
 
-# 9. 校內段考完整匯入 SOP
+# 10. 自然七上教材章節樹
 
-## Step 1：取得原始考卷
-
-來源可能是：
-
-- 學校官網
-- 縣市教育網
-- 教師資源網站
-- 公開題庫網站
-- 使用者提供 PDF／Word／圖片
-
-先保存來源網址與下載日期。
-
-## Step 2：原始資料存入 Google Drive
-
-保留：
+依使用者提供的實際教材目錄：
 
 ```text
-試題原檔
-答案原檔
-來源網址
-學校名稱
-學年度
-學期
+自然 七年級上學期
+│
+├─ 單元 1　生命現象與科學探究
+│  ├─ 1-1　生命現象和生物圈
+│  ├─ 1-2　科學方法
+│  ├─ 1-3　認識實驗室
+│  └─ 核心素養　生活在沙漠中的生物
+│
+├─ 單元 2　生物體的構造
+│  ├─ 2-1　生物體的基本構造
+│  ├─ 2-2　細胞的形態和構造
+│  ├─ 2-3　有關生命的物質
+│  ├─ 2-4　從細胞到生物體
+│  └─ 核心素養　生命的起源
+│
+├─ 單元 3　生物體內的營養
+│  ├─ 3-1　食物和養分
+│  ├─ 3-2　酵素的作用
+│  ├─ 3-3　光合作用
+│  ├─ 3-4　人體的消化系統
+│  └─ 核心素養　養分的消化與吸收
+│
+├─ 單元 4　生物體內的運輸作用
+│  ├─ 4-1　植物的維管束
+│  ├─ 4-2　蒸散作用與養分運輸
+│  ├─ 4-3　人體的血液循環
+│  ├─ 4-4　人體的循環系統
+│  └─ 核心素養　人體的專一性防禦作用
+│
+├─ 單元 5　生物體內的協調作用
+│  ├─ 5-1　刺激與反應
+│  ├─ 5-2　神經系統
+│  ├─ 5-3　內分泌系統
+│  ├─ 5-4　行為與感應
+│  └─ 核心素養　動物印痕
+│
+├─ 單元 6　生物體內的恆定性
+│  ├─ 6-1　呼吸運動與氣體恆定
+│  ├─ 6-2　排泄作用與水分恆定
+│  ├─ 6-3　體溫恆定與血糖恆定
+│  └─ 核心素養　糖尿病
+│
+└─ 跨科主題　尺度的認識與應用
+```
+
+尚未提供教材內容的小節先建立 catalog 位置即可，不自行猜教材內容或題目。
+
+---
+
+# 11. 自然科網站目前狀態
+
+目前正式可作答：
+
+```text
+自然
+└─ 七年級上學期
+   └─ 單元 1 生命現象與科學探究
+      └─ 1-2 科學方法
+         ├─ 🌱 簡易：20 題
+         ├─ 🌿 中等：20 題
+         ├─ 🌳 困難：20 題
+         └─ 🏫 各校題庫：已開始匯入
+```
+
+章節頁保留：
+
+```text
+📊 作答紀錄
+📝 錯題複習
+```
+
+其他自然七上單元與小節已先建立 catalog 骨架，題目後續逐步建置。
+
+---
+
+# 12. 各校段考資料來源與 SOP
+
+各校段考的共同精神以：
+
+```text
+EXAM_WORKFLOW.md
+CHINESE_SCHOOL_EXAM_WORKFLOW.md
+```
+
+為基礎，再依科目調整。
+
+## 12.1 Drive authority
+
+自然科目前的原始段考來源位置：
+
+```text
+國中教材參考資料/各校段考題/自然科
+國中教材參考資料/各校段考題/自然科/答案卷
+```
+
+第一層原則：
+
+```text
+題目卷 = 原始 evidence
+答案卷 = 答案 authority
+```
+
+## 12.2 標準流程
+
+```text
+1. 取得題目卷與答案卷
+2. 核對學校／年度／學期／段考次別／年級／科目
+3. 整卷 census
+4. 一題一題判讀真正章節
+5. 建立 Google Sheet 逐題分類索引
+6. 保留原題號與 provenance
+7. 圖題保留原始圖像
+8. 答案以原校答案卷優先
+9. 拆題寫入對應 chapter-bank
+10. 網站實際作答測試
+11. 更新 README
+```
+
+無法確定章節時：
+
+```text
+unknown
+```
+
+不要硬猜。
+
+---
+
+# 13. 第一份自然科各校段考實作
+
+已取得並整理：
+
+```text
+高雄市立大灣國中
+114 學年度第一學期
+七年級
+第一次段考
+自然科
+```
+
+整份試卷：
+
+```text
+40 題單選
+官方答案卷已配對
+```
+
+Google Sheet 已建立：
+
+```text
+自然科_各校段考題章節索引
+```
+
+用途：逐題記錄：
+
+```text
+年度
+學校
 考試次別
-科目
-年級
+原題號
+對應單元／小節
+後續 concept mapping
 ```
 
-若來源頁面日後消失，仍可靠 Drive 原檔重新核對。
-
-## Step 3：建立整份考卷 census
-
-盤點：
+目前明確歸入 `1-2 科學方法` 的 4 題：
 
 ```text
-總題數
-各題型
-圖題
-題組
-答案表
-大致涵蓋課次
+原第 3 題  → 實驗設計／變因
+原第 8 題  → 科學探究步驟
+原第 37 題 → 水分與黴菌的控制實驗
+原第 40 題 → 實驗反駁／結論有效性
 ```
 
-## Step 4：逐題拆解
-
-一題一題整理：
+正式 GitHub 題庫：
 
 ```text
-原始題號
-題幹
-選項
-答案
-圖像
-來源 metadata
+chapter-bank/science/7-1/unit-01/section-02/school-exams.json
 ```
 
-## Step 5：判斷真正對應的課次／章節
-
-這是校內段考最重要的一步。
-
-不要只因為整份考卷是「第一次段考」就把全部題目綁在同一章。
-
-每題依內容掛：
+目前：
 
 ```text
-chapterTags
-lessonTags
-conceptIds
+4 題已收錄
+preserveOptionOrder: true
+answerVerified: true
 ```
 
-例如：
+各校題庫不隨機排列原始選項。
 
-```text
-第 12 題
-→ 七上第一課
-→ 修辭
-→ 譬喻
-```
+---
 
-若一題跨兩課，可多重標記：
+# 14. 校內段考 provenance
 
-```json
-"chapterTags": ["lesson-01", "lesson-02"]
-```
-
-## Step 6：保留原始 provenance
-
-即使題目已重新歸到章節題庫，仍要知道它原本來自哪張卷。
-
-建議 metadata：
+校內段考拆題後仍要保留：
 
 ```text
 sourceType: school-exam
 school
-schoolYear
-semester
-examName
-originalQuestionNumber
-sourceUrl
-sourceFile
-capturedAt
-answerVerified
-```
-
-未來可擴充：
-
-```text
-chapterTags[]
-conceptIds[]
-verificationStatus
-notes
-```
-
-## Step 7：答案核對
-
-優先使用：
-
-```text
-學校原始答案
-→ 教育單位答案
-→ 同來源正式答案頁
-→ 可靠二手整理
-```
-
-來源衝突時先標記待確認，不自行假裝有官方答案。
-
-## Step 8：寫入 GitHub 章節題庫
-
-拆題後以「章節」為核心，不以原考卷為核心。
-
-概念：
-
-```text
-國文七上第一課
-├─ 自編題
-├─ A國中段考題
-├─ B國中段考題
-└─ 其他公開題庫題
-```
-
-實際程式資料可依未來題庫重構方式放在：
-
-```text
-chapter-bank/<subject>/<semester>/<chapter>.json
-```
-
-此路徑目前是規劃，不代表現有 repository 已建立完成。
-
-## Step 9：避免重複題
-
-不同學校常會引用相同題目或同一來源題庫。
-
-匯入前應檢查：
-
-- 題幹高度相同
-- 選項相同
-- 圖片相同
-- 僅修改人名／數字的變形題
-
-若確認為完全相同題目，可保留多個來源 provenance，而不必複製成多題。
-
-## Step 10：更新 README／索引
-
-完成一批段考拆題後，更新：
-
-```text
-已整理學校／年度
-新增題數
-涵蓋課次
-Google Drive 分類狀態
-GitHub chapter-bank 狀態
-```
-
----
-
-# 10. 章節題庫是校內段考整理的核心
-
-各校段考資料最終目的不是蒐集「很多 PDF」，而是建立：
-
-```text
-一課一課
-一章一章
-一個 concept 一個 concept
-```
-
-例如：
-
-```text
-國文
-└─ 七年級上
-   ├─ 第一課
-   │  ├─ 自編題
-   │  ├─ 各校段考題
-   │  └─ 公開複習題
-   ├─ 第二課
-   └─ 語文常識
-```
-
-未來可因此做到：
-
-```text
-七上第一課：各校常考題
-第一課：只練修辭
-第一課：只練字音字形
-第一課：高錯誤率題目
-跨校同 concept 混合練習
-```
-
-並可進一步統計：
-
-```text
-某章節各校最常考什麼
-某 concept 出現頻率
-哪些題型最容易答錯
-```
-
----
-
-# 11. 題目來源 metadata 建議
-
-所有未來新題逐步統一 provenance。
-
-## 自編題
-
-```text
-sourceType: generated
-subject
-semester
-chapter
-conceptIds
-referenceSources
-```
-
-## 正式歷屆題
-
-```text
-sourceType: official-past-exam
-examType
-examYear
-examSession
-subject
-originalQuestionNumber
-questionSource
-answerSources
-```
-
-## 校內段考
-
-```text
-sourceType: school-exam
-school
-schoolYear
+year / schoolYear
 semester
 examName
 subject
 originalQuestionNumber
-sourceUrl
+sourcePage
 sourceFile
 chapterTags
 conceptIds
 answerVerified
 ```
 
-來源資料不只是備註，未來可以用來篩選：
-
-```text
-只做某校題目
-只做正式歷屆題
-只做各校段考題
-混合自編 + 段考 + 歷屆
-```
+若兩校使用完全相同題目，可考慮保留多個 provenance，而不是無限複製重複題。
 
 ---
 
-# 12. 正式歷屆考題與校內段考的差異
+# 15. 正式歷屆考題
+
+正式基測／會考與各校段考不同：
 
 ```text
 正式基測／會考
 → 保留整張考卷
 → 保留原始題序
-→ 保留 A/B/C/D
+→ 保留原始選項
 → 可整卷作答
 
-校內段考／公開題庫
+各校段考
 → 原卷保存 Drive
-→ 每題拆解
-→ 依實際課次／chapter／concept 重新分類
-→ GitHub 主要提供章節式練習
+→ 逐題拆解
+→ 重新掛到 chapter／section／concept
+→ 主要提供章節式練習
 ```
 
-若未來有需求，也可以另外提供「原校原卷模式」，但不是目前主要資料模型。
+目前正式歷屆題：
 
----
+```text
+90 年第一次基測
+├─ 國文：46 題
+└─ 數學：32 題
 
-# 13. 正式歷屆考題評量規則
+90 年第二次基測
+└─ 國文：47 題
 
-歷屆題不使用一般題庫的固定分數制，而以：
+總計：125 題
+```
+
+歷屆評量使用：
 
 ```text
 答對題數 / 總題數
@@ -863,187 +663,191 @@ answerVerified
 未答題數
 ```
 
-為主要結果。
-
-歷屆選項：
+固定選項：
 
 ```text
 preserveOptionOrder: true
 fixedOptions: true
 ```
 
-未答與答錯分開處理。
-
 ---
 
-# 14. 已完成的正式歷屆考題
-
-## 90 年第一次基測國文
-
-```text
-past-exams/bct/90/first/chinese.json
-```
-
-46 題。
-
-圖題：
-
-```text
-q29-calligraphy.svg
-q30-letter.svg
-```
-
-## 90 年第二次基測國文
-
-```text
-past-exams/bct/90/second/chinese.json
-```
-
-47 題。
-
-```text
-第 1～34 題：單題
-第 35～47 題：題組
-```
-
-圖題：
-
-```text
-q31-invitation.svg
-q34-letter.svg
-```
-
----
-
-# 15. 正式歷屆考題完整匯入 SOP
+# 16. 正式歷屆考題匯入規則
 
 ```text
 1. 接收原始 PDF／圖片
 2. 確認制度／年度／次別／科目
-3. 判斷文字型或影像型 PDF
-4. 建立試卷 census
-5. 逐題還原題幹與原始選項
-6. 題組保存 intro／introLabel
-7. 圖題建立 assets
-8. 另找可靠答案來源核對
-9. 第二輪逐題比對原卷
-10. 建立 past-exams/... JSON
-11. 接入 exam-past-exams.js
-12. 交由 exam-runtime-flex.js
-13. 測試正確率／未答／錯題
-14. 測試圖題／題組／返回導航
-15. GitHub Pages 部署成功後實機抽查
-16. 更新 README
+3. 建立試卷 census
+4. 逐題還原題幹與原始選項
+5. 題組保存 intro／introLabel
+6. 圖題保存原卷圖像 assets
+7. 找可靠答案來源核對
+8. 第二輪逐題比對原卷
+9. 建立 past-exams/... JSON
+10. 接入歷屆考試 UI
+11. 測試正確率／未答／錯題
+12. GitHub Pages 部署後抽查
+13. 更新 README
 ```
 
-答案來源優先序：
+圖形題原則：
 
 ```text
-官方考試／主管機關
-→ 公立教育機構保存資料
-→ 學校／教育單位答案
-→ 可追溯歷屆資料庫
-→ 可靠二手資料
-→ 模型自行解題只能最後輔助
+原卷可裁圖
+→ 優先使用原卷裁圖
 ```
+
+不要用 AI 生成「看起來差不多」的幾何圖、座標圖、統計圖或圖形選項取代原卷。
 
 ---
 
-# 16. 正式歷屆題品質分級
+# 17. 題目答案與證據優先順序
+
+答案來源優先：
 
 ```text
-A. imported
-   已完成結構化
-
-B. answer-verified
-   答案已由可靠來源核對
-
-C. visually-verified
-   題幹／選項／題組／圖片已對照原卷
-
-D. production-ready
-   導航／評量／錯題／手機／部署皆測試完成
+官方答案／原校答案卷
+→ 教育單位答案
+→ 同來源正式答案頁
+→ 可追溯可靠二手整理
+→ 模型自行解題只作最後輔助
 ```
 
-「JSON 已存在」不等於「完全校對完成」。
+教材／題目內容衝突時：
+
+```text
+原始教材／原卷
+→ canonical 整理
+→ 題庫資料
+→ 模型記憶
+```
+
+模型不能因為「印象中應該是這樣」就覆蓋可核對的教材證據。
 
 ---
 
-# 17. AI 錯題診斷
+# 18. AI 錯題診斷
 
-目前正式 curriculum-based AI 診斷：
+目前自然 `1-2 科學方法` 已啟用 curriculum-based Gemini 診斷。
+
+Private repository：
 
 ```text
-自然一上 → 科學方法
 Exam-Record/curriculum/science-method.json
 ```
 
-後端模型：
+模型：
 
 ```text
 gemini-3.5-flash-lite
 ```
 
-Drive 與 curriculum JSON 的關係：
+資料關係：
 
 ```text
 Google Drive canonical 教材知識庫
-→ 萃取 machine-readable curriculum
-→ Exam-Record/curriculum/<chapter-id>.json
-→ Gemini 錯題診斷
+        ↓
+萃取／校正 machine-readable curriculum
+        ↓
+Exam-Record/curriculum/<chapter-id>.json
+        ↓
+學生錯題
+        ↓
+Gemini 診斷
 ```
 
-歷屆國文與校內段考題尚未全面啟用 AI 弱點診斷；需先有 chapter／concept mapping 與對應 curriculum。
+AI 必須依該章教材與錯題證據判斷，不可因一題錯誤就擴張成「整章都不熟」。
+
+當 Drive canonical 有足以影響診斷的新內容時，應同步檢查並更新對應 `Exam-Record/curriculum`。
 
 ---
 
-# 18. GitHub 目前主要樹狀結構
+# 19. chapter / section / concept 規則
+
+題庫長期目標不是只有「這題屬於哪張考卷」，而是能回答：
+
+```text
+這題屬於哪一科？
+哪個學期？
+哪個單元？
+哪個小節？
+哪個 concept？
+來源是哪裡？
+```
+
+自然科例如：
+
+```text
+science
+→ 7-1
+→ unit-01
+→ section-02
+→ controlled-variable
+```
+
+建議 concept ID：
+
+```text
+science-7-1-u01-s02-observation
+science-7-1-u01-s02-question
+science-7-1-u01-s02-hypothesis
+science-7-1-u01-s02-experiment-design
+science-7-1-u01-s02-independent-variable
+science-7-1-u01-s02-dependent-variable
+science-7-1-u01-s02-controlled-variable
+science-7-1-u01-s02-control-group
+science-7-1-u01-s02-data-analysis
+science-7-1-u01-s02-conclusion
+science-7-1-u01-s02-fair-test
+science-7-1-u01-s02-evidence-inference
+```
+
+concept mapping 後，未來才能真正做到跨來源的弱點統計。
+
+---
+
+# 20. GitHub 目前主要結構
 
 ```text
 Exam/
 ├─ README.md
+├─ EXAM_WORKFLOW.md
+├─ CHINESE_SCHOOL_EXAM_WORKFLOW.md
 ├─ index.html
 ├─ exam-catalog.js
-├─ exam-runtime-flex.js
 ├─ exam-past-exams.js
+├─ exam-runtime-flex.js
 ├─ exam-option-randomizer.js
 ├─ exam-records.js
 ├─ exam-wrong-ui.js
 ├─ exam-records-clear.js
 ├─ exam-gpt-analysis.js
+├─ exam-navigation-fix.js
+├─ exam-science-banks.js
+├─ exam-record-layout.js
+│
+├─ chapter-bank/
+│  └─ science/
+│     └─ 7-1/
+│        └─ unit-01/
+│           └─ section-02/
+│              └─ school-exams.json
 │
 ├─ past-exams/
 │  └─ bct/
 │     └─ 90/
 │        ├─ first/
 │        │  ├─ chinese.json
-│        │  └─ assets/
-│        │     ├─ q29-calligraphy.svg
-│        │     └─ q30-letter.svg
-│        │
+│        │  └─ math.json
 │        └─ second/
-│           ├─ chinese.json
-│           └─ assets/
-│              ├─ q31-invitation.svg
-│              └─ q34-letter.svg
+│           └─ chinese.json
 │
 └─ .github/
    └─ workflows/
       └─ pages.yml
 ```
 
-規劃中的校內段考拆題資料：
-
-```text
-chapter-bank/
-└─ <subject>/
-   └─ <semester>/
-      └─ <chapter>.json
-```
-
-此處為規劃路徑；實際 repository 如已建立，應以最新 GitHub 內容為準並同步更新本 README。
-
-私人：
+Private：
 
 ```text
 Exam-Record/
@@ -1057,19 +861,19 @@ Exam-Record/
 
 ---
 
-# 19. 版權與 provenance 原則
+# 21. 版權與 provenance
 
 - 使用者提供的課本／講義可保存私人 Drive 作個人學習參考。
-- 各校公開段考原始卷優先保存私人 Drive，並保留原始網址與學校資訊。
-- 「網路上可下載」不自動等於「可以無限制公開重製」。
+- 原始教材與完整段考卷以私人 Drive 保存為主。
+- 「網路上可下載」不代表可以無限制公開重製。
 - 公開 GitHub 主要保存網站需要的結構化題庫與必要 assets。
-- 若來源權利或重製條件不清楚，採保守方式處理，不把完整原卷鏡像公開。
-- 題目整理後仍應保存來源 provenance，不將來源洗掉。
-- 題目內容有疑義時回原卷核對，不依模型印象自行修正。
+- 若來源權利或重製條件不清楚，採保守方式處理。
+- 題目結構化後仍保存 provenance。
+- 題意有疑義時回到原卷／原教材，不靠模型記憶自行補字。
 
 ---
 
-# 20. 安全規則
+# 22. 安全規則
 
 ### GitHub Token
 
@@ -1090,71 +894,109 @@ Exam-Record/
 
 ---
 
-# 21. 目前工作進度
+# 23. 目前工作進度
 
 ## 已完成
 
 - [x] GitHub Pages 題庫網站
 - [x] 手機版 responsive
-- [x] 自然一上科學方法簡易／中等／困難各 20 題
+- [x] 五科 + 歷屆考題主入口
+- [x] GitHub 同步設定移到全站主選單
+- [x] 作答紀錄／錯題複習保留於章節題庫
+- [x] 自然七上完整教材章節 catalog 骨架
+- [x] 自然 `1-2 科學方法` 簡易／中等／困難各 20 題
+- [x] `1-2 科學方法` 各校題庫入口
+- [x] 第一份自然各校段考：114 大灣國中七上第一次段考
+- [x] 大灣國中整卷 40 題 census／章節索引
+- [x] 大灣國中 4 題正式歸入 `1-2 科學方法` 各校題庫
+- [x] 自然科各校段考 Google Sheet 索引
 - [x] 作答／交卷／詳解
+- [x] 選項隨機排列（自編題）
+- [x] 各校／正式考題保留原始選項順序
 - [x] 作答紀錄／錯題紀錄
 - [x] 未答與錯答分離
-- [x] 私人 Exam-Record 同步
+- [x] Private Exam-Record 同步
 - [x] Gemini 錯題診斷
-- [x] 科學方法 curriculum
-- [x] 國文六學期入口
-- [x] 歷屆考題基測／會考骨架
-- [x] 通用歷屆考試引擎
-- [x] 歷屆固定選項／題組／圖題／正確率
+- [x] `1-2 科學方法` machine-readable curriculum
+- [x] Google Drive 教材 reference 架構
+- [x] 國文 canonical 教材知識庫實作模式
+- [x] 自然科 canonical 資料庫開始實作
+- [x] 自然 `1-2 科學方法` canonical 教材知識庫
+- [x] 自然 `1-3 認識實驗室` canonical 教材知識庫
+- [x] 自然「單元 1 綜合複習」canonical 教材知識庫
+- [x] 教材圖片翻正／保留原始註記的規則文件化
 - [x] 90 年第一次基測國文 46 題
 - [x] 90 年第二次基測國文 47 題
 - [x] 90 年第一次基測數學 32 題
 - [x] 正式歷屆考題匯入 SOP
-- [x] Google Drive 教材 reference 架構文件化
-- [x] 使用者拍照教材 → Drive canonical knowledge SOP
-- [x] 校內段考原始卷 → Drive 的保存原則文件化
-- [x] 校內段考拆題 → 課次／chapter／concept → GitHub 的 SOP 文件化
-- [x] GitHub-first 修改流程文件化
+- [x] 校內段考拆題 SOP
+- [x] GitHub-first 修改流程
 
 ## 下一階段
 
-- [ ] 在 Google Drive 建立「國中教材參考資料」正式資料夾
-- [ ] 建立「校內段考資料」正式資料夾
-- [ ] 建立第一份 canonical 教材知識庫 Google Doc
-- [ ] 找第一份公開校內段考作為拆題試驗
-- [ ] 確認 `chapter-bank` 的正式 JSON schema
-- [ ] 建立第一個章節式混合題庫（自編 + 校內段考）
-- [ ] 對目前 90 年兩份基測國文持續人工校對
+- [ ] 補建自然 `1-1 生命現象和生物圈` canonical 教材知識庫
+- [ ] 持續將使用者提供的自然教材依小節歸檔
+- [ ] 將教材原始頁面逐步完整放入對應「原始資料」資料夾
+- [ ] 將 `1-2` 各題逐步加入正式 concept ID
+- [ ] 將大灣國中其餘題目依 1-1／1-3／2-1～2-4 拆入各校題庫
+- [ ] 為 `1-1`、`1-3` 建立網站題庫入口與各校題庫
+- [ ] 建立自然單元 2 canonical 教材知識庫
+- [ ] 持續匯入其他學校自然段考
+- [ ] 讓 Drive canonical → Exam-Record curriculum 的同步流程更固定
+- [ ] 對目前基測題持續人工校對
 - [ ] 匯入後續基測／教育會考
-- [ ] 為題目逐步加入 chapter／concept ID
-- [ ] 建立國文 curriculum／concept mapping
+- [ ] 建立更多科目的 canonical 教材知識庫
 
 ---
 
-# 22. README 接手規則
+# 24. 新資料進來時的標準判斷
+
+新的 ChatGPT 對話或新的教材批次，依序判斷：
+
+```text
+這是教材？
+→ 走 canonical 教材資料庫流程
+
+這是各校段考？
+→ 原卷／答案留 Drive
+→ census
+→ Sheet 索引
+→ 拆題
+→ chapter-bank
+
+這是正式基測／會考？
+→ 保留整卷
+→ past-exams
+
+這是學生作答資料？
+→ Exam-Record
+```
+
+不要把四種資料混在同一個儲存模型。
+
+---
+
+# 25. README 接手規則
 
 新的 ChatGPT 對話要繼續本專案時：
 
 1. 先讀 `chenlijon-dot/Exam/README.md`。
-2. 再讀 GitHub repository 最新 `main` 的實際檔案；README 與程式不一致時，以最新程式為準並修正 README。
-3. 預設直接使用 GitHub connector 對 `chenlijon-dot/Exam` 讀寫，不要求先回本機操作。
-4. 只有 binary asset、大型檔案、批次處理、需要本機預覽，或 connector 無法可靠完成時，才改用 `E:\Exam`。
-5. 回到 `E:\Exam` 前先同步 `origin/main`；GitHub 直接修改完成後，本機副本可能落後，之後再用時必須先 `pull --rebase`。
-6. 涉及教材時，搜尋 Google Drive canonical 教材知識庫。
-7. 涉及校內段考時，先查 Drive 是否已有原卷與整理資料。
-8. README 與教材事實不一致，以可核對原始資料／canonical knowledge 為準。
-9. 不自行猜課名、章節或尚未存在的年度。
-10. 正式歷屆題走第 15 節 SOP。
-11. 校內段考走第 9 節 SOP。
-12. 使用者拍攝教材走第 6 節 SOP。
-13. 數學歷屆圖形以原卷裁圖為優先，不生成近似圖取代原圖。
-14. 每完成新試卷、新章節、新段考批次或重要架構調整，都更新 README。
+2. 再讀 GitHub `main` 的實際最新檔案；README 與程式不一致時，以最新程式為準並修正 README。
+3. 涉及教材時，先查 Google Drive 對應科目／章節的 canonical 教材知識庫。
+4. 不要只依模型既有知識重新猜教材內容。
+5. 使用者新增教材照片時，依第 6～8 節建立／更新 canonical，不另生重複資料庫。
+6. 教材影像只做翻正、裁切、必要校正；不要生成式重畫作為 evidence。
+7. 涉及自然七上時，以第 10 節教材章節樹為準。
+8. 涉及校內段考時，依第 12～14 節與 `EXAM_WORKFLOW.md` 的精神處理。
+9. 涉及正式歷屆考題時，依第 15～17 節處理。
+10. 無法確定章節、答案或來源時標記待確認／unknown，不硬猜。
+11. 預設直接使用 GitHub connector 修改文字檔；binary／批次處理才回 `E:\Exam`。
+12. 每完成新教材 canonical、新章節、新段考批次、新歷屆試卷或重大架構調整，都更新 README。
 
 ---
 
-# 23. 目前一句話狀態
+# 26. 目前一句話狀態
 
 截至 2026-09-14：
 
-> 系統目前採「Google Drive 原始教材／校內段考參考記憶 + GitHub Exam 可執行題庫 + Private Exam-Record 學習紀錄／AI curriculum」三層架構。日常程式與題庫修改以 GitHub `origin/main` 為 authority，ChatGPT 預設直接透過 GitHub connector 修改；只有 binary asset、大型檔案、裁圖／轉檔、批次處理或 connector 不適合處理的情況，才回到 `E:\Exam` 本機工作副本。正式歷屆題目前已納入 90 年第一次基測國文 46 題、第二次國文 47 題，以及第一次數學 32 題；教材照片與各校段考原始卷以 Google Drive 長期保存。各校段考仍採逐題拆解、保留 provenance，再依實際課次、chapter 與 concept 插入 GitHub 章節題庫的方向發展。
+> 本專案已正式採用「Google Drive 原始教材與 canonical 教材知識庫 → GitHub Exam 結構化可作答題庫 → Private Exam-Record 學習紀錄與 AI curriculum」三層架構。教材資料庫今後統一沿用國文〈夏夜〉已驗證的模式：依科目、學期、單元／課次、小節建立 `原始資料 + 整理資料 + 唯一 canonical Doc`，新教材持續整併而不是重複建檔。自然七上已完成正式章節樹，`1-2 科學方法` 與 `1-3 認識實驗室` 已開始建立 canonical 教材知識庫；`1-2` 目前另有自編題 60 題及大灣國中各校題庫 4 題。之後所有自然教材與其他科目資料，都沿用同一套資料庫建立方式持續累積。
