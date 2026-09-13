@@ -88,6 +88,9 @@
       .passage-box{margin:0 0 16px;border:1px solid #cbd5e1;background:#f8fafc;border-radius:14px;padding:14px 15px;font-weight:400;white-space:pre-wrap;line-height:1.8;color:#263244}
       .passage-label{font-size:.82rem;font-weight:800;color:#1d4ed8;margin-bottom:6px;letter-spacing:.02em}
       .past-source-note{margin:8px 0 0;color:#64748b;font-size:.86rem}
+      .manual-study-box{margin:12px 0 4px;border:1px dashed #94a3b8;background:#f8fafc;border-radius:12px;padding:12px 14px}
+      .manual-study-badge{display:inline-block;font-size:.78rem;font-weight:800;color:#7c3aed;background:#f5f3ff;border-radius:999px;padding:3px 8px;margin-bottom:7px}
+      .manual-study-note{font-size:.9rem;color:#64748b;line-height:1.6}
       @media(max-width:620px){.question-media{padding:7px}.passage-box{padding:12px}.katex{font-size:1.02em}}
     `;
     document.head.appendChild(style);
@@ -127,6 +130,14 @@
     return { score, prominent:`${score} 分`, detail:`答對 ${correct} / ${total} 題` };
   }
 
+  function questionType(question) {
+    return question?.type || 'mcq';
+  }
+
+  function isManualStudy(question) {
+    return questionType(question) === 'manual-study';
+  }
+
   window.startExam = function(selected) {
     if (!banks[selected]) return;
     level = selected;
@@ -143,10 +154,13 @@
     $('#examSub').textContent = ctx.subtitle || `${questions.length} 題選擇題`;
     const status = $('#examScreen .status');
     if (status) {
-      status.innerHTML = `<span class="pill" id="progress">已作答 0 / ${questions.length}</span>` +
+      const autoTotal = questions.filter(q => !isManualStudy(q)).length;
+      const manualTotal = questions.length - autoTotal;
+      status.innerHTML = `<span class="pill" id="progress">已作答 0 / ${autoTotal}</span>` +
         (ctx.scoreMode === 'percent'
-          ? `<span class="pill">共 ${questions.length} 題</span><span class="pill">以正答率顯示</span>`
-          : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * questions.length} 分</span>`);
+          ? `<span class="pill">自動評量 ${autoTotal} 題</span><span class="pill">以正答率顯示</span>`
+          : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * autoTotal} 分</span>`) +
+        (manualTotal ? `<span class="pill">紙筆 ${manualTotal} 題｜不計分</span>` : '');
     }
     $('#backBtn').textContent = ctx.backLabel || (ctx.examType ? '返回歷屆考題' : '選擇其他難度');
     render();
@@ -159,11 +173,20 @@
   window.render = function() {
     const ctx = window.examContextCurrent || getContext(level);
     quiz.innerHTML = questions.map((x,i) => {
+      const type = questionType(x);
       const intro = x.intro ? `<div class="passage-box">${x.introLabel ? `<div class="passage-label">${escapeHtml(x.introLabel)}</div>` : ''}${escapeHtml(x.intro)}</div>` : '';
       const media = x.image ? `<div class="question-media"><img src="${escapeHtml(x.image)}" alt="${escapeHtml(x.imageAlt || `第${i+1}題附圖`)}" loading="lazy"></div>` : '';
       const optionMedia = x.optionImage ? `<div class="question-media option-media"><img src="${escapeHtml(x.optionImage)}" alt="${escapeHtml(x.optionImageAlt || `第${i+1}題選項圖`)}" loading="lazy"></div>` : '';
-      const opts = x.o.map((v,j) => `<label class="option" data-opt="${j}"><input type="radio" name="q${i}" value="${j}">(${letters[j]}) ${escapeHtml(v)}</label>`).join('');
-      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}">${intro}<div class="qtitle"><span class="num">${x.number || i+1}</span><span class="question-text">${escapeHtml(x.q)}</span></div>${media}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
+      const qtitle = `<div class="qtitle"><span class="num">${x.number || i+1}</span><span class="question-text">${escapeHtml(x.q)}</span></div>`;
+
+      if (type === 'manual-study') {
+        const instruction = x.manualInstruction || '請在紙上作答；本題不列入自動計分。';
+        const answer = x.manualAnswer || x.answer || '';
+        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="manual-study">${intro}${qtitle}${media}${optionMedia}<div class="manual-study-box"><span class="manual-study-badge">紙筆練習｜不計分</span><div class="manual-study-note">${escapeHtml(instruction)}</div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
+      }
+
+      const opts = (x.o || []).map((v,j) => `<label class="option" data-opt="${j}"><input type="radio" name="q${i}" value="${j}">(${letters[j]}) ${escapeHtml(v)}</label>`).join('');
+      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}">${intro}${qtitle}${media}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
     }).join('');
     renderMath(quiz);
     document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',updateProgress));
@@ -180,17 +203,25 @@
   };
 
   window.updateProgress = function() {
-    let n=0;
-    questions.forEach((_,i)=>{if(document.querySelector(`input[name=q${i}]:checked`))n++;});
+    let answered = 0;
+    let autoTotal = 0;
+    questions.forEach((q,i) => {
+      if (isManualStudy(q)) return;
+      autoTotal++;
+      if (document.querySelector(`input[name=q${i}]:checked`)) answered++;
+    });
     const el = $('#progress');
-    if (el) el.textContent=`已作答 ${n} / ${questions.length}`;
+    if (el) el.textContent=`已作答 ${answered} / ${autoTotal}`;
   };
 
   const originalSubmit = $('#submitBtn')?.onclick;
   if ($('#submitBtn')) {
     $('#submitBtn').onclick = function() {
       let correct=0;
+      let autoTotal=0;
       questions.forEach((x,i)=>{
+        if (isManualStudy(x)) return;
+        autoTotal++;
         const picked=document.querySelector(`input[name=q${i}]:checked`);
         const labels=[...document.querySelectorAll(`[data-q="${i}"] .option`)];
         labels.forEach((l,j)=>{l.classList.remove('correct','wrong');if(j===x.a)l.classList.add('correct')});
@@ -198,11 +229,12 @@
       });
       graded=true;
       const ctx = window.examContextCurrent || getContext(level);
-      const info=scoreInfo(correct,questions.length,ctx);
-      const missed=questions.length-correct;
-      result.innerHTML=`<div>${ctx.resultLabel || '本次結果'}</div><strong>${info.prominent}</strong><div>${info.detail}｜錯誤或未答 ${missed} 題</div>`;
+      const manualTotal = questions.length - autoTotal;
+      const info=scoreInfo(correct,autoTotal,ctx);
+      const missed=autoTotal-correct;
+      result.innerHTML=`<div>${ctx.resultLabel || '本次結果'}</div><strong>${info.prominent}</strong><div>${info.detail}｜錯誤或未答 ${missed} 題</div>${manualTotal ? `<div class="tiny" style="margin-top:6px">另有紙筆練習 ${manualTotal} 題，不列入正答率。</div>` : ''}`;
       result.style.display='block';
-      document.dispatchEvent(new CustomEvent('exam:submitted', {detail:{...ctx,correct,total:questions.length,score:info.score}}));
+      document.dispatchEvent(new CustomEvent('exam:submitted', {detail:{...ctx,correct,total:autoTotal,manualStudyTotal:manualTotal,score:info.score}}));
       result.scrollIntoView({behavior:'smooth',block:'center'});
     };
   }

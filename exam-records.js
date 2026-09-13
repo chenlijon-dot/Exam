@@ -60,7 +60,9 @@
   }
 
   function captureAttempt() {
-    const cards = $$('.card[data-q]');
+    const allCards = $$('.card[data-q]');
+    const cards = allCards.filter(card => card.dataset.questionType !== 'manual-study');
+    const manualStudyCount = allCards.length - cards.length;
     if (!cards.length) return null;
 
     const ctx = currentContext();
@@ -69,7 +71,8 @@
     let correct = 0, incorrect = 0, unanswered = 0;
 
     const answers = cards.map((card, idx) => {
-      const source = (typeof questions !== 'undefined' && questions[idx]) ? questions[idx] : {};
+      const sourceIndex = Number(card.dataset.q ?? idx);
+      const source = (typeof questions !== 'undefined' && questions[sourceIndex]) ? questions[sourceIndex] : {};
       const question = $('.question-text', card)?.textContent.trim()
         || $('.qtitle', card)?.textContent.replace(/^\s*\d+\s*/, '').trim()
         || `第${idx+1}題`;
@@ -136,6 +139,7 @@
       incorrect,
       unanswered,
       total,
+      manualStudyCount,
       answers,
       wrongAnswers: answers.filter(a => a.selectedIndex !== null && !a.isCorrect)
     };
