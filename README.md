@@ -135,114 +135,106 @@ Exam-Record = 學習結果與 AI 診斷資料
 
 ---
 
+# 4.1 GitHub-first 工作流程（2026-09-14 起）
 
-# 4.1 本機 Git 工作區（2026-09-14 起）
+本專案日常修改的預設 authority 為：
 
-`Exam` 已建立正式本機 Git working copy：
+```text
+GitHub: chenlijon-dot/Exam
+branch: main
+```
+
+本機仍保留 working copy：
 
 ```text
 E:\Exam
 ```
 
-遠端 repository：
+但 `E:\Exam` 不再是日常修改的唯一或優先入口；它改為「需要本機檔案處理時使用的工作副本」。
+
+日常預設流程：
 
 ```text
-https://github.com/chenlijon-dot/Exam
+Google Drive／使用者提供資料
+        ↓
+ChatGPT 先讀 GitHub 最新 main
+        ↓
+直接透過 GitHub connector 修改文字檔／題庫程式
+        ↓
+commit 到 origin/main
+        ↓
+GitHub Pages deployment
 ```
 
-自 2026-09-14 起，網站題庫與程式的日常修改採用：
+換句話說：
 
 ```text
-Google Drive
-→ 原始教材／原始考卷／參考資料
-
-E:\Exam
-→ Exam repository 的主要編輯工作區
-→ 修改程式
-→ 修改 JSON
-→ 整理圖片 assets
-→ 本機檢查
-→ git diff
-→ commit
-
-GitHub origin/main
-→ 遠端同步
-→ GitHub Pages deployment
-```
-
-也就是：
-
-```text
-資料來源 authority
-        ↓
-E:\Exam 本機修改
-        ↓
-本機驗證
-        ↓
-git commit
-        ↓
-git pull --rebase origin main
-        ↓
-git push origin main
-        ↓
-GitHub Pages
+GitHub origin/main = 網站程式與題庫的遠端 authority
+E:\Exam           = 必要時才使用的本機工作副本
 ```
 
 ## 4.1.1 跨 ChatGPT 對話統一規則
 
-不同科目或不同工作可以在不同 ChatGPT 對話進行，但只要需要修改 `Exam` repository，都遵守同一套規則。
+不同科目或不同工作可以在不同 ChatGPT 對話進行。只要要修改 `Exam` repository，預設都先讀 GitHub 最新狀態，再直接對 GitHub 修改。
 
-預設：
+正式原則：
 
 ```text
-不要直接把 GitHub connector 當成主要寫入工作區。
-
-優先修改：
-E:\Exam
+預設：GitHub connector 直接修改
+必要時：repo 回 E:\Exam 做本機處理
 ```
 
-原因：
+適合直接在 GitHub 處理：
 
-- 避免不同對話同時直接修改遠端而造成版本分岔。
-- 本機可先查看 `git diff` 再送出。
-- 圖片、PDF、JSON 等資產比較容易人工確認。
-- 發現錯誤可以在 push 前修正。
-- Windows / PowerShell 5.1 可以直接檢查真正部署的檔案。
-- Git commit history 會比較清楚。
+- README / Markdown
+- JSON 題庫
+- JavaScript
+- HTML / CSS
+- 純文字設定檔
+- 小型 SVG
+- 其他 connector 可穩定讀寫的文字檔
 
-每次開始修改前：
+適合改走本機 `E:\Exam`：
 
-```powershell
-Set-Location E:\Exam
-git status
-```
+- PNG / JPG 等 binary asset
+- PDF 或大型檔案
+- 需要裁圖、壓縮、格式轉換的檔案
+- GitHub connector 無法可靠上傳或更新的檔案
+- 需要本機程式批次處理、實際預覽或大量檔案操作的工作
+
+因此不要為了每一個小修改都先要求使用者 pull / edit / commit / push；能安全直接改 GitHub 的工作，由 ChatGPT 直接完成。
+
+同一個檔案避免同時由「GitHub connector」與「本機 Git」兩邊修改，以免互相踩版本。
+
+## 4.1.2 本機 fallback / repo 回來處理檔案
+
+若工作必須使用本機 `E:\Exam`，開始前先同步遠端。
 
 若 working tree clean：
 
 ```powershell
-git pull --rebase origin main
+git -C E:\Exam pull --rebase origin main
 ```
-
-再開始工作。
 
 若 working tree 有修改：
 
 ```text
-先確認目前修改來源
-→ 不可直接硬 pull
+先確認本機未提交內容
+→ 不直接硬 pull
 → 必要時先 commit 或 stash
-→ 再同步遠端
+→ 再同步 origin/main
 ```
 
-一般完成流程：
+本機完成後：
 
 ```powershell
+Set-Location E:\Exam
+
 git status
 git diff
 
 git add <修改檔案>
 git commit -m "<清楚描述此次修改>"
-
 git pull --rebase origin main
 git push origin main
 ```
@@ -253,36 +245,37 @@ git push origin main
 git push --force
 ```
 
-除非已經明確確認需要改寫 Git history。
+除非已明確確認需要改寫 Git history。
 
-若其他 ChatGPT 對話或 GitHub connector 曾直接更新遠端，下一次本機作業前必須先：
+若 ChatGPT 已經直接把新 commit 寫到 GitHub，而之後又要回本機工作，先執行：
 
 ```powershell
-git fetch origin
-git status
-git pull --rebase origin main
+git -C E:\Exam status
+git -C E:\Exam pull --rebase origin main
 ```
 
-確保 `E:\Exam` 重新追上 `origin/main`。
+如此 `E:\Exam` 才會重新追上最新 `origin/main`。
 
-## 4.1.2 ChatGPT 產生檔案的匯入方式
+## 4.1.3 ChatGPT 產生 binary 檔案的匯入方式
 
-如果 ChatGPT 產生圖片、JSON 或其他檔案供下載，建議流程：
+若 ChatGPT 產生 PNG、JPG 或其他 connector 不適合直接寫入的檔案，採：
 
 ```text
 ChatGPT 產生檔案
         ↓
-Windows Downloads
+使用者下載到 Windows Downloads
         ↓
 人工確認檔案正常
         ↓
-Copy-Item 到 E:\Exam 正確位置
+必要時同步 E:\Exam
+        ↓
+Copy-Item 到 repository 正確位置
         ↓
 修改 JSON / manifest 引用
         ↓
 本機驗證
         ↓
-git add / commit / push
+git add / commit / pull --rebase / push
 ```
 
 PowerShell 範例：
@@ -294,9 +287,9 @@ Copy-Item `
     -Force
 ```
 
-這比讓不同工具直接修改遠端 binary asset 更容易驗證與除錯。
+本機流程是 binary / 大型檔案的 fallback，不是所有修改的必經步驟。
 
-## 4.1.3 數學歷屆考題圖片規則
+## 4.1.4 數學歷屆考題圖片規則
 
 數學歷屆考題的圖形本身可能就是題意的一部分，因此必須以「還原原卷」為優先。
 
@@ -1048,7 +1041,7 @@ chapter-bank/
       └─ <chapter>.json
 ```
 
-注意：`chapter-bank/` 是下一階段規劃，目前不要假設 repository 已存在。
+此處為規劃路徑；實際 repository 如已建立，應以最新 GitHub 內容為準並同步更新本 README。
 
 私人：
 
@@ -1116,11 +1109,13 @@ Exam-Record/
 - [x] 歷屆固定選項／題組／圖題／正確率
 - [x] 90 年第一次基測國文 46 題
 - [x] 90 年第二次基測國文 47 題
+- [x] 90 年第一次基測數學 32 題
 - [x] 正式歷屆考題匯入 SOP
 - [x] Google Drive 教材 reference 架構文件化
 - [x] 使用者拍照教材 → Drive canonical knowledge SOP
 - [x] 校內段考原始卷 → Drive 的保存原則文件化
 - [x] 校內段考拆題 → 課次／chapter／concept → GitHub 的 SOP 文件化
+- [x] GitHub-first 修改流程文件化
 
 ## 下一階段
 
@@ -1142,21 +1137,24 @@ Exam-Record/
 新的 ChatGPT 對話要繼續本專案時：
 
 1. 先讀 `chenlijon-dot/Exam/README.md`。
-2. 再看 GitHub repository 最新實際檔案。
-3. 涉及教材時，搜尋 Google Drive canonical 教材知識庫。
-4. 涉及校內段考時，先查 Drive 是否已有原卷與整理資料。
-5. README 與程式不一致，以最新程式為準並更新 README。
-6. README 與教材事實不一致，以可核對原始資料／canonical knowledge 為準。
-7. 不自行猜課名、章節或尚未存在的年度。
-8. 正式歷屆題走第 15 節 SOP。
-9. 校內段考走第 9 節 SOP。
-10. 使用者拍攝教材走第 6 節 SOP。
-11. 每完成新試卷、新章節、新段考批次或重要架構調整，都更新 README。
+2. 再讀 GitHub repository 最新 `main` 的實際檔案；README 與程式不一致時，以最新程式為準並修正 README。
+3. 預設直接使用 GitHub connector 對 `chenlijon-dot/Exam` 讀寫，不要求先回本機操作。
+4. 只有 binary asset、大型檔案、批次處理、需要本機預覽，或 connector 無法可靠完成時，才改用 `E:\Exam`。
+5. 回到 `E:\Exam` 前先同步 `origin/main`；GitHub 直接修改完成後，本機副本可能落後，之後再用時必須先 `pull --rebase`。
+6. 涉及教材時，搜尋 Google Drive canonical 教材知識庫。
+7. 涉及校內段考時，先查 Drive 是否已有原卷與整理資料。
+8. README 與教材事實不一致，以可核對原始資料／canonical knowledge 為準。
+9. 不自行猜課名、章節或尚未存在的年度。
+10. 正式歷屆題走第 15 節 SOP。
+11. 校內段考走第 9 節 SOP。
+12. 使用者拍攝教材走第 6 節 SOP。
+13. 數學歷屆圖形以原卷裁圖為優先，不生成近似圖取代原圖。
+14. 每完成新試卷、新章節、新段考批次或重要架構調整，都更新 README。
 
 ---
 
 # 23. 目前一句話狀態
 
-截至 2026-09-13：
+截至 2026-09-14：
 
-> 系統目前採「Google Drive 原始教材／校內段考參考記憶 + GitHub Exam 可執行題庫 + Private Exam-Record 學習紀錄／AI curriculum」三層架構。正式歷屆題已納入 90 年第一次基測國文 46 題與第二次 47 題，共 93 題；教材照片與各校段考原始卷以 Google Drive 長期保存。各校段考不以整張 PDF 為最終題庫單位，而是逐題拆解、保留學校／年度／次別／原題號 provenance，再依實際課次、chapter 與 concept 插入 GitHub 章節題庫，使未來可以進行「一課一課、一章一章」的跨校題目練習與統計。
+> 系統目前採「Google Drive 原始教材／校內段考參考記憶 + GitHub Exam 可執行題庫 + Private Exam-Record 學習紀錄／AI curriculum」三層架構。日常程式與題庫修改以 GitHub `origin/main` 為 authority，ChatGPT 預設直接透過 GitHub connector 修改；只有 binary asset、大型檔案、裁圖／轉檔、批次處理或 connector 不適合處理的情況，才回到 `E:\Exam` 本機工作副本。正式歷屆題目前已納入 90 年第一次基測國文 46 題、第二次國文 47 題，以及第一次數學 32 題；教材照片與各校段考原始卷以 Google Drive 長期保存。各校段考仍採逐題拆解、保留 provenance，再依實際課次、chapter 與 concept 插入 GitHub 章節題庫的方向發展。
