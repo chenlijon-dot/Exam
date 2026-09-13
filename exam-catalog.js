@@ -25,17 +25,28 @@
       code: '第一課',
       title: '夏夜',
       referenceReady: true,
+      bankMenuReady: true,
       quizReady: false,
-      desc: '教材知識庫已建立並持續整理；正式章節題庫待建。'
+      desc: '教材知識庫已建立；各校段考來源已開始收錄。'
     },
     {
       key: 'chinese-7-1-lesson-02',
       code: '第二課',
       title: '手的故事',
       referenceReady: true,
+      bankMenuReady: false,
       quizReady: false,
       desc: '課文內容與教材知識庫已建立；待正式課本頁面補齊後持續校對並建立題庫。'
     }
+  ];
+
+  // 第一課〈夏夜〉目前已在 Google Drive 課次索引中出現的校內段考來源。
+  // 此處只建立網站導航；正式題目會逐題整理後再進 GitHub 題庫資料。
+  const CHINESE_7_1_LESSON_01_SCHOOLS = [
+    { key: 'chengzheng', name: '臺北市立誠正國中', exam: '114 學年度第一學期七年級第一次段考' },
+    { key: 'yichang', name: '花蓮縣宜昌國中', exam: '114 學年度第一學期七年級第一次段考' },
+    { key: 'siyu', name: '臺中市立四育國中', exam: '114 學年度第一學期七年級第一次段考' },
+    { key: 'zhongxiao', name: '新北市立忠孝國中', exam: '114 學年度第一學期七年級第一次段考' }
   ];
 
   const SCIENCE_SEMESTERS = [
@@ -141,6 +152,7 @@
       .catalog-badge.soon{background:#f1f5f9;color:#64748b}
       .catalog-badge.core{background:#fff7ed;color:#c2410c}
       .catalog-badge.reference{background:#ecfdf5;color:#047857}
+      .catalog-badge.school{background:#f5f3ff;color:#6d28d9}
       .catalog-back{border:0;background:#e2e8f0;color:#1e293b;border-radius:10px;padding:9px 12px;font-weight:700;cursor:pointer;margin-bottom:14px}
       .catalog-path{color:#64748b;font-size:.88rem;margin-bottom:10px}
       .chapter-card{grid-column:1/-1}
@@ -278,7 +290,7 @@
           <button class="catalog-card chapter-card" data-chinese-lesson="${lesson.key}">
             <span class="top">
               <strong>${lesson.code}　${lesson.title}</strong>
-              <span class="catalog-badge ${lesson.quizReady ? '' : 'reference'}">${lesson.quizReady ? '題庫可用' : '教材建置中'}</span>
+              <span class="catalog-badge ${lesson.bankMenuReady ? 'reference' : 'soon'}">${lesson.bankMenuReady ? '題庫架構已建' : '教材建置中'}</span>
             </span>
             <span class="desc">${lesson.desc}</span>
           </button>
@@ -295,6 +307,11 @@
   function showChinese71Lesson(lessonKey) {
     const lesson = CHINESE_7_1_LESSONS.find(item => item.key === lessonKey);
     if (!lesson) return;
+
+    if (lessonKey === 'chinese-7-1-lesson-01') {
+      showChinese71Lesson01Banks();
+      return;
+    }
 
     setHeader(`國文第一冊｜${lesson.code}`, lesson.title);
     document.title = `${lesson.code} ${lesson.title}｜國文第一冊`;
@@ -322,6 +339,85 @@
     `;
 
     $('#backChinese71LessonsBtn')?.addEventListener('click', showChinese71Lessons);
+  }
+
+  function showChinese71Lesson01Banks() {
+    setHeader('國文第一冊｜第一課', '夏夜｜選擇題庫');
+    document.title = '第一課 夏夜｜國文第一冊';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backChinese71LessonsBtn">← 返回課次</button>
+      <div class="catalog-path">國文　›　七年級上學期（一上）　›　第一冊　›　第一課 夏夜</div>
+      <h2 class="catalog-title">第一課　夏夜</h2>
+      <p class="catalog-sub">自編題依難度建立；各校題庫保留真實段考來源與原始題型。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card" disabled>
+          <span class="top">
+            <span class="icon">🌱</span>
+            <strong>簡易</strong>
+            <span class="catalog-badge soon">待建</span>
+          </span>
+          <span class="desc">字音字形、基本課文內容、作者與基礎修辭。</span>
+        </button>
+        <button class="catalog-card" disabled>
+          <span class="top">
+            <span class="icon">🌿</span>
+            <strong>中等</strong>
+            <span class="catalog-badge soon">待建</span>
+          </span>
+          <span class="desc">文意理解、意象判讀、修辭與寫作手法整合。</span>
+        </button>
+        <button class="catalog-card" disabled>
+          <span class="top">
+            <span class="icon">🌳</span>
+            <strong>困難</strong>
+            <span class="catalog-badge soon">待建</span>
+          </span>
+          <span class="desc">跨文本、延伸閱讀、綜合應用與高層次判讀。</span>
+        </button>
+        <button class="catalog-card" id="chineseLesson01SchoolBankBtn">
+          <span class="top">
+            <span class="icon">🏫</span>
+            <strong>各校題庫</strong>
+            <span class="catalog-badge school">${CHINESE_7_1_LESSON_01_SCHOOLS.length} 校已索引</span>
+          </span>
+          <span class="desc">由各校真實段考拆題；支援原始題型、閱讀題組、圖片與紙筆練習。</span>
+        </button>
+      </div>
+    `;
+
+    $('#backChinese71LessonsBtn')?.addEventListener('click', showChinese71Lessons);
+    $('#chineseLesson01SchoolBankBtn')?.addEventListener('click', showChinese71Lesson01SchoolBanks);
+  }
+
+  function showChinese71Lesson01SchoolBanks() {
+    setHeader('第一課 夏夜｜各校題庫', '真實段考來源');
+    document.title = '夏夜｜各校題庫';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backChineseLesson01BanksBtn">← 返回題庫</button>
+      <div class="catalog-path">國文　›　第一冊　›　第一課 夏夜　›　各校題庫</div>
+      <h2 class="catalog-title">各校題庫</h2>
+      <p class="catalog-sub">目前已在 Google Drive 課次索引確認 4 校來源。下一步會逐題轉成可在網頁呈現的國文題型。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card chapter-card" disabled>
+          <span class="top">
+            <strong>🔀 綜合練習</strong>
+            <span class="catalog-badge soon">待匯入</span>
+          </span>
+          <span class="desc">未來混合各校屬於〈夏夜〉的真實考題；可自動評量題與紙筆題分開統計。</span>
+        </button>
+        ${CHINESE_7_1_LESSON_01_SCHOOLS.map(school => `
+          <button class="catalog-card chapter-card" disabled>
+            <span class="top">
+              <strong>🏫 ${school.name}</strong>
+              <span class="catalog-badge school">來源已索引</span>
+            </span>
+            <span class="desc">${school.exam}｜題目正在依原始題型整理。</span>
+          </button>
+        `).join('')}
+      </div>
+    `;
+
+    $('#backChineseLesson01BanksBtn')?.addEventListener('click', showChinese71Lesson01Banks);
   }
 
   function showScienceSemesters() {
