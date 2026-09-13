@@ -2,7 +2,7 @@
 
 > 專案狀態、資料規格與工作流程文件。後續新增科目、學期、章節、題庫、歷屆試題、校內段考、教材參考資料、錯題診斷或資料結構時，請同步更新本 README。
 >
-> 最後更新：2026-09-13
+> 最後更新：2026-09-14
 
 ---
 
@@ -47,7 +47,7 @@ AI 弱點診斷
 │  └─ 九年級下學期／三下
 │
 ├─ 英文　（建置中）
-├─ 數學　（建置中）
+├─ 數學　（一般章節題庫建置中；歷屆題已開始匯入）
 │
 ├─ 自然
 │  └─ 七年級上學期／一上
@@ -62,17 +62,20 @@ AI 弱點診斷
    ├─ 國中基本學力測驗（基測）
    │  └─ 90 年度
    │     ├─ 第一次
-   │     │  └─ 國文科：46 題 ✅
+   │     │  ├─ 國文科：46 題 ✅
+   │     │  └─ 數學科：32 題 ✅
    │     └─ 第二次
    │        └─ 國文科：47 題 ✅
    │
    └─ 國中教育會考　（待匯入）
 ```
 
-目前正式歷屆國文共：
+目前正式歷屆題：
 
 ```text
-46 + 47 = 93 題
+國文：46 + 47 = 93 題
+數學：90 年第一次 32 題
+合計：125 題
 ```
 
 ---
@@ -132,6 +135,246 @@ Exam-Record = 學習結果與 AI 診斷資料
 
 ---
 
+
+# 4.1 本機 Git 工作區（2026-09-14 起）
+
+`Exam` 已建立正式本機 Git working copy：
+
+```text
+E:\Exam
+```
+
+遠端 repository：
+
+```text
+https://github.com/chenlijon-dot/Exam
+```
+
+自 2026-09-14 起，網站題庫與程式的日常修改採用：
+
+```text
+Google Drive
+→ 原始教材／原始考卷／參考資料
+
+E:\Exam
+→ Exam repository 的主要編輯工作區
+→ 修改程式
+→ 修改 JSON
+→ 整理圖片 assets
+→ 本機檢查
+→ git diff
+→ commit
+
+GitHub origin/main
+→ 遠端同步
+→ GitHub Pages deployment
+```
+
+也就是：
+
+```text
+資料來源 authority
+        ↓
+E:\Exam 本機修改
+        ↓
+本機驗證
+        ↓
+git commit
+        ↓
+git pull --rebase origin main
+        ↓
+git push origin main
+        ↓
+GitHub Pages
+```
+
+## 4.1.1 跨 ChatGPT 對話統一規則
+
+不同科目或不同工作可以在不同 ChatGPT 對話進行，但只要需要修改 `Exam` repository，都遵守同一套規則。
+
+預設：
+
+```text
+不要直接把 GitHub connector 當成主要寫入工作區。
+
+優先修改：
+E:\Exam
+```
+
+原因：
+
+- 避免不同對話同時直接修改遠端而造成版本分岔。
+- 本機可先查看 `git diff` 再送出。
+- 圖片、PDF、JSON 等資產比較容易人工確認。
+- 發現錯誤可以在 push 前修正。
+- Windows / PowerShell 5.1 可以直接檢查真正部署的檔案。
+- Git commit history 會比較清楚。
+
+每次開始修改前：
+
+```powershell
+Set-Location E:\Exam
+git status
+```
+
+若 working tree clean：
+
+```powershell
+git pull --rebase origin main
+```
+
+再開始工作。
+
+若 working tree 有修改：
+
+```text
+先確認目前修改來源
+→ 不可直接硬 pull
+→ 必要時先 commit 或 stash
+→ 再同步遠端
+```
+
+一般完成流程：
+
+```powershell
+git status
+git diff
+
+git add <修改檔案>
+git commit -m "<清楚描述此次修改>"
+
+git pull --rebase origin main
+git push origin main
+```
+
+原則上不要使用：
+
+```powershell
+git push --force
+```
+
+除非已經明確確認需要改寫 Git history。
+
+若其他 ChatGPT 對話或 GitHub connector 曾直接更新遠端，下一次本機作業前必須先：
+
+```powershell
+git fetch origin
+git status
+git pull --rebase origin main
+```
+
+確保 `E:\Exam` 重新追上 `origin/main`。
+
+## 4.1.2 ChatGPT 產生檔案的匯入方式
+
+如果 ChatGPT 產生圖片、JSON 或其他檔案供下載，建議流程：
+
+```text
+ChatGPT 產生檔案
+        ↓
+Windows Downloads
+        ↓
+人工確認檔案正常
+        ↓
+Copy-Item 到 E:\Exam 正確位置
+        ↓
+修改 JSON / manifest 引用
+        ↓
+本機驗證
+        ↓
+git add / commit / push
+```
+
+PowerShell 範例：
+
+```powershell
+Copy-Item `
+    "$env:USERPROFILE\Downloads\q26-options.png" `
+    "E:\Exam\past-exams\bct\90\first\assets\math\q26-options.png" `
+    -Force
+```
+
+這比讓不同工具直接修改遠端 binary asset 更容易驗證與除錯。
+
+## 4.1.3 數學歷屆考題圖片規則
+
+數學歷屆考題的圖形本身可能就是題意的一部分，因此必須以「還原原卷」為優先。
+
+正式原則：
+
+```text
+原卷可直接裁圖
+→ 優先使用原卷裁圖
+
+不是：
+原圖 → AI 猜測 → 重新生成近似圖
+```
+
+適用於：
+
+- 幾何圖
+- 座標圖
+- 方格圖
+- 相似形
+- 圓
+- 摺紙圖
+- 統計圖
+- 圖形選項
+- 流程圖
+- 天平等題意示意圖
+
+尤其涉及：
+
+```text
+長度比例
+角度
+格點位置
+相似關係
+交點
+圖形方向
+```
+
+時，不得自行重新生成一張「看起來差不多」的圖。
+
+圖片格式原則：
+
+```text
+原卷掃描／裁切圖
+→ PNG 優先
+
+真正的向量圖
+→ 可使用 SVG
+```
+
+避免：
+
+```text
+SVG
+└─ 再內嵌 data:image/...;base64 raster image
+```
+
+這種作法在不同瀏覽器與 GitHub Pages 上可能產生相容性問題。
+
+因此像：
+
+```text
+past-exams/bct/90/first/assets/math/q26-options.png
+```
+
+這類原卷裁圖，直接以 PNG asset 儲存並由 JSON 引用。
+
+題庫仍保持：
+
+```text
+題幹文字 → HTML / KaTeX
+公式 → KaTeX
+原始圖形 → PNG asset
+答案 → JSON
+```
+
+如此既能保留原卷精確性，也保留文字搜尋、錯題分析與未來 AI curriculum 的能力。
+
+---
 # 5. Google Drive：教材參考知識庫
 
 ## 5.1 適合放什麼
