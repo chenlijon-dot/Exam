@@ -26,7 +26,15 @@
       title: '夏夜',
       referenceReady: true,
       quizReady: false,
-      desc: '教材知識庫架構已建立；待課本／講義內容整理後建立正式題庫。'
+      desc: '教材知識庫已建立並持續整理；正式章節題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-02',
+      code: '第二課',
+      title: '手的故事',
+      referenceReady: true,
+      quizReady: false,
+      desc: '課文內容與教材知識庫已建立；待正式課本頁面補齊後持續校對並建立題庫。'
     }
   ];
 
@@ -224,7 +232,7 @@
               <strong>${s.title}</strong>
               <span class="catalog-badge ${s.key === '7-1' ? 'reference' : ''}">${s.short}</span>
             </span>
-            <span class="desc">${s.key === '7-1' ? '第一冊已建立第一課〈夏夜〉' : '查看章節建置狀態'}</span>
+            <span class="desc">${s.key === '7-1' ? '第一冊已建立第一課〈夏夜〉與第二課〈手的故事〉' : '查看章節建置狀態'}</span>
           </button>
         `).join('')}
       </div>
@@ -264,7 +272,7 @@
       <button class="catalog-back" id="backChineseSemestersBtn">← 返回學期</button>
       <div class="catalog-path">國文　›　七年級上學期（一上）　›　第一冊</div>
       <h2 class="catalog-title">請選擇課次</h2>
-      <p class="catalog-sub">已依目前確認的實際教材建立第一課；其他課次待教材確認後再加入。</p>
+      <p class="catalog-sub">已依目前確認的實際教材建立第一、二課；其他課次待教材確認後再加入。</p>
       <div class="catalog-grid">
         ${CHINESE_7_1_LESSONS.map(lesson => `
           <button class="catalog-card chapter-card" data-chinese-lesson="${lesson.key}">
@@ -301,7 +309,7 @@
             <strong>📚 教材參考資料</strong>
             <span class="catalog-badge reference">知識庫已建立</span>
           </span>
-          <span class="desc">Google Drive canonical 教材知識庫已建立，內容將依你提供的課本照片與講義持續整理。</span>
+          <span class="desc">Google Drive canonical 教材知識庫已建立，內容將依你提供的課本照片、課文與講義持續整理。</span>
         </button>
         <button class="catalog-card chapter-card" disabled>
           <span class="top">
