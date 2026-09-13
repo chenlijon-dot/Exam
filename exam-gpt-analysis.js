@@ -92,11 +92,15 @@
   async function createAnalysisRequest(wrongAnswers) {
     const id = requestId();
     const payload = {
-      schemaVersion: 1,
+      schemaVersion: 2,
       id,
       requestedAt: new Date().toISOString(),
       subject: '國一自然',
-      unit: '科學方法',
+      semester: '七年級上學期',
+      unitGroup: '單元 1 生命現象與科學探究',
+      section: '1-2',
+      unit: '1-2 科學方法',
+      curriculumKey: 'science-method',
       wrongAnswers
     };
     const path = `analysis-requests/${id}.json`;
@@ -196,7 +200,7 @@
       area.style.cssText = 'margin:14px 0;padding:12px;border:1px solid #dbeafe;border-radius:14px;background:#f8fbff';
       area.innerHTML = `
         <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
-          <div><b>AI 錯題診斷</b><div class="record-note">讓 Gemini 從累積錯題找出共同弱點與複習方向。</div></div>
+          <div><b>AI 錯題診斷</b><div class="record-note">讓 Gemini 依自然七上 1-2「科學方法」教材基準分析累積錯題。</div></div>
           <button id="gptWrongAnalysisBtn" class="record-btn" style="border-color:#93c5fd;color:#1d4ed8">🤖 AI 分析</button>
         </div>
         <div id="gptAnalysisStatus" class="sync-status"></div>
