@@ -27,13 +27,72 @@
     { key: '9-2', title: '九年級下學期', short: '三下', enabled: false }
   ];
 
-  const SCIENCE_7_1_CHAPTERS = [
+  // 依使用者提供之七年級上學期自然教材目錄建立。
+  // 尚未建立題目的小節仍先保留在 catalog，避免日後章節定位漂移。
+  const SCIENCE_7_1_UNITS = [
     {
-      key: 'science-method',
-      number: '第 1 章',
-      title: '科學方法',
-      desc: '科學方法步驟、實驗組與對照組、變因與資料判讀',
-      enabled: true
+      key: 'unit-1', number: '單元 1', title: '生命現象與科學探究',
+      sections: [
+        { key: 'science-7-1-1-1', code: '1-1', title: '生命現象和生物圈', enabled: false },
+        { key: 'science-method', code: '1-2', title: '科學方法', enabled: true, desc: '科學方法步驟、實驗組與對照組、變因與資料判讀' },
+        { key: 'science-7-1-1-3', code: '1-3', title: '認識實驗室', enabled: false },
+        { key: 'science-7-1-core-1', code: '核心素養', title: '生活在沙漠中的生物', enabled: false, type: 'literacy' }
+      ]
+    },
+    {
+      key: 'unit-2', number: '單元 2', title: '生物體的構造',
+      sections: [
+        { key: 'science-7-1-2-1', code: '2-1', title: '生物體的基本構造', enabled: false },
+        { key: 'science-7-1-2-2', code: '2-2', title: '細胞的形態和構造', enabled: false },
+        { key: 'science-7-1-2-3', code: '2-3', title: '有關生命的物質', enabled: false },
+        { key: 'science-7-1-2-4', code: '2-4', title: '從細胞到生物體', enabled: false },
+        { key: 'science-7-1-core-2', code: '核心素養', title: '生命的起源', enabled: false, type: 'literacy' }
+      ]
+    },
+    {
+      key: 'unit-3', number: '單元 3', title: '生物體內的營養',
+      sections: [
+        { key: 'science-7-1-3-1', code: '3-1', title: '食物和養分', enabled: false },
+        { key: 'science-7-1-3-2', code: '3-2', title: '酵素的作用', enabled: false },
+        { key: 'science-7-1-3-3', code: '3-3', title: '光合作用', enabled: false },
+        { key: 'science-7-1-3-4', code: '3-4', title: '人體的消化系統', enabled: false },
+        { key: 'science-7-1-core-3', code: '核心素養', title: '養分的消化與吸收', enabled: false, type: 'literacy' }
+      ]
+    },
+    {
+      key: 'unit-4', number: '單元 4', title: '生物體內的運輸作用',
+      sections: [
+        { key: 'science-7-1-4-1', code: '4-1', title: '植物的維管束', enabled: false },
+        { key: 'science-7-1-4-2', code: '4-2', title: '蒸散作用與養分運輸', enabled: false },
+        { key: 'science-7-1-4-3', code: '4-3', title: '人體的血液循環', enabled: false },
+        { key: 'science-7-1-4-4', code: '4-4', title: '人體的循環系統', enabled: false },
+        { key: 'science-7-1-core-4', code: '核心素養', title: '人體的專一性防禦作用', enabled: false, type: 'literacy' }
+      ]
+    },
+    {
+      key: 'unit-5', number: '單元 5', title: '生物體內的協調作用',
+      sections: [
+        { key: 'science-7-1-5-1', code: '5-1', title: '刺激與反應', enabled: false },
+        { key: 'science-7-1-5-2', code: '5-2', title: '神經系統', enabled: false },
+        { key: 'science-7-1-5-3', code: '5-3', title: '內分泌系統', enabled: false },
+        { key: 'science-7-1-5-4', code: '5-4', title: '行為與感應', enabled: false },
+        { key: 'science-7-1-core-5', code: '核心素養', title: '動物印痕', enabled: false, type: 'literacy' }
+      ]
+    },
+    {
+      key: 'unit-6', number: '單元 6', title: '生物體內的恆定性',
+      sections: [
+        { key: 'science-7-1-6-1', code: '6-1', title: '呼吸運動與氣體恆定', enabled: false },
+        { key: 'science-7-1-6-2', code: '6-2', title: '排泄作用與水分恆定', enabled: false },
+        { key: 'science-7-1-6-3', code: '6-3', title: '體溫恆定與血糖恆定', enabled: false },
+        { key: 'science-7-1-core-6', code: '核心素養', title: '糖尿病', enabled: false, type: 'literacy' }
+      ]
+    },
+    {
+      key: 'cross-topic', number: '跨科主題', title: '尺度的認識與應用',
+      sections: [
+        { key: 'science-7-1-cross-scale', code: '跨科主題', title: '尺度的認識與應用', enabled: false, type: 'cross' }
+      ]
     }
   ];
 
@@ -58,8 +117,9 @@
       .catalog-card strong{font-size:1.16rem}
       .catalog-card .desc{display:block;color:#657089;font-size:.9rem;margin-top:7px}
       .catalog-card:disabled .desc{color:#94a3b8}
-      .catalog-badge{display:inline-block;margin-left:auto;border-radius:999px;padding:3px 8px;font-size:.76rem;font-weight:700;background:#eef4ff;color:#1d4ed8}
+      .catalog-badge{display:inline-block;margin-left:auto;border-radius:999px;padding:3px 8px;font-size:.76rem;font-weight:700;background:#eef4ff;color:#1d4ed8;white-space:nowrap}
       .catalog-badge.soon{background:#f1f5f9;color:#64748b}
+      .catalog-badge.core{background:#fff7ed;color:#c2410c}
       .catalog-back{border:0;background:#e2e8f0;color:#1e293b;border-radius:10px;padding:9px 12px;font-weight:700;cursor:pointer;margin-bottom:14px}
       .catalog-path{color:#64748b;font-size:.88rem;margin-bottom:10px}
       .chapter-card{grid-column:1/-1}
@@ -186,7 +246,7 @@
       <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
       <div class="catalog-path">自然</div>
       <h2 class="catalog-title">請選擇學期</h2>
-      <p class="catalog-sub">目前已建立七年級上學期題庫。</p>
+      <p class="catalog-sub">七年級上學期已依目前教材目錄建立完整單元架構。</p>
       <div class="catalog-grid">
         ${SCIENCE_SEMESTERS.map(s => `
           <button class="catalog-card" data-semester="${s.key}" ${s.enabled ? '' : 'disabled'}>
@@ -194,39 +254,78 @@
               <strong>${s.title}</strong>
               <span class="catalog-badge ${s.enabled ? '' : 'soon'}">${s.short}</span>
             </span>
-            <span class="desc">${s.enabled ? '查看章節' : '尚未建立題庫'}</span>
+            <span class="desc">${s.enabled ? '查看單元與小節' : '尚未建立題庫'}</span>
           </button>
         `).join('')}
       </div>
     `;
 
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
-    $('[data-semester="7-1"]')?.addEventListener('click', showScience71Chapters);
+    $('[data-semester="7-1"]')?.addEventListener('click', showScience71Units);
   }
 
-  function showScience71Chapters() {
-    setHeader('自然科｜七年級上學期', '選擇章節');
+  function showScience71Units() {
+    setHeader('自然科｜七年級上學期', '選擇單元');
     document.title = '自然一上｜國中題庫';
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backSemestersBtn">← 返回學期</button>
       <div class="catalog-path">自然　›　七年級上學期（一上）</div>
-      <h2 class="catalog-title">請選擇章節</h2>
-      <p class="catalog-sub">選擇章節後，再選簡易／中等／困難開始作答。</p>
+      <h2 class="catalog-title">請選擇單元</h2>
+      <p class="catalog-sub">目前 1-2「科學方法」已有題庫；其餘單元與小節先完成分類，題目後續加入。</p>
       <div class="catalog-grid">
-        ${SCIENCE_7_1_CHAPTERS.map(c => `
-          <button class="catalog-card chapter-card" data-chapter="${c.key}">
+        ${SCIENCE_7_1_UNITS.map(u => {
+          const ready = u.sections.filter(s => s.enabled).length;
+          return `
+            <button class="catalog-card chapter-card" data-science-unit="${u.key}">
+              <span class="top">
+                <strong>${u.number}　${u.title}</strong>
+                <span class="catalog-badge ${ready ? '' : 'soon'}">${ready ? `${ready} 節可作答` : '架構已建'}</span>
+              </span>
+              <span class="desc">${u.sections.map(s => `${s.code} ${s.title}`).join('、')}</span>
+            </button>`;
+        }).join('')}
+      </div>
+    `;
+
+    $('#backSemestersBtn')?.addEventListener('click', showScienceSemesters);
+    SCIENCE_7_1_UNITS.forEach(u => {
+      $(`[data-science-unit="${u.key}"]`)?.addEventListener('click', () => showScience71Unit(u.key));
+    });
+  }
+
+  // 舊函式名稱保留給既有返回流程／其他模組相容。
+  function showScience71Chapters() {
+    showScience71Units();
+  }
+
+  function showScience71Unit(unitKey) {
+    const unit = SCIENCE_7_1_UNITS.find(u => u.key === unitKey);
+    if (!unit) return;
+
+    setHeader(`自然一上｜${unit.number}`, unit.title);
+    document.title = `${unit.number} ${unit.title}｜自然一上`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backScienceUnitsBtn">← 返回單元</button>
+      <div class="catalog-path">自然　›　七年級上學期（一上）　›　${unit.number} ${unit.title}</div>
+      <h2 class="catalog-title">${unit.number}　${unit.title}</h2>
+      <p class="catalog-sub">已建立教材小節分類；標示「題庫可用」者可以開始作答。</p>
+      <div class="catalog-grid">
+        ${unit.sections.map(s => `
+          <button class="catalog-card chapter-card" data-science-section="${s.key}" ${s.enabled ? '' : 'disabled'}>
             <span class="top">
-              <strong>${c.number}　${c.title}</strong>
-              <span class="catalog-badge">目前題庫</span>
+              <strong>${s.code}　${s.title}</strong>
+              <span class="catalog-badge ${s.enabled ? '' : (s.type === 'literacy' ? 'core' : 'soon')}">${s.enabled ? '題庫可用' : (s.type === 'literacy' ? '核心素養｜待建' : '建置中')}</span>
             </span>
-            <span class="desc">${c.desc}</span>
+            <span class="desc">${s.enabled ? (s.desc || '進入題庫') : '章節位置已建立，題目後續補入。'}</span>
           </button>
         `).join('')}
       </div>
     `;
 
-    $('#backSemestersBtn')?.addEventListener('click', showScienceSemesters);
-    $('[data-chapter="science-method"]')?.addEventListener('click', enterScienceMethod);
+    $('#backScienceUnitsBtn')?.addEventListener('click', showScience71Units);
+    if (unitKey === 'unit-1') {
+      $('[data-science-section="science-method"]')?.addEventListener('click', enterScienceMethod);
+    }
   }
 
   function ensureChapterBackButton() {
@@ -236,9 +335,9 @@
 
     const row = document.createElement('div');
     row.className = 'chapter-back-row';
-    row.innerHTML = '<button id="chapterBackBtn" class="secondary">← 返回章節</button>';
+    row.innerHTML = '<button id="chapterBackBtn" class="secondary">← 返回單元 1</button>';
     panel.appendChild(row);
-    $('#chapterBackBtn')?.addEventListener('click', showScience71Chapters);
+    $('#chapterBackBtn')?.addEventListener('click', () => showScience71Unit('unit-1'));
   }
 
   function enterScienceMethod() {
@@ -249,7 +348,12 @@
     examScreen?.classList.add('hidden');
     startScreen?.classList.remove('hidden');
     ensureChapterBackButton();
-    document.title = '科學方法模擬考｜自然一上第1章';
+
+    const h1 = $('#startScreen header h1');
+    const p = $('#startScreen header p');
+    if (h1) h1.textContent = '1-2 科學方法模擬考';
+    if (p) p.textContent = '自然七上｜單元 1 生命現象與科學探究｜1-2 科學方法';
+    document.title = '1-2 科學方法模擬考｜自然七上單元1';
   }
 
   function init() {
