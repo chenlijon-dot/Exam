@@ -1,0 +1,22 @@
+{
+  "exam": {
+    "difficulty": "science-7-1-u01-s02-school",
+    "title": "1-2 科學方法｜各校題庫",
+    "subtitle": "自然七上｜單元 1 生命現象與科學探究｜各校段考題",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-01",
+    "unitGroupLabel": "單元 1 生命現象與科學探究",
+    "section": "section-02",
+    "unit": "1-2 科學方法",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實自然科段考依 1-2 科學方法拆題；保留原始題號、原始選項順序、學校／年度／段考 provenance，答案以原校答案卷優先核對。"
+  },
+  "questions": []
+}
