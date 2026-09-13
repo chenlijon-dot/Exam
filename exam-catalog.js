@@ -2,11 +2,20 @@
   'use strict';
 
   const SUBJECTS = [
-    { key: 'chinese', name: '國文', icon: '📖', enabled: false },
+    { key: 'chinese', name: '國文', icon: '📖', enabled: true },
     { key: 'english', name: '英文', icon: '🔤', enabled: false },
     { key: 'math', name: '數學', icon: '📐', enabled: false },
     { key: 'science', name: '自然', icon: '🔬', enabled: true },
     { key: 'social', name: '社會', icon: '🌏', enabled: false }
+  ];
+
+  const CHINESE_SEMESTERS = [
+    { key: '7-1', title: '七年級上學期', short: '一上' },
+    { key: '7-2', title: '七年級下學期', short: '一下' },
+    { key: '8-1', title: '八年級上學期', short: '二上' },
+    { key: '8-2', title: '八年級下學期', short: '二下' },
+    { key: '9-1', title: '九年級上學期', short: '三上' },
+    { key: '9-2', title: '九年級下學期', short: '三下' }
   ];
 
   const SCIENCE_SEMESTERS = [
@@ -108,7 +117,7 @@
 
     $('#catalogContent').innerHTML = `
       <h2 class="catalog-title">請選擇科目</h2>
-      <p class="catalog-sub">目前先從自然科開始，其他科目可以再逐步加入。</p>
+      <p class="catalog-sub">目前自然科已有正式題庫，國文科已開始建立學期架構。</p>
       <div class="catalog-grid">
         ${SUBJECTS.map(s => `
           <button class="catalog-card" data-subject="${s.key}" ${s.enabled ? '' : 'disabled'}>
@@ -123,7 +132,51 @@
       </div>
     `;
 
+    $('[data-subject="chinese"]')?.addEventListener('click', showChineseSemesters);
     $('[data-subject="science"]')?.addEventListener('click', showScienceSemesters);
+  }
+
+  function showChineseSemesters() {
+    setHeader('國文科', '選擇年級與學期');
+    document.title = '國文科｜國中題庫';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
+      <div class="catalog-path">國文</div>
+      <h2 class="catalog-title">請選擇學期</h2>
+      <p class="catalog-sub">六個學期入口已建立；課文章節將依實際教材逐步加入。</p>
+      <div class="catalog-grid">
+        ${CHINESE_SEMESTERS.map(s => `
+          <button class="catalog-card" data-chinese-semester="${s.key}">
+            <span class="top">
+              <strong>${s.title}</strong>
+              <span class="catalog-badge">${s.short}</span>
+            </span>
+            <span class="desc">查看章節建置狀態</span>
+          </button>
+        `).join('')}
+      </div>
+    `;
+
+    $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
+    CHINESE_SEMESTERS.forEach(s => {
+      $(`[data-chinese-semester="${s.key}"]`)?.addEventListener('click', () => showChineseSemester(s.key));
+    });
+  }
+
+  function showChineseSemester(semesterKey) {
+    const semester = CHINESE_SEMESTERS.find(s => s.key === semesterKey);
+    if (!semester) return;
+
+    setHeader(`國文科｜${semester.title}`, '章節建置中');
+    document.title = `國文${semester.short}｜國中題庫`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backChineseSemestersBtn">← 返回學期</button>
+      <div class="catalog-path">國文　›　${semester.title}（${semester.short}）</div>
+      <h2 class="catalog-title">章節尚待建立</h2>
+      <p class="catalog-sub">此學期入口已完成。等實際課本／講義確認後，再依教材加入課次、題庫與知識基準。</p>
+    `;
+
+    $('#backChineseSemestersBtn')?.addEventListener('click', showChineseSemesters);
   }
 
   function showScienceSemesters() {
