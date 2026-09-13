@@ -9,7 +9,7 @@
 
   function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, ch => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'
     }[ch]));
   }
 
@@ -98,11 +98,16 @@
     if (ctx) return ctx;
     return {
       key,
-      title:`科學方法模擬考｜${names[key] || key}`,
-      subtitle:`${names[key] || ''}程度｜${banks[key]?.length || 0} 題選擇題`,
+      title:`1-2 科學方法模擬考｜${names[key] || key}`,
+      subtitle:`自然七上｜單元 1 生命現象與科學探究｜${names[key] || ''}程度｜${banks[key]?.length || 0} 題選擇題`,
       subject:'science',
       subjectLabel:'國一自然',
-      unit:'科學方法',
+      semester:'7-1',
+      semesterLabel:'七年級上學期',
+      unitGroup:'unit-1',
+      unitGroupLabel:'單元 1 生命現象與科學探究',
+      section:'1-2',
+      unit:'1-2 科學方法',
       difficulty:key,
       difficultyLabel:names[key] || key,
       scoreMode:'fixed',
@@ -181,103 +186,59 @@
     if (el) el.textContent=`已作答 ${n} / ${questions.length}`;
   };
 
-  window.grade = function() {
-    const ctx = window.examContextCurrent || getContext(level);
-    let correct=0, answered=0;
-    graded=true;
-    questions.forEach((x,i)=>{
-      const card=document.querySelector(`[data-q="${i}"]`);
-      const picked=document.querySelector(`input[name=q${i}]:checked`);
-      card.querySelectorAll('.option').forEach(l=>l.classList.remove('correct','wrong'));
-      card.querySelector(`[data-opt="${x.a}"]`)?.classList.add('correct');
-      if(picked){
-        answered++;
-        if(Number(picked.value)===x.a) correct++;
-        else card.querySelector(`[data-opt="${picked.value}"]`)?.classList.add('wrong');
-      }
-    });
-    const info = scoreInfo(correct, questions.length, ctx);
-    const unanswered = questions.length - answered;
-    let msg;
-    if (ctx.scoreMode === 'percent') {
-      msg = info.score >= 90 ? '非常穩！' : info.score >= 70 ? '整體掌握不錯，回頭看錯題會更有效。' : info.score >= 60 ? '有抓到不少重點，建議把錯題重新看一輪。' : '先把錯題與題組文章重新讀過，再挑戰一次。';
-    } else {
-      msg = info.score>=90?'非常穩！':info.score>=70?'基礎不錯，再看一下錯題。':info.score>=60?'有抓到重點，錯題值得再複習。':'建議先看詳解，再重新挑戰一次。';
-    }
-    result.style.display='block';
-    result.innerHTML=`<strong>${info.prominent}</strong><div>${escapeHtml(ctx.difficultyLabel || '')}｜${info.detail}${unanswered?`，未作答 ${unanswered} 題`:''}</div><div class="tiny" style="margin-top:6px">${msg}</div>`;
-    result.dataset.score = String(info.score);
-    result.scrollIntoView({behavior:'smooth',block:'center'});
-  };
+  const originalSubmit = $('#submitBtn')?.onclick;
+  if ($('#submitBtn')) {
+    $('#submitBtn').onclick = function() {
+      let correct=0;
+      questions.forEach((x,i)=>{
+        const picked=document.querySelector(`input[name=q${i}]:checked`);
+        const labels=[...document.querySelectorAll(`[data-q="${i}"] .option`)];
+        labels.forEach((l,j)=>{l.classList.remove('correct','wrong');if(j===x.a)l.classList.add('correct')});
+        if(picked){const p=Number(picked.value);if(p===x.a)correct++;else labels[p]?.classList.add('wrong')}
+      });
+      graded=true;
+      const ctx = window.examContextCurrent || getContext(level);
+      const info=scoreInfo(correct,questions.length,ctx);
+      const missed=questions.length-correct;
+      result.innerHTML=`<div>${ctx.resultLabel || '本次結果'}</div><strong>${info.prominent}</strong><div>${info.detail}｜錯誤或未答 ${missed} 題</div>`;
+      result.style.display='block';
+      document.dispatchEvent(new CustomEvent('exam:submitted', {detail:{...ctx,correct,total:questions.length,score:info.score}}));
+      result.scrollIntoView({behavior:'smooth',block:'center'});
+    };
+  }
 
-  window.toggleExplain = function() {
-    const boxes=[...document.querySelectorAll('.explain')];
-    const show=boxes.some(x=>!x.classList.contains('show'));
-    boxes.forEach(x=>x.classList.toggle('show',show));
-    $('#explainBtn').textContent=show?'隱藏詳解':'顯示詳解';
-  };
+  if ($('#explainBtn')) {
+    $('#explainBtn').onclick = function() {
+      const els=[...document.querySelectorAll('.explain')];
+      const show=!els.every(e=>e.classList.contains('show'));
+      els.forEach(e=>e.classList.toggle('show',show));
+      this.textContent=show?'隱藏詳解':'顯示詳解';
+    };
+  }
 
-  window.restart = function() {
-    if(!confirm('確定要清除目前答案，重新作答嗎？')) return;
-    graded=false;
-    render();
-    result.style.display='none';
-    $('#explainBtn').textContent='顯示詳解';
-    document.dispatchEvent(new CustomEvent('exam:started', { detail: window.examContextCurrent || getContext(level) }));
-    window.scrollTo({top:0,behavior:'smooth'});
-  };
-
-  window.backToLevels = function() {
-    const ctx = window.examContextCurrent;
-    result.style.display='none';
-    examScreen.classList.add('hidden');
-    $('#pastSourceNote')?.remove();
-
-    if (ctx && typeof ctx.onBack === 'function') {
-      window.examContextCurrent = null;
-      startScreen.classList.add('hidden');
-      const catalog = $('#catalogShell');
-      if (catalog) catalog.classList.remove('hidden');
-      ctx.onBack();
+  if ($('#restartBtn')) {
+    $('#restartBtn').onclick = function() {
+      if(!confirm('確定重新作答？目前選擇會清除。'))return;
+      graded=false;
+      render();
+      result.style.display='none';
+      $('#explainBtn').textContent='顯示詳解';
       window.scrollTo({top:0,behavior:'smooth'});
-      return;
-    }
-
-    window.examContextCurrent = null;
-    $('#catalogShell')?.classList.add('hidden');
-    startScreen.classList.remove('hidden');
-    window.scrollTo({top:0,behavior:'smooth'});
-  };
-
-  function replaceButton(id, handler) {
-    const old = document.getElementById(id);
-    if (!old) return;
-    const fresh = old.cloneNode(true);
-    old.replaceWith(fresh);
-    fresh.addEventListener('click', handler);
+    };
   }
 
-  function guardUnsupportedAiAnalysis() {
-    document.addEventListener('click', e => {
-      if (e.target?.id !== 'gptWrongAnalysisBtn') return;
-      let records = [];
-      try { records = JSON.parse(localStorage.getItem('examRecords.v1') || '[]'); } catch {}
-      const hasPastWrong = records.some(r => r.analysisEligible === false && Array.isArray(r.wrongAnswers) && r.wrongAnswers.length);
-      if (!hasPastWrong) return;
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      alert('目前錯題中包含歷屆考題；歷屆題尚未建立專屬 curriculum，因此暫不送入科學方法的 AI 診斷。');
-    }, true);
+  if ($('#backBtn')) {
+    $('#backBtn').onclick = function() {
+      const ctx=window.examContextCurrent || getContext(level);
+      if (typeof ctx.onBack === 'function') return ctx.onBack();
+      examScreen.classList.add('hidden');
+      startScreen.classList.remove('hidden');
+      result.style.display='none';
+      document.querySelectorAll('.explain').forEach(e=>e.classList.remove('show'));
+      $('#explainBtn').textContent='顯示詳解';
+      window.scrollTo({top:0,behavior:'smooth'});
+    };
   }
 
-  function init() {
-    injectStyles();
-    guardUnsupportedAiAnalysis();
-    replaceButton('submitBtn', () => window.grade());
-    replaceButton('explainBtn', () => window.toggleExplain());
-    replaceButton('restartBtn', () => window.restart());
-    replaceButton('backBtn', () => window.backToLevels());
-  }
-
-  init();
+  injectStyles();
 })();
