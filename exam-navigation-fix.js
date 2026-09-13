@@ -3,6 +3,15 @@
 
   const SCIENCE_SCHOOL_BANK_PATH = 'chapter-bank/science/7-1/unit-01/section-02/school-exams.json';
 
+  function loadScienceBankMenuModule() {
+    if (document.getElementById('scienceBankMenuModule')) return;
+    const script = document.createElement('script');
+    script.id = 'scienceBankMenuModule';
+    script.src = `exam-science-banks.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function returnToScienceUnit() {
     const shell = document.getElementById('catalogShell');
     const startScreen = document.getElementById('startScreen');
@@ -88,10 +97,10 @@
     const button = event.target.closest?.('#chapterBackBtn');
     if (!button) return;
 
-    // exam-catalog.js 會先更新 catalogContent 為單元 1，
-    // 這裡補上原本遺漏的畫面切換：題庫首頁 -> catalog。
     setTimeout(returnToScienceUnit, 0);
   });
+
+  loadScienceBankMenuModule();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', watchScienceStartScreen);
