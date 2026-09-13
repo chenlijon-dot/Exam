@@ -34,11 +34,8 @@
           document.querySelector('#examScreen')?.classList.add('hidden');
           document.querySelector('#startScreen')?.classList.add('hidden');
           document.querySelector('#catalogShell')?.classList.remove('hidden');
-          if (typeof window.showChinese71Lesson01Banks === 'function') {
-            window.showChinese71Lesson01Banks();
-          } else {
-            window.location.reload();
-          }
+          document.querySelector('#result')?.style && (document.querySelector('#result').style.display = 'none');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       };
 
