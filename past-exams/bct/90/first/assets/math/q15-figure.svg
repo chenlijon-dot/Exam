@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="375" viewBox="0 0 410 375"><rect width="100%" height="100%" fill="white"/><image width="410" height="375" href="data:image/png;base64,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"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="760" viewBox="0 0 520 760">
+<rect width="520" height="760" fill="white"/>
+<g stroke="#111" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="80" y1="150" x2="440" y2="150"/><line x1="260" y1="150" x2="260" y2="190"/>
+  <polygon points="242,190 278,190 260,220" fill="#111"/>
+  <path d="M45 105 v45 h120 v-45"/><path d="M355 105 v45 h120 v-45"/>
+  <rect x="75" y="123" width="38" height="12" rx="4"/><rect x="120" y="123" width="38" height="12" rx="4"/>
+  <ellipse cx="385" cy="128" rx="24" ry="10"/><ellipse cx="420" cy="128" rx="24" ry="10"/><ellipse cx="455" cy="128" rx="24" ry="10"/>
+  <line x1="80" y1="510" x2="440" y2="510"/><line x1="260" y1="510" x2="260" y2="550"/>
+  <polygon points="242,550 278,550 260,580" fill="#111"/>
+  <path d="M45 465 v45 h120 v-45"/><path d="M355 465 v45 h120 v-45"/>
+  <rect x="80" y="430" width="52" height="35" rx="5"/><circle cx="106" cy="425" r="8"/>
+  <rect x="386" y="483" width="38" height="12" rx="4"/><ellipse cx="452" cy="488" rx="24" ry="10"/>
+</g>
+<g fill="#111" font-family="sans-serif" text-anchor="middle">
+  <text x="105" y="70" font-size="34">餅乾</text><text x="415" y="70" font-size="34">糖果</text>
+  <text x="260" y="300" font-size="38">圖(一)</text><text x="260" y="665" font-size="38">圖(二)</text>
+  <text x="106" y="453" font-size="22">10g</text>
+</g>
+</svg>
