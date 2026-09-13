@@ -88,7 +88,7 @@
     return `
       ${card({id:`${prefix}ChineseBtn`,icon:'📖',title:'國文科',badge:`${chineseCount} 題`,desc:'完整原題、題組與附圖；以網站考題模式作答。'})}
       ${card({id:`${prefix}EnglishBtn`,icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-      ${card({id:`${prefix}MathBtn`,icon:'📐',title:'數學科',badge:hasMath?`${mathCount} 題`:'待匯入',desc:hasMath?'完整原題、數學公式與附圖；以正答率呈現。':'尚未匯入。',disabled:!hasMath})}
+      ${card({id:`${prefix}MathBtn`,icon:'📐',title:'數學科',badge:hasMath?`${mathCount} 題`:'待匯入',desc:hasMath?'完整原題、數學公式、附圖與逐題詳解；以正答率呈現。':'尚未匯入。',disabled:!hasMath})}
       ${card({id:`${prefix}ScienceBtn`,icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
       ${card({id:`${prefix}SocialBtn`,icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}`;
   }
@@ -108,6 +108,7 @@
     $('#bct90FirstMathBtn')?.addEventListener('click', () => loadPastExam({
       buttonId:'bct90FirstMathBtn',
       path:'past-exams/bct/90/first/math.json',
+      explanationsPath:'past-exams/bct/90/first/math-explanations.json',
       onBack:showBct90FirstSubjects
     }));
   }
@@ -126,7 +127,26 @@
     }));
   }
 
-  async function loadPastExam({buttonId, path, onBack}) {
+  async function loadCompanionExplanations(path, data) {
+    if (!path) return;
+    try {
+      const res = await fetch(path, {cache:'no-store'});
+      if (!res.ok) return;
+      const details = await res.json();
+      const explanations = details?.explanations || {};
+      const answerOverrides = details?.answerOverrides || {};
+      for (const q of data.questions || []) {
+        const number = String(q.number || '');
+        if (Object.prototype.hasOwnProperty.call(explanations, number)) q.e = explanations[number];
+        if (Object.prototype.hasOwnProperty.call(answerOverrides, number)) q.a = Number(answerOverrides[number]);
+      }
+      if (details?.note) data.exam.solutionNote = details.note;
+    } catch (error) {
+      console.warn('歷屆詳解載入失敗，仍使用原題庫內容：', error);
+    }
+  }
+
+  async function loadPastExam({buttonId, path, explanationsPath=null, onBack}) {
     const btn = $(`#${buttonId}`);
     if (btn) {
       btn.disabled = true;
@@ -137,6 +157,7 @@
       const res = await fetch(path, {cache:'no-store'});
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
+      await loadCompanionExplanations(explanationsPath, data);
       const key = data.exam.difficulty;
       banks[key] = data.questions;
       window.examContexts = window.examContexts || {};
