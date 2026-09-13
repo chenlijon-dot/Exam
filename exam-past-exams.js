@@ -6,7 +6,12 @@
 
   function isSubjectMenu() {
     const title = $('#catalogContent .catalog-title');
-    return !!title && title.textContent.trim() === '請選擇科目';
+    const headerTitle = $('#catalogHeaderTitle');
+    const hasPath = !!$('#catalogContent .catalog-path');
+    return !!title && !!headerTitle &&
+      title.textContent.trim() === '請選擇科目' &&
+      headerTitle.textContent.trim() === '國中題庫' &&
+      !hasPath;
   }
 
   function setHeader(title, sub) {
