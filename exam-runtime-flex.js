@@ -5,11 +5,73 @@
   window.examContextCurrent = null;
 
   const $ = (sel, root = document) => root.querySelector(sel);
+  let mathReadyPromise = null;
 
   function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, ch => ({
       '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
     }[ch]));
+  }
+
+  function loadScriptOnce(id, src) {
+    const existing = document.getElementById(id);
+    if (existing) {
+      if (existing.dataset.loaded === '1') return Promise.resolve();
+      return new Promise((resolve, reject) => {
+        existing.addEventListener('load', resolve, { once:true });
+        existing.addEventListener('error', reject, { once:true });
+      });
+    }
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.id = id;
+      script.src = src;
+      script.defer = true;
+      script.addEventListener('load', () => {
+        script.dataset.loaded = '1';
+        resolve();
+      }, { once:true });
+      script.addEventListener('error', reject, { once:true });
+      document.head.appendChild(script);
+    });
+  }
+
+  function ensureMathRenderer() {
+    if (typeof window.renderMathInElement === 'function') return Promise.resolve(true);
+    if (mathReadyPromise) return mathReadyPromise;
+
+    mathReadyPromise = new Promise(resolve => {
+      if (!document.getElementById('katexStyles')) {
+        const link = document.createElement('link');
+        link.id = 'katexStyles';
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css';
+        document.head.appendChild(link);
+      }
+
+      loadScriptOnce('katexScript', 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js')
+        .then(() => loadScriptOnce('katexAutoRenderScript', 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js'))
+        .then(() => resolve(typeof window.renderMathInElement === 'function'))
+        .catch(() => resolve(false));
+    });
+
+    return mathReadyPromise;
+  }
+
+  function renderMath(root) {
+    if (!root) return;
+    ensureMathRenderer().then(ready => {
+      if (!ready || !root.isConnected || typeof window.renderMathInElement !== 'function') return;
+      window.renderMathInElement(root, {
+        delimiters: [
+          { left:'\\[', right:'\\]', display:true },
+          { left:'\\(', right:'\\)', display:false }
+        ],
+        throwOnError:false,
+        strict:false,
+        ignoredTags:['script','noscript','style','textarea','pre','code']
+      });
+    });
   }
 
   function injectStyles() {
@@ -20,10 +82,13 @@
       .question-text{font-weight:750}
       .question-media{margin:12px 0 14px;border:1px solid #dbe3ef;background:#fff;border-radius:14px;padding:10px;overflow:auto;text-align:center}
       .question-media img{display:block;max-width:100%;height:auto;margin:auto;border-radius:8px}
+      .option-media{margin-top:4px}
+      .option-media img{max-height:620px;object-fit:contain}
+      .katex-display{overflow-x:auto;overflow-y:hidden;padding:2px 0}
       .passage-box{margin:0 0 16px;border:1px solid #cbd5e1;background:#f8fafc;border-radius:14px;padding:14px 15px;font-weight:400;white-space:pre-wrap;line-height:1.8;color:#263244}
       .passage-label{font-size:.82rem;font-weight:800;color:#1d4ed8;margin-bottom:6px;letter-spacing:.02em}
       .past-source-note{margin:8px 0 0;color:#64748b;font-size:.86rem}
-      @media(max-width:620px){.question-media{padding:7px}.passage-box{padding:12px}}
+      @media(max-width:620px){.question-media{padding:7px}.passage-box{padding:12px}.katex{font-size:1.02em}}
     `;
     document.head.appendChild(style);
   }
@@ -91,9 +156,11 @@
     quiz.innerHTML = questions.map((x,i) => {
       const intro = x.intro ? `<div class="passage-box">${x.introLabel ? `<div class="passage-label">${escapeHtml(x.introLabel)}</div>` : ''}${escapeHtml(x.intro)}</div>` : '';
       const media = x.image ? `<div class="question-media"><img src="${escapeHtml(x.image)}" alt="${escapeHtml(x.imageAlt || `第${i+1}題附圖`)}" loading="lazy"></div>` : '';
+      const optionMedia = x.optionImage ? `<div class="question-media option-media"><img src="${escapeHtml(x.optionImage)}" alt="${escapeHtml(x.optionImageAlt || `第${i+1}題選項圖`)}" loading="lazy"></div>` : '';
       const opts = x.o.map((v,j) => `<label class="option" data-opt="${j}"><input type="radio" name="q${i}" value="${j}">(${letters[j]}) ${escapeHtml(v)}</label>`).join('');
-      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}">${intro}<div class="qtitle"><span class="num">${x.number || i+1}</span><span class="question-text">${escapeHtml(x.q)}</span></div>${media}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
+      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}">${intro}<div class="qtitle"><span class="num">${x.number || i+1}</span><span class="question-text">${escapeHtml(x.q)}</span></div>${media}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
     }).join('');
+    renderMath(quiz);
     document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',updateProgress));
     updateProgress();
     if (ctx.sourceNote && !$('#pastSourceNote')) {
