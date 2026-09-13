@@ -165,12 +165,19 @@
     result.style.display='none';
     examScreen.classList.add('hidden');
     $('#pastSourceNote')?.remove();
+
     if (ctx && typeof ctx.onBack === 'function') {
       window.examContextCurrent = null;
+      startScreen.classList.add('hidden');
+      const catalog = $('#catalogShell');
+      if (catalog) catalog.classList.remove('hidden');
       ctx.onBack();
+      window.scrollTo({top:0,behavior:'smooth'});
       return;
     }
+
     window.examContextCurrent = null;
+    $('#catalogShell')?.classList.add('hidden');
     startScreen.classList.remove('hidden');
     window.scrollTo({top:0,behavior:'smooth'});
   };
