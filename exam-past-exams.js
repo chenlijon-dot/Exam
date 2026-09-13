@@ -64,7 +64,7 @@
       <div class="catalog-path">歷屆考題　›　基測</div>
       <h2 class="catalog-title">請選擇年度</h2>
       <div class="catalog-grid">
-        ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'已建立第一次基測國文科完整 46 題。'})}
+        ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次、第二次基測國文科皆已建立。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
   }
@@ -77,9 +77,19 @@
       <h2 class="catalog-title">請選擇次別</h2>
       <div class="catalog-grid">
         ${card({id:'bct90FirstBtn',icon:'1️⃣',title:'第一次',badge:'已收錄',desc:'90 年度第一次國中基本學力測驗。'})}
-        ${card({id:'bct90SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct90SecondBtn',icon:'2️⃣',title:'第二次',badge:'已收錄',desc:'90 年度第二次國中基本學力測驗。'})}
       </div>`;
     $('#bct90FirstBtn')?.addEventListener('click', showBct90FirstSubjects);
+    $('#bct90SecondBtn')?.addEventListener('click', showBct90SecondSubjects);
+  }
+
+  function subjectCards(prefix, chineseCount) {
+    return `
+      ${card({id:`${prefix}ChineseBtn`,icon:'📖',title:'國文科',badge:`${chineseCount} 題`,desc:'完整原題、題組與附圖；以網站考題模式作答。'})}
+      ${card({id:`${prefix}EnglishBtn`,icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      ${card({id:`${prefix}MathBtn`,icon:'📐',title:'數學科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      ${card({id:`${prefix}ScienceBtn`,icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      ${card({id:`${prefix}SocialBtn`,icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}`;
   }
 
   function showBct90FirstSubjects() {
@@ -88,21 +98,37 @@
       ${backButton('backBct90FirstBtn','返回次別',showBct90Sessions)}
       <div class="catalog-path">歷屆考題　›　基測　›　90 年度　›　第一次</div>
       <h2 class="catalog-title">請選擇科目</h2>
-      <div class="catalog-grid">
-        ${card({id:'bct90FirstChineseBtn',icon:'📖',title:'國文科',badge:'46 題',desc:'完整原題、題組與附圖；以網站考題模式作答。'})}
-        ${card({id:'bct90FirstEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-        ${card({id:'bct90FirstMathBtn',icon:'📐',title:'數學科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-        ${card({id:'bct90FirstScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-        ${card({id:'bct90FirstSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-      </div>`;
-    $('#bct90FirstChineseBtn')?.addEventListener('click', loadBct90FirstChinese);
+      <div class="catalog-grid">${subjectCards('bct90First',46)}</div>`;
+    $('#bct90FirstChineseBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct90FirstChineseBtn',
+      path:'past-exams/bct/90/first/chinese.json',
+      onBack:showBct90FirstSubjects
+    }));
   }
 
-  async function loadBct90FirstChinese() {
-    const btn = $('#bct90FirstChineseBtn');
-    if (btn) { btn.disabled = true; btn.querySelector('.desc').textContent = '正在載入完整試題…'; }
+  function showBct90SecondSubjects() {
+    setHeader('90 年度第二次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct90SecondBtn','返回次別',showBct90Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　90 年度　›　第二次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">${subjectCards('bct90Second',47)}</div>`;
+    $('#bct90SecondChineseBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct90SecondChineseBtn',
+      path:'past-exams/bct/90/second/chinese.json',
+      onBack:showBct90SecondSubjects
+    }));
+  }
+
+  async function loadPastExam({buttonId, path, onBack}) {
+    const btn = $(`#${buttonId}`);
+    if (btn) {
+      btn.disabled = true;
+      const desc = btn.querySelector('.desc');
+      if (desc) desc.textContent = '正在載入完整試題…';
+    }
     try {
-      const res = await fetch('past-exams/bct/90/first/chinese.json', {cache:'no-store'});
+      const res = await fetch(path, {cache:'no-store'});
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const key = data.exam.difficulty;
@@ -113,17 +139,18 @@
         key,
         examType:true,
         backLabel:'返回歷屆考題',
-        onBack: showBct90FirstSubjects
+        onBack
       };
       startExam(key);
     } catch (e) {
       alert(`試題載入失敗：${e.message}`);
-      showBct90FirstSubjects();
+      onBack();
     }
   }
 
   window.showPastExams = showPastExams;
   window.showBct90FirstSubjects = showBct90FirstSubjects;
+  window.showBct90SecondSubjects = showBct90SecondSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
