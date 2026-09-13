@@ -16,7 +16,7 @@
     "analysisEligible": false,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "sourceNote": "各校真實段考依第一課〈夏夜〉拆題；題目後方以 [114 XX國中] 標示來源，保留原始選項順序。答案目前依課文內容判定，尚未逐題比對各校官方答案表。"
+    "sourceNote": "各校真實段考依第一課〈夏夜〉拆題；題目後方以 [114 XX國中] 標示來源，保留原始選項順序。本題庫 17 題答案均已逐題比對各校官方答案卷。"
   },
   "questions": [
     {
@@ -24,7 +24,7 @@
       "originalQuestionNumber": "18",
       "school": "臺北市立誠正國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "introLabel": "題幹節錄",
       "intro": "當街燈亮起來向村莊道過晚安，\n夏天的夜就輕輕地來了。\n來了！來了！\n從山坡上輕輕地爬下來了。\n來了！來了！\n從椰子樹梢上輕輕地爬下來了。\n撒了滿天的珍珠和一枚又大又亮的銀幣。",
       "q": "關於上列〈夏夜〉段落的解讀，下列何者最恰當？ [114 誠正國中]",
@@ -42,7 +42,7 @@
       "originalQuestionNumber": "19",
       "school": "臺北市立誠正國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "introLabel": "題幹節錄",
       "intro": "睡了，都睡了！\n朦朧地，山巒靜靜地睡了！\n朦朧地，田野靜靜地睡了！\n只有窗外瓜架上的南瓜還醒著，\n伸長了藤蔓輕輕地往屋頂上爬。\n只有綠色的小河還醒著，\n低聲地歌唱著溜過彎彎的小橋。\n只有夜風還醒著，從竹林裡跑出來，\n跟著提燈的螢火蟲，\n在美麗的夏夜裡旅行。",
       "q": "關於上列〈夏夜〉段落的解讀，下列何者錯誤？ [114 誠正國中]",
@@ -60,7 +60,7 @@
       "originalQuestionNumber": "11",
       "school": "花蓮縣宜昌國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "下列哪個節日和〈夏夜〉一詩所述的季節相同？ [114 宜昌國中]",
       "o": ["中秋節", "除夕", "端午節", "元宵節"],
       "a": 2,
@@ -71,7 +71,7 @@
       "originalQuestionNumber": "12",
       "school": "花蓮縣宜昌國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "下列哪一句歌詞使用了「擬人化」修辭手法？ [114 宜昌國中]",
       "o": [
         "我的愛溢出就像雨水",
@@ -87,7 +87,7 @@
       "originalQuestionNumber": "13",
       "school": "花蓮縣宜昌國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "「撒了滿天的珍珠和一枚又大又亮的銀幣。」關於這句詩的分析，下列敘述何者正確？ [114 宜昌國中]",
       "o": [
         "用閃耀的珍珠和圓亮的銀幣給人夏夜華麗的感受",
@@ -103,7 +103,7 @@
       "originalQuestionNumber": "14",
       "school": "花蓮縣宜昌國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "「來了！來了！／從山坡上輕輕地爬下來了。／來了！來了！／從椰子樹梢上輕輕地爬下來了。」關於這段詩句的分析，下列敘述何者正確？ [114 宜昌國中]",
       "o": [
         "連用多次「來了」，塑造黑夜迅速包覆大地的魔幻氛圍",
@@ -119,7 +119,7 @@
       "originalQuestionNumber": "15",
       "school": "花蓮縣宜昌國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "關於〈夏夜〉一詩的寫作手法，下列敘述何者正確？ [114 宜昌國中]",
       "o": [
         "以擬人化的名詞，呈現活潑熱鬧的夏夜氛圍",
@@ -135,7 +135,7 @@
       "originalQuestionNumber": "16",
       "school": "花蓮縣宜昌國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "〈夏夜〉一詩中最先真正點出夏夜來臨的句子為下列何者？ [114 宜昌國中]",
       "o": [
         "火紅的太陽也滾著火輪子回家了",
@@ -151,7 +151,7 @@
       "originalQuestionNumber": "19",
       "school": "花蓮縣宜昌國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "關於新詩與童詩的敘述，下列何者正確？ [114 宜昌國中]",
       "o": [
         "新詩又叫現代詩、自由詩、白話詩",
@@ -167,7 +167,7 @@
       "originalQuestionNumber": "三-3",
       "school": "臺中市立四育國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "關於〈夏夜〉這首詩的寫作手法，下列敘述何者有誤？ [114 四育國中]",
       "o": [
         "以擬人化動詞來呈現活潑熱鬧的氛圍",
@@ -183,7 +183,7 @@
       "originalQuestionNumber": "三-4",
       "school": "臺中市立四育國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "「撒了滿天的珍珠和一枚又大又亮的銀幣。」關於此詩句的分析，下列敘述何者正確？ [114 四育國中]",
       "o": [
         "詩人利用星空具體地表現夏夜的靜謐",
@@ -199,7 +199,7 @@
       "originalQuestionNumber": "三-12",
       "school": "臺中市立四育國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "將動植物或無生命的事物賦予人類的思想、情感或行為，即為「擬人」修辭。請問下列何者並沒有使用擬人修辭？ [114 四育國中]",
       "o": [
         "星辰低聲傾訴，悄悄道出夜空的秘密",
@@ -215,7 +215,7 @@
       "originalQuestionNumber": "三-19",
       "school": "臺中市立四育國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "「蝴蝶和蜜蜂們帶著花朵的蜜糖回來了，／羊隊和牛群告別了田野回家了，／火紅的太陽也滾著火輪子回家了。」關於這段詩句的分析，下列敘述何者正確？ [114 四育國中]",
       "o": [
         "描繪黃昏時，返家的熱鬧與愉悅",
@@ -223,15 +223,15 @@
         "以活潑的動態感對比夏夜的靜謐",
         "透過動物回家暗示作者無家可歸"
       ],
-      "a": 2,
-      "e": "黃昏時萬物返家的動態描寫，與後續夜晚的寧靜形成對照。"
+      "a": 0,
+      "e": "依四育國中官方答案，本題答案為 A；這段描寫黃昏時萬物返家的熱鬧與愉悅。"
     },
     {
       "number": 14,
       "originalQuestionNumber": "三-22",
       "school": "臺中市立四育國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "「以動襯靜」是以動態景物反襯靜態景象，藉此烘托更寧靜的環境。請問下列何者符合這樣的表現手法？ [114 四育國中]",
       "o": [
         "空山新雨後，天氣晚來秋",
@@ -247,7 +247,7 @@
       "originalQuestionNumber": "四-5",
       "school": "新北市立忠孝國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "「綠色的小河」的「綠」代表實際顏色，下列選項中的「白」何者也指實際顏色？ [114 忠孝國中]",
       "o": ["白費力氣", "平白無故", "白頭偕老", "真相大白"],
       "a": 2,
@@ -258,7 +258,7 @@
       "originalQuestionNumber": "四-11",
       "school": "新北市立忠孝國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "下列有關現代詩的敘述，何者正確？（甲）又稱自由詩、白話詩、新詩；（乙）講究押韻、平仄和節奏感；（丙）比散文更精粹的文體；（丁）有嚴格字數限制但不必對仗；（戊）可以分段，句式長短不齊；（己）作者皆是臺灣本土作家。 [114 忠孝國中]",
       "o": ["甲乙丙", "丙丁戊", "甲乙戊", "甲丙戊"],
       "a": 3,
@@ -269,7 +269,7 @@
       "originalQuestionNumber": "四-13",
       "school": "新北市立忠孝國中",
       "year": "114",
-      "answerVerified": false,
+      "answerVerified": true,
       "q": "下列關於〈夏夜〉的說明，正確的組合為何？甲：三次「只有……還醒著」凸顯夏夜安靜祥和卻蘊含生機；乙：「當街燈亮起來向村莊道過晚安」拉開夜的序幕並承上啟下；丙：「從山坡上……從椰子樹梢上……爬下來」說明夜由近而遠降臨；丁：「滿天的珍珠和一枚又大又亮的銀幣」呈現月明星稀；戊：主題順序為夏夜來了→夏夜的美麗→夏夜的寧靜與生機。 [114 忠孝國中]",
       "o": ["甲乙丙", "乙丙丁", "甲乙戊", "甲丙戊"],
       "a": 2,
