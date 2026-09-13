@@ -64,7 +64,7 @@
       <div class="catalog-path">歷屆考題　›　基測</div>
       <h2 class="catalog-title">請選擇年度</h2>
       <div class="catalog-grid">
-        ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次、第二次基測國文科皆已建立。'})}
+        ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次已收錄國文、數學；第二次已收錄國文。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
   }
@@ -83,11 +83,12 @@
     $('#bct90SecondBtn')?.addEventListener('click', showBct90SecondSubjects);
   }
 
-  function subjectCards(prefix, chineseCount) {
+  function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
+    const hasMath = Number.isInteger(mathCount);
     return `
       ${card({id:`${prefix}ChineseBtn`,icon:'📖',title:'國文科',badge:`${chineseCount} 題`,desc:'完整原題、題組與附圖；以網站考題模式作答。'})}
       ${card({id:`${prefix}EnglishBtn`,icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-      ${card({id:`${prefix}MathBtn`,icon:'📐',title:'數學科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      ${card({id:`${prefix}MathBtn`,icon:'📐',title:'數學科',badge:hasMath?`${mathCount} 題`:'待匯入',desc:hasMath?'完整原題、數學公式與附圖；以正答率呈現。':'尚未匯入。',disabled:!hasMath})}
       ${card({id:`${prefix}ScienceBtn`,icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
       ${card({id:`${prefix}SocialBtn`,icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}`;
   }
@@ -98,10 +99,15 @@
       ${backButton('backBct90FirstBtn','返回次別',showBct90Sessions)}
       <div class="catalog-path">歷屆考題　›　基測　›　90 年度　›　第一次</div>
       <h2 class="catalog-title">請選擇科目</h2>
-      <div class="catalog-grid">${subjectCards('bct90First',46)}</div>`;
+      <div class="catalog-grid">${subjectCards('bct90First',46,{mathCount:32})}</div>`;
     $('#bct90FirstChineseBtn')?.addEventListener('click', () => loadPastExam({
       buttonId:'bct90FirstChineseBtn',
       path:'past-exams/bct/90/first/chinese.json',
+      onBack:showBct90FirstSubjects
+    }));
+    $('#bct90FirstMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct90FirstMathBtn',
+      path:'past-exams/bct/90/first/math.json',
       onBack:showBct90FirstSubjects
     }));
   }
