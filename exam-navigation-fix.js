@@ -3,6 +3,28 @@
 
   const SCIENCE_SCHOOL_BANK_PATH = 'chapter-bank/science/7-1/unit-01/section-02/school-exams.json';
 
+  // index.html still registers the original exam control handlers with
+  // addEventListener(). exam-runtime-flex.js now owns these controls through
+  // the onclick property. If both remain active, a single tap on「顯示詳解」
+  // executes two toggles (show -> hide), so it looks as if nothing happened.
+  // Remove only the legacy listeners; the flex runtime handlers remain intact.
+  function detachLegacyExamControlHandlers() {
+    const bindings = [
+      ['submitBtn', 'grade'],
+      ['explainBtn', 'toggleExplain'],
+      ['restartBtn', 'restart'],
+      ['backBtn', 'backToLevels']
+    ];
+
+    for (const [buttonId, handlerName] of bindings) {
+      const button = document.getElementById(buttonId);
+      const handler = window[handlerName];
+      if (button && typeof handler === 'function') {
+        button.removeEventListener('click', handler);
+      }
+    }
+  }
+
   function loadScienceBankMenuModule() {
     if (document.getElementById('scienceBankMenuModule')) return;
     const script = document.createElement('script');
@@ -100,10 +122,14 @@
     setTimeout(returnToScienceUnit, 0);
   });
 
+  detachLegacyExamControlHandlers();
   loadScienceBankMenuModule();
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', watchScienceStartScreen);
+    document.addEventListener('DOMContentLoaded', () => {
+      detachLegacyExamControlHandlers();
+      watchScienceStartScreen();
+    });
   } else {
     watchScienceStartScreen();
   }
