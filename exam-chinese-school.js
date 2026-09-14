@@ -40,6 +40,12 @@
     }
   ];
 
+  const PRACTICE_CONFIGS = [
+    { difficulty:'easy', buttonId:'chineseLesson01EasyBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-easy.json', loadingText:'正在載入〈夏夜〉簡易題…' },
+    { difficulty:'medium', buttonId:'chineseLesson01MediumBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-medium.json', loadingText:'正在載入〈夏夜〉中等題…' },
+    { difficulty:'hard', buttonId:'chineseLesson01HardBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-hard.json', loadingText:'正在載入〈夏夜〉困難題…' }
+  ];
+
   function setTextIfChanged(node, text) {
     if (node && node.textContent !== text) node.textContent = text;
   }
@@ -72,6 +78,19 @@
     return data;
   }
 
+  function returnToCatalog(config) {
+    document.querySelector('#examScreen')?.classList.add('hidden');
+    document.querySelector('#startScreen')?.classList.add('hidden');
+    document.querySelector('#catalogShell')?.classList.remove('hidden');
+    if (document.querySelector('#result')?.style) document.querySelector('#result').style.display = 'none';
+    enhanceAllMenus();
+    if (config) {
+      resetSchoolBankButton(config);
+      interceptSchoolBankButton(config);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   async function openSchoolBank(config) {
     const btn = $(`#${config.buttonId}`);
     if (btn) {
@@ -84,27 +103,46 @@
       if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
       banks[key] = data.questions;
       window.examContexts = window.examContexts || {};
-      window.examContexts[key] = {
-        ...data.exam,
-        key,
-        examType: true,
-        backLabel: config.backLabel,
-        onBack: () => {
-          document.querySelector('#examScreen')?.classList.add('hidden');
-          document.querySelector('#startScreen')?.classList.add('hidden');
-          document.querySelector('#catalogShell')?.classList.remove('hidden');
-          if (document.querySelector('#result')?.style) document.querySelector('#result').style.display = 'none';
-          enhanceAllMenus();
-          resetSchoolBankButton(config);
-          interceptSchoolBankButton(config);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      };
+      window.examContexts[key] = { ...data.exam, key, examType:true, backLabel:config.backLabel, onBack:() => returnToCatalog(config) };
       resetSchoolBankButton(config);
       startExam(key);
     } catch (error) {
       alert(`各校題庫載入失敗：${error.message}`);
       resetSchoolBankButton(config);
+    }
+  }
+
+  async function openPracticeBank(config) {
+    const btn = $(`#${config.buttonId}`);
+    const originalDesc = btn?.querySelector('.desc')?.textContent || '';
+    if (btn) {
+      btn.disabled = true;
+      setTextIfChanged(btn.querySelector('.desc'), config.loadingText);
+    }
+    try {
+      const data = await fetchJson(config.path);
+      const key = data.exam.difficulty;
+      if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
+      banks[key] = Array.isArray(data.questions) ? data.questions : [];
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        ...data.exam,
+        key,
+        examType: true,
+        backLabel: '返回第一課題庫',
+        onBack: () => returnToCatalog(null)
+      };
+      if (btn) {
+        btn.disabled = false;
+        setTextIfChanged(btn.querySelector('.desc'), originalDesc);
+      }
+      startExam(key);
+    } catch (error) {
+      alert(`自編題載入失敗：${error.message}`);
+      if (btn) {
+        btn.disabled = false;
+        setTextIfChanged(btn.querySelector('.desc'), originalDesc);
+      }
     }
   }
 
@@ -116,6 +154,17 @@
       event.preventDefault();
       event.stopImmediatePropagation();
       openSchoolBank(config);
+    }, true);
+  }
+
+  function interceptPracticeButton(config) {
+    const btn = $(`#${config.buttonId}`);
+    if (!btn || btn.dataset.directPracticeBank === '1') return;
+    btn.dataset.directPracticeBank = '1';
+    btn.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      openPracticeBank(config);
     }, true);
   }
 
@@ -143,11 +192,33 @@
   }
 
   function enhanceLesson01Menu() {
+    if (!currentCatalogText().includes('第一課夏夜')) return;
     const config = BANK_CONFIGS.find(item => item.lesson === '01');
-    const btn = $(`#${config.buttonId}`);
-    if (!btn) return;
-    setTextIfChanged(btn.querySelector('.catalog-badge.school'), `${config.schoolCount} 校已索引`);
-    interceptSchoolBankButton(config);
+    const schoolBtn = $(`#${config.buttonId}`);
+    if (schoolBtn) {
+      setTextIfChanged(schoolBtn.querySelector('.catalog-badge.school'), `${config.schoolCount} 校已索引`);
+      interceptSchoolBankButton(config);
+    }
+
+    const grid = $('#catalogContent .catalog-grid');
+    if (!grid) return;
+    const map = { '簡易':'easy', '中等':'medium', '困難':'hard' };
+    grid.querySelectorAll('.catalog-card').forEach(btn => {
+      const label = btn.querySelector('strong')?.textContent?.trim();
+      const difficulty = map[label];
+      if (!difficulty) return;
+      const practice = PRACTICE_CONFIGS.find(item => item.difficulty === difficulty);
+      if (!practice) return;
+      btn.id = practice.buttonId;
+      btn.disabled = false;
+      const badge = btn.querySelector('.catalog-badge');
+      if (badge) {
+        badge.classList.remove('soon');
+        badge.classList.add('reference');
+        setTextIfChanged(badge, '20 題');
+      }
+      interceptPracticeButton(practice);
+    });
   }
 
   function enhanceLesson02Menu() {
@@ -215,6 +286,7 @@
     enhanceLanguage01Menu();
     enhanceSelf01Menu();
     BANK_CONFIGS.forEach(interceptSchoolBankButton);
+    PRACTICE_CONFIGS.forEach(interceptPracticeButton);
   }
 
   function init() {
