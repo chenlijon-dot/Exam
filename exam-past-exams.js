@@ -93,9 +93,10 @@
       <h2 class="catalog-title">請選擇次別</h2>
       <div class="catalog-grid">
         ${card({id:'bct91FirstBtn',icon:'1️⃣',title:'第一次',badge:'已收錄',desc:'91 年度第一次基測；數學科題目、附圖與詳解已建立。'})}
-        ${card({id:'bct91SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct91SecondBtn',icon:'2️⃣',title:'第二次',badge:'已收錄',desc:'91 年度第二次基測；數學科題目與原卷附圖已建立。'})}
       </div>`;
     $('#bct91FirstBtn')?.addEventListener('click', showBct91FirstSubjects);
+    $('#bct91SecondBtn')?.addEventListener('click', showBct91SecondSubjects);
   }
 
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
@@ -169,6 +170,26 @@
     }));
   }
 
+  function showBct91SecondSubjects() {
+    setHeader('91 年度第二次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct91SecondBtn','返回次別',showBct91Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　91 年度　›　第二次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct91SecondChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct91SecondEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct91SecondMathBtn',icon:'📐',title:'數學科',badge:'31 題',desc:'31 題原題、選項、答案與原卷附圖已建立。'})}
+        ${card({id:'bct91SecondScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct91SecondSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct91SecondMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct91SecondMathBtn',
+      path:'past-exams/bct/91/second/math.json',
+      onBack:showBct91SecondSubjects
+    }));
+  }
+
   async function loadCompanionExplanations(path, data) {
     if (!path) return;
     try {
@@ -221,6 +242,7 @@
   window.showBct90FirstSubjects = showBct90FirstSubjects;
   window.showBct90SecondSubjects = showBct90SecondSubjects;
   window.showBct91FirstSubjects = showBct91FirstSubjects;
+  window.showBct91SecondSubjects = showBct91SecondSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
