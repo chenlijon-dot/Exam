@@ -175,7 +175,13 @@
     quiz.innerHTML = questions.map((x,i) => {
       const type = questionType(x);
       const intro = x.intro ? `<div class="passage-box">${x.introLabel ? `<div class="passage-label">${escapeHtml(x.introLabel)}</div>` : ''}${escapeHtml(x.intro)}</div>` : '';
-      const media = x.image ? `<div class="question-media"><img src="${escapeHtml(x.image)}" alt="${escapeHtml(x.imageAlt || `第${i+1}題附圖`)}" loading="lazy"></div>` : '';
+      const imageList = Array.isArray(x.images)
+        ? x.images
+        : (x.image ? [x.image] : []);
+
+      const media = imageList.map((src, imageIndex) =>
+        `<div class="question-media"><img src="${escapeHtml(src)}" alt="${escapeHtml(x.imageAlt || `第${i+1}題附圖${imageList.length > 1 ? ` ${imageIndex + 1}` : ''}`)}" loading="lazy"></div>`
+      ).join('');
       const optionMedia = x.optionImage ? `<div class="question-media option-media"><img src="${escapeHtml(x.optionImage)}" alt="${escapeHtml(x.optionImageAlt || `第${i+1}題選項圖`)}" loading="lazy"></div>` : '';
       const qtitle = `<div class="qtitle"><span class="num">${x.number || i+1}</span><span class="question-text">${escapeHtml(x.q)}</span></div>`;
 
