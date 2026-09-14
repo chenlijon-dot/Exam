@@ -64,7 +64,7 @@
       <div class="catalog-path">歷屆考題　›　基測</div>
       <h2 class="catalog-title">請選擇年度</h2>
       <div class="catalog-grid">
-        ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次已收錄國文、數學；第二次已收錄國文。'})}
+        ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次、第二次皆已收錄國文與數學。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
   }
@@ -88,7 +88,7 @@
     return `
       ${card({id:`${prefix}ChineseBtn`,icon:'📖',title:'國文科',badge:`${chineseCount} 題`,desc:'完整原題、題組與附圖；以網站考題模式作答。'})}
       ${card({id:`${prefix}EnglishBtn`,icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-      ${card({id:`${prefix}MathBtn`,icon:'📐',title:'數學科',badge:hasMath?`${mathCount} 題`:'待匯入',desc:hasMath?'完整原題、數學公式、附圖與逐題詳解；以正答率呈現。':'尚未匯入。',disabled:!hasMath})}
+      ${card({id:`${prefix}MathBtn`,icon:'📐',title:'數學科',badge:hasMath?`${mathCount} 題`:'待匯入',desc:hasMath?'完整原題與數學公式；附圖與詳解依題庫建置狀態顯示。':'尚未匯入。',disabled:!hasMath})}
       ${card({id:`${prefix}ScienceBtn`,icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
       ${card({id:`${prefix}SocialBtn`,icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}`;
   }
@@ -119,10 +119,15 @@
       ${backButton('backBct90SecondBtn','返回次別',showBct90Sessions)}
       <div class="catalog-path">歷屆考題　›　基測　›　90 年度　›　第二次</div>
       <h2 class="catalog-title">請選擇科目</h2>
-      <div class="catalog-grid">${subjectCards('bct90Second',47)}</div>`;
+      <div class="catalog-grid">${subjectCards('bct90Second',47,{mathCount:31})}</div>`;
     $('#bct90SecondChineseBtn')?.addEventListener('click', () => loadPastExam({
       buttonId:'bct90SecondChineseBtn',
       path:'past-exams/bct/90/second/chinese.json',
+      onBack:showBct90SecondSubjects
+    }));
+    $('#bct90SecondMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct90SecondMathBtn',
+      path:'past-exams/bct/90/second/math.json',
       onBack:showBct90SecondSubjects
     }));
   }
