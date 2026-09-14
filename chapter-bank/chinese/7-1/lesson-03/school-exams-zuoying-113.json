@@ -1,4 +1,21 @@
 {
+  "exam": {
+    "difficulty": "chinese-7-1-l03-school",
+    "title": "第三課〈吃冰的滋味〉｜各校題庫",
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-03",
+    "unit": "第三課 吃冰的滋味",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam"
+  },
   "source": {
     "school": "高雄市立左營國中",
     "year": "113",
