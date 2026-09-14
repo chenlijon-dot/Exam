@@ -40,12 +40,15 @@
     }
   ];
 
+  function setTextIfChanged(node, text) {
+    if (node && node.textContent !== text) node.textContent = text;
+  }
+
   function resetSchoolBankButton(config) {
     const btn = $(`#${config.buttonId}`);
     if (!btn) return;
     btn.disabled = false;
-    const desc = btn.querySelector('.desc');
-    if (desc) desc.textContent = SCHOOL_BANK_DESC;
+    setTextIfChanged(btn.querySelector('.desc'), SCHOOL_BANK_DESC);
   }
 
   async function fetchJson(path) {
@@ -73,8 +76,7 @@
     const btn = $(`#${config.buttonId}`);
     if (btn) {
       btn.disabled = true;
-      const desc = btn.querySelector('.desc');
-      if (desc) desc.textContent = config.loadingText;
+      setTextIfChanged(btn.querySelector('.desc'), config.loadingText);
     }
     try {
       const data = await loadMergedBank(config);
@@ -131,8 +133,7 @@
     const marker = `bankMenu${config.lesson}`;
     if (grid.dataset[marker] === '1') return;
     grid.dataset[marker] = '1';
-    const sub = content.querySelector('.catalog-sub');
-    if (sub) sub.textContent = '自編題依難度建立；各校題庫保留真實段考來源與原始題型。';
+    setTextIfChanged(content.querySelector('.catalog-sub'), '自編題依難度建立；各校題庫保留真實段考來源與原始題型。');
     grid.innerHTML = `
       <button class="catalog-card" disabled><span class="top"><span class="icon">🌱</span><strong>簡易</strong><span class="catalog-badge soon">待建</span></span><span class="desc">${easyDesc}</span></button>
       <button class="catalog-card" disabled><span class="top"><span class="icon">🌿</span><strong>中等</strong><span class="catalog-badge soon">待建</span></span><span class="desc">${mediumDesc}</span></button>
@@ -145,8 +146,7 @@
     const config = BANK_CONFIGS.find(item => item.lesson === '01');
     const btn = $(`#${config.buttonId}`);
     if (!btn) return;
-    const badge = btn.querySelector('.catalog-badge.school');
-    if (badge) badge.textContent = `${config.schoolCount} 校已索引`;
+    setTextIfChanged(btn.querySelector('.catalog-badge.school'), `${config.schoolCount} 校已索引`);
     interceptSchoolBankButton(config);
   }
 
@@ -197,9 +197,13 @@
       const card = $(`[data-chinese-lesson="${key}"]`);
       if (!card) continue;
       const badge = card.querySelector('.catalog-badge');
-      if (badge) { badge.classList.remove('soon'); badge.classList.add('reference'); badge.textContent = badgeText; }
+      if (badge) {
+        badge.classList.remove('soon');
+        badge.classList.add('reference');
+        setTextIfChanged(badge, badgeText);
+      }
       const descs = card.querySelectorAll('.desc');
-      if (descs.length) descs[descs.length - 1].textContent = descText;
+      if (descs.length) setTextIfChanged(descs[descs.length - 1], descText);
     }
   }
 
