@@ -58,7 +58,10 @@
     { lesson:'01', difficulty:'hard', buttonId:'chineseLesson01HardBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-hard.json', loadingText:'正在載入〈夏夜〉困難題…', backLabel:'返回第一課題庫' },
     { lesson:'02', difficulty:'easy', buttonId:'chineseLesson02EasyBtn', path:'chapter-bank/chinese/7-1/lesson-02/practice-easy.json', loadingText:'正在載入〈生之歌選〉簡易題…', backLabel:'返回第二課題庫' },
     { lesson:'02', difficulty:'medium', buttonId:'chineseLesson02MediumBtn', path:'chapter-bank/chinese/7-1/lesson-02/practice-medium.json', loadingText:'正在載入〈生之歌選〉中等題…', backLabel:'返回第二課題庫' },
-    { lesson:'02', difficulty:'hard', buttonId:'chineseLesson02HardBtn', path:'chapter-bank/chinese/7-1/lesson-02/practice-hard.json', loadingText:'正在載入〈生之歌選〉困難題…', backLabel:'返回第二課題庫' }
+    { lesson:'02', difficulty:'hard', buttonId:'chineseLesson02HardBtn', path:'chapter-bank/chinese/7-1/lesson-02/practice-hard.json', loadingText:'正在載入〈生之歌選〉困難題…', backLabel:'返回第二課題庫' },
+    { lesson:'03', difficulty:'easy', buttonId:'chineseLesson03EasyBtn', path:'chapter-bank/chinese/7-1/lesson-03/practice-easy.json', loadingText:'正在載入〈吃冰的滋味〉簡易題…', backLabel:'返回第三課題庫' },
+    { lesson:'03', difficulty:'medium', buttonId:'chineseLesson03MediumBtn', path:'chapter-bank/chinese/7-1/lesson-03/practice-medium.json', loadingText:'正在載入〈吃冰的滋味〉中等題…', backLabel:'返回第三課題庫' },
+    { lesson:'03', difficulty:'hard', buttonId:'chineseLesson03HardBtn', path:'chapter-bank/chinese/7-1/lesson-03/practice-hard.json', loadingText:'正在載入〈吃冰的滋味〉困難題…', backLabel:'返回第三課題庫' }
   ];
 
   function setTextIfChanged(node, text) {
@@ -250,6 +253,7 @@
       '字詞、注釋、課文基本內容與人物事件。',
       '今昔對比、文意理解、修辭與主旨判讀。',
       '跨文本、圖表閱讀與高層次整合。');
+    enablePracticeButtons('03');
   }
 
   function enhanceLanguage01Menu() {
@@ -273,7 +277,7 @@
   function enhanceCatalogCards() {
     const updates = [
       ['chinese-7-1-lesson-02', '題庫架構已建', '〈一顆珍珠〉、〈手的故事〉教材知識庫與各校段考題庫已收錄。'],
-      ['chinese-7-1-lesson-03', '題庫架構已建', '〈吃冰的滋味〉教材知識庫與各校段考題庫已開始收錄。'],
+      ['chinese-7-1-lesson-03', '題庫架構已建', '〈吃冰的滋味〉教材知識庫、自編題與各校段考題庫已收錄。'],
       ['chinese-7-1-language-01', '題庫架構已建', '標點符號教材知識庫與各校段考題庫已開始收錄。'],
       ['chinese-7-1-self-01', '題庫架構已建', '〈善用時間的方法〉各校段考題庫已開始收錄。']
     ];
