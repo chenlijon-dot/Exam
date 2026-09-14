@@ -18,35 +18,93 @@
     { key: '9-2', title: '九年級下學期', short: '三下' }
   ];
 
-  // 國文第一冊依已確認教材逐課建立；未確認的課次不先猜測。
+  // 國文第一冊依 2026-09-14 使用者提供的實體課本目錄建立。
   const CHINESE_7_1_LESSONS = [
     {
-      key: 'chinese-7-1-lesson-01',
-      code: '第一課',
-      title: '夏夜',
-      referenceReady: true,
-      bankMenuReady: true,
-      quizReady: false,
-      desc: '教材知識庫已建立；各校段考來源已開始收錄。'
+      key: 'chinese-7-1-lesson-01', code: '第一課', title: '夏夜', author: '楊喚', page: 6,
+      type: 'lesson', referenceReady: true, bankMenuReady: true,
+      desc: '童詩；教材知識庫與各校段考題庫已開始收錄。'
     },
     {
-      key: 'chinese-7-1-lesson-02',
-      code: '第二課',
-      title: '手的故事',
-      referenceReady: true,
-      bankMenuReady: false,
-      quizReady: false,
-      desc: '課文內容與教材知識庫已建立；待正式課本頁面補齊後持續校對並建立題庫。'
+      key: 'chinese-7-1-lesson-02', code: '第二課', title: '生之歌選', author: '杏林子', page: 18,
+      type: 'lesson', referenceReady: true, bankMenuReady: false,
+      detail: '（一）一顆珍珠（p.20）｜（二）手的故事（p.22）',
+      desc: '正式課名為〈生之歌選〉；目前已收錄〈手的故事〉教材內容，〈一顆珍珠〉待補。'
+    },
+    {
+      key: 'chinese-7-1-lesson-03', code: '第三課', title: '吃冰的滋味', author: '古蒙仁', page: 30,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-language-01', code: '語文天地一', title: '標點符號使用法', author: '', page: 46,
+      type: 'language', referenceReady: false, bankMenuReady: false,
+      desc: '語文知識單元；目錄已確認，題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-04', code: '第四課', title: '差不多先生傳', author: '胡適', page: 58,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-05', code: '第五課', title: '論語選', author: '孔子弟子及再傳弟子', page: 70,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-06', code: '第六課', title: '那默默的一群', author: '張騰蛟', page: 80,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-language-02', code: '語文天地二', title: '閱讀策略與資料檢索', author: '', page: 94,
+      type: 'language', referenceReady: false, bankMenuReady: false,
+      desc: '閱讀與資料檢索單元；目錄已確認，題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-07', code: '第七課', title: '兒時記趣', author: '沈復', page: 110,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-08', code: '第八課', title: '紙船印象', author: '洪醒夫', page: 122,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-09', code: '第九課', title: '下雨天，真好', author: '琦君', page: 134,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-lesson-10', code: '第十課', title: '鬧元宵', author: '朱天衣', page: 148,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-self-01', code: '自學一', title: '善用時間的方法', author: '李偉文', page: 162,
+      type: 'self', referenceReady: false, bankMenuReady: false,
+      desc: '自學篇章；目錄已確認，題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-self-02', code: '自學二', title: '拄柺杖的小男孩', author: '簡媜', page: 172,
+      type: 'self', referenceReady: false, bankMenuReady: false,
+      desc: '自學篇章；目錄已確認，題庫待建。'
+    },
+    {
+      key: 'chinese-7-1-self-03', code: '自學三', title: '曹操掉下去了', author: '王文華', page: 184,
+      type: 'self', referenceReady: false, bankMenuReady: false,
+      desc: '自學篇章；目錄已確認，題庫待建。'
     }
   ];
 
-  // 第一課〈夏夜〉目前已在 Google Drive 課次索引中出現的校內段考來源。
-  // 此處只建立網站導航；正式題目會逐題整理後再進 GitHub 題庫資料。
+  // 第一課〈夏夜〉目前已確認的各校段考來源。
   const CHINESE_7_1_LESSON_01_SCHOOLS = [
     { key: 'chengzheng', name: '臺北市立誠正國中', exam: '114 學年度第一學期七年級第一次段考' },
     { key: 'yichang', name: '花蓮縣宜昌國中', exam: '114 學年度第一學期七年級第一次段考' },
     { key: 'siyu', name: '臺中市立四育國中', exam: '114 學年度第一學期七年級第一次段考' },
-    { key: 'zhongxiao', name: '新北市立忠孝國中', exam: '114 學年度第一學期七年級第一次段考' }
+    { key: 'zhongxiao', name: '新北市立忠孝國中', exam: '114 學年度第一學期七年級第一次段考' },
+    { key: 'fengjia', name: '高雄市立鳳甲國中', exam: '114 學年度第一學期七年級第一次段考' }
   ];
 
   const SCIENCE_SEMESTERS = [
@@ -58,8 +116,6 @@
     { key: '9-2', title: '九年級下學期', short: '三下', enabled: false }
   ];
 
-  // 依使用者提供之七年級上學期自然教材目錄建立。
-  // 尚未建立題目的小節仍先保留在 catalog，避免日後章節定位漂移。
   const SCIENCE_7_1_UNITS = [
     {
       key: 'unit-1', number: '單元 1', title: '生命現象與科學探究',
@@ -172,7 +228,6 @@
   function makeShell() {
     const startScreen = $('#startScreen');
     if (!startScreen || $('#catalogShell')) return null;
-
     const shell = document.createElement('section');
     shell.id = 'catalogShell';
     shell.className = 'catalog-shell';
@@ -181,9 +236,7 @@
         <h1 id="catalogHeaderTitle">國中題庫</h1>
         <p id="catalogHeaderSub">選擇科目開始練習</p>
       </header>
-      <div class="catalog-panel">
-        <div id="catalogContent"></div>
-      </div>
+      <div class="catalog-panel"><div id="catalogContent"></div></div>
     `;
     startScreen.parentNode.insertBefore(shell, startScreen);
     return shell;
@@ -198,33 +251,22 @@
 
   function showSubjects() {
     const shell = $('#catalogShell');
-    const startScreen = $('#startScreen');
-    const examScreen = $('#examScreen');
     if (!shell) return;
-
     shell.classList.remove('hidden');
-    startScreen?.classList.add('hidden');
-    examScreen?.classList.add('hidden');
+    $('#startScreen')?.classList.add('hidden');
+    $('#examScreen')?.classList.add('hidden');
     setHeader('國中題庫', '先選科目，再選學期與章節');
     document.title = '國中題庫';
-
     $('#catalogContent').innerHTML = `
       <h2 class="catalog-title">請選擇科目</h2>
-      <p class="catalog-sub">目前自然科已有正式題庫，國文科已開始建立學期與課次架構。</p>
+      <p class="catalog-sub">目前自然科已有正式題庫，國文第一冊已建立完整教材目錄。</p>
       <div class="catalog-grid">
         ${SUBJECTS.map(s => `
           <button class="catalog-card" data-subject="${s.key}" ${s.enabled ? '' : 'disabled'}>
-            <span class="top">
-              <span class="icon">${s.icon}</span>
-              <strong>${s.name}</strong>
-              <span class="catalog-badge ${s.enabled ? '' : 'soon'}">${s.enabled ? '已建立' : '建置中'}</span>
-            </span>
+            <span class="top"><span class="icon">${s.icon}</span><strong>${s.name}</strong><span class="catalog-badge ${s.enabled ? '' : 'soon'}">${s.enabled ? '已建立' : '建置中'}</span></span>
             <span class="desc">${s.enabled ? '進入科目選擇學期與章節' : '題庫尚未建立'}</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-
+          </button>`).join('')}
+      </div>`;
     $('[data-subject="chinese"]')?.addEventListener('click', showChineseSemesters);
     $('[data-subject="science"]')?.addEventListener('click', showScienceSemesters);
   }
@@ -236,45 +278,36 @@
       <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
       <div class="catalog-path">國文</div>
       <h2 class="catalog-title">請選擇學期</h2>
-      <p class="catalog-sub">七年級上學期已開始建立實際課次；其他學期將依教材逐步加入。</p>
+      <p class="catalog-sub">七年級上學期第一冊已依實體課本目錄建立完整課次；其他學期後續加入。</p>
       <div class="catalog-grid">
         ${CHINESE_SEMESTERS.map(s => `
           <button class="catalog-card" data-chinese-semester="${s.key}">
-            <span class="top">
-              <strong>${s.title}</strong>
-              <span class="catalog-badge ${s.key === '7-1' ? 'reference' : ''}">${s.short}</span>
-            </span>
-            <span class="desc">${s.key === '7-1' ? '第一冊已建立第一課〈夏夜〉與第二課〈手的故事〉' : '查看章節建置狀態'}</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-
+            <span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.key === '7-1' ? 'reference' : ''}">${s.short}</span></span>
+            <span class="desc">${s.key === '7-1' ? '第一冊：10 課、語文天地 2 單元、自學 3 篇' : '查看章節建置狀態'}</span>
+          </button>`).join('')}
+      </div>`;
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
-    CHINESE_SEMESTERS.forEach(s => {
-      $(`[data-chinese-semester="${s.key}"]`)?.addEventListener('click', () => showChineseSemester(s.key));
-    });
+    CHINESE_SEMESTERS.forEach(s => $(`[data-chinese-semester="${s.key}"]`)?.addEventListener('click', () => showChineseSemester(s.key)));
   }
 
   function showChineseSemester(semesterKey) {
     const semester = CHINESE_SEMESTERS.find(s => s.key === semesterKey);
     if (!semester) return;
-
-    if (semesterKey === '7-1') {
-      showChinese71Lessons();
-      return;
-    }
-
+    if (semesterKey === '7-1') return showChinese71Lessons();
     setHeader(`國文科｜${semester.title}`, '章節建置中');
     document.title = `國文${semester.short}｜國中題庫`;
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backChineseSemestersBtn">← 返回學期</button>
       <div class="catalog-path">國文　›　${semester.title}（${semester.short}）</div>
       <h2 class="catalog-title">章節尚待建立</h2>
-      <p class="catalog-sub">此學期入口已完成。等實際課本／講義確認後，再依教材加入課次、題庫與知識基準。</p>
-    `;
-
+      <p class="catalog-sub">等實際課本／講義確認後，再依教材加入課次、題庫與知識基準。</p>`;
     $('#backChineseSemestersBtn')?.addEventListener('click', showChineseSemesters);
+  }
+
+  function chineseBadge(lesson) {
+    if (lesson.bankMenuReady) return '<span class="catalog-badge reference">題庫架構已建</span>';
+    if (lesson.referenceReady) return '<span class="catalog-badge reference">教材已收錄</span>';
+    return '<span class="catalog-badge soon">目錄已確認</span>';
   }
 
   function showChinese71Lessons() {
@@ -284,34 +317,23 @@
       <button class="catalog-back" id="backChineseSemestersBtn">← 返回學期</button>
       <div class="catalog-path">國文　›　七年級上學期（一上）　›　第一冊</div>
       <h2 class="catalog-title">請選擇課次</h2>
-      <p class="catalog-sub">已依目前確認的實際教材建立第一、二課；其他課次待教材確認後再加入。</p>
+      <p class="catalog-sub">依實體課本目錄建立：10 課、語文天地 2 單元、自學 3 篇。</p>
       <div class="catalog-grid">
         ${CHINESE_7_1_LESSONS.map(lesson => `
           <button class="catalog-card chapter-card" data-chinese-lesson="${lesson.key}">
-            <span class="top">
-              <strong>${lesson.code}　${lesson.title}</strong>
-              <span class="catalog-badge ${lesson.bankMenuReady ? 'reference' : 'soon'}">${lesson.bankMenuReady ? '題庫架構已建' : '教材建置中'}</span>
-            </span>
+            <span class="top"><strong>${lesson.code}　${lesson.title}</strong>${chineseBadge(lesson)}</span>
+            <span class="desc">${lesson.author ? `${lesson.author}｜` : ''}p.${lesson.page}${lesson.detail ? `｜${lesson.detail}` : ''}</span>
             <span class="desc">${lesson.desc}</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-
+          </button>`).join('')}
+      </div>`;
     $('#backChineseSemestersBtn')?.addEventListener('click', showChineseSemesters);
-    CHINESE_7_1_LESSONS.forEach(lesson => {
-      $(`[data-chinese-lesson="${lesson.key}"]`)?.addEventListener('click', () => showChinese71Lesson(lesson.key));
-    });
+    CHINESE_7_1_LESSONS.forEach(lesson => $(`[data-chinese-lesson="${lesson.key}"]`)?.addEventListener('click', () => showChinese71Lesson(lesson.key)));
   }
 
   function showChinese71Lesson(lessonKey) {
     const lesson = CHINESE_7_1_LESSONS.find(item => item.key === lessonKey);
     if (!lesson) return;
-
-    if (lessonKey === 'chinese-7-1-lesson-01') {
-      showChinese71Lesson01Banks();
-      return;
-    }
+    if (lessonKey === 'chinese-7-1-lesson-01') return showChinese71Lesson01Banks();
 
     setHeader(`國文第一冊｜${lesson.code}`, lesson.title);
     document.title = `${lesson.code} ${lesson.title}｜國文第一冊`;
@@ -319,25 +341,17 @@
       <button class="catalog-back" id="backChinese71LessonsBtn">← 返回課次</button>
       <div class="catalog-path">國文　›　七年級上學期（一上）　›　第一冊　›　${lesson.code} ${lesson.title}</div>
       <h2 class="catalog-title">${lesson.code}　${lesson.title}</h2>
-      <p class="catalog-sub">課次節點與教材知識庫架構已建立；目前正在收錄原始課本／講義內容，正式章節題庫尚未開放。</p>
+      <p class="catalog-sub">${lesson.author ? `作者：${lesson.author}｜` : ''}課本起始頁 p.${lesson.page}${lesson.detail ? `｜${lesson.detail}` : ''}</p>
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" disabled>
-          <span class="top">
-            <strong>📚 教材參考資料</strong>
-            <span class="catalog-badge reference">知識庫已建立</span>
-          </span>
-          <span class="desc">Google Drive canonical 教材知識庫已建立，內容將依你提供的課本照片、課文與講義持續整理。</span>
+          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge ${lesson.referenceReady ? 'reference' : 'soon'}">${lesson.referenceReady ? '已收錄' : '待建'}</span></span>
+          <span class="desc">${lesson.referenceReady ? lesson.desc : '課本目錄位置已確認；教材內容後續依原始課本／講義建立。'}</span>
         </button>
         <button class="catalog-card chapter-card" disabled>
-          <span class="top">
-            <strong>📝 章節題庫</strong>
-            <span class="catalog-badge soon">待建</span>
-          </span>
-          <span class="desc">教材內容確認後，再建立本課自編題與各校段考拆解題。</span>
+          <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge soon">待建</span></span>
+          <span class="desc">教材內容確認後，再建立自編題與各校段考拆解題。</span>
         </button>
-      </div>
-    `;
-
+      </div>`;
     $('#backChinese71LessonsBtn')?.addEventListener('click', showChinese71Lessons);
   }
 
@@ -350,41 +364,11 @@
       <h2 class="catalog-title">第一課　夏夜</h2>
       <p class="catalog-sub">自編題依難度建立；各校題庫保留真實段考來源與原始題型。</p>
       <div class="catalog-grid">
-        <button class="catalog-card" disabled>
-          <span class="top">
-            <span class="icon">🌱</span>
-            <strong>簡易</strong>
-            <span class="catalog-badge soon">待建</span>
-          </span>
-          <span class="desc">字音字形、基本課文內容、作者與基礎修辭。</span>
-        </button>
-        <button class="catalog-card" disabled>
-          <span class="top">
-            <span class="icon">🌿</span>
-            <strong>中等</strong>
-            <span class="catalog-badge soon">待建</span>
-          </span>
-          <span class="desc">文意理解、意象判讀、修辭與寫作手法整合。</span>
-        </button>
-        <button class="catalog-card" disabled>
-          <span class="top">
-            <span class="icon">🌳</span>
-            <strong>困難</strong>
-            <span class="catalog-badge soon">待建</span>
-          </span>
-          <span class="desc">跨文本、延伸閱讀、綜合應用與高層次判讀。</span>
-        </button>
-        <button class="catalog-card" id="chineseLesson01SchoolBankBtn">
-          <span class="top">
-            <span class="icon">🏫</span>
-            <strong>各校題庫</strong>
-            <span class="catalog-badge school">${CHINESE_7_1_LESSON_01_SCHOOLS.length} 校已索引</span>
-          </span>
-          <span class="desc">由各校真實段考拆題；支援原始題型、閱讀題組、圖片與紙筆練習。</span>
-        </button>
-      </div>
-    `;
-
+        <button class="catalog-card" disabled><span class="top"><span class="icon">🌱</span><strong>簡易</strong><span class="catalog-badge soon">待建</span></span><span class="desc">字音字形、基本課文內容、作者與基礎修辭。</span></button>
+        <button class="catalog-card" disabled><span class="top"><span class="icon">🌿</span><strong>中等</strong><span class="catalog-badge soon">待建</span></span><span class="desc">文意理解、意象判讀、修辭與寫作手法整合。</span></button>
+        <button class="catalog-card" disabled><span class="top"><span class="icon">🌳</span><strong>困難</strong><span class="catalog-badge soon">待建</span></span><span class="desc">跨文本、延伸閱讀、綜合應用與高層次判讀。</span></button>
+        <button class="catalog-card" id="chineseLesson01SchoolBankBtn"><span class="top"><span class="icon">🏫</span><strong>各校題庫</strong><span class="catalog-badge school">${CHINESE_7_1_LESSON_01_SCHOOLS.length} 校已索引</span></span><span class="desc">由各校真實段考拆題；支援原始題型、閱讀題組、圖片與紙筆練習。</span></button>
+      </div>`;
     $('#backChinese71LessonsBtn')?.addEventListener('click', showChinese71Lessons);
     $('#chineseLesson01SchoolBankBtn')?.addEventListener('click', showChinese71Lesson01SchoolBanks);
   }
@@ -396,27 +380,11 @@
       <button class="catalog-back" id="backChineseLesson01BanksBtn">← 返回題庫</button>
       <div class="catalog-path">國文　›　第一冊　›　第一課 夏夜　›　各校題庫</div>
       <h2 class="catalog-title">各校題庫</h2>
-      <p class="catalog-sub">目前已在 Google Drive 課次索引確認 4 校來源。下一步會逐題轉成可在網頁呈現的國文題型。</p>
+      <p class="catalog-sub">目前已確認 ${CHINESE_7_1_LESSON_01_SCHOOLS.length} 校來源；網站實際作答會由各校真題混合呈現。</p>
       <div class="catalog-grid">
-        <button class="catalog-card chapter-card" disabled>
-          <span class="top">
-            <strong>🔀 綜合練習</strong>
-            <span class="catalog-badge soon">待匯入</span>
-          </span>
-          <span class="desc">未來混合各校屬於〈夏夜〉的真實考題；可自動評量題與紙筆題分開統計。</span>
-        </button>
-        ${CHINESE_7_1_LESSON_01_SCHOOLS.map(school => `
-          <button class="catalog-card chapter-card" disabled>
-            <span class="top">
-              <strong>🏫 ${school.name}</strong>
-              <span class="catalog-badge school">來源已索引</span>
-            </span>
-            <span class="desc">${school.exam}｜題目正在依原始題型整理。</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-
+        <button class="catalog-card chapter-card" disabled><span class="top"><strong>🔀 綜合練習</strong><span class="catalog-badge school">已收錄</span></span><span class="desc">混合各校屬於〈夏夜〉的真實考題；自動評量題與紙筆題分開統計。</span></button>
+        ${CHINESE_7_1_LESSON_01_SCHOOLS.map(school => `<button class="catalog-card chapter-card" disabled><span class="top"><strong>🏫 ${school.name}</strong><span class="catalog-badge school">來源已索引</span></span><span class="desc">${school.exam}</span></button>`).join('')}
+      </div>`;
     $('#backChineseLesson01BanksBtn')?.addEventListener('click', showChinese71Lesson01Banks);
   }
 
@@ -429,18 +397,8 @@
       <h2 class="catalog-title">請選擇學期</h2>
       <p class="catalog-sub">七年級上學期已依目前教材目錄建立完整單元架構。</p>
       <div class="catalog-grid">
-        ${SCIENCE_SEMESTERS.map(s => `
-          <button class="catalog-card" data-semester="${s.key}" ${s.enabled ? '' : 'disabled'}>
-            <span class="top">
-              <strong>${s.title}</strong>
-              <span class="catalog-badge ${s.enabled ? '' : 'soon'}">${s.short}</span>
-            </span>
-            <span class="desc">${s.enabled ? '查看單元與小節' : '尚未建立題庫'}</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-
+        ${SCIENCE_SEMESTERS.map(s => `<button class="catalog-card" data-semester="${s.key}" ${s.enabled ? '' : 'disabled'}><span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.enabled ? '' : 'soon'}">${s.short}</span></span><span class="desc">${s.enabled ? '查看單元與小節' : '尚未建立題庫'}</span></button>`).join('')}
+      </div>`;
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
     $('[data-semester="7-1"]')?.addEventListener('click', showScience71Units);
   }
@@ -456,33 +414,18 @@
       <div class="catalog-grid">
         ${SCIENCE_7_1_UNITS.map(u => {
           const ready = u.sections.filter(s => s.enabled).length;
-          return `
-            <button class="catalog-card chapter-card" data-science-unit="${u.key}">
-              <span class="top">
-                <strong>${u.number}　${u.title}</strong>
-                <span class="catalog-badge ${ready ? '' : 'soon'}">${ready ? `${ready} 節可作答` : '架構已建'}</span>
-              </span>
-              <span class="desc">${u.sections.map(s => `${s.code} ${s.title}`).join('、')}</span>
-            </button>`;
+          return `<button class="catalog-card chapter-card" data-science-unit="${u.key}"><span class="top"><strong>${u.number}　${u.title}</strong><span class="catalog-badge ${ready ? '' : 'soon'}">${ready ? `${ready} 節可作答` : '架構已建'}</span></span><span class="desc">${u.sections.map(s => `${s.code} ${s.title}`).join('、')}</span></button>`;
         }).join('')}
-      </div>
-    `;
-
+      </div>`;
     $('#backSemestersBtn')?.addEventListener('click', showScienceSemesters);
-    SCIENCE_7_1_UNITS.forEach(u => {
-      $(`[data-science-unit="${u.key}"]`)?.addEventListener('click', () => showScience71Unit(u.key));
-    });
+    SCIENCE_7_1_UNITS.forEach(u => $(`[data-science-unit="${u.key}"]`)?.addEventListener('click', () => showScience71Unit(u.key)));
   }
 
-  // 舊函式名稱保留給既有返回流程／其他模組相容。
-  function showScience71Chapters() {
-    showScience71Units();
-  }
+  function showScience71Chapters() { showScience71Units(); }
 
   function showScience71Unit(unitKey) {
     const unit = SCIENCE_7_1_UNITS.find(u => u.key === unitKey);
     if (!unit) return;
-
     setHeader(`自然一上｜${unit.number}`, unit.title);
     document.title = `${unit.number} ${unit.title}｜自然一上`;
     $('#catalogContent').innerHTML = `
@@ -491,29 +434,16 @@
       <h2 class="catalog-title">${unit.number}　${unit.title}</h2>
       <p class="catalog-sub">已建立教材小節分類；標示「題庫可用」者可以開始作答。</p>
       <div class="catalog-grid">
-        ${unit.sections.map(s => `
-          <button class="catalog-card chapter-card" data-science-section="${s.key}" ${s.enabled ? '' : 'disabled'}>
-            <span class="top">
-              <strong>${s.code}　${s.title}</strong>
-              <span class="catalog-badge ${s.enabled ? '' : (s.type === 'literacy' ? 'core' : 'soon')}">${s.enabled ? '題庫可用' : (s.type === 'literacy' ? '核心素養｜待建' : '建置中')}</span>
-            </span>
-            <span class="desc">${s.enabled ? (s.desc || '進入題庫') : '章節位置已建立，題目後續補入。'}</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-
+        ${unit.sections.map(s => `<button class="catalog-card chapter-card" data-science-section="${s.key}" ${s.enabled ? '' : 'disabled'}><span class="top"><strong>${s.code}　${s.title}</strong><span class="catalog-badge ${s.enabled ? '' : (s.type === 'literacy' ? 'core' : 'soon')}">${s.enabled ? '題庫可用' : (s.type === 'literacy' ? '核心素養｜待建' : '建置中')}</span></span><span class="desc">${s.enabled ? (s.desc || '進入題庫') : '章節位置已建立，題目後續補入。'}</span></button>`).join('')}
+      </div>`;
     $('#backScienceUnitsBtn')?.addEventListener('click', showScience71Units);
-    if (unitKey === 'unit-1') {
-      $('[data-science-section="science-method"]')?.addEventListener('click', enterScienceMethod);
-    }
+    if (unitKey === 'unit-1') $('[data-science-section="science-method"]')?.addEventListener('click', enterScienceMethod);
   }
 
   function ensureChapterBackButton() {
     const startScreen = $('#startScreen');
     const panel = $('#startScreen .panel');
     if (!startScreen || !panel || $('#chapterBackBtn')) return;
-
     const row = document.createElement('div');
     row.className = 'chapter-back-row';
     row.innerHTML = '<button id="chapterBackBtn" class="secondary">← 返回單元 1</button>';
@@ -522,14 +452,10 @@
   }
 
   function enterScienceMethod() {
-    const shell = $('#catalogShell');
-    const startScreen = $('#startScreen');
-    const examScreen = $('#examScreen');
-    shell?.classList.add('hidden');
-    examScreen?.classList.add('hidden');
-    startScreen?.classList.remove('hidden');
+    $('#catalogShell')?.classList.add('hidden');
+    $('#examScreen')?.classList.add('hidden');
+    $('#startScreen')?.classList.remove('hidden');
     ensureChapterBackButton();
-
     const h1 = $('#startScreen header h1');
     const p = $('#startScreen header p');
     if (h1) h1.textContent = '1-2 科學方法模擬考';
