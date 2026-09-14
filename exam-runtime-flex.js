@@ -268,12 +268,19 @@
   if ($('#backBtn')) {
     $('#backBtn').onclick = function() {
       const ctx=window.examContextCurrent || getContext(level);
-      if (typeof ctx.onBack === 'function') return ctx.onBack();
+
       examScreen.classList.add('hidden');
-      startScreen.classList.remove('hidden');
       result.style.display='none';
       document.querySelectorAll('.explain').forEach(e=>e.classList.remove('show'));
       $('#explainBtn').textContent='顯示詳解';
+
+      if (typeof ctx.onBack === 'function') {
+        $('#catalogShell')?.classList.remove('hidden');
+        ctx.onBack();
+      } else {
+        startScreen.classList.remove('hidden');
+      }
+
       window.scrollTo({top:0,behavior:'smooth'});
     };
   }
