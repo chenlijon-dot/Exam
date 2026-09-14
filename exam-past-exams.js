@@ -128,6 +128,7 @@
     $('#bct90SecondMathBtn')?.addEventListener('click', () => loadPastExam({
       buttonId:'bct90SecondMathBtn',
       path:'past-exams/bct/90/second/math.json',
+      explanationsPath:'past-exams/bct/90/second/math-explanations.json',
       onBack:showBct90SecondSubjects
     }));
   }
