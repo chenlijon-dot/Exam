@@ -16,7 +16,7 @@
     "analysisEligible": false,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "sourceNote": "各校真實段考依第二課〈生之歌選〉拆題；包含（一）〈一顆珍珠〉、（二）〈手的故事〉及明確的課內延伸。題目後方以 [114 XX國中] 標示來源，保留原始選項順序。自動評量題均已比對官方答案卷；紙筆題採官方答案卷文字並不列入正答率。四育國中另有已索引題目，因官方答案卷為影像型，待完成視覺核對後再升級為正式題。"
+    "sourceNote": "各校真實段考依第二課〈生之歌選〉拆題；包含（一）〈一顆珍珠〉、（二）〈手的故事〉及明確的課內延伸。題目後方以 [114 XX國中] 標示來源，保留原始選項順序。自動評量題均已比對官方答案卷；紙筆題採官方答案卷文字並不列入正答率。四育國中官方答案卷已完成影像核對，相關正式題另以 school-exams-siyu-114.json 收錄。"
   },
   "questions": [
     {
@@ -206,42 +206,5 @@
       "manualAnswer": "事業和名望都有成就。"
     }
   ],
-  "pendingQuestions": [
-    {
-      "originalQuestionNumber": "三-6",
-      "school": "臺中市立四育國中",
-      "year": "114",
-      "exam": "第一學期七年級第一次段考",
-      "type": "mcq",
-      "answerVerified": false,
-      "status": "pending-answer-key-visual-verification",
-      "lessonMapping": "第二課〈生之歌選〉（一）〈一顆珍珠〉",
-      "q": "「通過苦難的試煉，痛苦的經歷，淚水的洗滌，神會使一個無用的生命發出不朽的光輝，粗糙的沙礫變成無價的珍寶。」這段話所蘊含的道理，與下列何者最接近？ [114 四育國中]",
-      "o": [
-        "面對陽光，陰影就永遠在你的背後",
-        "被同一塊石頭絆倒兩次是一種恥辱",
-        "沒有理想，生命就只是一個空殼子",
-        "沒有暗礁，怎麼能激起美麗的浪花"
-      ],
-      "note": "題目來源已確認；官方答案卷為影像型，待視覺核對答案後再移入正式 questions。"
-    },
-    {
-      "originalQuestionNumber": "三-11",
-      "school": "臺中市立四育國中",
-      "year": "114",
-      "exam": "第一學期七年級第一次段考",
-      "type": "mcq",
-      "answerVerified": false,
-      "status": "pending-answer-key-visual-verification",
-      "lessonMapping": "第二課〈生之歌選〉（二）〈手的故事〉",
-      "q": "德國藝術家杜瑞因為感念朋友的奉獻犧牲，而將朋友的這雙手畫了下來，請問這幅名畫隱含了什麼精神？ [114 四育國中]",
-      "o": [
-        "己所不欲，勿施於人",
-        "塞翁失馬，焉知非福",
-        "燃燒自己，照亮別人",
-        "精誠所至，金石為開"
-      ],
-      "note": "題目來源已確認；官方答案卷為影像型，待視覺核對答案後再移入正式 questions。"
-    }
-  ]
+  "pendingQuestions": []
 }

@@ -19,24 +19,37 @@
       bankPath: 'chapter-bank/chinese/7-1/lesson-02/school-exams.json',
       extraPaths: [
         'chapter-bank/chinese/7-1/lesson-02/school-exams-yushan-114.json',
-        'chapter-bank/chinese/7-1/lesson-02/school-exams-zuoying-113.json'
+        'chapter-bank/chinese/7-1/lesson-02/school-exams-zuoying-113.json',
+        'chapter-bank/chinese/7-1/lesson-02/school-exams-siyu-114.json'
       ],
       schoolCount: 6, lessonTitle: '生之歌選', backLabel: '返回第二課題庫', loadingText: '正在載入各校〈生之歌選〉真題…'
     },
     {
       lesson: '03', buttonId: 'chineseLesson03SchoolBankBtn',
       bankPath: 'chapter-bank/chinese/7-1/lesson-03/school-exams-zuoying-113.json',
-      extraPaths: [], schoolCount: 1, lessonTitle: '吃冰的滋味', backLabel: '返回第三課題庫', loadingText: '正在載入各校〈吃冰的滋味〉真題…'
+      extraPaths: [
+        'chapter-bank/chinese/7-1/lesson-03/school-exams-chengzheng-114.json',
+        'chapter-bank/chinese/7-1/lesson-03/school-exams-yichang-114.json',
+        'chapter-bank/chinese/7-1/lesson-03/school-exams-siyu-114.json',
+        'chapter-bank/chinese/7-1/lesson-03/school-exams-fengjia-114.json'
+      ], schoolCount: 5, lessonTitle: '吃冰的滋味', backLabel: '返回第三課題庫', loadingText: '正在載入各校〈吃冰的滋味〉真題…'
     },
     {
       lesson: 'language01', buttonId: 'chineseLanguage01SchoolBankBtn',
       bankPath: 'chapter-bank/chinese/7-1/language-01/school-exams-zuoying-113.json',
-      extraPaths: [], schoolCount: 1, lessonTitle: '標點符號使用法', backLabel: '返回語文天地一題庫', loadingText: '正在載入各校標點符號真題…'
+      extraPaths: [
+        'chapter-bank/chinese/7-1/language-01/school-exams-chengzheng-114.json',
+        'chapter-bank/chinese/7-1/language-01/school-exams-siyu-114.json',
+        'chapter-bank/chinese/7-1/language-01/school-exams-fengjia-114.json',
+        'chapter-bank/chinese/7-1/language-01/school-exams-yushan-114.json'
+      ], schoolCount: 5, lessonTitle: '標點符號使用法', backLabel: '返回語文天地一題庫', loadingText: '正在載入各校標點符號真題…'
     },
     {
       lesson: 'self01', buttonId: 'chineseSelf01SchoolBankBtn',
       bankPath: 'chapter-bank/chinese/7-1/self-01/school-exams-zuoying-113.json',
-      extraPaths: [], schoolCount: 1, lessonTitle: '善用時間的方法', backLabel: '返回自學一題庫', loadingText: '正在載入各校〈善用時間的方法〉真題…'
+      extraPaths: [
+        'chapter-bank/chinese/7-1/self-01/school-exams-chengzheng-114.json'
+      ], schoolCount: 2, lessonTitle: '善用時間的方法', backLabel: '返回自學一題庫', loadingText: '正在載入各校〈善用時間的方法〉真題…'
     }
   ];
 
