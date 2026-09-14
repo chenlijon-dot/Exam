@@ -65,8 +65,10 @@
       <h2 class="catalog-title">請選擇年度</h2>
       <div class="catalog-grid">
         ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次、第二次皆已收錄國文與數學。'})}
+        ${card({id:'bct91Btn',icon:'🗓️',title:'91 年度',badge:'建置中',desc:'第一次數學科文字題庫已建立；附圖後續補齊。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
+    $('#bct91Btn')?.addEventListener('click', showBct91Sessions);
   }
 
   function showBct90Sessions() {
@@ -81,6 +83,19 @@
       </div>`;
     $('#bct90FirstBtn')?.addEventListener('click', showBct90FirstSubjects);
     $('#bct90SecondBtn')?.addEventListener('click', showBct90SecondSubjects);
+  }
+
+  function showBct91Sessions() {
+    setHeader('91 年度基測', '選擇測驗次別');
+    content().innerHTML = `
+      ${backButton('backBct91Btn','返回年度',showBctYears)}
+      <div class="catalog-path">歷屆考題　›　基測　›　91 年度</div>
+      <h2 class="catalog-title">請選擇次別</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct91FirstBtn',icon:'1️⃣',title:'第一次',badge:'建置中',desc:'91 年度第一次基測；數學科文字題庫已建立。'})}
+        ${card({id:'bct91SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct91FirstBtn')?.addEventListener('click', showBct91FirstSubjects);
   }
 
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
@@ -130,6 +145,26 @@
       path:'past-exams/bct/90/second/math.json',
       explanationsPath:'past-exams/bct/90/second/math-explanations.json',
       onBack:showBct90SecondSubjects
+    }));
+  }
+
+  function showBct91FirstSubjects() {
+    setHeader('91 年度第一次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct91FirstBtn','返回次別',showBct91Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　91 年度　›　第一次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct91FirstChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct91FirstEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct91FirstMathBtn',icon:'📐',title:'數學科',badge:'31 題',desc:'31 題文字、選項與答案已建立；原卷圖表題後續補圖。'})}
+        ${card({id:'bct91FirstScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct91FirstSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct91FirstMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct91FirstMathBtn',
+      path:'past-exams/bct/91/first/math.json',
+      onBack:showBct91FirstSubjects
     }));
   }
 
@@ -184,6 +219,7 @@
   window.showPastExams = showPastExams;
   window.showBct90FirstSubjects = showBct90FirstSubjects;
   window.showBct90SecondSubjects = showBct90SecondSubjects;
+  window.showBct91FirstSubjects = showBct91FirstSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
