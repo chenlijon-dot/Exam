@@ -1,4 +1,21 @@
 {
+  "exam": {
+    "difficulty": "chinese-7-1-language01-school",
+    "title": "語文天地一〈標點符號使用法〉｜各校題庫",
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "language-01",
+    "unit": "語文天地一 標點符號使用法",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam"
+  },
   "source": {
     "school": "高雄市立左營國中",
     "year": "113",
