@@ -1,0 +1,106 @@
+{
+  "source": {
+    "school": "高雄市立左營國中",
+    "year": "113",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "113-高雄市左營國中第一學期七年級第一次段考國文科評量試題.pdf",
+    "answerFile": "113-高雄市左營國中第一學期七年級第一次段考國文科評量試題_答案卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "originalQuestionNumber": "三-2",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第三課〈吃冰的滋味〉",
+      "q": "解釋：童「叟」無欺 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出詞義；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "老人"
+    },
+    {
+      "originalQuestionNumber": "三-3",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第三課〈吃冰的滋味〉",
+      "q": "解釋：「軋」入刨冰機 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出詞義；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "碾壓"
+    },
+    {
+      "originalQuestionNumber": "三-4",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第三課〈吃冰的滋味〉",
+      "q": "解釋：「沁」涼 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出詞義；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "滲入"
+    },
+    {
+      "originalQuestionNumber": "14",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第三課〈吃冰的滋味〉",
+      "q": "有關〈吃冰的滋味〉一文文句的詮釋，下列何者正確？ [113 左營國中]",
+      "o": [
+        "「小生意人講的是信用，貨真價實，童叟無欺。」：意指小生意人有「勤奮節儉」的美德",
+        "「近人講究包裝，較重外表，內容則能省則省」：指現代人做事的態度多金玉其外，投機取巧",
+        "「那時能吃到一根冰棒，已是天大的享受了。」：作者藉童年吃冰的情況強調「及時行樂」的情景",
+        "「一個夏天下來，吃掉的冰恐怕都要多過自己的體重」：指夏天的冰品種類眾多，可以隨心所欲的挑選"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。作者以今昔冰品對照，批評現代較重包裝、外表而忽略內容與實在。"
+    },
+    {
+      "originalQuestionNumber": "15",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第三課〈吃冰的滋味〉",
+      "q": "閱讀完〈吃冰的滋味〉一文後，你認為作者主要是要表達什麼？ [113 左營國中]",
+      "o": [
+        "吃冰在味覺感受上的享受與滿足，令作者難以忘懷",
+        "童年時期吃冰的體會讓作者更珍惜現在擁有的事物",
+        "童年難以忘懷的情感，並感傷童年甜美記憶的流逝",
+        "由現今冰品的華而不實，表達對於樸實社會的嚮往"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。文章藉吃冰回憶童年生活，核心情感是對往日時光的懷念與流逝感。"
+    },
+    {
+      "originalQuestionNumber": "16",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第三課〈吃冰的滋味〉",
+      "q": "下列四句皆出自古蒙仁〈吃冰的滋味〉一文，何者採用轉化修辭法？ [113 左營國中]",
+      "o": [
+        "一根冰棒含在嘴裡，總要舔上半天",
+        "那時能吃到一根冰棒，已是天大享受了",
+        "一個夏天下來，吃掉的冰恐怕都要多過自己的體重",
+        "我都會想起這些往事，像鄉愁般地隨著現代化的冰淇淋一一嚥下"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。將抽象的「鄉愁」轉化成彷彿能隨冰淇淋吞嚥的具體事物。"
+    }
+  ]
+}
