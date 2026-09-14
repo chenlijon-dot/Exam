@@ -47,16 +47,18 @@
     {
       lesson: 'self01', buttonId: 'chineseSelf01SchoolBankBtn',
       bankPath: 'chapter-bank/chinese/7-1/self-01/school-exams-zuoying-113.json',
-      extraPaths: [
-        'chapter-bank/chinese/7-1/self-01/school-exams-chengzheng-114.json'
-      ], schoolCount: 2, lessonTitle: '善用時間的方法', backLabel: '返回自學一題庫', loadingText: '正在載入各校〈善用時間的方法〉真題…'
+      extraPaths: ['chapter-bank/chinese/7-1/self-01/school-exams-chengzheng-114.json'],
+      schoolCount: 2, lessonTitle: '善用時間的方法', backLabel: '返回自學一題庫', loadingText: '正在載入各校〈善用時間的方法〉真題…'
     }
   ];
 
   const PRACTICE_CONFIGS = [
-    { difficulty:'easy', buttonId:'chineseLesson01EasyBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-easy.json', loadingText:'正在載入〈夏夜〉簡易題…' },
-    { difficulty:'medium', buttonId:'chineseLesson01MediumBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-medium.json', loadingText:'正在載入〈夏夜〉中等題…' },
-    { difficulty:'hard', buttonId:'chineseLesson01HardBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-hard.json', loadingText:'正在載入〈夏夜〉困難題…' }
+    { lesson:'01', difficulty:'easy', buttonId:'chineseLesson01EasyBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-easy.json', loadingText:'正在載入〈夏夜〉簡易題…', backLabel:'返回第一課題庫' },
+    { lesson:'01', difficulty:'medium', buttonId:'chineseLesson01MediumBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-medium.json', loadingText:'正在載入〈夏夜〉中等題…', backLabel:'返回第一課題庫' },
+    { lesson:'01', difficulty:'hard', buttonId:'chineseLesson01HardBtn', path:'chapter-bank/chinese/7-1/lesson-01/practice-hard.json', loadingText:'正在載入〈夏夜〉困難題…', backLabel:'返回第一課題庫' },
+    { lesson:'02', difficulty:'easy', buttonId:'chineseLesson02EasyBtn', path:'chapter-bank/chinese/7-1/lesson-02/practice-easy.json', loadingText:'正在載入〈生之歌選〉簡易題…', backLabel:'返回第二課題庫' },
+    { lesson:'02', difficulty:'medium', buttonId:'chineseLesson02MediumBtn', path:'chapter-bank/chinese/7-1/lesson-02/practice-medium.json', loadingText:'正在載入〈生之歌選〉中等題…', backLabel:'返回第二課題庫' },
+    { lesson:'02', difficulty:'hard', buttonId:'chineseLesson02HardBtn', path:'chapter-bank/chinese/7-1/lesson-02/practice-hard.json', loadingText:'正在載入〈生之歌選〉困難題…', backLabel:'返回第二課題庫' }
   ];
 
   function setTextIfChanged(node, text) {
@@ -138,13 +140,7 @@
       if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
       banks[key] = Array.isArray(data.questions) ? data.questions : [];
       window.examContexts = window.examContexts || {};
-      window.examContexts[key] = {
-        ...data.exam,
-        key,
-        examType: true,
-        backLabel: '返回第一課題庫',
-        onBack: () => returnToCatalog(null)
-      };
+      window.examContexts[key] = { ...data.exam, key, examType:true, backLabel:config.backLabel, onBack:() => returnToCatalog(null) };
       if (btn) {
         btn.disabled = false;
         setTextIfChanged(btn.querySelector('.desc'), originalDesc);
@@ -204,15 +200,7 @@
     interceptSchoolBankButton(config);
   }
 
-  function enhanceLesson01Menu() {
-    if (!currentCatalogText().includes('第一課夏夜')) return;
-    const config = BANK_CONFIGS.find(item => item.lesson === '01');
-    const schoolBtn = $(`#${config.buttonId}`);
-    if (schoolBtn) {
-      setTextIfChanged(schoolBtn.querySelector('.catalog-badge.school'), `${config.schoolCount} 校已索引`);
-      interceptSchoolBankButton(config);
-    }
-
+  function enablePracticeButtons(lesson) {
     const grid = $('#catalogContent .catalog-grid');
     if (!grid) return;
     const map = { '簡易':'easy', '中等':'medium', '困難':'hard' };
@@ -220,7 +208,7 @@
       const label = btn.querySelector('strong')?.textContent?.trim();
       const difficulty = map[label];
       if (!difficulty) return;
-      const practice = PRACTICE_CONFIGS.find(item => item.difficulty === difficulty);
+      const practice = PRACTICE_CONFIGS.find(item => item.lesson === lesson && item.difficulty === difficulty);
       if (!practice) return;
       btn.id = practice.buttonId;
       btn.disabled = false;
@@ -234,6 +222,17 @@
     });
   }
 
+  function enhanceLesson01Menu() {
+    if (!currentCatalogText().includes('第一課夏夜')) return;
+    const config = BANK_CONFIGS.find(item => item.lesson === '01');
+    const schoolBtn = $(`#${config.buttonId}`);
+    if (schoolBtn) {
+      setTextIfChanged(schoolBtn.querySelector('.catalog-badge.school'), `${config.schoolCount} 校已索引`);
+      interceptSchoolBankButton(config);
+    }
+    enablePracticeButtons('01');
+  }
+
   function enhanceLesson02Menu() {
     if (!currentCatalogText().includes('第二課生之歌選')) return;
     const config = BANK_CONFIGS.find(item => item.lesson === '02');
@@ -241,6 +240,7 @@
       '字音字形、基本課文內容、作者與基礎修辭。',
       '文意理解、象徵判讀、藉事說理與寫作手法整合。',
       '跨文本、延伸閱讀、生命價值與高層次綜合判讀。');
+    enablePracticeButtons('02');
   }
 
   function enhanceLesson03Menu() {
