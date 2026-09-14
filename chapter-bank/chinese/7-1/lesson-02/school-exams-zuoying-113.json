@@ -1,0 +1,181 @@
+{
+  "source": {
+    "school": "高雄市立左營國中",
+    "year": "113",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "113-高雄市左營國中第一學期七年級第一次段考國文科評量試題.pdf",
+    "answerFile": "113-高雄市左營國中第一學期七年級第一次段考國文科評量試題_答案卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "originalQuestionNumber": "二-2",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（二）〈手的故事〉",
+      "q": "字音字形：雕「塑」作品 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出正確注音；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "ㄙㄨˋ"
+    },
+    {
+      "originalQuestionNumber": "二-6",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（一）〈一顆珍珠〉",
+      "q": "字音字形：珠寶鑲「ㄑ一ㄢ」 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出正確國字；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "嵌"
+    },
+    {
+      "originalQuestionNumber": "二-8",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（二）〈手的故事〉",
+      "q": "字音字形：皮膚白「ㄒㄧ」 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出正確國字；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "皙"
+    },
+    {
+      "originalQuestionNumber": "二-9",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（一）〈一顆珍珠〉",
+      "q": "字音字形：休「ㄑ一ˋ」中心 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出正確國字；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "憩"
+    },
+    {
+      "originalQuestionNumber": "二-10",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（作者介紹）",
+      "q": "字音字形：「ㄌ一ˊ」患疾病 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出正確國字；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "罹"
+    },
+    {
+      "originalQuestionNumber": "三-7",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "manual-study",
+      "gradingMode": "manual",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（二）〈手的故事〉",
+      "q": "解釋：黯然神傷 [113 左營國中]",
+      "manualInstruction": "請在紙上寫出詞義；完成後可按「顯示詳解」自行核對。",
+      "manualAnswer": "心情沮喪，神色憂傷"
+    },
+    {
+      "originalQuestionNumber": "11",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（一）〈一顆珍珠〉",
+      "q": "「同樣是一根針，曾經使他失去光明，卻也因此帶給億萬人光明和希望，多麼奇妙的轉變！」（〈一顆珍珠〉）這段話的寓意與下列何者最相近？ [113 左營國中]",
+      "o": [
+        "水能載舟，亦能覆舟",
+        "不經一事，不長一智",
+        "種瓜得瓜，種豆得豆",
+        "當局者迷，旁觀者清"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。相同事物可能帶來相反結果；文中一根針既曾造成失明，後來也成為點字法帶來希望的契機。"
+    },
+    {
+      "originalQuestionNumber": "12",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（二）〈手的故事〉",
+      "q": "「做人不要掌心向上，向人乞憐，要隨時不忘掌心向下，給人幫助救援。」（〈手的故事〉）這段話的意思與下列何者最相近？ [113 左營國中]",
+      "o": [
+        "踏破鐵鞋無覓處，得來全不費工夫",
+        "既以為人己愈有，既以予人己愈多",
+        "不經一番寒徹骨，焉得梅花撲鼻香",
+        "橫看成嶺側成峰，遠近高低各不同"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。兩者都強調付出、給予與幫助他人。"
+    },
+    {
+      "originalQuestionNumber": "13",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉",
+      "q": "杏林子〈一顆珍珠〉與〈手的故事〉兩篇文章的說明，何者錯誤？ [113 左營國中]",
+      "o": [
+        "作者皆由自己的親身體驗開始，再舉事例說明印證",
+        "皆在表達「機會永遠留給隨時準備好的人」的道理",
+        "文中皆採用「對比」寫作手法，來突顯說明的主題",
+        "皆採「藉事說理」的手法以及「先敘後議」的結構"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。兩篇共同重點在苦難轉化、奉獻與生命價值，並非強調『機會留給準備好的人』。"
+    },
+    {
+      "originalQuestionNumber": "20",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（跨文本）",
+      "q": "「生命如同故事，重要的不是它有多長，而是它有多好。」這句話的涵義與下列何者最接近？ [113 左營國中]",
+      "o": [
+        "人生最有價值的，不是生活裡的甜蜜，而是酸苦",
+        "有生就有死，只有樂於生的人才能不感到死的苦惱",
+        "生命不可能有兩次，但許多人連唯一的一次也不珍惜",
+        "深刻而充實地度過每一瞬間，便能使生命散發光與熱"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。重點在生命品質與充實度，而不是生命長短。"
+    },
+    {
+      "originalQuestionNumber": "21",
+      "school": "高雄市立左營國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "type": "mcq",
+      "answerVerified": true,
+      "lessonMapping": "第二課〈生之歌選〉（跨文本）",
+      "q": "杏林子〈打破的骨董〉：「打了霜的柿子才甜，因為，唯有苦寒，才能將那一分酸澀催化成香精和糖分。」這段話所要表達的意思，與下列何者最相近？ [113 左營國中]",
+      "o": [
+        "人無千日好，花無百日紅",
+        "一鳥在手，勝於二鳥在林",
+        "蓮之可貴在於出淤泥而不染",
+        "磚塊未經火煉前，原是軟土"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。兩者都強調經過艱難鍛鍊，才能轉化成更成熟、更有價值的成果。"
+    }
+  ]
+}
