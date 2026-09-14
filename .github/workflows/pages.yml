@@ -23,16 +23,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
       - name: Stamp build version
         run: sed -i 's/__BUILD_SHA__/${{ github.sha }}/g' index.html
+
+      - name: Prevent legacy start-screen flash
+        run: |
+          # index.html still contains the original science difficulty selector as a legacy
+          # runtime screen. The catalog is now the real site entry point. Hide the legacy
+          # start screen in the deployed HTML from the first paint; catalog/runtime code
+          # can still remove the hidden class later if it intentionally needs that screen.
+          sed -i 's|<section id="startScreen">|<section id="startScreen" class="hidden">|' index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
