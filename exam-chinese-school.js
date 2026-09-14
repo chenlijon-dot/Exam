@@ -3,7 +3,16 @@
 
   const BANK_PATH = 'chapter-bank/chinese/7-1/lesson-01/school-exams.json';
   const BUTTON_ID = 'chineseLesson01SchoolBankBtn';
+  const SCHOOL_BANK_DESC = '由各校真實段考拆題；支援原始題型、閱讀題組、圖片與紙筆練習。';
   const $ = (sel, root = document) => root.querySelector(sel);
+
+  function resetSchoolBankButton() {
+    const btn = $(`#${BUTTON_ID}`);
+    if (!btn) return;
+    btn.disabled = false;
+    const desc = btn.querySelector('.desc');
+    if (desc) desc.textContent = SCHOOL_BANK_DESC;
+  }
 
   async function openLesson01SchoolBank() {
     const btn = $(`#${BUTTON_ID}`);
@@ -35,14 +44,19 @@
           document.querySelector('#startScreen')?.classList.add('hidden');
           document.querySelector('#catalogShell')?.classList.remove('hidden');
           document.querySelector('#result')?.style && (document.querySelector('#result').style.display = 'none');
+          resetSchoolBankButton();
+          interceptSchoolBankButton();
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       };
 
+      // 載入成功後立即恢復按鈕狀態。catalog 在考試期間雖然隱藏，
+      // 但返回同一個 DOM 時不能留下 disabled，否則無法再次進入各校題庫。
+      resetSchoolBankButton();
       startExam(key);
     } catch (error) {
       alert(`各校題庫載入失敗：${error.message}`);
-      if (btn) btn.disabled = false;
+      resetSchoolBankButton();
     }
   }
 
