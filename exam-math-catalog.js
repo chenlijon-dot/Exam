@@ -209,6 +209,8 @@
     let debugPointerType = '-';
     let debugStreamType = '-';
     let debugPressure = 0;
+    let debugWidth = 0;
+    let debugHeight = 0;
 
     function sizeCanvas() {
       const rect = stage.getBoundingClientRect();
@@ -257,6 +259,16 @@
       debugPointerType = e.pointerType || '-';
       debugStreamType = e.type || '-';
 
+      debugWidth =
+        typeof e.width === 'number'
+          ? e.width
+          : 0;
+
+      debugHeight =
+        typeof e.height === 'number'
+          ? e.height
+          : 0;
+
       debugEventCount += 1;
       debugSampleCount += samples.length;
 
@@ -286,6 +298,7 @@
         `Hz      : ${hz.toFixed(1)}\n` +
         `samples : ${samplesPerEvent.toFixed(2)}/event\n` +
         `avgDist : ${avgDistance.toFixed(2)} px\n` +
+        `contact : ${debugWidth.toFixed(1)} x ${debugHeight.toFixed(1)} px\n` +
         `pressure: ${debugPressure.toFixed(3)}`;
 
       debugWindowStart = now;
@@ -404,6 +417,17 @@
       drawing = true;
 
       debugPointerType = e.pointerType || '-';
+
+      debugWidth =
+        typeof e.width === 'number'
+          ? e.width
+          : 0;
+
+      debugHeight =
+        typeof e.height === 'number'
+          ? e.height
+          : 0;
+
       debugPressure =
         typeof e.pressure === 'number'
           ? e.pressure
@@ -416,6 +440,7 @@
           `Hz      : measuring...\n` +
           `samples : measuring...\n` +
           `avgDist : measuring...\n` +
+          `contact : ${debugWidth.toFixed(1)} x ${debugHeight.toFixed(1)} px\n` +
           `pressure: ${debugPressure.toFixed(3)}`;
       }
 
