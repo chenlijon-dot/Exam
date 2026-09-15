@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChrisExamPlatform｜Google 登入測試</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;background:#f6f8fb;color:#172033;min-height:100vh;display:grid;place-items:center;padding:20px}
+    .card{width:min(520px,100%);background:#fff;border:1px solid #dfe5ee;border-radius:20px;padding:28px;box-shadow:0 12px 34px rgba(15,23,42,.10)}
+    h1{margin:0 0 8px;font-size:1.55rem}.muted{color:#657089}.status{margin:18px 0;padding:14px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;white-space:pre-wrap}
+    button{width:100%;border:0;border-radius:12px;padding:12px 16px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:10px}
+    .primary{background:#2563eb;color:#fff}.secondary{background:#e2e8f0;color:#1e293b}.ok{background:#f0fdf4;border-color:#86efac;color:#166534}.bad{background:#fef2f2;border-color:#fca5a5;color:#991b1b}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>ChrisExamPlatform</h1>
+    <div class="muted">Firebase Google 登入／白名單測試</div>
+    <div id="status" class="status">正在初始化 Firebase…</div>
+    <button id="loginBtn" class="primary hidden">使用 Google 帳號登入</button>
+    <button id="logoutBtn" class="secondary hidden">登出</button>
+    <button id="enterBtn" class="primary hidden">進入 Exam</button>
+  </main>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+    import {
+      getAuth,
+      GoogleAuthProvider,
+      signInWithPopup,
+      signInWithRedirect,
+      getRedirectResult,
+      onAuthStateChanged,
+      signOut
+    } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js';
+
+    const firebaseConfig = {
+      apiKey: 'AIzaSyDkZOlQjmoVnkIz3Q1ppg_EJnCp5W3qNFQ',
+      authDomain: 'chrisexamplatform.firebaseapp.com',
+      projectId: 'chrisexamplatform',
+      storageBucket: 'chrisexamplatform.firebasestorage.app',
+      messagingSenderId: '682858985440',
+      appId: '1:682858985440:web:22dfbf5f0c635728675d85',
+      measurementId: 'G-WHXW4FDXBB'
+    };
+
+    // 第一階段先只允許管理者帳號。
+    const ALLOWED_EMAILS = new Set([
+      'chenlijon@gmail.com'
+    ]);
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+
+    const status = document.getElementById('status');
+    const loginBtn = document.getElementById('loginBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const enterBtn = document.getElementById('enterBtn');
+
+    function isStudentExamWebView() {
+      try {
+        return !!window.StudentExamNative;
+      } catch {
+        return false;
+      }
+    }
+
+    function setStatus(text, type='') {
+      status.textContent = text;
+      status.className = 'status' + (type ? ' ' + type : '');
+    }
+
+    function friendlyError(error) {
+      const code = error?.code || '';
+      if (code.includes('popup-blocked')) return '瀏覽器阻擋了登入視窗，請再試一次。';
+      if (code.includes('popup-closed-by-user')) return 'Google 登入視窗已關閉。';
+      if (code.includes('unauthorized-domain')) return '目前網域尚未加入 Firebase 授權網域。';
+      if (code.includes('operation-not-supported-in-this-environment')) return '目前環境不支援網頁 Google 登入。';
+      return `${code || '登入失敗'}\n${error?.message || ''}`.trim();
+    }
+
+    loginBtn.addEventListener('click', async () => {
+      loginBtn.disabled = true;
+      setStatus('正在開啟 Google 登入…');
+      try {
+        if (isStudentExamWebView()) {
+          await signInWithRedirect(auth, provider);
+        } else {
+          await signInWithPopup(auth, provider);
+        }
+      } catch (error) {
+        setStatus(friendlyError(error), 'bad');
+        loginBtn.disabled = false;
+      }
+    });
+
+    logoutBtn.addEventListener('click', async () => {
+      await signOut(auth);
+    });
+
+    enterBtn.addEventListener('click', () => {
+      location.href = './';
+    });
+
+    try {
+      await getRedirectResult(auth);
+    } catch (error) {
+      setStatus(friendlyError(error), 'bad');
+    }
+
+    onAuthStateChanged(auth, user => {
+      loginBtn.disabled = false;
+
+      if (!user) {
+        setStatus('尚未登入。\n請使用 Google 帳號登入。');
+        loginBtn.classList.remove('hidden');
+        logoutBtn.classList.add('hidden');
+        enterBtn.classList.add('hidden');
+        return;
+      }
+
+      loginBtn.classList.add('hidden');
+      logoutBtn.classList.remove('hidden');
+
+      const email = (user.email || '').toLowerCase();
+      const allowed = ALLOWED_EMAILS.has(email);
+
+      if (!allowed) {
+        setStatus(`登入成功，但此帳號尚未授權。\n\n帳號：${user.email || '(無 email)'}\nUID：${user.uid}`, 'bad');
+        enterBtn.classList.add('hidden');
+        return;
+      }
+
+      setStatus(`✓ Google 登入成功\n✓ 白名單授權成功\n\n帳號：${user.email}\nUID：${user.uid}`, 'ok');
+      enterBtn.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
