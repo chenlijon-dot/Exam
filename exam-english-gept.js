@@ -5,12 +5,12 @@
   const content = () => $('#catalogContent');
 
   const GEPT_ELEMENTARY_ROUNDS = [
-    { key: '01', title: '第一回', pages: 'p.1–9' },
-    { key: '02', title: '第二回', pages: 'p.11–18' },
-    { key: '03', title: '第三回', pages: 'p.19–26' },
-    { key: '04', title: '第四回', pages: 'p.27–34' },
-    { key: '05', title: '第五回', pages: 'p.35–42' },
-    { key: '06', title: '第六回', pages: 'p.43–51' }
+    { key: '01', title: '第一回', pages: 'p.1–9', ready: true, path: 'chapter-bank/english/gept/elementary/reading/round-01.json' },
+    { key: '02', title: '第二回', pages: 'p.11–18', ready: false },
+    { key: '03', title: '第三回', pages: 'p.19–26', ready: false },
+    { key: '04', title: '第四回', pages: 'p.27–34', ready: false },
+    { key: '05', title: '第五回', pages: 'p.35–42', ready: false },
+    { key: '06', title: '第六回', pages: 'p.43–51', ready: false }
   ];
 
   function setHeader(title, sub) {
@@ -84,12 +84,28 @@
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" id="geptElementaryKnowledgeBtn">
           <span class="top"><span class="icon">📚</span><strong>知識庫試題</strong><span class="catalog-badge reference">第一回～第六回</span></span>
-          <span class="desc">依目前全民英檢初級閱讀教材知識庫建立線上測驗；考題內容下一階段匯入。</span>
+          <span class="desc">依全民英檢初級閱讀教材知識庫建立線上測驗。</span>
         </button>
       </div>`);
 
     $('#backGeptLandingBtn')?.addEventListener('click', renderGeptLanding);
     $('#geptElementaryKnowledgeBtn')?.addEventListener('click', renderElementaryRounds);
+  }
+
+  function roundCard(round) {
+    const badge = round.ready
+      ? '<span class="catalog-badge reference">35 題已上線</span>'
+      : '<span class="catalog-badge reference">資料已收錄</span>';
+    const disabled = round.ready ? '' : 'disabled';
+    const desc = round.ready
+      ? `閱讀能力測驗｜35 題｜原書 ${round.pages}｜含逐題詳解與題組共用文章`
+      : `閱讀能力測驗｜35 題｜原書 ${round.pages}｜線上考題待建`;
+
+    return `
+      <button class="catalog-card chapter-card" ${disabled} data-gept-round="${round.key}">
+        <span class="top"><span class="icon">📝</span><strong>${round.title}</strong>${badge}</span>
+        <span class="desc">${desc}</span>
+      </button>`;
   }
 
   function renderElementaryRounds() {
@@ -105,16 +121,52 @@
       <button class="catalog-back" id="backGeptElementaryBtn">← 返回初級</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級　›　知識庫試題</div>
       <h2 class="catalog-title">請選擇回次</h2>
-      <p class="catalog-sub">第一回至第六回的教材資料均已整理完成；目前先建立選單，線上考題內容稍後再加入。</p>
+      <p class="catalog-sub">第一回已可直接線上作答；第二回至第六回保留資料已收錄狀態，待逐回建置題目與詳解。</p>
       <div class="catalog-grid">
-        ${GEPT_ELEMENTARY_ROUNDS.map(round => `
-          <button class="catalog-card chapter-card" disabled data-gept-round="${round.key}">
-            <span class="top"><span class="icon">📝</span><strong>${round.title}</strong><span class="catalog-badge reference">資料已收錄</span></span>
-            <span class="desc">閱讀能力測驗｜35 題｜原書 ${round.pages}｜線上考題待建</span>
-          </button>`).join('')}
+        ${GEPT_ELEMENTARY_ROUNDS.map(roundCard).join('')}
       </div>`);
 
     $('#backGeptElementaryBtn')?.addEventListener('click', renderElementaryBanks);
+    GEPT_ELEMENTARY_ROUNDS.filter(round => round.ready).forEach(round => {
+      $(`[data-gept-round="${round.key}"]`)?.addEventListener('click', event => openRound(round, event.currentTarget));
+    });
+  }
+
+  async function openRound(round, button) {
+    if (!round?.ready || !round.path || !button) return;
+
+    const oldHtml = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="top"><span class="icon">⏳</span><strong>載入第一回…</strong></span><span class="desc">正在準備題目與詳解</span>';
+
+    try {
+      const response = await fetch(round.path, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      const questions = Array.isArray(data.questions) ? data.questions : [];
+      if (!questions.length) throw new Error('題庫內容為空');
+      if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
+
+      const exam = data.exam || {};
+      const key = exam.difficulty || exam.key || `english-gept-elementary-reading-round-${round.key}`;
+      banks[key] = questions;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        ...exam,
+        key,
+        difficulty: key,
+        examType: exam.examType || 'gept-elementary-reading',
+        preserveOptionOrder: true,
+        backLabel: '返回初級六回選單',
+        onBack: renderElementaryRounds
+      };
+
+      window.startExam(key);
+    } catch (error) {
+      alert(`第一回載入失敗：${error.message}`);
+      button.disabled = false;
+      button.innerHTML = oldHtml;
+    }
   }
 
   function enhanceGeptLandingIfNeeded() {
