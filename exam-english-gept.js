@@ -5,12 +5,12 @@
   const content = () => $('#catalogContent');
 
   const GEPT_ELEMENTARY_ROUNDS = [
-    { key: '01', title: '第一回', pages: 'p.1–9', ready: true, path: 'chapter-bank/english/gept/elementary/reading/round-01.json' },
-    { key: '02', title: '第二回', pages: 'p.11–18', ready: false },
-    { key: '03', title: '第三回', pages: 'p.19–26', ready: false },
-    { key: '04', title: '第四回', pages: 'p.27–34', ready: false },
-    { key: '05', title: '第五回', pages: 'p.35–42', ready: false },
-    { key: '06', title: '第六回', pages: 'p.43–51', ready: false }
+    { key: '01', title: '第一回', pages: 'p.1–9', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-01.json' },
+    { key: '02', title: '第二回', pages: 'p.11–18', ready: true, total: 26, partial: true, note: '缺 Q7–15', path: 'chapter-bank/english/gept/elementary/reading/round-02.json' },
+    { key: '03', title: '第三回', pages: 'p.19–26', ready: false, total: 35 },
+    { key: '04', title: '第四回', pages: 'p.27–34', ready: false, total: 35 },
+    { key: '05', title: '第五回', pages: 'p.35–42', ready: false, total: 35 },
+    { key: '06', title: '第六回', pages: 'p.43–51', ready: false, total: 35 }
   ];
 
   function setHeader(title, sub) {
@@ -93,14 +93,18 @@
   }
 
   function roundCard(round) {
-    const badge = round.ready
-      ? '<span class="catalog-badge reference">35 題已上線</span>'
-      : '<span class="catalog-badge reference">資料已收錄</span>';
-    const disabled = round.ready ? '' : 'disabled';
-    const desc = round.ready
-      ? `閱讀能力測驗｜35 題｜原書 ${round.pages}｜含逐題詳解與題組共用文章`
-      : `閱讀能力測驗｜35 題｜原書 ${round.pages}｜線上考題待建`;
+    let badge = '<span class="catalog-badge reference">資料已收錄</span>';
+    let desc = `閱讀能力測驗｜35 題｜原書 ${round.pages}｜線上考題待建`;
 
+    if (round.ready && round.partial) {
+      badge = `<span class="catalog-badge reference">${round.total} 題已上線</span>`;
+      desc = `閱讀能力測驗｜目前 ${round.total} 題｜原書 ${round.pages}｜含逐題詳解與題組共用文章｜${round.note}`;
+    } else if (round.ready) {
+      badge = `<span class="catalog-badge reference">${round.total || 35} 題已上線</span>`;
+      desc = `閱讀能力測驗｜${round.total || 35} 題｜原書 ${round.pages}｜含逐題詳解與題組共用文章`;
+    }
+
+    const disabled = round.ready ? '' : 'disabled';
     return `
       <button class="catalog-card chapter-card" ${disabled} data-gept-round="${round.key}">
         <span class="top"><span class="icon">📝</span><strong>${round.title}</strong>${badge}</span>
@@ -121,7 +125,7 @@
       <button class="catalog-back" id="backGeptElementaryBtn">← 返回初級</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級　›　知識庫試題</div>
       <h2 class="catalog-title">請選擇回次</h2>
-      <p class="catalog-sub">第一回已可直接線上作答；第二回至第六回保留資料已收錄狀態，待逐回建置題目與詳解。</p>
+      <p class="catalog-sub">第一回完整 35 題已上線；第二回先依目前已取得資料上線 26 題，原書 p.12 的 Q7–15 尚缺，不臆造題目。其餘回次待逐回建置。</p>
       <div class="catalog-grid">
         ${GEPT_ELEMENTARY_ROUNDS.map(roundCard).join('')}
       </div>`);
@@ -137,7 +141,7 @@
 
     const oldHtml = button.innerHTML;
     button.disabled = true;
-    button.innerHTML = '<span class="top"><span class="icon">⏳</span><strong>載入第一回…</strong></span><span class="desc">正在準備題目與詳解</span>';
+    button.innerHTML = `<span class="top"><span class="icon">⏳</span><strong>載入${round.title}…</strong></span><span class="desc">正在準備題目與詳解</span>`;
 
     try {
       const response = await fetch(round.path, { cache: 'no-store' });
@@ -163,7 +167,7 @@
 
       window.startExam(key);
     } catch (error) {
-      alert(`第一回載入失敗：${error.message}`);
+      alert(`${round.title}載入失敗：${error.message}`);
       button.disabled = false;
       button.innerHTML = oldHtml;
     }
