@@ -179,6 +179,8 @@
         <button id="paperCanvasDoneBtn" type="button" style="border:0;border-radius:10px;padding:9px 15px;font-weight:800;background:#22c55e;color:#052e16">完成</button>
       </div>
       <div id="paperCanvasStage" style="position:relative;flex:1;min-height:0;padding:10px;background:#e2e8f0;touch-action:none;overflow:hidden">
+        <div id="paperCanvasDebugHud"
+             style="position:absolute;left:18px;top:18px;z-index:20;pointer-events:none;background:rgba(15,23,42,.82);color:#e2e8f0;border-radius:8px;padding:7px 9px;font:12px/1.35 monospace;white-space:pre;box-shadow:0 2px 8px rgba(0,0,0,.18)">waiting for input...</div>
         <canvas id="mathPaperCanvas" style="display:block;width:100%;height:100%;background:white;border-radius:8px;box-shadow:0 2px 12px rgba(15,23,42,.14);touch-action:none;user-select:none;-webkit-user-select:none"></canvas>
       </div>`;
     document.body.appendChild(overlay);
@@ -195,6 +197,18 @@
     let previousY = 0;
 
     let localHasInk = paperAnswerHasInk;
+
+    const debugHud = $('#paperCanvasDebugHud', overlay);
+
+    let debugWindowStart = performance.now();
+    let debugEventCount = 0;
+    let debugSampleCount = 0;
+    let debugDistanceTotal = 0;
+    let debugDistanceCount = 0;
+
+    let debugPointerType = '-';
+    let debugStreamType = '-';
+    let debugPressure = 0;
 
     function sizeCanvas() {
       const rect = stage.getBoundingClientRect();
@@ -237,6 +251,50 @@
       return { x: e.clientX - r.left, y: e.clientY - r.top };
     }
 
+    function updateDebugHud(e, samples) {
+      if (!debugHud) return;
+
+      debugPointerType = e.pointerType || '-';
+      debugStreamType = e.type || '-';
+
+      debugEventCount += 1;
+      debugSampleCount += samples.length;
+
+      const now = performance.now();
+      const elapsed = now - debugWindowStart;
+
+      if (elapsed < 500) return;
+
+      const hz =
+        elapsed > 0
+          ? (debugEventCount * 1000 / elapsed)
+          : 0;
+
+      const samplesPerEvent =
+        debugEventCount > 0
+          ? debugSampleCount / debugEventCount
+          : 0;
+
+      const avgDistance =
+        debugDistanceCount > 0
+          ? debugDistanceTotal / debugDistanceCount
+          : 0;
+
+      debugHud.textContent =
+        `pointer : ${debugPointerType}\n` +
+        `stream  : ${debugStreamType}\n` +
+        `Hz      : ${hz.toFixed(1)}\n` +
+        `samples : ${samplesPerEvent.toFixed(2)}/event\n` +
+        `avgDist : ${avgDistance.toFixed(2)} px\n` +
+        `pressure: ${debugPressure.toFixed(3)}`;
+
+      debugWindowStart = now;
+      debugEventCount = 0;
+      debugSampleCount = 0;
+      debugDistanceTotal = 0;
+      debugDistanceCount = 0;
+    }
+
     function drawPointerSamples(e) {
       if (!drawing || e.pointerId !== activePointerId) return;
 
@@ -251,12 +309,26 @@
 
       if (!samples || samples.length === 0) return;
 
+      debugPressure =
+        typeof e.pressure === 'number'
+          ? e.pressure
+          : 0;
+
+      updateDebugHud(e, samples);
+
       for (const sample of samples) {
         const p = pointFromEvent(sample);
 
         const dx = p.x - lastX;
         const dy = p.y - lastY;
         const distance = Math.hypot(dx, dy);
+
+        debugDistanceTotal += distance;
+        debugDistanceCount += 1;
+
+        if (typeof sample.pressure === 'number') {
+          debugPressure = sample.pressure;
+        }
 
         /*
          * Remove only very tiny capacitive noise.
@@ -314,6 +386,22 @@
 
       activePointerId = e.pointerId;
       drawing = true;
+
+      debugPointerType = e.pointerType || '-';
+      debugPressure =
+        typeof e.pressure === 'number'
+          ? e.pressure
+          : 0;
+
+      if (debugHud) {
+        debugHud.textContent =
+          `pointer : ${debugPointerType}\n` +
+          `stream  : starting...\n` +
+          `Hz      : measuring...\n` +
+          `samples : measuring...\n` +
+          `avgDist : measuring...\n` +
+          `pressure: ${debugPressure.toFixed(3)}`;
+      }
 
       canvas.setPointerCapture?.(e.pointerId);
 
