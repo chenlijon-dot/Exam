@@ -4,6 +4,7 @@
   const RECORDS_KEY = 'examRecords.v1';
   const TOKEN_KEY = 'examRecords.githubToken.session';
   const RECORD_REPO = 'chenlijon-dot/Exam-Record';
+  const ENGLISH_CACHE_PREFIX = 'examEnglishAi.cache.';
 
   const $ = (sel, root = document) => root.querySelector(sel);
 
@@ -218,6 +219,7 @@
   // ---------------- English GEPT AI translation analysis ----------------
 
   const englishInFlight = new Map();
+  const englishCompleted = new Map();
 
   function currentEnglishBank() {
     const ctx = window.examContextCurrent || {};
@@ -286,6 +288,33 @@
     return `en-${(h >>> 0).toString(16)}`;
   }
 
+  function readEnglishCache(key) {
+    if (englishCompleted.has(key)) return englishCompleted.get(key);
+    try {
+      const raw = sessionStorage.getItem(ENGLISH_CACHE_PREFIX + key);
+      if (!raw) return null;
+      const cached = JSON.parse(raw);
+      if (!cached?.result || cached.result.status !== 'completed') return null;
+      englishCompleted.set(key, cached);
+      return cached;
+    } catch {
+      return null;
+    }
+  }
+
+  function writeEnglishCache(key, payload, title, result) {
+    if (!result || result.status !== 'completed') return;
+    const cached = { key, payload, title, result, savedAt: new Date().toISOString() };
+    englishCompleted.set(key, cached);
+    try { sessionStorage.setItem(ENGLISH_CACHE_PREFIX + key, JSON.stringify(cached)); } catch {}
+  }
+
+  function clearEnglishCache(key) {
+    if (!key) return;
+    englishCompleted.delete(key);
+    try { sessionStorage.removeItem(ENGLISH_CACHE_PREFIX + key); } catch {}
+  }
+
   function injectEnglishStyles() {
     if ($('#englishAiStyles')) return;
     const style = document.createElement('style');
@@ -294,18 +323,20 @@
       .english-ai-btn{margin-top:10px;border:1px solid #c4b5fd;background:#f5f3ff;color:#6d28d9;border-radius:999px;padding:7px 11px;font-size:.82rem;font-weight:800;cursor:pointer}
       .english-ai-btn:hover{background:#ede9fe}.english-ai-btn:disabled{opacity:.6;cursor:wait}
       .english-ai-passage-btn{border:1px solid #c4b5fd;background:#f5f3ff;color:#6d28d9;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:800;cursor:pointer;white-space:nowrap}
-      #englishAiModal{position:fixed;inset:0;z-index:10020;background:rgba(15,23,42,.5);display:flex;align-items:center;justify-content:center;padding:18px}
+      #englishAiModal{position:fixed;inset:0;z-index:30050;background:rgba(15,23,42,.5);display:flex;align-items:center;justify-content:center;padding:18px}
       #englishAiModal.hidden{display:none}
       .english-ai-dialog{position:relative;width:min(720px,calc(100% - 24px));height:min(50vh,520px);min-height:230px;max-height:calc(100vh - 32px);background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.34);display:flex;flex-direction:column;overflow:hidden;will-change:transform}
-      .english-ai-head{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid #e2e8f0;background:#fafafa;cursor:grab;user-select:none;touch-action:none}
+      .english-ai-head{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid #e2e8f0;background:#fafafa;cursor:grab;user-select:none;touch-action:none}
       .english-ai-head.dragging{cursor:grabbing}.english-ai-title{font-weight:850;color:#5b21b6;flex:1;pointer-events:none}
-      .english-ai-close{border:0;background:#e2e8f0;color:#334155;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer}
+      .english-ai-reanalyze{border:1px solid #c4b5fd;background:#f5f3ff;color:#6d28d9;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:800;cursor:pointer;white-space:nowrap;touch-action:manipulation}
+      .english-ai-reanalyze:hover{background:#ede9fe}.english-ai-reanalyze:disabled{opacity:.55;cursor:wait}
+      .english-ai-close{border:0;background:#e2e8f0;color:#334155;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer;touch-action:manipulation}
       .english-ai-body{flex:1;min-height:0;padding:18px 20px 24px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;line-height:1.8;color:#1f2937}
       .english-ai-status{color:#64748b;font-size:.9rem;margin-bottom:10px}.english-ai-result{white-space:pre-wrap}
       .english-ai-resize-handle{position:absolute;left:50%;bottom:3px;transform:translateX(-50%);width:86px;height:16px;z-index:3;cursor:ns-resize;touch-action:none;display:flex;align-items:center;justify-content:center}
       .english-ai-resize-handle::before{content:'';width:52px;height:5px;border-radius:999px;background:#cbd5e1;box-shadow:0 0 0 1px rgba(148,163,184,.12)}
       .english-ai-resize-handle:hover::before,.english-ai-resize-handle.resizing::before{background:#8b5cf6}
-      @media(max-width:620px){.english-ai-dialog{width:calc(100% - 16px);height:50vh;min-height:210px;max-height:calc(100vh - 20px)}.english-ai-body{padding:15px 16px 24px}.english-ai-passage-btn{font-size:.72rem;padding:5px 8px}.english-ai-resize-handle{width:110px;height:22px}}
+      @media(max-width:620px){.english-ai-dialog{width:calc(100% - 16px);height:50vh;min-height:210px;max-height:calc(100vh - 20px)}.english-ai-body{padding:15px 16px 24px}.english-ai-passage-btn,.english-ai-reanalyze{font-size:.7rem;padding:5px 8px}.english-ai-resize-handle{width:110px;height:22px}}
     `;
     document.head.appendChild(style);
   }
@@ -329,7 +360,7 @@
     };
     head.addEventListener('pointerdown', e => {
       if (e.button !== undefined && e.button !== 0) return;
-      if (e.target.closest('.english-ai-close')) return;
+      if (e.target.closest('.english-ai-close,.english-ai-reanalyze')) return;
       pointerId=e.pointerId; startX=e.clientX; startY=e.clientY; baseX=x; baseY=y;
       head.classList.add('dragging'); head.setPointerCapture?.(pointerId); e.preventDefault();
     });
@@ -413,6 +444,7 @@
       <div class="english-ai-dialog" role="dialog" aria-modal="true" aria-labelledby="englishAiTitle">
         <div class="english-ai-head" title="可用滑鼠或觸控拖曳移動">
           <div class="english-ai-title" id="englishAiTitle">🤖 AI 翻譯分析</div>
+          <button type="button" class="english-ai-reanalyze" id="englishAiReanalyzeBtn" aria-label="重新進行 AI 翻譯分析">↻ 重新分析</button>
           <button type="button" class="english-ai-close" aria-label="關閉 AI 翻譯分析">×</button>
         </div>
         <div class="english-ai-body">
@@ -424,61 +456,109 @@
     document.body.appendChild(modal);
     makeEnglishAiDraggable(modal);
     makeEnglishAiResizable(modal);
+
     const close = () => {
-      modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true');
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden','true');
       modal.resetEnglishAiPosition?.();
-      modal.resetEnglishAiSize?.();
     };
+
     $('.english-ai-close',modal)?.addEventListener('click',close);
+    $('#englishAiReanalyzeBtn',modal)?.addEventListener('pointerdown',e=>e.stopPropagation());
+    $('#englishAiReanalyzeBtn',modal)?.addEventListener('click',e=>{
+      e.stopPropagation();
+      const payload = modal._englishPayload;
+      const title = modal._englishTitle;
+      if (!payload) return;
+      runEnglishAnalysis(payload, title, null, {force:true});
+    });
     modal.addEventListener('click',e=>{if(e.target===modal)close();});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))close();});
     return modal;
   }
 
-  async function runEnglishAnalysis(payload, title, triggerButton) {
+  function showEnglishResult(modal, cached) {
+    const status = $('#englishAiStatus',modal);
+    const resultBox = $('#englishAiResult',modal);
+    const result = cached?.result || cached;
+    if (result?.status === 'completed') {
+      status.textContent = `分析完成｜${result.model || 'Gemini'}｜已保留結果`;
+      resultBox.textContent = result.analysis || '';
+    } else {
+      status.textContent = '分析失敗';
+      resultBox.textContent = result?.error || '未知錯誤';
+    }
+  }
+
+  async function runEnglishAnalysis(payload, title, triggerButton, options = {}) {
+    const force = options.force === true;
+    const modal = ensureEnglishAiModal();
+    const key = englishPayloadKey(payload);
+
+    modal._englishPayload = payload;
+    modal._englishTitle = title || '🤖 AI 翻譯分析';
+    modal._englishKey = key;
+    modal.style.zIndex = '30050';
+    modal.resetEnglishAiPosition?.();
+    $('#englishAiTitle',modal).textContent = modal._englishTitle;
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden','false');
+
+    const status = $('#englishAiStatus',modal);
+    const resultBox = $('#englishAiResult',modal);
+    const reanalyzeBtn = $('#englishAiReanalyzeBtn',modal);
+
+    if (!force) {
+      const cached = readEnglishCache(key);
+      if (cached) {
+        showEnglishResult(modal, cached);
+        return;
+      }
+    }
+
     if (!getToken()) {
-      alert('請先到「GitHub 同步設定」輸入 Token。英文 AI 翻譯分析會沿用目前的私人 Exam-Record + Gemini 流程。');
+      status.textContent = '尚無既有分析結果。';
+      resultBox.textContent = '請先到「GitHub 同步設定」輸入 Token，才能建立新的英文 AI 翻譯分析。';
       return;
     }
 
-    const modal = ensureEnglishAiModal();
-    modal.resetEnglishAiPosition?.();
-    $('#englishAiTitle',modal).textContent = title || '🤖 AI 翻譯分析';
-    const status = $('#englishAiStatus',modal);
-    const resultBox = $('#englishAiResult',modal);
-    modal.classList.remove('hidden'); modal.setAttribute('aria-hidden','false');
-    status.textContent = '準備送出翻譯分析…';
-    resultBox.textContent = '';
-
-    const key = englishPayloadKey(payload);
+    if (force) clearEnglishCache(key);
     if (triggerButton) triggerButton.disabled = true;
+    if (reanalyzeBtn) reanalyzeBtn.disabled = true;
+    status.textContent = force ? '正在重新送出翻譯分析…' : '準備送出翻譯分析…';
+    resultBox.textContent = '';
 
     try {
       let task = englishInFlight.get(key);
-      if (!task) {
+      if (!task || force) {
         task = (async () => {
           const id = await createEnglishAnalysisRequest(payload);
           return waitForEnglishAnalysis(id,status);
         })();
         englishInFlight.set(key,task);
-        task.finally(() => englishInFlight.delete(key));
+        task.finally(() => {
+          if (englishInFlight.get(key) === task) englishInFlight.delete(key);
+        });
       } else {
         status.textContent = '同一內容已在分析中，沿用原本請求，不重複送出。';
       }
 
       const result = await task;
       if (result.status === 'completed') {
-        status.textContent = `分析完成｜${result.model || 'Gemini'}`;
-        resultBox.textContent = result.analysis || '';
-      } else {
+        writeEnglishCache(key, payload, modal._englishTitle, result);
+        if (modal._englishKey === key) showEnglishResult(modal, {result});
+      } else if (modal._englishKey === key) {
         status.textContent = '分析失敗';
         resultBox.textContent = result.error || '未知錯誤';
       }
     } catch (e) {
-      status.textContent = '無法完成分析';
-      resultBox.textContent = e.message;
+      if (modal._englishKey === key) {
+        status.textContent = '無法完成分析';
+        resultBox.textContent = e.message;
+      }
     } finally {
       if (triggerButton) triggerButton.disabled = false;
+      if (reanalyzeBtn) reanalyzeBtn.disabled = false;
     }
   }
 
