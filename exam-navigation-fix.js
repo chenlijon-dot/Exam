@@ -21,6 +21,15 @@
     document.head.appendChild(script);
   }
 
+  function loadFirebaseLearningDashboard() {
+    if (document.getElementById('firebaseLearningDashboardModule')) return;
+    const script = document.createElement('script');
+    script.id = 'firebaseLearningDashboardModule';
+    script.src = `firebase-learning-dashboard.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   // index.html still registers the original exam control handlers with
   // addEventListener(). exam-runtime-flex.js now owns these controls through
   // the onclick property. If both remain active, a single tap on「顯示詳解」
@@ -160,6 +169,7 @@
 
   loadFirebaseAuthGate();
   loadFirebaseFirestoreSync();
+  loadFirebaseLearningDashboard();
   detachLegacyExamControlHandlers();
   loadScienceBankMenuModule();
   loadEnglishGeptMenuModule();
