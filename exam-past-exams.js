@@ -66,7 +66,7 @@
       <div class="catalog-grid">
         ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次、第二次皆已收錄國文與數學。'})}
         ${card({id:'bct91Btn',icon:'🗓️',title:'91 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、原卷附圖與詳解。'})}
-        ${card({id:'bct92Btn',icon:'🗓️',title:'92 年度',badge:'建置中',desc:'第一次數學科已建立題目、答案、原卷附圖與詳解。'})}
+        ${card({id:'bct92Btn',icon:'🗓️',title:'92 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、答案、原卷附圖與詳解。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
     $('#bct91Btn')?.addEventListener('click', showBct91Sessions);
@@ -109,9 +109,10 @@
       <h2 class="catalog-title">請選擇次別</h2>
       <div class="catalog-grid">
         ${card({id:'bct92FirstBtn',icon:'1️⃣',title:'第一次',badge:'已收錄',desc:'92 年度第一次基測；數學科題目、答案、原卷附圖與詳解已建立。'})}
-        ${card({id:'bct92SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'92 年度第二次基測尚未匯入。',disabled:true})}
+        ${card({id:'bct92SecondBtn',icon:'2️⃣',title:'第二次',badge:'已收錄',desc:'92 年度第二次基測；數學科題目、答案、原卷附圖與詳解已建立。'})}
       </div>`;
     $('#bct92FirstBtn')?.addEventListener('click', showBct92FirstSubjects);
+    $('#bct92SecondBtn')?.addEventListener('click', showBct92SecondSubjects);
   }
 
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
@@ -227,6 +228,27 @@
     }));
   }
 
+  function showBct92SecondSubjects() {
+    setHeader('92 年度第二次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct92SecondBtn','返回次別',showBct92Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　92 年度　›　第二次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct92SecondChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct92SecondEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct92SecondMathBtn',icon:'📐',title:'數學科',badge:'31 題',desc:'31 題原題、答案、原卷附圖與逐題詳解已建立。'})}
+        ${card({id:'bct92SecondScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct92SecondSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct92SecondMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct92SecondMathBtn',
+      path:'past-exams/bct/92/second/math.json',
+      explanationsPath:'past-exams/bct/92/second/math-explanations.json',
+      onBack:showBct92SecondSubjects
+    }));
+  }
+
   async function loadCompanionExplanations(path, data) {
     if (!path) return;
     try {
@@ -281,6 +303,7 @@
   window.showBct91FirstSubjects = showBct91FirstSubjects;
   window.showBct91SecondSubjects = showBct91SecondSubjects;
   window.showBct92FirstSubjects = showBct92FirstSubjects;
+  window.showBct92SecondSubjects = showBct92SecondSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
