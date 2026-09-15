@@ -7,7 +7,7 @@
   const GEPT_ELEMENTARY_ROUNDS = [
     { key: '01', title: '第一回', pages: 'p.1–9', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-01.json' },
     { key: '02', title: '第二回', pages: 'p.11–18', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-02.json', supplementPath: 'chapter-bank/english/gept/elementary/reading/round-02-q07-15.json' },
-    { key: '03', title: '第三回', pages: 'p.19–26', ready: false, total: 35 },
+    { key: '03', title: '第三回', pages: 'p.19–26', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-03.json' },
     { key: '04', title: '第四回', pages: 'p.27–34', ready: false, total: 35 },
     { key: '05', title: '第五回', pages: 'p.35–42', ready: false, total: 35 },
     { key: '06', title: '第六回', pages: 'p.43–51', ready: false, total: 35 }
@@ -122,7 +122,7 @@
       <button class="catalog-back" id="backGeptElementaryBtn">← 返回初級</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級　›　知識庫試題</div>
       <h2 class="catalog-title">請選擇回次</h2>
-      <p class="catalog-sub">第一回與第二回完整 35 題均已上線；其餘回次待逐回建置題目與詳解。</p>
+      <p class="catalog-sub">第一回至第三回完整 35 題均已上線；第四回至第六回待逐回建置題目與詳解。</p>
       <div class="catalog-grid">
         ${GEPT_ELEMENTARY_ROUNDS.map(roundCard).join('')}
       </div>`);
