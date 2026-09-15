@@ -54,6 +54,554 @@
   let paperAnswerDataUrl = '';
   let paperAnswerHasInk = false;
 
+  const PAPER_RECORD_REPO =
+    'chenlijon-dot/Exam-Record';
+
+  const PAPER_TOKEN_KEY =
+    'examRecords.githubToken.session';
+
+
+  function getPaperGithubToken() {
+    return (
+      sessionStorage.getItem(PAPER_TOKEN_KEY) ||
+      ''
+    );
+  }
+
+
+  function paperUtf8ToBase64(text) {
+    const bytes =
+      new TextEncoder().encode(text);
+
+    let binary = '';
+
+    bytes.forEach(
+      b => binary += String.fromCharCode(b)
+    );
+
+    return btoa(binary);
+  }
+
+
+  function paperBase64ToUtf8(text) {
+    const binary =
+      atob(
+        String(text || '')
+          .replace(/\n/g, '')
+      );
+
+    const bytes =
+      Uint8Array.from(
+        binary,
+        c => c.charCodeAt(0)
+      );
+
+    return new TextDecoder().decode(bytes);
+  }
+
+
+  function paperEscapeHtml(value) {
+    return String(value ?? '')
+      .replace(
+        /[&<>"']/g,
+        ch => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        })[ch]
+      );
+  }
+
+
+  async function paperGithubApi(
+    path,
+    options = {}
+  ) {
+    const token =
+      getPaperGithubToken();
+
+    if (!token) {
+      throw new Error(
+        '請先到「GitHub 同步設定」輸入 Token。'
+      );
+    }
+
+    const res =
+      await fetch(
+        `https://api.github.com${path}`,
+        {
+          ...options,
+
+          headers: {
+            'Accept':
+              'application/vnd.github+json',
+
+            'X-GitHub-Api-Version':
+              '2022-11-28',
+
+            'Authorization':
+              `Bearer ${token}`,
+
+            ...(options.headers || {})
+          }
+        }
+      );
+
+    if (!res.ok) {
+      let detail = '';
+
+      try {
+        detail =
+          (await res.json()).message ||
+          '';
+      } catch {}
+
+      const err =
+        new Error(
+          `GitHub ${res.status}` +
+          (
+            detail
+              ? `：${detail}`
+              : ''
+          )
+        );
+
+      err.status = res.status;
+
+      throw err;
+    }
+
+    return (
+      res.status === 204
+        ? null
+        : res.json()
+    );
+  }
+
+
+  function mathHandwritingRequestId() {
+    const d = new Date();
+
+    const pad =
+      n => String(n).padStart(2, '0');
+
+    return (
+      `${d.getFullYear()}` +
+      `${pad(d.getMonth() + 1)}` +
+      `${pad(d.getDate())}-` +
+      `${pad(d.getHours())}` +
+      `${pad(d.getMinutes())}` +
+      `${pad(d.getSeconds())}-` +
+      Math.random()
+        .toString(36)
+        .slice(2, 7)
+    );
+  }
+
+
+  async function uploadMathHandwritingRequest(
+    dataUrl
+  ) {
+    const token =
+      getPaperGithubToken();
+
+    if (!token) {
+      throw new Error(
+        '請先到「GitHub 同步設定」輸入 Token。'
+      );
+    }
+
+    const match =
+      String(dataUrl || '').match(
+        /^data:image\/png;base64,(.+)$/s
+      );
+
+    if (!match) {
+      throw new Error(
+        '手寫圖片格式不是 PNG。'
+      );
+    }
+
+    const imageBase64 =
+      match[1].replace(/\s/g, '');
+
+    const id =
+      mathHandwritingRequestId();
+
+    const imagePath =
+      `math-handwriting-images/${id}.png`;
+
+    /*
+     * First commit the actual handwriting PNG.
+     */
+    await paperGithubApi(
+      `/repos/${PAPER_RECORD_REPO}/contents/${imagePath}`,
+      {
+        method: 'PUT',
+
+        headers: {
+          'Content-Type':
+            'application/json'
+        },
+
+        body: JSON.stringify({
+          message:
+            `Save math handwriting ${id}`,
+
+          content:
+            imageBase64,
+
+          branch:
+            'main'
+        })
+      }
+    );
+
+
+    /*
+     * Then create the grading request.
+     * This second commit triggers the Gemini workflow.
+     */
+    const request = {
+      schemaVersion: 1,
+
+      id,
+
+      requestedAt:
+        new Date().toISOString(),
+
+      subject:
+        '數學',
+
+      semester:
+        '七年級上學期',
+
+      unit:
+        '正負數的加減',
+
+      questionId:
+        'math-paper-test-001',
+
+      question:
+        '(-8) + (+13) = ?',
+
+      expectedAnswer:
+        '5',
+
+      gradingInstructions:
+        '請判斷最後答案是否為 5，並檢查可辨識的計算過程是否有明顯數學錯誤。學生可以使用任何數學上等價的正確列式。',
+
+      imagePath,
+
+      source:
+        nativeInkBridgeAvailable()
+          ? 'android-native-ink'
+          : 'web-canvas'
+    };
+
+    const requestPath =
+      `math-handwriting-requests/${id}.json`;
+
+    await paperGithubApi(
+      `/repos/${PAPER_RECORD_REPO}/contents/${requestPath}`,
+      {
+        method: 'PUT',
+
+        headers: {
+          'Content-Type':
+            'application/json'
+        },
+
+        body: JSON.stringify({
+          message:
+            `Request Gemini math handwriting grading ${id}`,
+
+          content:
+            paperUtf8ToBase64(
+              JSON.stringify(
+                request,
+                null,
+                2
+              )
+            ),
+
+          branch:
+            'main'
+        })
+      }
+    );
+
+    return id;
+  }
+
+
+  async function fetchMathHandwritingResult(
+    id
+  ) {
+    try {
+      const data =
+        await paperGithubApi(
+          `/repos/${PAPER_RECORD_REPO}/contents/` +
+          `math-handwriting-results/${id}.json?ref=main`
+        );
+
+      const text =
+        paperBase64ToUtf8(
+          data.content || ''
+        );
+
+      return JSON.parse(text);
+
+    } catch (e) {
+
+      if (e.status === 404) {
+        return null;
+      }
+
+      throw e;
+    }
+  }
+
+
+  function paperSleep(ms) {
+    return new Promise(
+      resolve => setTimeout(resolve, ms)
+    );
+  }
+
+
+  async function waitForMathHandwritingResult(
+    id,
+    statusEl
+  ) {
+    /*
+     * Up to roughly 2 minutes.
+     */
+    for (
+      let i = 0;
+      i < 40;
+      i += 1
+    ) {
+      if (statusEl) {
+        statusEl.textContent =
+          i === 0
+            ? 'Gemini 正在判讀手寫作答…'
+            : `Gemini 正在判讀手寫作答… ${i * 3} 秒`;
+      }
+
+      const result =
+        await fetchMathHandwritingResult(
+          id
+        );
+
+      if (result) {
+        return result;
+      }
+
+      await paperSleep(3000);
+    }
+
+    throw new Error(
+      'Gemini 尚未完成判題。GitHub Actions 可能仍在執行，請稍後再按一次交卷。'
+    );
+  }
+
+
+  function renderMathHandwritingResult(
+    result,
+    box
+  ) {
+    if (!box) return;
+
+    if (
+      !result ||
+      result.status !== 'completed'
+    ) {
+      box.innerHTML =
+        `<div style="margin-top:12px;padding:13px 14px;border-radius:13px;border:1px solid #fed7aa;background:#fff7ed;color:#9a3412">` +
+        `AI 判題失敗：${paperEscapeHtml(result?.error || '未知錯誤')}` +
+        `</div>`;
+
+      return;
+    }
+
+    const verdict =
+      result.verdict || 'unclear';
+
+    const config = {
+      correct: {
+        title: '✓ 作答正確',
+        border: '#86efac',
+        bg: '#f0fdf4',
+        ink: '#166534'
+      },
+
+      incorrect: {
+        title: '✗ 作答需要修正',
+        border: '#fca5a5',
+        bg: '#fef2f2',
+        ink: '#991b1b'
+      },
+
+      unclear: {
+        title: '？AI 無法可靠判讀',
+        border: '#fde68a',
+        bg: '#fffbeb',
+        ink: '#92400e'
+      }
+    }[verdict] || {
+      title: '？AI 無法可靠判讀',
+      border: '#fde68a',
+      bg: '#fffbeb',
+      ink: '#92400e'
+    };
+
+    const answer =
+      paperEscapeHtml(
+        result.recognizedAnswer || ''
+      );
+
+    const work =
+      paperEscapeHtml(
+        result.recognizedWork || ''
+      );
+
+    const feedback =
+      paperEscapeHtml(
+        result.feedback || ''
+      );
+
+    const confidence =
+      typeof result.confidence ===
+        'number'
+        ? `${Math.round(
+            result.confidence * 100
+          )}%`
+        : '';
+
+    box.innerHTML = `
+      <div style="
+        margin-top:14px;
+        padding:15px;
+        border-radius:14px;
+        border:1px solid ${config.border};
+        background:${config.bg};
+        color:${config.ink}
+      ">
+        <div style="
+          font-size:1.08rem;
+          font-weight:900;
+          margin-bottom:8px
+        ">
+          ${config.title}
+        </div>
+
+        ${
+          answer
+            ? `<div style="margin:5px 0"><b>AI 辨識答案：</b>${answer}</div>`
+            : ''
+        }
+
+        ${
+          work
+            ? `<div style="margin:5px 0"><b>AI 辨識過程：</b>${work}</div>`
+            : ''
+        }
+
+        ${
+          feedback
+            ? `<div style="margin-top:9px;line-height:1.7">${feedback}</div>`
+            : ''
+        }
+
+        ${
+          confidence
+            ? `<div style="font-size:.78rem;opacity:.68;margin-top:8px">判讀信心：${confidence}　模型：${paperEscapeHtml(result.model || 'Gemini')}</div>`
+            : ''
+        }
+      </div>`;
+  }
+
+
+  async function runMathHandwritingAnalysis(
+    button,
+    statusEl,
+    resultBox
+  ) {
+    if (!paperAnswerDataUrl) {
+      return;
+    }
+
+    if (!getPaperGithubToken()) {
+      alert(
+        '請先到「GitHub 同步設定」輸入 Token，再使用 Gemini 判題。'
+      );
+
+      return;
+    }
+
+    const oldText =
+      button.textContent;
+
+    button.disabled = true;
+    button.textContent =
+      'AI 判題中…';
+
+    if (resultBox) {
+      resultBox.innerHTML = '';
+    }
+
+    if (statusEl) {
+      statusEl.textContent =
+        '正在上傳手寫作答…';
+    }
+
+    try {
+      const id =
+        await uploadMathHandwritingRequest(
+          paperAnswerDataUrl
+        );
+
+      if (statusEl) {
+        statusEl.textContent =
+          '手寫作答已送出，等待 Gemini 判題…';
+      }
+
+      const result =
+        await waitForMathHandwritingResult(
+          id,
+          statusEl
+        );
+
+      if (statusEl) {
+        statusEl.textContent =
+          result.status === 'completed'
+            ? 'Gemini 判題完成。'
+            : 'Gemini 判題程序完成，但發生錯誤。';
+      }
+
+      renderMathHandwritingResult(
+        result,
+        resultBox
+      );
+
+    } catch (e) {
+
+      if (statusEl) {
+        statusEl.textContent =
+          `無法完成 AI 判題：${e.message}`;
+      }
+
+    } finally {
+
+      button.disabled = false;
+      button.textContent =
+        oldText;
+    }
+  }
+
   function setHeader(title, sub) {
     const titleEl = $('#catalogHeaderTitle');
     const subEl = $('#catalogHeaderSub');
@@ -103,7 +651,7 @@
       <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
       <div class="catalog-path">數學　›　紙筆作答</div>
       <h2 class="catalog-title">紙筆作答測試</h2>
-      <p class="catalog-sub">這一版先測試平板手寫、完成後產生作答縮圖。直尺、畫圓、橡皮擦與 Gemini 判題會沿用這個畫布架構繼續加入。</p>
+      <p class="catalog-sub">使用原生手寫畫布完成作答後，可將題目與手寫答案送給 Gemini 判題。</p>
 
       <div style="background:#fff;border:1px solid #dfe5ee;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 4px 14px rgba(15,23,42,.04)">
         <div style="display:flex;align-items:flex-start;gap:10px">
@@ -125,18 +673,46 @@
       </div>
 
       <div style="position:sticky;bottom:0;background:rgba(246,248,251,.94);backdrop-filter:blur(10px);padding:12px 0 4px;display:flex;gap:10px;z-index:5">
-        <button id="submitPaperExamBtn" ${paperAnswerDataUrl ? '' : 'disabled'} style="border:0;border-radius:12px;padding:12px 18px;font-size:1rem;font-weight:800;cursor:${paperAnswerDataUrl ? 'pointer' : 'not-allowed'};background:${paperAnswerDataUrl ? '#15803d' : '#cbd5e1'};color:white;flex:1">交卷</button>
+        <button id="submitPaperExamBtn" ${paperAnswerDataUrl ? '' : 'disabled'} style="border:0;border-radius:12px;padding:12px 18px;font-size:1rem;font-weight:800;cursor:${paperAnswerDataUrl ? 'pointer' : 'not-allowed'};background:${paperAnswerDataUrl ? '#15803d' : '#cbd5e1'};color:white;flex:1">🤖 交卷並由 Gemini 判題</button>
       </div>
-      <div id="paperSubmitStatus" style="font-size:.9rem;color:#64748b;margin-top:8px"></div>`;
+
+      <div
+        id="paperSubmitStatus"
+        style="font-size:.9rem;color:#64748b;margin-top:8px"
+      ></div>
+
+      <div id="paperAiResult"></div>`;
 
     $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
     $('#openMathPaperCanvasBtn')?.addEventListener('click', openPaperCanvas);
     $('#paperAnswerImageBtn')?.addEventListener('click', openPaperCanvas);
-    $('#submitPaperExamBtn')?.addEventListener('click', () => {
-      const status = $('#paperSubmitStatus');
-      if (!paperAnswerDataUrl) return;
-      if (status) status.textContent = '✓ 已收到手寫作答。下一階段會把這張作答圖連同題目一起送給 Gemini 判題。';
-    });
+    $('#submitPaperExamBtn')?.addEventListener(
+      'click',
+      () => {
+
+        const button =
+          $('#submitPaperExamBtn');
+
+        const status =
+          $('#paperSubmitStatus');
+
+        const resultBox =
+          $('#paperAiResult');
+
+        if (
+          !button ||
+          !paperAnswerDataUrl
+        ) {
+          return;
+        }
+
+        runMathHandwritingAnalysis(
+          button,
+          status,
+          resultBox
+        );
+      }
+    );
   }
 
   function setNativeDrawingMode(enabled) {
