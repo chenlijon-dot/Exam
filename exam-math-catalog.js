@@ -50,8 +50,6 @@
   ];
 
   const $ = (sel, root = document) => root.querySelector(sel);
-  let homeSnapshot = null;
-  let homeHeader = null;
 
   function setHeader(title, sub) {
     const titleEl = $('#catalogHeaderTitle');
@@ -60,26 +58,8 @@
     if (subEl) subEl.textContent = sub;
   }
 
-  function rememberHome() {
-    const content = $('#catalogContent');
-    if (!content) return;
-    homeSnapshot = content.innerHTML;
-    homeHeader = {
-      title: $('#catalogHeaderTitle')?.textContent || '國中題庫',
-      sub: $('#catalogHeaderSub')?.textContent || '先選科目，再選學期與章節'
-    };
-  }
-
   function restoreHome() {
-    const content = $('#catalogContent');
-    if (!content || !homeSnapshot) {
-      location.reload();
-      return;
-    }
-    content.innerHTML = homeSnapshot;
-    setHeader(homeHeader?.title || '國中題庫', homeHeader?.sub || '先選科目，再選學期與章節');
-    document.title = '國中全科學習題庫';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    location.reload();
   }
 
   function showMathSemesters() {
@@ -187,10 +167,7 @@
       sub.textContent = '目前國文、英文、數學與自然已建立科目入口；教材與題庫內容持續擴充。';
     }
 
-    mathButton.addEventListener('click', () => {
-      rememberHome();
-      showMathSemesters();
-    });
+    mathButton.addEventListener('click', showMathSemesters);
   }
 
   function init() {
