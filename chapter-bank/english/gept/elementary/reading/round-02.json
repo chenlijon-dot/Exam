@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-02",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第二回",
+    "subtitle": "目前 26 題｜原始資料缺 Q7–15｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第二回",
+    "difficulty": "english-gept-elementary-reading-round-02",
+    "difficultyLabel": "第二回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceNote": "題目依使用者提供之《國中英文 全民英檢攻略 全》第二回實體書照片校正版建立。原書 p.12 尚未提供，因此 Q7–15 不臆造；目前收錄 Q1–6、Q16–35，共 26 題。題組文章只在題組第一題顯示一次，後續題目共用同一題幹。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "第一部分：詞彙和結構",
+      "q": "I don’t like the _____ of the shoes. Do you have some other latest pairs?",
+      "o": ["size", "style", "color", "price"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-clothing"],
+      "e": "答案是 (B) style。後句問有沒有其他『最新款』，重點是在鞋子的款式，因此用 style。size 是尺寸、color 是顏色、price 是價格，都和 latest pairs 的語意連結較弱。"
+    },
+    {
+      "number": 2,
+      "q": "Teresa hoped to paint the _____ yellow, but I’d like it white.",
+      "o": ["ceiling", "cereal", "floor", "sheet"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-home"],
+      "e": "答案是 (A) ceiling。paint the ceiling 表示『粉刷天花板』。cereal 是穀片；floor 雖也可粉刷，但題意中的 yellow / white 搭配室內裝潢時 ceiling 最自然；sheet 是床單或薄片。"
+    },
+    {
+      "number": 3,
+      "q": "Dad _____ a new clock on the wall — looking fashionable.",
+      "o": ["heated", "hung", "hid", "held"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-irregular-verb", "english-gept-elementary-vocabulary-home"],
+      "e": "答案是 (B) hung。hang a clock on the wall 是『把時鐘掛在牆上』；hang 的過去式與過去分詞在此是 hung。heated 是加熱、hid 是藏起來、held 是拿著。"
+    },
+    {
+      "number": 4,
+      "q": "Treat others _____, and you will win respect from them.",
+      "o": ["positively", "rapidly", "politely", "rudely"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-adverb", "english-gept-elementary-vocabulary-manners"],
+      "e": "答案是 (C) politely。要獲得別人的尊重，就應該『有禮貌地』對待別人。rudely 是粗魯地，與句意相反；rapidly 是快速地；positively 是正面地。"
+    },
+    {
+      "number": 5,
+      "q": "Our boss wanted us to be _____, so we’d better hurry up.",
+      "o": ["on time", "out of time", "in time", "not in time"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrase-time"],
+      "e": "答案是 (A) on time，表示『準時』。老闆要大家準時，所以才說最好快一點。in time 是『及時、在來得及之前』，語意不同。"
+    },
+    {
+      "number": 6,
+      "q": "The advice John gave is _____. Let’s try another way.",
+      "o": ["mean", "helpful", "kind", "useless"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-adjective"],
+      "e": "答案是 (D) useless。既然接著說『我們試別的方法吧』，表示 John 的建議沒有用。helpful 與語意相反；mean 和 kind 通常用來形容人或態度。"
+    },
+    {
+      "number": 16,
+      "section": "第二部分：段落填空",
+      "groupId": "round02-cloze-16-20",
+      "introLabel": "Questions 16–20｜MRT 月台觀察",
+      "intro": "While waiting for the MRT train at 6:50 as usual, Kelly found __16__ all the others (except her) were busy with their own __17__. One girl looking like a college student was texting on her smartphone. She was paying so much __18__ that she didn’t notice Kelly was looking at her.\n\nA man was reading the morning papers. He was turning the pages quickly, so Kelly thought he was only skimming. An old woman looked __19__ — it was her first time to take the MRT in Taipei. When the train __20__ came, Kelly told the old woman just to take the same train with her.",
+      "q": "第 16 空應填入哪一個選項？",
+      "o": ["how", "what", "whether", "that"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-noun-clause"],
+      "e": "答案是 (D) that。find 後面接一個完整陳述句作受詞：Kelly found that all the others were busy...，that 引導名詞子句。how / what / whether 都不符合後面完整句子的語意。"
+    },
+    {
+      "number": 17,
+      "groupId": "round02-cloze-16-20",
+      "q": "第 17 空應填入哪一個選項？",
+      "o": ["cellphones", "activities", "attendants", "exercises"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-context-vocabulary"],
+      "e": "答案是 (B) activities。後文列出傳簡訊、看報紙等不同事情，因此 everyone was busy with their own activities 最能概括『各忙各的活動』。"
+    },
+    {
+      "number": 18,
+      "groupId": "round02-cloze-16-20",
+      "q": "第 18 空應填入哪一個選項？",
+      "o": ["bills", "decision", "information", "attention"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-collocation"],
+      "e": "答案是 (D) attention。pay attention 是固定搭配『注意』；pay so much attention 表示她非常專注於手機，以致沒發現 Kelly 在看她。"
+    },
+    {
+      "number": 19,
+      "groupId": "round02-cloze-16-20",
+      "q": "第 19 空應填入哪一個選項？",
+      "o": ["worriedly", "happily", "worried", "happy"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-linking-verb-adjective"],
+      "e": "答案是 (C) worried。look 在這裡是連綴動詞，後面要接形容詞描述主詞狀態；她第一次搭台北捷運，看起來擔心，因此用 worried，而不是副詞 worriedly。"
+    },
+    {
+      "number": 20,
+      "groupId": "round02-cloze-16-20",
+      "q": "第 20 空應填入哪一個選項？",
+      "o": ["finally", "shortly", "hardly", "lately"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-context-adverb"],
+      "e": "答案是 (A) finally。前面一直在等車，後來『終於』等到捷運進站，finally 最符合時間順序。shortly 是不久、hardly 是幾乎不、lately 是最近。"
+    },
+    {
+      "number": 21,
+      "groupId": "round02-cloze-21-25",
+      "introLabel": "Questions 21–25｜星空與星座由來",
+      "intro": "When we look __21__ at the large sky above, we can usually see stars and the moon. Sometimes we can even see the comets or showers of shooting stars __22__ fast across the night sky.\n\nIn ancient times, people believed there is “something” alive out there, beyond the sky and our knowledge. So some people __23__ stories and fairy tales, trying to explain the unknown happening in the night sky __24__ they could not understand. They searched for patterns in the sky, believing “something” is affecting our life and __25__ by some means. This was how star signs came about.",
+      "q": "第 21 空應填入哪一個選項？",
+      "o": ["up", "forward", "for", "over"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrasal-verb"],
+      "e": "答案是 (A) up。look up 表示『抬頭看』；看到上方天空、星星與月亮，語意正好吻合。"
+    },
+    {
+      "number": 22,
+      "groupId": "round02-cloze-21-25",
+      "q": "第 22 空應填入哪一個選項？",
+      "o": ["were moving", "to move", "move", "moved"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-perception-verb"],
+      "e": "答案是 (C) move。see + 受詞 + 原形動詞，可表示看見某動作的完整過程，因此 see ... shooting stars move fast across the night sky 最合適。"
+    },
+    {
+      "number": 23,
+      "groupId": "round02-cloze-21-25",
+      "q": "第 23 空應填入哪一個選項？",
+      "o": ["made sure", "increased", "took over", "created"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-context-vocabulary"],
+      "e": "答案是 (D) created。古人為了解釋未知的天象而『創造』故事與童話。made sure 是確認；increased 是增加；took over 是接管。"
+    },
+    {
+      "number": 24,
+      "groupId": "round02-cloze-21-25",
+      "q": "第 24 空應填入哪一個選項？",
+      "o": ["that", "why", "what", "where"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-relative-clause"],
+      "e": "答案是 (A) that。that 引導關係子句，修飾前面的 unknown happening(s)：『他們無法理解的未知天象』。其餘選項不能在此直接修飾前面的名詞。"
+    },
+    {
+      "number": 25,
+      "groupId": "round02-cloze-21-25",
+      "q": "第 25 空應填入哪一個選項？",
+      "o": ["failure", "fortune", "manners", "machines"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-context-vocabulary"],
+      "e": "答案是 (B) fortune。星座信仰常被認為會影響人的 life and fortune，也就是『生活與運勢』。failure 是失敗；manners 是禮貌；machines 是機器。"
+    },
+    {
+      "number": 26,
+      "section": "第三部分：閱讀理解",
+      "groupId": "round02-reading-26-27",
+      "introLabel": "Questions 26–27｜TOYS EARTH 年度特賣",
+      "intro": "TOYS EARTH\nANNUAL SALE\nAUGUST 15–20TH\n\nTAKE 35% OFF ALL TOYS FOR BABIES\nALL TOY ANIMALS ARE AN EXTRA 15% OFF\n25% OFF ALL GAMES\nHURRY IN BECAUSE THIS SALE WON’T LAST FOREVER",
+      "q": "How often is the sale at Toys Earth?",
+      "o": ["Once a month.", "Once every two years.", "Once a year.", "Once on the 15th."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-advertisement", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (C) Once a year。標題寫 ANNUAL SALE；annual 就是『每年的、年度的』，所以一年一次。"
+    },
+    {
+      "number": 27,
+      "groupId": "round02-reading-26-27",
+      "q": "How much will you have to pay for a game?",
+      "o": ["25% of the cost.", "75% of the cost.", "85% of the cost.", "100% of the cost."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-advertisement", "english-gept-elementary-reading-quantitative"],
+      "e": "答案是 (B) 75% of the cost。廣告寫 25% OFF ALL GAMES，表示折掉原價的 25%，實付 100% − 25% = 75%。"
+    },
+    {
+      "number": 28,
+      "groupId": "round02-reading-28-29",
+      "introLabel": "Questions 28–29｜Carrie 寫給 Mark 的信",
+      "intro": "Dear Mark,\n\nYou’ll never guess who I ran into the other day. I was on my way back home. I usually take the bus, but somehow I decided to walk that day. While I was walking down the street, I saw a man who looked familiar. He was far away, so I couldn’t tell who he was at first. When I got closer, I found it was Jackie Chan — I couldn’t believe it!\n\nI’ve been a fan of his for years. Seeing him in person was like a dream coming true. As soon as he got close enough, I went up to him and got him to sign on my T-shirt. He was really strong, and friendly. Hopefully, I’ll see more famous people here. How’s everything at home? I miss Tainan, but there aren’t any famous people there.\n\nYours,\nCarrie",
+      "q": "Where did Carrie see Jackie Chan?",
+      "o": ["At her home.", "On the bus.", "In Taipei.", "On the street."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-letter", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (D) On the street。文章直接說 While I was walking down the street, I saw a man...，之後確認那人是 Jackie Chan。"
+    },
+    {
+      "number": 29,
+      "groupId": "round02-reading-28-29",
+      "q": "Where is Carrie originally from?",
+      "o": ["Los Angeles.", "California.", "Tainan.", "The States."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-inference"],
+      "e": "答案是 (C) Tainan。Carrie 在信末問家裡情況並說 I miss Tainan，表示台南是她原本的家鄉。"
+    },
+    {
+      "number": 30,
+      "groupId": "round02-reading-30-32",
+      "introLabel": "Questions 30–32｜阿里山神木",
+      "intro": "Have you ever been to Alishan? If you have, you should have visited the “God Trees” — the oldest living things on the Earth man has ever found. They can live up to 3,000 years. In fact, in the early twentieth century, big old trees were easily seen in Taiwan. At Alishan alone, over 300,000 lived well. Some were taller than 12 meters and thicker than 10 meters. Because they were so big and old, people showed respect to them by calling them “God Trees.” Some of these “God Trees” were there even before Confucius was born.\n\nUnfortunately, soon after these big trees were discovered, some people began to cut them down for commercial purposes. Within a few decades, most of them disappeared. More recently, environmentalists and experts have tried to protect the rest few big trees to prevent them from being destroyed anymore.",
+      "q": "This passage mainly discusses _____.",
+      "o": ["“God Trees” on the Earth", "how people have protected “God Trees”", "what “God Trees” look like", "the decrease of “God Trees”"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-main-idea"],
+      "e": "答案是 (D) the decrease of “God Trees”。第一段先介紹神木曾經很多，第二段說因商業砍伐在數十年間大量消失，並提到後來的保護工作；全文主軸是神木數量的減少。"
+    },
+    {
+      "number": 31,
+      "groupId": "round02-reading-30-32",
+      "q": "When were most of the “God Trees” in Taiwan destroyed?",
+      "o": ["Before Confucius was born.", "In the 19th century.", "Before they were discovered.", "In the 20th century."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-timeline"],
+      "e": "答案是 (D) In the 20th century。文章說 early twentieth century 還有很多大樹，而被發現後很快開始遭砍伐，within a few decades most disappeared，因此主要發生在 20 世紀。"
+    },
+    {
+      "number": 32,
+      "groupId": "round02-reading-30-32",
+      "q": "What of the following statements is TRUE?",
+      "o": ["“God Trees” cannot live longer than 2,000 years, but normal trees can.", "In the 21st century, people in Taiwan could not see any big old trees.", "“God Trees” are older than all the other creatures on the Earth.", "Trees could only grow at Alishan."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-true-false"],
+      "e": "答案是 (C)。文中稱神木為 man has ever found 的 oldest living things，並說可活到 3,000 年，因此就題目提供的四個敘述而言，(C) 最符合文章資訊。(A) 與 3,000 年矛盾；(B) 錯在仍有少數被保護；(D) 文章並未說樹只能生長在阿里山。"
+    },
+    {
+      "number": 33,
+      "groupId": "round02-reading-33-35",
+      "introLabel": "Questions 33–35｜冰淇淋的歷史",
+      "intro": "Americans eat a lot more ice cream than any other group of people on earth. Every year in the U.S., about 800 million gallons of ice cream are made. Ice cream, apparently, is hot in America, but it actually wasn’t invented there. Over 2,000 years ago, rich people in Rome began eating ice with honey on top of it. This was the first ice cream. It wasn’t until hundreds of years later that milk was added.\n\nIn the 1700’s, ice cream was first taken to the United States. The first U.S. President, George Washington, loved the delicious treat. It is said that he would even eat it for dinner. One summer, he spent $200 on the dessert. Back then, ice cream was very expensive and only the rich could afford it. In the 1800’s, the price started to decrease. The most popular flavor of ice cream is vanilla, with chocolate coming in second.",
+      "q": "What did people in Rome eat thousands of years ago?",
+      "o": ["Ice cream with milk.", "Chocolate flavored ice cream.", "Ice with honey on top.", "Vanilla flavored ice cream."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-history", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (C) Ice with honey on top。第一段直接指出兩千多年前羅馬富人吃的是 ice with honey on top of it，當時牛奶還沒有加入。"
+    },
+    {
+      "number": 34,
+      "groupId": "round02-reading-33-35",
+      "q": "Hundreds of years ago, who could have ice cream?",
+      "o": ["Anyone could buy it.", "Only people with a lot of money.", "People in America.", "Only the president of the United States."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (B) Only people with a lot of money。文章說 Back then, ice cream was very expensive and only the rich could afford it，所以只有有錢人買得起。"
+    },
+    {
+      "number": 35,
+      "groupId": "round02-reading-33-35",
+      "q": "What happened in the 1800’s?",
+      "o": ["Chocolate became the most popular flavor.", "George Washington made ice cream.", "Honey and ice were mixed together.", "Ice cream became less expensive."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-timeline"],
+      "e": "答案是 (D) Ice cream became less expensive。文章明確寫 In the 1800’s, the price started to decrease，也就是冰淇淋價格開始下降。"
+    }
+  ]
+}
