@@ -183,6 +183,106 @@
     }
   }
 
+  function injectPassagePopupStyles() {
+    if ($('#geptPassagePopupStyles')) return;
+    const style = document.createElement('style');
+    style.id = 'geptPassagePopupStyles';
+    style.textContent = `
+      .gept-passage-btn{flex:0 0 auto;margin-left:auto;border:1px solid #93c5fd;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:5px 10px;font-size:.78rem;font-weight:800;line-height:1.2;cursor:pointer;white-space:nowrap}
+      .gept-passage-btn:hover{background:#dbeafe}
+      .gept-passage-btn:active{transform:translateY(1px)}
+      #geptPassageModal{position:fixed;inset:0;z-index:9999;background:rgba(15,23,42,.5);display:flex;align-items:center;justify-content:center;padding:18px}
+      #geptPassageModal.hidden{display:none}
+      .gept-passage-dialog{width:min(760px,100%);max-height:min(78vh,780px);background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.32);display:flex;flex-direction:column;overflow:hidden}
+      .gept-passage-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid #e2e8f0;background:#f8fafc}
+      .gept-passage-title{font-weight:850;color:#1e3a8a;flex:1}
+      .gept-passage-close{border:0;background:#e2e8f0;color:#334155;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer}
+      .gept-passage-body{padding:18px 20px;overflow:auto;white-space:pre-wrap;line-height:1.9;color:#1f2937;font-size:1rem}
+      @media(max-width:620px){.gept-passage-btn{padding:4px 8px;font-size:.72rem}.gept-passage-dialog{max-height:84vh}.gept-passage-body{padding:15px 16px;font-size:.96rem}}
+    `;
+    document.head.appendChild(style);
+  }
+
+  function ensurePassageModal() {
+    let modal = $('#geptPassageModal');
+    if (modal) return modal;
+
+    modal = document.createElement('div');
+    modal.id = 'geptPassageModal';
+    modal.className = 'hidden';
+    modal.setAttribute('aria-hidden', 'true');
+    modal.innerHTML = `
+      <div class="gept-passage-dialog" role="dialog" aria-modal="true" aria-labelledby="geptPassageTitle">
+        <div class="gept-passage-head">
+          <div class="gept-passage-title" id="geptPassageTitle">題組內容</div>
+          <button type="button" class="gept-passage-close" aria-label="關閉題組內容">×</button>
+        </div>
+        <div class="gept-passage-body" id="geptPassageBody"></div>
+      </div>`;
+    document.body.appendChild(modal);
+
+    const close = () => {
+      modal.classList.add('hidden');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+    $('.gept-passage-close', modal)?.addEventListener('click', close);
+    modal.addEventListener('click', event => {
+      if (event.target === modal) close();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !modal.classList.contains('hidden')) close();
+    });
+    return modal;
+  }
+
+  function showPassagePopup(title, passage) {
+    const modal = ensurePassageModal();
+    $('#geptPassageTitle', modal).textContent = title || '題組內容';
+    $('#geptPassageBody', modal).textContent = passage || '';
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function decorateGroupedQuestions(key) {
+    if (typeof banks === 'undefined') return;
+    const bank = banks[key];
+    if (!Array.isArray(bank) || !bank.length) return;
+
+    const groups = new Map();
+    bank.forEach(question => {
+      if (!question?.groupId) return;
+      const current = groups.get(question.groupId) || { title: '', passage: '' };
+      if (question.introLabel) current.title = question.introLabel;
+      if (question.intro) current.passage = question.intro;
+      groups.set(question.groupId, current);
+    });
+
+    bank.forEach((question, index) => {
+      if (!question?.groupId) return;
+      const shared = groups.get(question.groupId);
+      if (!shared?.passage) return;
+
+      const number = question.number || index + 1;
+      const card = document.querySelector(`#quiz .card[data-question-number="${number}"]`);
+      const qtitle = card?.querySelector('.qtitle');
+      if (!qtitle || qtitle.querySelector('.gept-passage-btn')) return;
+
+      qtitle.style.display = 'flex';
+      qtitle.style.alignItems = 'flex-start';
+      qtitle.style.gap = '8px';
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'gept-passage-btn';
+      button.textContent = '📖 題組內容';
+      button.title = '顯示本題共用的題組文章';
+      button.addEventListener('click', () => showPassagePopup(shared.title || '題組內容', shared.passage));
+      qtitle.appendChild(button);
+    });
+  }
+
   function enhanceGeptLandingIfNeeded() {
     const root = content();
     if (!root) return;
@@ -207,9 +307,18 @@
     const root = content();
     if (!root) return;
 
+    injectPassagePopupStyles();
+    ensurePassageModal();
+
     const observer = new MutationObserver(enhanceGeptLandingIfNeeded);
     observer.observe(root, { childList: true, subtree: true });
     enhanceGeptLandingIfNeeded();
+
+    document.addEventListener('exam:started', event => {
+      const ctx = event.detail || {};
+      if (ctx.examType !== 'gept-elementary-reading') return;
+      requestAnimationFrame(() => decorateGroupedQuestions(ctx.key || ctx.difficulty));
+    });
   }
 
   if (document.readyState === 'loading') {
