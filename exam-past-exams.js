@@ -66,7 +66,7 @@
       <div class="catalog-grid">
         ${card({id:'bct90Btn',icon:'🗓️',title:'90 年度',badge:'已收錄',desc:'第一次、第二次皆已收錄國文與數學。'})}
         ${card({id:'bct91Btn',icon:'🗓️',title:'91 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、原卷附圖與詳解。'})}
-        ${card({id:'bct92Btn',icon:'🗓️',title:'92 年度',badge:'建置中',desc:'第一次數學科已建立題目、答案與原卷附圖。'})}
+        ${card({id:'bct92Btn',icon:'🗓️',title:'92 年度',badge:'建置中',desc:'第一次數學科已建立題目、答案、原卷附圖與詳解。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
     $('#bct91Btn')?.addEventListener('click', showBct91Sessions);
@@ -108,7 +108,7 @@
       <div class="catalog-path">歷屆考題　›　基測　›　92 年度</div>
       <h2 class="catalog-title">請選擇次別</h2>
       <div class="catalog-grid">
-        ${card({id:'bct92FirstBtn',icon:'1️⃣',title:'第一次',badge:'已收錄',desc:'92 年度第一次基測；數學科題目、答案與原卷附圖已建立。'})}
+        ${card({id:'bct92FirstBtn',icon:'1️⃣',title:'第一次',badge:'已收錄',desc:'92 年度第一次基測；數學科題目、答案、原卷附圖與詳解已建立。'})}
         ${card({id:'bct92SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'92 年度第二次基測尚未匯入。',disabled:true})}
       </div>`;
     $('#bct92FirstBtn')?.addEventListener('click', showBct92FirstSubjects);
@@ -215,13 +215,14 @@
       <div class="catalog-grid">
         ${card({id:'bct92FirstChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
         ${card({id:'bct92FirstEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
-        ${card({id:'bct92FirstMathBtn',icon:'📐',title:'數學科',badge:'31 題',desc:'31 題原題、答案與原卷附圖已建立。'})}
+        ${card({id:'bct92FirstMathBtn',icon:'📐',title:'數學科',badge:'31 題',desc:'31 題原題、答案、原卷附圖與逐題詳解已建立。'})}
         ${card({id:'bct92FirstScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
         ${card({id:'bct92FirstSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
       </div>`;
     $('#bct92FirstMathBtn')?.addEventListener('click', () => loadPastExam({
       buttonId:'bct92FirstMathBtn',
       path:'past-exams/bct/92/first/math.json',
+      explanationsPath:'past-exams/bct/92/first/math-explanations.json',
       onBack:showBct92FirstSubjects
     }));
   }
