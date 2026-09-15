@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-03",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第三回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第三回",
+    "difficulty": "english-gept-elementary-reading-round-03",
+    "difficultyLabel": "第三回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceNote": "題目依使用者提供之《國中英文 全民英檢攻略 全》第三回實體書照片校正版建立，原書 p.19–26，共 35 題。未提供官方答案頁；本題庫答案依文法、語意與文章內容判讀建立，原書疑似誤植處保留原文並於詳解註記。題組文章只在題組第一題顯示一次，後續題目共用同一題幹。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "第一部分：詞彙和結構",
+      "q": "Thanks for giving me such good _____. I believe it'll help a lot.",
+      "o": ["suggestion", "spirits", "success", "suites"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-advice"],
+      "e": "答案是 (A) suggestion。句意是『謝謝你給我這麼好的建議，我相信會很有幫助。』suggestion 是建議；spirits 是精神／情緒，success 是成功，suites 是套房／套裝。原句的 such good suggestion 在自然英文中通常會寫成 such a good suggestion 或 such good suggestions；此處依原書選項判讀。"
+    },
+    {
+      "number": 2,
+      "q": "We can _____ the books to your house, but you'll be charged NT$150.",
+      "o": ["deliver", "develop", "discover", "decrease"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-service"],
+      "e": "答案是 (A) deliver。deliver the books to your house 表示『把書送到你家』。develop 是發展，discover 是發現，decrease 是減少。"
+    },
+    {
+      "number": 3,
+      "q": "Smoking cigarettes damages your lung, one of the most important _____ in your body.",
+      "o": ["models", "orphans", "supplies", "organs"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-body"],
+      "e": "答案是 (D) organs。肺是身體的重要『器官』之一。models 是模型，orphans 是孤兒，supplies 是物資。"
+    },
+    {
+      "number": 4,
+      "q": "I can’t watch those ghost movies — they’re so _____ that I can’t fall asleep at night.",
+      "o": ["scared", "exact", "neat", "horrible"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-adjective", "english-gept-elementary-so-that"],
+      "e": "答案是 (D) horrible。鬼片『很可怕』，以致晚上睡不著。horrible 可形容令人害怕或很糟的事物；scared 通常形容『感到害怕的人』。"
+    },
+    {
+      "number": 5,
+      "q": "Before leaving for the party, Helen _____ herself and got dressed up.",
+      "o": ["made up", "made sure", "made sense", "made faces"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrasal-verb", "english-gept-elementary-daily-life"],
+      "e": "答案是 (A) made up。make oneself up / make up 表示『化妝』；她參加派對前先化妝並盛裝打扮。made sure 是確認，made sense 是有道理，made faces 是做鬼臉。"
+    },
+    {
+      "number": 6,
+      "q": "The patient was happy after Dr. Smith carefully _____ her chest and said, “You’re fine.”",
+      "o": ["exhausted", "excited", "examined", "employed"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-medical"],
+      "e": "答案是 (C) examined。醫師仔細『檢查』病人的胸部後說她沒事。exhausted 是使筋疲力盡，excited 是使興奮，employed 是雇用。"
+    },
+    {
+      "number": 7,
+      "q": "The pilot of this flight has flown for 30 years. He has enough _____ to land this plane.",
+      "o": ["experience", "difficulties", "balconies", "paths"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-experience"],
+      "e": "答案是 (A) experience。飛行了 30 年，表示他有足夠的『經驗』降落飛機。experience 在此作不可數名詞。"
+    },
+    {
+      "number": 8,
+      "q": "You’re getting fatter and fatter. That’s why you need to _____ and exercise more.",
+      "o": ["go on a diet", "break your promise", "face the music", "make up your mind"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-idiom", "english-gept-elementary-health"],
+      "e": "答案是 (A) go on a diet，表示『節食、控制飲食』。句子說愈來愈胖，因此需要節食並多運動。"
+    },
+    {
+      "number": 9,
+      "q": "_____ better grades, you’d better pay less attention on the smartphones.",
+      "o": ["Have", "Having", "To have", "If you have"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-infinitive-purpose"],
+      "e": "答案是 (C) To have。句首不定詞表示目的：『為了得到更好的成績，你最好少把注意力放在手機上。』原書使用 pay attention on；較常見的標準搭配是 pay attention to。"
+    },
+    {
+      "number": 10,
+      "q": "Sarah has three sisters, and _____ of them graduated from Harvard University.",
+      "o": ["both", "much", "all", "little"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-pronoun-quantifier"],
+      "e": "答案是 (C) all。前面明確說有 three sisters，三者全部要用 all。both 只用於兩者；much / little 修飾不可數名詞。"
+    },
+    {
+      "number": 11,
+      "q": "Mrs. Kim’s son died young, so she often feels _____.",
+      "o": ["sadly", "easy sad", "easily sadly", "sad easily"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-linking-verb-adjective"],
+      "e": "答案依原書選項判讀為 (D) sad easily。feel 是連綴動詞，核心補語應用形容詞 sad，而不是副詞 sadly。四個選項中只有 (D) 保留形容詞 sad，因此最接近正確句型。這題原書選項疑似有誤植；自然英文會更常寫 she often feels sad。"
+    },
+    {
+      "number": 12,
+      "q": "We have to leave now, but they _____.",
+      "o": ["mustn’t", "haven’t", "don’t need to", "couldn’t"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-modal-need"],
+      "e": "答案是 (C) don’t need to。前句是『我們現在必須離開』，but 表示對比，因此『但他們不需要』最合理。mustn’t 是禁止，不等於不需要。"
+    },
+    {
+      "number": 13,
+      "q": "Dad’s computer _____ for a couple of times. Perhaps he should buy a new one.",
+      "o": ["fixed", "has fixed", "has been fixing", "has been fixed"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-present-perfect", "english-gept-elementary-passive-voice"],
+      "e": "答案是 (D) has been fixed。電腦是『被修理』，要用被動語態；for a couple of times 表示到現在已發生數次，因此用現在完成式被動 has been fixed。"
+    },
+    {
+      "number": 14,
+      "q": "The number of people in this town _____ increasing year by year.",
+      "o": ["are", "have", "is", "should"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-subject-verb-agreement"],
+      "e": "答案是 (C) is。主詞是 The number，視為單數，因此用 is increasing。要注意 a number of + 複數名詞才通常搭配複數動詞。"
+    },
+    {
+      "number": 15,
+      "q": "Believe me — Sharon’s the prettiest girl _____ I’ve ever seen!",
+      "o": ["who", "which", "that", "where"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-relative-pronoun-that", "english-gept-elementary-superlative"],
+      "e": "答案是 (C) that。先行詞 girl 前有最高級 the prettiest 修飾時，傳統考試文法常優先用 that 引導關係子句：the prettiest girl that I’ve ever seen。"
+    },
+    {
+      "number": 16,
+      "section": "第二部分：段落填空",
+      "groupId": "round03-cloze-16-20",
+      "introLabel": "Questions 16–20｜晨間健行",
+      "intro": "Some people go hiking in the hills away from the downtown in the early morning. First, at this time of the day, the fresh, cool air there helps to __16__ them up. Next, seeing green trees and listening to birds singing make them feel relaxed. People who __17__ to take an early morning walk think they can stay healthy by this sort of __18__. After they begin the day in this way, they always feel energetic. Last, __19__ also a good way to make new friends. __20__ they walk through the hills each morning, they often meet new and old friends and say hello to one another.",
+      "q": "第 16 空應填入哪一個選項？",
+      "o": ["wake", "give", "call", "show"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrasal-verb"],
+      "e": "答案是 (A) wake。wake someone up 是固定片語『把某人喚醒、使某人清醒』。清晨新鮮涼爽的空氣讓人精神起來。"
+    },
+    {
+      "number": 17,
+      "groupId": "round03-cloze-16-20",
+      "q": "第 17 空應填入哪一個選項？",
+      "o": ["enjoy", "hate", "love", "quit"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-verb-pattern"],
+      "e": "答案是 (C) love。love to take an early morning walk 表示『喜歡清晨散步』。enjoy 後面通常接 V-ing，不能直接接 to take；hate 與 quit 不合全文正面語意。"
+    },
+    {
+      "number": 18,
+      "groupId": "round03-cloze-16-20",
+      "q": "第 18 空應填入哪一個選項？",
+      "o": ["weather", "exam", "wealth", "exercise"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-context-vocabulary", "english-gept-elementary-health"],
+      "e": "答案是 (D) exercise。早晨健行／散步屬於一種運動，people think they can stay healthy by this sort of exercise。"
+    },
+    {
+      "number": 19,
+      "groupId": "round03-cloze-16-20",
+      "q": "第 19 空應填入哪一個選項？",
+      "o": ["there is", "it has", "be", "it is"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-pronoun-it", "english-gept-elementary-sentence-structure"],
+      "e": "答案是 (D) it is。句子需要主詞加 be 動詞：Last, it is also a good way to make new friends。it 指前面所述的晨間健行。"
+    },
+    {
+      "number": 20,
+      "groupId": "round03-cloze-16-20",
+      "q": "第 20 空應填入哪一個選項？",
+      "o": ["As", "Before", "Although", "Between"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-conjunction-as"],
+      "e": "答案是 (A) As。As they walk through the hills each morning 表示『當／隨著他們每天早晨走過山丘時』，與後面常遇見新舊朋友的情境最合。"
+    },
+    {
+      "number": 21,
+      "groupId": "round03-cloze-21-25",
+      "introLabel": "Questions 21–25｜Tim Duncan 的童年回憶",
+      "intro": "While reading the newspaper, Ben saw something that caught his __21__. It was a photo of a man named Tim Duncan. Ben recalled the days when he was only a second grader — it was little Tim, his classmate. Tim was tall, shy and quiet — so quiet that everyone __22__ and made fun of him. He always wore funny shirts, strange shoes and thick glasses — he didn’t have any friends. When all the others were playing on the slide and swings, little Tim always sat under a tree reading a book, alone. For an eight-year-old kid, he was too serious. Sometimes Ben asked Tim to play basketball with him, but Tim said he couldn’t.\n\nThe news said Tim Duncan with The Spurs had just won __23__ NBA title, his fifth. Ben couldn’t imagine __24__ such a quiet little Tim would become an NBA superstar one day. By thinking of Tim, Ben remembered how much time he spent __25__ out with his classmates — those old school days.",
+      "q": "第 21 空應填入哪一個選項？",
+      "o": ["spot", "tension", "scene", "attention"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-collocation"],
+      "e": "答案是 (D) attention。catch one’s attention 是固定搭配『吸引某人的注意』。報紙上的照片吸引了 Ben 的注意。"
+    },
+    {
+      "number": 22,
+      "groupId": "round03-cloze-21-25",
+      "q": "第 22 空應填入哪一個選項？",
+      "o": ["used to", "listened to", "laughed at", "smiled at"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrasal-verb", "english-gept-elementary-context-vocabulary"],
+      "e": "答案是 (C) laughed at。後面接 and made fun of him，表示大家會『嘲笑他』。laugh at 與 make fun of 語意相近。"
+    },
+    {
+      "number": 23,
+      "groupId": "round03-cloze-21-25",
+      "q": "第 23 空應填入哪一個選項？",
+      "o": ["other", "another", "the other", "others"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-other-another"],
+      "e": "答案是 (B) another。another + 單數可數名詞表示『另一個、再一個』；another NBA title = 又一座 NBA 冠軍。"
+    },
+    {
+      "number": 24,
+      "groupId": "round03-cloze-21-25",
+      "q": "第 24 空應填入哪一個選項？",
+      "o": ["that", "who", "what", "which"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-noun-clause-that"],
+      "e": "答案是 (A) that。imagine 後接 that 名詞子句：Ben couldn’t imagine that such a quiet little Tim would become an NBA superstar one day。後面的子句本身結構完整，因此用 that。"
+    },
+    {
+      "number": 25,
+      "groupId": "round03-cloze-21-25",
+      "q": "第 25 空應填入哪一個選項？",
+      "o": ["hang", "hanging", "hung", "to hang"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-spend-time-v-ing", "english-gept-elementary-phrasal-verb"],
+      "e": "答案是 (B) hanging。spend + time + V-ing 是固定句型；hang out with classmates 表示『和同學一起玩／相處』，所以是 spent time hanging out。"
+    },
+    {
+      "number": 26,
+      "section": "第三部分：閱讀理解",
+      "groupId": "round03-reading-26-27",
+      "introLabel": "Questions 26–27｜Turbo Slides 入場須知",
+      "intro": "Welcome to\nTurbo Slides\n\n* info before you enter:\n▲ Be sure to wear caps, goggles, and swimsuits\n▲ Do not RUN in the pool area\n▲ Kids under 12 must enter with adults\n\nadult: $10\nchild: $5\n\nOPEN HOURS\nTue to Sun\n9 am to 9 pm\n(No lifeguard after 6 pm)",
+      "q": "Turbo Slides could probably be a _____.",
+      "o": ["park", "museum", "swimming pool", "aquarium"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-notice", "english-gept-elementary-reading-inference"],
+      "e": "答案是 (C) swimming pool。須知要求穿泳帽、護目鏡和泳衣，並寫著 Do not RUN in the pool area，因此可判斷 Turbo Slides 是游泳池／水上設施。"
+    },
+    {
+      "number": 27,
+      "groupId": "round03-reading-26-27",
+      "q": "Which of the following statements is TRUE?",
+      "o": ["Adults can not enter the pool without kids.", "There will be a discount if you enter Turbo Slides after 6 pm.", "People can not enter the pool without driving cars.", "A father, a mother to enter with two kids will be charged $30."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail", "english-gept-elementary-reading-calculation"],
+      "e": "答案是 (D)。成人每人 $10、兒童每人 $5，所以兩位大人加兩位小孩共 10×2 + 5×2 = $30。規定是 12 歲以下兒童需由成人陪同，不是成人一定要帶小孩；6 點後只是沒有救生員，沒有折扣資訊。"
+    },
+    {
+      "number": 28,
+      "groupId": "round03-reading-28-29",
+      "introLabel": "Questions 28–29｜資源回收公告",
+      "intro": "Notice\n\nThanks for recycling your used plastic bags, bottles, glass jars, cans, boxes, cartons and paper. Before recycling them, please follow the instructions:\n\n▲ Wash all bottles, jars, and cans.\n▲ Press bottles, cans, milk cartons and boxes flat, so that they’ll be smaller.\n\nThanks again for your cooperation!\nOffice of Recycling",
+      "q": "What does the notice say?",
+      "o": ["When people can recycle their garbage.", "What the office of recycling does.", "What to do before recycling.", "Why people should recycle their garbage."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-notice", "english-gept-elementary-reading-main-idea"],
+      "e": "答案是 (C)。公告明確寫 Before recycling them, please follow the instructions，接著列出清洗、壓扁等步驟，所以主旨是『回收前應該做什麼』。"
+    },
+    {
+      "number": 29,
+      "groupId": "round03-reading-28-29",
+      "q": "What are we asked to do with the bottles, jars, and cans?",
+      "o": ["To reuse them.", "To put them in the plastic bags.", "To bring them home.", "To clean them."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (D) To clean them。公告第一項指示是 Wash all bottles, jars, and cans，也就是先把它們洗乾淨。"
+    },
+    {
+      "number": 30,
+      "groupId": "round03-reading-30-32",
+      "introLabel": "Questions 30–32｜Mrs. Zoe 的語言旅行經驗",
+      "intro": "Two years ago, Mrs. Zoe, a sixty-eight-year-old Japanese grandmother, decided to take her first trip abroad by herself, making a choice to visit Britain. Since she still remembered some English words and sentences from middle school, her “outing” to London was actually out of question.\n\nLast year, Mrs. Zoe went to France. This time she didn’t have as much fun as in England because she couldn’t speak any French, not a single word. Most French hotel clerks, in fact, could speak some English, but the English they spoke still sounded like French to her.\n\nAfter returning to Japan, Mrs. Zoe began taking French lessons, day and night. Six months later, she took another trip to Paris and had a great time. Now she’s learning Italian and has been prepared to go abroad with her husband.",
+      "q": "What is the reading mostly about?",
+      "o": ["Mrs. Zoe’s trip to Britain.", "Mrs. Zoe’s trip to France.", "Mrs. Zoe’s language experiences.", "The costs of going abroad."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-main-idea", "english-gept-elementary-reading-travel"],
+      "e": "答案是 (C) Mrs. Zoe’s language experiences。文章依序寫她用英文去英國、因不會法文而在法國不順、回國學法文後再去巴黎，以及現在學義大利文；核心是她的語言學習與旅行經驗。"
+    },
+    {
+      "number": 31,
+      "groupId": "round03-reading-30-32",
+      "q": "Which of the following statements is NOT TRUE about Mrs. Zoe?",
+      "o": ["She visited Britain more than once.", "She speaks Japanese well.", "She visited France more than once.", "She has some talents in languages."],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-not-true", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (A)。文章只提到她兩年前第一次獨自出國去 Britain，沒有說她去英國超過一次；France 則明確有去年一次、學法文六個月後又去 Paris 一次。她是日本人，且能靠學校英文與後來學法文、義大利文旅行，顯示具一定語言能力。"
+    },
+    {
+      "number": 32,
+      "groupId": "round03-reading-30-32",
+      "q": "Which country will Mrs. Zoe probably go to next?",
+      "o": ["The States.", "Italy.", "Taiwan.", "Britain."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-inference"],
+      "e": "答案是 (B) Italy。最後一句說 Now she’s learning Italian and has been prepared to go abroad with her husband，因此最合理推論她下一個可能去的國家是義大利。"
+    },
+    {
+      "number": 33,
+      "groupId": "round03-reading-33-35",
+      "introLabel": "Questions 33–35｜Jean 幫忙照顧孩子",
+      "intro": "It was the first Friday night of the month. Jean was supposed to babysit for the Putts, but she was late. “Where has she been?” asked Mrs. Putts as Jean knocked on the door. “Sorry for being late,” said Jean. The Putts soon left for dinner, and Jean was left to watch the three children: baby Anna, Ted, and Kate. First, she had to feed them. Anna had some milk and soft carrots, while Ted and Kate had pasta. After dinner the kids asked, “Can we watch TV?” So Jean decided to give Anna a bath as Ted and Kate watched Sponge Bob.\n\nWhen Jean came out of the bathroom, she couldn’t find the two. She looked all over the house, and finally found them in the kitchen. They were both eating chocolate cake and ice cream! “Please don’t tell Mom and Dad!” they said and started crying. “OK. I won’t tell your parents,” said Jean, “but only if you brush your teeth and go to bed in ten minutes!”\n\nThe kids both hurried into the bathroom and brushed their teeth, then jumped into bed. “Now be quiet and close your eyes,” Jean said. She put the baby in the cradle and sang the lullaby as well. At about 10 pm, she went downstairs and started to clean the kitchen. After all the chores were done, Jean sat down and enjoyed the rest of the delicious chocolate cake.",
+      "q": "What is the story mainly about?",
+      "o": ["A good TV program.", "The Putts family.", "One delicious chocolate cake.", "Jean babysitting three kids."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-main-idea", "english-gept-elementary-reading-story"],
+      "e": "答案是 (D) Jean babysitting three kids。全文從 Jean 到 Putts 家、餵三個孩子、幫 Anna 洗澡、處理 Ted 和 Kate 偷吃蛋糕、哄孩子睡覺到整理廚房，都圍繞她幫忙照顧三個孩子。"
+    },
+    {
+      "number": 34,
+      "groupId": "round03-reading-33-35",
+      "q": "What happened immediately after the kids ate the cake?",
+      "o": ["The kids watched TV.", "Jean and Anna cleaned the kitchen.", "The kids brushed their teeth.", "Jean ate some cake, too."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-sequence", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (C) The kids brushed their teeth。Jean 發現 Ted 和 Kate 偷吃蛋糕後，答應不告訴父母，條件是他們刷牙並在十分鐘內上床；下一段立刻寫 The kids both hurried into the bathroom and brushed their teeth。"
+    },
+    {
+      "number": 35,
+      "groupId": "round03-reading-33-35",
+      "q": "Who didn’t eat the chocolate cake?",
+      "o": ["Kate.", "Ted.", "Jean.", "Anna."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (D) Anna。Ted 和 Kate 被發現正在吃 chocolate cake and ice cream；最後 Jean 也吃了剩下的蛋糕。文中只有 baby Anna 沒有吃蛋糕。"
+    }
+  ]
+}
