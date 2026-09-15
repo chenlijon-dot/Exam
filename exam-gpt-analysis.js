@@ -296,13 +296,16 @@
       .english-ai-passage-btn{border:1px solid #c4b5fd;background:#f5f3ff;color:#6d28d9;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:800;cursor:pointer;white-space:nowrap}
       #englishAiModal{position:fixed;inset:0;z-index:10020;background:rgba(15,23,42,.5);display:flex;align-items:center;justify-content:center;padding:18px}
       #englishAiModal.hidden{display:none}
-      .english-ai-dialog{width:min(720px,calc(100% - 24px));height:min(50vh,520px);max-height:50vh;background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.34);display:flex;flex-direction:column;overflow:hidden;will-change:transform}
+      .english-ai-dialog{position:relative;width:min(720px,calc(100% - 24px));height:min(50vh,520px);min-height:230px;max-height:calc(100vh - 32px);background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.34);display:flex;flex-direction:column;overflow:hidden;will-change:transform}
       .english-ai-head{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid #e2e8f0;background:#fafafa;cursor:grab;user-select:none;touch-action:none}
       .english-ai-head.dragging{cursor:grabbing}.english-ai-title{font-weight:850;color:#5b21b6;flex:1;pointer-events:none}
       .english-ai-close{border:0;background:#e2e8f0;color:#334155;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer}
-      .english-ai-body{flex:1;min-height:0;padding:18px 20px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;line-height:1.8;color:#1f2937}
+      .english-ai-body{flex:1;min-height:0;padding:18px 20px 24px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;line-height:1.8;color:#1f2937}
       .english-ai-status{color:#64748b;font-size:.9rem;margin-bottom:10px}.english-ai-result{white-space:pre-wrap}
-      @media(max-width:620px){.english-ai-dialog{width:calc(100% - 16px);height:52vh;max-height:52vh}.english-ai-body{padding:15px 16px}.english-ai-passage-btn{font-size:.72rem;padding:5px 8px}}
+      .english-ai-resize-handle{position:absolute;left:50%;bottom:3px;transform:translateX(-50%);width:86px;height:16px;z-index:3;cursor:ns-resize;touch-action:none;display:flex;align-items:center;justify-content:center}
+      .english-ai-resize-handle::before{content:'';width:52px;height:5px;border-radius:999px;background:#cbd5e1;box-shadow:0 0 0 1px rgba(148,163,184,.12)}
+      .english-ai-resize-handle:hover::before,.english-ai-resize-handle.resizing::before{background:#8b5cf6}
+      @media(max-width:620px){.english-ai-dialog{width:calc(100% - 16px);height:50vh;min-height:210px;max-height:calc(100vh - 20px)}.english-ai-body{padding:15px 16px 24px}.english-ai-passage-btn{font-size:.72rem;padding:5px 8px}.english-ai-resize-handle{width:110px;height:22px}}
     `;
     document.head.appendChild(style);
   }
@@ -343,9 +346,65 @@
     modal.resetEnglishAiPosition = () => { pointerId=null; x=0; y=0; head.classList.remove('dragging'); apply(); };
   }
 
+  function makeEnglishAiResizable(modal) {
+    const dialog = $('.english-ai-dialog', modal);
+    const handle = $('.english-ai-resize-handle', modal);
+    if (!dialog || !handle || handle.dataset.resizeReady === '1') return;
+    handle.dataset.resizeReady = '1';
+
+    let pointerId = null;
+    let startY = 0;
+    let startHeight = 0;
+
+    const limits = () => ({
+      min: window.innerWidth <= 620 ? 210 : 230,
+      max: Math.max(260, window.innerHeight - (window.innerWidth <= 620 ? 20 : 32))
+    });
+
+    handle.addEventListener('pointerdown', e => {
+      if (e.button !== undefined && e.button !== 0) return;
+      pointerId = e.pointerId;
+      startY = e.clientY;
+      startHeight = dialog.getBoundingClientRect().height;
+      handle.classList.add('resizing');
+      handle.setPointerCapture?.(pointerId);
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    handle.addEventListener('pointermove', e => {
+      if (pointerId === null || e.pointerId !== pointerId) return;
+      const {min,max} = limits();
+      const nextHeight = Math.min(max, Math.max(min, startHeight + (e.clientY - startY)));
+      dialog.style.height = `${Math.round(nextHeight)}px`;
+      e.preventDefault();
+    });
+
+    const end = e => {
+      if (pointerId === null || (e?.pointerId !== undefined && e.pointerId !== pointerId)) return;
+      try { handle.releasePointerCapture?.(pointerId); } catch {}
+      pointerId = null;
+      handle.classList.remove('resizing');
+    };
+
+    handle.addEventListener('pointerup', end);
+    handle.addEventListener('pointercancel', end);
+    handle.addEventListener('lostpointercapture', end);
+
+    modal.resetEnglishAiSize = () => {
+      pointerId = null;
+      handle.classList.remove('resizing');
+      dialog.style.height = '';
+    };
+  }
+
   function ensureEnglishAiModal() {
     let modal = $('#englishAiModal');
-    if (modal) return modal;
+    if (modal) {
+      makeEnglishAiDraggable(modal);
+      makeEnglishAiResizable(modal);
+      return modal;
+    }
     modal = document.createElement('div');
     modal.id = 'englishAiModal';
     modal.className = 'hidden';
@@ -360,12 +419,15 @@
           <div class="english-ai-status" id="englishAiStatus"></div>
           <div class="english-ai-result" id="englishAiResult"></div>
         </div>
+        <div class="english-ai-resize-handle" title="上下拖曳調整視窗高度" aria-label="上下拖曳調整視窗高度"></div>
       </div>`;
     document.body.appendChild(modal);
     makeEnglishAiDraggable(modal);
+    makeEnglishAiResizable(modal);
     const close = () => {
       modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true');
       modal.resetEnglishAiPosition?.();
+      modal.resetEnglishAiSize?.();
     };
     $('.english-ai-close',modal)?.addEventListener('click',close);
     modal.addEventListener('click',e=>{if(e.target===modal)close();});
