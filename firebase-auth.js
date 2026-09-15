@@ -3,7 +3,8 @@
 
   const FIREBASE_VERSION = '12.19.0';
   const ALLOWED_EMAILS = new Set([
-    'chenlijon@gmail.com'
+    'chenlijon@gmail.com',
+    'chenrody0320@gmail.com'
   ]);
 
   const firebaseConfig = {
