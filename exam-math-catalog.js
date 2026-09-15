@@ -205,7 +205,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, cssW, cssH);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 3.2;
+      ctx.lineWidth = 2.6;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       return { cssW, cssH };
@@ -233,45 +233,127 @@
       return { x: e.clientX - r.left, y: e.clientY - r.top };
     }
 
+    function drawPointerSamples(e) {
+      if (!drawing || e.pointerId !== activePointerId) return;
+
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+
+      const samples =
+        typeof e.getCoalescedEvents === 'function'
+          ? e.getCoalescedEvents()
+          : [e];
+
+      if (!samples || samples.length === 0) return;
+
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+
+      for (const sample of samples) {
+        const p = pointFromEvent(sample);
+
+        ctx.lineTo(p.x, p.y);
+
+        lastX = p.x;
+        lastY = p.y;
+      }
+
+      ctx.stroke();
+      localHasInk = true;
+    }
+
     canvas.addEventListener('pointerdown', e => {
       if (activePointerId !== null) return;
+
       e.preventDefault();
+
       activePointerId = e.pointerId;
       drawing = true;
+
       canvas.setPointerCapture?.(e.pointerId);
+
       const p = pointFromEvent(e);
+
       lastX = p.x;
       lastY = p.y;
+
       ctx.beginPath();
       ctx.moveTo(lastX, lastY);
       ctx.lineTo(lastX + 0.01, lastY + 0.01);
       ctx.stroke();
+
       localHasInk = true;
     }, { passive: false });
 
-    canvas.addEventListener('pointermove', e => {
-      if (!drawing || e.pointerId !== activePointerId) return;
-      e.preventDefault();
-      const p = pointFromEvent(e);
-      ctx.beginPath();
-      ctx.moveTo(lastX, lastY);
-      ctx.lineTo(p.x, p.y);
-      ctx.stroke();
-      lastX = p.x;
-      lastY = p.y;
-      localHasInk = true;
-    }, { passive: false });
+    /*
+     * Chromium / Android WebView can expose pointerrawupdate,
+     * which arrives closer to the hardware sampling rate than
+     * ordinary pointermove.
+     *
+     * When available, use it as the primary drawing stream.
+     * Otherwise fall back to pointermove.
+     */
+    const useRawPointer =
+      'onpointerrawupdate' in window;
+
+    if (useRawPointer) {
+      canvas.addEventListener(
+        'pointerrawupdate',
+        drawPointerSamples,
+        { passive: false }
+      );
+    } else {
+      canvas.addEventListener(
+        'pointermove',
+        drawPointerSamples,
+        { passive: false }
+      );
+    }
 
     function finishStroke(e) {
       if (e.pointerId !== activePointerId) return;
-      e.preventDefault();
+
+      /*
+       * Flush the final pointer position, because the last point
+       * can arrive with pointerup rather than pointerrawupdate.
+       */
+      if (drawing) {
+        const p = pointFromEvent(e);
+
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+
+        lastX = p.x;
+        lastY = p.y;
+      }
+
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+
       drawing = false;
-      try { canvas.releasePointerCapture?.(e.pointerId); } catch {}
+
+      try {
+        canvas.releasePointerCapture?.(e.pointerId);
+      } catch {}
+
       activePointerId = null;
     }
 
-    canvas.addEventListener('pointerup', finishStroke, { passive: false });
-    canvas.addEventListener('pointercancel', finishStroke, { passive: false });
+    canvas.addEventListener(
+      'pointerup',
+      finishStroke,
+      { passive: false }
+    );
+
+    canvas.addEventListener(
+      'pointercancel',
+      finishStroke,
+      { passive: false }
+    );
     canvas.addEventListener('contextmenu', e => e.preventDefault());
 
     function closeOverlay() {
@@ -286,7 +368,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, r.width, r.height);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 3.2;
+      ctx.lineWidth = 2.6;
       localHasInk = false;
     });
     $('#paperCanvasDoneBtn', overlay)?.addEventListener('click', () => {
