@@ -3,6 +3,15 @@
 
   const SCIENCE_SCHOOL_BANK_PATH = 'chapter-bank/science/7-1/unit-01/section-02/school-exams.json';
 
+  function loadFirebaseAuthGate() {
+    if (document.getElementById('firebaseAuthGateModule')) return;
+    const script = document.createElement('script');
+    script.id = 'firebaseAuthGateModule';
+    script.src = `firebase-auth.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   // index.html still registers the original exam control handlers with
   // addEventListener(). exam-runtime-flex.js now owns these controls through
   // the onclick property. If both remain active, a single tap on「顯示詳解」
@@ -131,6 +140,7 @@
     setTimeout(returnToScienceUnit, 0);
   });
 
+  loadFirebaseAuthGate();
   detachLegacyExamControlHandlers();
   loadScienceBankMenuModule();
   loadEnglishGeptMenuModule();
