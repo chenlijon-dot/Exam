@@ -190,6 +190,10 @@
     let activePointerId = null;
     let lastX = 0;
     let lastY = 0;
+
+    let previousX = 0;
+    let previousY = 0;
+
     let localHasInk = paperAnswerHasInk;
 
     function sizeCanvas() {
@@ -205,7 +209,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, cssW, cssH);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.9;
+      ctx.lineWidth = 2.7;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       return { cssW, cssH };
@@ -255,36 +259,49 @@
         const distance = Math.hypot(dx, dy);
 
         /*
-         * Ignore tiny capacitive jitter.
-         * This is deliberately very small so handwriting still
-         * feels immediate.
+         * Remove only very tiny capacitive noise.
+         * Do not filter normal handwriting movement.
          */
-        if (distance < 0.35) {
+        if (distance < 0.22) {
           continue;
         }
 
-        const midX = (lastX + p.x) * 0.5;
-        const midY = (lastY + p.y) * 0.5;
+        /*
+         * Preserve the actual sampled points.
+         * Control points are calculated around lastX/lastY,
+         * but the stroke endpoint remains the real pointer point.
+         */
+        const cp1X =
+          lastX + (lastX - previousX) * 0.18;
+
+        const cp1Y =
+          lastY + (lastY - previousY) * 0.18;
+
+        const cp2X =
+          p.x - (p.x - lastX) * 0.18;
+
+        const cp2Y =
+          p.y - (p.y - lastY) * 0.18;
 
         ctx.beginPath();
         ctx.moveTo(lastX, lastY);
 
-        /*
-         * A midpoint quadratic segment removes the angular
-         * "connect-the-dots" appearance without adding a frame
-         * of latency.
-         */
-        ctx.quadraticCurveTo(
-          lastX,
-          lastY,
-          midX,
-          midY
+        ctx.bezierCurveTo(
+          cp1X,
+          cp1Y,
+          cp2X,
+          cp2Y,
+          p.x,
+          p.y
         );
 
         ctx.stroke();
 
-        lastX = midX;
-        lastY = midY;
+        previousX = lastX;
+        previousY = lastY;
+
+        lastX = p.x;
+        lastY = p.y;
       }
 
       localHasInk = true;
@@ -304,6 +321,9 @@
 
       lastX = p.x;
       lastY = p.y;
+
+      previousX = p.x;
+      previousY = p.y;
 
       ctx.beginPath();
       ctx.moveTo(lastX, lastY);
@@ -384,7 +404,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, r.width, r.height);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.9;
+      ctx.lineWidth = 2.7;
       localHasInk = false;
     });
     $('#paperCanvasDoneBtn', overlay)?.addEventListener('click', () => {
