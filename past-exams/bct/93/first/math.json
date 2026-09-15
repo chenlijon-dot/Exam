@@ -21,7 +21,7 @@
   },
   "questions": [
     {"number":1,"q":"已知甲＝\\(4\\frac38\\)、乙＝\\(4\\times\\frac38\\)、丙＝\\(4+\\frac38\\)，比較甲、乙、丙三數的大小，下列敘述何者正確？","o":["甲＝乙","甲＝丙","甲＜乙","甲＜丙"],"a":1,"fixedOptions":true},
-    {"number":2,"q":"求 \\(\left(-\\frac17\right)\\div\\frac1{42}\\times\\frac56\\div\left(-\\frac58\right)\\) 之值為何？","o":["8","-8","\\(\\frac{288}{25}\\)","\\(-\\frac{288}{25}\\)"],"a":0,"fixedOptions":true},
+    {"number":2,"q":"求 \\((-\\frac17)\\div\\frac1{42}\\times\\frac56\\div(-\\frac58)\\) 之值為何？","o":["8","-8","\\(\\frac{288}{25}\\)","\\(-\\frac{288}{25}\\)"],"a":0,"fixedOptions":true},
     {"number":3,"q":"小明以 8 折優待的價錢買了一些文具，共花了 x 元；若沒有此優待，則小明原本應付多少元？","o":["\\(x\\times\\frac8{10}\\)","\\(x\\div\\frac8{10}\\)","\\(2+x\\)","\\(8+x\\)"],"a":1,"fixedOptions":true},
     {"number":4,"q":"如圖(一)，將長方形分成六塊大小相同的正方形，則斜線區域面積與原長方形面積的比值為何？","o":["\\(\\frac46\\)","\\(\\frac47\\)","\\(\\frac5{12}\\)","\\(\\frac7{12}\\)"],"a":3,"fixedOptions":true,"imageAlt":"第4題由六個等大正方形組成的長方形與斜線區域","image":"past-exams/bct/93/first/assets/math/q04-shaded-rectangle.png"},
     {"number":5,"q":"\\(x=2\\) 不是下列哪一個方程式的解？","o":["\\(3(x-2)=0\\)","\\(2x^2-3x=2\\)","\\((x-2)(x+2)=0\\)","\\(x^2-x+2=0\\)"],"a":3,"fixedOptions":true},
