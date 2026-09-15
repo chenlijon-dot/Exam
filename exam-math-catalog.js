@@ -190,6 +190,17 @@
     const ctx = canvas.getContext('2d', { alpha: false });
     let drawing = false;
     let activePointerId = null;
+
+    /*
+     * SM-T220 reports both capacitive stylus and palm as
+     * pointerType "touch", and contact size is not reliable.
+     *
+     * Therefore we do not choose the drawing pointer on
+     * pointerdown. A pointer must first demonstrate deliberate
+     * movement before it becomes the active writing pointer.
+     */
+    const pointerCandidates = new Map();
+
     let lastX = 0;
     let lastY = 0;
 
@@ -309,10 +320,83 @@
     }
 
     function drawPointerSamples(e) {
-      if (!drawing || e.pointerId !== activePointerId) return;
-
       if (e.cancelable) {
         e.preventDefault();
+      }
+
+      /*
+       * No active writing pointer yet:
+       * evaluate this pointer as a candidate.
+       */
+      if (activePointerId === null) {
+        const candidate =
+          pointerCandidates.get(e.pointerId);
+
+        if (!candidate) return;
+
+        const p = pointFromEvent(e);
+
+        const dx = p.x - candidate.lastX;
+        const dy = p.y - candidate.lastY;
+
+        candidate.distance +=
+          Math.hypot(dx, dy);
+
+        candidate.lastX = p.x;
+        candidate.lastY = p.y;
+        candidate.moves += 1;
+
+        /*
+         * A real writing stroke normally starts moving
+         * immediately. A resting palm usually does not.
+         *
+         * Require both:
+         *   - at least 2 movement events
+         *   - at least 2.4 px total movement
+         *
+         * Once promoted, start drawing from the original
+         * pointerdown location so the beginning of the stroke
+         * is not lost.
+         */
+        if (
+          candidate.moves >= 2 &&
+          candidate.distance >= 2.4
+        ) {
+          activePointerId = e.pointerId;
+          drawing = true;
+
+          lastX = candidate.startX;
+          lastY = candidate.startY;
+
+          previousX = lastX;
+          previousY = lastY;
+
+          try {
+            canvas.setPointerCapture?.(
+              e.pointerId
+            );
+          } catch {}
+
+          ctx.beginPath();
+          ctx.moveTo(lastX, lastY);
+          ctx.lineTo(
+            lastX + 0.01,
+            lastY + 0.01
+          );
+          ctx.stroke();
+
+          localHasInk = true;
+        } else {
+          return;
+        }
+      }
+
+      /*
+       * Once a writing pointer has been chosen,
+       * every other simultaneous contact is ignored.
+       */
+      if (e.pointerId !== activePointerId) {
+        return;
       }
 
       const samples =
@@ -409,13 +493,32 @@
     }
 
     canvas.addEventListener('pointerdown', e => {
-      if (activePointerId !== null) return;
-
       e.preventDefault();
 
-      activePointerId = e.pointerId;
-      drawing = true;
+      const p = pointFromEvent(e);
 
+      /*
+       * Do not immediately claim this pointer.
+       * A resting palm should remain only a candidate.
+       */
+      pointerCandidates.set(
+        e.pointerId,
+        {
+          startX: p.x,
+          startY: p.y,
+          lastX: p.x,
+          lastY: p.y,
+          distance: 0,
+          moves: 0,
+          startedAt: performance.now()
+        }
+      );
+
+      /*
+       * Do not call setPointerCapture yet.
+       * We only capture the pointer after it proves to be
+       * the writing pointer.
+       */
       debugPointerType = e.pointerType || '-';
 
       debugWidth =
@@ -432,34 +535,6 @@
         typeof e.pressure === 'number'
           ? e.pressure
           : 0;
-
-      if (debugHud) {
-        debugHud.textContent =
-          `pointer : ${debugPointerType}\n` +
-          `stream  : starting...\n` +
-          `Hz      : measuring...\n` +
-          `samples : measuring...\n` +
-          `avgDist : measuring...\n` +
-          `contact : ${debugWidth.toFixed(1)} x ${debugHeight.toFixed(1)} px\n` +
-          `pressure: ${debugPressure.toFixed(3)}`;
-      }
-
-      canvas.setPointerCapture?.(e.pointerId);
-
-      const p = pointFromEvent(e);
-
-      lastX = p.x;
-      lastY = p.y;
-
-      previousX = p.x;
-      previousY = p.y;
-
-      ctx.beginPath();
-      ctx.moveTo(lastX, lastY);
-      ctx.lineTo(lastX + 0.01, lastY + 0.01);
-      ctx.stroke();
-
-      localHasInk = true;
     }, { passive: false });
 
     /*
@@ -488,13 +563,18 @@
     }
 
     function finishStroke(e) {
-      if (e.pointerId !== activePointerId) return;
+      pointerCandidates.delete(
+        e.pointerId
+      );
 
       /*
-       * Do not draw another segment on pointerup.
-       * Capacitive stylus coordinates often shift slightly while
-       * leaving the glass, producing an unwanted hook or tail.
+       * Palm/finger candidate that never became the pen:
+       * nothing else to do.
        */
+      if (e.pointerId !== activePointerId) {
+        return;
+      }
+
       if (e.cancelable) {
         e.preventDefault();
       }
@@ -502,7 +582,9 @@
       drawing = false;
 
       try {
-        canvas.releasePointerCapture?.(e.pointerId);
+        canvas.releasePointerCapture?.(
+          e.pointerId
+        );
       } catch {}
 
       activePointerId = null;
