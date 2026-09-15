@@ -34,6 +34,15 @@
     document.head.appendChild(script);
   }
 
+  function loadEnglishGeptMenuModule() {
+    if (document.getElementById('englishGeptMenuModule')) return;
+    const script = document.createElement('script');
+    script.id = 'englishGeptMenuModule';
+    script.src = `exam-english-gept.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function returnToScienceUnit() {
     const shell = document.getElementById('catalogShell');
     const startScreen = document.getElementById('startScreen');
@@ -124,6 +133,7 @@
 
   detachLegacyExamControlHandlers();
   loadScienceBankMenuModule();
+  loadEnglishGeptMenuModule();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
