@@ -45,9 +45,59 @@
         min-height:50px;
       }
 
+      /* Android WebView / kiosk fullscreen viewport fix.
+         Override the legacy record modal rules from exam-records.js. */
+      .record-modal{
+        position:fixed!important;
+        top:0!important;
+        right:0!important;
+        bottom:0!important;
+        left:0!important;
+        inset:0!important;
+        width:100vw!important;
+        height:100vh!important;
+        height:100dvh!important;
+        box-sizing:border-box!important;
+        padding:max(14px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))!important;
+        overflow-x:hidden!important;
+        overflow-y:auto!important;
+        overscroll-behavior:contain;
+        align-items:center!important;
+        justify-content:center!important;
+        z-index:2147483647!important;
+      }
+      .record-modal.show{display:flex!important}
+      .record-box{
+        position:relative!important;
+        flex:0 0 auto!important;
+        width:min(820px,calc(100vw - 28px))!important;
+        max-width:100%!important;
+        max-height:calc(100vh - 28px)!important;
+        max-height:calc(100dvh - 28px)!important;
+        box-sizing:border-box!important;
+        overflow-x:hidden!important;
+        overflow-y:auto!important;
+        -webkit-overflow-scrolling:touch;
+      }
+      .record-content{min-width:0!important}
+      .token-input{box-sizing:border-box!important;max-width:100%!important}
+
       @media(max-width:620px){
         #startScreen #recordTools,
         .chapter-record-tools{grid-template-columns:1fr}
+
+        .record-modal{
+          align-items:flex-start!important;
+          padding-top:max(10px,env(safe-area-inset-top))!important;
+          padding-bottom:max(10px,env(safe-area-inset-bottom))!important;
+        }
+        .record-box{
+          width:100%!important;
+          max-height:calc(100vh - 20px)!important;
+          max-height:calc(100dvh - 20px)!important;
+          padding:16px!important;
+        }
+        .record-head{position:sticky;top:-16px;background:#fff;z-index:2;padding-top:8px}
       }
     `;
     document.head.appendChild(style);
