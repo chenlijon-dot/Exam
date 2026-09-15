@@ -5,6 +5,17 @@
   const SESSION_TOKEN_KEY = 'examRecords.githubToken.session';
   const DEVICE_TOKEN_KEY = 'examRecords.githubToken.device';
 
+  function isStudentExamApp() {
+    try {
+      return !!(
+        window.StudentExamNative &&
+        typeof window.StudentExamNative.scanGithubToken === 'function'
+      );
+    } catch {
+      return false;
+    }
+  }
+
   function triggerLegacyButton(id) {
     const button = document.getElementById(id);
     if (!button) {
@@ -14,25 +25,30 @@
     button.click();
   }
 
-  function restorePersistentToken() {
+  function getEffectiveToken() {
     try {
       const sessionToken = sessionStorage.getItem(SESSION_TOKEN_KEY) || '';
+
+      if (!isStudentExamApp()) {
+        return sessionToken;
+      }
+
       const deviceToken = localStorage.getItem(DEVICE_TOKEN_KEY) || '';
 
-      // Migrate an already configured session token to persistent device storage.
+      // StudentExam 專用 App：第一次升級時，把目前還活著的 session Token 搬到裝置儲存。
       if (!deviceToken && sessionToken) {
         localStorage.setItem(DEVICE_TOKEN_KEY, sessionToken);
         return sessionToken;
       }
 
-      // Restore the device token into the session expected by exam-records.js.
+      // App / WebView 重啟後，將裝置 Token 還原到 exam-records.js 使用的 sessionStorage。
       if (deviceToken && sessionToken !== deviceToken) {
         sessionStorage.setItem(SESSION_TOKEN_KEY, deviceToken);
       }
 
       return deviceToken || sessionToken;
     } catch (e) {
-      console.warn('Unable to restore GitHub token:', e);
+      console.warn('Unable to read GitHub token:', e);
       return '';
     }
   }
@@ -41,8 +57,14 @@
     try {
       const value = String(token || '').trim();
       if (!value) return false;
-      localStorage.setItem(DEVICE_TOKEN_KEY, value);
+
       sessionStorage.setItem(SESSION_TOKEN_KEY, value);
+
+      // 只有 StudentExam 專用 App 永久保存。
+      if (isStudentExamApp()) {
+        localStorage.setItem(DEVICE_TOKEN_KEY, value);
+      }
+
       return true;
     } catch (e) {
       console.warn('Unable to persist GitHub token:', e);
@@ -50,10 +72,12 @@
     }
   }
 
-  function clearPersistentToken() {
+  function clearTokenStorage() {
     try {
-      localStorage.removeItem(DEVICE_TOKEN_KEY);
       sessionStorage.removeItem(SESSION_TOKEN_KEY);
+
+      // 一併清除舊版本可能留下的裝置 Token。
+      localStorage.removeItem(DEVICE_TOKEN_KEY);
     } catch (e) {
       console.warn('Unable to clear GitHub token:', e);
     }
@@ -174,7 +198,7 @@
   function updateMainSyncButton() {
     const button = $('#mainGithubSyncBtn');
     if (!button) return;
-    const token = restorePersistentToken();
+    const token = getEffectiveToken();
     button.textContent = token ? '☁️ GitHub 同步設定 ✓' : '☁️ GitHub 同步設定';
   }
 
@@ -193,7 +217,7 @@
     content.appendChild(row);
 
     $('#mainGithubSyncBtn')?.addEventListener('click', () => {
-      restorePersistentToken();
+      getEffectiveToken();
       triggerLegacyButton('syncBtn');
       setTimeout(decorateSyncSettings, 0);
     });
@@ -221,11 +245,12 @@
     $('#scienceMethodWrongBtn')?.addEventListener('click', () => triggerLegacyButton('wrongBtn'));
   }
 
-  function updateDeviceTokenStatus() {
+  function updateTokenStatus() {
     const content = $('#syncModal .record-content');
     if (!content) return;
 
-    const token = restorePersistentToken();
+    const appMode = isStudentExamApp();
+    const token = getEffectiveToken();
     let status = $('#deviceTokenStatus');
 
     if (!status) {
@@ -237,22 +262,35 @@
     }
 
     status.className = `device-token-status ${token ? 'configured' : 'missing'}`;
-    status.textContent = token
-      ? `✓ 本機已設定 Token（${maskedToken(token)}）`
-      : '⚠ 本機尚未設定 Token';
+
+    if (appMode) {
+      status.textContent = token
+        ? `✓ 本學生機已設定 Token（${maskedToken(token)}）`
+        : '⚠ 本學生機尚未設定 Token';
+    } else {
+      status.textContent = token
+        ? `✓ 此瀏覽器工作階段已設定 Token（${maskedToken(token)}）`
+        : '⚠ 此瀏覽器工作階段尚未設定 Token';
+    }
 
     const syncStatus = $('#syncStatus');
     if (syncStatus && token && !/成功|失敗|測試中/.test(syncStatus.textContent || '')) {
-      syncStatus.textContent = '目前：本機已設定 Token。交卷後會自動同步到 GitHub。';
+      syncStatus.textContent = appMode
+        ? '目前：本學生機已設定 Token。交卷後會自動同步到 GitHub。'
+        : '目前：此瀏覽器工作階段已設定 Token。交卷後會自動同步到 GitHub。';
     }
 
     const saveBtn = $('#saveTokenBtn');
-    if (saveBtn) saveBtn.textContent = '儲存到本機';
+    if (saveBtn) {
+      saveBtn.textContent = appMode ? '儲存到本學生機' : '儲存到本次瀏覽工作階段';
+    }
 
     const notes = [...content.querySelectorAll('.record-note')];
-    const securityNote = notes.find(el => /sessionStorage|工作階段|關閉瀏覽器/.test(el.textContent || ''));
+    const securityNote = notes.find(el => /sessionStorage|工作階段|關閉瀏覽器|專用學生機模式/.test(el.textContent || ''));
     if (securityNote) {
-      securityNote.textContent = '專用學生機模式：Token 會保存在這台裝置，平板休眠、關閉後再開仍可使用；按「清除 Token」才會移除。畫面不會顯示完整 Token。';
+      securityNote.textContent = appMode
+        ? '專用學生機模式：Token 會保存在這台學生機，休眠、關閉 App 或重新啟動後仍可使用；按「清除 Token」才會移除。畫面不會顯示完整 Token。'
+        : '一般瀏覽器模式：Token 只保留在本次瀏覽工作階段，不永久保存；關閉分頁／瀏覽器工作階段後可能消失。請勿在公用電腦長期保留 Token。';
     }
 
     updateMainSyncButton();
@@ -263,8 +301,8 @@
     const content = $('#syncModal .record-content');
     if (!modal || !content) return;
 
-    restorePersistentToken();
-    updateDeviceTokenStatus();
+    getEffectiveToken();
+    updateTokenStatus();
 
     const saveBtn = $('#saveTokenBtn');
     if (saveBtn && saveBtn.dataset.devicePersistBound !== '1') {
@@ -273,7 +311,7 @@
         const value = $('#tokenInput')?.value?.trim() || '';
         if (value) {
           persistToken(value);
-          setTimeout(updateDeviceTokenStatus, 0);
+          setTimeout(updateTokenStatus, 0);
         }
       });
     }
@@ -284,8 +322,8 @@
       testBtn.addEventListener('click', () => {
         const value = $('#tokenInput')?.value?.trim() || '';
         if (value) persistToken(value);
-        else restorePersistentToken();
-        setTimeout(updateDeviceTokenStatus, 0);
+        else getEffectiveToken();
+        setTimeout(updateTokenStatus, 0);
       }, true);
     }
 
@@ -293,21 +331,21 @@
     if (clearBtn && clearBtn.dataset.devicePersistBound !== '1') {
       clearBtn.dataset.devicePersistBound = '1';
       clearBtn.addEventListener('click', () => {
-        clearPersistentToken();
-        setTimeout(updateDeviceTokenStatus, 0);
+        clearTokenStorage();
+        setTimeout(updateTokenStatus, 0);
       });
     }
   }
 
   function refreshLayout() {
-    restorePersistentToken();
+    getEffectiveToken();
     ensureMainSyncButton();
     ensureScienceMethodRecordTools();
     if ($('#syncModal.show')) decorateSyncSettings();
   }
 
   function init() {
-    restorePersistentToken();
+    getEffectiveToken();
     injectStyles();
     refreshLayout();
 
