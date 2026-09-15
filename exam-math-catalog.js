@@ -402,4 +402,10 @@
   } else {
     init();
   }
+
+  // Restore Android pull-to-refresh if the page is unloaded
+  // while the handwriting canvas is still active.
+  window.addEventListener('pagehide', () => {
+    setNativeDrawingMode(false);
+  });
 })();
