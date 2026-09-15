@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-05",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第五回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第五回",
+    "difficulty": "english-gept-elementary-reading-round-05",
+    "difficultyLabel": "第五回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceNote": "題目依使用者提供之《國中英文 全民英檢攻略 全》第五回實體書照片校正版建立，原書 p.35–42，共 35 題。未提供官方答案頁；答案依文法、語意與文章內容判讀建立。題組文章只在題組第一題顯示一次，後續題目共用同一題幹。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "第一部分：詞彙和結構",
+      "q": "Nick hasn’t decided his _____ — his dad wants him to study medicine as he did.",
+      "o": ["major", "measure", "mayor", "matter"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-school"],
+      "e": "答案是 (A) major。decide one’s major 表示『決定主修科目』；後文提到父親希望他念醫學，更能確認是在談大學主修。"
+    },
+    {
+      "number": 2,
+      "q": "Frank’s spent lots of time learning English just to improve his reading _____.",
+      "o": ["section", "ability", "safety", "activity"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-ability"],
+      "e": "答案是 (B) ability。reading ability 是『閱讀能力』。section 是部分，safety 是安全，activity 是活動。"
+    },
+    {
+      "number": 3,
+      "q": "After the accident happened for two weeks, the people were still asking who should be _____ for it.",
+      "o": ["additional", "certain", "responsible", "childish"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-responsibility"],
+      "e": "答案是 (C) responsible。be responsible for ... 表示『對……負責』。"
+    },
+    {
+      "number": 4,
+      "q": "The police were trying to find out what _____ the air crash.",
+      "o": ["caused", "accepted", "caught", "attempted"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-cause"],
+      "e": "答案是 (A) caused。警方想找出『是什麼造成空難』，cause 作動詞就是『造成、導致』。"
+    },
+    {
+      "number": 5,
+      "q": "Most people don’t like those who often _____. So, be humble, and don’t talk too much.",
+      "o": ["show up", "call on", "show off", "call off"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrasal-verb"],
+      "e": "答案是 (C) show off，表示『炫耀、賣弄』。後句說要謙虛，不要說太多，與 show off 語意相對。"
+    },
+    {
+      "number": 6,
+      "q": "In winter, we often put on _____ before going to bed.",
+      "o": ["patterns", "blouses", "pajamas", "panties"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-clothing"],
+      "e": "答案是 (C) pajamas。睡前通常換上『睡衣』。"
+    },
+    {
+      "number": 7,
+      "q": "Don’t _____ when others are talking.",
+      "o": ["interrupt", "indicate", "introduce", "influence"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-communication"],
+      "e": "答案是 (A) interrupt。interrupt someone 表示『打斷某人說話』。"
+    },
+    {
+      "number": 8,
+      "q": "What a nice dinner, honey! The restaurant is good, and the food is perfect. _____, it’s our anniversary — here’s to another 10 years!",
+      "o": ["After all", "All the time", "Above all", "All of a sudden"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-idiom"],
+      "e": "答案是 (A) After all，表示『畢竟、終究』。句意是餐廳與食物都很好，而且畢竟今天是結婚紀念日。"
+    },
+    {
+      "number": 9,
+      "q": "It’s hot here. Do you mind _____ the window for me?",
+      "o": ["to open", "you open", "opening", "you opening"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-verb-pattern"],
+      "e": "答案是 (C) opening。Do you mind + V-ing 是固定句型，表示『你介意做……嗎？』。"
+    },
+    {
+      "number": 10,
+      "q": "It’s been a while since we last met, _____?",
+      "o": ["isn’t it", "don’t we", "hasn’t it", "didn’t we"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-tag-question"],
+      "e": "答案是 (C) hasn’t it。主句 It’s been = It has been，附加問句依助動詞 has 形成 hasn’t it。"
+    },
+    {
+      "number": 11,
+      "q": "James should _____ the shot, but he didn’t — that’s why we lost!",
+      "o": ["make", "made", "have made", "making"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-modal-perfect"],
+      "e": "答案是 (C) have made。should have + p.p. 表示『本來應該做卻沒有做』；後面的 but he didn’t 正好呼應。"
+    },
+    {
+      "number": 12,
+      "q": "Not only Judy but Wendy _____ the drums well. They’re both marvelous!",
+      "o": ["play", "plays", "have played", "had played"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-subject-verb-agreement"],
+      "e": "答案是 (B) plays。not only A but B 作主詞時，動詞通常與較接近的主詞 B 一致；Wendy 是第三人稱單數，所以用 plays。"
+    },
+    {
+      "number": 13,
+      "q": "We really don’t know _____.",
+      "o": ["where does Tom live", "where Tom live", "where does Tom to live", "where Tom lives"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-indirect-question"],
+      "e": "答案是 (D) where Tom lives。間接問句要用直述句語序：疑問詞 + 主詞 + 動詞。"
+    },
+    {
+      "number": 14,
+      "q": "Remember to give us a call after you _____ in Moscow.",
+      "o": ["arriving", "arrive", "will arrive", "arrived"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-time-clause"],
+      "e": "答案是 (B) arrive。表示未來時間的 after 子句通常用現在式代替 will + V。"
+    },
+    {
+      "number": 15,
+      "q": "The typhoon _____ we talked about last week will hit tomorrow.",
+      "o": ["×", "where", "of which", "when"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-relative-clause"],
+      "e": "答案是 (A) ×。關係代名詞在子句中作 talked about 的受詞，可以省略：the typhoon (that/which) we talked about。"
+    },
+    {
+      "number": 16,
+      "section": "第二部分：段落填空",
+      "groupId": "round05-cloze-16-20",
+      "introLabel": "Questions 16–20｜Sandy 與 Mindy",
+      "intro": "Sandy and Mindy are twins. They go to the same school, and the same class. They not only look different, __16__ think differently. Sandy hates English, but it’s Mindy’s favorite. Sandy plays __17__ well, but Mindy knows nothing about music. Mindy loves going to concerts and baseball games, while Sandy reads novels and __18__ a diary. Although they’re so different, they have something in __19__ — they both treat others nicely, and love to make friends. They both care about friends, listen to what friends need, and try to help others as __20__ as they can. And above all, they are both my best friends — we three will be best friends — forever!",
+      "q": "第 16 空應填入哪一個選項？",
+      "o": ["and", "but", "also", "as well"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-correlation"],
+      "e": "答案是 (B) but。not only A, but B 可表『不只 A，而且 B』；此處表示她們不只外表不同，想法也不同。"
+    },
+    {
+      "number": 17,
+      "groupId": "round05-cloze-16-20",
+      "q": "第 17 空應填入哪一個選項？",
+      "o": ["badminton", "chess", "the flute", "jigsaw puzzles"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-context-vocabulary"],
+      "e": "答案是 (C) the flute。後文說 Mindy knows nothing about music，前面因此應填一種樂器。play the flute 是『吹長笛』。"
+    },
+    {
+      "number": 18,
+      "groupId": "round05-cloze-16-20",
+      "q": "第 18 空應填入哪一個選項？",
+      "o": ["writes", "keeps", "draws", "sticks"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-collocation"],
+      "e": "答案是 (B) keeps。keep a diary 是固定搭配，表示『寫日記／記日記』。"
+    },
+    {
+      "number": 19,
+      "groupId": "round05-cloze-16-20",
+      "q": "第 19 空應填入哪一個選項？",
+      "o": ["comment", "comma", "command", "common"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-idiom"],
+      "e": "答案是 (D) common。have something in common 表示『有共同之處』。"
+    },
+    {
+      "number": 20,
+      "groupId": "round05-cloze-16-20",
+      "q": "第 20 空應填入哪一個選項？",
+      "o": ["possible", "more possibly", "possibly", "most possibly"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-adverb"],
+      "e": "依原書選項判讀答案為 (C) possibly。原句印作 try to help others as possibly as they can，這在自然英文中不理想；較自然會寫 as much as they can 或 as much as possible。此處保留原書題文與選項。"
+    },
+    {
+      "number": 21,
+      "section": "第二部分：段落填空",
+      "groupId": "round05-cloze-21-25",
+      "introLabel": "Questions 21–25｜全家一起做家事",
+      "intro": "Who in your family __21__ most of the housework? In mine, frankly, it was Mom before. We didn’t __22__ how busy and tired Mom was until she got seriously ill one year ago. During the days Mom was in the hospital, the __23__ of our family began to share the house chores. Until then, we realized how great Mom was! It appeared that Mom had a second job at home after work. From then on, each of our family __24__ as a team. For example, while Mom is busy cooking in the kitchen, I __25__ the table. After we finish dinner, Dad does the dishes while my sister and I clean the dining room. Through working together, we not only have a clean house but talk and share more. The change makes every of my family busier a little, but happier a lot!",
+      "q": "第 21 空應填入哪一個選項？",
+      "o": ["do", "does", "have done", "is done"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-subject-verb-agreement"],
+      "e": "答案是 (B) does。Who 在此作主詞，問『家裡誰做大部分家事？』，一般現在式用 does。"
+    },
+    {
+      "number": 22,
+      "groupId": "round05-cloze-21-25",
+      "q": "第 22 空應填入哪一個選項？",
+      "o": ["respect", "regret", "realize", "refuse"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-context-vocabulary"],
+      "e": "答案是 (C) realize。家人直到媽媽生病，才『意識到』她有多忙、多累。"
+    },
+    {
+      "number": 23,
+      "groupId": "round05-cloze-21-25",
+      "q": "第 23 空應填入哪一個選項？",
+      "o": ["rest", "other", "least", "ones"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-pronoun"],
+      "e": "答案是 (A) rest。the rest of our family 表示『家裡其他的人／其餘家人』。"
+    },
+    {
+      "number": 24,
+      "groupId": "round05-cloze-21-25",
+      "q": "第 24 空應填入哪一個選項？",
+      "o": ["work", "worked", "have worked", "has worked"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-present-perfect", "english-gept-elementary-subject-verb-agreement"],
+      "e": "答案是 (D) has worked。From then on 常搭配現在完成式；主詞 each 是單數，因此用 has worked。"
+    },
+    {
+      "number": 25,
+      "groupId": "round05-cloze-21-25",
+      "q": "第 25 空應填入哪一個選項？",
+      "o": ["set", "damage", "fix", "order"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-collocation"],
+      "e": "答案是 (A) set。set the table 是固定片語，表示『擺餐具、準備餐桌』。"
+    },
+    {
+      "number": 26,
+      "section": "第三部分：閱讀理解",
+      "groupId": "round05-reading-26-27",
+      "introLabel": "Questions 26–27｜Jessie’s Sell Phones",
+      "intro": "Jessie’s Sell Phones\nSpecial Prices: June 16–30\n\nSTC\nFunction: Radio, MP4, Camera, touch screen, Internet, more than 40 games\nNT$20,000 → $12,000\nColor: Black, Gray, Blue\n\nSUSA\nFunction: Radio, MP4, camera, 20 games\nNT$8,000 → $3,980\nColor: Gray, Blue\n\nACERY\nFunction: Radio, camera, MP3, 10 games\nNT$7,500 → $2,900\nColor: White, Pink, Red",
+      "q": "Jane is looking for a cellphone that can listen to the radio and take photos. She likes dark colors but has only NT$5,000. Which cellphone can she buy?",
+      "o": ["STC.", "SUSA.", "ACERY.", "We don’t know."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-table"],
+      "e": "答案是 (B) SUSA。Jane 需要收音機、相機、深色，且預算只有 NT$5,000。SUSA 售價 NT$3,980，有 Radio、camera，顏色有 Gray、Blue，全部符合。"
+    },
+    {
+      "number": 27,
+      "groupId": "round05-reading-26-27",
+      "q": "Ms. Smith bought two cellphones at Jessie’s Sell Phones on the last day of June. She bought two STCs. How much did she save during the sale?",
+      "o": ["$8,000.", "$12,020.", "$16,000.", "$24,000."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-calculation"],
+      "e": "答案是 (C) $16,000。STC 原價 NT$20,000，特價 NT$12,000，每支省 NT$8,000；兩支共省 NT$16,000。"
+    },
+    {
+      "number": 28,
+      "section": "第三部分：閱讀理解",
+      "groupId": "round05-reading-28-29",
+      "introLabel": "Questions 28–29｜Carrie 寫給 Tom 的信",
+      "intro": "Dear Tom,\n\nI tried to ring you yesterday, but I couldn’t get hold of you — your phone was always busy. Next week I’m going on a vacation, and I really can’t wait to leave. My parents are also excited. Well, Dad is a bit nervous, though. He’s afraid his English won’t be good enough. At night, he and Mom sit down and study together. It’s really funny because sometimes I have to help them with their English. By the way, Mom’s English is far better than Dad’s.\n\nMom’s already packed our bags. She’s making all of us bring extra clothes, because she heard the weather in Britain changes all the time. She is calling me, so I’d better go. I’ll send you a postcard when we get to London.\n\nYours, Carrie",
+      "q": "Why is Carrie’s father nervous?",
+      "o": ["He’s never been out of the country.", "He’s worried about speaking English.", "He’s gone to England before.", "He still hasn’t packed."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (B)。文章直接說 Dad is a bit nervous，因為 He’s afraid his English won’t be good enough，所以他擔心英文溝通。"
+    },
+    {
+      "number": 29,
+      "groupId": "round05-reading-28-29",
+      "q": "Why has Carrie’s mother packed extra clothes?",
+      "o": ["She is expecting good weather.", "She is too poor to buy new clothes.", "She’s afraid the weather will be different.", "Their suitcases are too light."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (C)。母親要求大家多帶衣服，是因為她聽說 Britain 的天氣 changes all the time，也就是擔心天氣多變。"
+    },
+    {
+      "number": 30,
+      "section": "第三部分：閱讀理解",
+      "groupId": "round05-reading-30-32",
+      "introLabel": "Questions 30–32｜Peter 與 Mary 的跨年夜",
+      "intro": "When the clock struck midnight on January 1, 2001, Peter and Mary were sitting at home sick. They had planned to go to the City Hall, but they decided to stay at home instead. Mary had had a tough week at work. Peter had also been working overtime and he just wanted to spend a quiet evening at home with his wife. When Mary got home, she ordered a pizza. She had decided earlier that she didn’t want to cook on the last day of the year. Soon the delivery boy brought what she had ordered. After Peter got home, the two of them sat in front of the TV eating. After a short while, Mary didn’t feel well. When she tried to stand up, she felt dizzy. Peter wanted to ask her what was wrong, but before he could speak, he threw up all over the floor. In the end, Peter and Mary spent the first few hours of New Year’s Day in the bathroom. Afterwards they both wished they had gone out instead of ordering the pizza.",
+      "q": "Why didn’t Mary and Peter go to the City Hall?",
+      "o": ["They had already made another plan.", "They were too tired from work.", "They wanted to eat pizza.", "They didn’t have anything to wear."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-cause"],
+      "e": "答案是 (B)。Mary 工作一週很辛苦，Peter 也一直加班，兩人因此決定留在家裡安靜休息。"
+    },
+    {
+      "number": 31,
+      "groupId": "round05-reading-30-32",
+      "q": "Why did Mary order pizza?",
+      "o": ["She wanted to date the delivery boy.", "She didn’t want to cook that evening.", "She wanted Peter to pay for the dinner.", "She enjoyed pepperoni pizza."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (B)。文中明確說 She had decided earlier that she didn’t want to cook on the last day of the year。"
+    },
+    {
+      "number": 32,
+      "groupId": "round05-reading-30-32",
+      "q": "Why did Peter and Mary get sick?",
+      "o": ["The pizza they ate was bad.", "They had worked too hard during the week.", "The party they went to was a lot of fun.", "The delivery boy was disgusting."],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-inference"],
+      "e": "答案是 (A)。兩人吃完披薩不久都出現噁心、暈眩、嘔吐，最後還後悔叫了披薩；依上下文可推知披薩有問題。"
+    },
+    {
+      "number": 33,
+      "section": "第三部分：閱讀理解",
+      "groupId": "round05-reading-33-35",
+      "introLabel": "Questions 33–35｜如何交朋友",
+      "intro": "Some students have trouble making friends. They may study hard and get good grades, but they have few people to talk to. In fact, making friends is not that difficult. The following are some tips of building a friendship. First of all, smile often. Wearing a smile on the face can easily break the walls between people. Secondly, lend a helping hand to others. For example, you can teach your classmates if they have problems with school lessons. Helping others with their problems not only makes them happy, but makes a good relationship. Next, be a good listener. Many people like to share their lives, their happy moment and sad ones, so stay beside your friends when they have something to say. Last but not least, don’t try to make everyone your best friend. Everyone has different personalities and hobbies. You do not need to please all the people, so don’t be too sad if you can’t find a close friend at the moment. Just be yourself, and some day you will have some “really” good friends.",
+      "q": "What does the reading mainly talk about?",
+      "o": ["How to get good grades.", "How to help others.", "How to listen carefully.", "How to make good friends."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-main-idea"],
+      "e": "答案是 (D)。全文從微笑、幫助別人、傾聽，到做自己，都在說明『如何建立友誼、交到好朋友』。"
+    },
+    {
+      "number": 34,
+      "groupId": "round05-reading-33-35",
+      "q": "According to the writer, what is NOT a good way to make friends?",
+      "o": ["Smiling a lot.", "Helping others.", "Being a listener.", "Pleasing everyone."],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (D)。文章說 You do not need to please all the people，因此『討好每個人』不是作者建議的方法。"
+    },
+    {
+      "number": 35,
+      "groupId": "round05-reading-33-35",
+      "q": "What does the writer mean by saying “break the walls between people”?",
+      "o": ["Staying beside a friend.", "Lending a helping hand to others.", "Bringing people together easily.", "Shaking hands with your friends."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-figurative-language"],
+      "e": "答案是 (C)。break the walls between people 是比喻用法，指打破人與人之間的隔閡，讓彼此更容易親近、建立關係。"
+    }
+  ]
+}
