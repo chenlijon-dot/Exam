@@ -5,6 +5,14 @@
   const SESSION_TOKEN_KEY = 'examRecords.githubToken.session';
   const DEVICE_TOKEN_KEY = 'examRecords.githubToken.device';
 
+  function setTextIfChanged(el, text) {
+    if (el && el.textContent !== text) el.textContent = text;
+  }
+
+  function setClassIfChanged(el, className) {
+    if (el && el.className !== className) el.className = className;
+  }
+
   function isStudentExamApp() {
     try {
       return !!(
@@ -35,13 +43,11 @@
 
       const deviceToken = localStorage.getItem(DEVICE_TOKEN_KEY) || '';
 
-      // StudentExam 專用 App：第一次升級時，把目前還活著的 session Token 搬到裝置儲存。
       if (!deviceToken && sessionToken) {
         localStorage.setItem(DEVICE_TOKEN_KEY, sessionToken);
         return sessionToken;
       }
 
-      // App / WebView 重啟後，將裝置 Token 還原到 exam-records.js 使用的 sessionStorage。
       if (deviceToken && sessionToken !== deviceToken) {
         sessionStorage.setItem(SESSION_TOKEN_KEY, deviceToken);
       }
@@ -60,7 +66,6 @@
 
       sessionStorage.setItem(SESSION_TOKEN_KEY, value);
 
-      // 只有 StudentExam 專用 App 永久保存。
       if (isStudentExamApp()) {
         localStorage.setItem(DEVICE_TOKEN_KEY, value);
       }
@@ -75,8 +80,6 @@
   function clearTokenStorage() {
     try {
       sessionStorage.removeItem(SESSION_TOKEN_KEY);
-
-      // 一併清除舊版本可能留下的裝置 Token。
       localStorage.removeItem(DEVICE_TOKEN_KEY);
     } catch (e) {
       console.warn('Unable to clear GitHub token:', e);
@@ -86,8 +89,7 @@
   function maskedToken(token) {
     const value = String(token || '');
     if (!value) return '';
-    const tail = value.slice(-4);
-    return `••••${tail}`;
+    return `••••${value.slice(-4)}`;
   }
 
   function injectStyles() {
@@ -142,7 +144,6 @@
         border:1px solid #fed7aa;
       }
 
-      /* Do not depend on vh/dvh or flex centering in Android WebView. */
       .record-modal{
         position:fixed!important;
         top:0!important;
@@ -199,7 +200,7 @@
     const button = $('#mainGithubSyncBtn');
     if (!button) return;
     const token = getEffectiveToken();
-    button.textContent = token ? '☁️ GitHub 同步設定 ✓' : '☁️ GitHub 同步設定';
+    setTextIfChanged(button, token ? '☁️ GitHub 同步設定 ✓' : '☁️ GitHub 同步設定');
   }
 
   function ensureMainSyncButton() {
@@ -261,36 +262,34 @@
       else content.prepend(status);
     }
 
-    status.className = `device-token-status ${token ? 'configured' : 'missing'}`;
+    const statusClass = `device-token-status ${token ? 'configured' : 'missing'}`;
+    setClassIfChanged(status, statusClass);
 
-    if (appMode) {
-      status.textContent = token
-        ? `✓ 本學生機已設定 Token（${maskedToken(token)}）`
-        : '⚠ 本學生機尚未設定 Token';
-    } else {
-      status.textContent = token
-        ? `✓ 此瀏覽器工作階段已設定 Token（${maskedToken(token)}）`
-        : '⚠ 此瀏覽器工作階段尚未設定 Token';
-    }
+    const statusText = appMode
+      ? (token ? `✓ 本學生機已設定 Token（${maskedToken(token)}）` : '⚠ 本學生機尚未設定 Token')
+      : (token ? `✓ 此瀏覽器工作階段已設定 Token（${maskedToken(token)}）` : '⚠ 此瀏覽器工作階段尚未設定 Token');
+    setTextIfChanged(status, statusText);
 
     const syncStatus = $('#syncStatus');
     if (syncStatus && token && !/成功|失敗|測試中/.test(syncStatus.textContent || '')) {
-      syncStatus.textContent = appMode
+      const text = appMode
         ? '目前：本學生機已設定 Token。交卷後會自動同步到 GitHub。'
         : '目前：此瀏覽器工作階段已設定 Token。交卷後會自動同步到 GitHub。';
+      setTextIfChanged(syncStatus, text);
     }
 
     const saveBtn = $('#saveTokenBtn');
     if (saveBtn) {
-      saveBtn.textContent = appMode ? '儲存到本學生機' : '儲存到本次瀏覽工作階段';
+      setTextIfChanged(saveBtn, appMode ? '儲存到本學生機' : '儲存到本次瀏覽工作階段');
     }
 
     const notes = [...content.querySelectorAll('.record-note')];
-    const securityNote = notes.find(el => /sessionStorage|工作階段|關閉瀏覽器|專用學生機模式/.test(el.textContent || ''));
+    const securityNote = notes.find(el => /sessionStorage|工作階段|關閉瀏覽器|專用學生機模式|一般瀏覽器模式/.test(el.textContent || ''));
     if (securityNote) {
-      securityNote.textContent = appMode
+      const text = appMode
         ? '專用學生機模式：Token 會保存在這台學生機，休眠、關閉 App 或重新啟動後仍可使用；按「清除 Token」才會移除。畫面不會顯示完整 Token。'
         : '一般瀏覽器模式：Token 只保留在本次瀏覽工作階段，不永久保存；關閉分頁／瀏覽器工作階段後可能消失。請勿在公用電腦長期保留 Token。';
+      setTextIfChanged(securityNote, text);
     }
 
     updateMainSyncButton();
@@ -341,7 +340,6 @@
     getEffectiveToken();
     ensureMainSyncButton();
     ensureScienceMethodRecordTools();
-    if ($('#syncModal.show')) decorateSyncSettings();
   }
 
   function init() {
@@ -349,8 +347,12 @@
     injectStyles();
     refreshLayout();
 
-    const observer = new MutationObserver(refreshLayout);
-    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+    // Only watch DOM insertion/removal. Watching class changes caused the sync modal
+    // to retrigger itself and could create an endless MutationObserver loop.
+    const observer = new MutationObserver(() => {
+      refreshLayout();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
