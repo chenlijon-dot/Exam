@@ -32,6 +32,11 @@ jobs:
       - name: Stamp build version
         run: sed -i 's/__BUILD_SHA__/${{ github.sha }}/g' index.html
 
+      - name: Stamp homepage version timestamp
+        run: |
+          BUILD_TS="$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M')"
+          sed -i "s|__BUILD_TIMESTAMP__|${BUILD_TS}|g" exam-branding.js
+
       - name: Prevent legacy start-screen flash
         run: |
           # index.html still contains the original science difficulty selector as a legacy
@@ -39,6 +44,10 @@ jobs:
           # start screen in the deployed HTML from the first paint; catalog/runtime code
           # can still remove the hidden class later if it intentionally needs that screen.
           sed -i 's|<section id="startScreen">|<section id="startScreen" class="hidden">|' index.html
+
+      - name: Enable homepage branding
+        run: |
+          sed -i 's|</body>|<script src="exam-branding.js?v=${{ github.sha }}"></script></body>|' index.html
 
       - name: Enable in-app browser history
         run: |
