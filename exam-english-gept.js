@@ -6,7 +6,7 @@
 
   const GEPT_ELEMENTARY_ROUNDS = [
     { key: '01', title: '第一回', pages: 'p.1–9', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-01.json' },
-    { key: '02', title: '第二回', pages: 'p.11–18', ready: true, total: 26, partial: true, note: '缺 Q7–15', path: 'chapter-bank/english/gept/elementary/reading/round-02.json' },
+    { key: '02', title: '第二回', pages: 'p.11–18', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-02.json', supplementPath: 'chapter-bank/english/gept/elementary/reading/round-02-q07-15.json' },
     { key: '03', title: '第三回', pages: 'p.19–26', ready: false, total: 35 },
     { key: '04', title: '第四回', pages: 'p.27–34', ready: false, total: 35 },
     { key: '05', title: '第五回', pages: 'p.35–42', ready: false, total: 35 },
@@ -96,10 +96,7 @@
     let badge = '<span class="catalog-badge reference">資料已收錄</span>';
     let desc = `閱讀能力測驗｜35 題｜原書 ${round.pages}｜線上考題待建`;
 
-    if (round.ready && round.partial) {
-      badge = `<span class="catalog-badge reference">${round.total} 題已上線</span>`;
-      desc = `閱讀能力測驗｜目前 ${round.total} 題｜原書 ${round.pages}｜含逐題詳解與題組共用文章｜${round.note}`;
-    } else if (round.ready) {
+    if (round.ready) {
       badge = `<span class="catalog-badge reference">${round.total || 35} 題已上線</span>`;
       desc = `閱讀能力測驗｜${round.total || 35} 題｜原書 ${round.pages}｜含逐題詳解與題組共用文章`;
     }
@@ -125,7 +122,7 @@
       <button class="catalog-back" id="backGeptElementaryBtn">← 返回初級</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級　›　知識庫試題</div>
       <h2 class="catalog-title">請選擇回次</h2>
-      <p class="catalog-sub">第一回完整 35 題已上線；第二回先依目前已取得資料上線 26 題，原書 p.12 的 Q7–15 尚缺，不臆造題目。其餘回次待逐回建置。</p>
+      <p class="catalog-sub">第一回與第二回完整 35 題均已上線；其餘回次待逐回建置題目與詳解。</p>
       <div class="catalog-grid">
         ${GEPT_ELEMENTARY_ROUNDS.map(roundCard).join('')}
       </div>`);
@@ -147,7 +144,16 @@
       const response = await fetch(round.path, { cache: 'no-store' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
-      const questions = Array.isArray(data.questions) ? data.questions : [];
+      let questions = Array.isArray(data.questions) ? [...data.questions] : [];
+
+      if (round.supplementPath) {
+        const supplementResponse = await fetch(round.supplementPath, { cache: 'no-store' });
+        if (!supplementResponse.ok) throw new Error(`補充題目載入失敗 HTTP ${supplementResponse.status}`);
+        const supplement = await supplementResponse.json();
+        const extraQuestions = Array.isArray(supplement.questions) ? supplement.questions : [];
+        questions = questions.concat(extraQuestions).sort((a, b) => Number(a.number) - Number(b.number));
+      }
+
       if (!questions.length) throw new Error('題庫內容為空');
       if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
@@ -157,6 +163,10 @@
       window.examContexts = window.examContexts || {};
       window.examContexts[key] = {
         ...exam,
+        subtitle: `${questions.length} 題｜含逐題詳解`,
+        sourceNote: round.supplementPath
+          ? '第二回 Q1–35 均已依原書照片建立；Q7–15 由補上的 p.12 原始頁面補齊。題組文章只在題組第一題顯示一次。'
+          : exam.sourceNote,
         key,
         difficulty: key,
         examType: exam.examType || 'gept-elementary-reading',
