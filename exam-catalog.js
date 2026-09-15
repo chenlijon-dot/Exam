@@ -3,13 +3,22 @@
 
   const SUBJECTS = [
     { key: 'chinese', name: '國文', icon: '📖', enabled: true },
-    { key: 'english', name: '英文', icon: '🔤', enabled: false },
+    { key: 'english', name: '英文', icon: '🔤', enabled: true },
     { key: 'math', name: '數學', icon: '📐', enabled: false },
     { key: 'science', name: '自然', icon: '🔬', enabled: true },
     { key: 'social', name: '社會', icon: '🌏', enabled: false }
   ];
 
   const CHINESE_SEMESTERS = [
+    { key: '7-1', title: '七年級上學期', short: '一上' },
+    { key: '7-2', title: '七年級下學期', short: '一下' },
+    { key: '8-1', title: '八年級上學期', short: '二上' },
+    { key: '8-2', title: '八年級下學期', short: '二下' },
+    { key: '9-1', title: '九年級上學期', short: '三上' },
+    { key: '9-2', title: '九年級下學期', short: '三下' }
+  ];
+
+  const ENGLISH_SEMESTERS = [
     { key: '7-1', title: '七年級上學期', short: '一上' },
     { key: '7-2', title: '七年級下學期', short: '一下' },
     { key: '8-1', title: '八年級上學期', short: '二上' },
@@ -259,7 +268,7 @@
     document.title = '國中題庫';
     $('#catalogContent').innerHTML = `
       <h2 class="catalog-title">請選擇科目</h2>
-      <p class="catalog-sub">目前自然科已有正式題庫，國文第一冊已建立完整教材目錄。</p>
+      <p class="catalog-sub">目前國文、英文與自然已建立科目入口；教材與題庫內容持續擴充。</p>
       <div class="catalog-grid">
         ${SUBJECTS.map(s => `
           <button class="catalog-card" data-subject="${s.key}" ${s.enabled ? '' : 'disabled'}>
@@ -268,7 +277,61 @@
           </button>`).join('')}
       </div>`;
     $('[data-subject="chinese"]')?.addEventListener('click', showChineseSemesters);
+    $('[data-subject="english"]')?.addEventListener('click', showEnglishSemesters);
     $('[data-subject="science"]')?.addEventListener('click', showScienceSemesters);
+  }
+
+  function showEnglishSemesters() {
+    setHeader('英文科', '選擇年級、學期或全民英檢');
+    document.title = '英文科｜國中題庫';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
+      <div class="catalog-path">英文</div>
+      <h2 class="catalog-title">請選擇學期</h2>
+      <p class="catalog-sub">先建立七至九年級六學期架構，並加入全民英檢（GEPT）獨立練習入口；教材內容後續依實際課本與講義整理。</p>
+      <div class="catalog-grid">
+        ${ENGLISH_SEMESTERS.map(s => `
+          <button class="catalog-card" data-english-semester="${s.key}">
+            <span class="top"><strong>${s.title}</strong><span class="catalog-badge">${s.short}</span></span>
+            <span class="desc">查看章節建置狀態</span>
+          </button>`).join('')}
+        <button class="catalog-card chapter-card" id="englishGeptBtn">
+          <span class="top"><span class="icon">🎧</span><strong>全民英檢（GEPT）</strong><span class="catalog-badge reference">GEPT</span></span>
+          <span class="desc">獨立於校內學期教材，規劃初級、中級與中高級等級練習。</span>
+        </button>
+      </div>`;
+    $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
+    ENGLISH_SEMESTERS.forEach(s => $(`[data-english-semester="${s.key}"]`)?.addEventListener('click', () => showEnglishSemester(s.key)));
+    $('#englishGeptBtn')?.addEventListener('click', showEnglishGept);
+  }
+
+  function showEnglishSemester(semesterKey) {
+    const semester = ENGLISH_SEMESTERS.find(s => s.key === semesterKey);
+    if (!semester) return;
+    setHeader(`英文科｜${semester.title}`, '章節建置中');
+    document.title = `英文${semester.short}｜國中題庫`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backEnglishSemestersBtn">← 返回學期</button>
+      <div class="catalog-path">英文　›　${semester.title}（${semester.short}）</div>
+      <h2 class="catalog-title">章節尚待建立</h2>
+      <p class="catalog-sub">等實際英文課本／講義確認後，再依版本建立 Lesson、單字、文法、閱讀、聽力與題庫架構。</p>`;
+    $('#backEnglishSemestersBtn')?.addEventListener('click', showEnglishSemesters);
+  }
+
+  function showEnglishGept() {
+    setHeader('英文科｜全民英檢', 'GEPT 練習架構');
+    document.title = '全民英檢 GEPT｜英文題庫';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backEnglishSemestersBtn">← 返回英文</button>
+      <div class="catalog-path">英文　›　全民英檢（GEPT）</div>
+      <h2 class="catalog-title">全民英檢（GEPT）</h2>
+      <p class="catalog-sub">先建立等級入口；後續再依實際教材與練習需求加入字彙、文法、閱讀與聽力題庫。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card" disabled><span class="top"><strong>初級</strong><span class="catalog-badge soon">待建</span></span><span class="desc">基礎字彙、文法、閱讀與聽力。</span></button>
+        <button class="catalog-card" disabled><span class="top"><strong>中級</strong><span class="catalog-badge soon">待建</span></span><span class="desc">中階字彙、文法、閱讀與聽力。</span></button>
+        <button class="catalog-card" disabled><span class="top"><strong>中高級</strong><span class="catalog-badge soon">待建</span></span><span class="desc">進階字彙、文法、閱讀與聽力。</span></button>
+      </div>`;
+    $('#backEnglishSemestersBtn')?.addEventListener('click', showEnglishSemesters);
   }
 
   function showChineseSemesters() {
