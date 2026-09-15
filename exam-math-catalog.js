@@ -51,6 +51,9 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
 
+  let paperAnswerDataUrl = '';
+  let paperAnswerHasInk = false;
+
   function setHeader(title, sub) {
     const titleEl = $('#catalogHeaderTitle');
     const subEl = $('#catalogHeaderSub');
@@ -63,13 +66,22 @@
   }
 
   function showMathSemesters() {
-    setHeader('數學科', '選擇年級與學期');
+    setHeader('數學科', '選擇作答方式或年級與學期');
     document.title = '數學科｜國中題庫';
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backMathSubjectsBtn">← 返回科目</button>
       <div class="catalog-path">數學</div>
-      <h2 class="catalog-title">請選擇學期</h2>
-      <p class="catalog-sub">七年級上學期已依實體課本目錄建立單元與小節架構；其他學期後續加入。</p>
+      <h2 class="catalog-title">數學練習</h2>
+      <p class="catalog-sub">可先進入紙筆作答測試；一般章節題庫則依年級與學期進入。</p>
+
+      <div style="margin:18px 0 24px">
+        <button class="catalog-card chapter-card" id="mathPaperPracticeBtn" style="width:100%;text-align:left;border:2px solid #93c5fd;background:#eff6ff">
+          <span class="top"><strong>✍️ 紙筆作答</strong><span class="catalog-badge reference">測試版</span></span>
+          <span class="desc">適合需要寫計算過程、畫圖或列式的題目。第一版先測試自由手寫畫布。</span>
+        </button>
+      </div>
+
+      <h2 class="catalog-title" style="font-size:1.12rem">章節題庫</h2>
       <div class="catalog-grid">
         ${MATH_SEMESTERS.map(s => `
           <button class="catalog-card" data-math-semester="${s.key}" ${s.enabled ? '' : 'disabled'}>
@@ -79,7 +91,193 @@
       </div>`;
 
     $('#backMathSubjectsBtn')?.addEventListener('click', restoreHome);
+    $('#mathPaperPracticeBtn')?.addEventListener('click', showPaperPractice);
     $('[data-math-semester="7-1"]')?.addEventListener('click', showMath71Units);
+  }
+
+  function showPaperPractice() {
+    setHeader('數學科｜紙筆作答', '自由手寫畫布測試');
+    document.title = '紙筆作答｜數學科';
+
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
+      <div class="catalog-path">數學　›　紙筆作答</div>
+      <h2 class="catalog-title">紙筆作答測試</h2>
+      <p class="catalog-sub">這一版先測試平板手寫、完成後產生作答縮圖。直尺、畫圓、橡皮擦與 Gemini 判題會沿用這個畫布架構繼續加入。</p>
+
+      <div style="background:#fff;border:1px solid #dfe5ee;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 4px 14px rgba(15,23,42,.04)">
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <span style="display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:#eef4ff;color:#2563eb;font-weight:800">1</span>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:1.08rem;font-weight:800;margin:2px 0 8px">請寫出計算過程並求出答案：</div>
+            <div style="font-size:1.42rem;font-weight:800;letter-spacing:.02em;margin:8px 0 16px">(-8) + (+13) = ?</div>
+            <button id="openMathPaperCanvasBtn" style="border:0;border-radius:12px;padding:11px 18px;font-size:1rem;font-weight:800;cursor:pointer;background:#2563eb;color:white">✍️ ${paperAnswerDataUrl ? '修改作答' : '作答'}</button>
+
+            <div id="paperAnswerPreview" style="${paperAnswerDataUrl ? '' : 'display:none;'}margin-top:16px">
+              <div style="font-size:.92rem;color:#64748b;margin-bottom:7px">已完成作答</div>
+              <button id="paperAnswerImageBtn" type="button" style="display:block;border:1px solid #cbd5e1;background:#fff;border-radius:12px;padding:6px;cursor:pointer;max-width:230px">
+                <img id="paperAnswerImage" alt="手寫作答縮圖" src="${paperAnswerDataUrl}" style="display:block;width:210px;max-width:100%;height:auto;border-radius:8px;background:#fff">
+              </button>
+              <div style="font-size:.82rem;color:#94a3b8;margin-top:5px">點縮圖可重新開啟並修改</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:sticky;bottom:0;background:rgba(246,248,251,.94);backdrop-filter:blur(10px);padding:12px 0 4px;display:flex;gap:10px;z-index:5">
+        <button id="submitPaperExamBtn" ${paperAnswerDataUrl ? '' : 'disabled'} style="border:0;border-radius:12px;padding:12px 18px;font-size:1rem;font-weight:800;cursor:${paperAnswerDataUrl ? 'pointer' : 'not-allowed'};background:${paperAnswerDataUrl ? '#15803d' : '#cbd5e1'};color:white;flex:1">交卷</button>
+      </div>
+      <div id="paperSubmitStatus" style="font-size:.9rem;color:#64748b;margin-top:8px"></div>`;
+
+    $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
+    $('#openMathPaperCanvasBtn')?.addEventListener('click', openPaperCanvas);
+    $('#paperAnswerImageBtn')?.addEventListener('click', openPaperCanvas);
+    $('#submitPaperExamBtn')?.addEventListener('click', () => {
+      const status = $('#paperSubmitStatus');
+      if (!paperAnswerDataUrl) return;
+      if (status) status.textContent = '✓ 已收到手寫作答。下一階段會把這張作答圖連同題目一起送給 Gemini 判題。';
+    });
+  }
+
+  function openPaperCanvas() {
+    if ($('#mathPaperCanvasOverlay')) return;
+
+    const oldOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const overlay = document.createElement('div');
+    overlay.id = 'mathPaperCanvasOverlay';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#eef2f7;display:flex;flex-direction:column;overscroll-behavior:none;touch-action:none';
+    overlay.innerHTML = `
+      <div style="flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:8px 10px;background:#0f172a;color:white;box-shadow:0 2px 8px rgba(15,23,42,.2)">
+        <button id="paperCanvasCancelBtn" type="button" style="border:0;border-radius:10px;padding:9px 13px;font-weight:800;background:#334155;color:white">取消</button>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">第 1 題｜(-8) + (+13) = ?</div>
+          <div style="font-size:.78rem;opacity:.78">用手指或觸控筆直接書寫</div>
+        </div>
+        <button id="paperCanvasClearBtn" type="button" style="border:0;border-radius:10px;padding:9px 13px;font-weight:800;background:#475569;color:white">清除</button>
+        <button id="paperCanvasDoneBtn" type="button" style="border:0;border-radius:10px;padding:9px 15px;font-weight:800;background:#22c55e;color:#052e16">完成</button>
+      </div>
+      <div id="paperCanvasStage" style="position:relative;flex:1;min-height:0;padding:10px;background:#e2e8f0;touch-action:none;overflow:hidden">
+        <canvas id="mathPaperCanvas" style="display:block;width:100%;height:100%;background:white;border-radius:8px;box-shadow:0 2px 12px rgba(15,23,42,.14);touch-action:none;user-select:none;-webkit-user-select:none"></canvas>
+      </div>`;
+    document.body.appendChild(overlay);
+
+    const canvas = $('#mathPaperCanvas', overlay);
+    const stage = $('#paperCanvasStage', overlay);
+    const ctx = canvas.getContext('2d', { alpha: false });
+    let drawing = false;
+    let activePointerId = null;
+    let lastX = 0;
+    let lastY = 0;
+    let localHasInk = paperAnswerHasInk;
+
+    function sizeCanvas() {
+      const rect = stage.getBoundingClientRect();
+      const cssW = Math.max(1, Math.floor(rect.width - 20));
+      const cssH = Math.max(1, Math.floor(rect.height - 20));
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.floor(cssW * dpr);
+      canvas.height = Math.floor(cssH * dpr);
+      canvas.style.width = `${cssW}px`;
+      canvas.style.height = `${cssH}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, cssW, cssH);
+      ctx.strokeStyle = '#111827';
+      ctx.lineWidth = 3.2;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      return { cssW, cssH };
+    }
+
+    const canvasSize = sizeCanvas();
+
+    function loadPreviousAnswer() {
+      if (!paperAnswerDataUrl) return;
+      const img = new Image();
+      img.onload = () => {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvasSize.cssW, canvasSize.cssH);
+        const scale = Math.min(canvasSize.cssW / img.width, canvasSize.cssH / img.height);
+        const w = img.width * scale;
+        const h = img.height * scale;
+        ctx.drawImage(img, 0, 0, img.width, img.height, (canvasSize.cssW - w) / 2, (canvasSize.cssH - h) / 2, w, h);
+      };
+      img.src = paperAnswerDataUrl;
+    }
+    loadPreviousAnswer();
+
+    function pointFromEvent(e) {
+      const r = canvas.getBoundingClientRect();
+      return { x: e.clientX - r.left, y: e.clientY - r.top };
+    }
+
+    canvas.addEventListener('pointerdown', e => {
+      if (activePointerId !== null) return;
+      e.preventDefault();
+      activePointerId = e.pointerId;
+      drawing = true;
+      canvas.setPointerCapture?.(e.pointerId);
+      const p = pointFromEvent(e);
+      lastX = p.x;
+      lastY = p.y;
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(lastX + 0.01, lastY + 0.01);
+      ctx.stroke();
+      localHasInk = true;
+    }, { passive: false });
+
+    canvas.addEventListener('pointermove', e => {
+      if (!drawing || e.pointerId !== activePointerId) return;
+      e.preventDefault();
+      const p = pointFromEvent(e);
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+      lastX = p.x;
+      lastY = p.y;
+      localHasInk = true;
+    }, { passive: false });
+
+    function finishStroke(e) {
+      if (e.pointerId !== activePointerId) return;
+      e.preventDefault();
+      drawing = false;
+      try { canvas.releasePointerCapture?.(e.pointerId); } catch {}
+      activePointerId = null;
+    }
+
+    canvas.addEventListener('pointerup', finishStroke, { passive: false });
+    canvas.addEventListener('pointercancel', finishStroke, { passive: false });
+    canvas.addEventListener('contextmenu', e => e.preventDefault());
+
+    function closeOverlay() {
+      document.body.style.overflow = oldOverflow;
+      overlay.remove();
+    }
+
+    $('#paperCanvasCancelBtn', overlay)?.addEventListener('click', closeOverlay);
+    $('#paperCanvasClearBtn', overlay)?.addEventListener('click', () => {
+      const r = canvas.getBoundingClientRect();
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, r.width, r.height);
+      ctx.strokeStyle = '#111827';
+      ctx.lineWidth = 3.2;
+      localHasInk = false;
+    });
+    $('#paperCanvasDoneBtn', overlay)?.addEventListener('click', () => {
+      if (!localHasInk) {
+        alert('畫布還是空白的，請先寫下作答內容。');
+        return;
+      }
+      paperAnswerDataUrl = canvas.toDataURL('image/png');
+      paperAnswerHasInk = true;
+      closeOverlay();
+      showPaperPractice();
+    });
   }
 
   function showMath71Units() {
@@ -160,7 +358,7 @@
       badge.textContent = '已建立';
       badge.classList.remove('soon');
     }
-    if (desc) desc.textContent = '進入科目選擇學期與章節';
+    if (desc) desc.textContent = '進入數學紙筆作答或選擇學期與章節';
 
     const sub = $('#catalogContent .catalog-sub');
     if (sub && sub.textContent.includes('國文、英文與自然')) {
