@@ -285,7 +285,7 @@
         'math-paper-test-001',
 
       question:
-        '(-8) + (+13) = ?',
+        'x² - 5x + 6 = 0，求 x 的所有解。',
 
       expectedAnswer:
         '5',
@@ -658,7 +658,7 @@
           <span style="display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:#eef4ff;color:#2563eb;font-weight:800">1</span>
           <div style="flex:1;min-width:0">
             <div style="font-size:1.08rem;font-weight:800;margin:2px 0 8px">請寫出計算過程並求出答案：</div>
-            <div style="font-size:1.42rem;font-weight:800;letter-spacing:.02em;margin:8px 0 16px">(-8) + (+13) = ?</div>
+            <div style="font-size:1.42rem;font-weight:800;letter-spacing:.02em;margin:8px 0 16px">x² - 5x + 6 = 0，求 x 的所有解。</div>
             <button id="openMathPaperCanvasBtn" style="border:0;border-radius:12px;padding:11px 18px;font-size:1rem;font-weight:800;cursor:pointer;background:#2563eb;color:white">✍️ ${paperAnswerDataUrl ? '修改作答' : '作答'}</button>
 
             <div id="paperAnswerPreview" style="${paperAnswerDataUrl ? '' : 'display:none;'}margin-top:16px">
@@ -795,7 +795,7 @@
       <div style="flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:8px 10px;background:#0f172a;color:white;box-shadow:0 2px 8px rgba(15,23,42,.2)">
         <button id="paperCanvasCancelBtn" type="button" style="border:0;border-radius:10px;padding:9px 13px;font-weight:800;background:#334155;color:white">取消</button>
         <div style="flex:1;min-width:0">
-          <div style="font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">第 1 題｜(-8) + (+13) = ?</div>
+          <div style="font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">第 1 題｜x² - 5x + 6 = 0</div>
           <div style="font-size:.78rem;opacity:.78">用手指或觸控筆直接書寫</div>
         </div>
         <button id="paperCanvasClearBtn" type="button" style="border:0;border-radius:10px;padding:9px 13px;font-weight:800;background:#475569;color:white">清除</button>
