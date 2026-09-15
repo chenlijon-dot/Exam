@@ -205,7 +205,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, cssW, cssH);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.6;
+      ctx.lineWidth = 2.9;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       return { cssW, cssH };
@@ -247,19 +247,46 @@
 
       if (!samples || samples.length === 0) return;
 
-      ctx.beginPath();
-      ctx.moveTo(lastX, lastY);
-
       for (const sample of samples) {
         const p = pointFromEvent(sample);
 
-        ctx.lineTo(p.x, p.y);
+        const dx = p.x - lastX;
+        const dy = p.y - lastY;
+        const distance = Math.hypot(dx, dy);
 
-        lastX = p.x;
-        lastY = p.y;
+        /*
+         * Ignore tiny capacitive jitter.
+         * This is deliberately very small so handwriting still
+         * feels immediate.
+         */
+        if (distance < 0.35) {
+          continue;
+        }
+
+        const midX = (lastX + p.x) * 0.5;
+        const midY = (lastY + p.y) * 0.5;
+
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+
+        /*
+         * A midpoint quadratic segment removes the angular
+         * "connect-the-dots" appearance without adding a frame
+         * of latency.
+         */
+        ctx.quadraticCurveTo(
+          lastX,
+          lastY,
+          midX,
+          midY
+        );
+
+        ctx.stroke();
+
+        lastX = midX;
+        lastY = midY;
       }
 
-      ctx.stroke();
       localHasInk = true;
     }
 
@@ -315,21 +342,10 @@
       if (e.pointerId !== activePointerId) return;
 
       /*
-       * Flush the final pointer position, because the last point
-       * can arrive with pointerup rather than pointerrawupdate.
+       * Do not draw another segment on pointerup.
+       * Capacitive stylus coordinates often shift slightly while
+       * leaving the glass, producing an unwanted hook or tail.
        */
-      if (drawing) {
-        const p = pointFromEvent(e);
-
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(p.x, p.y);
-        ctx.stroke();
-
-        lastX = p.x;
-        lastY = p.y;
-      }
-
       if (e.cancelable) {
         e.preventDefault();
       }
@@ -368,7 +384,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, r.width, r.height);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.6;
+      ctx.lineWidth = 2.9;
       localHasInk = false;
     });
     $('#paperCanvasDoneBtn', overlay)?.addEventListener('click', () => {
