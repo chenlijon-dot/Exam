@@ -139,8 +139,28 @@
     });
   }
 
+  function setNativeDrawingMode(enabled) {
+    try {
+      const nativeBridge = window.StudentExamNative;
+
+      if (
+        nativeBridge &&
+        typeof nativeBridge.setDrawingMode === 'function'
+      ) {
+        nativeBridge.setDrawingMode(!!enabled);
+      }
+    } catch (e) {
+      console.warn(
+        'StudentExam drawing-mode bridge unavailable:',
+        e
+      );
+    }
+  }
+
   function openPaperCanvas() {
     if ($('#mathPaperCanvasOverlay')) return;
+
+    setNativeDrawingMode(true);
 
     const oldOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -255,6 +275,7 @@
     canvas.addEventListener('contextmenu', e => e.preventDefault());
 
     function closeOverlay() {
+      setNativeDrawingMode(false);
       document.body.style.overflow = oldOverflow;
       overlay.remove();
     }
