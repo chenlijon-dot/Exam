@@ -17,7 +17,7 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": false,
-    "sourceNote": "題目與答案依 Google Drive 中《92年第二次數學科.pdf》原卷還原；原卷共 6 頁，第 1～5 頁為 31 題試題，第 6 頁為答案表。目前先完成文字、選項與答案；附圖／表格題以 imagePending 或 optionImagePending 標記，後續再以原卷裁圖補上。"
+    "sourceNote": "題目、選項、答案與附圖依 Google Drive 中《92年第二次數學科.pdf》原卷還原；原卷共 6 頁，第 1～5 頁為 31 題試題，第 6 頁為答案表。圖形、表格與選項圖均使用原卷裁圖。"
   },
   "questions": [
     {
@@ -34,7 +34,7 @@
       "a": 2,
       "fixedOptions": true,
       "imageAlt": "第2題三個等臂天平比較甲乙丙丁重量",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q02-balances.png"
     },
     {
       "number": 3,
@@ -50,7 +50,7 @@
       "a": 0,
       "fixedOptions": true,
       "imageAlt": "第4題坐標平面、直線 L 與 P Q R S 四點",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q04-coordinate-line.png"
     },
     {
       "number": 5,
@@ -66,7 +66,7 @@
       "a": 3,
       "fixedOptions": true,
       "optionImageAlt": "第6題四個三角形選項",
-      "optionImagePending": true
+      "optionImage": "past-exams/bct/92/second/assets/math/q06-options.png"
     },
     {
       "number": 7,
@@ -75,7 +75,7 @@
       "a": 1,
       "fixedOptions": true,
       "imageAlt": "第7題線型函數對應表，x 為 1、2、3、4 時，f(x) 分別為 3、β、3、γ",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q07-table.png"
     },
     {
       "number": 8,
@@ -98,7 +98,7 @@
       "a": 0,
       "fixedOptions": true,
       "imageAlt": "第10題平行線 L1 L2 被 L3 截得的八個角",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q10-parallel-lines.png"
     },
     {
       "number": 11,
@@ -128,7 +128,7 @@
       "a": 2,
       "fixedOptions": true,
       "imageAlt": "第14題直角三角形 ASH 與 SH 中垂線 L",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q14-right-triangle.png"
     },
     {
       "number": 15,
@@ -144,7 +144,7 @@
       "a": 2,
       "fixedOptions": true,
       "optionImageAlt": "第16題 A B O 在數線上的四種位置選項",
-      "optionImagePending": true
+      "optionImage": "past-exams/bct/92/second/assets/math/q16-options.png"
     },
     {
       "number": 17,
@@ -153,7 +153,7 @@
       "a": 2,
       "fixedOptions": true,
       "imageAlt": "第17題兩圓相交於 A B 且 C B D 共線",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q17-two-circles.png"
     },
     {
       "number": 18,
@@ -162,7 +162,7 @@
       "a": 0,
       "fixedOptions": true,
       "imageAlt": "第18題六圈正五邊形學生隊形",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q18-pentagon-formation.png"
     },
     {
       "number": 19,
@@ -171,7 +171,7 @@
       "a": 3,
       "fixedOptions": true,
       "imageAlt": "第19題方格中的四邊形甲乙丙丁",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q19-quadrilaterals-grid.png"
     },
     {
       "number": 20,
@@ -187,7 +187,7 @@
       "a": 1,
       "fixedOptions": true,
       "imageAlt": "第21題半徑 8 公分、圓心角 135 度的扇形",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q21-sector.png"
     },
     {
       "number": 22,
@@ -203,7 +203,7 @@
       "a": 0,
       "fixedOptions": true,
       "optionImageAlt": "第23題四個一次函數圖形選項",
-      "optionImagePending": true
+      "optionImage": "past-exams/bct/92/second/assets/math/q23-options.png"
     },
     {
       "number": 24,
@@ -231,7 +231,7 @@
       "a": 3,
       "fixedOptions": true,
       "imageAlt": "第26題圓、三弦 AB CD EF 及延長線交點 P Q",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q26-circle-chords.png"
     },
     {
       "number": 27,
@@ -247,7 +247,7 @@
       "a": 0,
       "fixedOptions": true,
       "imageAlt": "第28題籃球拋物線路徑與坐標平面",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q28-basketball-parabola.png"
     },
     {
       "number": 29,
@@ -265,7 +265,7 @@
       "a": 1,
       "fixedOptions": true,
       "imageAlt": "第30至31題獎金分配方式表：頭獎38%、貳獎12%、參獎15%、肆獎35%",
-      "imagePending": true
+      "image": "past-exams/bct/92/second/assets/math/q30-prize-table.png"
     },
     {
       "number": 31,
