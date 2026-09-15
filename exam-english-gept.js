@@ -193,19 +193,102 @@
       .gept-passage-btn:active{transform:translateY(1px)}
       #geptPassageModal{position:fixed;inset:0;z-index:9999;background:rgba(15,23,42,.5);display:flex;align-items:center;justify-content:center;padding:18px}
       #geptPassageModal.hidden{display:none}
-      .gept-passage-dialog{width:min(760px,100%);max-height:min(78vh,780px);background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.32);display:flex;flex-direction:column;overflow:hidden}
-      .gept-passage-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid #e2e8f0;background:#f8fafc}
-      .gept-passage-title{font-weight:850;color:#1e3a8a;flex:1}
-      .gept-passage-close{border:0;background:#e2e8f0;color:#334155;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer}
+      .gept-passage-dialog{width:min(760px,100%);max-height:min(78vh,780px);background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.32);display:flex;flex-direction:column;overflow:hidden;will-change:transform}
+      .gept-passage-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid #e2e8f0;background:#f8fafc;cursor:grab;user-select:none;touch-action:none}
+      .gept-passage-head.dragging{cursor:grabbing}
+      .gept-passage-title{font-weight:850;color:#1e3a8a;flex:1;pointer-events:none}
+      .gept-passage-close{border:0;background:#e2e8f0;color:#334155;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer;touch-action:manipulation}
       .gept-passage-body{padding:18px 20px;overflow:auto;white-space:pre-wrap;line-height:1.9;color:#1f2937;font-size:1rem}
       @media(max-width:620px){.gept-passage-btn{padding:4px 8px;font-size:.72rem}.gept-passage-dialog{max-height:84vh}.gept-passage-body{padding:15px 16px;font-size:.96rem}}
     `;
     document.head.appendChild(style);
   }
 
+  function makePassageDialogDraggable(modal) {
+    const dialog = $('.gept-passage-dialog', modal);
+    const head = $('.gept-passage-head', modal);
+    if (!dialog || !head || head.dataset.dragReady === '1') return;
+    head.dataset.dragReady = '1';
+
+    let pointerId = null;
+    let startX = 0;
+    let startY = 0;
+    let baseX = 0;
+    let baseY = 0;
+    let x = 0;
+    let y = 0;
+
+    const apply = () => {
+      dialog.style.transform = `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0)`;
+    };
+
+    const clampPosition = (nextX, nextY) => {
+      const rect = dialog.getBoundingClientRect();
+      const dx = nextX - x;
+      const dy = nextY - y;
+      const margin = 8;
+      let adjustedX = nextX;
+      let adjustedY = nextY;
+
+      if (rect.left + dx < margin) adjustedX += margin - (rect.left + dx);
+      if (rect.right + dx > window.innerWidth - margin) adjustedX -= (rect.right + dx) - (window.innerWidth - margin);
+      if (rect.top + dy < margin) adjustedY += margin - (rect.top + dy);
+      if (rect.bottom + dy > window.innerHeight - margin) adjustedY -= (rect.bottom + dy) - (window.innerHeight - margin);
+
+      return { x: adjustedX, y: adjustedY };
+    };
+
+    head.addEventListener('pointerdown', event => {
+      if (event.button !== undefined && event.button !== 0) return;
+      if (event.target.closest('.gept-passage-close')) return;
+      pointerId = event.pointerId;
+      startX = event.clientX;
+      startY = event.clientY;
+      baseX = x;
+      baseY = y;
+      head.classList.add('dragging');
+      head.setPointerCapture?.(pointerId);
+      event.preventDefault();
+    });
+
+    head.addEventListener('pointermove', event => {
+      if (pointerId === null || event.pointerId !== pointerId) return;
+      const proposed = clampPosition(
+        baseX + (event.clientX - startX),
+        baseY + (event.clientY - startY)
+      );
+      x = proposed.x;
+      y = proposed.y;
+      apply();
+      event.preventDefault();
+    });
+
+    const finishDrag = event => {
+      if (pointerId === null || (event?.pointerId !== undefined && event.pointerId !== pointerId)) return;
+      try { head.releasePointerCapture?.(pointerId); } catch (_) {}
+      pointerId = null;
+      head.classList.remove('dragging');
+    };
+
+    head.addEventListener('pointerup', finishDrag);
+    head.addEventListener('pointercancel', finishDrag);
+    head.addEventListener('lostpointercapture', finishDrag);
+
+    modal.resetPassageDialogPosition = () => {
+      pointerId = null;
+      x = 0;
+      y = 0;
+      head.classList.remove('dragging');
+      apply();
+    };
+  }
+
   function ensurePassageModal() {
     let modal = $('#geptPassageModal');
-    if (modal) return modal;
+    if (modal) {
+      makePassageDialogDraggable(modal);
+      return modal;
+    }
 
     modal = document.createElement('div');
     modal.id = 'geptPassageModal';
@@ -213,18 +296,20 @@
     modal.setAttribute('aria-hidden', 'true');
     modal.innerHTML = `
       <div class="gept-passage-dialog" role="dialog" aria-modal="true" aria-labelledby="geptPassageTitle">
-        <div class="gept-passage-head">
+        <div class="gept-passage-head" title="可用滑鼠或觸控拖曳移動">
           <div class="gept-passage-title" id="geptPassageTitle">題組內容</div>
           <button type="button" class="gept-passage-close" aria-label="關閉題組內容">×</button>
         </div>
         <div class="gept-passage-body" id="geptPassageBody"></div>
       </div>`;
     document.body.appendChild(modal);
+    makePassageDialogDraggable(modal);
 
     const close = () => {
       modal.classList.add('hidden');
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      modal.resetPassageDialogPosition?.();
     };
     $('.gept-passage-close', modal)?.addEventListener('click', close);
     modal.addEventListener('click', event => {
@@ -238,6 +323,7 @@
 
   function showPassagePopup(title, passage) {
     const modal = ensurePassageModal();
+    modal.resetPassageDialogPosition?.();
     $('#geptPassageTitle', modal).textContent = title || '題組內容';
     $('#geptPassageBody', modal).textContent = passage || '';
     modal.classList.remove('hidden');
