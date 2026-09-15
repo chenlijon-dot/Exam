@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-01",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第一回",
+    "subtitle": "35 題｜詞彙和結構・段落填空・閱讀理解",
+    "unit": "GEPT 初級閱讀能力｜第一回",
+    "difficulty": "english-gept-elementary-reading-round-01",
+    "difficultyLabel": "第一回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceNote": "題目依使用者提供之《國中英文 全民英檢攻略 全》第一回實體書照片校正版建立；保留原題號與選項順序。題組文章只顯示一次，後續題目共用同一題幹。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "第一部分：詞彙和結構",
+      "q": "The steak tonight made me full, but the _____ still look delicious.",
+      "o": ["deserts", "snacks", "desserts", "sweets"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-food", "english-gept-elementary-word-form"],
+      "e": "答案是 (C) desserts，意思是「甜點」。desert 是沙漠；snacks 是點心；sweets 泛指甜食。句意是牛排已讓我吃飽，但甜點看起來仍很可口。"
+    },
+    {
+      "number": 2,
+      "q": "Go straight ahead for 2 blocks. Turn left, and you’ll see it. You can’t _____ it!",
+      "o": ["see", "catch", "watch", "miss"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-direction"],
+      "e": "答案是 (D) miss。You can’t miss it 是常見說法，表示「你一定不會錯過／一定找得到」。前文已給出清楚路線，因此語意最合理。"
+    },
+    {
+      "number": 3,
+      "q": "Vivian was badly hurt in a car accident, so it is _____ for her to go to school today.",
+      "o": ["convenient", "illegal", "necessary", "impossible"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-adjective"],
+      "e": "答案是 (D) impossible。Vivian 在車禍中受重傷，因此今天去上學「不可能」。convenient 是方便的；illegal 是違法的；necessary 是必要的。"
+    },
+    {
+      "number": 4,
+      "q": "Mary doesn’t like the dress John bought her because she thinks it’s a bit out of _____.",
+      "o": ["attention", "mention", "fashion", "season"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrase"],
+      "e": "答案是 (C) fashion。out of fashion 是固定片語，表示「過時、不流行」。"
+    },
+    {
+      "number": 5,
+      "q": "Lily decided not to go shopping and _____ her sick two-year-old.",
+      "o": ["looked up", "looked after", "looked out", "looked into"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrasal-verb"],
+      "e": "答案是 (B) looked after。look after 表示「照顧」。Lily 沒去逛街，而留下來照顧生病的兩歲孩子。"
+    },
+    {
+      "number": 6,
+      "q": "Chinese eat with chopsticks, while Westerners eat with a knife and a _____.",
+      "o": ["stick", "fork", "napkin", "florist"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-dining"],
+      "e": "答案是 (B) fork。西式餐具常見搭配為 a knife and a fork。"
+    },
+    {
+      "number": 7,
+      "q": "The train is going through a long _____. I can’t talk with you on my cellphone now.",
+      "o": ["tunnel", "tower", "channel", "vase"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-vocabulary-transportation"],
+      "e": "答案是 (A) tunnel。火車正穿過長隧道，所以手機訊號可能不好。"
+    },
+    {
+      "number": 8,
+      "q": "Kevin _____ one of his old friends on the bus — they talked for a long time and forgot to get off!",
+      "o": ["ran through", "got through", "ran into", "broke into"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-phrasal-verb"],
+      "e": "答案是 (C) ran into。run into someone 表示「偶然遇見某人」。"
+    },
+    {
+      "number": 9,
+      "q": "_____ English with foreigners more helps improve my oral ability.",
+      "o": ["Speak", "Speaking", "Spoke", "Spoken"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-gerund-subject"],
+      "e": "答案是 (B) Speaking。句首需要一個可當主詞的形式，動名詞 Speaking English with foreigners 作整句主詞。"
+    },
+    {
+      "number": 10,
+      "q": "The ground is wet. It _____ last night!",
+      "o": ["must rain", "must be raining", "must rained", "must have rained"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-modal-perfect"],
+      "e": "答案是 (D) must have rained。由現在地面濕推測「昨晚一定下過雨」，對過去的肯定推測用 must have + p.p.。"
+    },
+    {
+      "number": 11,
+      "q": "Sue was sitting by the window _____ the novel “Twilight.”",
+      "o": ["to read", "reading", "read", "and read"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-participle"],
+      "e": "答案是 (B) reading。reading the novel 描述 Sue 坐在窗邊時同時進行的動作，可視為分詞片語補充說明。"
+    },
+    {
+      "number": 12,
+      "q": "Dad had a bad cold last week, and _____.",
+      "o": ["Mom was, too", "so was Mom", "so had Mom", "so did Mom"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-agreement-so"],
+      "e": "答案是 (D) so did Mom。前句實義動詞是 had（表示患感冒），過去式附和用 so + did + 主詞。"
+    },
+    {
+      "number": 13,
+      "q": "Mia _____ English since she was three.",
+      "o": ["learned", "was learning", "has learned", "would learn"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-present-perfect"],
+      "e": "答案是 (C) has learned。since she was three 表示從三歲持續到現在，主句用現在完成式。"
+    },
+    {
+      "number": 14,
+      "q": "When the earthquake came, I was the first one to feel the house _____.",
+      "o": ["shake", "shaked", "shaken", "shook"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-perception-verb"],
+      "e": "答案是 (A) shake。感官動詞 feel + 受詞 + 原形動詞，可表示感受到完整動作；shake 的過去式是 shook，不是 shaked。"
+    },
+    {
+      "number": 15,
+      "q": "Alishan, _____ is known for its view of sunrise, is a high mountain in southern Taiwan.",
+      "o": ["it", "who", "that", "which"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-relative-pronoun"],
+      "e": "答案是 (D) which。逗號後是非限定關係子句，先行詞 Alishan 為事物／地名，使用 which；非限定用法不能用 that。"
+    },
+    {
+      "number": 16,
+      "section": "第二部分：段落填空",
+      "groupId": "round01-cloze-16-20",
+      "introLabel": "題組｜Questions 16–20",
+      "intro": "Last July, I went on my first trip on an airplane. I was really nervous about the flight, but in the end, it wasn’t what I had thought. When I __16__ the plane, I tried to find my seat first. Once I got to my seat, I found I was __17__ next to an old man. Then I tried to put my carry-on bag onto the overhead compartment. The __18__ soon helped me put it up there because I wasn’t tall enough. After I sat down, the captain broadcast to take off. The man next to me had flown many times before and he could tell I was __19__. He told me not to worry, or I could chat with him for a while. __20__ we got off the ground, I felt OK and thought it was actually a smooth flight.",
+      "q": "Which answer best fits blank 16?",
+      "o": ["got into", "got off", "got on", "got out of"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-phrasal-verb"],
+      "e": "答案是 (C) got on。搭乘大型交通工具如 plane、bus、train 常用 get on；後文緊接著找座位，表示剛登機。"
+    },
+    {
+      "number": 17,
+      "groupId": "round01-cloze-16-20",
+      "q": "Which answer best fits blank 17?",
+      "o": ["seated", "sat", "sit", "sitted"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-passive-participle"],
+      "e": "答案是 (A) seated。be seated 表示「坐著／被安排坐在」。句型 found I was seated next to an old man 語法完整。"
+    },
+    {
+      "number": 18,
+      "groupId": "round01-cloze-16-20",
+      "q": "Which answer best fits blank 18?",
+      "o": ["clerk", "bank teller", "flight attendant", "shopkeeper"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-vocabulary-occupation"],
+      "e": "答案是 (C) flight attendant。情境在飛機上，協助乘客把隨身行李放入上方行李櫃的人是空服員。"
+    },
+    {
+      "number": 19,
+      "groupId": "round01-cloze-16-20",
+      "q": "Which answer best fits blank 19?",
+      "o": ["glad", "nervous", "upset", "relaxed"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-context-clue"],
+      "e": "答案是 (B) nervous。文章開頭已說 I was really nervous about the flight，而且老先生接著安慰他 not to worry，是明確上下文線索。"
+    },
+    {
+      "number": 20,
+      "groupId": "round01-cloze-16-20",
+      "q": "Which answer best fits blank 20?",
+      "o": ["So", "After", "Before", "Because"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-conjunction"],
+      "e": "答案是 (B) After。飛機離地之後，作者才覺得 OK，時間先後關係最合理。"
+    },
+    {
+      "number": 21,
+      "groupId": "round01-cloze-21-25",
+      "introLabel": "題組｜Questions 21–25",
+      "intro": "Jim Carrey is one of the most famous __21__ in Hollywood. He now makes about twenty million dollars per movie and is one of the highest paid actors in the world. He may be famous now, but life wasn’t always so easy for him.\n\nAt the age of 14, Jim’s father lost his job. The family had to move from Toronto, Canada, to __22__ city. The entire family, including Jim, his sisters and brother, all had to go to work in a(n) __23__. Jim worked as a janitor sweeping the floor and also as a security guard. He __24__ had to work eight hours a day as a worker, but also went to school at night. __25__, he dropped out of school. Jim Carrey’s life is a rags-to-riches story. He is now living a life he could have only dreamed about years ago.",
+      "q": "Which answer best fits blank 21?",
+      "o": ["doctors", "actors", "engineers", "lawyers"],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-context-clue"],
+      "e": "答案是 (B) actors。下一句直接說 he is one of the highest paid actors in the world，可由上下文判斷。"
+    },
+    {
+      "number": 22,
+      "groupId": "round01-cloze-21-25",
+      "q": "Which answer best fits blank 22?",
+      "o": ["other", "the other", "others", "another"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-another-other"],
+      "e": "答案是 (D) another。another + 單數可數名詞，表示「另一個城市」；another city 結構正確。"
+    },
+    {
+      "number": 23,
+      "groupId": "round01-cloze-21-25",
+      "q": "Which answer best fits blank 23?",
+      "o": ["hospital", "aquarium", "bakery", "factory"],
+      "a": 3,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-context-clue"],
+      "e": "答案是 (D) factory。後文說 Jim 當清潔工、警衛，並以 worker 身分每天工作八小時，factory 最符合整體情境。"
+    },
+    {
+      "number": 24,
+      "groupId": "round01-cloze-21-25",
+      "q": "Which answer best fits blank 24?",
+      "o": ["not only", "even though", "had better", "must"],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-correlative-conjunction"],
+      "e": "答案是 (A) not only。後面已有 but also went to school at night，形成 not only ... but also ... 的對等結構。"
+    },
+    {
+      "number": 25,
+      "groupId": "round01-cloze-21-25",
+      "q": "Which answer best fits blank 25?",
+      "o": ["At first", "In fact", "In the end", "After all"],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-cloze", "english-gept-elementary-discourse-marker"],
+      "e": "答案是 (C) In the end，表示「最後」。前文描述白天工作、晚上上學的辛苦生活，最後他輟學，語意銜接自然。"
+    },
+    {
+      "number": 26,
+      "section": "第三部分：閱讀理解",
+      "groupId": "round01-reading-26-27",
+      "introLabel": "題組｜Questions 26–27｜Personal Ad",
+      "intro": "Single, Male, 35\n\nI’m in search of that special woman of my dreams. I enjoy listening to music, playing tennis, eating at fine restaurants, and going to the movies. I’m 170 cm, dark hair, brown eyes, with a great sense of humor. If you are a single woman 25–35, who is fun and enjoys having a good time, then maybe we can get together sometime. No smokers.\n\nRespond to Box 6543.",
+      "q": "Where would this ad be seen?",
+      "o": ["On a tree.", "In a newspaper.", "In a bookstore.", "At a train station."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-text-type", "english-gept-elementary-reading-inference"],
+      "e": "答案是 (B) In a newspaper。內容是徵友分類廣告，並以 Respond to Box 6543 回覆，最符合報紙分類廣告形式。"
+    },
+    {
+      "number": 27,
+      "groupId": "round01-reading-26-27",
+      "q": "Who shouldn’t respond to this ad?",
+      "o": ["A woman that is twenty-seven.", "Someone that is a lot of fun.", "A person that smokes.", "Someone that isn’t married."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail", "english-gept-elementary-reading-condition"],
+      "e": "答案是 (C) A person that smokes。廣告最後明確寫 No smokers；其他條件如 27 歲、單身、個性有趣都符合徵友條件。"
+    },
+    {
+      "number": 28,
+      "groupId": "round01-reading-28-29",
+      "introLabel": "題組｜Questions 28–29｜Rosie’s Diner",
+      "intro": "Rosie’s Diner\nLunch Special\n\nA. Steak, Potato, and Salad — NT$150\nB. Chicken, Noodles, and Salad — NT$100\nC. Fish, Rice, and Salad — NT$100\n\n*All meals served with your choice of bread and beverage.\n*Add 10% service charge to the total.",
+      "q": "If the waitress serves you the fish special, what should she bring you?",
+      "o": ["Potato, salad, and coffee.", "Noodles, salad, and milk.", "Rice, salad, bread, and tea.", "Bread, juice, salad, and potato."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-menu", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (C)。Fish special 包含 fish、rice、salad，且所有餐點另附自選 bread 與 beverage，因此 rice, salad, bread, and tea 符合。"
+    },
+    {
+      "number": 29,
+      "groupId": "round01-reading-28-29",
+      "q": "What would be your total if you and a friend ordered two chicken specials?",
+      "o": ["NT$330.", "NT$230.", "NT$220.", "NT$130."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-quantitative", "english-gept-elementary-reading-menu"],
+      "e": "答案是 (C) NT$220。Chicken special 每份 NT$100，兩份共 NT$200；加 10% service charge 為 NT$20，因此總額 NT$220。"
+    },
+    {
+      "number": 30,
+      "groupId": "round01-reading-30-32",
+      "introLabel": "題組｜Questions 30–32｜Letter",
+      "intro": "Dear Aunt Susan,\n\nI’m sorry that I haven’t written you for a while. I’ve been busy with school and I haven’t had time. Today was a very busy day and I’m exhausted. I’m taking some really interesting classes this semester. The toughest class I have is American history. Now I know so much more. Next week I have finals. I’m a bit nervous about them, but I have a really nice study partner named Helen. She lives in my dorm and she’s been a great help to me. After finals we’re planning on going out for dinner to celebrate. I’d better get back to my books. Take care of yourself and tell everyone back home I said hello.\n\nLove,\nTara",
+      "q": "What is Tara’s letter mostly about?",
+      "o": ["Her new roommates.", "Her college dorm.", "What she’s doing at school.", "All of the new friends she has made."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-main-idea"],
+      "e": "答案是 (C) What she’s doing at school。信中主要談課業、American history、期末考與讀書夥伴 Helen，主題是 Tara 在學校的近況。"
+    },
+    {
+      "number": 31,
+      "groupId": "round01-reading-30-32",
+      "q": "What class does Tara mention in the letter?",
+      "o": ["Music.", "American History.", "Spanish.", "English."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (B) American History。文中直接寫 The toughest class I have is American history."
+    },
+    {
+      "number": 32,
+      "groupId": "round01-reading-30-32",
+      "q": "What is NOT TRUE about Helen?",
+      "o": ["She will have finals next week, too.", "She lives in the same dorm as Tara.", "Aunt Susan is her aunt, too.", "She helps Tara with her studies a lot."],
+      "a": 2,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-not-true", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (C)。文章只說 Tara 寫信給自己的 Aunt Susan，沒有任何資訊表示 Susan 也是 Helen 的阿姨；Helen 與 Tara 同住 dorm、是 study partner，並給 Tara 很多幫助。"
+    },
+    {
+      "number": 33,
+      "groupId": "round01-reading-33-35",
+      "introLabel": "題組｜Questions 33–35｜Stephen King",
+      "intro": "One of the best known writers of horror stories is Stephen King. Mr. King began writing when he was seven, but he didn’t become famous until he was in his late twenties.\n\nStephen King almost missed his chance to become famous. After he finished his first novel, Carrie, he threw it in the trash. Fortunately, his wife dug it out for him. Later the novel was published and it was soon made into a movie. Carrie became a bestseller. Later on he wrote many other novels which also sold well.\n\nIt has been said that Stephen King is the richest writer in the world. Many of his novels have been turned into films, some of which he has acted in and directed. A few years ago, Stephen King was hit by a car while he was walking near his apartment. The crash almost killed him, but it didn’t stop him from writing. He has continued to write and create books that win the hearts of millions of readers.",
+      "q": "Which of the following statements is false about Stephen King?",
+      "o": ["He started writing when he was very young.", "He has not had a lot of success as a writer.", "His wife took his first novel out of the trash can.", "He was badly injured in an accident."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-false", "english-gept-elementary-reading-detail"],
+      "e": "答案是 (B)。文章明確描述 Carrie 成為暢銷書、許多作品賣得很好且被拍成電影，因此說他「作家生涯沒有很多成功」是錯的。"
+    },
+    {
+      "number": 34,
+      "groupId": "round01-reading-33-35",
+      "q": "What has happened to many of Stephen King’s books?",
+      "o": ["They haven’t sold very well.", "They’ve been made into movies.", "They are available in three different languages.", "They have been thrown away."],
+      "a": 1,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (B)。文章寫 Many of his novels have been turned into films，表示許多作品被改編成電影。"
+    },
+    {
+      "number": 35,
+      "groupId": "round01-reading-33-35",
+      "q": "When did Stephen King begin writing?",
+      "o": ["When he was just a child.", "After he got married.", "Once he started acting.", "Ever since he became a director."],
+      "a": 0,
+      "fixedOptions": true,
+      "conceptIds": ["english-gept-elementary-reading-detail"],
+      "e": "答案是 (A)。第一段直接指出 Mr. King began writing when he was seven，因此他在孩童時期就開始寫作。"
+    }
+  ]
+}
