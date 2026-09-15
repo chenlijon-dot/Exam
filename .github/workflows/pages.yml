@@ -40,6 +40,12 @@ jobs:
           # can still remove the hidden class later if it intentionally needs that screen.
           sed -i 's|<section id="startScreen">|<section id="startScreen" class="hidden">|' index.html
 
+      - name: Enable in-app browser history
+        run: |
+          # Load the history bridge last so it can reuse the navigation callbacks already
+          # installed by catalog, past-exam, chapter-bank and runtime modules.
+          sed -i 's|</body>|<script src="exam-browser-history.js?v=${{ github.sha }}"></script></body>|' index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
