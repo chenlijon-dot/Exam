@@ -1,171 +1,104 @@
 # 各科各校段考題處理流程
 
-> 本文件定義 `Exam` 專案中「各科各校段考／公開題庫」的共同 SOP。
+> 本文件定義 `Exam` 專案中「各科各校段考／公開題庫」的共同母 SOP。
 >
 > 適用科目：**國文、英文、數學、自然、社會，以及後續新增科目。**
 >
-> `CHINESE_SCHOOL_EXAM_WORKFLOW.md` 是國文已實作的科目專屬範例，不代表其他科目必須照抄國文題型；其他科目沿用本文件的共同精神，再依實際考卷特性調整。
+> 本文件不把所有科目的題型硬壓成同一種格式；它統一的是：**來源、分類、答案驗證、provenance、GitHub 題庫建置、網站接線、重新歸類與驗證方式。**
 >
-> 核心原則：**共同資料規範要一致，但題型處理不能僵化。先忠實理解原卷，再決定最適合該科、該份考卷的資料結構與網站呈現。**
+> 科目專屬文件可以存在，例如國文的舊有補充文件；但若與本文件衝突，以本文件的共同資料治理原則為準。
+>
+> 最後更新：2026-09-15
 
 ---
 
-# 1. 共同骨架 + 科目／考卷適應層
+# 1. 核心目標
 
-所有科目先遵守共同骨架：
+收到一份學校段考卷，不是單純把 PDF 轉成 JSON，而是完成一條可持續維護的資料鏈：
 
 ```text
 原始題目卷 + 官方答案卷
         ↓
-完整讀卷／建立 census
+整卷 census
         ↓
-逐題分類索引
+Google Sheet 逐題索引
         ↓
-章節／課次／單元／concept mapping
+實際教材／canonical 教材知識庫比對
         ↓
-保留 provenance
+章節／課次／小節／concept mapping
         ↓
-轉成網站可作答資料
+題型與答案驗證
         ↓
-實機驗證
+GitHub chapter-bank
+        ↓
+各章節「各校題庫」網站入口
+        ↓
+作答／返回／再次進入／錯題／手機實測
+        ↓
+日後教材增加時重新掃 unknown／舊分類
 ```
 
-但真正轉題時，再依科目和原卷決定：
+最重要的不是「每題都一定要分到某一課」，而是：
 
 ```text
-這題是純文字嗎？
-是圖題嗎？
-是題組嗎？
-是閱讀測驗嗎？
-是實驗資料題嗎？
-是計算題嗎？
-是地圖／統計圖嗎？
-是紙筆作答嗎？
-有沒有特殊答案格式？
-```
-
-因此本 SOP 不是要求所有考卷長得一樣，而是要求：
-
-```text
-資料來源一致可追溯
-分類方式一致可維護
-答案驗證一致可靠
-呈現方式依考卷特性調整
+能確定才歸類
+不能確定就 unknown
+教材增加後可以重新判讀
+分類錯了可以回溯修正
+原始考卷永遠保留作為 evidence
 ```
 
 ---
 
-# 2. 三層資料角色
+# 2. 四層資料角色
+
+## 2.1 Google Drive = 原始 evidence + 教材 authority
+
+保存：
 
 ```text
-Google Drive
-→ 原始段考題目卷
-→ 官方答案卷
-→ 原始教材／講義／canonical 教材知識庫
-
-Google Sheet（各科可有自己的索引表）
-→ 每一題對應哪一課／章／單元／小節／能力範圍
-→ 保留尚未能確定的 unknown
-
-GitHub: chenlijon-dot/Exam
-→ 網站可直接使用的題庫 JSON
-→ 題目必要圖片 assets
-→ runtime / catalog / 題庫程式
+各校原始題目卷 PDF／圖片
+官方答案卷
+更正版／補充說明
+原始教材／課本／講義
+canonical 教材知識庫
 ```
 
-一句話：
+原卷用來核對：
 
 ```text
-Drive = 原始證據與教材 reference
-Sheet = 題目分類索引
-GitHub = 正式可作答題庫
+題號
+選項順序
+圖片
+題組範圍
+版面
+答案
+送分
+特殊答案碼
 ```
 
-Private `Exam-Record` 另負責：
+教材／canonical 用來判斷：
 
 ```text
-學生作答紀錄
-錯題
-AI request/result
-machine-readable curriculum
+這題真正出自哪一課／哪一章／哪一小節／哪個 concept
 ```
 
----
+## 2.2 Google Sheet = 逐題分類索引
 
-# 3. 標準作業流程
-
-收到一份新的各校段考後，依下列順序處理：
+各科可有自己的索引表，例如：
 
 ```text
-1. 找到原始題目卷
-2. 找到官方答案卷
-3. 確認學校／年度／學期／年級／科目／段考次別
-4. 完整讀完整份考卷，不只抽看幾題
-5. 建立整卷 census
-6. 逐題建立或更新 Google Sheet 索引
-7. 依實際教材判斷每題真正對應的課次／章節／單元／小節
-8. 必要時再掛 concept ID
-9. 判斷題型與是否需要圖片／題組／特殊 runtime
-10. 將可作答題目寫入對應 chapter-bank JSON
-11. 圖片題依原卷裁圖規則建立 asset
-12. 核對答案、選項順序、題號、來源與題數
-13. commit 到 GitHub main
-14. 確認 GitHub Pages deployment
-15. 實際進網站抽查作答、返回、計分、錯題與手機畫面
-16. 更新 README／索引
+國文科_各校段考題課次索引
+自然科_各校段考題章節索引
 ```
 
-若暫時沒有官方答案卷：
-
-```text
-可以先保存原卷
-可以先完成 census
-可以先建立 Sheet 索引
-可以先標記 pending
-
-不可把 AI 推測答案偽裝成官方答案
-不可在正式自動評量中設 answerVerified: true
-```
-
----
-
-# 4. 整份考卷 census
-
-在逐題拆解前，先盤點整份卷。
-
-至少確認：
-
-```text
-總題數
-大題結構
-單選／複選／填充／手寫題
-題組數
-圖題數
-閱讀文章
-表格／統計圖／地圖／實驗資料
-是否有共用選項
-是否有特殊答案碼
-是否有送分題
-是否跨多個單元
-```
-
-目的不是多做一張表，而是先知道「這份考卷到底長什麼樣」。
-
-不同考卷可能需要不同資料模型；不要還沒完整讀卷就套模板。
-
----
-
-# 5. Google Sheet 題目索引
-
-各科可有自己的 Google Sheet。
-
-最低建議欄位：
+最低欄位：
 
 ```text
 年分｜國中｜段考｜題號｜出自於
 ```
 
-後續可擴充：
+可擴充：
 
 ```text
 科目
@@ -179,36 +112,147 @@ concept ID
 備註
 ```
 
-`出自於` 依科目而定：
+Sheet 是「逐題 mapping 工作台」，不是原始題目本體。
+
+## 2.3 GitHub `chenlijon-dot/Exam` = 正式網站題庫
+
+保存：
 
 ```text
-國文 → 第一課〈夏夜〉、語文常識、跨文本閱讀
-英文 → Unit / Lesson / Reading / Grammar / Vocabulary
-數學 → 1-1 正負數、2-3 一元一次方程式……
-自然 → 1-2 科學方法、1-3 認識實驗室、2-1 生物體的基本構造……
-社會 → 地理／歷史／公民的章節、主題或能力範圍
+chapter-bank JSON
+題目必要 assets
+catalog
+runtime
+各校題庫載入與合併設定
+README / workflow
 ```
 
-無法可靠判斷時：
+## 2.4 Private `Exam-Record` = 個人學習結果
+
+保存：
 
 ```text
-unknown
+作答紀錄
+錯題
+AI request/result
+machine-readable curriculum
 ```
 
-不要為了讓表格看起來完整而硬猜。
+一句話：
 
-## 5.1 題號格式
+```text
+Drive       = 原始證據 + 教材 authority
+Sheet       = 逐題分類索引
+GitHub Exam = 正式可作答題庫
+Exam-Record = 個人學習結果
+```
 
-原卷有大題結構就保留：
+---
+
+# 3. 收到新考卷後的標準流程
+
+```text
+1. 在 Drive 找到題目卷
+2. 在 Drive 找到答案卷
+3. 確認學校／年度／學期／年級／科目／段考次別
+4. 完整閱讀整份考卷
+5. 建立 census
+6. 在 Google Sheet 建立整卷逐題索引
+7. 先做第一輪 chapter / lesson mapping
+8. 對不確定題回查 canonical 教材知識庫
+9. 無法可靠判斷的題標 unknown
+10. 判斷每題題型與 runtime 需求
+11. 以官方答案卷核對答案
+12. 只把已適合網站呈現的題目放入 GitHub 題庫
+13. pending 題保留但不混入正式自動評量
+14. 更新章節「各校題庫」載入設定
+15. 更新學校數／題數資訊
+16. 驗證 JSON、runtime、導航、返回、再次進入
+17. commit / push main
+18. Pages 部署後實機抽查
+19. 日後教材增加時重新掃 unknown 與低信心分類
+```
+
+沒有答案卷時仍可做：
+
+```text
+原卷保存
+census
+Sheet 索引
+章節初步 mapping
+pending 題目保存
+```
+
+但不可：
+
+```text
+把 AI 推測答案標成官方答案
+把未驗證題混進正式自動評量
+設 answerVerified: true
+```
+
+---
+
+# 4. 整卷 census：一定先看完整份考卷
+
+不要只抓到幾題像某章就開始拆題。
+
+至少盤點：
+
+```text
+總頁數
+總作答項目數
+大題結構
+單選
+複選
+填充
+改錯
+注音／國字
+計算
+證明
+手寫題
+閱讀／實驗／資料題組
+共用文章
+共用圖表
+地圖
+統計圖
+實驗圖
+圖片選項
+共用選項庫
+特殊答案碼
+送分題
+跨單元範圍
+```
+
+「總作答項目數」不一定等於印刷上的連續題號。
+
+例如：
+
+```text
+第一大題 8 格填空
+第二大題 10 格字音字形
+第三大題 8 格解釋
+第四大題 35 題選擇
+
+→ census 應知道共有 61 個作答項目
+```
+
+---
+
+# 5. Google Sheet 逐題索引規則
+
+## 5.1 題號忠實保留
+
+原卷有大題結構：
 
 ```text
 一-1
-一-2
-二-1
-三-19
+二-6
+三-2
+四-17
 ```
 
-連續題號就保留：
+原卷是連號：
 
 ```text
 1
@@ -217,140 +261,341 @@ unknown
 ...
 ```
 
-網站顯示序號和 `originalQuestionNumber` 是兩件事。
+Sheet 的題號與網站重新編排後的顯示序號不同。
+
+GitHub 題目要另保留：
+
+```json
+"originalQuestionNumber": "三-2"
+```
+
+## 5.2 unknown 是正式狀態，不是失敗
+
+無法可靠歸類：
+
+```text
+unknown
+```
+
+常見原因：
+
+```text
+版本不同
+教材尚未收集到該課
+補充教材
+一般語文／一般能力
+獨立閱讀
+跨章但缺乏足夠教學關聯
+只在某個選項中碰巧出現課文字詞
+```
+
+不能因為「看起來像」就硬歸課。
+
+## 5.3 Sheet 與 GitHub 必須同步修正
+
+若日後重新判定：
+
+```text
+unknown → 第三課
+第一課 → unknown
+第二課 → 第五課跨文本
+```
+
+要同步檢查：
+
+```text
+Google Sheet mapping
+GitHub 題庫位置
+lessonMapping / chapterTags / conceptIds
+runtime merge path
+學校數與題數顯示
+```
+
+不能只改 Sheet，不管網站；也不能網站搬題後 Sheet 還停在舊分類。
 
 ---
 
-# 6. 章節分類必須回到實際教材
+# 6. 章節分類：一定回到實際教材
 
-整份段考屬於「第一次段考」不代表所有題目都屬於同一章。
-
-每題依內容重新判定：
+分類優先順序：
 
 ```text
-subject
-semester
-unit / lesson
-section
-concept
-```
-
-例如自然目前已確認的教材樹：
-
-```text
-自然七上
-└─ 單元 1 生命現象與科學探究
-   ├─ 1-1 生命現象和生物圈
-   ├─ 1-2 科學方法
-   └─ 1-3 認識實驗室
-```
-
-若題目是變因控制，就應歸 `1-2 科學方法`；若是顯微鏡操作，就應歸 `1-3 認識實驗室`。
-
-分類優先依據：
-
-```text
-使用者提供的實際教材
+使用者提供的實際教材／正式課本
 → Google Drive canonical 教材知識庫
-→ 已確認 catalog
-→ 模型一般知識最後才輔助
+→ 已確認 catalog／目錄
+→ 原卷命題範圍文字
+→ 模型一般知識只作輔助
 ```
+
+## 6.1 不要用關鍵字機械分類
+
+錯誤例子：
+
+```text
+題目選項裡出現「童叟無欺」
+→ 就直接丟進〈吃冰的滋味〉
+```
+
+正確判斷要問：
+
+```text
+題目真正考的是什麼？
+正解所需知識是否來自這一課？
+這個概念是否在 canonical 教材中？
+若拿掉那個碰巧出現的選項，題目是否仍屬該課？
+```
+
+如果答案是否定的，就不要硬歸。
+
+## 6.2 跨文本可以歸課，但要有教學關聯
+
+例如：
+
+```text
+第三課〈吃冰的滋味〉（跨文本：飲食與懷舊）
+第五課〈論語選〉（跨文本：見賢思齊／自省）
+```
+
+成立條件：
+
+```text
+它測的是該課已教過的閱讀方法／主旨／修辭／價值概念／能力
+而不是單純主題有點像
+```
+
+## 6.3 新教材進來後要重新掃舊資料
+
+這是正式流程的一部分。
+
+```text
+canonical 教材新增到新課
+→ 回頭查 Google Sheet 的 unknown
+→ 也抽查以前低信心分類
+→ 能確定者重新 mapping
+→ 有誤歸者退回 unknown 或搬到正確章節
+→ 再同步 GitHub 題庫
+```
+
+因此：
+
+```text
+unknown = 可等待更多教材證據的暫存分類
+```
+
+不是永遠不處理。
 
 ---
 
-# 7. canonical 教材知識庫與段考分類的關係
+# 7. canonical 教材知識庫與段考的雙向關係
 
-各校段考不是獨立於教材之外。
-
-理想流程：
+主要方向：
 
 ```text
-原始教材／講義
-→ canonical 教材知識庫
-→ chapter / section / concept 架構
-→ 段考逐題 mapping
+教材
+→ canonical
+→ chapter / lesson / section / concept
+→ 段考 mapping
 ```
 
-若某題歸屬不清楚，先回 Drive 對應教材查證。
-
-如果段考揭露一個教材中尚未整理的重要考點：
+但段考也能提醒我們檢查教材整理是否缺漏：
 
 ```text
-段考發現新考點
-→ 回頭核對教材
-→ 若確實屬本章內容
-→ 更新 canonical
-→ 再更新 concept mapping
+某校反覆考某概念
+→ 回 canonical 查證
+→ 若教材確實有但 canonical 漏寫
+→ 補 canonical
 ```
 
-不要反過來只因某校出了一題，就憑空改寫課程範圍。
+不可：
+
+```text
+某校出了一題
+→ 就直接把該概念宣告成正式教材內容
+```
+
+一定要回原始教材驗證。
 
 ---
 
-# 8. 正式題庫 JSON 原則
+# 8. GitHub chapter-bank 目錄與檔案策略
 
-各校段考題來源類型統一：
+依現有 repository 的 catalog 建置，不自行另創平行命名。
+
+共同概念：
+
+```text
+chapter-bank/<subject>/<semester>/<chapter-or-lesson>/...
+```
+
+自然實例：
+
+```text
+chapter-bank/science/7-1/unit-01/section-02/
+```
+
+國文實例：
+
+```text
+chapter-bank/chinese/7-1/lesson-03/
+chapter-bank/chinese/7-1/language-01/
+```
+
+## 8.1 各校題庫與自編題完全分開
+
+```text
+practice-easy.json
+practice-medium.json
+practice-hard.json
+```
+
+屬於：
+
+```json
+"sourceType": "practice-generated"
+```
+
+各校真題屬於：
 
 ```json
 "sourceType": "school-exam"
 ```
 
-題庫路徑依既有 repository 結構：
+不可互相混用。
+
+## 8.2 推薦使用「每一來源批次 sidecar」
+
+實際運作已證明，當同一章節累積多校真題時，推薦：
 
 ```text
-chapter-bank/<subject>/<semester>/<unit-or-lesson>/<section>/school-exams.json
+school-exams.json                         # 可作 base / legacy bank
+school-exams-<school>-<year>.json        # 一校一批 sidecar
 ```
 
-目前自然實例：
+例如：
 
 ```text
-chapter-bank/science/7-1/unit-01/section-02/school-exams.json
+school-exams-siyu-114.json
+school-exams-yushan-114.json
+school-exams-zuoying-113.json
 ```
 
-實際路徑以 GitHub 最新 catalog／既有結構為準，不另創平行命名系統。
+好處：
 
-## 8.1 provenance
+```text
+來源清楚
+新增一校不必大改巨型 JSON
+容易回滾
+容易重新歸類
+答案待驗證時可獨立 pending
+不同學校不互相污染
+```
 
-每題至少盡量保留：
+若該章第一次建立各校題庫，也可以直接以第一個 sidecar 作 `bankPath`，不必為了形式硬建立空的 `school-exams.json`。
+
+## 8.3 runtime 合併，而不是人工複製
+
+網站可採：
+
+```text
+bankPath   = 主檔／第一個來源
+extraPaths = 其他學校 sidecar
+```
+
+載入時：
+
+```text
+依序 fetch
+→ 合併 questions
+→ 重新給網站顯示 number
+→ 保留 originalQuestionNumber
+```
+
+不要為了讓網站讀得到，就把同一題再複製進另一個 aggregate JSON。
+
+---
+
+# 9. school-exam JSON 最低資料規格
+
+建議來源層 metadata：
 
 ```json
 {
-  "school": "高雄市立大灣國中",
-  "year": "114",
-  "exam": "第一學期七年級第一次段考",
-  "originalQuestionNumber": "3",
-  "sourcePage": 1,
-  "answerVerified": true
+  "source": {
+    "school": "XX市立XX國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "原始題目卷.pdf",
+    "answerFile": "官方答案卷.pdf",
+    "answerVerified": true
+  }
 }
 ```
 
-未來可擴充：
+單題至少保留：
+
+```json
+{
+  "originalQuestionNumber": "17",
+  "school": "XX市立XX國中",
+  "year": "114",
+  "exam": "第一學期七年級第一次段考",
+  "type": "mcq",
+  "answerVerified": true,
+  "lessonMapping": "1-2 科學方法",
+  "q": "題目文字 [114 XX國中]",
+  "o": ["A", "B", "C", "D"],
+  "a": 1,
+  "e": "官方答案與必要解析"
+}
+```
+
+可再加入：
 
 ```text
-sourceFile
+sourcePage
 sourceUrl
-capturedAt
 chapterTags[]
 conceptIds[]
 verificationStatus
 notes
+introLabel
+intro
+image
+imageAlt
+optionImage
+optionImageAlt
 ```
 
-題目顯示可保留簡短來源：
+---
+
+# 10. provenance 絕對不能丟
+
+來源至少應能回答：
 
 ```text
-[114 大灣國中]
+哪一校？
+哪一年？
+哪次段考？
+原卷第幾題？
+答案是否官方核對？
+原始檔在哪裡？
 ```
 
-## 8.2 真實段考選項不亂序
+網站題幹可附簡短來源：
 
-```json
-"preserveOptionOrder": true
+```text
+[114 四育國中]
+[113 左營國中]
 ```
 
-真實段考的 A/B/C/D 位置是原卷的一部分，不做自編題那種選項隨機。
+但簡短顯示不能取代結構化 provenance。
 
-## 8.3 官方答案優先
+---
+
+# 11. 答案驗證與 pending 流程
+
+答案來源優先：
 
 ```text
 官方答案卷
@@ -360,28 +605,96 @@ notes
 > AI 推理只能最後輔助
 ```
 
-只有正式核對後才設：
+只有完成核對：
 
 ```json
 "answerVerified": true
 ```
 
+## 11.1 pendingQuestions
+
+答案還沒確認、特殊題型 runtime 尚未支援，或原卷需再人工視覺核對時，可放：
+
+```json
+"pendingQuestions": []
+```
+
+常見 status：
+
+```text
+pending-answer-key
+pending-answer-key-visual-verification
+pending-special-runtime
+pending-special-option-code-runtime
+```
+
+pending 原則：
+
+```text
+可以保存 provenance
+可以保存原題
+不可進正式 questions 自動評量
+```
+
+## 11.2 pending 升級成正式題
+
+取得官方答案後：
+
+```text
+找到 pending 題
+→ 依 school + year + originalQuestionNumber 確認身分
+→ 建立正式 question
+→ answerVerified = true
+→ 從 pendingQuestions 移除
+→ 不得同時留下正式題 + pending 重複副本
+```
+
+升級後重新計算：
+
+```text
+自動評量題數
+紙筆題數
+schoolCount
+網站 subtitle
+```
+
 ---
 
-# 9. 共通題型資料模型
+# 12. 真實段考選項順序
 
-## 9.1 一般單選題
+真實考題：
+
+```json
+"preserveOptionOrder": true
+```
+
+不能像自編題一樣隨機 A/B/C/D。
+
+理由：
+
+```text
+官方答案以原始選項位置為基礎
+特殊題碼可能與原順序有關
+後續人工比對原卷較容易
+```
+
+---
+
+# 13. 共通題型資料模型
+
+## 13.1 一般單選題
 
 ```json
 {
+  "type": "mcq",
   "q": "題目文字 [114 XX國中]",
   "o": ["A選項", "B選項", "C選項", "D選項"],
   "a": 2,
-  "e": "解析或答案依據"
+  "e": "解析"
 }
 ```
 
-`a` 為 0-based：
+答案 index：
 
 ```text
 A = 0
@@ -390,47 +703,61 @@ C = 2
 D = 3
 ```
 
-## 9.2 題組／閱讀／共用資料
+## 13.2 題組／閱讀／共用資料
 
 ```json
-"introLabel": "題組標題",
-"intro": "共用文章、情境、實驗描述或資料表說明"
+"introLabel": "題組名稱",
+"intro": "共用文章／情境／實驗描述／資料"
 ```
 
-可用於：
+適用：
 
-- 國文閱讀題組
-- 英文閱讀題組
-- 自然實驗題組
-- 社會資料判讀題組
-- 數學共用情境題
-
-## 9.3 紙筆題／非自動判分題
-
-```json
-"type": "manual-study"
+```text
+國文閱讀題組
+英文閱讀／克漏字
+數學共用情境
+自然實驗題組
+社會資料判讀
 ```
 
-可搭配：
+同題組的多題可重用同一段 intro；不要為了拆題而丟失共用文章。
+
+## 13.3 manual-study：紙筆題／不適合自動判分
 
 ```json
-"manualInstruction": "請在紙上作答；本題不列入自動計分。",
-"manualAnswer": "官方參考答案"
+{
+  "type": "manual-study",
+  "gradingMode": "manual",
+  "manualInstruction": "請在紙上作答；完成後自行核對。",
+  "manualAnswer": "官方參考答案"
+}
+```
+
+適用：
+
+```text
+國字注音
+改錯
+解釋
+翻譯
+計算過程
+證明
+作文式短答
 ```
 
 原則：
 
-- 可以收錄
-- 可以顯示答案
-- 不進自動正答率
-- 不進一般錯題統計
-- 不污染 AI 自動判分資料
+```text
+可收錄
+可顯示參考答案
+不進自動正答率
+不進一般錯題統計
+不污染 AI 自動判分
+```
 
-## 9.4 官方送分題
+## 13.4 官方送分題
 
-不要虛構正確選項。
-
-建議：
+不要虛構一個正確選項。
 
 ```json
 "officialDisposition": "送分"
@@ -438,43 +765,52 @@ D = 3
 
 並排除自動評量分母。
 
-## 9.5 特殊答案碼
+## 13.5 特殊答案碼／共用選項庫
 
 遇到：
 
 ```text
-AB / AC / BD / ABC ...
+AB / AC / BD / ABC
 ```
 
-先判斷究竟是：
+先判斷：
 
-- 真複選
-- 共用選項庫
-- 配對題
-- 特殊答案卡編碼
+```text
+真複選？
+共用選項庫？
+配對題？
+答案卡編碼？
+```
 
-不要看到多字母就直接做 checkbox。
+不要看到多字母就直接改成 checkbox。
+
+若 runtime 尚未支援：
+
+```text
+保留原題 + 官方答案碼
+→ pending-special-runtime
+```
 
 ---
 
-# 10. 圖片題規則（全科共同）
+# 14. 圖片題：全科共同規則
 
 核心：
 
 ```text
-原卷可直接裁圖
+原卷可裁圖
 → 優先使用原卷裁圖
 ```
 
-不是：
+不要：
 
 ```text
 原圖
-→ AI 理解
-→ 重新生成近似圖
+→ AI 看懂
+→ 重新生成一張類似圖
 ```
 
-圖片若會影響：
+只要圖片會影響：
 
 ```text
 題意
@@ -490,17 +826,17 @@ AB / AC / BD / ABC ...
 
 就必須保留原始視覺資訊。
 
-## 10.1 各科常見圖題
+## 14.1 常見圖題
 
 ```text
-國文：書法、字形、漫畫、廣告、信封、卡片、圖文閱讀
-英文：情境圖、圖片選項、廣告、菜單、時刻表、圖表
-數學：幾何、座標、方格、統計圖、摺紙、天平、圖形選項
-自然：實驗裝置、顯微圖、構造圖、流程圖、照片、數據圖表
-社會：地圖、歷史圖片、統計圖、區域分布、資料表
+國文：書法、漫畫、廣告、信封、圖文閱讀
+英文：情境圖、菜單、時刻表、廣告
+數學：幾何、座標、方格、統計圖、摺紙、圖形選項
+自然：實驗裝置、顯微圖、構造圖、流程圖、數據圖表
+社會：地圖、歷史圖片、統計圖、區域分布
 ```
 
-## 10.2 格式
+## 14.2 檔案格式
 
 優先：
 
@@ -508,9 +844,9 @@ AB / AC / BD / ABC ...
 原卷裁切 → PNG
 ```
 
-真正適合向量化且不改變資訊時才用 SVG。
+真正適合向量化且資訊不會改變才用 SVG。
 
-## 10.3 JSON 引用
+## 14.3 JSON
 
 ```json
 "image": ".../q05-figure.png",
@@ -524,147 +860,376 @@ AB / AC / BD / ABC ...
 "optionImageAlt": "第8題選項圖"
 ```
 
-## 10.4 asset 命名
+## 14.4 asset 命名
 
 ```text
 <school>-<year>-q<question>-figure.png
 <school>-<year>-q<question>-options.png
 ```
 
-例如：
+---
+
+# 15. 各章節「各校題庫」功能建置方式
+
+這一節是近期實作後正式確立的共同規則。
+
+## 15.1 章節已有題庫
+
+流程：
 
 ```text
-dayuan-114-q12-figure.png
+新增學校 sidecar JSON
+→ 加入該章 bank config 的 extraPaths
+→ schoolCount 改成「不同學校數」
+→ runtime 合併 questions
+→ 網站各校題庫直接進入混合真題
+```
+
+`schoolCount` 是：
+
+```text
+實際不同學校數
+```
+
+不是：
+
+```text
+JSON 檔數
+題目數
+```
+
+同一學校不同年度若 UI 要顯示「校數」，仍算同一校；若未來要顯示「來源批次數」，另設欄位，不混用。
+
+## 15.2 章節第一次有各校題庫
+
+需要同時做：
+
+```text
+1. 建立 chapter-bank 目錄（若尚無）
+2. 建立第一份 school-exam JSON
+3. catalog 顯示「各校題庫」卡
+4. runtime 建立 bank config
+5. 設定 lesson/chapter key
+6. 設定 backLabel
+7. 設定 loadingText
+8. 設定 schoolCount
+9. 測試可進入
+10. 測試返回後可再次進入
+```
+
+不要只有 JSON 有檔案，但網站入口仍是 disabled。
+
+## 15.3 不列學校清單，直接進混合真題
+
+目前的 UX 原則：
+
+```text
+點「各校題庫」
+→ 直接進入該章節全部已收錄的各校題目
+```
+
+題目本身以：
+
+```text
+[年份 XX國中]
+```
+
+標示來源。
+
+## 15.4 合併後重新編網站 display number
+
+runtime 可：
+
+```text
+合併多個 sidecar
+→ questions.forEach((q, i) => q.number = i + 1)
+```
+
+但永遠保留：
+
+```json
+"originalQuestionNumber": "原卷題號"
 ```
 
 ---
 
-# 11. 科目專屬適應規則
+# 16. 導航與 runtime 特別注意事項
 
-這一節是「共同 SOP 之上的科目適應層」。
+題庫不是「能打開一次」就算完成。
 
-不同科目不要求使用完全相同的題目結構。
-
-## 11.1 國文
-
-可能包含：
-
-- 課文理解
-- 字音字形
-- 注釋
-- 修辭
-- 國學常識
-- 跨文本閱讀
-- 閱讀題組
-- 手寫題
-
-允許「跨文本」歸課，但必須有明確教學關聯。
-
-例如：
+必測：
 
 ```text
-第一課〈夏夜〉（跨文本）
+進入各校題庫
+→ 作答／返回
+→ 回到章節題庫頁
+→ 再次點各校題庫
+→ 還能正常進入
 ```
 
-若只是模糊聯想則維持 `unknown`。
+## 16.1 disabled button 必須 reset
 
-國文已有：
+載入時可以暫時：
 
 ```text
-CHINESE_SCHOOL_EXAM_WORKFLOW.md
+button.disabled = true
 ```
 
-它是國文專屬細節補充，不是其他科目的硬性模板。
+但：
 
-## 11.2 英文
+```text
+載入成功
+載入失敗
+返回章節
+```
 
-可能包含：
+三條路徑都要恢復 enabled。
 
-- Vocabulary
-- Grammar
-- Dialogue
-- Cloze
-- Reading
-- Translation
-- Listening
-- 圖片／廣告／菜單／時刻表
+否則會出現：
 
-閱讀文章與共用情境用 `intro`。
+```text
+卡片看得到
+但返回後再也點不進去
+```
 
-若未來處理聽力：
+## 16.2 MutationObserver 不可自己觸發無限迴圈
+
+若 catalog 用 `MutationObserver` 自動 enhance UI：
+
+```text
+不要每次 observer 觸發都無條件重寫 textContent
+```
+
+建議：
+
+```js
+function setTextIfChanged(node, text) {
+  if (node && node.textContent !== text) node.textContent = text;
+}
+```
+
+否則可能：
+
+```text
+DOM 更新
+→ observer
+→ 再寫 DOM
+→ observer
+→ 無限循環
+→ 整頁卡死
+```
+
+此規則適用所有科目的動態 catalog。
+
+## 16.3 不要重複綁 click handler
+
+可用 dataset guard：
+
+```text
+data-direct-school-bank = 1
+```
+
+或科目自己的等價方式，確保同一按鈕不會重複綁多次。
+
+---
+
+# 17. 題數與 subtitle 計算
+
+混合題庫時應由實際載入結果計算：
+
+```text
+manualCount = manual-study 題數
+autoCount   = total - manualCount
+```
+
+subtitle 可顯示：
+
+```text
+XX 題自動評量＋YY 題紙筆練習
+```
+
+不要手寫一個永遠不更新的題數。
+
+新增／移除／重新歸類題目後，都要重新確認：
+
+```text
+頁面顯示題數
+評量分母
+紙筆題數
+schoolCount
+```
+
+---
+
+# 18. 重新歸類與搬題流程
+
+教材收集持續增加，因此「重新歸類」是正常維護工作。
+
+正式流程：
+
+```text
+1. 找出 Sheet 的 unknown 或低信心分類
+2. 讀最新 canonical
+3. 回看原始題目卷
+4. 判斷真正測驗概念
+5. 必要時回看官方答案與詳解
+6. 更新 Sheet
+7. 若 GitHub 已有該題：從錯誤章節移除
+8. 加入正確章節 sidecar
+9. 更新 lessonMapping / conceptIds
+10. 更新 runtime merge paths（若新章第一次有題）
+11. 更新 schoolCount
+12. 確認沒有重複題
+13. 實測網站
+```
+
+可能結果包括：
+
+```text
+unknown → 某章
+某章 → unknown
+某章 → 另一章
+某章 → 某章（跨文本）
+```
+
+## 18.1 寧可退回 unknown
+
+若重新查教材後發現原分類只是「碰巧出現課文詞語」：
+
+```text
+直接退回 unknown
+```
+
+這比讓錯誤 mapping 長期污染題庫更好。
+
+---
+
+# 19. 重複題與 sidecar 去重
+
+不同學校可能：
+
+```text
+完全相同題
+同題庫來源
+只換人名
+只換數字
+```
+
+處理原則：
+
+```text
+完全相同且希望節省資料
+→ 可共用題目內容並保留多 provenance
+
+實質不同
+→ 分開保存
+```
+
+同一來源 sidecar 內，重新跑匯入工具時應盡量做到 idempotent：
+
+```text
+用 school + year + originalQuestionNumber
+或其他穩定 key
+判斷 replace / skip
+```
+
+不要每跑一次 script 就新增一份重複題。
+
+---
+
+# 20. 科目適應層
+
+共同 SOP 不等於共同題型。
+
+## 20.1 國文
+
+常見：
+
+```text
+課文理解
+字音字形
+注釋
+修辭
+國學常識
+標點
+跨文本
+閱讀題組
+紙筆題
+```
+
+跨文本歸課必須有明確教學關聯。
+
+## 20.2 英文
+
+常見：
+
+```text
+Vocabulary
+Grammar
+Dialogue
+Cloze
+Reading
+Translation
+Listening
+廣告／菜單／時刻表／圖片情境
+```
+
+聽力若正式收錄，需另外保留：
 
 ```text
 音檔來源
-播放次數
-播放控制
-答案格式
+播放規則
+題組關聯
 ```
 
-須另訂規格，不先假設。
+## 20.3 數學
 
-## 11.3 數學
+常見：
 
-可能包含：
+```text
+純計算
+文字應用
+幾何
+作圖
+證明
+統計圖表
+```
 
-- 純計算
-- 文字應用
-- 幾何
-- 作圖
-- 證明／過程題
-- 統計圖表
+公式可用 KaTeX。
 
-公式優先 KaTeX。
+圖形比例、角度、座標、格點不得 AI 近似重畫。
 
-圖形題以原卷為準；角度、長度比例、格點、交點等不得 AI 近似重畫。
+## 20.4 自然
 
-紙筆計算或證明題若 runtime 不適合自動判分，可採 `manual-study`。
+常見：
 
-## 11.4 自然
+```text
+概念
+實驗設計
+變因判讀
+器材
+顯微圖
+構造圖
+流程圖
+數據圖表
+實驗題組
+```
 
-可能包含：
-
-- 基本概念
-- 實驗設計
-- 變因判讀
-- 實驗器材
-- 顯微鏡
-- 生物構造圖
-- 資料表
-- 統計圖
-- 實驗題組
-- 圖片辨識
-
-自然題尤其要保留完整實驗條件。
-
-不能為了縮短題目，把：
+不能為縮短題目而刪掉會影響答案的：
 
 ```text
 操縱變因
 控制變因
 應變變因
 材料差異
-溫度／時間／濃度
+溫度
+時間
+濃度
 ```
 
-刪到足以改變答案。
+## 20.5 社會
 
-自然分類應優先查：
-
-```text
-Google Drive canonical 教材知識庫
-```
-
-目前已實作：
-
-```text
-1-2 科學方法
-1-3 認識實驗室
-單元1 綜合複習
-```
-
-## 11.5 社會
-
-社會可再細分：
+可再分：
 
 ```text
 地理
@@ -672,321 +1237,284 @@ Google Drive canonical 教材知識庫
 公民
 ```
 
-常見資料：
-
-- 地圖
-- 時間軸
-- 歷史圖片
-- 統計圖
-- 表格
-- 法條／制度情境
-- 文字材料
-
-圖片、地圖與資料來源若是題意核心，保留原圖與原版面。
-
----
-
-# 12. 考卷特性優先原則
-
-除了科目差異，同一科的不同考卷也可能需要不同處理。
-
-例如同樣是自然科：
+常見：
 
 ```text
-A 校：40 題純單選
-B 校：25 題單選 + 2 組實驗題組
-C 校：大量顯微鏡／圖表圖題
-D 校：另有手寫實驗設計題
-```
-
-不能為了「統一格式」而把所有考卷壓成 40 題純文字單選。
-
-正式原則：
-
-```text
-先忠實保留原卷資訊
-→ 再利用共通 runtime 能力呈現
-→ runtime 不足時才擴充 runtime
-```
-
-不是：
-
-```text
-runtime 現在只會某種題型
-→ 所以強迫原卷改成那種題型
+地圖
+時間軸
+史料
+歷史圖片
+統計圖
+表格
+法條／制度情境
 ```
 
 ---
 
-# 13. Google Drive 原始檔規則
+# 21. 考卷特性優先於現有 runtime
 
-每份段考至少保存：
-
-```text
-題目卷
-答案卷
-```
-
-能取得時再保存：
+正確方向：
 
 ```text
-來源網址
-下載日期
-學校資訊
-版本／更正版說明
+忠實保留原卷
+→ 用現有 runtime 呈現
+→ runtime 不足時擴充 runtime
 ```
 
-原始檔是後續校對的最終 evidence，用於核對：
+錯誤方向：
 
-- OCR
-- 選項順序
-- 題號
-- 圖片
-- 排版
-- 題組範圍
-- 答案
-- 送分
-- 特殊格式
+```text
+runtime 現在只會四選一
+→ 所以把所有題目硬改成四選一
+```
 
-不要讓整理後 JSON 取代原卷。
+例如：
+
+```text
+注音題
+→ manual-study
+
+共用選項碼 AB / AC
+→ 保留原格式 pending
+
+閱讀文章
+→ intro + questions
+
+圖片選項
+→ optionImage
+```
 
 ---
 
-# 14. 重複題處理
+# 22. GitHub-first 與回本機的界線
 
-不同學校可能出現：
+## GitHub-first
+
+適合：
 
 ```text
-完全相同題
-只換人名
-只改數字
-同題庫來源的變形題
+Markdown
+JSON
+JavaScript
+HTML
+CSS
+純文字設定
 ```
 
-處理時先判斷：
+## 回本機 `E:\Exam`
+
+適合：
 
 ```text
-完全相同
-→ 可共用題目內容並保留多個 provenance
-
-實質不同
-→ 分開保存
+PNG / JPG
+PDF 裁圖
+旋轉／校正影像
+批次轉檔
+大量 sidecar 批次產生
+localhost 實際預覽
 ```
 
-不要只因學校不同就無限複製同一題，也不要因題目看起來很像就錯誤合併。
-
----
-
-# 15. 何時回本機 E:\Exam
-
-GitHub-first 適合：
-
-- Markdown
-- JSON
-- JavaScript
-- HTML / CSS
-- 純文字設定
-
-回本機適合：
-
-- PNG / JPG
-- PDF 裁圖
-- 旋轉／校正影像
-- 批次轉檔
-- 大量檔案操作
-- localhost 實際預覽
-
-流程：
+本機流程：
 
 ```text
-先確認 E:\Exam 同步 origin/main
-→ 處理 binary
-→ 更新 JSON
-→ localhost 驗證
-→ git add / commit
-→ pull --rebase
+git status
+→ 確認 working tree
+→ 必要時 git pull --rebase origin main
+→ 執行 patch / binary 處理
+→ JSON UTF-8 驗證
+→ git diff --check
+→ localhost 實測
+→ git add -A
+→ git diff --cached --check
+→ commit
+→ git pull --rebase origin main
 → push
+→ git status 應 clean
 ```
 
 working tree 不乾淨時不要硬 pull。
 
 ---
 
-# 16. 正式匯入前檢查清單
+# 23. 驗證清單
+
+每批正式匯入前至少檢查：
 
 ```text
 [ ] 題目卷來源正確
-[ ] 官方答案卷已尋找／核對
-[ ] 學校、年度、學期、年級、科目、段考名稱正確
-[ ] 已完整讀卷並建立 census
-[ ] 原始題號保存
-[ ] 原始選項順序保存
+[ ] 答案卷已尋找／核對
+[ ] 學校／年度／學期／年級／科目／段考名稱正確
+[ ] 已完整 census
+[ ] Sheet 每個作答項目有索引
+[ ] originalQuestionNumber 正確
+[ ] 原始選項順序保留
+[ ] preserveOptionOrder = true
 [ ] answerVerified 狀態正確
-[ ] Google Sheet／索引已更新
-[ ] 章節分類有教材依據
-[ ] unknown 沒有被硬猜
-[ ] 科目專屬規則已遵守
-[ ] 原卷特殊題型沒有被硬改成普通單選
-[ ] 圖片題保留重要視覺資訊
+[ ] unknown 沒有硬猜
+[ ] 跨文本有明確教學關聯
+[ ] pending 沒混進正式 questions
+[ ] pending 升級後舊 pending 已移除
+[ ] 圖題保留必要視覺資訊
 [ ] imageAlt / optionImageAlt 已補
-[ ] 紙筆題不污染自動計分
+[ ] 題組 intro 完整
+[ ] manual-study 不進自動評量分母
 [ ] 送分題沒有虛構答案
-[ ] 題組共用資料完整
-[ ] JSON 可被 runtime 載入
-[ ] 網站題數／評量分母正確
-[ ] 返回導航正常
-[ ] 作答紀錄／錯題功能符合該題型
+[ ] sidecar 沒重複題
+[ ] runtime merge paths 完整
+[ ] schoolCount 是不同學校數
+[ ] 題數／subtitle 與實際載入一致
+[ ] JSON UTF-8 可解析
+[ ] JS 無語法錯誤（可用環境允許的方式檢查）
+[ ] 返回章節正常
+[ ] 返回後可再次進各校題庫
+[ ] MutationObserver 無無限更新
+[ ] 作答／交卷／詳解正常
+[ ] 錯題／紀錄符合該題型
 [ ] 手機畫面可用
 [ ] GitHub Pages deployment 成功
-[ ] README 已更新
+[ ] Sheet 與 GitHub mapping 一致
+[ ] README／workflow 如有重大進度已更新
 ```
 
 ---
 
-# 17. 日常 ChatGPT 作業方式
+# 24. 日常 ChatGPT 作業方式
 
-沒有 binary asset：
+## 純文字考題
 
 ```text
-讀 Drive 題目卷＋答案卷
-→ 讀 canonical 教材（需要分類時）
-→ 建立／更新 Sheet 索引
-→ 讀 GitHub 最新 main
-→ 更新 chapter-bank / catalog / runtime
+讀 Drive 原卷 + 答案卷
+→ census
+→ Sheet mapping
+→ 讀 canonical
+→ GitHub 建／更新 sidecar JSON
+→ 更新 runtime merge config
 → commit main
-→ 驗證 Pages
+→ Pages 實測
 ```
 
-有圖片／PDF 裁圖：
+## 有圖題
 
 ```text
-先完成題目分類與答案驗證
-→ 判斷哪些圖是題意必要資訊
-→ 原卷裁 PNG／必要旋轉校正
-→ binary asset 必要時回 E:\Exam
-→ 更新 JSON 引用
-→ 實機／localhost 驗證
-→ commit / push
+先完成 census / mapping / 答案驗證
+→ 判斷必要圖片
+→ 原卷裁 PNG
+→ assets 放 GitHub
+→ JSON 引用 image / optionImage
+→ localhost / Pages 實測
+```
+
+## 教材又新增
+
+```text
+更新 canonical
+→ 回頭掃 unknown
+→ 修 Sheet
+→ 修 GitHub 題庫位置
+→ 修 runtime config
+→ 再驗證
 ```
 
 不要為了一兩個純文字 JSON 修改，就要求使用者手動跑整套 patch。
 
----
-
-# 18. 已有實作範例
-
-## 18.1 國文
-
-國文已有專用補充 SOP：
-
-```text
-CHINESE_SCHOOL_EXAM_WORKFLOW.md
-```
-
-可參考其：
-
-- 原卷保存
-- 課次 mapping
-- 各校題庫 UI
-- 跨文本處理
-
-但其他科目只取其「資料治理精神」，不照搬國文題型假設。
-
-## 18.2 自然
-
-第一份正式案例：
-
-```text
-高雄市立大灣國中
-114 學年度第一學期
-七年級第一次段考
-自然科
-```
-
-已完成：
-
-```text
-40 題整卷 census
-官方答案卷配對
-Google Sheet 逐題索引
-```
-
-目前歸入：
-
-```text
-自然七上
-→ 單元 1 生命現象與科學探究
-→ 1-2 科學方法
-```
-
-的題目：
-
-```text
-原第 3 題
-原第 8 題
-原第 37 題
-原第 40 題
-```
-
-GitHub：
-
-```text
-chapter-bank/science/7-1/unit-01/section-02/school-exams.json
-```
-
-這個案例證明：
-
-```text
-國文 workflow 的共同精神
-可以延伸到自然
-但分類與題型呈現仍依自然教材與考卷特性調整
-```
+但大量 sidecar、圖片、批次 reclassify 時，使用本機腳本是合理的。
 
 ---
 
-# 19. 核心原則摘要
+# 25. 已驗證的實作模式
+
+目前專案已經驗證兩種重要模式。
+
+## 25.1 國文多校 sidecar + runtime merge
+
+同一課可有：
 
 ```text
-共同 SOP ≠ 所有科目強迫同一模板
+school-exams.json
+school-exams-yushan-114.json
+school-exams-zuoying-113.json
+school-exams-siyu-114.json
+...
+```
 
-真實題目 → 保留真實來源
+runtime 直接合併後呈現一份「各校題庫」。
+
+已實際驗證：
+
+```text
+新增學校
+pending → official verified
+跨文本歸課
+unknown 重掃
+題目搬課
+返回後再次進入
+MutationObserver 卡死修正
+```
+
+這些經驗屬於全科可重用的網站與資料治理模式，不是國文專屬。
+
+## 25.2 自然逐題拆卷歸小節
+
+已驗證：
+
+```text
+整份段考先 census
+→ Google Sheet 索引
+→ 只把真正屬於 1-2 科學方法的題放入該小節題庫
+```
+
+這證明同一套流程可以跨科使用。
+
+---
+
+# 26. 核心原則摘要
+
+```text
+共同 SOP ≠ 所有科目同一題型
+
+原始考卷 → 永遠保留
 官方答案 → 高於 AI 推理
-原始選項 → 不亂序
-完整考卷 → 先 census 再拆題
+整卷 → 先 census 再拆題
+Sheet → 保存逐題 mapping
 章節分類 → 回實際教材／canonical
+無法確定 → unknown
+教材增加 → 回頭重掃 unknown
+跨文本 → 要有教學關聯
+真實選項 → 不亂序
+各校題庫 → 與自編題完全分開
+多校累積 → sidecar + runtime merge
+pending → 不進正式評量
+答案確認 → 再升級 official verified
 圖片是題意 → 原卷裁圖
-不確定分類 → unknown
-跨題型差異 → 依原卷特性處理
-紙筆題 → 可收錄但不硬做自動判分
-送分題 → 保留來源，不虛構答案
+紙筆題 → manual-study
+特殊答案碼 → 不硬轉普通選擇題
+新章第一次有真題 → JSON + catalog + runtime 一起建
+返回後 → 必須能再次進入
+動態 UI → 防止 observer loop / 重複 handler
+重新歸類 → Sheet + GitHub + runtime 一起同步
 純文字修改 → GitHub-first
-binary asset → 必要時回 E:\Exam
-完成一批 → 更新 README
+binary / 大批次 → 必要時回 E:\Exam
 ```
 
 ---
 
-# 20. 本文件的定位
+# 27. 本文件定位
 
 `EXAM_WORKFLOW.md` 是**所有科目各校段考的母 SOP**。
 
-科目專用文件可以存在，例如：
-
-```text
-CHINESE_SCHOOL_EXAM_WORKFLOW.md
-未來可能有 SCIENCE_SCHOOL_EXAM_WORKFLOW.md
-未來可能有 MATH_SCHOOL_EXAM_WORKFLOW.md
-```
-
-但專用文件只補充該科特性，不應推翻下列共同底線：
+科目專用補充文件可以存在，但只補充該科特殊題型，不推翻以下底線：
 
 ```text
 來源可追溯
 答案可驗證
 原卷資訊不任意改寫
 章節分類有教材依據
+unknown 可以保留
 題型依考卷特性處理
-網站資料可維護
+Sheet 與網站題庫可互相回溯
+多校題庫可持續擴充
+網站導航可重複進出
+資料結構可長期維護
 ```
 
-若未來遇到新題型或新考卷格式，本文件應持續更新，而不是硬把新資料塞進舊模板。
+未來遇到新的科目、新題型、新考卷格式，優先更新本母 SOP，而不是硬把新資料塞進舊模板。
