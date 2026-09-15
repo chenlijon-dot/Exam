@@ -52,6 +52,15 @@
     document.head.appendChild(script);
   }
 
+  function loadMathCatalogModule() {
+    if (document.getElementById('mathCatalogModule')) return;
+    const script = document.createElement('script');
+    script.id = 'mathCatalogModule';
+    script.src = `exam-math-catalog.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function returnToScienceUnit() {
     const shell = document.getElementById('catalogShell');
     const startScreen = document.getElementById('startScreen');
@@ -144,6 +153,7 @@
   detachLegacyExamControlHandlers();
   loadScienceBankMenuModule();
   loadEnglishGeptMenuModule();
+  loadMathCatalogModule();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
