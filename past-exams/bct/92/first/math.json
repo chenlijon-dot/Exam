@@ -17,13 +17,18 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": false,
-    "sourceNote": "題目與答案依 Google Drive 中《92年第一次數學科.pdf》原卷還原；原卷共 6 頁，第 1～5 頁為 31 題試題，第 6 頁為答案表。目前先完成文字、選項與答案；附圖／表格題以 imagePending 或 optionImagePending 標記，後續再以原卷裁圖補上。"
+    "sourceNote": "題目、選項、答案與附圖依 Google Drive 中《92年第一次數學科.pdf》原卷還原；原卷共 6 頁，第 1～5 頁為 31 題試題，第 6 頁為答案表。圖形、表格與選項圖均使用原卷裁圖。"
   },
   "questions": [
     {
       "number": 1,
       "q": "小玲的錢包內有佰元鈔票 \\(x\\) 張，拾元硬幣 \\(y\\) 個，請問錢包內有多少元？",
-      "o": ["\\(x+y\\)", "\\(10x+y\\)", "\\(100x+10y\\)", "\\(110(x+y)\\)"],
+      "o": [
+        "\\(x+y\\)",
+        "\\(10x+y\\)",
+        "\\(100x+10y\\)",
+        "\\(110(x+y)\\)"
+      ],
       "a": 2,
       "fixedOptions": true
     },
@@ -42,245 +47,390 @@
     {
       "number": 3,
       "q": "下列四個數列中，哪一個是等比數列？",
-      "o": ["\\(1^2，2^2，3^2，4^2，5^2\\)", "\\(2^1，2^2，2^3，2^4，2^5\\)", "3，6，9，12，15", "1，3，5，7，9"],
+      "o": [
+        "\\(1^2，2^2，3^2，4^2，5^2\\)",
+        "\\(2^1，2^2，2^3，2^4，2^5\\)",
+        "3，6，9，12，15",
+        "1，3，5，7，9"
+      ],
       "a": 1,
       "fixedOptions": true
     },
     {
       "number": 4,
       "q": "在下圖的數線上，\\(O\\) 為原點，數線上的點 \\(P、Q、R、S\\) 所表示的數分別為 \\(a、b、c、d\\)。請問下列哪一個大小關係是不正確的？",
-      "o": ["\\(|a|<|d|\\)", "\\(|b|=|c|\\)", "\\(|a|>|b|\\)", "\\(|0|<|b|\\)"],
+      "o": [
+        "\\(|a|<|d|\\)",
+        "\\(|b|=|c|\\)",
+        "\\(|a|>|b|\\)",
+        "\\(|0|<|b|\\)"
+      ],
       "a": 0,
       "fixedOptions": true,
-      "imageAlt": "第4題數線與 P、Q、O、R、S 各點位置",
-      "imagePending": true
+      "imageAlt": "第4題數線圖",
+      "image": "past-exams/bct/92/first/assets/math/q04-number-line.png"
     },
     {
       "number": 5,
       "q": "右圖是 \\(A、B\\) 兩片木板放在地面上的情形。圖中 \\(\\angle1、\\angle2\\) 分別為 \\(A、B\\) 兩木板與地面的夾角，\\(\\angle3\\) 是兩木板間的夾角。若 \\(\\angle3=110^\\circ\\)，則 \\(\\angle2-\\angle1=?\\)",
-      "o": ["55°", "70°", "90°", "110°"],
+      "o": [
+        "55°",
+        "70°",
+        "90°",
+        "110°"
+      ],
       "a": 1,
       "fixedOptions": true,
-      "imageAlt": "第5題兩片木板與地面形成的角度示意圖",
-      "imagePending": true
+      "imageAlt": "第5題木板配置圖",
+      "image": "past-exams/bct/92/first/assets/math/q05-boards.png"
     },
     {
       "number": 6,
       "q": "下列為四個二次函數的圖形，哪一個函數在 \\(x=2\\) 時有最大值 3？",
-      "o": ["圖 (A)", "圖 (B)", "圖 (C)", "圖 (D)"],
+      "o": [
+        "圖 (A)",
+        "圖 (B)",
+        "圖 (C)",
+        "圖 (D)"
+      ],
       "a": 0,
       "fixedOptions": true,
       "optionImageAlt": "第6題四個二次函數圖形選項",
-      "optionImagePending": true
+      "optionImage": "past-exams/bct/92/first/assets/math/q06-options.png"
     },
     {
       "number": 7,
       "q": "求 \\(\\left(1+\\frac13\\right)\\div\\left(\\frac13-1\\right)\\times\\frac38\\) 之值為何？",
-      "o": ["\\(-\\frac34\\)", "\\(-\\frac38\\)", "\\(-\\frac13\\)", "\\(-\\frac{16}{3}\\)"],
+      "o": [
+        "\\(-\\frac34\\)",
+        "\\(-\\frac38\\)",
+        "\\(-\\frac13\\)",
+        "\\(-\\frac{16}{3}\\)"
+      ],
       "a": 0,
       "fixedOptions": true
     },
     {
       "number": 8,
       "q": "下列四個敘述，哪一個是正確的？",
-      "o": ["\\(3x\\) 表示 \\(3+x\\)", "\\(x^2\\) 表示 \\(x+x\\)", "\\(3x^2\\) 表示 \\(3x\\cdot3x\\)", "\\(3x+5\\) 表示 \\(x+x+x+5\\)"],
+      "o": [
+        "\\(3x\\) 表示 \\(3+x\\)",
+        "\\(x^2\\) 表示 \\(x+x\\)",
+        "\\(3x^2\\) 表示 \\(3x\\cdot3x\\)",
+        "\\(3x+5\\) 表示 \\(x+x+x+5\\)"
+      ],
       "a": 3,
       "fixedOptions": true
     },
     {
       "number": 9,
       "q": "如右圖，\\(\\overline{AB}\\) 為圓 \\(O\\) 的直徑，\\(P、Q、R、S\\) 為圓上相異四點。下列敘述何者正確？",
-      "o": ["\\(\\angle APB\\) 為銳角", "\\(\\angle AQB\\) 為直角", "\\(\\angle ARB\\) 為鈍角", "\\(\\angle ASB<\\angle ARB\\)"],
+      "o": [
+        "\\(\\angle APB\\) 為銳角",
+        "\\(\\angle AQB\\) 為直角",
+        "\\(\\angle ARB\\) 為鈍角",
+        "\\(\\angle ASB<\\angle ARB\\)"
+      ],
       "a": 1,
       "fixedOptions": true,
-      "imageAlt": "第9題圓 O、直徑 AB 與圓上 P、Q、R、S 各點",
-      "imagePending": true
+      "imageAlt": "第9題圓形幾何圖",
+      "image": "past-exams/bct/92/first/assets/math/q09-circle.png"
     },
     {
       "number": 10,
       "q": "下列有關 \\(\\sqrt{10}\\) 的敘述，何者不正確？",
-      "o": ["\\(\\sqrt{10}\\) 是方程式 \\(x^2=10\\) 的一個解", "在數線上可以找到坐標為 \\(\\sqrt{10}\\) 的點", "\\(\\sqrt{10}=2\\sqrt5\\)", "\\(\\sqrt{10}<4\\)"],
+      "o": [
+        "\\(\\sqrt{10}\\) 是方程式 \\(x^2=10\\) 的一個解",
+        "在數線上可以找到坐標為 \\(\\sqrt{10}\\) 的點",
+        "\\(\\sqrt{10}=2\\sqrt5\\)",
+        "\\(\\sqrt{10}<4\\)"
+      ],
       "a": 2,
       "fixedOptions": true
     },
     {
       "number": 11,
       "q": "化簡 \\(2(3x-1)-3(x+2)\\) 之後，可得下列哪一個結果？",
-      "o": ["\\(3x-8\\)", "\\(3x+4\\)", "\\(3x+5\\)", "\\(9x+4\\)"],
+      "o": [
+        "\\(3x-8\\)",
+        "\\(3x+4\\)",
+        "\\(3x+5\\)",
+        "\\(9x+4\\)"
+      ],
       "a": 0,
       "fixedOptions": true
     },
     {
       "number": 12,
       "q": "如右圖，\\(L\\) 是 \\(L_1\\) 與 \\(L_2\\) 的截線。找出 \\(\\angle1\\) 的同位角，標上 \\(\\angle2\\)，找出 \\(\\angle1\\) 的同側內角，標上 \\(\\angle3\\)。下列何者為 \\(\\angle1、\\angle2、\\angle3\\) 正確的位置圖？",
-      "o": ["圖 (A)", "圖 (B)", "圖 (C)", "圖 (D)"],
+      "o": [
+        "圖 (A)",
+        "圖 (B)",
+        "圖 (C)",
+        "圖 (D)"
+      ],
       "a": 1,
       "fixedOptions": true,
       "imageAlt": "第12題截線 L 與 L1、L2 的基準圖",
-      "imagePending": true,
       "optionImageAlt": "第12題角 1、2、3 位置的四個圖形選項",
-      "optionImagePending": true
+      "image": "past-exams/bct/92/first/assets/math/q12-reference.png",
+      "optionImage": "past-exams/bct/92/first/assets/math/q12-options.png"
     },
     {
       "number": 13,
       "q": "右表為某照相館的價目表，今逢週年慶，底片沖洗與照片沖洗皆打九折。守守帶了一卷底片去沖洗規格（3×5）的照片若干張，打折後共付了 189 元。請問守守洗了多少張照片？",
-      "o": ["33", "34", "35", "36"],
+      "o": [
+        "33",
+        "34",
+        "35",
+        "36"
+      ],
       "a": 2,
       "fixedOptions": true,
-      "imageAlt": "第13題照相館價目表",
-      "imagePending": true
+      "imageAlt": "第13題價目表",
+      "image": "past-exams/bct/92/first/assets/math/q13-price-table.png"
     },
     {
       "number": 14,
       "q": "如下圖（一），將長為 50 公分、寬為 2 公分的矩形，折成下圖（二）的圖形並著上灰色，灰色部分的面積為多少平方公分？",
-      "o": ["94", "96", "98", "100"],
+      "o": [
+        "94",
+        "96",
+        "98",
+        "100"
+      ],
       "a": 0,
       "fixedOptions": true,
-      "imageAlt": "第14題長 50 公分、寬 2 公分矩形折成直角折線圖",
-      "imagePending": true
+      "imageAlt": "第14題摺紙帶圖",
+      "image": "past-exams/bct/92/first/assets/math/q14-folded-strip.png"
     },
     {
       "number": 15,
       "q": "若 \\(481x^2+2x-3\\) 可因式分解成 \\((13x+a)(bx+c)\\)，其中 \\(a、b、c\\) 均為整數，則下列敘述何者正確？",
-      "o": ["\\(a=1\\)", "\\(b=468\\)", "\\(c=-3\\)", "\\(a+b+c=39\\)"],
+      "o": [
+        "\\(a=1\\)",
+        "\\(b=468\\)",
+        "\\(c=-3\\)",
+        "\\(a+b+c=39\\)"
+      ],
       "a": 3,
       "fixedOptions": true
     },
     {
       "number": 16,
       "q": "如右圖，棋盤上有 \\(A、B、C\\) 三個黑子與 \\(P、Q\\) 兩個白子。請問第三個白子 \\(R\\) 應放在下列哪一個位置，才會使得 \\(\\triangle ABC\\sim\\triangle PQR\\)？",
-      "o": ["甲", "乙", "丙", "丁"],
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
       "a": 3,
       "fixedOptions": true,
-      "imageAlt": "第16題方格棋盤上 A、B、C、P、Q 與甲乙丙丁位置",
-      "imagePending": true
+      "imageAlt": "第16題方格與三角形圖",
+      "image": "past-exams/bct/92/first/assets/math/q16-grid-triangle.png"
     },
     {
       "number": 17,
       "q": "若 \\(a:b=2:3\\)，則下列哪一個式子是錯誤的？",
-      "o": ["\\(\\frac a5:\\frac b5=2:3\\)", "\\(\\frac a2=\\frac b3\\)", "\\(2a=3b\\)", "\\(a:2=b:3\\)"],
+      "o": [
+        "\\(\\frac a5:\\frac b5=2:3\\)",
+        "\\(\\frac a2=\\frac b3\\)",
+        "\\(2a=3b\\)",
+        "\\(a:2=b:3\\)"
+      ],
       "a": 2,
       "fixedOptions": true
     },
     {
       "number": 18,
       "q": "如右圖，\\(\\triangle ABC\\) 是邊長為 \\(a\\) 的正三角形紙張，今在各角剪去一個三角形，使得剩下的六邊形 \\(PQRSTU\\) 為正六邊形，則此正六邊形的周長為何？",
-      "o": ["\\(2a\\)", "\\(3a\\)", "\\(\\frac32a\\)", "\\(\\frac94a\\)"],
+      "o": [
+        "\\(2a\\)",
+        "\\(3a\\)",
+        "\\(\\frac32a\\)",
+        "\\(\\frac94a\\)"
+      ],
       "a": 0,
       "fixedOptions": true,
-      "imageAlt": "第18題正三角形剪角形成正六邊形 PQRSTU",
-      "imagePending": true
+      "imageAlt": "第18題六邊形圖",
+      "image": "past-exams/bct/92/first/assets/math/q18-hexagon.png"
     },
     {
       "number": 19,
       "q": "某校一年級與二年級的學生人數比為 3：2，已知一年級的學生中，有 40％ 視力良好，二年級的學生中，有 30％ 視力良好。請問一、二年級所有學生中有多少比例的學生視力良好？",
-      "o": ["18％", "36％", "57％", "70％"],
+      "o": [
+        "18％",
+        "36％",
+        "57％",
+        "70％"
+      ],
       "a": 1,
       "fixedOptions": true
     },
     {
       "number": 20,
       "q": "如右圖，\\(S、R、Q\\) 在 \\(\\overline{AP}\\) 上，\\(B、C、D、E\\) 在 \\(\\overline{AF}\\) 上，其中 \\(\\overline{BS}、\\overline{CR}、\\overline{DQ}\\) 皆垂直於 \\(\\overline{AF}\\)，且 \\(\\overline{AB}=\\overline{BC}=\\overline{CD}=\\overline{DE}\\)。若 \\(\\overline{PE}=2\\) 公尺，則 \\(\\overline{BS}+\\overline{CR}+\\overline{DQ}\\) 的長是多少公尺？",
-      "o": ["\\(\\frac32\\)", "2", "\\(\\frac52\\)", "3"],
+      "o": [
+        "\\(\\frac32\\)",
+        "2",
+        "\\(\\frac52\\)",
+        "3"
+      ],
       "a": 3,
       "fixedOptions": true,
-      "imageAlt": "第20題三角形 APF 與 B、C、D、E 垂線示意圖",
-      "imagePending": true
+      "imageAlt": "第20題線段配置圖",
+      "image": "past-exams/bct/92/first/assets/math/q20-segments.png"
     },
     {
       "number": 21,
       "q": "正方體的體積為 2100 立方公分，邊長為 \\(a\\) 公分；正方形的面積為 240 平方公分，邊長為 \\(b\\) 公分。請利用下表判斷下列敘述何者正確？",
-      "o": ["\\(a<7\\)", "\\(b<7\\)", "\\(a>15\\)", "\\(b>15\\)"],
+      "o": [
+        "\\(a<7\\)",
+        "\\(b<7\\)",
+        "\\(a>15\\)",
+        "\\(b>15\\)"
+      ],
       "a": 3,
       "fixedOptions": true,
-      "imageAlt": "第21題乘方開方表",
-      "imagePending": true
+      "imageAlt": "第21題平方根表格",
+      "image": "past-exams/bct/92/first/assets/math/q21-root-table.png"
     },
     {
       "number": 22,
       "q": "下圖（三）是由白色紙板拼成的立體圖形，將此立體圖形中的兩面塗上顏色，如下圖（四）所示。下列四個圖形中哪一個是下圖（四）的展開圖？",
-      "o": ["圖 (A)", "圖 (B)", "圖 (C)", "圖 (D)"],
+      "o": [
+        "圖 (A)",
+        "圖 (B)",
+        "圖 (C)",
+        "圖 (D)"
+      ],
       "a": 0,
       "fixedOptions": true,
       "imageAlt": "第22題立體圖形與兩個著色面",
-      "imagePending": true,
       "optionImageAlt": "第22題四個展開圖選項",
-      "optionImagePending": true
+      "image": "past-exams/bct/92/first/assets/math/q22-solid.png",
+      "optionImage": "past-exams/bct/92/first/assets/math/q22-options.png"
     },
     {
       "number": 23,
       "q": "將一條繩子緊緊圈住三個伍圓硬幣，如右圖所示。若伍圓硬幣的半徑是 1 公分，則圈住這三個硬幣的繩子長度是多少公分？",
-      "o": ["9", "12", "\\(\\pi+6\\)", "\\(2\\pi+6\\)"],
+      "o": [
+        "9",
+        "12",
+        "\\(\\pi+6\\)",
+        "\\(2\\pi+6\\)"
+      ],
       "a": 3,
       "fixedOptions": true,
-      "imageAlt": "第23題三枚相切硬幣與外圍繩子示意圖",
-      "imagePending": true
+      "imageAlt": "第23題硬幣與繩子圖",
+      "image": "past-exams/bct/92/first/assets/math/q23-coins-rope.png"
     },
     {
       "number": 24,
       "q": "在坐標平面上，有一個二次函數圖形交 \\(x\\) 軸於 \\((-4,0)、(2,0)\\) 兩點，今將此二次函數圖形向右移動 \\(h\\) 單位，再向下移動幾個單位後，發現新的二次函數圖形與 \\(x\\) 軸相交於 \\((-1,0)、(3,0)\\) 兩點，則 \\(h\\) 的值為何？",
-      "o": ["0", "1", "2", "4"],
+      "o": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
       "a": 2,
       "fixedOptions": true
     },
     {
       "number": 25,
       "q": "如右圖，在坐標平面上，直線 \\(L\\) 的方程式為 \\(4x+3y=12\\)，\\(O\\) 為原點，\\(x、y\\) 軸的單位長均為 1 公分。若 \\(A\\) 點在第四象限且在 \\(L\\) 上，與 \\(y\\) 軸的距離為 24 公分，則 \\(A\\) 點與 \\(x\\) 軸的距離為多少公分？",
-      "o": ["15", "18", "28", "32"],
+      "o": [
+        "15",
+        "18",
+        "28",
+        "32"
+      ],
       "a": 2,
       "fixedOptions": true,
-      "imageAlt": "第25題坐標平面與直線 L:4x+3y=12",
-      "imagePending": true
+      "imageAlt": "第25題直線圖",
+      "image": "past-exams/bct/92/first/assets/math/q25-line.png"
     },
     {
       "number": 26,
       "q": "某校有 \\(\\frac25\\) 的學生參加大隊接力比賽，有 \\(\\frac14\\) 的學生參加大會舞表演，有 \\(\\frac18\\) 的學生前兩項活動都有參加。下列何者可用來表示該校學生中「參加大隊接力比賽卻沒有參加大會舞表演」的比例？",
-      "o": ["\\(1-\\frac14\\)", "\\(\\frac25-\\frac14\\)", "\\(1-\\frac18\\)", "\\(\\frac25-\\frac18\\)"],
+      "o": [
+        "\\(1-\\frac14\\)",
+        "\\(\\frac25-\\frac14\\)",
+        "\\(1-\\frac18\\)",
+        "\\(\\frac25-\\frac18\\)"
+      ],
       "a": 3,
       "fixedOptions": true
     },
     {
       "number": 27,
       "q": "如右圖，已知 \\(\\triangle ABC\\) 中，\\(\\overline{AB}<\\overline{AC}<\\overline{BC}\\)。求作：一圓的圓心 \\(O\\)，使得 \\(O\\) 在 \\(\\overline{BC}\\) 上，且圓 \\(O\\) 與 \\(\\overline{AB}、\\overline{AC}\\) 皆相切。下列四種作法中，哪一種是正確的？",
-      "o": ["作 \\(\\overline{BC}\\) 的中點 \\(O\\)", "作 \\(\\angle A\\) 的平分線交 \\(\\overline{BC}\\) 於 \\(O\\) 點", "作 \\(\\overline{AC}\\) 的中垂線，交 \\(\\overline{BC}\\) 於 \\(O\\) 點", "自 \\(A\\) 點作一直線垂直 \\(\\overline{BC}\\)，交 \\(\\overline{BC}\\) 於 \\(O\\) 點"],
+      "o": [
+        "作 \\(\\overline{BC}\\) 的中點 \\(O\\)",
+        "作 \\(\\angle A\\) 的平分線交 \\(\\overline{BC}\\) 於 \\(O\\) 點",
+        "作 \\(\\overline{AC}\\) 的中垂線，交 \\(\\overline{BC}\\) 於 \\(O\\) 點",
+        "自 \\(A\\) 點作一直線垂直 \\(\\overline{BC}\\)，交 \\(\\overline{BC}\\) 於 \\(O\\) 點"
+      ],
       "a": 1,
       "fixedOptions": true,
-      "imageAlt": "第27題三角形 ABC 作圓心 O 的幾何圖",
-      "imagePending": true
+      "imageAlt": "第27題三角形圖",
+      "image": "past-exams/bct/92/first/assets/math/q27-triangle.png"
     },
     {
       "number": 28,
       "q": "如右圖，\\(\\triangle ABC\\) 中，\\(\\angle ABC=90^\\circ\\)，\\(O\\) 為 \\(\\triangle ABC\\) 的外心，\\(\\angle C=60^\\circ\\)，\\(\\overline{BC}=2\\)。若 \\(\\triangle AOB\\) 面積為 \\(a\\)，\\(\\triangle OBC\\) 面積為 \\(b\\)，則下列敘述何者正確？",
-      "o": ["\\(a>b\\)", "\\(a<b\\)", "\\(a-b=0\\)", "\\(a+b=4\\)"],
+      "o": [
+        "\\(a>b\\)",
+        "\\(a<b\\)",
+        "\\(a-b=0\\)",
+        "\\(a+b=4\\)"
+      ],
       "a": 2,
       "fixedOptions": true,
-      "imageAlt": "第28題直角三角形 ABC 與外心 O",
-      "imagePending": true
+      "imageAlt": "第28題三角形與外心圖",
+      "image": "past-exams/bct/92/first/assets/math/q28-triangle-circumcenter.png"
     },
     {
       "number": 29,
       "introLabel": "第29～30題題組",
       "intro": "已知三年四班全班 35 人身高的算術平均數與中位數都是 158 公分，但後來發現其中有一位同學的身高登記錯誤，將 160 公分寫成 166 公分。經重新計算後，正確的算術平均數為 a 公分，中位數為 b 公分。",
       "q": "關於算術平均數 \\(a\\) 的敘述，下列何者正確？",
-      "o": ["大於 158", "小於 158", "等於 158", "資料不足，無法確定"],
+      "o": [
+        "大於 158",
+        "小於 158",
+        "等於 158",
+        "資料不足，無法確定"
+      ],
       "a": 1,
       "fixedOptions": true
     },
     {
       "number": 30,
       "q": "關於中位數 \\(b\\) 的敘述，下列何者正確？",
-      "o": ["大於 158", "小於 158", "等於 158", "資料不足，無法確定"],
+      "o": [
+        "大於 158",
+        "小於 158",
+        "等於 158",
+        "資料不足，無法確定"
+      ],
       "a": 2,
       "fixedOptions": true
     },
     {
       "number": 31,
       "q": "如右圖，在坐標平面上，\\(L_1\\) 為 \\(y=f(x)\\) 的一次函數圖形，\\(L_2\\) 為 \\(y=g(x)\\) 的一次函數圖形，\\(L_1、L_2\\) 相交於 \\(P(3,3)\\)。若 \\(a>3\\)，則下列敘述何者正確？",
-      "o": ["\\(f(a)-g(a)=a\\)", "\\(f(a)-g(a)=3\\)", "\\(f(a)=g(a)\\)", "\\(f(a)<g(a)\\)"],
+      "o": [
+        "\\(f(a)-g(a)=a\\)",
+        "\\(f(a)-g(a)=3\\)",
+        "\\(f(a)=g(a)\\)",
+        "\\(f(a)<g(a)\\)"
+      ],
       "a": 3,
       "fixedOptions": true,
-      "imageAlt": "第31題兩條一次函數 L1、L2 相交於 P(3,3) 的圖形",
-      "imagePending": true
+      "imageAlt": "第31題直線圖",
+      "image": "past-exams/bct/92/first/assets/math/q31-lines.png"
     }
   ]
 }
