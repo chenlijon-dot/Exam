@@ -223,7 +223,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, cssW, cssH);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.7;
+      ctx.lineWidth = 2.5;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       return { cssW, cssH };
@@ -334,44 +334,60 @@
          * Remove only very tiny capacitive noise.
          * Do not filter normal handwriting movement.
          */
-        if (distance < 0.22) {
+        if (distance < 0.15) {
           continue;
         }
 
         /*
-         * Preserve the actual sampled points.
-         * Control points are calculated around lastX/lastY,
-         * but the stroke endpoint remains the real pointer point.
+         * Low-sample-rate reconstruction.
+         *
+         * SM-T220 is currently giving us roughly 25-35 Hz with
+         * one real sample per event. Do not move or replace the
+         * real pointer coordinates. Instead, subdivide the gap
+         * between two real samples into short segments.
+         *
+         * This does not invent a different handwriting path and
+         * avoids the shape distortion caused by aggressive
+         * Bezier smoothing.
          */
-        const cp1X =
-          lastX + (lastX - previousX) * 0.18;
+        const targetSpacing = 2.5;
 
-        const cp1Y =
-          lastY + (lastY - previousY) * 0.18;
+        const steps = Math.min(
+          6,
+          Math.max(
+            1,
+            Math.ceil(distance / targetSpacing)
+          )
+        );
 
-        const cp2X =
-          p.x - (p.x - lastX) * 0.18;
-
-        const cp2Y =
-          p.y - (p.y - lastY) * 0.18;
+        const startX = lastX;
+        const startY = lastY;
 
         ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
+        ctx.moveTo(startX, startY);
 
-        ctx.bezierCurveTo(
-          cp1X,
-          cp1Y,
-          cp2X,
-          cp2Y,
-          p.x,
-          p.y
-        );
+        for (let i = 1; i <= steps; i += 1) {
+          const t = i / steps;
+
+          const x =
+            startX +
+            (p.x - startX) * t;
+
+          const y =
+            startY +
+            (p.y - startY) * t;
+
+          ctx.lineTo(x, y);
+        }
 
         ctx.stroke();
 
         previousX = lastX;
         previousY = lastY;
 
+        /*
+         * Always finish exactly on the real hardware sample.
+         */
         lastX = p.x;
         lastY = p.y;
       }
@@ -492,7 +508,7 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, r.width, r.height);
       ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.7;
+      ctx.lineWidth = 2.5;
       localHasInk = false;
     });
     $('#paperCanvasDoneBtn', overlay)?.addEventListener('click', () => {
