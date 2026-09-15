@@ -4,7 +4,7 @@
 >
 > 後續新增科目、學期、單元、小節、教材照片、canonical 教材知識庫、自編題、各校段考、歷屆試題、AI curriculum 或網站功能時，請同步更新本 README。
 >
-> 最後更新：2026-09-14
+> 最後更新：2026-09-15
 
 ---
 
@@ -42,8 +42,21 @@ AI 弱點診斷
 
 # 2. 目前網站主入口
 
+目前首頁正式品牌：
+
 ```text
-國中題庫
+國中全科學習題庫
+章節練習・各校段考・歷屆試題
+作者：Chris醫師
+版本：YYYY-MM-DD HH:MM
+```
+
+首頁的「版本」由 GitHub Pages 每次部署時，以 `Asia/Taipei` 時區自動產生部署時間戳記，用來確認手機或電腦目前載入的是哪一次網站版本。
+
+主入口樹：
+
+```text
+國中全科學習題庫
 │
 ├─ 國文
 ├─ 英文
@@ -67,6 +80,36 @@ AI 弱點診斷
 ```
 
 GitHub 同步屬於全站設定，不重複放在每一個章節。
+
+## 2.1 首頁品牌與版本管理
+
+首頁品牌由 `exam-branding.js` 負責，目前固定顯示：
+
+```text
+名稱：國中全科學習題庫
+副標：章節練習・各校段考・歷屆試題
+作者：Chris醫師
+```
+
+版本由 `.github/workflows/pages.yml` 在 GitHub Pages deployment 時自動將 `__BUILD_TIMESTAMP__` 替換成：
+
+```text
+YYYY-MM-DD HH:MM
+```
+
+時區固定為：
+
+```text
+Asia/Taipei
+```
+
+版本管理規則：
+
+- 每一次 GitHub Pages deployment 都產生新的版本時間戳。
+- 網站 UI 或手機顯示問題回報時，優先確認首頁版本時間，判斷是否仍在看舊快取／舊 deployment。
+- README 的「最後更新」是文件維護日期；首頁「版本」是網站部署時間，兩者不要混為同一版本號。
+- 目前採部署時間戳作為輕量版本識別；未來若需要正式 release，可再增加 semantic version / Git tag，但不取代部署時間戳。
+- 修改首頁品牌、版本格式、部署規則或版本顯示方式後，必須同步更新 README。
 
 ---
 
@@ -873,6 +916,10 @@ Exam/
 ├─ exam-navigation-fix.js
 ├─ exam-science-banks.js
 ├─ exam-record-layout.js
+├─ exam-branding.js
+│  └─ 首頁名稱、作者與 deployment 版本時間戳
+├─ exam-browser-history.js
+│  └─ 手機／瀏覽器返回鍵的站內逐層導航
 │
 ├─ chapter-bank/
 │  └─ science/
@@ -949,6 +996,10 @@ Exam-Record/
 - [x] GitHub Pages 題庫網站
 - [x] 手機版 responsive
 - [x] 五科 + 歷屆考題主入口
+- [x] 首頁品牌更新為「國中全科學習題庫」
+- [x] 首頁顯示作者 `Chris醫師`
+- [x] 首頁顯示 GitHub Pages deployment 時間戳版本（Asia/Taipei）
+- [x] 手機／瀏覽器系統返回鍵支援站內逐層返回
 - [x] GitHub 同步設定移到全站主選單
 - [x] 作答紀錄／錯題複習保留於章節題庫
 - [x] 115 學年度康軒版國文第一冊完整課次目錄與頁碼已確認
@@ -1041,12 +1092,14 @@ Exam-Record/
 10. 涉及正式歷屆考題時，依第 15～17 節處理。
 11. 無法確定章節、答案或來源時標記待確認／unknown，不硬猜。
 12. 預設直接使用 GitHub connector 修改文字檔；binary／批次處理才回 `E:\Exam`。
-13. 每完成新教材 canonical、新章節、新段考批次、新歷屆試卷或重大架構調整，都更新 README。
+13. 若使用者回報網站 UI／手機顯示問題，先確認首頁顯示的「版本時間戳」，判斷是否為舊快取或舊 deployment。
+14. 首頁版本時間戳代表網站 deployment；README 最後更新日期代表文件維護日期，兩者分開管理。
+15. 每完成新教材 canonical、新章節、新段考批次、新歷屆試卷、網站重大功能或首頁／版本規則調整，都更新 README。
 
 ---
 
 # 26. 目前一句話狀態
 
-截至 2026-09-14：
+截至 2026-09-15：
 
-> 本專案已正式採用「Google Drive 原始教材與 canonical 教材知識庫 → GitHub Exam 結構化可作答題庫 → Private Exam-Record 學習紀錄與 AI curriculum」三層架構。國文七年級上學期目前以「115 學年度康軒版國文第一冊」實體課本目錄作為 catalog authority；教材、題庫與各校段考課次 mapping 依同一棵課次樹管理。教材資料庫今後統一沿用國文〈夏夜〉已驗證的模式：依科目、學期、單元／課次、小節建立 `原始資料 + 整理資料 + 唯一 canonical Doc`，新教材持續整併而不是重複建檔。自然七上已完成正式章節樹，`1-2 科學方法` 與 `1-3 認識實驗室` 已開始建立 canonical 教材知識庫；`1-2` 目前另有自編題 60 題及大灣國中各校題庫 4 題。之後所有自然教材與其他科目資料，都沿用同一套資料庫建立方式持續累積。
+> 本專案已正式採用「Google Drive 原始教材與 canonical 教材知識庫 → GitHub Exam 結構化可作答題庫 → Private Exam-Record 學習紀錄與 AI curriculum」三層架構。網站首頁現使用「國中全科學習題庫」品牌，顯示作者 Chris醫師，並以每次 GitHub Pages deployment 的台灣時間戳作為目前網站版本識別；手機／瀏覽器返回鍵也已納入站內逐層導航。國文七年級上學期目前以「115 學年度康軒版國文第一冊」實體課本目錄作為 catalog authority；教材、題庫與各校段考課次 mapping 依同一棵課次樹管理。教材資料庫今後統一沿用國文〈夏夜〉已驗證的模式：依科目、學期、單元／課次、小節建立 `原始資料 + 整理資料 + 唯一 canonical Doc`，新教材持續整併而不是重複建檔。自然七上已完成正式章節樹，`1-2 科學方法` 與 `1-3 認識實驗室` 已開始建立 canonical 教材知識庫；`1-2` 目前另有自編題 60 題及大灣國中各校題庫 4 題。之後所有自然教材與其他科目資料，都沿用同一套資料庫建立方式持續累積。
