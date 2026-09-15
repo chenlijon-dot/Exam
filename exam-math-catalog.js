@@ -157,6 +157,53 @@
     }
   }
 
+  function nativeInkBridgeAvailable() {
+    try {
+      const bridge =
+        window.StudentExamNative;
+
+      return !!(
+        bridge &&
+        typeof bridge.showNativeInkSurface === 'function' &&
+        typeof bridge.clearNativeInkSurface === 'function' &&
+        typeof bridge.finishNativeInkSurface === 'function' &&
+        typeof bridge.hideNativeInkSurface === 'function'
+      );
+    } catch {
+      return false;
+    }
+  }
+
+
+  function showNativeInkForCanvas(canvas) {
+    if (!nativeInkBridgeAvailable()) {
+      return false;
+    }
+
+    const rect =
+      canvas.getBoundingClientRect();
+
+    const vw =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      1;
+
+    const vh =
+      window.innerHeight ||
+      document.documentElement.clientHeight ||
+      1;
+
+    window.StudentExamNative.showNativeInkSurface(
+      rect.left / vw,
+      rect.top / vh,
+      rect.right / vw,
+      rect.bottom / vh
+    );
+
+    return true;
+  }
+
+
   function openPaperCanvas() {
     if ($('#mathPaperCanvasOverlay')) return;
 
@@ -188,6 +235,16 @@
     const canvas = $('#mathPaperCanvas', overlay);
     const stage = $('#paperCanvasStage', overlay);
     const ctx = canvas.getContext('2d', { alpha: false });
+
+    /*
+     * First integration:
+     * fresh answers use Android Native Ink.
+     * Existing-answer editing remains Web Canvas until the next step.
+     */
+    const useNativeInk =
+      nativeInkBridgeAvailable() &&
+      !paperAnswerDataUrl;
+
     let drawing = false;
     let activePointerId = null;
 
@@ -258,6 +315,17 @@
       img.src = paperAnswerDataUrl;
     }
     loadPreviousAnswer();
+
+    if (useNativeInk) {
+
+      /*
+       * Wait until layout is committed, then overlay the native View
+       * exactly over the HTML canvas.
+       */
+      requestAnimationFrame(() => {
+        showNativeInkForCanvas(canvas);
+      });
+    }
 
     function pointFromEvent(e) {
       const r = canvas.getBoundingClientRect();
@@ -603,7 +671,40 @@
     );
     canvas.addEventListener('contextmenu', e => e.preventDefault());
 
+    window.StudentExamNativeInkFinished =
+      dataUrl => {
+
+        if (
+          !dataUrl ||
+          !dataUrl.startsWith('data:image/')
+        ) {
+          return;
+        }
+
+        paperAnswerDataUrl = dataUrl;
+        paperAnswerHasInk = true;
+
+        closeOverlay();
+        showPaperPractice();
+      };
+
+
     function closeOverlay() {
+
+      if (useNativeInk) {
+        try {
+          window.StudentExamNative
+            ?.hideNativeInkSurface?.();
+        } catch {}
+      }
+
+      if (
+        window.StudentExamNativeInkFinished
+      ) {
+        window.StudentExamNativeInkFinished =
+          null;
+      }
+
       setNativeDrawingMode(false);
       document.body.style.overflow = oldOverflow;
       overlay.remove();
@@ -611,20 +712,67 @@
 
     $('#paperCanvasCancelBtn', overlay)?.addEventListener('click', closeOverlay);
     $('#paperCanvasClearBtn', overlay)?.addEventListener('click', () => {
-      const r = canvas.getBoundingClientRect();
+
+      if (useNativeInk) {
+
+        try {
+          window.StudentExamNative
+            ?.clearNativeInkSurface?.();
+        } catch {}
+
+        return;
+      }
+
+      const r =
+        canvas.getBoundingClientRect();
+
       ctx.fillStyle = '#ffffff';
-      ctx.fillRect(0, 0, r.width, r.height);
+
+      ctx.fillRect(
+        0,
+        0,
+        r.width,
+        r.height
+      );
+
       ctx.strokeStyle = '#111827';
       ctx.lineWidth = 2.5;
+
       localHasInk = false;
     });
     $('#paperCanvasDoneBtn', overlay)?.addEventListener('click', () => {
-      if (!localHasInk) {
-        alert('畫布還是空白的，請先寫下作答內容。');
+
+      /*
+       * Native mode exports one PNG only when Done is pressed.
+       * No live stroke data crosses the JS bridge.
+       */
+      if (useNativeInk) {
+
+        try {
+          window.StudentExamNative
+            ?.finishNativeInkSurface?.();
+        } catch (e) {
+          console.error(
+            'Native ink export failed:',
+            e
+          );
+        }
+
         return;
       }
-      paperAnswerDataUrl = canvas.toDataURL('image/png');
+
+      if (!localHasInk) {
+        alert(
+          '畫布還是空白的，請先寫下作答內容。'
+        );
+        return;
+      }
+
+      paperAnswerDataUrl =
+        canvas.toDataURL('image/png');
+
       paperAnswerHasInk = true;
+
       closeOverlay();
       showPaperPractice();
     });
