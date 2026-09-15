@@ -296,13 +296,13 @@
       .english-ai-passage-btn{border:1px solid #c4b5fd;background:#f5f3ff;color:#6d28d9;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:800;cursor:pointer;white-space:nowrap}
       #englishAiModal{position:fixed;inset:0;z-index:10020;background:rgba(15,23,42,.5);display:flex;align-items:center;justify-content:center;padding:18px}
       #englishAiModal.hidden{display:none}
-      .english-ai-dialog{width:min(790px,100%);max-height:min(82vh,820px);background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.34);display:flex;flex-direction:column;overflow:hidden;will-change:transform}
+      .english-ai-dialog{width:min(720px,calc(100% - 24px));height:min(50vh,520px);max-height:50vh;background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.34);display:flex;flex-direction:column;overflow:hidden;will-change:transform}
       .english-ai-head{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid #e2e8f0;background:#fafafa;cursor:grab;user-select:none;touch-action:none}
       .english-ai-head.dragging{cursor:grabbing}.english-ai-title{font-weight:850;color:#5b21b6;flex:1;pointer-events:none}
       .english-ai-close{border:0;background:#e2e8f0;color:#334155;border-radius:999px;width:34px;height:34px;font-size:20px;cursor:pointer}
-      .english-ai-body{padding:18px 20px;overflow:auto;line-height:1.8;color:#1f2937}
+      .english-ai-body{flex:1;min-height:0;padding:18px 20px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;line-height:1.8;color:#1f2937}
       .english-ai-status{color:#64748b;font-size:.9rem;margin-bottom:10px}.english-ai-result{white-space:pre-wrap}
-      @media(max-width:620px){.english-ai-dialog{max-height:86vh}.english-ai-body{padding:15px 16px}.english-ai-passage-btn{font-size:.72rem;padding:5px 8px}}
+      @media(max-width:620px){.english-ai-dialog{width:calc(100% - 16px);height:52vh;max-height:52vh}.english-ai-body{padding:15px 16px}.english-ai-passage-btn{font-size:.72rem;padding:5px 8px}}
     `;
     document.head.appendChild(style);
   }
