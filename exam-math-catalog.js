@@ -244,52 +244,6 @@
 
     const canvasSize = sizeCanvas();
 
-    function syncNativeDrawingSurface() {
-      try {
-        const nativeBridge =
-          window.StudentExamNative;
-
-        if (
-          !nativeBridge ||
-          typeof nativeBridge.setDrawingSurface !==
-            'function'
-        ) {
-          return;
-        }
-
-        const rect =
-          canvas.getBoundingClientRect();
-
-        const vw =
-          window.innerWidth ||
-          document.documentElement.clientWidth ||
-          1;
-
-        const vh =
-          window.innerHeight ||
-          document.documentElement.clientHeight ||
-          1;
-
-        nativeBridge.setDrawingSurface(
-          rect.left / vw,
-          rect.top / vh,
-          rect.right / vw,
-          rect.bottom / vh
-        );
-      } catch (e) {
-        console.warn(
-          'Unable to sync native drawing surface:',
-          e
-        );
-      }
-    }
-
-    syncNativeDrawingSurface();
-
-    requestAnimationFrame(
-      syncNativeDrawingSurface
-    );
-
     function loadPreviousAnswer() {
       if (!paperAnswerDataUrl) return;
       const img = new Image();
