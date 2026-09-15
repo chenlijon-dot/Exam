@@ -18,7 +18,7 @@
     if ($('#catalogHeaderSub')) $('#catalogHeaderSub').textContent = sub;
   }
 
-  function keepEnglishBackButton() {
+  function resetToEnglishBackButton() {
     const root = content();
     if (!root) return null;
     const back = $('#backEnglishSemestersBtn', root);
@@ -37,47 +37,75 @@
     button.dataset.geptEnhanced = '1';
     const badge = $('.catalog-badge', button);
     const desc = $('.desc', button);
-    if (badge) badge.textContent = '初級已收錄';
+    if (badge) {
+      badge.textContent = '初級已收錄';
+      badge.classList.add('reference');
+    }
     if (desc) desc.textContent = '國中階段先以全民英檢初級為主；目前已整理閱讀能力測驗第一回至第六回。';
   }
 
   function renderGeptLanding() {
     const root = content();
-    const back = keepEnglishBackButton();
+    const back = resetToEnglishBackButton();
     if (!root || !back) return;
 
     root.dataset.geptView = 'landing';
     setHeader('英文科｜全民英檢', '國中階段以初級為主');
-    document.title = '全民英檢初級｜英文題庫';
+    document.title = '全民英檢 GEPT｜英文題庫';
 
     root.insertAdjacentHTML('beforeend', `
       <div class="catalog-path">英文　›　全民英檢（GEPT）</div>
       <h2 class="catalog-title">全民英檢（GEPT）</h2>
-      <p class="catalog-sub">國中階段先建置初級題庫。目前已有閱讀能力測驗第一回至第六回的原始資料與教材知識庫。</p>
+      <p class="catalog-sub">國中階段先建置初級。目前已整理閱讀能力測驗第一回至第六回，後續再逐步擴充其他能力面向。</p>
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" id="geptElementaryBtn">
           <span class="top"><span class="icon">🌱</span><strong>初級</strong><span class="catalog-badge reference">6 回資料已收錄</span></span>
-          <span class="desc">進入知識庫試題；第一回至第六回選單已建立。</span>
+          <span class="desc">進入全民英檢初級題庫架構。</span>
         </button>
       </div>`);
 
-    $('#geptElementaryBtn')?.addEventListener('click', renderElementaryRounds);
+    $('#geptElementaryBtn')?.addEventListener('click', renderElementaryBanks);
   }
 
-  function renderElementaryRounds() {
+  function renderElementaryBanks() {
     const root = content();
-    const back = keepEnglishBackButton();
+    const back = resetToEnglishBackButton();
     if (!root || !back) return;
 
-    root.dataset.geptView = 'rounds';
-    setHeader('英文科｜全民英檢初級', '知識庫試題｜第一回～第六回');
-    document.title = '全民英檢初級｜知識庫試題';
+    root.dataset.geptView = 'elementary';
+    setHeader('英文科｜全民英檢初級', '選擇題庫');
+    document.title = '全民英檢初級｜英文題庫';
 
     root.insertAdjacentHTML('beforeend', `
       <button class="catalog-back" id="backGeptLandingBtn">← 返回全民英檢</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級</div>
-      <h2 class="catalog-title">知識庫試題</h2>
-      <p class="catalog-sub">六回模擬考原始資料與教材知識庫均已整理完成；目前先建立選單，線上考題內容下一階段再匯入。</p>
+      <h2 class="catalog-title">全民英檢初級</h2>
+      <p class="catalog-sub">目前先建立閱讀能力的知識庫試題入口；六回原始模擬考與 canonical 教材知識庫均已整理。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card chapter-card" id="geptElementaryKnowledgeBtn">
+          <span class="top"><span class="icon">📚</span><strong>知識庫試題</strong><span class="catalog-badge reference">第一回～第六回</span></span>
+          <span class="desc">依目前全民英檢初級閱讀教材知識庫建立線上測驗；考題內容下一階段匯入。</span>
+        </button>
+      </div>`);
+
+    $('#backGeptLandingBtn')?.addEventListener('click', renderGeptLanding);
+    $('#geptElementaryKnowledgeBtn')?.addEventListener('click', renderElementaryRounds);
+  }
+
+  function renderElementaryRounds() {
+    const root = content();
+    const back = resetToEnglishBackButton();
+    if (!root || !back) return;
+
+    root.dataset.geptView = 'rounds';
+    setHeader('全民英檢初級｜知識庫試題', '選擇回次');
+    document.title = '全民英檢初級｜知識庫試題';
+
+    root.insertAdjacentHTML('beforeend', `
+      <button class="catalog-back" id="backGeptElementaryBtn">← 返回初級</button>
+      <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級　›　知識庫試題</div>
+      <h2 class="catalog-title">請選擇回次</h2>
+      <p class="catalog-sub">第一回至第六回的教材資料均已整理完成；目前先建立選單，線上考題內容稍後再加入。</p>
       <div class="catalog-grid">
         ${GEPT_ELEMENTARY_ROUNDS.map(round => `
           <button class="catalog-card chapter-card" disabled data-gept-round="${round.key}">
@@ -86,7 +114,7 @@
           </button>`).join('')}
       </div>`);
 
-    $('#backGeptLandingBtn')?.addEventListener('click', renderGeptLanding);
+    $('#backGeptElementaryBtn')?.addEventListener('click', renderElementaryBanks);
   }
 
   function enhanceGeptLandingIfNeeded() {
