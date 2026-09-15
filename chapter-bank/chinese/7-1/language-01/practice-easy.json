@@ -1,0 +1,25 @@
+{
+  "exam":{"subject":"chinese","subjectLabel":"國文","semester":"7-1","semesterLabel":"七年級上學期","unitGroup":"book-1","unitGroupLabel":"第一冊","section":"language-01","unit":"語文天地一 標點符號使用法","scoreMode":"fixed","pointsPerQuestion":5,"analysisEligible":false,"preserveOptionOrder":false,"sourceType":"practice-generated","sourceNote":"依 Google Drive 語文天地一〈標點符號使用法〉canonical 教材知識庫與各校段考常見考點自編；不直接複製各校原題。","difficulty":"chinese-7-1-language01-easy","title":"語文天地一〈標點符號使用法〉｜簡易","subtitle":"國文第一冊｜自編題｜簡易 20 題","difficultyLabel":"簡易"},
+  "questions":[
+    {"number":1,"q":"表示一個完整句子結束，最適合使用哪個標點符號？","o":["句號","逗號","頓號","冒號"],"a":0,"e":"句號（。）表示完整句子的結束。","conceptIds":["chinese-7-1-language01-period"]},
+    {"number":2,"q":"句子內部需要作一般語氣停頓時，最常使用哪個標點符號？","o":["逗號","書名號","間隔號","專名號"],"a":0,"e":"逗號（，）表示句子內部語氣停頓或分隔。","conceptIds":["chinese-7-1-language01-comma"]},
+    {"number":3,"q":"「蘋果、香蕉、橘子」中的「、」是什麼標點符號？","o":["頓號","逗號","分號","連接號"],"a":0,"e":"頓號用於並列、次序或列舉詞語之間。","conceptIds":["chinese-7-1-language01-enumeration-comma"]},
+    {"number":4,"q":"分隔複句中平列的句子，使層次更清楚，通常使用哪個符號？","o":["分號","問號","引號","句號"],"a":0,"e":"分號（；）常用來分隔複句中平列的句子。","conceptIds":["chinese-7-1-language01-semicolon"]},
+    {"number":5,"q":"「我準備了三樣東西：水、帽子、雨具。」冒號在此主要表示什麼？","o":["提示下文列舉","表示疑問","表示省略","表示強烈感嘆"],"a":0,"e":"冒號可用於提示下文或引出列舉內容。","conceptIds":["chinese-7-1-language01-colon"]},
+    {"number":6,"q":"直接引用別人的話，通常要使用哪個標點符號？","o":["引號","頓號","連接號","分號"],"a":0,"e":"引號用來標示引語或特別強調的詞語。","conceptIds":["chinese-7-1-language01-quotation"]},
+    {"number":7,"q":"「太棒了！」句末的驚嘆號主要表現什麼？","o":["強烈感嘆語氣","疑問語氣","列舉關係","語意省略"],"a":0,"e":"驚嘆號可表示感嘆、強烈語氣或祈使語氣。","conceptIds":["chinese-7-1-language01-exclamation"]},
+    {"number":8,"q":"「你今天要去圖書館嗎？」句末應使用問號，因為這句具有什麼性質？","o":["疑問","感嘆","列舉","補充"],"a":0,"e":"問號用於疑問、設問、反問等疑問性質的語句。","conceptIds":["chinese-7-1-language01-question"]},
+    {"number":9,"q":"下列何者是破折號？","o":["──","……","；","‧"],"a":0,"e":"教材中的破折號寫作「──」。","conceptIds":["chinese-7-1-language01-dash"]},
+    {"number":10,"q":"下列何者是刪節號？","o":["……","──","：","、"],"a":0,"e":"刪節號寫作「……」，可表示省略、語句未完或語氣斷續。","conceptIds":["chinese-7-1-language01-ellipsis"]},
+    {"number":11,"q":"在正文旁加入不屬於主要句意的補充解釋，可使用哪一類標點？","o":["夾注號","問號","頓號","間隔號"],"a":0,"e":"夾注號用來附加說明或解釋。","conceptIds":["chinese-7-1-language01-parenthetical"]},
+    {"number":12,"q":"標示書籍名稱時，最適合使用哪個符號？","o":["《》","〈〉","「」","（）"],"a":0,"e":"《》多用於書名；〈〉多用於篇名。","conceptIds":["chinese-7-1-language01-title-mark"]},
+    {"number":13,"q":"標示一篇文章的篇名時，通常可使用哪個符號？","o":["〈〉","《》","──","……"],"a":0,"e":"教材指出〈〉多用於篇名。","conceptIds":["chinese-7-1-language01-title-mark"]},
+    {"number":14,"q":"外國人的名字與姓氏之間，可使用哪個標點符號？","o":["間隔號","頓號","分號","冒號"],"a":0,"e":"間隔號（‧）可用於外國人名字與姓氏之間。","conceptIds":["chinese-7-1-language01-middle-dot"]},
+    {"number":15,"q":"表示時間起止或數量範圍，可使用哪一類符號？","o":["連接號","引號","句號","問號"],"a":0,"e":"連接號可表示時間起止、數量範圍或相關項目的連接。","conceptIds":["chinese-7-1-language01-connector"]},
+    {"number":16,"q":"教材指出目前教育部頒布的新式標點符號共有多少種？","o":["十五種","十種","十二種","二十種"],"a":0,"e":"教材核心觀念指出新式標點符號共有十五種。","conceptIds":["chinese-7-1-language01-core"]},
+    {"number":17,"q":"下列哪個標點符號最常用於並列詞語之間？","o":["頓號","句號","問號","驚嘆號"],"a":0,"e":"頓號主要處理並列、次序或列舉詞語。","conceptIds":["chinese-7-1-language01-enumeration-comma"]},
+    {"number":18,"q":"「老師說：『明天記得帶課本。』」其中冒號的主要功能是？","o":["提出下文引語","表示省略","表示疑問","分隔並列詞語"],"a":0,"e":"冒號可用來提出引語。","conceptIds":["chinese-7-1-language01-colon"]},
+    {"number":19,"q":"下列哪個符號可表示語句未完、語意省略？","o":["刪節號","頓號","句號","書名號"],"a":0,"e":"刪節號可表示文句或語意省略、語句未完。","conceptIds":["chinese-7-1-language01-ellipsis"]},
+    {"number":20,"q":"正確使用標點符號最主要的作用是什麼？","o":["使文意清楚、語氣貼切並避免誤讀","讓文章字數增加","使每句話都變成疑問句","取代所有文字說明"],"a":0,"e":"教材指出標點能點斷句子、表現語氣，使文意清楚並避免誤讀。","conceptIds":["chinese-7-1-language01-core"]}
+  ]
+}
