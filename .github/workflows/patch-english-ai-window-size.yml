@@ -1,0 +1,53 @@
+name: Patch English AI window size
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/patch-english-ai-window-size.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.event.head_commit.message == 'Add one-shot English AI window size patch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resize English AI modal and keep scrollable body
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('exam-gpt-analysis.js')
+          s = p.read_text(encoding='utf-8')
+          old = '''      .english-ai-dialog{width:min(790px,100%);max-height:min(82vh,820px);background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.34);display:flex;flex-direction:column;overflow:hidden;will-change:transform}\n'''
+          new = '''      .english-ai-dialog{width:min(720px,calc(100% - 24px));height:min(50vh,520px);max-height:50vh;background:#fff;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.34);display:flex;flex-direction:column;overflow:hidden;will-change:transform}\n'''
+          if old not in s:
+              raise SystemExit('Target english-ai-dialog rule not found; refusing unsafe patch')
+          s = s.replace(old, new, 1)
+
+          old_body = '''      .english-ai-body{padding:18px 20px;overflow:auto;line-height:1.8;color:#1f2937}\n'''
+          new_body = '''      .english-ai-body{flex:1;min-height:0;padding:18px 20px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable;line-height:1.8;color:#1f2937}\n'''
+          if old_body not in s:
+              raise SystemExit('Target english-ai-body rule not found; refusing unsafe patch')
+          s = s.replace(old_body, new_body, 1)
+
+          old_mobile = '''      @media(max-width:620px){.english-ai-dialog{max-height:86vh}.english-ai-body{padding:15px 16px}.english-ai-passage-btn{font-size:.72rem;padding:5px 8px}}\n'''
+          new_mobile = '''      @media(max-width:620px){.english-ai-dialog{width:calc(100% - 16px);height:52vh;max-height:52vh}.english-ai-body{padding:15px 16px}.english-ai-passage-btn{font-size:.72rem;padding:5px 8px}}\n'''
+          if old_mobile not in s:
+              raise SystemExit('Target mobile rule not found; refusing unsafe patch')
+          s = s.replace(old_mobile, new_mobile, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit patch
+        run: |
+          set -e
+          git config user.name 'Exam UI Patcher'
+          git config user.email 'actions@users.noreply.github.com'
+          git add exam-gpt-analysis.js
+          git diff --cached --check
+          git commit -m 'Resize English AI analysis window'
+          git push
