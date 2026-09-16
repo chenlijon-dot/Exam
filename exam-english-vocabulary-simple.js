@@ -245,7 +245,7 @@
     const details = Array.isArray(item.optionDetails) ? item.optionDetails : [];
 
     if (!details.length) {
-      return `<div><b>${escapeHtml(item.answer)}</b>：${escapeHtml(item.question)}</div>`;
+      return `${item.answer}：${item.question}`;
     }
 
     return details.map((detail, index) => {
@@ -263,8 +263,8 @@
         });
 
       const word = detail.word || item.options?.[index] || '';
-      return `<div style="margin:5px 0"><b>(${letters[index]}) ${escapeHtml(word)}</b>${meanings.length ? `：${escapeHtml(meanings.join('；'))}` : ''}</div>`;
-    }).join('');
+      return `(${letters[index]}) ${word}${meanings.length ? `：${meanings.join('；')}` : ''}`;
+    }).join('\n');
   }
 
   function apiQuestion(item, number, progress) {
@@ -346,6 +346,7 @@
       .vocab-start-btn:disabled{opacity:.55;cursor:wait}
       .vocab-data-note{margin-top:12px;color:#64748b;font-size:.86rem;line-height:1.6}
       .vocab-sync-toast{position:fixed;right:18px;bottom:18px;z-index:10000;background:#0f172a;color:#fff;border-radius:12px;padding:10px 14px;box-shadow:0 12px 30px rgba(15,23,42,.28);font-size:.9rem}
+      #quiz .explain{white-space:pre-line}
       @media(max-width:620px){.vocab-setup-panel{padding:17px;border-radius:16px}.vocab-count-btn{flex:1 1 calc(50% - 10px)}}
     `;
     document.head.appendChild(style);
