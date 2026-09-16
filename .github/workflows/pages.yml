@@ -47,51 +47,29 @@ jobs:
           import gzip
           import json
           import os
+          import re
 
           base = Path('chapter-bank/english/gept/elementary/vocabulary')
           parts = []
           for i in (1, 2, 3):
               path = base / f'gept-beginner-vocabulary.b64.part{i}.txt'
               text = path.read_text(encoding='utf-8').lstrip('\ufeff')
-              text = ''.join(text.split())
+              text = re.sub(r'[^A-Za-z0-9+/=]', '', text)
               if len(text) < 100:
                   raise SystemExit(f'Vocabulary part {i} is unexpectedly short: {len(text)}')
               parts.append(text)
 
-          decoded_candidates = []
+          encoded = ''.join(parts).replace('=', '')
+          encoded += '=' * ((4 - len(encoded) % 4) % 4)
+          raw = base64.b64decode(encoded)
 
-          joined = ''.join(parts)
-          try:
-              decoded_candidates.append(base64.b64decode(joined, validate=True))
-          except Exception:
-              pass
+          if raw[:2] != b'\x1f\x8b':
+              raise SystemExit(f'Vocabulary payload is not gzip; first bytes={raw[:8].hex()}')
 
-          try:
-              decoded_candidates.append(b''.join(base64.b64decode(part, validate=True) for part in parts))
-          except Exception:
-              pass
-
-          try:
-              compact = joined.replace('=', '')
-              compact += '=' * ((4 - len(compact) % 4) % 4)
-              decoded_candidates.append(base64.b64decode(compact, validate=True))
-          except Exception:
-              pass
-
-          rows = None
-          last_error = None
-          for raw in decoded_candidates:
-              try:
-                  payload = gzip.decompress(raw).decode('utf-8')
-                  candidate = json.loads(payload)
-                  if isinstance(candidate, list) and candidate:
-                      rows = candidate
-                      break
-              except Exception as exc:
-                  last_error = exc
-
-          if not rows:
-              raise SystemExit(f'Unable to decode GEPT vocabulary payload: {last_error}')
+          payload = gzip.decompress(raw).decode('utf-8')
+          rows = json.loads(payload)
+          if not isinstance(rows, list) or not rows:
+              raise SystemExit('Vocabulary JSON is empty or invalid')
 
           valid_rows = [row for row in rows if row.get('id') and row.get('w') and row.get('n') and row.get('c')]
           if len(valid_rows) < 2000:
