@@ -84,6 +84,15 @@
       .question-media img{display:block;max-width:100%;height:auto;margin:auto;border-radius:8px}
       .option-media{margin-top:4px}
       .option-media img{max-height:620px;object-fit:contain}
+      .option-list.option-layout-grid-2x2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:8px 0}
+      .option-list.option-layout-grid-2x2 .option{margin:0;min-width:0}
+      label.option.option-has-image{display:flex;align-items:flex-start;gap:8px}
+      label.option.option-has-image input[type=radio]{flex:0 0 auto;margin-top:5px}
+      .option-choice{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1}
+      .option-choice-text{display:block;overflow-wrap:anywhere}
+      .option-choice-media{display:flex;align-items:center;justify-content:center;min-height:80px;border:1px solid #e2e8f0;background:#f8fafc;border-radius:10px;padding:8px}
+      .option-choice-media img{display:block;max-width:100%;max-height:300px;width:auto;height:auto;object-fit:contain;border-radius:7px}
+      .option-choice-media.image-load-failed{display:none}
       .katex-display{overflow-x:auto;overflow-y:hidden;padding:2px 0}
       .passage-box{margin:0 0 16px;border:1px solid #cbd5e1;background:#f8fafc;border-radius:14px;padding:14px 15px;font-weight:400;white-space:pre-wrap;line-height:1.8;color:#263244}
       .passage-label{font-size:.82rem;font-weight:800;color:#1d4ed8;margin-bottom:6px;letter-spacing:.02em}
@@ -91,7 +100,7 @@
       .manual-study-box{margin:12px 0 4px;border:1px dashed #94a3b8;background:#f8fafc;border-radius:12px;padding:12px 14px}
       .manual-study-badge{display:inline-block;font-size:.78rem;font-weight:800;color:#7c3aed;background:#f5f3ff;border-radius:999px;padding:3px 8px;margin-bottom:7px}
       .manual-study-note{font-size:.9rem;color:#64748b;line-height:1.6}
-      @media(max-width:620px){.question-media{padding:7px}.passage-box{padding:12px}.katex{font-size:1.02em}}
+      @media(max-width:620px){.question-media{padding:7px}.passage-box{padding:12px}.katex{font-size:1.02em}.option-list.option-layout-grid-2x2{grid-template-columns:1fr}.option-choice-media img{max-height:240px}}
     `;
     document.head.appendChild(style);
   }
@@ -136,6 +145,36 @@
 
   function isManualStudy(question) {
     return questionType(question) === 'manual-study';
+  }
+
+  function renderOptionList(question, questionIndex) {
+    const options = Array.isArray(question?.o) ? question.o : [];
+    const images = Array.isArray(question?.optionImages) ? question.optionImages : [];
+    const alts = Array.isArray(question?.optionImageAlts) ? question.optionImageAlts : [];
+    const hasImages = images.some(Boolean);
+    const layoutClass = hasImages && question?.optionLayout === 'grid-2x2' ? ' option-layout-grid-2x2' : '';
+
+    const labels = options.map((value, optionIndex) => {
+      const src = images[optionIndex] || '';
+      const alt = alts[optionIndex] || value || `第${question.number || questionIndex + 1}題選項${letters[optionIndex]}`;
+      const media = src
+        ? `<span class="option-choice-media"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy"></span>`
+        : '';
+      const imageClass = src ? ' option-has-image' : '';
+      return `<label class="option${imageClass}" data-opt="${optionIndex}"><input type="radio" name="q${questionIndex}" value="${optionIndex}"><span class="option-choice"><span class="option-choice-text">(${letters[optionIndex]}) ${escapeHtml(value)}</span>${media}</span></label>`;
+    }).join('');
+
+    return `<div class="option-list${layoutClass}">${labels}</div>`;
+  }
+
+  function bindOptionImageFallbacks(root = document) {
+    root.querySelectorAll('.option-choice-media img').forEach(img => {
+      if (img.dataset.fallbackBound === '1') return;
+      img.dataset.fallbackBound = '1';
+      img.addEventListener('error', () => {
+        img.closest('.option-choice-media')?.classList.add('image-load-failed');
+      });
+    });
   }
 
   window.startExam = function(selected) {
@@ -191,9 +230,10 @@
         return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="manual-study">${intro}${qtitle}${media}${optionMedia}<div class="manual-study-box"><span class="manual-study-badge">紙筆練習｜不計分</span><div class="manual-study-note">${escapeHtml(instruction)}</div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
       }
 
-      const opts = (x.o || []).map((v,j) => `<label class="option" data-opt="${j}"><input type="radio" name="q${i}" value="${j}">(${letters[j]}) ${escapeHtml(v)}</label>`).join('');
+      const opts = renderOptionList(x, i);
       return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}">${intro}${qtitle}${media}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
     }).join('');
+    bindOptionImageFallbacks(quiz);
     renderMath(quiz);
     document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',updateProgress));
     updateProgress();
