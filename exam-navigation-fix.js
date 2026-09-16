@@ -48,6 +48,15 @@
     document.head.appendChild(script);
   }
 
+  function loadFirebaseEnglishAiDirect() {
+    if (document.getElementById('firebaseEnglishAiDirectModule')) return;
+    const script = document.createElement('script');
+    script.id = 'firebaseEnglishAiDirectModule';
+    script.src = `firebase-english-ai-direct.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   // index.html still registers the original exam control handlers with
   // addEventListener(). exam-runtime-flex.js now owns these controls through
   // the onclick property. If both remain active, a single tap on「顯示詳解」
@@ -190,6 +199,7 @@
   loadFirebaseLearningDashboard();
   loadFirebaseAccountUi();
   loadFirebaseAiDirect();
+  loadFirebaseEnglishAiDirect();
   detachLegacyExamControlHandlers();
   loadScienceBankMenuModule();
   loadEnglishGeptMenuModule();
