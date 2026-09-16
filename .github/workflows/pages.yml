@@ -37,41 +37,80 @@ jobs:
           BUILD_TS="$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M')"
           sed -i "s|__BUILD_TIMESTAMP__|${BUILD_TS}|g" exam-branding.js
 
-      - name: Build and inline GEPT vocabulary payload
+      - name: Build plain GEPT vocabulary data
         env:
           BUILD_SHA: ${{ github.sha }}
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import json, os
+          import base64
+          import gzip
+          import json
+          import os
 
           base = Path('chapter-bank/english/gept/elementary/vocabulary')
           parts = []
           for i in (1, 2, 3):
-              p = base / f'gept-beginner-vocabulary.b64.part{i}.txt'
-              text = p.read_text(encoding='utf-8').lstrip('\ufeff').strip()
+              path = base / f'gept-beginner-vocabulary.b64.part{i}.txt'
+              text = path.read_text(encoding='utf-8').lstrip('\ufeff')
+              text = ''.join(text.split())
               if len(text) < 100:
                   raise SystemExit(f'Vocabulary part {i} is unexpectedly short: {len(text)}')
               parts.append(text)
 
-          payload = (
-              'window.__GEPT_VOCAB_PARTS=' + json.dumps(parts, ensure_ascii=False) + ';\n'
-              + 'window.__GEPT_VOCAB_EMBEDDED_BUILD=' + json.dumps(os.environ.get('BUILD_SHA', 'unknown')) + ';\n'
+          decoded_candidates = []
+
+          joined = ''.join(parts)
+          try:
+              decoded_candidates.append(base64.b64decode(joined, validate=True))
+          except Exception:
+              pass
+
+          try:
+              decoded_candidates.append(b''.join(base64.b64decode(part, validate=True) for part in parts))
+          except Exception:
+              pass
+
+          try:
+              compact = joined.replace('=', '')
+              compact += '=' * ((4 - len(compact) % 4) % 4)
+              decoded_candidates.append(base64.b64decode(compact, validate=True))
+          except Exception:
+              pass
+
+          rows = None
+          last_error = None
+          for raw in decoded_candidates:
+              try:
+                  payload = gzip.decompress(raw).decode('utf-8')
+                  candidate = json.loads(payload)
+                  if isinstance(candidate, list) and candidate:
+                      rows = candidate
+                      break
+              except Exception as exc:
+                  last_error = exc
+
+          if not rows:
+              raise SystemExit(f'Unable to decode GEPT vocabulary payload: {last_error}')
+
+          valid_rows = [row for row in rows if row.get('id') and row.get('w') and row.get('n') and row.get('c')]
+          if len(valid_rows) < 2000:
+              raise SystemExit(f'Vocabulary row count is unexpectedly low: {len(valid_rows)}')
+
+          data_js = (
+              'window.__GEPT_VOCAB_ROWS=' + json.dumps(valid_rows, ensure_ascii=False, separators=(',', ':')) + ';\n'
+              + 'window.__GEPT_VOCAB_DATA_BUILD=' + json.dumps(os.environ.get('BUILD_SHA', 'unknown')) + ';\n'
           )
 
-          out = base / 'gept-beginner-vocabulary-embedded.js'
-          out.write_text(payload, encoding='utf-8')
-
-          # Put the payload directly in the deployed HTML before any runtime module.
-          # This removes Android/browser/network dependency from vocabulary startup.
           index = Path('index.html')
           html = index.read_text(encoding='utf-8')
-          marker = '<script id="geptVocabularyInlinePayload">\n' + payload + '</script>\n'
+          marker = '<script id="geptVocabularyData">\n' + data_js + '</script>\n'
           if '</body>' not in html:
               raise SystemExit('index.html has no </body> marker')
           html = html.replace('</body>', marker + '</body>', 1)
           index.write_text(html, encoding='utf-8')
-          print(f'Embedded GEPT vocabulary directly into index.html; part lengths {[len(x) for x in parts]}')
+
+          print(f'Embedded {len(valid_rows)} plain GEPT vocabulary rows into index.html')
           PY
 
       - name: Prevent legacy start-screen flash
