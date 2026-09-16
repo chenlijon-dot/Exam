@@ -115,6 +115,9 @@
     let pinchStart = null;
     const mappedEvents = new WeakSet();
 
+    const originalCanvasPointerEvents = canvas.style.pointerEvents;
+    const originalStageTouchAction = stage.style.touchAction;
+
     canvas.style.transformOrigin = '0 0';
     canvas.style.willChange = 'transform';
 
@@ -165,7 +168,7 @@
       if (showHint) hint(overlay, '畫布已回到 100%');
     }
 
-    function forcePenMode() {
+    function forcePenModeBeforePointer() {
       const shapeMenu = overlay.querySelector('#paperCanvasShapeMenu');
       const pen = [...(shapeMenu?.querySelectorAll('button') || [])]
         .find(button => String(button.textContent || '').trim() === '畫筆');
@@ -178,24 +181,47 @@
         return;
       }
 
+      /*
+       * Important: switch the drawing toolbar back to pen BEFORE pointerMode
+       * becomes true. Previously forcePenMode() was called after pointerMode
+       * was enabled; that synthetic click bubbled through the tool listener and
+       * immediately disabled pointer mode again. The result was exactly what
+       * the user saw: pressing 指標 still drew ink and pinch/pan never started.
+       */
+      if (enabled && !pointerMode) {
+        forcePenModeBeforePointer();
+      }
+
       pointerMode = !!enabled;
       activePointers.clear();
       panStart = null;
       pinchStart = null;
 
       if (pointerMode) {
-        forcePenMode();
+        /*
+         * Hard gate: while 指標 is active the canvas itself is not hit-testable.
+         * Gesture events land on the stage, so none of the legacy/freehand
+         * canvas pointer listeners can draw a stroke by accident.
+         */
+        canvas.style.pointerEvents = 'none';
+        stage.style.touchAction = 'none';
+
+        pointerButton.textContent = '指標✓';
         pointerButton.style.background = '#f59e0b';
         pointerButton.style.color = '#451a03';
         pointerButton.setAttribute('aria-pressed', 'true');
-        canvas.style.cursor = 'grab';
+        stage.style.cursor = 'grab';
         zoomBadge.style.display = 'block';
         hint(overlay, '指標：單指拖動畫布，雙指縮放');
       } else {
+        canvas.style.pointerEvents = originalCanvasPointerEvents;
+        stage.style.touchAction = originalStageTouchAction || 'none';
+
+        pointerButton.textContent = '指標';
         pointerButton.style.background = '#475569';
         pointerButton.style.color = '#ffffff';
         pointerButton.setAttribute('aria-pressed', 'false');
-        canvas.style.cursor = '';
+        stage.style.cursor = '';
         zoomBadge.style.display = viewScale > 1.001 ? 'block' : 'none';
       }
 
@@ -216,6 +242,7 @@
     function startPinch() {
       const points = [...activePointers.values()];
       if (points.length < 2) return;
+
       const a = points[0];
       const b = points[1];
       const mid = midpoint(a, b);
@@ -265,50 +292,77 @@
             offsetY
           };
         }
+
         offsetX = panStart.offsetX + (p.x - panStart.x);
         offsetY = panStart.offsetY + (p.y - panStart.y);
         applyView();
       }
     }
 
+    function pointerInsideStage(event) {
+      if (event.target === stage || event.target === canvas) return true;
+      return !!event.target?.closest?.('#paperCanvasStage');
+    }
+
     function handlePointerGesture(event) {
       if (!pointerMode || mappedEvents.has(event)) return false;
-      if (event.target !== canvas) return false;
+      if (!pointerInsideStage(event)) return false;
 
       if (event.cancelable) event.preventDefault();
       event.stopImmediatePropagation();
 
       if (event.type === 'pointerdown') {
-        activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
-        try { canvas.setPointerCapture?.(event.pointerId); } catch {}
+        activePointers.set(event.pointerId, {
+          x: event.clientX,
+          y: event.clientY
+        });
+
+        try { stage.setPointerCapture?.(event.pointerId); } catch {}
 
         if (activePointers.size === 1) {
-          panStart = { x: event.clientX, y: event.clientY, offsetX, offsetY };
+          panStart = {
+            x: event.clientX,
+            y: event.clientY,
+            offsetX,
+            offsetY
+          };
           pinchStart = null;
         } else if (activePointers.size === 2) {
           startPinch();
         }
+
         return true;
       }
 
       if (event.type === 'pointermove' || event.type === 'pointerrawupdate') {
         if (!activePointers.has(event.pointerId)) return true;
-        activePointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+        activePointers.set(event.pointerId, {
+          x: event.clientX,
+          y: event.clientY
+        });
         updateGesture();
         return true;
       }
 
       if (event.type === 'pointerup' || event.type === 'pointercancel') {
         activePointers.delete(event.pointerId);
-        try { canvas.releasePointerCapture?.(event.pointerId); } catch {}
+        try { stage.releasePointerCapture?.(event.pointerId); } catch {}
+
         pinchStart = null;
         panStart = null;
 
         const remain = [...activePointers.values()];
-        if (remain.length >= 2) startPinch();
-        else if (remain.length === 1) {
+        if (remain.length >= 2) {
+          startPinch();
+        } else if (remain.length === 1) {
           const p = remain[0];
-          panStart = { x: p.x, y: p.y, offsetX, offsetY };
+          panStart = {
+            x: p.x,
+            y: p.y,
+            offsetX,
+            offsetY
+          };
         }
         return true;
       }
@@ -383,7 +437,12 @@
     ];
 
     eventTypes.forEach(type => {
-      stage.addEventListener(type, event => {
+      /*
+       * Capture from overlay, one level above every existing handwriting tool.
+       * This guarantees pointer mode gets first refusal before the freehand,
+       * shape or text handlers see the event.
+       */
+      overlay.addEventListener(type, event => {
         if (mappedEvents.has(event)) return;
         if (handlePointerGesture(event)) return;
         remapDrawingEvent(event);
@@ -400,6 +459,7 @@
 
     overlay.addEventListener('click', event => {
       if (!pointerMode) return;
+
       const target = event.target.closest?.('button');
       if (!target || target === pointerButton || target === zoomBadge) return;
 
@@ -415,9 +475,7 @@
     }, true);
 
     clearButton.addEventListener('click', () => {
-      if (viewScale > 1.001) {
-        requestAnimationFrame(applyView);
-      }
+      if (viewScale > 1.001) requestAnimationFrame(applyView);
     });
 
     const doneButton = overlay.querySelector('#paperCanvasDoneBtn');
@@ -426,9 +484,12 @@
     const cleanupView = () => {
       pointerMode = false;
       activePointers.clear();
+      canvas.style.pointerEvents = originalCanvasPointerEvents;
+      stage.style.touchAction = originalStageTouchAction;
       canvas.style.transform = '';
       canvas.style.transformOrigin = '';
       canvas.style.willChange = '';
+      stage.style.cursor = '';
     };
 
     doneButton?.addEventListener('click', cleanupView, { once: true });
@@ -445,7 +506,10 @@
 
   function start() {
     scan();
-    observer.observe(document.documentElement, { childList: true, subtree: true });
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
   }
 
   if (document.readyState === 'loading') {
