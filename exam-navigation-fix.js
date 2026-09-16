@@ -30,6 +30,15 @@
     document.head.appendChild(script);
   }
 
+  function loadFirebaseAdminLearning() {
+    if (document.getElementById('firebaseAdminLearningModule')) return;
+    const script = document.createElement('script');
+    script.id = 'firebaseAdminLearningModule';
+    script.src = `firebase-admin-learning.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function loadFirebaseAccountUi() {
     if (document.getElementById('firebaseAccountUiModule')) return;
     const script = document.createElement('script');
@@ -197,6 +206,7 @@
   loadFirebaseAuthGate();
   loadFirebaseFirestoreSync();
   loadFirebaseLearningDashboard();
+  loadFirebaseAdminLearning();
   loadFirebaseAccountUi();
   loadFirebaseAiDirect();
   loadFirebaseEnglishAiDirect();
