@@ -30,6 +30,14 @@
     );
   }
 
+  function hideDebugHud(root = document) {
+    const hud = root.querySelector?.('#paperCanvasDebugHud');
+    if (hud) {
+      hud.style.display = 'none';
+      hud.setAttribute('aria-hidden', 'true');
+    }
+  }
+
   function setWebCanvasTool(canvas, erasing) {
     if (!canvas) return;
     const ctx = canvas.getContext('2d', { alpha: false });
@@ -92,6 +100,8 @@
 
   function installForOverlay(overlay) {
     if (!overlay || overlay.dataset.eraserInstalled === '1') return;
+
+    hideDebugHud(overlay);
 
     const clearButton = overlay.querySelector('#paperCanvasClearBtn');
     const canvas = overlay.querySelector('#mathPaperCanvas');
@@ -168,6 +178,7 @@
   }
 
   function scan() {
+    hideDebugHud(document);
     installForOverlay(document.getElementById('mathPaperCanvasOverlay'));
   }
 
