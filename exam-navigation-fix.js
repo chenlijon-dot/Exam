@@ -5,237 +5,28 @@
 
   function loadFirebaseAuthGate() {
     if (document.getElementById('firebaseAuthGateModule')) return;
-    const script = document.createElement('script');
-    script.id = 'firebaseAuthGateModule';
-    script.src = `firebase-auth.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
+    const script = document.createElement('script'); script.id='firebaseAuthGateModule'; script.src=`firebase-auth.js?v=${Date.now()}`; script.defer=true; document.head.appendChild(script);
   }
+  function loadFirebaseFirestoreSync() { if(document.getElementById('firebaseFirestoreSyncModule'))return; const s=document.createElement('script');s.id='firebaseFirestoreSyncModule';s.src=`firebase-firestore-sync.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s); }
+  function loadFirebaseLearningDashboard(){if(document.getElementById('firebaseLearningDashboardModule'))return;const s=document.createElement('script');s.id='firebaseLearningDashboardModule';s.src=`firebase-learning-dashboard.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadFirebaseAdminLearning(){if(document.getElementById('firebaseAdminLearningModule'))return;const s=document.createElement('script');s.id='firebaseAdminLearningModule';s.src=`firebase-admin-learning.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadFirebaseAccountUi(){if(document.getElementById('firebaseAccountUiModule'))return;const s=document.createElement('script');s.id='firebaseAccountUiModule';s.src=`firebase-account-ui.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadFirebaseAiDirect(){if(document.getElementById('firebaseAiDirectModule'))return;const s=document.createElement('script');s.id='firebaseAiDirectModule';s.src=`firebase-ai-direct.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadFirebaseEnglishAiDirect(){if(document.getElementById('firebaseEnglishAiDirectModule'))return;const s=document.createElement('script');s.id='firebaseEnglishAiDirectModule';s.src=`firebase-english-ai-direct.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
 
-  function loadFirebaseFirestoreSync() {
-    if (document.getElementById('firebaseFirestoreSyncModule')) return;
-    const script = document.createElement('script');
-    script.id = 'firebaseFirestoreSyncModule';
-    script.src = `firebase-firestore-sync.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
+  function detachLegacyExamControlHandlers(){for(const [buttonId,handlerName] of [['submitBtn','grade'],['explainBtn','toggleExplain'],['restartBtn','restart'],['backBtn','backToLevels']]){const button=document.getElementById(buttonId);const handler=window[handlerName];if(button&&typeof handler==='function')button.removeEventListener('click',handler);}}
+  function loadScienceBankMenuModule(){if(document.getElementById('scienceBankMenuModule'))return;const s=document.createElement('script');s.id='scienceBankMenuModule';s.src=`exam-science-banks.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadEnglishGeptMenuModule(){if(document.getElementById('englishGeptMenuModule'))return;const s=document.createElement('script');s.id='englishGeptMenuModule';s.src=`exam-english-gept.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadEnglishVocabularyModule(){if(document.getElementById('englishVocabularyModule'))return;const s=document.createElement('script');s.id='englishVocabularyModule';s.src=`exam-english-vocabulary-v3.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadMathCatalogModule(){if(document.getElementById('mathCatalogModule'))return;const s=document.createElement('script');s.id='mathCatalogModule';s.src=`exam-math-catalog.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadMathPointerModule(){if(document.getElementById('mathPointerModule'))return;const s=document.createElement('script');s.id='mathPointerModule';s.src=`exam-math-pointer.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
 
-  function loadFirebaseLearningDashboard() {
-    if (document.getElementById('firebaseLearningDashboardModule')) return;
-    const script = document.createElement('script');
-    script.id = 'firebaseLearningDashboardModule';
-    script.src = `firebase-learning-dashboard.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
+  function returnToScienceUnit(){document.getElementById('catalogShell')?.classList.remove('hidden');document.getElementById('startScreen')?.classList.add('hidden');document.getElementById('examScreen')?.classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'});}
+  async function openScienceSchoolBank(button){const oldText=button.textContent;button.disabled=true;button.textContent='🏫 載入各校題庫…';try{const res=await fetch(SCIENCE_SCHOOL_BANK_PATH,{cache:'no-store'});if(!res.ok)throw new Error(`HTTP ${res.status}`);const data=await res.json();const questions=Array.isArray(data.questions)?data.questions:[];if(!questions.length){alert('1-2 科學方法的「各校題庫」入口已建立，目前尚未匯入各校段考題。之後整理完題目卷與答案卷，就會直接放進這裡。');return;}if(typeof banks==='undefined'||typeof startExam!=='function')throw new Error('題庫引擎尚未就緒');const key=data.exam?.difficulty||'science-7-1-u01-s02-school';banks[key]=questions;window.examContexts=window.examContexts||{};window.examContexts[key]={...(data.exam||{}),key,examType:true,backLabel:'返回 1-2 題庫',onBack:()=>{document.querySelector('#examScreen')?.classList.add('hidden');document.querySelector('#startScreen')?.classList.remove('hidden');const result=document.querySelector('#result');if(result)result.style.display='none';window.scrollTo({top:0,behavior:'smooth'});}};startExam(key);}catch(error){alert(`各校題庫載入失敗：${error.message}`);}finally{button.disabled=false;button.textContent=oldText;}}
+  function ensureScienceSchoolBankButton(){const tools=document.getElementById('recordTools');const title=document.querySelector('#startScreen header h1')?.textContent||'';if(!tools||!title.includes('1-2 科學方法')||document.getElementById('scienceSchoolBankBtn'))return;const button=document.createElement('button');button.id='scienceSchoolBankBtn';button.className='record-btn';button.textContent='🏫 各校題庫';button.title='各校真實段考題，依 1-2 科學方法分類整理';button.addEventListener('click',()=>openScienceSchoolBank(button));tools.appendChild(button);}
+  function watchScienceStartScreen(){const startScreen=document.getElementById('startScreen');if(!startScreen)return;const observer=new MutationObserver(ensureScienceSchoolBankButton);observer.observe(startScreen,{childList:true,subtree:true,characterData:true});ensureScienceSchoolBankButton();}
+  document.addEventListener('click',event=>{const button=event.target.closest?.('#chapterBackBtn');if(button)setTimeout(returnToScienceUnit,0);});
 
-  function loadFirebaseAdminLearning() {
-    if (document.getElementById('firebaseAdminLearningModule')) return;
-    const script = document.createElement('script');
-    script.id = 'firebaseAdminLearningModule';
-    script.src = `firebase-admin-learning.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function loadFirebaseAccountUi() {
-    if (document.getElementById('firebaseAccountUiModule')) return;
-    const script = document.createElement('script');
-    script.id = 'firebaseAccountUiModule';
-    script.src = `firebase-account-ui.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function loadFirebaseAiDirect() {
-    if (document.getElementById('firebaseAiDirectModule')) return;
-    const script = document.createElement('script');
-    script.id = 'firebaseAiDirectModule';
-    script.src = `firebase-ai-direct.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function loadFirebaseEnglishAiDirect() {
-    if (document.getElementById('firebaseEnglishAiDirectModule')) return;
-    const script = document.createElement('script');
-    script.id = 'firebaseEnglishAiDirectModule';
-    script.src = `firebase-english-ai-direct.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function detachLegacyExamControlHandlers() {
-    const bindings = [
-      ['submitBtn', 'grade'],
-      ['explainBtn', 'toggleExplain'],
-      ['restartBtn', 'restart'],
-      ['backBtn', 'backToLevels']
-    ];
-
-    for (const [buttonId, handlerName] of bindings) {
-      const button = document.getElementById(buttonId);
-      const handler = window[handlerName];
-      if (button && typeof handler === 'function') {
-        button.removeEventListener('click', handler);
-      }
-    }
-  }
-
-  function loadScienceBankMenuModule() {
-    if (document.getElementById('scienceBankMenuModule')) return;
-    const script = document.createElement('script');
-    script.id = 'scienceBankMenuModule';
-    script.src = `exam-science-banks.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function loadEnglishGeptMenuModule() {
-    if (document.getElementById('englishGeptMenuModule')) return;
-    const script = document.createElement('script');
-    script.id = 'englishGeptMenuModule';
-    script.src = `exam-english-gept.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function loadEnglishVocabularyModule() {
-    if (document.getElementById('englishVocabularyModule')) return;
-    const script = document.createElement('script');
-    script.id = 'englishVocabularyModule';
-    script.src = `exam-english-vocabulary-v2.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function loadMathCatalogModule() {
-    if (document.getElementById('mathCatalogModule')) return;
-    const script = document.createElement('script');
-    script.id = 'mathCatalogModule';
-    script.src = `exam-math-catalog.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function loadMathPointerModule() {
-    if (document.getElementById('mathPointerModule')) return;
-    const script = document.createElement('script');
-    script.id = 'mathPointerModule';
-    script.src = `exam-math-pointer.js?v=${Date.now()}`;
-    script.defer = true;
-    document.head.appendChild(script);
-  }
-
-  function returnToScienceUnit() {
-    const shell = document.getElementById('catalogShell');
-    const startScreen = document.getElementById('startScreen');
-    const examScreen = document.getElementById('examScreen');
-
-    shell?.classList.remove('hidden');
-    startScreen?.classList.add('hidden');
-    examScreen?.classList.add('hidden');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  async function openScienceSchoolBank(button) {
-    const oldText = button.textContent;
-    button.disabled = true;
-    button.textContent = '🏫 載入各校題庫…';
-
-    try {
-      const res = await fetch(SCIENCE_SCHOOL_BANK_PATH, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      const questions = Array.isArray(data.questions) ? data.questions : [];
-
-      if (!questions.length) {
-        alert('1-2 科學方法的「各校題庫」入口已建立，目前尚未匯入各校段考題。之後整理完題目卷與答案卷，就會直接放進這裡。');
-        return;
-      }
-
-      if (typeof banks === 'undefined' || typeof startExam !== 'function') {
-        throw new Error('題庫引擎尚未就緒');
-      }
-
-      const key = data.exam?.difficulty || 'science-7-1-u01-s02-school';
-      banks[key] = questions;
-      window.examContexts = window.examContexts || {};
-      window.examContexts[key] = {
-        ...(data.exam || {}),
-        key,
-        examType: true,
-        backLabel: '返回 1-2 題庫',
-        onBack: () => {
-          document.querySelector('#examScreen')?.classList.add('hidden');
-          document.querySelector('#startScreen')?.classList.remove('hidden');
-          const result = document.querySelector('#result');
-          if (result) result.style.display = 'none';
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      };
-
-      startExam(key);
-    } catch (error) {
-      alert(`各校題庫載入失敗：${error.message}`);
-    } finally {
-      button.disabled = false;
-      button.textContent = oldText;
-    }
-  }
-
-  function ensureScienceSchoolBankButton() {
-    const tools = document.getElementById('recordTools');
-    const title = document.querySelector('#startScreen header h1')?.textContent || '';
-    if (!tools || !title.includes('1-2 科學方法')) return;
-    if (document.getElementById('scienceSchoolBankBtn')) return;
-
-    const button = document.createElement('button');
-    button.id = 'scienceSchoolBankBtn';
-    button.className = 'record-btn';
-    button.textContent = '🏫 各校題庫';
-    button.title = '各校真實段考題，依 1-2 科學方法分類整理';
-    button.addEventListener('click', () => openScienceSchoolBank(button));
-    tools.appendChild(button);
-  }
-
-  function watchScienceStartScreen() {
-    const startScreen = document.getElementById('startScreen');
-    if (!startScreen) return;
-
-    const observer = new MutationObserver(ensureScienceSchoolBankButton);
-    observer.observe(startScreen, { childList: true, subtree: true, characterData: true });
-    ensureScienceSchoolBankButton();
-  }
-
-  document.addEventListener('click', event => {
-    const button = event.target.closest?.('#chapterBackBtn');
-    if (!button) return;
-
-    setTimeout(returnToScienceUnit, 0);
-  });
-
-  loadFirebaseAuthGate();
-  loadFirebaseFirestoreSync();
-  loadFirebaseLearningDashboard();
-  loadFirebaseAdminLearning();
-  loadFirebaseAccountUi();
-  loadFirebaseAiDirect();
-  loadFirebaseEnglishAiDirect();
-  detachLegacyExamControlHandlers();
-  loadScienceBankMenuModule();
-  loadEnglishGeptMenuModule();
-  loadEnglishVocabularyModule();
-  loadMathCatalogModule();
-  loadMathPointerModule();
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      detachLegacyExamControlHandlers();
-      watchScienceStartScreen();
-    });
-  } else {
-    watchScienceStartScreen();
-  }
+  loadFirebaseAuthGate();loadFirebaseFirestoreSync();loadFirebaseLearningDashboard();loadFirebaseAdminLearning();loadFirebaseAccountUi();loadFirebaseAiDirect();loadFirebaseEnglishAiDirect();detachLegacyExamControlHandlers();loadScienceBankMenuModule();loadEnglishGeptMenuModule();loadEnglishVocabularyModule();loadMathCatalogModule();loadMathPointerModule();
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{detachLegacyExamControlHandlers();watchScienceStartScreen();});}else watchScienceStartScreen();
 })();
