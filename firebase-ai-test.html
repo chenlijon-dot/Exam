@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChrisExamPlatform｜Firebase AI Logic 測試</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:#f6f8fb;color:#172033;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif}
+    .card{width:min(720px,100%);background:#fff;border:1px solid #dfe5ee;border-radius:20px;padding:24px;box-shadow:0 14px 40px rgba(15,23,42,.11)}
+    h1{margin:0 0 8px;font-size:1.5rem}.muted{color:#64748b}.box{margin-top:14px;border:1px solid #e2e8f0;border-radius:12px;padding:13px;background:#f8fafc;white-space:pre-wrap;line-height:1.6;overflow-wrap:anywhere}
+    .ok{background:#f0fdf4;border-color:#86efac;color:#166534}.bad{background:#fff7ed;border-color:#fdba74;color:#9a3412}
+    button{width:100%;margin-top:14px;border:0;border-radius:12px;padding:13px 16px;background:#2563eb;color:#fff;font-weight:800;font-size:1rem;cursor:pointer}button:disabled{opacity:.55;cursor:wait}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Firebase AI Logic 測試</h1>
+    <div class="muted">目的：確認 App Check → Firebase AI Logic → Gemini 已完全打通，不經 GitHub Token。</div>
+    <div id="status" class="box">正在初始化 Firebase 與 App Check…</div>
+    <button id="runBtn" type="button" disabled>執行 Gemini 測試</button>
+    <div id="result" class="box" style="display:none"></div>
+  </main>
+
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+    import { initializeAppCheck, ReCaptchaEnterpriseProvider, getToken } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app-check.js';
+    import { getAI, getGenerativeModel, GoogleAIBackend } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-ai.js';
+
+    const firebaseConfig = {
+      apiKey: 'AIzaSyDkZOlQjmoVnkIz3Q1ppg_EJnCp5W3qNFQ',
+      authDomain: 'chrisexamplatform.firebaseapp.com',
+      projectId: 'chrisexamplatform',
+      storageBucket: 'chrisexamplatform.firebasestorage.app',
+      messagingSenderId: '682858985440',
+      appId: '1:682858985440:web:22dfbf5f0c635728675d85',
+      measurementId: 'G-WHXW4FDXBB'
+    };
+
+    const RECAPTCHA_ENTERPRISE_SITE_KEY = '6LcNBb4tAAAAAFTbAdO2VaPxae82eXGLLytwaXsS';
+    const MODEL = 'gemini-3.8-flash';
+
+    const status = document.getElementById('status');
+    const runBtn = document.getElementById('runBtn');
+    const result = document.getElementById('result');
+
+    function setStatus(text, kind='') {
+      status.textContent = text;
+      status.className = 'box' + (kind ? ` ${kind}` : '');
+    }
+
+    function showResult(text, kind='') {
+      result.style.display = 'block';
+      result.textContent = text;
+      result.className = 'box' + (kind ? ` ${kind}` : '');
+    }
+
+    try {
+      const app = initializeApp(firebaseConfig);
+      const appCheck = initializeAppCheck(app, {
+        provider: new ReCaptchaEnterpriseProvider(RECAPTCHA_ENTERPRISE_SITE_KEY),
+        isTokenAutoRefreshEnabled: true
+      });
+
+      setStatus('正在取得 App Check 權杖…');
+      const appCheckToken = await getToken(appCheck, false);
+      if (!appCheckToken?.token) throw new Error('沒有取得 App Check token');
+
+      const ai = getAI(app, { backend: new GoogleAIBackend() });
+      const model = getGenerativeModel(ai, { model: MODEL });
+
+      window.__firebaseAiTestModel = model;
+      setStatus(`✓ App Check 成功\n✓ Firebase AI Logic SDK 已初始化\n模型：${MODEL}`, 'ok');
+      runBtn.disabled = false;
+    } catch (error) {
+      console.error('[FirebaseAITest] init failed', error);
+      setStatus(`初始化失敗\n${error?.code || ''}\n${error?.message || error}`, 'bad');
+    }
+
+    runBtn.addEventListener('click', async () => {
+      runBtn.disabled = true;
+      runBtn.textContent = 'Gemini 回答中…';
+      showResult('正在送出測試要求…');
+      try {
+        const prompt = '請只回答一句繁體中文：Firebase AI Logic 測試成功。';
+        const response = await window.__firebaseAiTestModel.generateContent(prompt);
+        const text = response.response.text();
+        showResult(`✓ Gemini 回應成功\n\n${text}`, 'ok');
+      } catch (error) {
+        console.error('[FirebaseAITest] Gemini request failed', error);
+        showResult(`Gemini 呼叫失敗\n${error?.code || ''}\n${error?.message || error}`, 'bad');
+      } finally {
+        runBtn.disabled = false;
+        runBtn.textContent = '再測一次';
+      }
+    });
+  </script>
+</body>
+</html>
