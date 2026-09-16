@@ -37,6 +37,32 @@ jobs:
           BUILD_TS="$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M')"
           sed -i "s|__BUILD_TIMESTAMP__|${BUILD_TS}|g" exam-branding.js
 
+      - name: Build embedded GEPT vocabulary payload
+        env:
+          BUILD_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, os
+
+          base = Path('chapter-bank/english/gept/elementary/vocabulary')
+          parts = []
+          for i in (1, 2, 3):
+              p = base / f'gept-beginner-vocabulary.b64.part{i}.txt'
+              text = p.read_text(encoding='utf-8').lstrip('\ufeff').strip()
+              if len(text) < 100:
+                  raise SystemExit(f'Vocabulary part {i} is unexpectedly short: {len(text)}')
+              parts.append(text)
+
+          out = base / 'gept-beginner-vocabulary-embedded.js'
+          payload = (
+              'window.__GEPT_VOCAB_PARTS=' + json.dumps(parts, ensure_ascii=False) + ';\n'
+              + 'window.__GEPT_VOCAB_EMBEDDED_BUILD=' + json.dumps(os.environ.get('BUILD_SHA', 'unknown')) + ';\n'
+          )
+          out.write_text(payload, encoding='utf-8')
+          print(f'Wrote {out} with part lengths {[len(x) for x in parts]}')
+          PY
+
       - name: Prevent legacy start-screen flash
         run: |
           # index.html still contains the original science difficulty selector as a legacy
