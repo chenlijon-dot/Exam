@@ -203,10 +203,21 @@
     scheduleSync();
   }
 
+  function loadMathEraserSupport() {
+    if (document.getElementById('mathHandwritingEraserScript')) return;
+
+    const script = document.createElement('script');
+    script.id = 'mathHandwritingEraserScript';
+    script.src = `exam-math-eraser.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function init() {
     injectStyles();
     ensureBackdrop();
     watchDom();
+    loadMathEraserSupport();
   }
 
   if (document.readyState === 'loading') {
