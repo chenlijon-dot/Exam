@@ -18,6 +18,7 @@
   function loadScienceBankMenuModule(){if(document.getElementById('scienceBankMenuModule'))return;const s=document.createElement('script');s.id='scienceBankMenuModule';s.src=`exam-science-banks.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
   function loadEnglishGeptMenuModule(){if(document.getElementById('englishGeptMenuModule'))return;const s=document.createElement('script');s.id='englishGeptMenuModule';s.src=`exam-english-gept.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
   function loadEnglishVocabularyModule(){if(document.getElementById('englishVocabularyModule'))return;const s=document.createElement('script');s.id='englishVocabularyModule';s.src=`exam-english-vocabulary-simple.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
+  function loadVocabularyLayoutFix(){if(document.getElementById('vocabularyLayoutFixModule'))return;const s=document.createElement('script');s.id='vocabularyLayoutFixModule';s.src=`exam-vocabulary-layout-fix.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
   function loadMathCatalogModule(){if(document.getElementById('mathCatalogModule'))return;const s=document.createElement('script');s.id='mathCatalogModule';s.src=`exam-math-catalog.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
   function loadMathPointerModule(){if(document.getElementById('mathPointerModule'))return;const s=document.createElement('script');s.id='mathPointerModule';s.src=`exam-math-pointer.js?v=${Date.now()}`;s.defer=true;document.head.appendChild(s);}
 
@@ -27,6 +28,6 @@
   function watchScienceStartScreen(){const startScreen=document.getElementById('startScreen');if(!startScreen)return;const observer=new MutationObserver(ensureScienceSchoolBankButton);observer.observe(startScreen,{childList:true,subtree:true,characterData:true});ensureScienceSchoolBankButton();}
   document.addEventListener('click',event=>{const button=event.target.closest?.('#chapterBackBtn');if(button)setTimeout(returnToScienceUnit,0);});
 
-  loadFirebaseAuthGate();loadFirebaseFirestoreSync();loadFirebaseLearningDashboard();loadFirebaseAdminLearning();loadFirebaseAccountUi();loadFirebaseAiDirect();loadFirebaseEnglishAiDirect();detachLegacyExamControlHandlers();loadScienceBankMenuModule();loadEnglishGeptMenuModule();loadEnglishVocabularyModule();loadMathCatalogModule();loadMathPointerModule();
+  loadFirebaseAuthGate();loadFirebaseFirestoreSync();loadFirebaseLearningDashboard();loadFirebaseAdminLearning();loadFirebaseAccountUi();loadFirebaseAiDirect();loadFirebaseEnglishAiDirect();detachLegacyExamControlHandlers();loadScienceBankMenuModule();loadEnglishGeptMenuModule();loadEnglishVocabularyModule();loadVocabularyLayoutFix();loadMathCatalogModule();loadMathPointerModule();
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{detachLegacyExamControlHandlers();watchScienceStartScreen();});}else watchScienceStartScreen();
 })();
