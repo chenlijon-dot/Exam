@@ -66,11 +66,6 @@
     document.head.appendChild(script);
   }
 
-  // index.html still registers the original exam control handlers with
-  // addEventListener(). exam-runtime-flex.js now owns these controls through
-  // the onclick property. If both remain active, a single tap on「顯示詳解」
-  // executes two toggles (show -> hide), so it looks as if nothing happened.
-  // Remove only the legacy listeners; the flex runtime handlers remain intact.
   function detachLegacyExamControlHandlers() {
     const bindings = [
       ['submitBtn', 'grade'],
@@ -111,6 +106,15 @@
     const script = document.createElement('script');
     script.id = 'mathCatalogModule';
     script.src = `exam-math-catalog.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
+  function loadMathPointerModule() {
+    if (document.getElementById('mathPointerModule')) return;
+    const script = document.createElement('script');
+    script.id = 'mathPointerModule';
+    script.src = `exam-math-pointer.js?v=${Date.now()}`;
     script.defer = true;
     document.head.appendChild(script);
   }
@@ -214,6 +218,7 @@
   loadScienceBankMenuModule();
   loadEnglishGeptMenuModule();
   loadMathCatalogModule();
+  loadMathPointerModule();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
