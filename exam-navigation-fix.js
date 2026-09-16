@@ -101,6 +101,15 @@
     document.head.appendChild(script);
   }
 
+  function loadEnglishVocabularyModule() {
+    if (document.getElementById('englishVocabularyModule')) return;
+    const script = document.createElement('script');
+    script.id = 'englishVocabularyModule';
+    script.src = `exam-english-vocabulary.js?v=${Date.now()}`;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
   function loadMathCatalogModule() {
     if (document.getElementById('mathCatalogModule')) return;
     const script = document.createElement('script');
@@ -217,6 +226,7 @@
   detachLegacyExamControlHandlers();
   loadScienceBankMenuModule();
   loadEnglishGeptMenuModule();
+  loadEnglishVocabularyModule();
   loadMathCatalogModule();
   loadMathPointerModule();
 
