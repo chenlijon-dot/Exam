@@ -1,420 +1,62 @@
 (() => {
   'use strict';
 
-  const LOCAL_PROGRESS_KEY = 'englishVocabularyProgress.v1';
-  const FIREBASE_VERSION = '12.19.0';
-  const VALID_COUNTS = new Set([10, 20, 50, 100]);
-  const SOURCE_KEY = 'gept-elementary';
-  const SOURCE_LABEL = '全民英檢初級';
+  const LOCAL_PROGRESS_KEY='englishVocabularyProgress.v1';
+  const LOCAL_MARKOV_KEY='englishVocabularyMarkovState.v1';
+  const FIREBASE_VERSION='12.19.0';
+  const VALID_COUNTS=new Set([10,20,50,100]);
+  const SOURCE_KEY='gept-elementary';
+  const SOURCE_LABEL='全民英檢初級';
+  const MARKOV_STATE_DOC='gept-elementary-markov';
+  const API_URL='https://script.google.com/macros/s/AKfycbwXgNBgVNM-N0JR8KsXeOr8DeregYbmKnT78Ru1cYZXYLor_3moTUdg_0_IydRiXQPTHg/exec';
+  const RECENT_WINDOW=6;
+  let firestorePromise=null, activeSession=null;
+  const $=(s,r=document)=>r.querySelector(s);
+  const safeJson=(t,f)=>{try{return JSON.parse(t);}catch{return f;}};
+  const countOf=v=>{const n=Number(v||0);return Number.isFinite(n)&&n>0?Math.floor(n):0;};
+  const normList=(v,max=Infinity)=>{if(!Array.isArray(v))return[];const seen=new Set(),out=[];for(const x of v){const k=String(x||'').trim().toLowerCase();if(!k||seen.has(k))continue;seen.add(k);out.push(k);if(out.length>=max)break;}return out;};
+  const normMap=v=>{const out={};if(!v||typeof v!=='object')return out;for(const [k0,n0] of Object.entries(v)){const k=String(k0||'').trim().toLowerCase(),n=countOf(n0);if(k&&n)out[k]=n;}return out;};
+  const maxMaps=(a,b)=>{const out={...normMap(a)};for(const [k,n] of Object.entries(normMap(b)))out[k]=Math.max(countOf(out[k]),n);return out;};
+  const addMaps=(a,b)=>{const out={...normMap(a)};for(const [k,n] of Object.entries(normMap(b)))out[k]=countOf(out[k])+n;return out;};
+  const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-  let firestorePromise = null;
-  let activeSession = null;
+  function loadLocalProgress(){const v=safeJson(localStorage.getItem(LOCAL_PROGRESS_KEY)||'{}',{});return v&&typeof v==='object'?v:{};}
+  function saveLocalProgress(v){localStorage.setItem(LOCAL_PROGRESS_KEY,JSON.stringify(v));}
+  function loadLocalMarkov(){const v=safeJson(localStorage.getItem(LOCAL_MARKOV_KEY)||'{}',{});return{exposure:normMap(v.exposure),targetCount:normMap(v.targetCount),frontier:normList(v.frontier,3),recentTargets:normList(v.recentTargets,RECENT_WINDOW),updatedAt:String(v.updatedAt||'')};}
+  function saveLocalMarkov(v){localStorage.setItem(LOCAL_MARKOV_KEY,JSON.stringify({exposure:normMap(v.exposure),targetCount:normMap(v.targetCount),frontier:normList(v.frontier,3),recentTargets:normList(v.recentTargets,RECENT_WINDOW),updatedAt:String(v.updatedAt||new Date().toISOString())}));}
+  function progressKey(item){return`${SOURCE_KEY}:${item.vocabId??item.id}`;}
+  function blankProgress(){return{reviewCount:0,wrongCount:0,correctCount:0,unansweredCount:0,exposureCount:0,targetCount:0,lastReviewedAt:''};}
+  function mergeProgress(a,b){a=a||blankProgress();if(!b)return a;return{reviewCount:Math.max(countOf(a.reviewCount),countOf(b.reviewCount)),wrongCount:Math.max(countOf(a.wrongCount),countOf(b.wrongCount)),correctCount:Math.max(countOf(a.correctCount),countOf(b.correctCount)),unansweredCount:Math.max(countOf(a.unansweredCount),countOf(b.unansweredCount)),exposureCount:Math.max(countOf(a.exposureCount),countOf(b.exposureCount)),targetCount:Math.max(countOf(a.targetCount),countOf(b.targetCount)),lastReviewedAt:b.lastReviewedAt||a.lastReviewedAt||''};}
 
-  const $ = (sel, root = document) => root.querySelector(sel);
+  async function waitForAuth(timeout=5000){if(window.ChrisExamAuth?.uid)return window.ChrisExamAuth;return new Promise(resolve=>{let done=false;const finish=()=>{if(done)return;done=true;window.removeEventListener('chrisexam-auth-ready',finish);resolve(window.ChrisExamAuth||null);};window.addEventListener('chrisexam-auth-ready',finish,{once:true});setTimeout(finish,timeout);});}
+  async function getFirestoreApi(){if(firestorePromise)return firestorePromise;firestorePromise=(async()=>{const auth=await waitForAuth();if(!auth?.uid)return null;const appMod=await import(`https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-app.js`);const fs=await import(`https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-firestore.js`);const app=appMod.getApps().length?appMod.getApp():null;if(!app)return null;return{uid:auth.uid,email:auth.email||'',db:fs.getFirestore(app),fs};})().catch(()=>null);return firestorePromise;}
 
-  function escapeHtml(value) {
-    return String(value ?? '').replace(/[&<>"']/g, ch => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-    }[ch]));
-  }
+  async function mergeCloudProgress(items){const local=loadLocalProgress(),api=await getFirestoreApi();if(!api)return local;for(let i=0;i<items.length;i+=20){const chunk=items.slice(i,i+20);const snaps=await Promise.all(chunk.map(item=>api.fs.getDoc(api.fs.doc(api.db,'users',api.uid,'vocabularyProgress',progressKey(item))).catch(()=>null)));snaps.forEach((snap,j)=>{if(snap?.exists?.()){const key=progressKey(chunk[j]);local[key]=mergeProgress(local[key],snap.data());}});}saveLocalProgress(local);return local;}
 
-  function safeJsonParse(text, fallback) {
-    try { return JSON.parse(text); } catch { return fallback; }
-  }
+  async function loadMarkovHistory(){const local=loadLocalMarkov(),api=await getFirestoreApi();if(!api)return{exposure:local.exposure,targetCount:local.targetCount,frontier:local.frontier,recentTargets:local.recentTargets};try{const snap=await api.fs.getDoc(api.fs.doc(api.db,'users',api.uid,'vocabularyState',MARKOV_STATE_DOC));if(!snap.exists())return{exposure:local.exposure,targetCount:local.targetCount,frontier:local.frontier,recentTargets:local.recentTargets};const c=snap.data()||{},useCloud=(Date.parse(String(c.updatedAtClient||''))||0)>=(Date.parse(local.updatedAt)||0);const merged={exposure:maxMaps(local.exposure,c.exposure),targetCount:maxMaps(local.targetCount,c.targetCount),frontier:useCloud?normList(c.frontier,3):local.frontier,recentTargets:useCloud?normList(c.recentTargets,RECENT_WINDOW):local.recentTargets,updatedAt:useCloud?String(c.updatedAtClient||''):local.updatedAt};saveLocalMarkov(merged);return{exposure:merged.exposure,targetCount:merged.targetCount,frontier:merged.frontier,recentTargets:merged.recentTargets};}catch(e){console.warn('[vocab-memory] Markov history read failed',e);return{exposure:local.exposure,targetCount:local.targetCount,frontier:local.frontier,recentTargets:local.recentTargets};}}
 
-  function loadLocalProgress() {
-    const parsed = safeJsonParse(localStorage.getItem(LOCAL_PROGRESS_KEY) || '{}', {});
-    return parsed && typeof parsed === 'object' ? parsed : {};
-  }
+  async function requestMarkovExam(count,history){const res=await fetch(API_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({count:Number(count),mode:'markov',history:history||{}}),cache:'no-store',redirect:'follow'});if(!res.ok)throw new Error(`Apps Script HTTP ${res.status}`);const data=await res.json();if(!data?.ok)throw new Error(data?.error||'Apps Script 回傳失敗');if(!Array.isArray(data.questions)||data.questions.length!==Number(count))throw new Error(`Apps Script 題數異常：${data?.questions?.length??0}/${count}`);return data;}
 
-  function saveLocalProgress(progress) {
-    localStorage.setItem(LOCAL_PROGRESS_KEY, JSON.stringify(progress));
-  }
+  function apiQuestion(item,number,progress){const s=progress[progressKey(item)]||blankProgress(),rate=s.reviewCount?Math.round(s.wrongCount*1000/s.reviewCount)/10:0;return{number,q:`${item.question}　｜　已複習 ${s.reviewCount} 次`,o:[...(item.options||[])],a:Number(item.answerIndex),fixedOptions:true,e:`${item.answer}｜累積複習 ${s.reviewCount} 次、答錯 ${s.wrongCount} 次、錯誤率 ${rate}%`,vocabId:item.vocabId,word:item.answer,wordNorm:item.wordNorm,chinese:item.question,reviewCountBefore:Number(s.reviewCount||0),wrongCountBefore:Number(s.wrongCount||0),sourceLevel:'elementary'};}
+  function mergeMarkovAfter(history,delta,continuation){return{exposure:addMaps(history?.exposure,delta?.exposure),targetCount:addMaps(history?.targetCount,delta?.targetCount),frontier:normList(continuation?.frontier,3),recentTargets:normList(continuation?.recentTargets,RECENT_WINDOW),updatedAt:new Date().toISOString()};}
 
-  function progressKey(item) {
-    return `${SOURCE_KEY}:${item.vocabId ?? item.id}`;
-  }
+  function restoreLanding(root){$('#vocabMemoryView',root)?.remove();[...root.children].forEach(c=>{if(c.dataset.vocabHiddenByMemory==='1'){c.classList.remove('hidden');delete c.dataset.vocabHiddenByMemory;}});root.dataset.vocabMemoryOpen='0';}
+  function hideLanding(root){[...root.children].forEach(c=>{if(c.id!=='vocabMemoryView'&&!c.classList.contains('hidden')){c.dataset.vocabHiddenByMemory='1';c.classList.add('hidden');}});}
+  function showToast(text){$('.vocab-sync-toast')?.remove();const t=document.createElement('div');t.className='vocab-sync-toast';t.textContent=text;document.body.appendChild(t);setTimeout(()=>t.remove(),2800);}
 
-  function blankProgress() {
-    return { reviewCount:0, wrongCount:0, correctCount:0, unansweredCount:0, lastReviewedAt:'' };
-  }
+  function injectStyles(){if($('#vocabMemoryStyles'))return;const s=document.createElement('style');s.id='vocabMemoryStyles';s.textContent=`.vocab-memory-card{border-color:#bfdbfe!important;background:linear-gradient(135deg,#eff6ff,#fff)!important}.vocab-memory-card .icon{font-size:1.35rem}.vocab-coming-card{opacity:.62;cursor:not-allowed!important}.vocab-setup{padding:6px 0 8px}.vocab-setup-panel{max-width:760px;margin:18px auto 0;border:1px solid #dbe3ef;background:#fff;border-radius:20px;padding:22px;box-shadow:0 8px 30px rgba(15,23,42,.06)}.vocab-setup-title{margin:0 0 6px;font-size:1.45rem;color:#0f2856}.vocab-setup-sub{margin:0 0 22px;color:#64748b;line-height:1.7}.vocab-field{margin:18px 0}.vocab-field label{display:block;font-weight:800;color:#1e3a5f;margin-bottom:8px}.vocab-select{width:100%;max-width:360px;border:1px solid #cbd5e1;border-radius:12px;padding:11px 12px;background:#fff;font-size:1rem}.vocab-counts{display:flex;flex-wrap:wrap;gap:10px}.vocab-count-btn{border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:999px;padding:9px 18px;font-weight:800;cursor:pointer}.vocab-count-btn.active{border-color:#2563eb;background:#eff6ff;color:#1d4ed8}.vocab-start-btn{width:100%;margin-top:10px;border:0;border-radius:14px;background:#1d4ed8;color:#fff;padding:13px 18px;font-size:1.05rem;font-weight:850;cursor:pointer}.vocab-start-btn:disabled{opacity:.55;cursor:wait}.vocab-data-note{margin-top:12px;color:#64748b;font-size:.86rem;line-height:1.6}.vocab-sync-toast{position:fixed;right:18px;bottom:18px;z-index:10000;background:#0f172a;color:#fff;border-radius:12px;padding:10px 14px;box-shadow:0 12px 30px rgba(15,23,42,.28);font-size:.9rem}@media(max-width:620px){.vocab-setup-panel{padding:17px;border-radius:16px}.vocab-count-btn{flex:1 1 calc(50% - 10px)}}`;document.head.appendChild(s);}
 
-  function mergeProgress(local, cloud) {
-    if (!cloud) return local || blankProgress();
-    const a = local || blankProgress();
-    return {
-      reviewCount: Math.max(Number(a.reviewCount || 0), Number(cloud.reviewCount || 0)),
-      wrongCount: Math.max(Number(a.wrongCount || 0), Number(cloud.wrongCount || 0)),
-      correctCount: Math.max(Number(a.correctCount || 0), Number(cloud.correctCount || 0)),
-      unansweredCount: Math.max(Number(a.unansweredCount || 0), Number(cloud.unansweredCount || 0)),
-      lastReviewedAt: cloud.lastReviewedAt || a.lastReviewedAt || ''
-    };
-  }
+  function openSetup(){const root=$('#catalogContent');if(!root||root.dataset.vocabMemoryOpen==='1')return;root.dataset.vocabMemoryOpen='1';hideLanding(root);const view=document.createElement('div');view.id='vocabMemoryView';view.className='vocab-setup';view.innerHTML=`<button class="catalog-back" id="backVocabMemoryBtn">← 返回全民英檢</button><div class="catalog-path">英文　›　全民英檢（GEPT）　›　字庫記憶</div><div class="vocab-setup-panel"><h2 class="vocab-setup-title">🧠 字庫記憶</h2><p class="vocab-setup-sub">中翻英四選一。採 Markov 鏈式學習：上一題選項優先成為後續正式考字，並依曝光次數與正式出題次數自動跳出內迴圈。</p><div class="vocab-field"><label>字庫來源</label><select class="vocab-select"><option>全民英檢初級</option></select></div><div class="vocab-field"><label>出題數量</label><div class="vocab-counts" id="vocabCountButtons">${[10,20,50,100].map(n=>`<button type="button" class="vocab-count-btn${n===20?' active':''}" data-count="${n}">${n} 題</button>`).join('')}</div></div><button type="button" id="startVocabExamBtn" class="vocab-start-btn">開始考試</button><div class="vocab-data-note">Google Sheet 管教材，Apps Script 即時產生題目；Firebase 保存個人作答、曝光次數、正式出題次數與下一段學習鏈。</div></div>`;root.appendChild(view);let count=20;$('#backVocabMemoryBtn',view)?.addEventListener('click',()=>restoreLanding(root));$('#vocabCountButtons',view)?.addEventListener('click',e=>{const b=e.target.closest?.('[data-count]');if(!b)return;const n=Number(b.dataset.count);if(!VALID_COUNTS.has(n))return;count=n;view.querySelectorAll('.vocab-count-btn').forEach(x=>x.classList.toggle('active',x===b));});$('#startVocabExamBtn',view)?.addEventListener('click',e=>startVocabularyExam(count,e.currentTarget));}
 
-  function randomInt(maxExclusive) {
-    if (maxExclusive <= 1) return 0;
-    if (window.crypto?.getRandomValues) {
-      const range = 0x100000000;
-      const limit = range - (range % maxExclusive);
-      const buf = new Uint32Array(1);
-      do { crypto.getRandomValues(buf); } while (buf[0] >= limit);
-      return buf[0] % maxExclusive;
-    }
-    return Math.floor(Math.random() * maxExclusive);
-  }
+  async function startVocabularyExam(count,button){if(!VALID_COUNTS.has(Number(count)))return;const old=button.textContent;button.disabled=true;button.textContent='讀取學習紀錄並建立 Markov 題目…';try{const history=await loadMarkovHistory();const exam=await requestMarkovExam(count,history);const progress=await mergeCloudProgress(exam.questions);const generated=exam.questions.map((q,i)=>apiQuestion(q,i+1,progress));if(typeof banks==='undefined'||typeof window.startExam!=='function')throw new Error('題庫引擎尚未就緒');const key=`english-gept-vocabulary-elementary-zh-en-${Date.now()}`;banks[key]=generated;window.examContexts=window.examContexts||{};window.examContexts[key]={key,examType:'gept-vocabulary-memory',examTypeLabel:'字庫記憶',subject:'english',subjectLabel:'英文',title:'字庫記憶｜全民英檢初級｜中翻英',subtitle:`${count} 題｜Markov 鏈式學習｜低次數優先＋自動跳出內迴圈`,unit:'字庫記憶｜初級｜中翻英',difficulty:'elementary-vocabulary',difficultyLabel:'初級字庫',scoreMode:'fixed',pointsPerQuestion:100/count,preserveOptionOrder:true,analysisEligible:true,resultLabel:'字庫記憶結果',sourceNote:'題目由 GEPT 初級 Google Sheet 經 Apps Script Markov 學習引擎即時產生。',backLabel:'返回字庫記憶設定',onBack:()=>{$('#catalogShell')?.classList.remove('hidden');$('#vocabMemoryView')?.scrollIntoView({behavior:'smooth',block:'start'});}};activeSession={key,generated,committed:false,historyBefore:history,sessionDelta:exam.sessionDelta||{},continuation:exam.continuation||{},stats:exam.stats||{}};window.startExam(key);}catch(error){console.error('[vocab-memory] start failed',error);alert(`字庫記憶載入失敗：${error.message}`);}finally{button.disabled=false;button.textContent=old;}}
 
-  function shuffledCopy(items) {
-    const out = [...items];
-    for (let i = out.length - 1; i > 0; i--) {
-      const j = randomInt(i + 1);
-      [out[i], out[j]] = [out[j], out[i]];
-    }
-    return out;
-  }
+  async function persistSessionProgress(session){if(!session||session.committed)return;session.committed=true;const local=loadLocalProgress(),updates=[],markov=mergeMarkovAfter(session.historyBefore,session.sessionDelta,session.continuation);saveLocalMarkov(markov);session.generated.forEach((item,index)=>{const picked=document.querySelector(`input[name=q${index}]:checked`),selected=picked?Number(picked.value):null,isCorrect=selected!==null&&selected===item.a,isWrong=selected!==null&&selected!==item.a,key=progressKey(item),cur=local[key]||blankProgress(),exposureCount=countOf(markov.exposure[item.wordNorm]),targetCount=countOf(markov.targetCount[item.wordNorm]);local[key]={reviewCount:Number(cur.reviewCount||0)+1,wrongCount:Number(cur.wrongCount||0)+(isWrong?1:0),correctCount:Number(cur.correctCount||0)+(isCorrect?1:0),unansweredCount:Number(cur.unansweredCount||0)+(selected===null?1:0),exposureCount,targetCount,lastReviewedAt:new Date().toISOString()};updates.push({item,selected,isCorrect,isWrong,exposureCount,targetCount});});saveLocalProgress(local);showToast('✓ Markov 字庫學習狀態已記錄');const api=await getFirestoreApi();if(!api)return;try{const batch=api.fs.writeBatch(api.db);for(const u of updates){const ref=api.fs.doc(api.db,'users',api.uid,'vocabularyProgress',progressKey(u.item));batch.set(ref,{source:SOURCE_KEY,sourceLabel:SOURCE_LABEL,vocabId:u.item.vocabId,word:u.item.word,wordNorm:u.item.wordNorm,chinese:u.item.chinese,reviewCount:api.fs.increment(1),wrongCount:api.fs.increment(u.isWrong?1:0),correctCount:api.fs.increment(u.isCorrect?1:0),unansweredCount:api.fs.increment(u.selected===null?1:0),exposureCount:u.exposureCount,targetCount:u.targetCount,lastReviewedAt:api.fs.serverTimestamp(),userEmail:api.email||''},{merge:true});}const stateRef=api.fs.doc(api.db,'users',api.uid,'vocabularyState',MARKOV_STATE_DOC);batch.set(stateRef,{source:SOURCE_KEY,sourceLabel:SOURCE_LABEL,exposure:markov.exposure,targetCount:markov.targetCount,frontier:markov.frontier,recentTargets:markov.recentTargets,updatedAtClient:markov.updatedAt,updatedAt:api.fs.serverTimestamp(),userEmail:api.email||''},{merge:true});await batch.commit();showToast('✓ Markov 學習鏈與作答歷程已同步到 Firebase');}catch(error){console.warn('[vocab-memory] Firestore sync failed',error);}}
 
-  function loadVocabulary() {
-    const rows = window.__GEPT_VOCAB_ROWS;
-    if (!Array.isArray(rows)) {
-      throw new Error('字庫資料尚未載入，請重新整理頁面後再試。');
-    }
-    const filtered = rows.filter(row => row?.id && row?.w && row?.n && row?.c);
-    if (!filtered.length) throw new Error('找不到可用字彙');
-    return filtered;
-  }
+  function makeCard(id,icon,title,badge,desc,extra=''){const b=document.createElement('button');b.className=`catalog-card chapter-card ${extra}`.trim();b.id=id;b.innerHTML=`<span class="top"><span class="icon">${icon}</span><strong>${escapeHtml(title)}</strong><span class="catalog-badge reference">${escapeHtml(badge)}</span></span><span class="desc">${escapeHtml(desc)}</span>`;return b;}
+  function enhanceGeptLanding(){const root=$('#catalogContent'),elementary=$('#geptElementaryBtn',root||document);if(!root||!elementary||root.dataset.geptView!=='landing')return;const grid=elementary.parentElement;if(!grid)return;if(!$('#geptVocabularyMemoryBtn',root)){const memory=makeCard('geptVocabularyMemoryBtn','🧠','字庫記憶','Markov 學習','GEPT 初級字庫鏈式出題，累積曝光次數、正式出題次數與錯誤率。','vocab-memory-card');memory.addEventListener('click',openSetup);grid.insertBefore(memory,elementary);}if(!$('#geptIntermediateBtn',root)){const m=makeCard('geptIntermediateBtn','🌿','中級','待建置','全民英檢中級題庫與字庫後續擴充。','vocab-coming-card');m.disabled=true;grid.appendChild(m);}if(!$('#geptHighIntermediateBtn',root)){const h=makeCard('geptHighIntermediateBtn','🌳','中高級','待建置','全民英檢中高級題庫與字庫後續擴充。','vocab-coming-card');h.disabled=true;grid.appendChild(h);}}
+  function watchCatalog(){const root=$('#catalogContent');if(!root)return;new MutationObserver(enhanceGeptLanding).observe(root,{childList:true,subtree:true});enhanceGeptLanding();}
 
-  async function waitForAuth(timeoutMs = 5000) {
-    if (window.ChrisExamAuth?.uid) return window.ChrisExamAuth;
-    return new Promise(resolve => {
-      let done = false;
-      const finish = () => {
-        if (done) return;
-        done = true;
-        window.removeEventListener('chrisexam-auth-ready', onReady);
-        resolve(window.ChrisExamAuth || null);
-      };
-      const onReady = () => finish();
-      window.addEventListener('chrisexam-auth-ready', onReady, { once:true });
-      setTimeout(finish, timeoutMs);
-    });
-  }
-
-  async function getFirestoreApi() {
-    if (firestorePromise) return firestorePromise;
-    firestorePromise = (async () => {
-      const auth = await waitForAuth();
-      if (!auth?.uid) return null;
-      const appMod = await import(`https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-app.js`);
-      const fs = await import(`https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-firestore.js`);
-      const app = appMod.getApps().length ? appMod.getApp() : null;
-      if (!app) return null;
-      return { uid:auth.uid, email:auth.email || '', db:fs.getFirestore(app), fs };
-    })().catch(() => null);
-    return firestorePromise;
-  }
-
-  async function mergeCloudProgress(items) {
-    const local = loadLocalProgress();
-    const api = await getFirestoreApi();
-    if (!api) return local;
-
-    const chunks = [];
-    for (let i = 0; i < items.length; i += 20) chunks.push(items.slice(i, i + 20));
-    for (const chunk of chunks) {
-      const snapshots = await Promise.all(chunk.map(item =>
-        api.fs.getDoc(api.fs.doc(api.db, 'users', api.uid, 'vocabularyProgress', progressKey(item))).catch(() => null)
-      ));
-      snapshots.forEach((snap, index) => {
-        if (!snap?.exists?.()) return;
-        const item = chunk[index];
-        const key = progressKey(item);
-        local[key] = mergeProgress(local[key], snap.data());
-      });
-    }
-    saveLocalProgress(local);
-    return local;
-  }
-
-  function distractorsFor(target, allRows, count = 3) {
-    const firstChar = String(target.n || '').charAt(0).toLowerCase();
-    let pool = allRows.filter(row => row.id !== target.id && row.n !== target.n && String(row.n || '').charAt(0).toLowerCase() === firstChar);
-    if (pool.length < count) pool = allRows.filter(row => row.id !== target.id && row.n !== target.n);
-    return shuffledCopy(pool).slice(0, count);
-  }
-
-  function buildQuestion(item, number, allRows, progress) {
-    const stats = progress[progressKey(item)] || blankProgress();
-    const choices = shuffledCopy([item, ...distractorsFor(item, allRows, 3)]);
-    const correctIndex = choices.findIndex(x => x.id === item.id);
-    const errorRate = stats.reviewCount ? Math.round(stats.wrongCount * 1000 / stats.reviewCount) / 10 : 0;
-    return {
-      number,
-      q:`${item.c}　｜　已複習 ${stats.reviewCount} 次`,
-      o: choices.map(x => x.w),
-      a: correctIndex,
-      fixedOptions:true,
-      e:`${item.w}｜累積複習 ${stats.reviewCount} 次、答錯 ${stats.wrongCount} 次、錯誤率 ${errorRate}%`,
-      vocabId:item.id,
-      word:item.w,
-      wordNorm:item.n,
-      chinese:item.c,
-      reviewCountBefore:Number(stats.reviewCount || 0),
-      wrongCountBefore:Number(stats.wrongCount || 0),
-      sourceLevel:'elementary'
-    };
-  }
-
-  function restoreLanding(root) {
-    $('#vocabMemoryView', root)?.remove();
-    [...root.children].forEach(child => {
-      if (child.dataset.vocabHiddenByMemory === '1') {
-        child.classList.remove('hidden');
-        delete child.dataset.vocabHiddenByMemory;
-      }
-    });
-    root.dataset.vocabMemoryOpen = '0';
-  }
-
-  function hideLandingChildren(root) {
-    [...root.children].forEach(child => {
-      if (child.id === 'vocabMemoryView') return;
-      if (!child.classList.contains('hidden')) {
-        child.dataset.vocabHiddenByMemory = '1';
-        child.classList.add('hidden');
-      }
-    });
-  }
-
-  function injectStyles() {
-    if ($('#vocabMemoryStyles')) return;
-    const style = document.createElement('style');
-    style.id = 'vocabMemoryStyles';
-    style.textContent = `
-      .vocab-memory-card{border-color:#bfdbfe!important;background:linear-gradient(135deg,#eff6ff,#ffffff)!important}
-      .vocab-memory-card .icon{font-size:1.35rem}
-      .vocab-coming-card{opacity:.62;cursor:not-allowed!important}
-      .vocab-setup{padding:6px 0 8px}
-      .vocab-setup-panel{max-width:760px;margin:18px auto 0;border:1px solid #dbe3ef;background:#fff;border-radius:20px;padding:22px;box-shadow:0 8px 30px rgba(15,23,42,.06)}
-      .vocab-setup-title{margin:0 0 6px;font-size:1.45rem;color:#0f2856}
-      .vocab-setup-sub{margin:0 0 22px;color:#64748b;line-height:1.7}
-      .vocab-field{margin:18px 0}.vocab-field label{display:block;font-weight:800;color:#1e3a5f;margin-bottom:8px}
-      .vocab-select{width:100%;max-width:360px;border:1px solid #cbd5e1;border-radius:12px;padding:11px 12px;background:#fff;font-size:1rem}
-      .vocab-counts{display:flex;flex-wrap:wrap;gap:10px}
-      .vocab-count-btn{border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:999px;padding:9px 18px;font-weight:800;cursor:pointer}
-      .vocab-count-btn.active{border-color:#2563eb;background:#eff6ff;color:#1d4ed8;box-shadow:0 0 0 2px rgba(37,99,235,.08)}
-      .vocab-start-btn{width:100%;margin-top:10px;border:0;border-radius:14px;background:#1d4ed8;color:#fff;padding:13px 18px;font-size:1.05rem;font-weight:850;cursor:pointer}
-      .vocab-start-btn:disabled{opacity:.55;cursor:wait}
-      .vocab-data-note{margin-top:12px;color:#64748b;font-size:.86rem;line-height:1.6}
-      .vocab-sync-toast{position:fixed;right:18px;bottom:18px;z-index:10000;background:#0f172a;color:#fff;border-radius:12px;padding:10px 14px;box-shadow:0 12px 30px rgba(15,23,42,.28);font-size:.9rem}
-      @media(max-width:620px){.vocab-setup-panel{padding:17px;border-radius:16px}.vocab-count-btn{flex:1 1 calc(50% - 10px)}}
-    `;
-    document.head.appendChild(style);
-  }
-
-  function showToast(text) {
-    $('.vocab-sync-toast')?.remove();
-    const toast = document.createElement('div');
-    toast.className = 'vocab-sync-toast';
-    toast.textContent = text;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 2600);
-  }
-
-  function openSetup() {
-    const root = $('#catalogContent');
-    if (!root || root.dataset.vocabMemoryOpen === '1') return;
-    root.dataset.vocabMemoryOpen = '1';
-    hideLandingChildren(root);
-
-    const view = document.createElement('div');
-    view.id = 'vocabMemoryView';
-    view.className = 'vocab-setup';
-    view.innerHTML = `
-      <button class="catalog-back" id="backVocabMemoryBtn">← 返回全民英檢</button>
-      <div class="catalog-path">英文　›　全民英檢（GEPT）　›　字庫記憶</div>
-      <div class="vocab-setup-panel">
-        <h2 class="vocab-setup-title">🧠 字庫記憶</h2>
-        <p class="vocab-setup-sub">先做「中翻英」選擇題。每次從字庫隨機抽題，同一份試卷不重複單字；交卷後會累積複習次數、答錯次數與錯誤率。</p>
-        <div class="vocab-field">
-          <label for="vocabSourceSelect">字庫來源</label>
-          <select id="vocabSourceSelect" class="vocab-select"><option value="elementary">全民英檢初級</option></select>
-        </div>
-        <div class="vocab-field">
-          <label>出題數量</label>
-          <div class="vocab-counts" id="vocabCountButtons">
-            ${[10,20,50,100].map(n => `<button type="button" class="vocab-count-btn${n === 20 ? ' active' : ''}" data-count="${n}">${n} 題</button>`).join('')}
-          </div>
-        </div>
-        <button type="button" id="startVocabExamBtn" class="vocab-start-btn">開始考試</button>
-        <div class="vocab-data-note">字庫已在頁面載入時直接放入記憶體；不使用 SQL runtime、Base64、gzip、atob 或額外字庫 fetch。</div>
-      </div>`;
-    root.appendChild(view);
-
-    let count = 20;
-    $('#backVocabMemoryBtn', view)?.addEventListener('click', () => restoreLanding(root));
-    $('#vocabCountButtons', view)?.addEventListener('click', event => {
-      const btn = event.target.closest?.('[data-count]');
-      if (!btn) return;
-      const next = Number(btn.dataset.count);
-      if (!VALID_COUNTS.has(next)) return;
-      count = next;
-      view.querySelectorAll('.vocab-count-btn').forEach(x => x.classList.toggle('active', x === btn));
-    });
-    $('#startVocabExamBtn', view)?.addEventListener('click', event => startVocabularyExam(count, event.currentTarget));
-  }
-
-  async function startVocabularyExam(count, button) {
-    if (!VALID_COUNTS.has(Number(count))) return;
-    const oldText = button.textContent;
-    button.disabled = true;
-    button.textContent = '準備題目與學習紀錄…';
-
-    try {
-      const allRows = loadVocabulary();
-      if (allRows.length < count) throw new Error(`字庫只有 ${allRows.length} 個可用字彙`);
-      const selected = shuffledCopy(allRows).slice(0, count);
-      const progress = await mergeCloudProgress(selected);
-      const generated = selected.map((item, index) => buildQuestion(item, index + 1, allRows, progress));
-
-      if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
-      const key = `english-gept-vocabulary-elementary-zh-en-${Date.now()}`;
-      banks[key] = generated;
-      window.examContexts = window.examContexts || {};
-      window.examContexts[key] = {
-        key,
-        examType:'gept-vocabulary-memory',
-        examTypeLabel:'字庫記憶',
-        subject:'english',
-        subjectLabel:'英文',
-        title:'字庫記憶｜全民英檢初級｜中翻英',
-        subtitle:`${count} 題｜字庫隨機抽題｜不重複`,
-        unit:'字庫記憶｜初級｜中翻英',
-        difficulty:'elementary-vocabulary',
-        difficultyLabel:'初級字庫',
-        scoreMode:'fixed',
-        pointsPerQuestion:100 / count,
-        preserveOptionOrder:true,
-        analysisEligible:true,
-        resultLabel:'字庫記憶結果',
-        sourceNote:'題目由 GEPT 初級字彙 SQL authority 衍生；部署時轉為前端直接可用資料。',
-        backLabel:'返回字庫記憶設定',
-        onBack:() => {
-          $('#catalogShell')?.classList.remove('hidden');
-          $('#vocabMemoryView')?.scrollIntoView({ behavior:'smooth', block:'start' });
-        }
-      };
-      activeSession = { key, generated, committed:false };
-      window.startExam(key);
-    } catch (error) {
-      console.error('[vocab-memory] start failed', error);
-      alert(`字庫記憶載入失敗：${error.message}`);
-    } finally {
-      button.disabled = false;
-      button.textContent = oldText;
-    }
-  }
-
-  async function persistSessionProgress(session) {
-    if (!session || session.committed) return;
-    session.committed = true;
-
-    const local = loadLocalProgress();
-    const updates = [];
-    session.generated.forEach((item, index) => {
-      const picked = document.querySelector(`input[name=q${index}]:checked`);
-      const selectedIndex = picked ? Number(picked.value) : null;
-      const isCorrect = selectedIndex !== null && selectedIndex === item.a;
-      const isWrong = selectedIndex !== null && selectedIndex !== item.a;
-      const key = progressKey(item);
-      const current = local[key] || blankProgress();
-      local[key] = {
-        reviewCount:Number(current.reviewCount || 0) + 1,
-        wrongCount:Number(current.wrongCount || 0) + (isWrong ? 1 : 0),
-        correctCount:Number(current.correctCount || 0) + (isCorrect ? 1 : 0),
-        unansweredCount:Number(current.unansweredCount || 0) + (selectedIndex === null ? 1 : 0),
-        lastReviewedAt:new Date().toISOString()
-      };
-      updates.push({ item, selectedIndex, isCorrect, isWrong });
-    });
-    saveLocalProgress(local);
-    showToast('✓ 字庫複習次數已記錄');
-
-    const api = await getFirestoreApi();
-    if (!api) return;
-    try {
-      const batch = api.fs.writeBatch(api.db);
-      updates.forEach(({ item, selectedIndex, isCorrect, isWrong }) => {
-        const ref = api.fs.doc(api.db, 'users', api.uid, 'vocabularyProgress', progressKey(item));
-        batch.set(ref, {
-          source:SOURCE_KEY,
-          sourceLabel:SOURCE_LABEL,
-          vocabId:item.vocabId,
-          word:item.word,
-          wordNorm:item.wordNorm,
-          chinese:item.chinese,
-          reviewCount:api.fs.increment(1),
-          wrongCount:api.fs.increment(isWrong ? 1 : 0),
-          correctCount:api.fs.increment(isCorrect ? 1 : 0),
-          unansweredCount:api.fs.increment(selectedIndex === null ? 1 : 0),
-          lastReviewedAt:api.fs.serverTimestamp(),
-          userEmail:api.email || ''
-        }, { merge:true });
-      });
-      await batch.commit();
-      showToast('✓ 字庫學習歷程已同步到 Firebase');
-    } catch (error) {
-      console.warn('[vocab-memory] Firestore progress sync failed', error);
-    }
-  }
-
-  function makeCard(id, icon, title, badge, desc, extraClass = '') {
-    const button = document.createElement('button');
-    button.className = `catalog-card chapter-card ${extraClass}`.trim();
-    button.id = id;
-    button.innerHTML = `<span class="top"><span class="icon">${icon}</span><strong>${escapeHtml(title)}</strong><span class="catalog-badge reference">${escapeHtml(badge)}</span></span><span class="desc">${escapeHtml(desc)}</span>`;
-    return button;
-  }
-
-  function enhanceGeptLanding() {
-    const root = $('#catalogContent');
-    const elementary = $('#geptElementaryBtn', root || document);
-    if (!root || !elementary || root.dataset.geptView !== 'landing') return;
-    const grid = elementary.parentElement;
-    if (!grid) return;
-
-    if (!$('#geptVocabularyMemoryBtn', root)) {
-      const memory = makeCard('geptVocabularyMemoryBtn', '🧠', '字庫記憶', '初級字庫已收錄', '從 GEPT 字庫隨機出題，累積個人複習次數與錯誤率。', 'vocab-memory-card');
-      memory.addEventListener('click', openSetup);
-      grid.insertBefore(memory, elementary);
-    }
-    if (!$('#geptIntermediateBtn', root)) {
-      const middle = makeCard('geptIntermediateBtn', '🌿', '中級', '待建置', '全民英檢中級題庫與字庫後續擴充。', 'vocab-coming-card');
-      middle.disabled = true;
-      grid.appendChild(middle);
-    }
-    if (!$('#geptHighIntermediateBtn', root)) {
-      const high = makeCard('geptHighIntermediateBtn', '🌳', '中高級', '待建置', '全民英檢中高級題庫與字庫後續擴充。', 'vocab-coming-card');
-      high.disabled = true;
-      grid.appendChild(high);
-    }
-  }
-
-  function watchCatalog() {
-    const root = $('#catalogContent');
-    if (!root) return;
-    const observer = new MutationObserver(enhanceGeptLanding);
-    observer.observe(root, { childList:true, subtree:true });
-    enhanceGeptLanding();
-  }
-
-  document.addEventListener('exam:submitted', event => {
-    if (event.detail?.examType !== 'gept-vocabulary-memory') return;
-    if (!activeSession || activeSession.key !== event.detail.key) return;
-    persistSessionProgress(activeSession);
-  });
-
-  injectStyles();
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watchCatalog, { once:true });
-  else watchCatalog();
-
-  window.ChrisExamVocabulary = { openSetup, loadVocabulary };
+  document.addEventListener('exam:submitted',e=>{if(e.detail?.examType!=='gept-vocabulary-memory')return;if(!activeSession||activeSession.key!==e.detail.key)return;persistSessionProgress(activeSession);});
+  injectStyles();if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',watchCatalog,{once:true});else watchCatalog();
+  window.ChrisExamVocabulary={openSetup,loadMarkovHistory,requestMarkovExam,apiUrl:API_URL};
 })();
