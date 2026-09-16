@@ -76,7 +76,6 @@
           isTokenAutoRefreshEnabled: true
         });
       } catch (error) {
-        // Firebase throws if App Check was already initialized on this app.
         if (!/already|initialized/i.test(String(error?.message || error))) throw error;
       }
 
@@ -135,16 +134,108 @@
     }
   }
 
-  // Capture before the legacy exam-gpt-analysis.js click handler. This keeps
-  // the existing UI but bypasses GitHub Token / Exam-Record / Actions entirely.
-  document.addEventListener('click', event => {
-    const button = event.target.closest?.('#gptWrongAnalysisBtn');
-    if (!button) return;
+  function parseGeminiJson(text) {
+    const raw = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+    try { return JSON.parse(raw); }
+    catch {
+      const start = raw.indexOf('{');
+      const end = raw.lastIndexOf('}');
+      if (start >= 0 && end > start) return JSON.parse(raw.slice(start, end + 1));
+      throw new Error('Gemini 回傳格式無法解析。');
+    }
+  }
 
-    event.preventDefault();
-    event.stopPropagation();
-    event.stopImmediatePropagation();
-    runScienceDirect(button);
+  async function gradeMathHandwriting(dataUrl) {
+    const match = String(dataUrl || '').match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/s);
+    if (!match) throw new Error('找不到可判讀的手寫圖片。');
+
+    const prompt = `你是台灣國中數學老師。請判讀學生手寫作答圖片。\n\n題目：x^2 - 5x + 6 = 0，求 x 的所有解。\n標準答案：x = 2 或 x = 3。\n\n判題原則：\n- 依數學意義判斷，不可只做答案字串比較。\n- x=2,3、x=3,2、{2,3}、x=2 或 x=3 都視為完整正確答案。\n- 若完整得到 2 與 3 且計算沒有實質錯誤，verdict 必須為 correct。\n- 漏根、多錯根、或計算有實質錯誤，判 incorrect。\n- 圖片無法可靠辨識，判 unclear。\n\n只回傳 JSON：\n{"verdict":"correct|incorrect|unclear","recognizedAnswer":"","recognizedWork":"","feedback":"繁體中文簡短回饋","confidence":0.0}`;
+
+    const model = await getModel();
+    const response = await model.generateContent([
+      { text: prompt },
+      { inlineData: { mimeType: match[1], data: match[2].replace(/\s/g, '') } }
+    ]);
+    const obj = parseGeminiJson(response.response.text());
+    const verdict = ['correct','incorrect','unclear'].includes(String(obj.verdict || '').toLowerCase())
+      ? String(obj.verdict).toLowerCase() : 'unclear';
+    let confidence = Number(obj.confidence);
+    if (!Number.isFinite(confidence)) confidence = null;
+    if (confidence !== null && confidence > 1) confidence /= 100;
+    if (confidence !== null) confidence = Math.max(0, Math.min(1, confidence));
+    return {
+      verdict,
+      recognizedAnswer: String(obj.recognizedAnswer || ''),
+      recognizedWork: String(obj.recognizedWork || ''),
+      feedback: String(obj.feedback || ''),
+      confidence
+    };
+  }
+
+  function renderMathResult(result, box) {
+    const c = {
+      correct:{title:'✓ 作答正確',border:'#86efac',bg:'#f0fdf4',ink:'#166534'},
+      incorrect:{title:'✗ 作答需要修正',border:'#fca5a5',bg:'#fef2f2',ink:'#991b1b'},
+      unclear:{title:'？AI 無法可靠判讀',border:'#fde68a',bg:'#fffbeb',ink:'#92400e'}
+    }[result.verdict] || {title:'？AI 無法可靠判讀',border:'#fde68a',bg:'#fffbeb',ink:'#92400e'};
+    const confidence = typeof result.confidence === 'number' ? `${Math.round(result.confidence * 100)}%` : '';
+    box.innerHTML = `
+      <div style="margin-top:14px;padding:15px;border-radius:14px;border:1px solid ${c.border};background:${c.bg};color:${c.ink}">
+        <div style="font-size:1.08rem;font-weight:900;margin-bottom:8px">${c.title}</div>
+        ${result.recognizedAnswer ? `<div style="margin:5px 0"><b>AI 辨識答案：</b>${esc(result.recognizedAnswer)}</div>` : ''}
+        ${result.recognizedWork ? `<div style="margin:5px 0"><b>AI 辨識過程：</b>${esc(result.recognizedWork)}</div>` : ''}
+        ${result.feedback ? `<div style="margin-top:9px;line-height:1.7">${esc(result.feedback)}</div>` : ''}
+        <div style="font-size:.78rem;opacity:.68;margin-top:8px">${confidence ? `判讀信心：${confidence}　` : ''}模型：${esc(MODEL)} · Firebase AI Logic</div>
+      </div>`;
+  }
+
+  async function runMathDirect(button) {
+    const status = document.getElementById('paperSubmitStatus');
+    const resultBox = document.getElementById('paperAiResult');
+    const image = document.getElementById('paperAnswerImage');
+    const dataUrl = image?.src || '';
+    if (!status || !resultBox) return;
+    if (!dataUrl.startsWith('data:image/')) {
+      status.textContent = '找不到手寫作答圖片，請重新完成作答。';
+      return;
+    }
+
+    const oldText = button.textContent;
+    button.disabled = true;
+    button.textContent = 'AI 判題中…';
+    status.textContent = 'Gemini 正在直接判讀手寫作答…';
+    resultBox.innerHTML = '';
+
+    try {
+      const result = await gradeMathHandwriting(dataUrl);
+      status.textContent = 'Gemini 判題完成。';
+      renderMathResult(result, resultBox);
+    } catch (error) {
+      console.error('[FirebaseAIDirect] math grading failed', error);
+      status.textContent = `無法完成 AI 判題：${error?.message || error}`;
+    } finally {
+      button.disabled = false;
+      button.textContent = oldText;
+    }
+  }
+
+  document.addEventListener('click', event => {
+    const scienceButton = event.target.closest?.('#gptWrongAnalysisBtn');
+    if (scienceButton) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      runScienceDirect(scienceButton);
+      return;
+    }
+
+    const mathButton = event.target.closest?.('#submitPaperExamBtn');
+    if (mathButton) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      runMathDirect(mathButton);
+    }
   }, true);
 
   window.ChrisExamAI = {
