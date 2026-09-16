@@ -218,7 +218,7 @@
     if (!match) throw new Error('找不到可判讀的手寫圖片。');
 
     const question = currentMathQuestion();
-    const prompt = `你是台灣國中數學老師。請判讀學生手寫作答圖片。\n\n題目：${question.text}\n標準答案：${question.expectedAnswer}\n\n判題原則：\n${question.gradingInstructions}\n- 依數學意義判斷，不可只做答案字串比較。\n- 數學上等價的寫法視為相同答案。\n- 若計算過程有會影響答案的實質數學錯誤，判 incorrect。\n- 圖片模糊、被截斷或無法可靠辨識時，判 unclear，不要猜。\n- feedback 只根據學生實際寫出的內容，不要自行補步驟或硬套數學術語。\n- feedback 使用台灣繁體中文，簡短直接。\n\n只回傳 JSON：\n{"verdict":"correct|incorrect|unclear","recognizedAnswer":"","recognizedWork":"","feedback":"繁體中文簡短回饋","confidence":0.0}`;
+    const prompt = `你是台灣國中數學老師。請判讀學生手寫作答圖片，除了判斷對錯，也要像老師改作業一樣指出錯在哪一步並教學生如何修正。\n\n題目：${question.text}\n標準答案：${question.expectedAnswer}\n\n額外判分規則：\n${question.gradingInstructions}\n\n判題與教學原則：\n1. 先忠實辨識學生實際寫出的答案與計算步驟，依照書寫順序判讀；看不清楚就不要猜。\n2. 依數學意義判斷，不可只做答案字串比較；數學上等價的寫法視為相同。\n3. 若作答錯誤，必須找出「最早一個可以可靠確認的實質數學錯誤」。不要只說「計算有誤」或「請重新檢查」。\n4. errorStep 要直接指出學生哪一個算式或哪一步出錯；能辨識原算式時，盡量引用該算式。\n5. whyWrong 要用國中學生看得懂的方式說明這一步為什麼不成立，例如等號兩邊沒有做相同運算、正負號改錯、展開括號錯誤、算術計算錯誤等。\n6. correction 要寫出該步正確的改法；必要時可再往下列 1～2 步，讓學生知道怎麼得到正確答案。\n7. nextHint 是簡短的下一步提示，鼓勵學生自己重算；若 correction 已經完整到答案，也可提醒學生代回原式檢查。\n8. 若學生前面的步驟正確、只在後面算錯，不要把前面的正確步驟說成錯誤。\n9. 若學生只有最後答案、沒有足夠過程可定位錯誤，errorStep 請明確寫「目前只看到最後答案，無法定位是哪一步算錯」，不要發明過程。\n10. verdict=correct 時，errorStep、whyWrong、correction、nextHint 請留空，feedback 簡短肯定作答即可。\n11. verdict=unclear 時，不要猜測錯誤位置；說明哪部分無法可靠辨識，建議重寫較清楚。\n12. 不要自行冠上不確定的數學律名稱；只描述實際算式關係。\n13. 所有文字使用台灣繁體中文，語氣像老師批改作業，清楚、具體、不責備。\n\n只回傳 JSON，不要 Markdown：\n{"verdict":"correct|incorrect|unclear","recognizedAnswer":"","recognizedWork":"","errorStep":"","whyWrong":"","correction":"","nextHint":"","feedback":"","confidence":0.0}`;
 
     const { response, modelName } = await generateWithFallback([
       { text: prompt },
@@ -232,10 +232,15 @@
     if (!Number.isFinite(confidence)) confidence = null;
     if (confidence !== null && confidence > 1) confidence /= 100;
     if (confidence !== null) confidence = Math.max(0, Math.min(1, confidence));
+
     return {
       verdict,
       recognizedAnswer: String(obj.recognizedAnswer || ''),
       recognizedWork: String(obj.recognizedWork || ''),
+      errorStep: String(obj.errorStep || ''),
+      whyWrong: String(obj.whyWrong || ''),
+      correction: String(obj.correction || ''),
+      nextHint: String(obj.nextHint || ''),
       feedback: String(obj.feedback || ''),
       confidence,
       modelName
@@ -248,14 +253,29 @@
       incorrect:{title:'✗ 作答需要修正',border:'#fca5a5',bg:'#fef2f2',ink:'#991b1b'},
       unclear:{title:'？AI 無法可靠判讀',border:'#fde68a',bg:'#fffbeb',ink:'#92400e'}
     }[result.verdict] || {title:'？AI 無法可靠判讀',border:'#fde68a',bg:'#fffbeb',ink:'#92400e'};
+
     const confidence = typeof result.confidence === 'number' ? `${Math.round(result.confidence * 100)}%` : '';
     const modelName = result.modelName || MODEL;
+    const teaching = result.verdict === 'incorrect' && (
+      result.errorStep || result.whyWrong || result.correction || result.nextHint
+    );
+
     box.innerHTML = `
       <div style="margin-top:14px;padding:15px;border-radius:14px;border:1px solid ${c.border};background:${c.bg};color:${c.ink}">
         <div style="font-size:1.08rem;font-weight:900;margin-bottom:8px">${c.title}</div>
         ${result.recognizedAnswer ? `<div style="margin:5px 0"><b>AI 辨識答案：</b>${esc(result.recognizedAnswer)}</div>` : ''}
         ${result.recognizedWork ? `<div style="margin:5px 0"><b>AI 辨識過程：</b>${esc(result.recognizedWork)}</div>` : ''}
-        ${result.feedback ? `<div style="margin-top:9px;line-height:1.7">${esc(result.feedback)}</div>` : ''}
+
+        ${teaching ? `
+          <div style="margin-top:13px;padding:12px 13px;border-radius:11px;background:rgba(255,255,255,.72);border:1px solid rgba(153,27,27,.18);line-height:1.7">
+            <div style="font-weight:900;margin-bottom:6px">📘 老師幫你找錯誤</div>
+            ${result.errorStep ? `<div style="margin:5px 0"><b>錯在這一步：</b>${esc(result.errorStep)}</div>` : ''}
+            ${result.whyWrong ? `<div style="margin:5px 0"><b>為什麼錯：</b>${esc(result.whyWrong)}</div>` : ''}
+            ${result.correction ? `<div style="margin:5px 0"><b>應該這樣改：</b>${esc(result.correction)}</div>` : ''}
+            ${result.nextHint ? `<div style="margin:5px 0"><b>接著試試看：</b>${esc(result.nextHint)}</div>` : ''}
+          </div>` : ''}
+
+        ${result.feedback ? `<div style="margin-top:10px;line-height:1.7">${esc(result.feedback)}</div>` : ''}
         <div style="font-size:.78rem;opacity:.68;margin-top:8px">${confidence ? `判讀信心：${confidence}　` : ''}模型：${esc(modelName)} · Firebase AI Logic</div>
       </div>`;
   }
@@ -274,12 +294,14 @@
     const oldText = button.textContent;
     button.disabled = true;
     button.textContent = 'AI 判題中…';
-    status.textContent = 'AI 正在直接判讀手寫作答…';
+    status.textContent = 'AI 正在判讀答案與計算步驟…';
     resultBox.innerHTML = '';
 
     try {
       const result = await gradeMathHandwriting(dataUrl);
-      status.textContent = 'AI 判題完成。';
+      status.textContent = result.verdict === 'incorrect'
+        ? 'AI 判題完成，已整理錯誤位置與修正方式。'
+        : 'AI 判題完成。';
       renderMathResult(result, resultBox);
     } catch (error) {
       console.error('[FirebaseAIDirect] math grading failed', error);
