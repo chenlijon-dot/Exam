@@ -3,9 +3,10 @@
 
   const originalFetch = window.fetch.bind(window);
   const VOCAB_MARKER = 'chapter-bank/english/gept/elementary/vocabulary/gept-beginner-vocabulary.b64.part';
+  const EMBEDDED_SRC = 'chapter-bank/english/gept/elementary/vocabulary/gept-beginner-vocabulary-embedded.js';
   const RAW_BASE = 'https://raw.githubusercontent.com/chenlijon-dot/Exam/main/';
   const CDN_BASE = 'https://cdn.jsdelivr.net/gh/chenlijon-dot/Exam@main/';
-  const LOADER_VERSION = 'XHR-v3-20260916';
+  const LOADER_VERSION = 'EMBED-v4-20260916';
 
   window.__VOCAB_LOADER_VERSION = LOADER_VERSION;
 
@@ -20,31 +21,64 @@
     return markerIndex >= 0 ? url.slice(markerIndex) : '';
   }
 
+  function partIndex(relative) {
+    const match = relative.match(/\.part([123])\.txt(?:\?|$)/);
+    return match ? Number(match[1]) - 1 : -1;
+  }
+
   function xhrText(url, timeoutMs = 15000) {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', url, true);
       xhr.timeout = timeoutMs;
       xhr.responseType = 'text';
-      xhr.onload = () => {
-        if (xhr.status >= 200 && xhr.status < 300) {
-          resolve(xhr.responseText || '');
-          return;
-        }
-        reject(new Error(`HTTP ${xhr.status}`));
-      };
+      xhr.onload = () => xhr.status >= 200 && xhr.status < 300
+        ? resolve(xhr.responseText || '')
+        : reject(new Error(`HTTP ${xhr.status}`));
       xhr.onerror = () => reject(new Error('network error'));
       xhr.ontimeout = () => reject(new Error('timeout'));
       xhr.onabort = () => reject(new Error('aborted'));
-      try {
-        xhr.send();
-      } catch (error) {
-        reject(error);
-      }
+      try { xhr.send(); } catch (error) { reject(error); }
     });
   }
 
+  function loadScript(src, id) {
+    return new Promise((resolve, reject) => {
+      const existing = document.getElementById(id);
+      if (existing) {
+        if (existing.dataset.loaded === '1') return resolve();
+        existing.addEventListener('load', resolve, { once:true });
+        existing.addEventListener('error', () => reject(new Error(`script load failed: ${src}`)), { once:true });
+        return;
+      }
+      const script = document.createElement('script');
+      script.id = id;
+      script.src = src;
+      script.defer = true;
+      script.onload = () => { script.dataset.loaded = '1'; resolve(); };
+      script.onerror = () => reject(new Error(`script load failed: ${src}`));
+      document.head.appendChild(script);
+    });
+  }
+
+  async function ensureEmbeddedPayload() {
+    if (Array.isArray(window.__GEPT_VOCAB_PARTS) && window.__GEPT_VOCAB_PARTS.length === 3) return true;
+    try {
+      await loadScript(`${EMBEDDED_SRC}?v=${Date.now()}`, 'geptVocabularyEmbeddedData');
+      return Array.isArray(window.__GEPT_VOCAB_PARTS) && window.__GEPT_VOCAB_PARTS.length === 3;
+    } catch (error) {
+      console.warn(`[vocab-memory] ${LOADER_VERSION} embedded payload unavailable`, error);
+      return false;
+    }
+  }
+
   async function loadVocabularyPart(relative) {
+    const index = partIndex(relative);
+    if (index >= 0 && Array.isArray(window.__GEPT_VOCAB_PARTS)) {
+      const embedded = String(window.__GEPT_VOCAB_PARTS[index] || '');
+      if (embedded.length > 100) return embedded;
+    }
+
     const stamp = Date.now();
     const sameOrigin = new URL(relative, document.baseURI).href;
     const candidates = [
@@ -53,49 +87,34 @@
       `${RAW_BASE}${relative}?v=${stamp}`
     ];
     const errors = [];
-
     for (let i = 0; i < candidates.length; i++) {
-      const url = candidates[i];
       try {
-        const text = await xhrText(url);
-        if (text && text.trim().length > 100) {
-          console.info(`[vocab-memory] ${LOADER_VERSION} loaded route ${i + 1}`, relative, text.length);
-          return text;
-        }
+        const text = await xhrText(candidates[i]);
+        if (text && text.trim().length > 100) return text;
         errors.push(`路徑${i + 1}: empty response`);
       } catch (error) {
         errors.push(`路徑${i + 1}: ${error.message}`);
-        console.warn(`[vocab-memory] ${LOADER_VERSION} route ${i + 1} failed`, url, error);
       }
     }
-
-    const filename = relative.split('/').pop() || relative;
-    throw new Error(`${LOADER_VERSION}：${filename} 讀取失敗（${errors.join('；')}）`);
+    throw new Error(`${LOADER_VERSION}：${relative.split('/').pop()} 讀取失敗（${errors.join('；')}）`);
   }
 
   window.fetch = async function(input, init) {
     const url = asUrl(input);
     const relative = repoRelativePath(url);
     if (!relative) return originalFetch(input, init);
-
     const text = await loadVocabularyPart(relative);
-    return new Response(text, {
-      status: 200,
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
-        'Cache-Control': 'no-store'
-      }
-    });
+    return new Response(text, { status:200, headers:{ 'Content-Type':'text/plain; charset=utf-8', 'Cache-Control':'no-store' } });
   };
 
-  const script = document.createElement('script');
-  script.id = 'englishVocabularyCoreV2';
-  script.src = `exam-english-vocabulary-v2.js?v=${Date.now()}`;
-  script.defer = true;
-  script.onload = () => console.info(`[vocab-memory] ${LOADER_VERSION} core loaded`);
-  script.onerror = () => {
-    console.error(`[vocab-memory] ${LOADER_VERSION} failed to load vocabulary core v2`);
-    alert(`字庫模組載入失敗（${LOADER_VERSION}），請重新整理頁面後再試。`);
-  };
-  document.head.appendChild(script);
+  (async () => {
+    await ensureEmbeddedPayload();
+    const script = document.createElement('script');
+    script.id = 'englishVocabularyCoreV2';
+    script.src = `exam-english-vocabulary-v2.js?v=${Date.now()}`;
+    script.defer = true;
+    script.onload = () => console.info(`[vocab-memory] ${LOADER_VERSION} core loaded; embedded=${Array.isArray(window.__GEPT_VOCAB_PARTS)}`);
+    script.onerror = () => alert(`字庫模組載入失敗（${LOADER_VERSION}），請重新整理頁面後再試。`);
+    document.head.appendChild(script);
+  })();
 })();
