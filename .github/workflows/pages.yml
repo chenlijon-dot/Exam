@@ -37,75 +37,36 @@ jobs:
           BUILD_TS="$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M')"
           sed -i "s|__BUILD_TIMESTAMP__|${BUILD_TS}|g" exam-branding.js
 
-      - name: Build plain GEPT vocabulary data
+      - name: Enable plain static GEPT vocabulary data
         env:
           BUILD_SHA: ${{ github.sha }}
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import base64
-          import gzip
-          import json
           import os
-          import re
-          import string
 
-          base = Path('chapter-bank/english/gept/elementary/vocabulary')
-          parts = []
-          for i in (1, 2, 3):
-              path = base / f'gept-beginner-vocabulary.b64.part{i}.txt'
-              text = path.read_text(encoding='utf-8').lstrip('\ufeff')
-              text = re.sub(r'[^A-Za-z0-9+/=]', '', text)
-              if len(text) < 100:
-                  raise SystemExit(f'Vocabulary part {i} is unexpectedly short: {len(text)}')
-              parts.append(text)
+          base = Path('chapter-bank/english/gept/elementary/vocabulary/static')
+          files = [base / f'gept-vocab-{i:02d}.js' for i in range(1, 9)]
+          files.append(base / 'gept-vocab-ready.js')
+          missing = [str(path) for path in files if not path.is_file()]
+          if missing:
+              raise SystemExit('Missing static vocabulary files: ' + ', '.join(missing))
 
-          # The historical split files are each one character short at the first two
-          # boundaries (19999/19999/18548 bytes). Recover those two Base64 characters
-          # once during deployment, then publish only plain JavaScript rows to browsers.
-          alphabet = string.ascii_uppercase + string.ascii_lowercase + string.digits + '+/'
-          recovered = None
-          rows = None
-          for a in alphabet:
-              for b in alphabet:
-                  encoded = parts[0] + a + parts[1] + b + parts[2]
-                  try:
-                      raw = base64.b64decode(encoded, validate=True)
-                      if raw[:2] != b'\x1f\x8b':
-                          continue
-                      payload = gzip.decompress(raw).decode('utf-8')
-                      candidate = json.loads(payload)
-                      if isinstance(candidate, list) and candidate:
-                          recovered = a + b
-                          rows = candidate
-                          break
-                  except Exception:
-                      continue
-              if rows:
-                  break
+          html_path = Path('index.html')
+          html = html_path.read_text(encoding='utf-8')
+          needle = '<script src="exam-navigation-fix.js?v='
+          pos = html.find(needle)
+          if pos < 0:
+              raise SystemExit('Could not find exam-navigation-fix.js in index.html')
 
-          if not rows:
-              raise SystemExit('Unable to recover the two missing Base64 boundary characters')
-
-          valid_rows = [row for row in rows if row.get('id') and row.get('w') and row.get('n') and row.get('c')]
-          if len(valid_rows) < 2000:
-              raise SystemExit(f'Vocabulary row count is unexpectedly low: {len(valid_rows)}')
-
-          data_js = (
-              'window.__GEPT_VOCAB_ROWS=' + json.dumps(valid_rows, ensure_ascii=False, separators=(',', ':')) + ';\n'
-              + 'window.__GEPT_VOCAB_DATA_BUILD=' + json.dumps(os.environ.get('BUILD_SHA', 'unknown')) + ';\n'
+          build_sha = os.environ.get('BUILD_SHA', 'unknown')
+          tags = ''.join(
+              f'<script src="{path.as_posix()}?v={build_sha}"></script>\n'
+              for path in files
           )
-
-          index = Path('index.html')
-          html = index.read_text(encoding='utf-8')
-          marker = '<script id="geptVocabularyData">\n' + data_js + '</script>\n'
-          if '</body>' not in html:
-              raise SystemExit('index.html has no </body> marker')
-          html = html.replace('</body>', marker + '</body>', 1)
-          index.write_text(html, encoding='utf-8')
-
-          print(f'Recovered missing Base64 chars: {recovered}')
-          print(f'Embedded {len(valid_rows)} plain GEPT vocabulary rows into index.html')
+          html = html[:pos] + tags + html[pos:]
+          html_path.write_text(html, encoding='utf-8')
+          print('Enabled 8 static GEPT vocabulary parts + ready converter')
           PY
 
       - name: Prevent legacy start-screen flash
