@@ -7,6 +7,17 @@
   const PEN_WIDTH = 2.5;
   const ERASER_WIDTH = 34;
 
+  const QUESTION = {
+    id: 'math-paper-linear-test-002',
+    semester: '七年級上學期',
+    unit: '一元一次方程式',
+    text: '3(x - 2) + 5 = 2x + 7，求 x。',
+    expectedAnswer: 'x = 8',
+    gradingInstructions: '請依數學意義判斷。學生可使用移項、等量公理、展開括號或其他正確方法。最後答案 x=8 即為正確；若最後答案不是 8，或計算過程出現會影響答案的實質數學錯誤，判 incorrect。若字跡無法可靠辨識，判 unclear。'
+  };
+
+  window.MathPaperQuestionConfig = QUESTION;
+
   function getNativeBridge() {
     try {
       return window.StudentExamNative || null;
@@ -35,6 +46,21 @@
     if (hud) {
       hud.style.display = 'none';
       hud.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  function syncPaperQuestion() {
+    const root = document.getElementById('catalogContent');
+    if (!root) return;
+
+    const oldText = 'x² - 5x + 6 = 0，求 x 的所有解。';
+    const target = [...root.querySelectorAll('div')].find(el => {
+      const text = String(el.textContent || '').trim();
+      return text === oldText || text === QUESTION.text;
+    });
+
+    if (target && target.textContent !== QUESTION.text) {
+      target.textContent = QUESTION.text;
     }
   }
 
@@ -178,6 +204,7 @@
   }
 
   function scan() {
+    syncPaperQuestion();
     hideDebugHud(document);
     installForOverlay(document.getElementById('mathPaperCanvasOverlay'));
   }
