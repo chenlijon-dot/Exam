@@ -181,13 +181,6 @@
         return;
       }
 
-      /*
-       * Important: switch the drawing toolbar back to pen BEFORE pointerMode
-       * becomes true. Previously forcePenMode() was called after pointerMode
-       * was enabled; that synthetic click bubbled through the tool listener and
-       * immediately disabled pointer mode again. The result was exactly what
-       * the user saw: pressing 指標 still drew ink and pinch/pan never started.
-       */
       if (enabled && !pointerMode) {
         forcePenModeBeforePointer();
       }
@@ -198,11 +191,6 @@
       pinchStart = null;
 
       if (pointerMode) {
-        /*
-         * Hard gate: while 指標 is active the canvas itself is not hit-testable.
-         * Gesture events land on the stage, so none of the legacy/freehand
-         * canvas pointer listeners can draw a stroke by accident.
-         */
         canvas.style.pointerEvents = 'none';
         stage.style.touchAction = 'none';
 
@@ -416,6 +404,14 @@
       return mapped;
     }
 
+    function keepVisualCursorOnPhysicalPointer(original) {
+      const eraserCursor = overlay.querySelector('#paperCanvasEraserCursor');
+      if (!eraserCursor || eraserCursor.style.display === 'none') return;
+
+      eraserCursor.style.left = `${original.clientX}px`;
+      eraserCursor.style.top = `${original.clientY}px`;
+    }
+
     function remapDrawingEvent(event) {
       if (mappedEvents.has(event)) return;
       if (pointerMode || viewScale <= 1.001) return;
@@ -426,6 +422,14 @@
 
       const mapped = makeMappedPointerEvent(event);
       canvas.dispatchEvent(mapped);
+
+      /*
+       * Drawing needs logical (unscaled) coordinates, but the eraser ring is a
+       * fixed screen-space overlay. The mapped event therefore deliberately
+       * carries different clientX/clientY values. Restore the ring to the real
+       * finger/stylus screen position after the mapped handlers have run.
+       */
+      keepVisualCursorOnPhysicalPointer(event);
     }
 
     const eventTypes = [
@@ -437,11 +441,6 @@
     ];
 
     eventTypes.forEach(type => {
-      /*
-       * Capture from overlay, one level above every existing handwriting tool.
-       * This guarantees pointer mode gets first refusal before the freehand,
-       * shape or text handlers see the event.
-       */
       overlay.addEventListener(type, event => {
         if (mappedEvents.has(event)) return;
         if (handlePointerGesture(event)) return;
