@@ -1,13 +1,30 @@
 (() => {
   'use strict';
 
+  const SHAPE_BUTTON_ID = 'paperCanvasShapeBtn';
   const ERASER_BUTTON_ID = 'paperCanvasEraserBtn';
-  const LINE_BUTTON_ID = 'paperCanvasLineBtn';
+  const TEXT_BUTTON_ID = 'paperCanvasTextBtn';
   const CURSOR_ID = 'paperCanvasEraserCursor';
   const HINT_ID = 'paperCanvasFloatingHint';
+  const AUX_BUTTON_ID = 'paperCanvasAuxBtn';
+  const SHAPE_MENU_ID = 'paperCanvasShapeMenu';
+  const TEXT_MENU_ID = 'paperCanvasTextMenu';
   const PEN_COLOR = '#111827';
   const PEN_WIDTH = 2.5;
   const ERASER_WIDTH = 34;
+  const SHAPES = ['line', 'triangle', 'circle', 'rect'];
+  const SHAPE_LABEL = {
+    line: '直線',
+    triangle: '三角',
+    circle: '圓形',
+    rect: '矩形'
+  };
+  const TEXT_CHARS = [
+    'A','B','C','D','E',
+    'P','Q','R','S','T',
+    'x','y','z',
+    'i','j','l','m','n'
+  ];
 
   const QUESTION = {
     id: 'math-paper-linear-test-002',
@@ -30,8 +47,7 @@
 
   function hasSavedAnswer() {
     const image = document.getElementById('paperAnswerImage');
-    const src = image?.getAttribute('src') || '';
-    return src.startsWith('data:image/');
+    return String(image?.getAttribute('src') || '').startsWith('data:image/');
   }
 
   function isNativeInkSession() {
@@ -88,9 +104,7 @@
 
   function setNativeEraser(erasing) {
     const bridge = getNativeBridge();
-    if (!bridge || typeof bridge.setNativeInkEraserMode !== 'function') {
-      return false;
-    }
+    if (!bridge || typeof bridge.setNativeInkEraserMode !== 'function') return false;
 
     try {
       bridge.setNativeInkEraserMode(!!erasing);
@@ -121,7 +135,6 @@
       'pointer-events:none',
       'display:none'
     ].join(';');
-
     overlay.appendChild(cursor);
     return cursor;
   }
@@ -139,8 +152,8 @@
       'left:50%',
       'top:64px',
       'transform:translate(-50%,-7px)',
-      'z-index:100020',
-      'max-width:min(86vw,430px)',
+      'z-index:100030',
+      'max-width:min(88vw,450px)',
       'padding:9px 13px',
       'border-radius:999px',
       'background:rgba(15,23,42,.88)',
@@ -156,12 +169,11 @@
       'pointer-events:none',
       'transition:opacity .18s ease,transform .18s ease'
     ].join(';');
-
     overlay.appendChild(hint);
     return hint;
   }
 
-  function showFloatingHint(overlay, text, duration = 1800) {
+  function showFloatingHint(overlay, text, duration = 1700) {
     const hint = ensureFloatingHint(overlay);
     hint.textContent = text;
     hint.style.opacity = '1';
@@ -180,10 +192,12 @@
 
     toolbar.style.display = 'flex';
     toolbar.style.alignItems = 'center';
-    toolbar.style.gap = '6px';
-    toolbar.style.padding = '7px 8px';
+    toolbar.style.gap = '5px';
+    toolbar.style.padding = '7px 7px';
     toolbar.style.flexWrap = 'nowrap';
-    toolbar.style.overflowX = 'hidden';
+    toolbar.style.overflowX = 'auto';
+    toolbar.style.webkitOverflowScrolling = 'touch';
+    toolbar.style.scrollbarWidth = 'none';
 
     const cancelButton = overlay.querySelector('#paperCanvasCancelBtn');
     const doneButton = overlay.querySelector('#paperCanvasDoneBtn');
@@ -192,8 +206,8 @@
     const baseButton = button => {
       if (!button) return;
       button.style.minWidth = '0';
-      button.style.minHeight = '44px';
-      button.style.padding = '8px 10px';
+      button.style.minHeight = '42px';
+      button.style.padding = '7px 9px';
       button.style.borderRadius = '11px';
       button.style.fontSize = '14px';
       button.style.lineHeight = '1.1';
@@ -206,12 +220,11 @@
     baseButton(clearButton);
     baseButton(doneButton);
 
-    if (window.innerWidth <= 720 && titleBlock) {
+    if (window.innerWidth <= 760 && titleBlock) {
       titleBlock.style.display = 'none';
     } else if (titleBlock) {
       titleBlock.style.minWidth = '0';
       titleBlock.style.flex = '1 1 auto';
-
       const instruction = [...titleBlock.querySelectorAll('div,span,p')].find(el =>
         String(el.textContent || '').includes('用手指或觸控筆直接書寫')
       );
@@ -232,60 +245,207 @@
     overlay.dataset.mathToolsInstalled = '1';
     compactToolbar(overlay, clearButton);
 
-    const lineButton = document.createElement('button');
-    lineButton.id = LINE_BUTTON_ID;
-    lineButton.type = 'button';
-    lineButton.textContent = '直線';
-    lineButton.setAttribute('aria-pressed', 'false');
-    lineButton.style.cssText = 'border:0;border-radius:11px;padding:8px 10px;min-height:44px;font-size:14px;line-height:1.1;font-weight:800;background:#475569;color:white;white-space:nowrap;touch-action:manipulation;flex:0 0 auto';
+    const toolButtonStyle = 'border:0;border-radius:11px;padding:7px 9px;min-height:42px;font-size:14px;line-height:1.1;font-weight:800;background:#475569;color:white;white-space:nowrap;touch-action:manipulation;flex:0 0 auto';
+
+    const shapeButton = document.createElement('button');
+    shapeButton.id = SHAPE_BUTTON_ID;
+    shapeButton.type = 'button';
+    shapeButton.textContent = '直線';
+    shapeButton.style.cssText = toolButtonStyle;
 
     const eraserButton = document.createElement('button');
     eraserButton.id = ERASER_BUTTON_ID;
     eraserButton.type = 'button';
     eraserButton.textContent = '擦除';
-    eraserButton.setAttribute('aria-pressed', 'false');
-    eraserButton.style.cssText = 'border:0;border-radius:11px;padding:8px 10px;min-height:44px;font-size:14px;line-height:1.1;font-weight:800;background:#475569;color:white;white-space:nowrap;touch-action:manipulation;flex:0 0 auto';
+    eraserButton.style.cssText = toolButtonStyle;
 
-    clearButton.parentNode.insertBefore(lineButton, clearButton);
+    const textButton = document.createElement('button');
+    textButton.id = TEXT_BUTTON_ID;
+    textButton.type = 'button';
+    textButton.textContent = '文';
+    textButton.style.cssText = toolButtonStyle;
+
+    clearButton.parentNode.insertBefore(shapeButton, clearButton);
     clearButton.parentNode.insertBefore(eraserButton, clearButton);
+    clearButton.parentNode.insertBefore(textButton, clearButton);
 
     const cursor = createCursor(overlay);
     const ctx = canvas.getContext('2d', { alpha: false });
 
     let mode = 'pen';
-    let linePointerId = null;
-    let lineStart = null;
-    let lineLast = null;
-    let lineSnapshot = null;
+    let selectedShape = 'line';
+    let selectedText = 'A';
+    let textSize = 30;
+    let constraintHeld = false;
+    let constraintPointerId = null;
+    let textSizeStartY = 0;
+    let textSizeStartValue = textSize;
+
+    let shapePointerId = null;
+    let shapeStart = null;
+    let shapeLast = null;
+    let shapeSnapshot = null;
     let forwardingSyntheticInk = false;
-    let syntheticPointerId = 920000;
+    let syntheticPointerId = 930000;
 
     function hideCursor() {
       cursor.style.display = 'none';
     }
 
-    function updateButtons() {
-      const lineActive = mode === 'line';
-      const eraserActive = mode === 'eraser';
-
-      lineButton.textContent = lineActive ? '畫筆' : '直線';
-      lineButton.setAttribute('aria-pressed', lineActive ? 'true' : 'false');
-      lineButton.style.background = lineActive ? '#f59e0b' : '#475569';
-      lineButton.style.color = lineActive ? '#451a03' : '#ffffff';
-
-      eraserButton.textContent = eraserActive ? '畫筆' : '擦除';
-      eraserButton.setAttribute('aria-pressed', eraserActive ? 'true' : 'false');
-      eraserButton.style.background = eraserActive ? '#f59e0b' : '#475569';
-      eraserButton.style.color = eraserActive ? '#451a03' : '#ffffff';
-
-      if (!eraserActive) hideCursor();
+    function createMenu(id) {
+      const menu = document.createElement('div');
+      menu.id = id;
+      menu.style.cssText = [
+        'position:fixed',
+        'left:50%',
+        'top:60px',
+        'transform:translateX(-50%)',
+        'z-index:100040',
+        'display:none',
+        'gap:7px',
+        'flex-wrap:wrap',
+        'justify-content:center',
+        'max-width:min(92vw,520px)',
+        'padding:9px',
+        'border-radius:14px',
+        'background:rgba(15,23,42,.94)',
+        'box-shadow:0 10px 28px rgba(0,0,0,.28)',
+        'backdrop-filter:blur(10px)',
+        '-webkit-backdrop-filter:blur(10px)'
+      ].join(';');
+      overlay.appendChild(menu);
+      return menu;
     }
 
-    function switchMode(nextMode, showHint = true) {
-      if (mode === 'eraser' && isNativeInkSession()) {
-        setNativeEraser(false);
-      }
+    const shapeMenu = createMenu(SHAPE_MENU_ID);
+    const textMenu = createMenu(TEXT_MENU_ID);
 
+    function paletteButton(label) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = label;
+      b.style.cssText = 'border:0;border-radius:10px;min-width:46px;min-height:42px;padding:7px 10px;background:#334155;color:white;font-size:15px;font-weight:800;touch-action:manipulation';
+      return b;
+    }
+
+    const penChoice = paletteButton('畫筆');
+    penChoice.addEventListener('click', () => {
+      switchMode('pen');
+      hideMenus();
+    });
+    shapeMenu.appendChild(penChoice);
+
+    [
+      ['line','／ 直線'],
+      ['triangle','△ 三角'],
+      ['circle','○ 圓形'],
+      ['rect','□ 矩形']
+    ].forEach(([shape, label]) => {
+      const b = paletteButton(label);
+      b.addEventListener('click', () => {
+        selectedShape = shape;
+        switchMode('shape');
+        hideMenus();
+        showFloatingHint(overlay, `${SHAPE_LABEL[shape]}工具已啟用`);
+      });
+      shapeMenu.appendChild(b);
+    });
+
+    TEXT_CHARS.forEach(ch => {
+      const b = paletteButton(ch);
+      b.style.minWidth = '42px';
+      b.addEventListener('click', () => {
+        selectedText = ch;
+        switchMode('text');
+        hideMenus();
+        showFloatingHint(overlay, `文字 ${ch}：點畫布放置`);
+      });
+      textMenu.appendChild(b);
+    });
+
+    const textPenChoice = paletteButton('畫筆');
+    textPenChoice.addEventListener('click', () => {
+      switchMode('pen');
+      hideMenus();
+    });
+    textMenu.appendChild(textPenChoice);
+
+    function hideMenus() {
+      shapeMenu.style.display = 'none';
+      textMenu.style.display = 'none';
+    }
+
+    function showMenu(menu) {
+      const opening = menu.style.display !== 'flex';
+      hideMenus();
+      if (opening) menu.style.display = 'flex';
+    }
+
+    const auxButton = document.createElement('button');
+    auxButton.id = AUX_BUTTON_ID;
+    auxButton.type = 'button';
+    auxButton.style.cssText = [
+      'position:fixed',
+      'left:16px',
+      'bottom:calc(18px + env(safe-area-inset-bottom,0px))',
+      'z-index:100035',
+      'display:none',
+      'width:54px',
+      'height:54px',
+      'border:0',
+      'border-radius:50%',
+      'background:rgba(15,23,42,.88)',
+      'color:white',
+      'font-size:13px',
+      'font-weight:900',
+      'line-height:1.05',
+      'box-shadow:0 6px 20px rgba(0,0,0,.28)',
+      'touch-action:none',
+      'user-select:none',
+      '-webkit-user-select:none'
+    ].join(';');
+    overlay.appendChild(auxButton);
+
+    function updateAuxButton() {
+      if (mode === 'shape') {
+        auxButton.style.display = 'block';
+        auxButton.textContent = constraintHeld ? '鎖定' : '正形';
+        auxButton.style.background = constraintHeld ? '#16a34a' : 'rgba(15,23,42,.88)';
+      } else if (mode === 'text') {
+        auxButton.style.display = 'block';
+        auxButton.textContent = `${textSize}px`;
+        auxButton.style.background = constraintPointerId !== null ? '#2563eb' : 'rgba(15,23,42,.88)';
+      } else {
+        auxButton.style.display = 'none';
+      }
+    }
+
+    function updateButtons() {
+      const shapeActive = mode === 'shape';
+      const eraserActive = mode === 'eraser';
+      const textActive = mode === 'text';
+
+      shapeButton.textContent = SHAPE_LABEL[selectedShape];
+      shapeButton.style.background = shapeActive ? '#f59e0b' : '#475569';
+      shapeButton.style.color = shapeActive ? '#451a03' : '#ffffff';
+      shapeButton.setAttribute('aria-pressed', shapeActive ? 'true' : 'false');
+
+      eraserButton.style.background = eraserActive ? '#f59e0b' : '#475569';
+      eraserButton.style.color = eraserActive ? '#451a03' : '#ffffff';
+      eraserButton.setAttribute('aria-pressed', eraserActive ? 'true' : 'false');
+
+      textButton.textContent = textActive ? `文:${selectedText}` : '文';
+      textButton.style.background = textActive ? '#f59e0b' : '#475569';
+      textButton.style.color = textActive ? '#451a03' : '#ffffff';
+      textButton.setAttribute('aria-pressed', textActive ? 'true' : 'false');
+
+      if (!eraserActive) hideCursor();
+      updateAuxButton();
+    }
+
+    function switchMode(nextMode, showHint = false) {
+      if (mode === 'eraser' && isNativeInkSession()) setNativeEraser(false);
+      resetShapeGesture(false);
       mode = nextMode;
 
       if (!isNativeInkSession()) {
@@ -295,22 +455,19 @@
       updateButtons();
 
       if (showHint) {
-        if (mode === 'line') {
-          showFloatingHint(overlay, '直線工具：拖曳起點到終點');
-        } else if (mode === 'eraser') {
-          showFloatingHint(overlay, '橡皮擦：直接擦除筆跡');
-        } else {
-          showFloatingHint(overlay, '畫筆：自由書寫');
-        }
+        const hints = {
+          pen: '畫筆：自由書寫',
+          eraser: '橡皮擦：直接擦除筆跡',
+          shape: `${SHAPE_LABEL[selectedShape]}工具`,
+          text: `文字 ${selectedText}：點畫布放置`
+        };
+        showFloatingHint(overlay, hints[mode] || '');
       }
     }
 
     function pointFromEvent(event) {
       const rect = canvas.getBoundingClientRect();
-      return {
-        x: event.clientX - rect.left,
-        y: event.clientY - rect.top
-      };
+      return { x: event.clientX - rect.left, y: event.clientY - rect.top };
     }
 
     function makeSnapshot() {
@@ -322,16 +479,57 @@
     }
 
     function restoreSnapshot() {
-      if (!lineSnapshot) return;
+      if (!shapeSnapshot) return;
       ctx.save();
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(lineSnapshot, 0, 0);
+      ctx.drawImage(shapeSnapshot, 0, 0);
       ctx.restore();
     }
 
-    function drawStraightLine(endPoint) {
-      if (!lineStart || !endPoint) return;
+    function constrainedEnd(start, end, shape) {
+      if (!constraintHeld) return end;
+
+      let dx = end.x - start.x;
+      let dy = end.y - start.y;
+      const sx = dx < 0 ? -1 : 1;
+      const sy = dy < 0 ? -1 : 1;
+
+      if (shape === 'line') {
+        if (Math.abs(dx) >= Math.abs(dy)) dy = 0;
+        else dx = 0;
+        return { x: start.x + dx, y: start.y + dy };
+      }
+
+      if (shape === 'circle' || shape === 'rect') {
+        const side = Math.max(Math.abs(dx), Math.abs(dy));
+        return { x: start.x + sx * side, y: start.y + sy * side };
+      }
+
+      if (shape === 'triangle') {
+        const sideFromHeight = Math.abs(dy) * 2 / Math.sqrt(3);
+        const side = Math.max(Math.abs(dx), sideFromHeight);
+        const height = side * Math.sqrt(3) / 2;
+        return { x: start.x + sx * side, y: start.y + sy * height };
+      }
+
+      return end;
+    }
+
+    function drawShape(endPoint) {
+      if (!shapeStart || !endPoint) return;
+      const end = constrainedEnd(shapeStart, endPoint, selectedShape);
+      const x1 = shapeStart.x;
+      const y1 = shapeStart.y;
+      const x2 = end.x;
+      const y2 = end.y;
+      const left = Math.min(x1, x2);
+      const right = Math.max(x1, x2);
+      const top = Math.min(y1, y2);
+      const bottom = Math.max(y1, y2);
+      const width = Math.max(0.1, right - left);
+      const height = Math.max(0.1, bottom - top);
+
       ctx.save();
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = PEN_COLOR;
@@ -339,36 +537,44 @@
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       ctx.beginPath();
-      ctx.moveTo(lineStart.x, lineStart.y);
-      ctx.lineTo(endPoint.x, endPoint.y);
+
+      if (selectedShape === 'line') {
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+      } else if (selectedShape === 'rect') {
+        ctx.rect(left, top, width, height);
+      } else if (selectedShape === 'circle') {
+        ctx.ellipse((left + right) / 2, (top + bottom) / 2, width / 2, height / 2, 0, 0, Math.PI * 2);
+      } else if (selectedShape === 'triangle') {
+        const upward = y2 >= y1;
+        const apexY = upward ? top : bottom;
+        const baseY = upward ? bottom : top;
+        ctx.moveTo((left + right) / 2, apexY);
+        ctx.lineTo(right, baseY);
+        ctx.lineTo(left, baseY);
+        ctx.closePath();
+      }
+
       ctx.stroke();
       ctx.restore();
     }
 
-    function resetLineGesture(restore = false) {
+    function resetShapeGesture(restore = false) {
       if (restore) restoreSnapshot();
-      if (linePointerId !== null) {
-        try { canvas.releasePointerCapture?.(linePointerId); } catch {}
+      if (shapePointerId !== null) {
+        try { canvas.releasePointerCapture?.(shapePointerId); } catch {}
       }
-      linePointerId = null;
-      lineStart = null;
-      lineLast = null;
-      lineSnapshot = null;
+      shapePointerId = null;
+      shapeStart = null;
+      shapeLast = null;
+      shapeSnapshot = null;
     }
 
-    function markCatalogCanvasAsInk(startPoint, endPoint) {
-      const dx = endPoint.x - startPoint.x;
-      const dy = endPoint.y - startPoint.y;
-      const distance = Math.hypot(dx, dy);
-      if (distance < 3.2) return;
-
-      const ux = dx / distance;
-      const uy = dy / distance;
+    function markCanvasInk(point) {
       const rect = canvas.getBoundingClientRect();
       const id = syntheticPointerId++;
       const moveType = 'onpointerrawupdate' in window ? 'pointerrawupdate' : 'pointermove';
-
-      const initAt = (point, buttons, pressure) => ({
+      const initAt = (x, y, buttons, pressure) => ({
         bubbles: true,
         cancelable: true,
         pointerId: id,
@@ -376,107 +582,103 @@
         isPrimary: true,
         buttons,
         pressure,
-        clientX: rect.left + point.x,
-        clientY: rect.top + point.y
+        clientX: rect.left + x,
+        clientY: rect.top + y
       });
-
-      const p1 = { x: startPoint.x + ux * 1.6, y: startPoint.y + uy * 1.6 };
-      const p2 = { x: startPoint.x + ux * 3.2, y: startPoint.y + uy * 3.2 };
 
       forwardingSyntheticInk = true;
       try {
-        canvas.dispatchEvent(new PointerEvent('pointerdown', initAt(startPoint, 1, 0.5)));
-        canvas.dispatchEvent(new PointerEvent(moveType, initAt(p1, 1, 0.5)));
-        canvas.dispatchEvent(new PointerEvent(moveType, initAt(p2, 1, 0.5)));
-        canvas.dispatchEvent(new PointerEvent('pointerup', initAt(p2, 0, 0)));
+        canvas.dispatchEvent(new PointerEvent('pointerdown', initAt(point.x, point.y, 1, 0.5)));
+        canvas.dispatchEvent(new PointerEvent(moveType, initAt(point.x + 1.8, point.y, 1, 0.5)));
+        canvas.dispatchEvent(new PointerEvent(moveType, initAt(point.x + 3.6, point.y, 1, 0.5)));
+        canvas.dispatchEvent(new PointerEvent('pointerup', initAt(point.x + 3.6, point.y, 0, 0)));
       } catch (error) {
-        console.warn('[MathTools] unable to mark synthetic line ink', error);
+        console.warn('[MathTools] unable to mark canvas ink', error);
       } finally {
         forwardingSyntheticInk = false;
       }
     }
 
-    function onLinePointerDown(event) {
-      if (forwardingSyntheticInk || mode !== 'line' || isNativeInkSession()) return;
-
+    function onShapePointerDown(event) {
+      if (forwardingSyntheticInk || mode !== 'shape' || isNativeInkSession()) return;
       event.preventDefault();
       event.stopImmediatePropagation();
-
-      linePointerId = event.pointerId;
-      lineStart = pointFromEvent(event);
-      lineLast = lineStart;
-      lineSnapshot = makeSnapshot();
-
+      hideMenus();
+      shapePointerId = event.pointerId;
+      shapeStart = pointFromEvent(event);
+      shapeLast = shapeStart;
+      shapeSnapshot = makeSnapshot();
       try { canvas.setPointerCapture?.(event.pointerId); } catch {}
     }
 
-    function onLinePointerMove(event) {
+    function onShapePointerMove(event) {
       if (
-        forwardingSyntheticInk ||
-        mode !== 'line' ||
-        linePointerId === null ||
-        event.pointerId !== linePointerId
-      ) {
-        return;
-      }
+        forwardingSyntheticInk || mode !== 'shape' ||
+        shapePointerId === null || event.pointerId !== shapePointerId
+      ) return;
 
       if (event.cancelable) event.preventDefault();
       event.stopImmediatePropagation();
-
-      lineLast = pointFromEvent(event);
+      shapeLast = pointFromEvent(event);
       restoreSnapshot();
-      drawStraightLine(lineLast);
+      drawShape(shapeLast);
     }
 
-    function onLinePointerUp(event) {
+    function onShapePointerUp(event) {
       if (
-        forwardingSyntheticInk ||
-        mode !== 'line' ||
-        linePointerId === null ||
-        event.pointerId !== linePointerId
-      ) {
-        return;
-      }
+        forwardingSyntheticInk || mode !== 'shape' ||
+        shapePointerId === null || event.pointerId !== shapePointerId
+      ) return;
 
       if (event.cancelable) event.preventDefault();
       event.stopImmediatePropagation();
-
-      const startPoint = lineStart;
-      const endPoint = pointFromEvent(event);
-
+      const start = shapeStart;
+      const end = pointFromEvent(event);
       restoreSnapshot();
-      drawStraightLine(endPoint);
-      resetLineGesture(false);
-
-      markCatalogCanvasAsInk(startPoint, endPoint);
+      markCanvasInk(start);
+      drawShape(end);
+      resetShapeGesture(false);
       setWebCanvasTool(canvas, false);
     }
 
-    function onLinePointerCancel(event) {
-      if (
-        forwardingSyntheticInk ||
-        mode !== 'line' ||
-        linePointerId === null ||
-        event.pointerId !== linePointerId
-      ) {
-        return;
-      }
-
+    function onShapePointerCancel(event) {
+      if (mode !== 'shape' || shapePointerId === null || event.pointerId !== shapePointerId) return;
       if (event.cancelable) event.preventDefault();
       event.stopImmediatePropagation();
-      resetLineGesture(true);
+      resetShapeGesture(true);
     }
 
-    lineButton.addEventListener('click', () => {
+    function drawTextAt(point) {
+      markCanvasInk(point);
+      ctx.save();
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = PEN_COLOR;
+      ctx.font = `600 ${textSize}px system-ui, -apple-system, BlinkMacSystemFont, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(selectedText, point.x, point.y);
+      ctx.restore();
+      setWebCanvasTool(canvas, false);
+    }
+
+    function onTextPointerDown(event) {
+      if (forwardingSyntheticInk || mode !== 'text' || isNativeInkSession()) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      hideMenus();
+      drawTextAt(pointFromEvent(event));
+    }
+
+    shapeButton.addEventListener('click', () => {
       if (isNativeInkSession()) {
-        showFloatingHint(overlay, '直線工具目前支援一般手機／瀏覽器畫布');
+        showFloatingHint(overlay, '圖形工具目前支援一般手機／瀏覽器畫布');
         return;
       }
-
-      switchMode(mode === 'line' ? 'pen' : 'line');
+      showMenu(shapeMenu);
     });
 
     eraserButton.addEventListener('click', () => {
+      hideMenus();
       const nextMode = mode === 'eraser' ? 'pen' : 'eraser';
 
       if (isNativeInkSession() && nextMode === 'eraser') {
@@ -490,7 +692,15 @@
         return;
       }
 
-      switchMode(nextMode);
+      switchMode(nextMode, true);
+    });
+
+    textButton.addEventListener('click', () => {
+      if (isNativeInkSession()) {
+        showFloatingHint(overlay, '文字工具目前支援一般手機／瀏覽器畫布');
+        return;
+      }
+      showMenu(textMenu);
     });
 
     function moveCursor(event) {
@@ -498,17 +708,62 @@
         hideCursor();
         return;
       }
-
       cursor.style.left = `${event.clientX}px`;
       cursor.style.top = `${event.clientY}px`;
       cursor.style.display = 'block';
     }
 
-    canvas.addEventListener('pointerdown', onLinePointerDown, { capture: true, passive: false });
-    canvas.addEventListener('pointerrawupdate', onLinePointerMove, { capture: true, passive: false });
-    canvas.addEventListener('pointermove', onLinePointerMove, { capture: true, passive: false });
-    canvas.addEventListener('pointerup', onLinePointerUp, { capture: true, passive: false });
-    canvas.addEventListener('pointercancel', onLinePointerCancel, { capture: true, passive: false });
+    auxButton.addEventListener('pointerdown', event => {
+      if (mode !== 'shape' && mode !== 'text') return;
+      event.preventDefault();
+      event.stopPropagation();
+      constraintPointerId = event.pointerId;
+      try { auxButton.setPointerCapture?.(event.pointerId); } catch {}
+
+      if (mode === 'shape') {
+        constraintHeld = true;
+        updateAuxButton();
+        const labels = {
+          line: '鎖定：水平／垂直直線',
+          circle: '鎖定：正圓',
+          rect: '鎖定：正方形',
+          triangle: '鎖定：正三角形'
+        };
+        showFloatingHint(overlay, labels[selectedShape], 1100);
+      } else {
+        textSizeStartY = event.clientY;
+        textSizeStartValue = textSize;
+        updateAuxButton();
+        showFloatingHint(overlay, `字級 ${textSize}px`, 900);
+      }
+    });
+
+    auxButton.addEventListener('pointermove', event => {
+      if (constraintPointerId !== event.pointerId || mode !== 'text') return;
+      event.preventDefault();
+      const dy = textSizeStartY - event.clientY;
+      textSize = Math.max(14, Math.min(72, Math.round(textSizeStartValue + dy * 0.45)));
+      updateAuxButton();
+      showFloatingHint(overlay, `字級 ${textSize}px`, 500);
+    });
+
+    function releaseAux(event) {
+      if (constraintPointerId !== event.pointerId) return;
+      if (mode === 'shape') constraintHeld = false;
+      constraintPointerId = null;
+      updateAuxButton();
+      try { auxButton.releasePointerCapture?.(event.pointerId); } catch {}
+    }
+
+    auxButton.addEventListener('pointerup', releaseAux);
+    auxButton.addEventListener('pointercancel', releaseAux);
+
+    canvas.addEventListener('pointerdown', onShapePointerDown, { capture: true, passive: false });
+    canvas.addEventListener('pointerrawupdate', onShapePointerMove, { capture: true, passive: false });
+    canvas.addEventListener('pointermove', onShapePointerMove, { capture: true, passive: false });
+    canvas.addEventListener('pointerup', onShapePointerUp, { capture: true, passive: false });
+    canvas.addEventListener('pointercancel', onShapePointerCancel, { capture: true, passive: false });
+    canvas.addEventListener('pointerdown', onTextPointerDown, { capture: true, passive: false });
 
     canvas.addEventListener('pointerdown', moveCursor, { passive: true });
     canvas.addEventListener('pointermove', moveCursor, { passive: true });
@@ -517,10 +772,20 @@
     canvas.addEventListener('pointerleave', hideCursor, { passive: true });
 
     clearButton.addEventListener('click', () => {
-      resetLineGesture(false);
-      showFloatingHint(overlay, '畫布已清除', 1200);
+      hideMenus();
+      resetShapeGesture(false);
+      showFloatingHint(overlay, '畫布已清除', 1100);
       if (!isNativeInkSession()) {
         requestAnimationFrame(() => setWebCanvasTool(canvas, mode === 'eraser'));
+      }
+    });
+
+    overlay.addEventListener('pointerdown', event => {
+      if (
+        !shapeMenu.contains(event.target) && !textMenu.contains(event.target) &&
+        event.target !== shapeButton && event.target !== textButton
+      ) {
+        hideMenus();
       }
     });
 
@@ -528,8 +793,11 @@
     const cancelButton = overlay.querySelector('#paperCanvasCancelBtn');
 
     const resetTool = () => {
+      hideMenus();
       hideCursor();
-      resetLineGesture(false);
+      resetShapeGesture(false);
+      constraintHeld = false;
+      constraintPointerId = null;
       if (mode === 'eraser' && isNativeInkSession()) setNativeEraser(false);
       mode = 'pen';
     };
@@ -538,9 +806,8 @@
     cancelButton?.addEventListener('click', resetTool, { once: true });
 
     updateButtons();
-
     requestAnimationFrame(() => {
-      showFloatingHint(overlay, '用手指或觸控筆直接書寫', 2200);
+      showFloatingHint(overlay, '畫筆可自由書寫；直線可切換圖形；「文」可加入標示', 2300);
     });
   }
 
