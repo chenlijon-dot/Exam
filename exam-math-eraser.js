@@ -4,6 +4,7 @@
   const ERASER_BUTTON_ID = 'paperCanvasEraserBtn';
   const LINE_BUTTON_ID = 'paperCanvasLineBtn';
   const CURSOR_ID = 'paperCanvasEraserCursor';
+  const HINT_ID = 'paperCanvasFloatingHint';
   const PEN_COLOR = '#111827';
   const PEN_WIDTH = 2.5;
   const ERASER_WIDTH = 34;
@@ -125,6 +126,99 @@
     return cursor;
   }
 
+  let hintTimer = null;
+
+  function ensureFloatingHint(overlay) {
+    let hint = overlay.querySelector(`#${HINT_ID}`);
+    if (hint) return hint;
+
+    hint = document.createElement('div');
+    hint.id = HINT_ID;
+    hint.style.cssText = [
+      'position:fixed',
+      'left:50%',
+      'top:64px',
+      'transform:translate(-50%,-7px)',
+      'z-index:100020',
+      'max-width:min(86vw,430px)',
+      'padding:9px 13px',
+      'border-radius:999px',
+      'background:rgba(15,23,42,.88)',
+      'color:#fff',
+      'font-size:13px',
+      'font-weight:750',
+      'line-height:1.35',
+      'text-align:center',
+      'box-shadow:0 7px 22px rgba(0,0,0,.24)',
+      'backdrop-filter:blur(8px)',
+      '-webkit-backdrop-filter:blur(8px)',
+      'opacity:0',
+      'pointer-events:none',
+      'transition:opacity .18s ease,transform .18s ease'
+    ].join(';');
+
+    overlay.appendChild(hint);
+    return hint;
+  }
+
+  function showFloatingHint(overlay, text, duration = 1800) {
+    const hint = ensureFloatingHint(overlay);
+    hint.textContent = text;
+    hint.style.opacity = '1';
+    hint.style.transform = 'translate(-50%,0)';
+
+    if (hintTimer) clearTimeout(hintTimer);
+    hintTimer = setTimeout(() => {
+      hint.style.opacity = '0';
+      hint.style.transform = 'translate(-50%,-7px)';
+    }, duration);
+  }
+
+  function compactToolbar(overlay, clearButton) {
+    const toolbar = clearButton.parentElement;
+    if (!toolbar) return;
+
+    toolbar.style.display = 'flex';
+    toolbar.style.alignItems = 'center';
+    toolbar.style.gap = '6px';
+    toolbar.style.padding = '7px 8px';
+    toolbar.style.flexWrap = 'nowrap';
+    toolbar.style.overflowX = 'hidden';
+
+    const cancelButton = overlay.querySelector('#paperCanvasCancelBtn');
+    const doneButton = overlay.querySelector('#paperCanvasDoneBtn');
+    const titleBlock = cancelButton?.nextElementSibling;
+
+    const baseButton = button => {
+      if (!button) return;
+      button.style.minWidth = '0';
+      button.style.minHeight = '44px';
+      button.style.padding = '8px 10px';
+      button.style.borderRadius = '11px';
+      button.style.fontSize = '14px';
+      button.style.lineHeight = '1.1';
+      button.style.whiteSpace = 'nowrap';
+      button.style.flex = '0 0 auto';
+      button.style.touchAction = 'manipulation';
+    };
+
+    baseButton(cancelButton);
+    baseButton(clearButton);
+    baseButton(doneButton);
+
+    if (window.innerWidth <= 720 && titleBlock) {
+      titleBlock.style.display = 'none';
+    } else if (titleBlock) {
+      titleBlock.style.minWidth = '0';
+      titleBlock.style.flex = '1 1 auto';
+
+      const instruction = [...titleBlock.querySelectorAll('div,span,p')].find(el =>
+        String(el.textContent || '').includes('用手指或觸控筆直接書寫')
+      );
+      if (instruction) instruction.style.display = 'none';
+    }
+  }
+
   function installForOverlay(overlay) {
     if (!overlay || overlay.dataset.mathToolsInstalled === '1') return;
 
@@ -136,20 +230,21 @@
     if (!clearButton || !canvas) return;
 
     overlay.dataset.mathToolsInstalled = '1';
+    compactToolbar(overlay, clearButton);
 
     const lineButton = document.createElement('button');
     lineButton.id = LINE_BUTTON_ID;
     lineButton.type = 'button';
-    lineButton.textContent = '📏 直線';
+    lineButton.textContent = '直線';
     lineButton.setAttribute('aria-pressed', 'false');
-    lineButton.style.cssText = 'border:0;border-radius:10px;padding:9px 9px;font-weight:800;background:#475569;color:white;white-space:nowrap;touch-action:manipulation';
+    lineButton.style.cssText = 'border:0;border-radius:11px;padding:8px 10px;min-height:44px;font-size:14px;line-height:1.1;font-weight:800;background:#475569;color:white;white-space:nowrap;touch-action:manipulation;flex:0 0 auto';
 
     const eraserButton = document.createElement('button');
     eraserButton.id = ERASER_BUTTON_ID;
     eraserButton.type = 'button';
-    eraserButton.textContent = '🧽 橡皮擦';
+    eraserButton.textContent = '擦除';
     eraserButton.setAttribute('aria-pressed', 'false');
-    eraserButton.style.cssText = 'border:0;border-radius:10px;padding:9px 9px;font-weight:800;background:#475569;color:white;white-space:nowrap;touch-action:manipulation';
+    eraserButton.style.cssText = 'border:0;border-radius:11px;padding:8px 10px;min-height:44px;font-size:14px;line-height:1.1;font-weight:800;background:#475569;color:white;white-space:nowrap;touch-action:manipulation;flex:0 0 auto';
 
     clearButton.parentNode.insertBefore(lineButton, clearButton);
     clearButton.parentNode.insertBefore(eraserButton, clearButton);
@@ -173,12 +268,12 @@
       const lineActive = mode === 'line';
       const eraserActive = mode === 'eraser';
 
-      lineButton.textContent = lineActive ? '✏️ 返回筆' : '📏 直線';
+      lineButton.textContent = lineActive ? '畫筆' : '直線';
       lineButton.setAttribute('aria-pressed', lineActive ? 'true' : 'false');
       lineButton.style.background = lineActive ? '#f59e0b' : '#475569';
       lineButton.style.color = lineActive ? '#451a03' : '#ffffff';
 
-      eraserButton.textContent = eraserActive ? '✏️ 返回筆' : '🧽 橡皮擦';
+      eraserButton.textContent = eraserActive ? '畫筆' : '擦除';
       eraserButton.setAttribute('aria-pressed', eraserActive ? 'true' : 'false');
       eraserButton.style.background = eraserActive ? '#f59e0b' : '#475569';
       eraserButton.style.color = eraserActive ? '#451a03' : '#ffffff';
@@ -186,7 +281,7 @@
       if (!eraserActive) hideCursor();
     }
 
-    function switchMode(nextMode) {
+    function switchMode(nextMode, showHint = true) {
       if (mode === 'eraser' && isNativeInkSession()) {
         setNativeEraser(false);
       }
@@ -198,6 +293,16 @@
       }
 
       updateButtons();
+
+      if (showHint) {
+        if (mode === 'line') {
+          showFloatingHint(overlay, '直線工具：拖曳起點到終點');
+        } else if (mode === 'eraser') {
+          showFloatingHint(overlay, '橡皮擦：直接擦除筆跡');
+        } else {
+          showFloatingHint(overlay, '畫筆：自由書寫');
+        }
+      }
     }
 
     function pointFromEvent(event) {
@@ -364,7 +469,7 @@
 
     lineButton.addEventListener('click', () => {
       if (isNativeInkSession()) {
-        alert('直線工具目前先支援一般手機／瀏覽器的網頁畫布。');
+        showFloatingHint(overlay, '直線工具目前支援一般手機／瀏覽器畫布');
         return;
       }
 
@@ -376,11 +481,12 @@
 
       if (isNativeInkSession() && nextMode === 'eraser') {
         if (!setNativeEraser(true)) {
-          alert('目前這個 Student Exam App 的原生手寫畫布尚未加入橡皮擦橋接。一般手機／瀏覽器的網頁畫布橡皮擦已可直接使用。');
+          showFloatingHint(overlay, '目前原生畫布尚未支援橡皮擦');
           return;
         }
         mode = 'eraser';
         updateButtons();
+        showFloatingHint(overlay, '橡皮擦：直接擦除筆跡');
         return;
       }
 
@@ -412,6 +518,7 @@
 
     clearButton.addEventListener('click', () => {
       resetLineGesture(false);
+      showFloatingHint(overlay, '畫布已清除', 1200);
       if (!isNativeInkSession()) {
         requestAnimationFrame(() => setWebCanvasTool(canvas, mode === 'eraser'));
       }
@@ -431,6 +538,10 @@
     cancelButton?.addEventListener('click', resetTool, { once: true });
 
     updateButtons();
+
+    requestAnimationFrame(() => {
+      showFloatingHint(overlay, '用手指或觸控筆直接書寫', 2200);
+    });
   }
 
   function scan() {
