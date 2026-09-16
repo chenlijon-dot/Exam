@@ -105,7 +105,7 @@
     if (document.getElementById('englishVocabularyModule')) return;
     const script = document.createElement('script');
     script.id = 'englishVocabularyModule';
-    script.src = `exam-english-vocabulary.js?v=${Date.now()}`;
+    script.src = `exam-english-vocabulary-v2.js?v=${Date.now()}`;
     script.defer = true;
     document.head.appendChild(script);
   }
