@@ -2,9 +2,6 @@
   'use strict';
 
   const FIREBASE_VERSION = '12.19.0';
-  // Use the high-volume free-tier model first. If Firebase reports temporary
-  // capacity/rate-limit errors, immediately try another free general model
-  // rather than making the student wait on one overloaded model.
   const MODEL_CANDIDATES = [
     'gemini-3.5-flash-lite',
     'gemini-3.5-flash',
@@ -205,11 +202,23 @@
     }
   }
 
+  function currentMathQuestion() {
+    return window.MathPaperQuestionConfig || {
+      id: 'math-paper-quadratic-test-001',
+      semester: '九年級上學期',
+      unit: '一元二次方程式',
+      text: 'x^2 - 5x + 6 = 0，求 x 的所有解。',
+      expectedAnswer: 'x = 2 或 x = 3',
+      gradingInstructions: '請依數學意義判斷，完整解集合為 x = 2 與 x = 3。'
+    };
+  }
+
   async function gradeMathHandwriting(dataUrl) {
     const match = String(dataUrl || '').match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/s);
     if (!match) throw new Error('找不到可判讀的手寫圖片。');
 
-    const prompt = `你是台灣國中數學老師。請判讀學生手寫作答圖片。\n\n題目：x^2 - 5x + 6 = 0，求 x 的所有解。\n標準答案：x = 2 或 x = 3。\n\n判題原則：\n- 依數學意義判斷，不可只做答案字串比較。\n- x=2,3、x=3,2、{2,3}、x=2 或 x=3 都視為完整正確答案。\n- 若完整得到 2 與 3 且計算沒有實質錯誤，verdict 必須為 correct。\n- 漏根、多錯根、或計算有實質錯誤，判 incorrect。\n- 圖片無法可靠辨識，判 unclear。\n\n只回傳 JSON：\n{"verdict":"correct|incorrect|unclear","recognizedAnswer":"","recognizedWork":"","feedback":"繁體中文簡短回饋","confidence":0.0}`;
+    const question = currentMathQuestion();
+    const prompt = `你是台灣國中數學老師。請判讀學生手寫作答圖片。\n\n題目：${question.text}\n標準答案：${question.expectedAnswer}\n\n判題原則：\n${question.gradingInstructions}\n- 依數學意義判斷，不可只做答案字串比較。\n- 數學上等價的寫法視為相同答案。\n- 若計算過程有會影響答案的實質數學錯誤，判 incorrect。\n- 圖片模糊、被截斷或無法可靠辨識時，判 unclear，不要猜。\n- feedback 只根據學生實際寫出的內容，不要自行補步驟或硬套數學術語。\n- feedback 使用台灣繁體中文，簡短直接。\n\n只回傳 JSON：\n{"verdict":"correct|incorrect|unclear","recognizedAnswer":"","recognizedWork":"","feedback":"繁體中文簡短回饋","confidence":0.0}`;
 
     const { response, modelName } = await generateWithFallback([
       { text: prompt },
