@@ -10,7 +10,7 @@
 
   function esc(value) {
     return String(value ?? '').replace(/[&<>"']/g, ch => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'
     }[ch]));
   }
 
@@ -214,8 +214,7 @@
     try {
       await ensureFirestore();
       const ref=firestore.collectionGroup(db,'attempts');
-      const q=firestore.query(ref,firestore.orderBy('submittedAt','desc'),firestore.limit(500));
-      const snap=await firestore.getDocs(q);
+      const snap=await firestore.getDocs(firestore.query(ref,firestore.limit(500)));
       const records=snap.docs.map(doc=>{
         const data=doc.data();
         const parentUser=doc.ref.parent.parent?.id || '';
