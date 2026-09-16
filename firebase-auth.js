@@ -42,9 +42,7 @@
       #firebaseAuthGate .fa-primary{background:#2563eb;color:#fff}
       #firebaseAuthGate .fa-secondary{background:#e2e8f0;color:#1e293b}
       #firebaseAuthGate .fa-hidden{display:none!important}
-      #firebaseUserChip{position:fixed;right:12px;bottom:12px;z-index:2147483000;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);border:1px solid #dfe5ee;border-radius:999px;padding:7px 9px 7px 12px;box-shadow:0 6px 20px rgba(15,23,42,.10);font:600 12px/1.2 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;color:#334155}
-      #firebaseUserChip button{border:0;background:#e2e8f0;border-radius:999px;padding:6px 9px;font-weight:700;cursor:pointer;color:#1e293b}
-      @media(max-width:620px){#firebaseAuthGate .fa-card{padding:22px 18px}#firebaseUserChip{max-width:calc(100vw - 24px)}#firebaseUserChip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:210px}}
+      @media(max-width:620px){#firebaseAuthGate .fa-card{padding:22px 18px}}
     `;
     document.head.appendChild(style);
 
@@ -78,19 +76,6 @@
     return `${code || '登入失敗'}\n${error?.message || ''}`.trim();
   }
 
-  function removeUserChip() {
-    document.getElementById('firebaseUserChip')?.remove();
-  }
-
-  function showUserChip(user, signOutFn) {
-    removeUserChip();
-    const chip = document.createElement('div');
-    chip.id = 'firebaseUserChip';
-    chip.innerHTML = `<span>${user.email || 'Google 帳號'}</span><button type="button">登出</button>`;
-    chip.querySelector('button').addEventListener('click', signOutFn);
-    document.body.appendChild(chip);
-  }
-
   async function initAuthGate() {
     buildGate();
 
@@ -102,7 +87,7 @@
       const appMod = await import(`https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-app.js`);
       const authMod = await import(`https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-auth.js`);
 
-      const app = appMod.initializeApp(firebaseConfig);
+      const app = appMod.getApps().length ? appMod.getApp() : appMod.initializeApp(firebaseConfig);
       const auth = authMod.getAuth(app);
       const provider = new authMod.GoogleAuthProvider();
       provider.setCustomParameters({ prompt: 'select_account' });
@@ -144,7 +129,8 @@
         loginBtn.disabled = false;
 
         if (!user) {
-          removeUserChip();
+          window.ChrisExamAuth = null;
+          window.dispatchEvent(new CustomEvent('chrisexam-auth-changed', { detail: null }));
           gate.style.display = 'grid';
           setStatus('尚未登入。\n請使用 Google 帳號登入。');
           loginBtn.classList.remove('fa-hidden');
@@ -159,14 +145,20 @@
         logoutBtn.classList.remove('fa-hidden');
 
         if (!allowed) {
-          removeUserChip();
+          window.ChrisExamAuth = {
+            user,
+            uid: user.uid,
+            email: user.email,
+            authorized: false,
+            signOut: doSignOut
+          };
+          window.dispatchEvent(new CustomEvent('chrisexam-auth-changed', { detail: window.ChrisExamAuth }));
           gate.style.display = 'grid';
           setStatus(`登入成功，但此帳號尚未授權。\n\n帳號：${user.email || '(無 email)'}`, 'bad');
           return;
         }
 
         setStatus(`✓ Google 登入成功\n✓ 白名單授權成功\n\n帳號：${user.email}`, 'ok');
-        showUserChip(user, doSignOut);
 
         setTimeout(() => {
           gate.style.display = 'none';
@@ -176,9 +168,13 @@
           user,
           uid: user.uid,
           email: user.email,
-          authorized: true
+          authorized: true,
+          signOut: doSignOut
         };
         window.dispatchEvent(new CustomEvent('chrisexam-auth-ready', {
+          detail: window.ChrisExamAuth
+        }));
+        window.dispatchEvent(new CustomEvent('chrisexam-auth-changed', {
           detail: window.ChrisExamAuth
         }));
       });
