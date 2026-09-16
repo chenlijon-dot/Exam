@@ -19,28 +19,31 @@
 1. **GEPT 初級字彙資料庫**
 2. **GEPT 初級閱讀能力題庫／教材知識庫**
 
-兩者的 authority 不相同：
+兩條資料線的 authority 不完全相同，不應強行共用單一階層。
+
+### 1.1 閱讀題庫 authority
 
 ```text
-原始教材／PDF／實體書照片
+實體教材／正式解答頁／實體書照片
         ↓
-人工校正後的辨識資料
+OCR + 人工校正
         ↓
-canonical 教材知識庫／結構化資料庫
+每回「原始文字校正版」Google Doc
+        ↓
+canonical 閱讀教材知識庫
         ↓
 GitHub JSON / 前端題庫
 ```
 
-### Authority 優先順序
+閱讀題庫的優先順序：
 
 | 層級 | Authority | 用途 |
 |---|---|---|
-| 1 | 實體教材、正式 PDF、正式解答頁 | 最終來源 evidence、答案核對 |
+| 1 | 實體教材、正式解答頁、原始照片 | 最終來源 evidence、答案核對 |
 | 2 | 人工校正後的「原始文字校正版」Google Doc | 英文題庫文字 authority |
-| 3 | canonical 教材知識庫 | 教學概念、文法、字彙、題型與 concept ID 整理 |
-| 4 | XLSX / SQL 結構化資料 | 字彙查詢、程式匯入、後端資料層 |
-| 5 | GitHub JSON | 網站可作答題庫；屬衍生資料，不是原始 authority |
-| 6 | 模型記憶 | 只能輔助，不可覆蓋教材 evidence |
+| 3 | canonical 閱讀教材知識庫 | 教學概念、文法、字彙、題型與 concept ID 整理 |
+| 4 | GitHub JSON | 網站可作答題庫；屬衍生資料，不是原始 authority |
+| 5 | 模型記憶 | 只能輔助，不可覆蓋教材 evidence |
 
 英文題庫尤其遵守：
 
@@ -49,6 +52,29 @@ GitHub JSON / 前端題庫
 ```
 
 不可直接由未校正 OCR 產生網站題庫。
+
+### 1.2 字彙資料庫 authority
+
+```text
+正式來源 PDF
+    ↓
+欄位解析／人工校正
+    ↓
+XLSX / SQL canonical structured data
+    ↓
+查詢、出題、後端匯入、其他 deployment artifacts
+```
+
+字彙線不需要先經過「閱讀教材知識庫」才能成為正式 authority。
+
+目前 primary structured authority 為：
+
+```text
+GEPT_beginner_vocabulary_database.xlsx
+GEPT_beginner_vocabulary.sql
+```
+
+SQLite `.db` 若日後由上述資料產生，視為可再生成的 deployment artifact，不作為 primary authority，避免 XLSX / SQL / DB 三份各自修改造成漂移。
 
 ---
 
@@ -138,11 +164,14 @@ gept_beginner_vocab
 | `academic_vocab` | 學術字彙標記，如 L1、L2、L7 等 |
 | `source_page` | 原始來源頁碼 |
 
-目前 SQL 共：
+目前結構化資料共：
 
 ```text
 2,397 筆 vocabulary records
+2,216 個 distinct word forms
 ```
+
+`2,397` 是「詞性／義項 record 數」，不是 2,397 個互不重複單字。
 
 並建立索引：
 
@@ -228,7 +257,15 @@ Google Drive source coverage = 第一～十二回完整
 GitHub online JSON coverage    = 第一～五回完整
 ```
 
-目前 `exam-english-gept.js` 還只登錄第一～第六回，且第六回仍標示 `ready: false`；所以前端狀態落後於 Drive authority。
+目前 `exam-english-gept.js` registry 僅列出第一～第六回：
+
+```text
+第一～五回：ready=true
+第六回：ready=false
+第七～十二回：尚未註冊
+```
+
+所以前端狀態落後於 Drive authority。
 
 ---
 
@@ -269,9 +306,15 @@ GitHub online JSON coverage    = 第一～五回完整
 answerVerified: true
 ```
 
-第十一、十二回辨識檔本身亦包含教材解答。
+第十一、十二回辨識檔目前含答案欄位；是否可標：
 
-其餘回次如要標 `answerVerified: true`，仍應以該回正式解答 evidence 為準，不因模型推理解出答案就視為官方答案。
+```text
+answerVerified: true
+```
+
+仍以正式解答頁 evidence 的逐題核對紀錄為準。不可只因辨識檔已有答案文字，就自動等同「正式答案已驗證」。
+
+其餘回次如要標 `answerVerified: true`，亦應以該回正式解答 evidence 為準，不因模型推理解出答案就視為官方答案。
 
 ---
 
@@ -428,6 +471,8 @@ GEPT_beginner_vocabulary.sql
   ↓
 未來單字查詢／出題／後端匯入
 ```
+
+XLSX 與 SQL 應由同一份校正後資料生成；SQLite `.db` 或其他格式原則上由 primary structured authority 再生，不反向成為唯一來源。
 
 ---
 
@@ -592,6 +637,7 @@ chapter-bank/english/gept/elementary/reading/
 [ ] source_page 是否保留？
 [ ] academic_vocab 標記是否保留？
 [ ] XLSX 與 SQL 是否由同一份校正資料生成？
+[ ] 是否明確區分 primary authority 與可再生成的 .db / deployment artifact？
 [ ] 是否避免在 Drive 根目錄產生另一份無 authority 的副本？
 ```
 
@@ -602,11 +648,11 @@ chapter-bank/english/gept/elementary/reading/
 目前英文資料庫的真正基礎已經是：
 
 ```text
-GEPT 初級字彙 2,397 筆
+GEPT 初級字彙 2,397 筆 records / 2,216 個 distinct word forms
 +
 GEPT 初級閱讀第一～十二回完整辨識資料
 +
-單一 canonical 教材知識庫
+單一 canonical 閱讀教材知識庫
 +
 GitHub 第一～五回可作答 JSON
 ```
