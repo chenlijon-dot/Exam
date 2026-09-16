@@ -25,6 +25,14 @@
     }[ch]));
   }
 
+  function setTextIfChanged(el, text) {
+    if (el && el.textContent !== text) el.textContent = text;
+  }
+
+  function setTitleIfChanged(el, text) {
+    if (el && el.title !== text) el.title = text;
+  }
+
   function injectStyles() {
     if (document.getElementById('accountUiStyles')) return;
     const style = document.createElement('style');
@@ -138,9 +146,6 @@
     const tools = document.getElementById('mainGithubSyncTools');
     if (!tools) return;
 
-    const oldButton = document.getElementById('mainGithubSyncBtn');
-    if (oldButton) oldButton.style.display = 'none';
-
     let button = document.getElementById('mainAccountBtn');
     if (!button) {
       button = document.createElement('button');
@@ -152,8 +157,10 @@
     }
 
     const email = window.ChrisExamAuth?.email || '';
-    button.textContent = email ? `👤 帳號資訊 ✓` : '👤 帳號資訊';
-    button.title = email || 'Google 帳號與系統設定';
+    const desiredText = email ? '👤 帳號資訊 ✓' : '👤 帳號資訊';
+    const desiredTitle = email || 'Google 帳號與系統設定';
+    setTextIfChanged(button, desiredText);
+    setTitleIfChanged(button, desiredTitle);
   }
 
   function init() {
@@ -164,7 +171,13 @@
     window.addEventListener('chrisexam-auth-ready', ensureAccountButton);
     window.addEventListener('chrisexam-auth-changed', ensureAccountButton);
 
-    const observer = new MutationObserver(() => ensureAccountButton());
+    // Watch only DOM insertion/removal. More importantly, ensureAccountButton()
+    // now changes text/title only when the value is actually different. The
+    // previous unconditional textContent assignment retriggered this observer
+    // forever and could leave the whole site spinning on startup.
+    const observer = new MutationObserver(() => {
+      ensureAccountButton();
+    });
     observer.observe(document.body, { childList:true, subtree:true });
   }
 
