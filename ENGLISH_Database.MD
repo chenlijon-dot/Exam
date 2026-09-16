@@ -1,4 +1,4 @@
-# ENGLISH_Database
+# ENGLISH_Database 英文科知識庫建立準則
 
 > 英文資料庫結構、authority、Google Drive 現況與 GitHub 對接說明  
 > 最後盤點：2026-09-16
