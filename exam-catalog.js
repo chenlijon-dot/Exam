@@ -27,6 +27,66 @@
     { key: '9-2', title: '九年級下學期', short: '三下' }
   ];
 
+  // 英文七上依 2026-09-16 使用者提供的實體課本目錄、課程大綱與 Reading Skills 建立。
+  const ENGLISH_7_1_LESSONS = [
+    {
+      key: 'english-7-1-get-ready', code: 'Get Ready', title: '哈囉你好嗎？', page: 1,
+      type: 'ready', referenceReady: false, bankMenuReady: false,
+      desc: '字母、複習國小英語、英文書寫原則；目錄與課程大綱已確認。'
+    },
+    {
+      key: 'english-7-1-lesson-01', code: 'Lesson 1', title: 'Who’s That Young Man?', page: 9,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      detail: '初次見面．請多指教｜Nick 這一家', readingSkill: 'Scanning 掃讀',
+      desc: '親屬、職業；be 動詞、形容詞、Who 問答。'
+    },
+    {
+      key: 'english-7-1-lesson-02', code: 'Lesson 2', title: 'What Are These?', page: 23,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      detail: '動物公仔大集合｜亞洲象？非洲象？傻傻分不清', readingSkill: 'Making Inferences 推論',
+      desc: '動物；指示詞、名詞複數、What 問句。'
+    },
+    {
+      key: 'english-7-1-review-01', code: 'Review 1', title: 'Lesson 1–2 複習', page: 37,
+      type: 'review', referenceReady: false, bankMenuReady: false,
+      desc: 'Lesson 1–2 綜合複習；目錄位置已確認。'
+    },
+    {
+      key: 'english-7-1-lesson-03', code: 'Lesson 3', title: 'Let’s Get Some Ideas from RoomGPT', page: 41,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      detail: 'AI 工具設計你的夢想空間｜世界各地床鋪大不同', readingSkill: 'Scanning 掃讀',
+      desc: '位置、房間；Where 問答、介系詞、祈使句。'
+    },
+    {
+      key: 'english-7-1-lesson-04', code: 'Lesson 4', title: 'I Can Listen to Their Songs Again and Again', page: 55,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      detail: '道路安全人人有責｜讓你抬頭的新點子', readingSkill: 'Using a Graphic Organizer 圖像式整理',
+      desc: '行人交通安全、生活中的新點子；助動詞 can 問答句。'
+    },
+    {
+      key: 'english-7-1-review-02', code: 'Review 2', title: 'Lesson 3–4 複習', page: 67,
+      type: 'review', referenceReady: false, bankMenuReady: false,
+      desc: 'Lesson 3–4 綜合複習；目錄位置已確認。'
+    },
+    {
+      key: 'english-7-1-lesson-05', code: 'Lesson 5', title: 'What Are You Doing?', page: 71,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      detail: '你那裡現在幾點？｜我的白天是你的黑夜', readingSkill: 'Using Context Clues 上下文線索',
+      desc: '時間、星期、視訊交流；現在進行式、What time / day 問答。'
+    },
+    {
+      key: 'english-7-1-lesson-06', code: 'Lesson 6', title: 'Are There Any Shelves Outside the Door?', page: 85,
+      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      detail: '轉學生的第一天｜各國手勢學問大！', readingSkill: 'Making Inferences 推論',
+      desc: '學校設施、文化差異；There is / are 問答句。'
+    },
+    {
+      key: 'english-7-1-review-03', code: 'Review 3', title: 'Lesson 5–6 複習', page: 101,
+      type: 'review', referenceReady: false, bankMenuReady: false,
+      desc: 'Lesson 5–6 綜合複習；目錄位置已確認。'
+    }
+  ];
+
   // 國文第一冊依 2026-09-14 使用者提供的實體課本目錄建立。
   const CHINESE_7_1_LESSONS = [
     {
@@ -288,12 +348,12 @@
       <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
       <div class="catalog-path">英文</div>
       <h2 class="catalog-title">請選擇學期</h2>
-      <p class="catalog-sub">先建立七至九年級六學期架構，並加入全民英檢（GEPT）獨立練習入口；教材內容後續依實際課本與講義整理。</p>
+      <p class="catalog-sub">七年級上學期已依實體課本目錄建立 Get Ready、Lesson 1–6 與 Review 1–3；全民英檢（GEPT）保留獨立練習入口。</p>
       <div class="catalog-grid">
         ${ENGLISH_SEMESTERS.map(s => `
           <button class="catalog-card" data-english-semester="${s.key}">
-            <span class="top"><strong>${s.title}</strong><span class="catalog-badge">${s.short}</span></span>
-            <span class="desc">查看章節建置狀態</span>
+            <span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.key === '7-1' ? 'reference' : ''}">${s.short}</span></span>
+            <span class="desc">${s.key === '7-1' ? 'Get Ready、Lesson 1–6、Review 1–3｜目錄已確認' : '查看章節建置狀態'}</span>
           </button>`).join('')}
         <button class="catalog-card chapter-card" id="englishGeptBtn">
           <span class="top"><span class="icon">🎧</span><strong>全民英檢（GEPT）</strong><span class="catalog-badge reference">GEPT</span></span>
@@ -308,6 +368,7 @@
   function showEnglishSemester(semesterKey) {
     const semester = ENGLISH_SEMESTERS.find(s => s.key === semesterKey);
     if (!semester) return;
+    if (semesterKey === '7-1') return showEnglish71Lessons();
     setHeader(`英文科｜${semester.title}`, '章節建置中');
     document.title = `英文${semester.short}｜國中題庫`;
     $('#catalogContent').innerHTML = `
@@ -316,6 +377,55 @@
       <h2 class="catalog-title">章節尚待建立</h2>
       <p class="catalog-sub">等實際英文課本／講義確認後，再依版本建立 Lesson、單字、文法、閱讀、聽力與題庫架構。</p>`;
     $('#backEnglishSemestersBtn')?.addEventListener('click', showEnglishSemesters);
+  }
+
+  function englishBadge(lesson) {
+    if (lesson.bankMenuReady) return '<span class="catalog-badge reference">題庫架構已建</span>';
+    if (lesson.referenceReady) return '<span class="catalog-badge reference">教材已收錄</span>';
+    return '<span class="catalog-badge soon">目錄已確認</span>';
+  }
+
+  function showEnglish71Lessons() {
+    setHeader('英文科｜七年級上學期', '第一冊｜選擇課次');
+    document.title = '英文第一冊｜七年級上學期';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backEnglishSemestersBtn">← 返回學期</button>
+      <div class="catalog-path">英文　›　七年級上學期（一上）　›　第一冊</div>
+      <h2 class="catalog-title">請選擇課次</h2>
+      <p class="catalog-sub">依實體課本目錄建立：Get Ready、Lesson 1–6、Review 1–3。出版社／版次待封面或版權頁確認。</p>
+      <div class="catalog-grid">
+        ${ENGLISH_7_1_LESSONS.map(lesson => `
+          <button class="catalog-card chapter-card" data-english-lesson="${lesson.key}">
+            <span class="top"><strong>${lesson.code}　${lesson.title}</strong>${englishBadge(lesson)}</span>
+            <span class="desc">p.${lesson.page}${lesson.detail ? `｜${lesson.detail}` : ''}</span>
+            <span class="desc">${lesson.readingSkill ? `閱讀技巧：${lesson.readingSkill}｜` : ''}${lesson.desc}</span>
+          </button>`).join('')}
+      </div>`;
+    $('#backEnglishSemestersBtn')?.addEventListener('click', showEnglishSemesters);
+    ENGLISH_7_1_LESSONS.forEach(lesson => $(`[data-english-lesson="${lesson.key}"]`)?.addEventListener('click', () => showEnglish71Lesson(lesson.key)));
+  }
+
+  function showEnglish71Lesson(lessonKey) {
+    const lesson = ENGLISH_7_1_LESSONS.find(item => item.key === lessonKey);
+    if (!lesson) return;
+    setHeader(`英文第一冊｜${lesson.code}`, lesson.title);
+    document.title = `${lesson.code} ${lesson.title}｜英文第一冊`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backEnglish71LessonsBtn">← 返回課次</button>
+      <div class="catalog-path">英文　›　七年級上學期（一上）　›　第一冊　›　${lesson.code} ${lesson.title}</div>
+      <h2 class="catalog-title">${lesson.code}　${lesson.title}</h2>
+      <p class="catalog-sub">課本起始頁 p.${lesson.page}${lesson.detail ? `｜${lesson.detail}` : ''}${lesson.readingSkill ? `｜Reading Skills：${lesson.readingSkill}` : ''}</p>
+      <div class="catalog-grid">
+        <button class="catalog-card chapter-card" disabled>
+          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge soon">待收錄</span></span>
+          <span class="desc">${lesson.desc} 後續依實體課本逐頁建立教材辨識檔與 canonical 教材知識庫。</span>
+        </button>
+        <button class="catalog-card chapter-card" disabled>
+          <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge soon">待建</span></span>
+          <span class="desc">教材內容確認後，再建立單字、文法、閱讀與各校段考拆解題。</span>
+        </button>
+      </div>`;
+    $('#backEnglish71LessonsBtn')?.addEventListener('click', showEnglish71Lessons);
   }
 
   function showEnglishGept() {
