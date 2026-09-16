@@ -15,13 +15,30 @@
 
   function shuffleQuestionOptions(question) {
     if (!question || question.fixedOptions || !Array.isArray(question.o) || question.o.length < 2) return;
-    const items = question.o.map((text, index) => ({ text, correct: index === question.a }));
+
+    const optionImages = Array.isArray(question.optionImages) ? question.optionImages : [];
+    const optionImageAlts = Array.isArray(question.optionImageAlts) ? question.optionImageAlts : [];
+    const items = question.o.map((text, index) => ({
+      text,
+      image: optionImages[index] || '',
+      imageAlt: optionImageAlts[index] || '',
+      correct: index === question.a
+    }));
+
     for (let i = items.length - 1; i > 0; i--) {
       const j = randomInt(i + 1);
       [items[i], items[j]] = [items[j], items[i]];
     }
+
     question.o = items.map(x => x.text);
     question.a = items.findIndex(x => x.correct);
+
+    if (optionImages.length) {
+      question.optionImages = items.map(x => x.image);
+    }
+    if (optionImageAlts.length) {
+      question.optionImageAlts = items.map(x => x.imageAlt);
+    }
   }
 
   function shuffleBank(key) {
