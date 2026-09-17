@@ -69,12 +69,14 @@
         ${card({id:'bct92Btn',icon:'🗓️',title:'92 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、答案、原卷附圖與詳解。'})}
         ${card({id:'bct93Btn',icon:'🗓️',title:'93 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、答案、原卷附圖與詳解。'})}
         ${card({id:'bct94Btn',icon:'🗓️',title:'94 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、答案、原卷附圖與逐題詳解。'})}
+        ${card({id:'bct95Btn',icon:'🗓️',title:'95 年度',badge:'已收錄',desc:'第一次數學科 33 題、答案、原卷附圖與逐題詳解已建立；第二次待匯入。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
     $('#bct91Btn')?.addEventListener('click', showBct91Sessions);
     $('#bct92Btn')?.addEventListener('click', showBct92Sessions);
     $('#bct93Btn')?.addEventListener('click', showBct93Sessions);
     $('#bct94Btn')?.addEventListener('click', showBct94Sessions);
+    $('#bct95Btn')?.addEventListener('click', showBct95Sessions);
   }
 
   function showBct90Sessions() {
@@ -147,6 +149,18 @@
     $('#bct94SecondBtn')?.addEventListener('click', showBct94SecondSubjects);
   }
 
+  function showBct95Sessions() {
+    setHeader('95 年度基測', '選擇測驗次別');
+    content().innerHTML = `
+      ${backButton('backBct95Btn','返回年度',showBctYears)}
+      <div class="catalog-path">歷屆考題　›　基測　›　95 年度</div>
+      <h2 class="catalog-title">請選擇次別</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct95FirstBtn',icon:'1️⃣',title:'第一次',badge:'已收錄',desc:'95 年度第一次基測；數學科 33 題、答案、原卷附圖與逐題詳解已建立。'})}
+        ${card({id:'bct95SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'95 年度第二次基測尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct95FirstBtn')?.addEventListener('click', showBct95FirstSubjects);
+  }
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
     const hasMath = Number.isInteger(mathCount);
     return `
@@ -327,6 +341,26 @@
     }));
   }
 
+  function showBct95FirstSubjects() {
+    setHeader('95 年度第一次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct95FirstBtn','返回次別',showBct95Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　95 年度　›　第一次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct95FirstChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct95FirstEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct95FirstMathBtn',icon:'📐',title:'數學科',badge:'33 題',desc:'33 題原題、官方答案、原卷附圖與逐題詳解已建立。'})}
+        ${card({id:'bct95FirstScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct95FirstSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct95FirstMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct95FirstMathBtn',
+      path:'past-exams/bct/95/first/math.json',
+      explanationsPath:'past-exams/bct/95/first/math-explanations.json',
+      onBack:showBct95FirstSubjects
+    }));
+  }
   async function loadCompanionExplanations(path, data) {
     if (!path) return;
     try {
@@ -380,6 +414,7 @@
   window.showBct93SecondSubjects = showBct93SecondSubjects;
   window.showBct94FirstSubjects = showBct94FirstSubjects;
   window.showBct94SecondSubjects = showBct94SecondSubjects;
+  window.showBct95FirstSubjects = showBct95FirstSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
