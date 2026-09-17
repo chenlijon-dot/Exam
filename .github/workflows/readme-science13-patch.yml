@@ -1,0 +1,121 @@
+name: Patch README for science 1-3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/readme-science13-patch.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Patch README
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('README.md')
+          t = p.read_text(encoding='utf-8')
+
+          old = '''## 9.2 1-3 認識實驗室 canonical
+
+目前已整理：'''
+          new = '''## 9.2 1-3 認識實驗室 canonical
+
+目前已完成 p.14～21 第二輪逐頁核對，並另建「題圖辨識核對檔」對 p.18～21 題目逐題重新解題；原始照片中的手寫圈選不作答案 authority。
+
+目前已整理：'''
+          if old not in t: raise SystemExit('9.2 anchor not found')
+          t = t.replace(old, new, 1)
+
+          old = '''目前正式可作答：
+
+```text
+自然
+└─ 七年級上學期
+   └─ 單元 1 生命現象與科學探究
+      └─ 1-2 科學方法
+         ├─ 🌱 簡易：20 題
+         ├─ 🌿 中等：20 題
+         ├─ 🌳 困難：20 題
+         └─ 🏫 各校題庫：已開始匯入
+```'''
+          new = '''目前正式可作答：
+
+```text
+自然
+└─ 七年級上學期
+   └─ 單元 1 生命現象與科學探究
+      ├─ 1-2 科學方法
+      │  ├─ 🌱 簡易：20 題
+      │  ├─ 🌿 中等：20 題
+      │  ├─ 🌳 困難：20 題
+      │  └─ 🏫 各校題庫：4 題已收錄
+      │
+      └─ 1-3 認識實驗室
+         ├─ 🌱 簡易：20 題
+         ├─ 🌿 中等：20 題
+         ├─ 🌳 困難：20 題
+         └─ 🏫 各校題庫：6 題可作答／11 題已分類
+```
+
+`1-3` 各校題庫目前大灣國中已有 11 題被 Sheet 索引判定屬於本節，其中 6 題不依賴原卷附圖，已先正式匯入並以官方答案卷驗證；原題 4、5、7、21、27 共 5 題需要保留原始附圖，待圖檔資產完成後再加入，不為了湊題數而省略原圖。'''
+          if old not in t: raise SystemExit('section 11 anchor not found')
+          t = t.replace(old, new, 1)
+
+          old = '''├─ exam-science-banks.js
+├─ exam-record-layout.js'''
+          new = '''├─ exam-science-banks.js
+├─ exam-science-lab-banks.js
+│  └─ 自然 1-3 認識實驗室四類題庫入口
+├─ exam-record-layout.js'''
+          if old not in t: raise SystemExit('structure module anchor not found')
+          t = t.replace(old, new, 1)
+
+          old = '''│        └─ unit-01/
+│           └─ section-02/
+│              └─ school-exams.json'''
+          new = '''│        └─ unit-01/
+│           ├─ section-02/
+│           │  └─ school-exams.json
+│           └─ section-03/
+│              ├─ easy.json
+│              ├─ medium.json
+│              ├─ hard.json
+│              └─ school-exams.json'''
+          if old not in t: raise SystemExit('structure bank anchor not found')
+          t = t.replace(old, new, 1)
+
+          old = '''- [x] 自然 `1-2 科學方法` 簡易／中等／困難各 20 題
+- [x] `1-2 科學方法` 各校題庫入口'''
+          new = '''- [x] 自然 `1-2 科學方法` 簡易／中等／困難各 20 題
+- [x] `1-2 科學方法` 各校題庫入口
+- [x] 自然 `1-3 認識實驗室` 簡易／中等／困難各 20 題
+- [x] `1-3 認識實驗室` 題庫入口與各校題庫入口
+- [x] 大灣國中 `1-3` 已分類 11 題，其中 6 題已正式匯入並以官方答案驗證；5 題待原卷附圖資產'''
+          if old not in t: raise SystemExit('progress anchor not found')
+          t = t.replace(old, new, 1)
+
+          t = t.replace('- [ ] 將大灣國中其餘題目依 1-1／1-3／2-1～2-4 拆入各校題庫', '- [ ] 將大灣國中其餘題目依 1-1／2-1～2-4 拆入各校題庫；1-3 尚有 5 題待原卷附圖資產後補入', 1)
+          t = t.replace('- [ ] 為 `1-1`、`1-3` 建立網站題庫入口與各校題庫', '- [ ] 為 `1-1` 建立網站題庫入口與各校題庫', 1)
+
+          old = '''自然七上已完成正式章節樹，`1-2 科學方法` 與 `1-3 認識實驗室` 已開始建立 canonical 教材知識庫；`1-2` 目前另有自編題 60 題及大灣國中各校題庫 4 題。之後所有自然教材與其他科目資料，都沿用同一套資料庫建立方式持續累積。'''
+          new = '''自然七上已完成正式章節樹；`1-2 科學方法` 與 `1-3 認識實驗室` 均已建立 canonical 教材知識庫與網站題庫。`1-2` 有自編題 60 題及大灣國中各校題庫 4 題；`1-3` 已建立簡易／中等／困難各 20 題，共 60 題，自大灣國中段考已分類 11 題，其中 6 題已依官方答案卷正式匯入，另 5 題因原題依賴附圖，待忠實原卷圖檔資產完成後再補入。之後所有自然教材與其他科目資料，都沿用同一套資料庫建立方式持續累積。'''
+          if old not in t: raise SystemExit('status anchor not found')
+          t = t.replace(old, new, 1)
+
+          p.write_text(t, encoding='utf-8')
+          PY
+      - name: Commit README
+        run: |
+          git config user.name 'Exam README Updater'
+          git config user.email 'actions@users.noreply.github.com'
+          git add README.md
+          git commit -m 'Document science 1-3 quiz bank implementation'
+          git push
