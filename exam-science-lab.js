@@ -42,19 +42,45 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function activateSectionCard() {
+  // exam-catalog.js was created when only 1-2 had a usable bank, so its static
+  // metadata still renders Unit 1 as "1 節可作答" and 1-3 as disabled.  Patch
+  // only the currently rendered cards, once per catalog navigation.  Do NOT use
+  // a MutationObserver here: changing badge text from inside an observer causes
+  // another mutation and can create an endless callback loop on mobile browsers.
+  function syncUnitSummary() {
+    const card = $('[data-science-unit="unit-1"]');
+    if (!card) return;
+    const badge = card.querySelector('.catalog-badge');
+    if (badge && badge.textContent !== '2 節可作答') badge.textContent = '2 節可作答';
+    badge?.classList.remove('soon');
+  }
+
+  function syncSectionCard() {
     const card = $('[data-science-section="science-7-1-1-3"]');
     if (!card) return;
-    card.disabled = false;
-    card.removeAttribute('disabled');
+
+    if (card.disabled) card.disabled = false;
+    if (card.hasAttribute('disabled')) card.removeAttribute('disabled');
+
     const badge = card.querySelector('.catalog-badge');
     if (badge) {
-      badge.textContent = '題庫已建立';
-      badge.classList.remove('soon');
-      badge.classList.add('reference');
+      if (badge.textContent !== '題庫可用') badge.textContent = '題庫可用';
+      badge.classList.remove('soon', 'core');
     }
+
     const desc = card.querySelector('.desc');
-    if (desc) desc.textContent = '實驗器材、量筒、複式與解剖顯微鏡、倍率、成像與操作';
+    const text = '實驗器材、量筒、複式與解剖顯微鏡、倍率、成像與操作';
+    if (desc && desc.textContent !== text) desc.textContent = text;
+  }
+
+  function syncCurrentCatalog() {
+    syncUnitSummary();
+    syncSectionCard();
+  }
+
+  function scheduleCatalogSync() {
+    queueMicrotask(syncCurrentCatalog);
+    setTimeout(syncCurrentCatalog, 0);
   }
 
   function saveUnitView() {
@@ -77,7 +103,7 @@
     if ($('#catalogHeaderSub')) $('#catalogHeaderSub').textContent = savedHeaderSub;
     document.title = savedDocumentTitle || '單元 1 生命現象與科學探究｜自然一上';
     showCatalog();
-    queueMicrotask(activateSectionCard);
+    scheduleCatalogSync();
   }
 
   async function fetchBank(path) {
@@ -158,7 +184,7 @@
       if (desc) {
         desc.textContent = pending
           ? `各校真實段考文字題先上線；目前 ${count} 題可作答，另 ${pending} 題附圖題稍後補圖。`
-          : `各校自然科真實段考拆題；保留原始題號、選項順序與來源。`;
+          : '各校自然科真實段考拆題；保留原始題號、選項順序與來源。';
       }
     } catch {
       badge.textContent = '載入失敗';
@@ -218,14 +244,24 @@
 
   document.addEventListener('click', event => {
     const target = event.target instanceof Element ? event.target : null;
-    const section = target?.closest?.('[data-science-section="science-7-1-1-3"]');
-    if (!section) return;
-    event.preventDefault();
-    event.stopPropagation();
-    openMenu();
-  }, true);
+    if (!target) return;
 
-  const observer = new MutationObserver(activateSectionCard);
-  observer.observe(document.documentElement, { childList: true, subtree: true });
-  activateSectionCard();
+    const section = target.closest('[data-science-section="science-7-1-1-3"]');
+    if (section) {
+      event.preventDefault();
+      event.stopPropagation();
+      openMenu();
+      return;
+    }
+
+    // exam-catalog.js rebuilds these views with innerHTML. Sync after its own
+    // click handler finishes instead of observing every DOM mutation.
+    if (target.closest('[data-subject="science"], [data-semester="7-1"], [data-science-unit="unit-1"], #backScienceUnitsBtn, #backSemestersBtn, .catalog-back')) {
+      scheduleCatalogSync();
+    }
+  });
+
+  // Also fix whichever science catalog view is already on screen when this
+  // module finishes loading.
+  scheduleCatalogSync();
 })();
