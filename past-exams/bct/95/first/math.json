@@ -17,7 +17,7 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": false,
-    "sourceNote": "題目、選項與答案依 Google Drive 中《95年第一次數學科.pdf》原卷還原；原卷第 1～5 頁為 33 題試題，第 6 頁為答案表。目前完成文字、選項與答案；附圖題以 imagePending 標記，後續再以原卷裁圖補上。"
+    "sourceNote": "題目、選項與答案依 Google Drive 中《95年第一次數學科.pdf》原卷還原；原卷第 1～5 頁為 33 題試題，第 6 頁為答案表。目前完成文字、選項與答案；附圖題以 imagePending 標記，後續再以原卷裁圖補上。第19題另以大考中心原始試題影像核對，確認為 AP＝PQ。"
   },
   "questions": [
     {"number":1,"q":"計算（－12）＋（－18）÷（－6）－（－3）×2 之值為何？","o":["－15","－3","11","16"],"a":1,"fixedOptions":true},
@@ -38,7 +38,7 @@
     {"number":16,"q":"在坐標平面上，直線 L 的方程式為 y＝－3x＋a。若 a＞0，則 L 不通過第幾象限？","o":["一","二","三","四"],"a":2,"fixedOptions":true},
     {"number":17,"q":"（69又17/23）×（70又6/23）＝a＋b，若 a 為正整數且 0＜b＜1，則 a＝？","o":["3583","3584","4899","4900"],"a":2,"fixedOptions":true},
     {"number":18,"q":"化簡（5/3 x－25/6 y）－（20/3 x－11/12 y）之後，可得下列哪一個結果？","o":["－5x－13/4 y","－60x－39y","－70x－14y","－25/3 x－61/12 y"],"a":0,"fixedOptions":true},
-    {"number":19,"q":"如右圖，AB＝BC，BC＞AC，P、Q 兩點在 AM 上，其中 AO＝PQ，且 Q 為△ABC 的重心。若兩直線 BP、BQ 與 AC 分別交於 S、R 兩點，則下列關係何者正確？","o":["AS＝SR","AR＝RC","QB＝QC","QR＝2PS"],"a":1,"fixedOptions":true,"imageAlt":"第19題三角形ABC、重心Q與P S R M各點關係圖","imagePending":true},
+    {"number":19,"q":"如右圖，AB＝BC，BC＞AC，P、Q 兩點在 AM 上，其中 AP＝PQ，且 Q 為△ABC 的重心。若兩直線 BP、BQ 與 AC 分別交於 S、R 兩點，則下列關係何者正確？","o":["AS＝SR","AR＝RC","QB＝QC","QR＝2PS"],"a":1,"fixedOptions":true,"imageAlt":"第19題三角形ABC、重心Q與P S R M各點關係圖","imagePending":true},
     {"number":20,"q":"某漱口水瓶上標示正確使用方式：一次使用量為瓶蓋容量的 1/3。小瑜買了一瓶，誤將 1/3 看成 1/2，在使用 10 次後才發現錯誤，此時漱口水已剩原來的 3/4，若往後小瑜依正確方式使用完畢，則還可以用多少次？","o":["30","45","60","75"],"a":1,"fixedOptions":true},
     {"number":21,"q":"如右圖，△ABC 中，AB＝3，AC＝4，BC＝5。若三直線 AB、AC、BC 分別與圓 O 切於 D、E、F 三點，則 BE＝？","o":["6","25/3","√45","√72"],"a":2,"fixedOptions":true,"imageAlt":"第21題三角形ABC三邊延長線與圓O相切於D E F","imagePending":true},
     {"number":22,"q":"如右圖，有一圓及長方形 ABCD，其中 A、B、C、D 四點皆在圓上且 BC＜CD。今分別以 BC、CD 為邊長作甲、乙兩正方形。若圓半徑為 1.5 公分，則甲、乙面積和為多少平方公分？","o":["4.5","6","7.5","9"],"a":3,"fixedOptions":true,"imageAlt":"第22題圓內接長方形ABCD及以BC CD為邊長的兩正方形","imagePending":true},
