@@ -225,7 +225,6 @@
     const section = event.target.closest?.(`[data-science-section="${SECTION_KEY}"]`);
     if (!section) return;
     event.preventDefault();
-    event.stopImmediatePropagation();
     openScienceLabMenu();
   }, true);
 
