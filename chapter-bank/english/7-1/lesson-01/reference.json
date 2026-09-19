@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "key": "english-7-1-lesson-01-reference",
+  "lessonKey": "english-7-1-lesson-01",
+  "subject": "english",
+  "grade": 7,
+  "semester": 1,
+  "volume": "第一冊",
+  "publisher": "康軒",
+  "schoolYear": "115 學年度",
+  "lessonCode": "Lesson 1",
+  "title": "Who’s That Young Man?",
+  "pageRange": "p.9–22",
+  "theme": [
+    "親屬",
+    "職業",
+    "人物身分與描述"
+  ],
+  "learningGoals": [
+    "能用親屬稱謂與職業字彙介紹人物。",
+    "能正確使用 am / are / is 的直述、否定與 Yes / No 問答。",
+    "能用形容詞描述人物，並組成 a/an + adjective + noun 名詞片語。",
+    "能用 Who is he / she? 詢問姓名或人物關係。",
+    "能使用 Scanning 掃讀策略快速找出人物、職業與親屬關係資訊。"
+  ],
+  "sections": [
+    {
+      "id": "word-bank",
+      "title": "Word Bank｜親屬與家庭",
+      "page": "p.9–10",
+      "type": "groups",
+      "groups": [
+        {
+          "label": "核心親屬",
+          "items": [
+            "family",
+            "father / dad",
+            "mother / mom",
+            "sister",
+            "brother",
+            "grandfather / grandpa",
+            "grandmother / grandma"
+          ]
+        },
+        {
+          "label": "延伸親屬",
+          "items": [
+            "wife",
+            "husband",
+            "aunt",
+            "uncle",
+            "cousin",
+            "son",
+            "daughter",
+            "parent",
+            "child"
+          ]
+        },
+        {
+          "label": "Vocabulary Skills",
+          "items": [
+            "grand- 可用來表示隔一代的親屬關係，例如 grandfather、grandmother、grandparent、grandson、granddaughter、grandchild。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogue",
+      "title": "Dialogue｜人物介紹與初次見面",
+      "page": "p.11–12",
+      "type": "points",
+      "items": [
+        "At school：Ann 與 Nick 談到 Bella 的朋友 Scott，練習詢問人物身分與描述人物。",
+        "In the classroom：Ann、Rita、Nick、Bella 的互動，包含初次見面、同班與老師等情境。",
+        "重點字彙：young、man、PE、handsome、really、our、same、class、news、problem、strict。",
+        "常用表達：Nice to meet you, too."
+      ]
+    },
+    {
+      "id": "grammar-1",
+      "title": "Grammar 1｜be 動詞",
+      "page": "p.13",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "直述句",
+          "examples": [
+            "I am ...",
+            "You are ...",
+            "He / She / Ann is ...",
+            "It is ..."
+          ]
+        },
+        {
+          "label": "否定句",
+          "examples": [
+            "am not",
+            "is not / isn’t",
+            "are not / aren’t"
+          ]
+        },
+        {
+          "label": "Yes / No 問句",
+          "examples": [
+            "Are you a student?",
+            "Is he / she / Ann a student?",
+            "Is it a pencil?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar-2",
+      "title": "Grammar 2｜形容詞與名詞片語",
+      "page": "p.14–15",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "形容詞作補語",
+          "examples": [
+            "He is young.",
+            "He is not young."
+          ]
+        },
+        {
+          "label": "形容詞放在名詞前",
+          "examples": [
+            "He is a young man."
+          ]
+        },
+        {
+          "label": "疑問與簡答",
+          "examples": [
+            "Is he young?",
+            "Is he a young man?",
+            "Yes, he is.",
+            "No, he’s not.",
+            "No, he isn’t."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar-3",
+      "title": "Grammar 3｜Who 問句",
+      "page": "p.16",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "詢問人物",
+          "examples": [
+            "Who is he?",
+            "Who is she?"
+          ]
+        },
+        {
+          "label": "回答姓名或關係",
+          "examples": [
+            "He is Nick.",
+            "She is my sister."
+          ]
+        },
+        {
+          "label": "縮寫",
+          "examples": [
+            "who is → who’s"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "Reading｜The Lins",
+      "page": "p.17–18",
+      "type": "table",
+      "columns": [
+        "人物",
+        "關係／身分",
+        "職業或特徵"
+      ],
+      "rows": [
+        [
+          "Nick",
+          "國中生",
+          "來自一個溫暖的家庭"
+        ],
+        [
+          "Grandfather",
+          "Nick 的祖父",
+          "farmer"
+        ],
+        [
+          "Grandmother",
+          "Nick 的祖母",
+          "cook"
+        ],
+        [
+          "Paul",
+          "Nick 的父親",
+          "tall man；nurse"
+        ],
+        [
+          "Lily",
+          "Nick 的母親",
+          "beautiful woman；doctor"
+        ],
+        [
+          "Bella",
+          "Nick 的姊姊",
+          "English teacher"
+        ],
+        [
+          "Eddie",
+          "Nick 的哥哥／弟弟",
+          "senior high school student"
+        ],
+        [
+          "Abby",
+          "Nick 家的寵物豬",
+          "cute"
+        ]
+      ],
+      "notes": [
+        "閱讀題重點包含主旨與人物關係判讀。",
+        "Reading Skills：Scanning。先找人名、職業或親屬稱謂等關鍵字，再快速定位需要的資訊。"
+      ]
+    },
+    {
+      "id": "listening",
+      "title": "Listening",
+      "page": "p.19",
+      "type": "points",
+      "items": [
+        "Listen and Choose the Correct Picture",
+        "Listen and Choose the Best Response",
+        "Listen and Choose the Best Answer"
+      ]
+    },
+    {
+      "id": "pronunciation",
+      "title": "Pronunciation",
+      "page": "p.20",
+      "type": "table",
+      "columns": [
+        "拼字",
+        "發音",
+        "教材例字"
+      ],
+      "rows": [
+        [
+          "a",
+          "/æ/",
+          "at, cat, hat, man"
+        ],
+        [
+          "a_e",
+          "/e/",
+          "cake, face, late, name"
+        ],
+        [
+          "ai",
+          "/e/",
+          "main, rain, tail, wait"
+        ],
+        [
+          "ay",
+          "/e/",
+          "day, hurry, play, say"
+        ]
+      ]
+    },
+    {
+      "id": "read-up",
+      "title": "Read Up｜The Park Family",
+      "page": "p.21–22",
+      "type": "points",
+      "items": [
+        "Gina Park：junior high school student。",
+        "Dad：firefighter；Mom：teacher。",
+        "兩位兄弟在 zoo 工作並 take care of animals；圖片職業包含 vet。",
+        "Sister：waste collector。",
+        "題型重點：Using Context Clues、Scanning、family tree、未來職業 Activity。"
+      ]
+    },
+    {
+      "id": "exam-focus",
+      "title": "本課高頻考點",
+      "page": "",
+      "type": "points",
+      "items": [
+        "be 動詞 am / are / is 的選擇、否定、縮寫與簡答。",
+        "Who 問句：區分詢問姓名與人物關係。",
+        "親屬關係判讀：family tree 類題型。",
+        "形容詞位置：S + be + Adj. 與 a/an + Adj. + N.。",
+        "人物職業與身分配對。",
+        "Scanning：從人名、親屬稱謂、職業快速定位答案。"
+      ]
+    }
+  ],
+  "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 1 p.9–22 教材辨識檔與教材知識庫整理；供複習與題庫分類使用。"
+}
