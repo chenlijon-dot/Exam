@@ -5,12 +5,16 @@
     'geo-01': {
       title: '第1章　認識位置與地圖',
       subtitle: '認識位置與地圖｜選擇難度',
-      path: 'chapter-bank/social/7-1/geography/chapter-01'
+      path: 'chapter-bank/social/7-1/geography/chapter-01',
+      questionCount: 10,
+      pointsPerQuestion: 10
     },
     'geo-02': {
       title: '第2章　世界中的臺灣',
       subtitle: '世界中的臺灣｜選擇難度',
-      path: 'chapter-bank/social/7-1/geography/chapter-02'
+      path: 'chapter-bank/social/7-1/geography/chapter-02',
+      questionCount: 20,
+      pointsPerQuestion: 5
     }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -62,16 +66,18 @@
     const item = LEVELS[level];
     if (!item) return;
     const badge = button?.querySelector('.catalog-badge');
-    const oldBadge = badge?.textContent || '10 題';
+    const chapter = CHAPTERS[currentChapterKey];
+    const oldBadge = badge?.textContent || `${chapter.questionCount} 題`;
     if (button) button.disabled = true;
     if (badge) badge.textContent = '載入中';
     try {
-      const chapter = CHAPTERS[currentChapterKey];
       const res = await fetch(`${chapter.path}/practice-${level}.json`, { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
-      if (questions.length !== 10) throw new Error('題庫題數異常');
+      if (questions.length !== chapter.questionCount) {
+        throw new Error(`題庫題數異常：預期 ${chapter.questionCount} 題，實際 ${questions.length} 題`);
+      }
       if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
       const key = data.exam?.difficulty || `social-7-1-${currentChapterKey.replace('-', '')}-${level}`;
@@ -80,7 +86,7 @@
       window.examContexts[key] = {
         ...(data.exam || {}),
         key,
-        backLabel: '返回第一章題庫',
+        backLabel: `返回${chapter.title.split('　')[0]}題庫`,
         onBack: showSocialGeo01MenuAfterExam
       };
       startExam(key);
@@ -110,11 +116,11 @@
       <button class="catalog-back" id="backSocialGeo01Btn">← 返回地理章節</button>
       <div class="catalog-path">社會　›　地理　›　七年級上學期（一上）　›　第一冊　›　${chapter.title}</div>
       <h2 class="catalog-title">${chapter.title}</h2>
-      <p class="catalog-sub">目前先以文字選擇題為主；每個難度 10 題，每題 10 分。</p>
+      <p class="catalog-sub">目前先以文字選擇題為主；每個難度 ${chapter.questionCount} 題，每題 ${chapter.pointsPerQuestion} 分。</p>
       <div class="catalog-grid">
         ${Object.entries(LEVELS).map(([key, item]) => `
           <button class="catalog-card" id="socialGeo01${key[0].toUpperCase() + key.slice(1)}Btn">
-            <span class="top"><span class="icon">${item.icon}</span><strong>${item.label}</strong><span class="catalog-badge">10 題</span></span>
+            <span class="top"><span class="icon">${item.icon}</span><strong>${item.label}</strong><span class="catalog-badge">${chapter.questionCount} 題</span></span>
             <span class="desc">${item.desc}</span>
           </button>`).join('')}
       </div>`;
