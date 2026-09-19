@@ -962,6 +962,30 @@ q32-2.png
 
 尚未提供教材內容的章節可以先建立 catalog，但不自行猜課本內容；收到課本／講義後再依教材整理 SOP 建立 Drive 原始 evidence、教材辨識檔與 canonical 教材知識庫。
 
+目前地理第1章〈認識位置與地圖〉已完成第一輪教材建置：
+
+```text
+教材頁次：p.6～21
+小節：
+├─ 1-1 如何表示位置
+├─ 1-2 經緯線網格
+├─ 1-3 位置與生活的關聯
+└─ 1-4 如何閱讀地圖
+
+已完成：
+原始教材照片歸檔
+→ 教材辨識檔
+→ canonical 教材知識庫
+→ 核心概念／考點／迷思／題型
+→ concept ID 候選
+
+待完成：
+出版社／學年度／版次確認
+自編題庫
+各校段考 chapter mapping
+machine-readable curriculum 同步
+```
+
 ---
 
 # 19. AI 錯題診斷
@@ -1142,6 +1166,7 @@ assets/math/*.png
 - [x] 國文七上 catalog authority
 - [x] 自然七上 chapter tree
 - [x] 社會七上第一冊 chapter tree（地理／歷史／公民）
+- [x] 社會地理第1章〈認識位置與地圖〉教材 canonical（p.6～21）
 - [x] 自然 1-2／1-3 canonical 與題庫工作流開始實作
 - [x] 各校段考拆題 SOP
 - [x] 正式歷屆考題 SOP
