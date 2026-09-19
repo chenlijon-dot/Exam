@@ -36,8 +36,13 @@
     },
     {
       key: 'english-7-1-lesson-01', code: 'Lesson 1', title: 'Who’s That Young Man?', page: 9,
-      type: 'lesson', referenceReady: true, bankMenuReady: false,
+      type: 'lesson', referenceReady: true, bankMenuReady: true,
       referencePath: 'chapter-bank/english/7-1/lesson-01/reference.json',
+      banks: {
+        easy: 'chapter-bank/english/7-1/lesson-01/easy.json',
+        medium: 'chapter-bank/english/7-1/lesson-01/medium.json',
+        hard: 'chapter-bank/english/7-1/lesson-01/hard.json'
+      },
       detail: '初次見面．請多指教｜Nick 這一家', readingSkill: 'Scanning 掃讀',
       desc: '親屬、職業；be 動詞、形容詞、Who 問答；教材參考資料已整理。'
     },
@@ -587,14 +592,92 @@
           <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge ${lesson.referenceReady ? 'reference' : 'soon'}">${lesson.referenceReady ? '已整理' : '待收錄'}</span></span>
           <span class="desc">${lesson.referenceReady ? '查看本課字彙、文法、閱讀、發音與考試重點整理。' : lesson.desc + ' 後續依實體課本逐頁建立教材辨識檔與 canonical 教材知識庫。'}</span>
         </button>
-        <button class="catalog-card chapter-card" disabled>
-          <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge soon">待建</span></span>
-          <span class="desc">教材內容確認後，再建立單字、文法、閱讀與各校段考拆解題。</span>
+        <button class="catalog-card chapter-card" id="englishLessonBankBtn" ${lesson.bankMenuReady && lesson.banks ? '' : 'disabled'}>
+          <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge ${lesson.bankMenuReady ? 'reference' : 'soon'}">${lesson.bankMenuReady ? '45 題已建立' : '待建'}</span></span>
+          <span class="desc">${lesson.bankMenuReady ? '簡易、中等、困難各 15 題；四選一並附逐題詳解。' : '教材內容確認後，再建立單字、文法、閱讀與各校段考拆解題。'}</span>
         </button>
       </div>`;
     $('#backEnglish71LessonsBtn')?.addEventListener('click', showEnglish71Lessons);
     if (lesson.referenceReady && lesson.referencePath) {
       $('#englishLessonReferenceBtn')?.addEventListener('click', () => showEnglishLessonReference(lessonKey));
+    }
+    if (lesson.bankMenuReady && lesson.banks) {
+      $('#englishLessonBankBtn')?.addEventListener('click', () => showEnglishLessonBanks(lessonKey));
+    }
+  }
+
+  function showEnglishLessonBanks(lessonKey) {
+    const lesson = ENGLISH_7_1_LESSONS.find(item => item.key === lessonKey);
+    if (!lesson?.banks) return;
+
+    setHeader(`${lesson.code}｜章節題庫`, lesson.title);
+    document.title = `${lesson.code} 章節題庫｜英文第一冊`;
+
+    const levels = [
+      { key:'easy', icon:'🌱', label:'簡易', desc:'基礎單字、親屬關係、be 動詞與 Who 基本句型。' },
+      { key:'medium', icon:'🌿', label:'中等', desc:'情境式字彙與文法、人物職業、Scanning 與句型應用。' },
+      { key:'hard', icon:'🌳', label:'困難', desc:'多步驟親屬推理、整合語意、閱讀定位與發音判讀。' }
+    ];
+
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backEnglishLessonBtn">← 返回 ${lesson.code}</button>
+      <div class="catalog-path">英文　›　七年級上學期（一上）　›　第一冊　›　${lesson.code}　›　章節題庫</div>
+      <h2 class="catalog-title">${lesson.code}　${lesson.title}</h2>
+      <p class="catalog-sub">依本課教材內容自編四選一練習；三種難度各 15 題，每題附詳解。</p>
+      <div class="catalog-grid">
+        ${levels.map(level => `
+          <button class="catalog-card" data-english-lesson-bank="${level.key}">
+            <span class="top"><span class="icon">${level.icon}</span><strong>${level.label}</strong><span class="catalog-badge reference">15 題</span></span>
+            <span class="desc">${level.desc}</span>
+          </button>`).join('')}
+      </div>`;
+
+    $('#backEnglishLessonBtn')?.addEventListener('click', () => showEnglish71Lesson(lessonKey));
+    levels.forEach(level => {
+      $("[data-english-lesson-bank=\"" + level.key + "\"]")?.addEventListener('click', event => {
+        openEnglishLessonBank(lessonKey, level.key, event.currentTarget);
+      });
+    });
+  }
+
+  async function openEnglishLessonBank(lessonKey, difficultyKey, button) {
+    const lesson = ENGLISH_7_1_LESSONS.find(item => item.key === lessonKey);
+    const path = lesson?.banks?.[difficultyKey];
+    if (!lesson || !path || !button) return;
+
+    const oldHtml = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="top"><span class="icon">⏳</span><strong>準備題目…</strong></span><span class="desc">正在載入題目與詳解</span>';
+
+    try {
+      const response = await fetch(path, { cache:'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      const questions = Array.isArray(data.questions) ? data.questions : [];
+      if (questions.length !== 15) throw new Error(`題數異常：${questions.length}/15`);
+      if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
+
+      const exam = data.exam || {};
+      const key = exam.key || exam.difficulty || `${lessonKey}-${difficultyKey}`;
+
+      banks[key] = questions;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        ...exam,
+        key,
+        difficulty: key,
+        examType: exam.examType || 'english-school-lesson-practice',
+        preserveOptionOrder: exam.preserveOptionOrder === true,
+        backLabel: '返回 Lesson 1 題庫',
+        onBack: () => showEnglishLessonBanks(lessonKey)
+      };
+
+      window.startExam(key);
+    } catch (error) {
+      console.error('[english-lesson-bank] load failed', error);
+      alert(`題庫載入失敗：${error.message}`);
+      button.disabled = false;
+      button.innerHTML = oldHtml;
     }
   }
 
