@@ -6,7 +6,7 @@
     { key: 'english', name: '英文', icon: '🔤', enabled: true },
     { key: 'math', name: '數學', icon: '📐', enabled: false },
     { key: 'science', name: '自然', icon: '🔬', enabled: true },
-    { key: 'social', name: '社會', icon: '🌏', enabled: false }
+    { key: 'social', name: '社會', icon: '🌏', enabled: true }
   ];
 
   const CHINESE_SEMESTERS = [
@@ -328,7 +328,7 @@
     document.title = '國中題庫';
     $('#catalogContent').innerHTML = `
       <h2 class="catalog-title">請選擇科目</h2>
-      <p class="catalog-sub">目前國文、英文與自然已建立科目入口；教材與題庫內容持續擴充。</p>
+      <p class="catalog-sub">目前國文、英文、自然與社會已建立科目入口；教材與題庫內容持續擴充。</p>
       <div class="catalog-grid">
         ${SUBJECTS.map(s => `
           <button class="catalog-card" data-subject="${s.key}" ${s.enabled ? '' : 'disabled'}>
@@ -339,6 +339,56 @@
     $('[data-subject="chinese"]')?.addEventListener('click', showChineseSemesters);
     $('[data-subject="english"]')?.addEventListener('click', showEnglishSemesters);
     $('[data-subject="science"]')?.addEventListener('click', showScienceSemesters);
+    $('[data-subject="social"]')?.addEventListener('click', showSocialCategories);
+  }
+
+  function showSocialCategories() {
+    setHeader('社會科', '選擇領域');
+    document.title = '社會科｜國中題庫';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
+      <div class="catalog-path">社會</div>
+      <h2 class="catalog-title">請選擇領域</h2>
+      <p class="catalog-sub">國中社會科依課本內容分為地理、歷史、公民三大領域；目前先建立入口，教材與題庫後續逐步加入。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card" data-social-area="geography">
+          <span class="top"><span class="icon">🗺️</span><strong>地理</strong><span class="catalog-badge soon">入口已建</span></span>
+          <span class="desc">地理教材與題庫待建立。</span>
+        </button>
+        <button class="catalog-card" data-social-area="history">
+          <span class="top"><span class="icon">📜</span><strong>歷史</strong><span class="catalog-badge soon">入口已建</span></span>
+          <span class="desc">歷史教材與題庫待建立。</span>
+        </button>
+        <button class="catalog-card" data-social-area="civics">
+          <span class="top"><span class="icon">🏛️</span><strong>公民</strong><span class="catalog-badge soon">入口已建</span></span>
+          <span class="desc">公民教材與題庫待建立。</span>
+        </button>
+      </div>`;
+    $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
+    $('[data-social-area="geography"]')?.addEventListener('click', () => showSocialPlaceholder('地理'));
+    $('[data-social-area="history"]')?.addEventListener('click', () => showSocialPlaceholder('歷史'));
+    $('[data-social-area="civics"]')?.addEventListener('click', () => showSocialPlaceholder('公民'));
+  }
+
+  function showSocialPlaceholder(areaName) {
+    setHeader(`社會科｜${areaName}`, '教材與題庫建置中');
+    document.title = `${areaName}｜社會科題庫`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backSocialCategoriesBtn">← 返回社會科</button>
+      <div class="catalog-path">社會　›　${areaName}</div>
+      <h2 class="catalog-title">${areaName}</h2>
+      <p class="catalog-sub">此領域入口已建立；後續依實際課本與講義內容，再加入學期、單元、章節與題庫。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card chapter-card" disabled>
+          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge soon">待建</span></span>
+          <span class="desc">等待實際教材內容確認後建立。</span>
+        </button>
+        <button class="catalog-card chapter-card" disabled>
+          <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge soon">待建</span></span>
+          <span class="desc">後續依教材內容建立自編題與各校題庫。</span>
+        </button>
+      </div>`;
+    $('#backSocialCategoriesBtn')?.addEventListener('click', showSocialCategories);
   }
 
   function showEnglishSemesters() {
