@@ -36,9 +36,10 @@
     },
     {
       key: 'english-7-1-lesson-01', code: 'Lesson 1', title: 'Who’s That Young Man?', page: 9,
-      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      type: 'lesson', referenceReady: true, bankMenuReady: false,
+      referencePath: 'chapter-bank/english/7-1/lesson-01/reference.json',
       detail: '初次見面．請多指教｜Nick 這一家', readingSkill: 'Scanning 掃讀',
-      desc: '親屬、職業；be 動詞、形容詞、Who 問答。'
+      desc: '親屬、職業；be 動詞、形容詞、Who 問答；教材參考資料已整理。'
     },
     {
       key: 'english-7-1-lesson-02', code: 'Lesson 2', title: 'What Are These?', page: 23,
@@ -343,6 +344,24 @@
       #catalogShell.hidden{display:none!important}
       .chapter-back-row{display:flex;justify-content:flex-start;margin-top:14px}
       #chapterBackBtn{background:#e2e8f0;color:#1e293b}
+      .english-reference-section{border:1px solid #dfe5ee;background:#fff;border-radius:14px;padding:16px;margin:12px 0}
+      .english-reference-section h3{margin:0 0 8px;color:#172554;font-size:1.08rem}
+      .english-reference-page{display:inline-block;margin-left:8px;color:#64748b;font-size:.82rem;font-weight:600}
+      .english-reference-list{margin:7px 0 0;padding-left:1.25rem}
+      .english-reference-list li{margin:5px 0}
+      .english-reference-group{margin:10px 0;padding:10px 12px;background:#f8fafc;border-radius:10px}
+      .english-reference-group strong{display:block;margin-bottom:5px;color:#334155}
+      .english-reference-chips{display:flex;flex-wrap:wrap;gap:6px}
+      .english-reference-chip{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef4ff;color:#1e3a8a;font-size:.86rem}
+      .english-reference-pattern{margin:9px 0;padding:10px 12px;border-left:4px solid #93c5fd;background:#f8fbff;border-radius:8px}
+      .english-reference-pattern strong{display:block;margin-bottom:5px}
+      .english-reference-example{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:3px 0;color:#334155}
+      .english-reference-table-wrap{overflow-x:auto;margin-top:8px}
+      .english-reference-table{width:100%;border-collapse:collapse;font-size:.92rem}
+      .english-reference-table th,.english-reference-table td{border:1px solid #dfe5ee;padding:8px 10px;text-align:left;vertical-align:top}
+      .english-reference-table th{background:#f1f5f9;color:#334155}
+      .english-reference-note{margin-top:10px;padding:10px 12px;background:#fffbeb;border-left:4px solid #fbbf24;border-radius:8px;color:#713f12}
+      .english-reference-source{margin-top:16px;color:#64748b;font-size:.86rem;line-height:1.65}
       @media(max-width:620px){
         .catalog-grid{grid-template-columns:1fr}
         .catalog-panel{padding:17px 14px}
@@ -564,9 +583,9 @@
       <h2 class="catalog-title">${lesson.code}　${lesson.title}</h2>
       <p class="catalog-sub">課本起始頁 p.${lesson.page}${lesson.detail ? `｜${lesson.detail}` : ''}${lesson.readingSkill ? `｜Reading Skills：${lesson.readingSkill}` : ''}</p>
       <div class="catalog-grid">
-        <button class="catalog-card chapter-card" disabled>
-          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge soon">待收錄</span></span>
-          <span class="desc">${lesson.desc} 後續依實體課本逐頁建立教材辨識檔與 canonical 教材知識庫。</span>
+        <button class="catalog-card chapter-card" id="englishLessonReferenceBtn" ${lesson.referenceReady && lesson.referencePath ? '' : 'disabled'}>
+          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge ${lesson.referenceReady ? 'reference' : 'soon'}">${lesson.referenceReady ? '已整理' : '待收錄'}</span></span>
+          <span class="desc">${lesson.referenceReady ? '查看本課字彙、文法、閱讀、發音與考試重點整理。' : lesson.desc + ' 後續依實體課本逐頁建立教材辨識檔與 canonical 教材知識庫。'}</span>
         </button>
         <button class="catalog-card chapter-card" disabled>
           <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge soon">待建</span></span>
@@ -574,6 +593,95 @@
         </button>
       </div>`;
     $('#backEnglish71LessonsBtn')?.addEventListener('click', showEnglish71Lessons);
+    if (lesson.referenceReady && lesson.referencePath) {
+      $('#englishLessonReferenceBtn')?.addEventListener('click', () => showEnglishLessonReference(lessonKey));
+    }
+  }
+
+  function renderEnglishReferenceSection(section) {
+    const page = section.page ? `<span class="english-reference-page">${section.page}</span>` : '';
+    let body = '';
+
+    if (section.type === 'groups') {
+      body = (section.groups || []).map(group => `
+        <div class="english-reference-group">
+          <strong>${group.label || ''}</strong>
+          <div class="english-reference-chips">
+            ${(group.items || []).map(item => `<span class="english-reference-chip">${item}</span>`).join('')}
+          </div>
+        </div>`).join('');
+    } else if (section.type === 'patterns') {
+      body = (section.patterns || []).map(pattern => `
+        <div class="english-reference-pattern">
+          <strong>${pattern.label || ''}</strong>
+          ${(pattern.examples || []).map(example => `<span class="english-reference-example">${example}</span>`).join('')}
+        </div>`).join('');
+    } else if (section.type === 'table') {
+      body = `
+        <div class="english-reference-table-wrap">
+          <table class="english-reference-table">
+            <thead><tr>${(section.columns || []).map(column => `<th>${column}</th>`).join('')}</tr></thead>
+            <tbody>
+              ${(section.rows || []).map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+        ${(section.notes || []).map(note => `<div class="english-reference-note">${note}</div>`).join('')}`;
+    } else {
+      body = `<ul class="english-reference-list">${(section.items || []).map(item => `<li>${item}</li>`).join('')}</ul>`;
+    }
+
+    return `
+      <section class="english-reference-section">
+        <h3>${section.title || ''}${page}</h3>
+        ${body}
+      </section>`;
+  }
+
+  async function showEnglishLessonReference(lessonKey) {
+    const lesson = ENGLISH_7_1_LESSONS.find(item => item.key === lessonKey);
+    if (!lesson?.referencePath) return;
+
+    setHeader(`${lesson.code}｜教材參考資料`, lesson.title);
+    document.title = `${lesson.code} 教材參考資料｜英文第一冊`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backEnglishLessonBtn">← 返回 ${lesson.code}</button>
+      <div class="catalog-path">英文　›　七年級上學期（一上）　›　第一冊　›　${lesson.code}　›　教材參考資料</div>
+      <h2 class="catalog-title">${lesson.code}　${lesson.title}</h2>
+      <p class="catalog-sub">教材參考資料載入中…</p>`;
+
+    $('#backEnglishLessonBtn')?.addEventListener('click', () => showEnglish71Lesson(lessonKey));
+
+    try {
+      const response = await fetch(lesson.referencePath, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      const contentEl = $('#catalogContent');
+      if (!contentEl) return;
+
+      contentEl.innerHTML = `
+        <button class="catalog-back" id="backEnglishLessonBtn">← 返回 ${lesson.code}</button>
+        <div class="catalog-path">英文　›　七年級上學期（一上）　›　第一冊　›　${lesson.code}　›　教材參考資料</div>
+        <h2 class="catalog-title">${data.lessonCode || lesson.code}　${data.title || lesson.title}</h2>
+        <p class="catalog-sub">${data.schoolYear || ''}${data.publisher ? '｜' + data.publisher + '版' : ''}${data.pageRange ? '｜' + data.pageRange : ''}</p>
+        <section class="english-reference-section">
+          <h3>本課學習重點</h3>
+          <ul class="english-reference-list">${(data.learningGoals || []).map(item => `<li>${item}</li>`).join('')}</ul>
+        </section>
+        ${(data.sections || []).map(renderEnglishReferenceSection).join('')}
+        ${data.sourceNote ? `<div class="english-reference-source">${data.sourceNote}</div>` : ''}`;
+
+      $('#backEnglishLessonBtn')?.addEventListener('click', () => showEnglish71Lesson(lessonKey));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('[english-reference] load failed', error);
+      $('#catalogContent').innerHTML = `
+        <button class="catalog-back" id="backEnglishLessonBtn">← 返回 ${lesson.code}</button>
+        <div class="catalog-path">英文　›　七年級上學期（一上）　›　第一冊　›　${lesson.code}　›　教材參考資料</div>
+        <h2 class="catalog-title">教材參考資料載入失敗</h2>
+        <p class="catalog-sub">請重新整理後再試一次。</p>`;
+      $('#backEnglishLessonBtn')?.addEventListener('click', () => showEnglish71Lesson(lessonKey));
+    }
   }
 
   function showEnglishGept() {
