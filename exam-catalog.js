@@ -252,6 +252,64 @@
     }
   ];
 
+
+  const SOCIAL_SEMESTERS = [
+    { key: '7-1', title: '七年級上學期', short: '一上', enabled: true },
+    { key: '7-2', title: '七年級下學期', short: '一下', enabled: false },
+    { key: '8-1', title: '八年級上學期', short: '二上', enabled: false },
+    { key: '8-2', title: '八年級下學期', short: '二下', enabled: false },
+    { key: '9-1', title: '九年級上學期', short: '三上', enabled: false },
+    { key: '9-2', title: '九年級下學期', short: '三下', enabled: false }
+  ];
+
+  // 社會七上第一冊依 2026-09-19 使用者提供的實體課本目錄建立。
+  // 出版社／學年度版本待封面或版權頁確認。
+  const SOCIAL_7_1_AREAS = {
+    geography: {
+      name: '地理', icon: '🗺️', partTitle: '臺灣的環境（上）',
+      chapters: [
+        { key: 'geo-01', code: '第1章', title: '認識位置與地圖', page: 8, type: 'chapter' },
+        { key: 'geo-02', code: '第2章', title: '世界中的臺灣', page: 22, type: 'chapter' },
+        { key: 'geo-inquiry-01', code: '問題探究', title: '立足臺灣、連結世界', page: 32, type: 'inquiry' },
+        { key: 'geo-03', code: '第3章', title: '地形', page: 34, type: 'chapter' },
+        { key: 'geo-04', code: '第4章', title: '海岸與島嶼', page: 48, type: 'chapter' },
+        { key: 'geo-inquiry-02', code: '問題探究', title: '從高山高麗菜看臺灣山地的開發與影響', page: 58, type: 'inquiry' },
+        { key: 'geo-05', code: '第5章', title: '天氣與氣候', page: 60, type: 'chapter' },
+        { key: 'geo-06', code: '第6章', title: '水文', page: 76, type: 'chapter' },
+        { key: 'geo-inquiry-03', code: '問題探究', title: '颱風與生活', page: 88, type: 'inquiry' }
+      ]
+    },
+    history: {
+      name: '歷史', icon: '📜', partTitle: '臺灣的歷史（上）',
+      chapters: [
+        { key: 'hist-intro', code: '導言', title: '歷史的基礎概念、歷史熱身操', page: 92, type: 'intro' },
+        { key: 'hist-01', code: '第1章', title: '史前臺灣與原住民文化', page: 96, type: 'chapter' },
+        { key: 'hist-02', code: '第2章', title: '大航海時代各方勢力的競逐', page: 106, type: 'chapter' },
+        { key: 'hist-inquiry-01', code: '歷史探查', title: '外國人眼中的臺灣', page: 116, type: 'inquiry' },
+        { key: 'hist-03', code: '第3章', title: '大航海時代臺灣原住民與外來者', page: 118, type: 'chapter' },
+        { key: 'hist-04', code: '第4章', title: '清帝國統治政策的變遷', page: 126, type: 'chapter' },
+        { key: 'hist-inquiry-02', code: '歷史探查', title: '面對臺灣——從被動到積極的清帝國', page: 138, type: 'inquiry' },
+        { key: 'hist-05', code: '第5章', title: '清帝國時期農商業的發展', page: 140, type: 'chapter' },
+        { key: 'hist-06', code: '第6章', title: '清帝國時期社會文化的變遷', page: 150, type: 'chapter' },
+        { key: 'hist-inquiry-03', code: '歷史探查', title: '開港通商前後的臺灣社會', page: 160, type: 'inquiry' },
+        { key: 'hist-people', code: '人物調查', title: '臺灣歷史人物調查', page: 162, type: 'inquiry' }
+      ]
+    },
+    civics: {
+      name: '公民', icon: '🏛️', partTitle: '公民身分及社群',
+      chapters: [
+        { key: 'civics-01', code: '第1章', title: '公民與公民德性', page: 166, type: 'chapter' },
+        { key: 'civics-02', code: '第2章', title: '人性尊嚴與人權保障', page: 174, type: 'chapter' },
+        { key: 'civics-03', code: '第3章', title: '家庭生活', page: 184, type: 'chapter' },
+        { key: 'civics-04', code: '第4章', title: '變遷中的家庭', page: 194, type: 'chapter' },
+        { key: 'civics-05', code: '第5章', title: '學生權利與校園生活', page: 204, type: 'chapter' },
+        { key: 'civics-06', code: '第6章', title: '部落與公民參與', page: 216, type: 'chapter' },
+        { key: 'civics-fieldwork', code: '資料活動', title: '如何進行田野觀察', page: 226, type: 'activity' },
+        { key: 'civics-image-source', code: '附錄', title: '圖片來源', page: 228, type: 'appendix' }
+      ]
+    }
+  };
+
   const $ = (sel, root = document) => root.querySelector(sel);
 
   function injectStyles() {
@@ -349,46 +407,86 @@
       <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
       <div class="catalog-path">社會</div>
       <h2 class="catalog-title">請選擇領域</h2>
-      <p class="catalog-sub">國中社會科依課本內容分為地理、歷史、公民三大領域；目前先建立入口，教材與題庫後續逐步加入。</p>
+      <p class="catalog-sub">國中社會科依實體課本分為地理、歷史、公民三大領域；七年級上學期第一冊目錄已確認。</p>
       <div class="catalog-grid">
-        <button class="catalog-card" data-social-area="geography">
-          <span class="top"><span class="icon">🗺️</span><strong>地理</strong><span class="catalog-badge soon">入口已建</span></span>
-          <span class="desc">地理教材與題庫待建立。</span>
-        </button>
-        <button class="catalog-card" data-social-area="history">
-          <span class="top"><span class="icon">📜</span><strong>歷史</strong><span class="catalog-badge soon">入口已建</span></span>
-          <span class="desc">歷史教材與題庫待建立。</span>
-        </button>
-        <button class="catalog-card" data-social-area="civics">
-          <span class="top"><span class="icon">🏛️</span><strong>公民</strong><span class="catalog-badge soon">入口已建</span></span>
-          <span class="desc">公民教材與題庫待建立。</span>
-        </button>
+        ${Object.entries(SOCIAL_7_1_AREAS).map(([key, area]) => `
+          <button class="catalog-card" data-social-area="${key}">
+            <span class="top"><span class="icon">${area.icon}</span><strong>${area.name}</strong><span class="catalog-badge reference">七上目錄已確認</span></span>
+            <span class="desc">${area.partTitle}｜進入年級與學期。</span>
+          </button>`).join('')}
       </div>`;
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
-    $('[data-social-area="geography"]')?.addEventListener('click', () => showSocialPlaceholder('地理'));
-    $('[data-social-area="history"]')?.addEventListener('click', () => showSocialPlaceholder('歷史'));
-    $('[data-social-area="civics"]')?.addEventListener('click', () => showSocialPlaceholder('公民'));
+    Object.keys(SOCIAL_7_1_AREAS).forEach(key =>
+      $("[data-social-area=\"" + key + "\"]")?.addEventListener('click', () => showSocialSemesters(key))
+    );
   }
 
-  function showSocialPlaceholder(areaName) {
-    setHeader(`社會科｜${areaName}`, '教材與題庫建置中');
-    document.title = `${areaName}｜社會科題庫`;
+  function showSocialSemesters(areaKey) {
+    const area = SOCIAL_7_1_AREAS[areaKey];
+    if (!area) return;
+    setHeader(`社會科｜${area.name}`, '選擇年級與學期');
+    document.title = `${area.name}｜社會科題庫`;
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backSocialCategoriesBtn">← 返回社會科</button>
-      <div class="catalog-path">社會　›　${areaName}</div>
-      <h2 class="catalog-title">${areaName}</h2>
-      <p class="catalog-sub">此領域入口已建立；後續依實際課本與講義內容，再加入學期、單元、章節與題庫。</p>
+      <div class="catalog-path">社會　›　${area.name}</div>
+      <h2 class="catalog-title">請選擇學期</h2>
+      <p class="catalog-sub">七年級上學期第一冊已依實體課本目錄建立；其他學期等待教材確認。</p>
+      <div class="catalog-grid">
+        ${SOCIAL_SEMESTERS.map(s => `
+          <button class="catalog-card" data-social-semester="${s.key}" ${s.enabled ? '' : 'disabled'}>
+            <span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.enabled ? 'reference' : 'soon'}">${s.enabled ? '第一冊已確認' : '待建'}</span></span>
+            <span class="desc">${s.enabled ? area.partTitle + '｜查看章節目錄' : '尚未建立教材目錄'}</span>
+          </button>`).join('')}
+      </div>`;
+    $('#backSocialCategoriesBtn')?.addEventListener('click', showSocialCategories);
+    $('[data-social-semester="7-1"]')?.addEventListener('click', () => showSocial71Chapters(areaKey));
+  }
+
+  function showSocial71Chapters(areaKey) {
+    const area = SOCIAL_7_1_AREAS[areaKey];
+    if (!area) return;
+    setHeader(`社會七上｜${area.name}`, area.partTitle);
+    document.title = `${area.name}第一冊｜七年級上學期`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backSocialSemestersBtn">← 返回學期</button>
+      <div class="catalog-path">社會　›　${area.name}　›　七年級上學期（一上）　›　第一冊</div>
+      <h2 class="catalog-title">${area.partTitle}</h2>
+      <p class="catalog-sub">章名與起始頁碼已由 2026-09-19 提供的實體課本目錄確認；出版社／學年度版本待封面或版權頁確認。</p>
+      <div class="catalog-grid">
+        ${area.chapters.map(chapter => `
+          <button class="catalog-card chapter-card" data-social-chapter="${chapter.key}">
+            <span class="top"><strong>${chapter.code}　${chapter.title}</strong><span class="catalog-badge reference">目錄已確認</span></span>
+            <span class="desc">課本起始頁 p.${chapter.page}</span>
+          </button>`).join('')}
+      </div>`;
+    $('#backSocialSemestersBtn')?.addEventListener('click', () => showSocialSemesters(areaKey));
+    area.chapters.forEach(chapter =>
+      $("[data-social-chapter=\"" + chapter.key + "\"]")?.addEventListener('click', () => showSocial71Chapter(areaKey, chapter.key))
+    );
+  }
+
+  function showSocial71Chapter(areaKey, chapterKey) {
+    const area = SOCIAL_7_1_AREAS[areaKey];
+    const chapter = area?.chapters.find(item => item.key === chapterKey);
+    if (!area || !chapter) return;
+    setHeader(`${area.name}第一冊｜${chapter.code}`, chapter.title);
+    document.title = `${chapter.code} ${chapter.title}｜${area.name}第一冊`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backSocial71ChaptersBtn">← 返回章節</button>
+      <div class="catalog-path">社會　›　${area.name}　›　七年級上學期（一上）　›　第一冊　›　${chapter.code} ${chapter.title}</div>
+      <h2 class="catalog-title">${chapter.code}　${chapter.title}</h2>
+      <p class="catalog-sub">課本起始頁 p.${chapter.page}｜目前僅完成目錄定位，教材內容與題庫待後續收錄。</p>
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" disabled>
-          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge soon">待建</span></span>
-          <span class="desc">等待實際教材內容確認後建立。</span>
+          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge soon">待收錄</span></span>
+          <span class="desc">收到本章課本／講義後，依教材整理 SOP 建立辨識檔與 canonical 教材知識庫。</span>
         </button>
         <button class="catalog-card chapter-card" disabled>
           <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge soon">待建</span></span>
-          <span class="desc">後續依教材內容建立自編題與各校題庫。</span>
+          <span class="desc">教材內容確認後，再建立自編題與各校段考拆解題。</span>
         </button>
       </div>`;
-    $('#backSocialCategoriesBtn')?.addEventListener('click', showSocialCategories);
+    $('#backSocial71ChaptersBtn')?.addEventListener('click', () => showSocial71Chapters(areaKey));
   }
 
   function showEnglishSemesters() {
