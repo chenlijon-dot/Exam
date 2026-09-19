@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-01-easy",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 1",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 1｜Who’s That Young Man?｜簡易",
+    "subtitle": "15 題｜基礎字彙與句型",
+    "unit": "英文七上｜Lesson 1",
+    "difficulty": "english-7-1-lesson-01-easy",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 1 教材參考資料自編；題型參考 GEPT 初級詞彙與結構四選一形式，非官方 GEPT 試題。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "詞彙與結構",
+      "q": "My father’s brother is my _____.",
+      "o": [
+        "uncle",
+        "aunt",
+        "cousin",
+        "son"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family"
+      ],
+      "e": "答案是 (A) uncle。father’s brother 是「爸爸的兄弟」，也就是叔叔／伯伯。"
+    },
+    {
+      "number": 2,
+      "q": "My mother’s sister is my _____.",
+      "o": [
+        "wife",
+        "aunt",
+        "daughter",
+        "mother"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family"
+      ],
+      "e": "答案是 (B) aunt。mother’s sister 是阿姨／姨媽。"
+    },
+    {
+      "number": 3,
+      "q": "Jack and I have the same uncle. Jack is my _____.",
+      "o": [
+        "parent",
+        "husband",
+        "cousin",
+        "father"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family"
+      ],
+      "e": "答案是 (C) cousin。兩人共享同一位叔伯／舅舅，最符合堂／表兄弟姊妹關係。"
+    },
+    {
+      "number": 4,
+      "q": "A father and a mother are _____.",
+      "o": [
+        "children",
+        "parents",
+        "cousins",
+        "sons"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family"
+      ],
+      "e": "答案是 (B) parents。father + mother 合稱 parents。"
+    },
+    {
+      "number": 5,
+      "q": "Peter _____ a student.",
+      "o": [
+        "am",
+        "are",
+        "is",
+        "be"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be"
+      ],
+      "e": "答案是 (C) is。Peter 是單數第三人稱，be 動詞用 is。"
+    },
+    {
+      "number": 6,
+      "q": "You _____ my cousin.",
+      "o": [
+        "am",
+        "are",
+        "is",
+        "be"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be"
+      ],
+      "e": "答案是 (B) are。主詞 You 搭配 are。"
+    },
+    {
+      "number": 7,
+      "q": "I _____ a junior high school student.",
+      "o": [
+        "am",
+        "are",
+        "is",
+        "be"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be"
+      ],
+      "e": "答案是 (A) am。主詞 I 搭配 am。"
+    },
+    {
+      "number": 8,
+      "q": "He is not a doctor. Which short form is correct?",
+      "o": [
+        "He am not a doctor.",
+        "He aren’t a doctor.",
+        "He isn’t a doctor.",
+        "He not is a doctor."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be-negative"
+      ],
+      "e": "答案是 (C) He isn’t a doctor.。is not 可縮寫為 isn’t。"
+    },
+    {
+      "number": 9,
+      "q": "_____ is that young man? — He is my uncle.",
+      "o": [
+        "What",
+        "Who",
+        "How",
+        "Where"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-who"
+      ],
+      "e": "答案是 (B) Who。Lesson 1 用 Who 詢問人物姓名或關係。"
+    },
+    {
+      "number": 10,
+      "q": "Mr. Lee is 25 years old. He is a _____ man.",
+      "o": [
+        "young",
+        "strict",
+        "warm",
+        "cute"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-adjective"
+      ],
+      "e": "答案是 (A) young。題目描述 25 歲的男子，young 最符合語意。"
+    },
+    {
+      "number": 11,
+      "q": "According to “The Lins,” Bella is a(n) _____.",
+      "o": [
+        "doctor",
+        "nurse",
+        "English teacher",
+        "cook"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-reading",
+        "english-7-1-l1-occupation"
+      ],
+      "e": "答案是 (C) English teacher。教材中的 Bella 是 Nick 的姊姊，也是英文老師。"
+    },
+    {
+      "number": 12,
+      "q": "According to “The Lins,” Paul is a _____.",
+      "o": [
+        "nurse",
+        "farmer",
+        "cook",
+        "student"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-reading",
+        "english-7-1-l1-occupation"
+      ],
+      "e": "答案是 (A) nurse。Paul 是 Nick 的父親，職業是 nurse。"
+    },
+    {
+      "number": 13,
+      "q": "According to “The Lins,” Lily is a _____.",
+      "o": [
+        "teacher",
+        "doctor",
+        "farmer",
+        "student"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-reading",
+        "english-7-1-l1-occupation"
+      ],
+      "e": "答案是 (B) doctor。Lily 是 Nick 的母親，職業是 doctor。"
+    },
+    {
+      "number": 14,
+      "q": "According to “The Lins,” Nick’s grandmother is a _____.",
+      "o": [
+        "doctor",
+        "nurse",
+        "cook",
+        "teacher"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-reading",
+        "english-7-1-l1-occupation"
+      ],
+      "e": "答案是 (C) cook。Nick 的 grandmother 在教材中是 cook。"
+    },
+    {
+      "number": 15,
+      "q": "Which word has the /æ/ sound taught in Lesson 1?",
+      "o": [
+        "name",
+        "rain",
+        "man",
+        "day"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-pronunciation"
+      ],
+      "e": "答案是 (C) man。Lesson 1 中 a 的 /æ/ 例字包含 at, cat, hat, man。"
+    }
+  ]
+}
