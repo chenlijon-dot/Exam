@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "key": "english-7-1-get-ready-reference",
+  "lessonKey": "english-7-1-get-ready",
+  "subject": "english",
+  "grade": 7,
+  "semester": 1,
+  "volume": "第一冊",
+  "publisher": "康軒",
+  "schoolYear": "115 學年度",
+  "lessonCode": "Get Ready",
+  "title": "哈囉你好嗎？",
+  "pageRange": "p.1–6",
+  "theme": [
+    "字母",
+    "招呼用語",
+    "自我介紹",
+    "姓名",
+    "年齡",
+    "英文書寫"
+  ],
+  "learningGoals": [
+    "複習 A–Z 大小寫字母與基本辨識。",
+    "複習常用招呼、道謝與道別用語。",
+    "能用 I / you / he / she / it 搭配 be 動詞做基本介紹。",
+    "能用 What 詢問姓名，並使用主格與所有格。",
+    "能用 How old 詢問年齡，並複習 0–99 數字。",
+    "熟悉句首、專有名詞、I 大寫及基本標點與字距規則。"
+  ],
+  "sections": [
+    {
+      "id": "alphabet",
+      "title": "字母",
+      "page": "p.1",
+      "type": "points",
+      "items": [
+        "A–Z 大小寫字母書寫。",
+        "Look and Say：透過圖片辨識英文字母外形。"
+      ]
+    },
+    {
+      "id": "greetings",
+      "title": "招呼與回應",
+      "page": "p.2",
+      "type": "groups",
+      "groups": [
+        {
+          "label": "打招呼",
+          "items": [
+            "Hello!",
+            "Hi!",
+            "Good morning.",
+            "Good afternoon.",
+            "Good evening."
+          ]
+        },
+        {
+          "label": "關心近況",
+          "items": [
+            "How are you?",
+            "I’m fine. Thank you."
+          ]
+        },
+        {
+          "label": "道謝與回應",
+          "items": [
+            "Thank you.",
+            "You’re welcome."
+          ]
+        },
+        {
+          "label": "道別",
+          "items": [
+            "Goodbye.",
+            "Bye.",
+            "Good night."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "introductions",
+      "title": "介紹自己與他人",
+      "page": "p.3",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "基本句型",
+          "examples": [
+            "I am Tony.",
+            "You are Jerry.",
+            "He is Peter.",
+            "She is Shelly.",
+            "It is Mike."
+          ]
+        },
+        {
+          "label": "縮寫",
+          "examples": [
+            "I am → I’m",
+            "you are → you’re",
+            "he is → he’s",
+            "she is → she’s",
+            "it is → it’s"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "names",
+      "title": "詢問姓名與所有格",
+      "page": "p.4",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "詢問姓名",
+          "examples": [
+            "What is your name?",
+            "What is his name?",
+            "What is her name?",
+            "What is its name?"
+          ]
+        },
+        {
+          "label": "回答姓名",
+          "examples": [
+            "My name is ...",
+            "His name is ...",
+            "Her name is ...",
+            "Its name is ..."
+          ]
+        },
+        {
+          "label": "主格與所有格",
+          "examples": [
+            "I / my",
+            "you / your",
+            "he / his",
+            "she / her",
+            "it / its",
+            "Emma → Emma’s"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "title": "詢問年齡與數字",
+      "page": "p.5",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "詢問年齡",
+          "examples": [
+            "How old are you?",
+            "How old is he?",
+            "How old is she?"
+          ]
+        },
+        {
+          "label": "回答年齡",
+          "examples": [
+            "I am twelve.",
+            "He is fifteen.",
+            "She is fifteen."
+          ]
+        },
+        {
+          "label": "數字範圍",
+          "examples": [
+            "0–19",
+            "20, 30, 40, 50, 60, 70, 80, 90",
+            "98, 99"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "title": "英文書寫原則",
+      "page": "p.6",
+      "type": "points",
+      "items": [
+        "英文句句首字母須大寫。",
+        "逗點後空一個字母距離。",
+        "地名、人名等專有名詞字首須大寫。",
+        "句尾標示實心句點。",
+        "字與字中間須空一個字母距離。",
+        "I 表示「我」時一律大寫。"
+      ]
+    }
+  ],
+  "sourceNote": "依 115 學年度康軒版國中英文第一冊 Get Ready p.1–6 教材辨識檔與教材知識庫整理；本單元只提供教材參考資料，不建立章節題庫。"
+}
