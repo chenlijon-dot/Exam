@@ -1,11 +1,17 @@
 (() => {
   'use strict';
 
-  const BASE_PATH = 'chapter-bank/social/7-1/geography/chapter-01';
-  const BANK_PATHS = {
-    easy: `${BASE_PATH}/practice-easy.json`,
-    medium: `${BASE_PATH}/practice-medium.json`,
-    hard: `${BASE_PATH}/practice-hard.json`
+  const CHAPTERS = {
+    'geo-01': {
+      title: '第1章　認識位置與地圖',
+      subtitle: '認識位置與地圖｜選擇難度',
+      path: 'chapter-bank/social/7-1/geography/chapter-01'
+    },
+    'geo-02': {
+      title: '第2章　世界中的臺灣',
+      subtitle: '世界中的臺灣｜選擇難度',
+      path: 'chapter-bank/social/7-1/geography/chapter-02'
+    }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
   const LEVELS = {
@@ -50,6 +56,8 @@
     showCatalog();
   }
 
+  let currentChapterKey = 'geo-01';
+
   async function openPractice(level, button) {
     const item = LEVELS[level];
     if (!item) return;
@@ -58,14 +66,15 @@
     if (button) button.disabled = true;
     if (badge) badge.textContent = '載入中';
     try {
-      const res = await fetch(BANK_PATHS[level], { cache: 'no-store' });
+      const chapter = CHAPTERS[currentChapterKey];
+      const res = await fetch(`${chapter.path}/practice-${level}.json`, { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
       if (questions.length !== 10) throw new Error('題庫題數異常');
       if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
-      const key = data.exam?.difficulty || `social-7-1-geo01-${level}`;
+      const key = data.exam?.difficulty || `social-7-1-${currentChapterKey.replace('-', '')}-${level}`;
       banks[key] = questions;
       window.examContexts = window.examContexts || {};
       window.examContexts[key] = {
@@ -93,13 +102,14 @@
   function renderSocialGeo01Menu() {
     const content = $('#catalogContent');
     if (!content) return;
-    if ($('#catalogHeaderTitle')) $('#catalogHeaderTitle').textContent = '社會七上｜地理第1章';
-    if ($('#catalogHeaderSub')) $('#catalogHeaderSub').textContent = '認識位置與地圖｜選擇難度';
-    document.title = '第1章 認識位置與地圖｜社會七上';
+    const chapter = CHAPTERS[currentChapterKey];
+    if ($('#catalogHeaderTitle')) $('#catalogHeaderTitle').textContent = `社會七上｜地理${chapter.title.split('　')[0]}`;
+    if ($('#catalogHeaderSub')) $('#catalogHeaderSub').textContent = chapter.subtitle;
+    document.title = `${chapter.title.replace('　',' ')}｜社會七上`;
     content.innerHTML = `
       <button class="catalog-back" id="backSocialGeo01Btn">← 返回地理章節</button>
-      <div class="catalog-path">社會　›　地理　›　七年級上學期（一上）　›　第一冊　›　第1章 認識位置與地圖</div>
-      <h2 class="catalog-title">第1章　認識位置與地圖</h2>
+      <div class="catalog-path">社會　›　地理　›　七年級上學期（一上）　›　第一冊　›　${chapter.title}</div>
+      <h2 class="catalog-title">${chapter.title}</h2>
       <p class="catalog-sub">目前先以文字選擇題為主；每個難度 10 題，每題 10 分。</p>
       <div class="catalog-grid">
         ${Object.entries(LEVELS).map(([key, item]) => `
@@ -112,7 +122,8 @@
     showCatalog();
   }
 
-  function openSocialGeo01Menu() {
+  function openSocialGeo01Menu(chapterKey = 'geo-01') {
+    currentChapterKey = chapterKey;
     saveChapterView();
     renderSocialGeo01Menu();
   }
@@ -122,10 +133,10 @@
   }
 
   document.addEventListener('click', event => {
-    const chapter = event.target.closest?.('[data-social-chapter="geo-01"]');
+    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"]');
     if (!chapter) return;
     event.preventDefault();
     event.stopImmediatePropagation();
-    openSocialGeo01Menu();
+    openSocialGeo01Menu(chapter.getAttribute('data-social-chapter'));
   }, true);
 })();
