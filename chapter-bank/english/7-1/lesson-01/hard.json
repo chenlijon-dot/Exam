@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-01-hard",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 1",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 1｜Who’s That Young Man?｜困難",
+    "subtitle": "15 題｜整合判讀與情境推論",
+    "unit": "英文七上｜Lesson 1",
+    "difficulty": "english-7-1-lesson-01-hard",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 1 教材參考資料自編；題型參考 GEPT 初級整合式詞彙、結構與短文判讀四選一形式，非官方 GEPT 試題。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "整合應用",
+      "q": "Mia is David’s mother. David is Leo’s father. Mia is Leo’s _____.",
+      "o": [
+        "aunt",
+        "grandmother",
+        "cousin",
+        "daughter"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family",
+        "english-7-1-l1-reasoning"
+      ],
+      "e": "答案是 (B) grandmother。Mia 是 David 的母親，而 David 是 Leo 的父親，所以 Mia 是 Leo 的 grandmother。"
+    },
+    {
+      "number": 2,
+      "q": "Mr. and Mrs. Wang are Tina’s parents. Tina is their _____.",
+      "o": [
+        "daughter",
+        "wife",
+        "aunt",
+        "mother"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family",
+        "english-7-1-l1-reasoning"
+      ],
+      "e": "答案是 (A) daughter。Tina 是這對父母的女兒。"
+    },
+    {
+      "number": 3,
+      "q": "A: Is that man your father?  B: No, _____. He is my uncle.",
+      "o": [
+        "he is",
+        "he isn’t",
+        "he aren’t",
+        "he not"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be-answer",
+        "english-7-1-l1-context"
+      ],
+      "e": "答案是 (B) he isn’t。後句說 He is my uncle，表示前面的 father 判斷是否定。"
+    },
+    {
+      "number": 4,
+      "q": "Which sentence is grammatically correct?",
+      "o": [
+        "He is a young man.",
+        "He is young man.",
+        "He a young man is.",
+        "He is a man young."
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-adjective",
+        "english-7-1-l1-noun-phrase"
+      ],
+      "e": "答案是 (A) He is a young man.。單數可數名詞 man 前需要冠詞，形容詞 young 放在名詞前。"
+    },
+    {
+      "number": 5,
+      "q": "A: _____  B: She is my sister, Bella.",
+      "o": [
+        "Who is she?",
+        "Is she young?",
+        "Is she a teacher?",
+        "Who are you?"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-who",
+        "english-7-1-l1-context"
+      ],
+      "e": "答案是 (A) Who is she?。回答同時提供姓名與關係，最符合 Who 問句。"
+    },
+    {
+      "number": 6,
+      "q": "Bella is nice, but her teacher is very strict. Which sentence is true?",
+      "o": [
+        "Bella is strict.",
+        "The teacher is strict.",
+        "Bella is not nice.",
+        "The teacher is Bella’s sister."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-adjective",
+        "english-7-1-l1-reading"
+      ],
+      "e": "答案是 (B) The teacher is strict.。題幹直接指出 her teacher is very strict。"
+    },
+    {
+      "number": 7,
+      "q": "Kevin is a junior high school student. His father is a nurse, his mother is a doctor, and his sister is an English teacher. Who works at a school?",
+      "o": [
+        "Kevin’s father",
+        "Kevin’s mother",
+        "Kevin’s sister",
+        "Kevin"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-occupation",
+        "english-7-1-l1-inference"
+      ],
+      "e": "答案是 (C) Kevin’s sister。English teacher 最符合在學校工作的職業；這題需要由職業做情境判讀。"
+    },
+    {
+      "number": 8,
+      "q": "Kevin is a junior high school student. His father is a nurse, and his mother is a doctor. Which statement is correct?",
+      "o": [
+        "Kevin’s father is a doctor.",
+        "Kevin’s mother is a nurse.",
+        "Kevin’s parents work in health care.",
+        "Kevin is a teacher."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-occupation",
+        "english-7-1-l1-inference"
+      ],
+      "e": "答案是 (C)。nurse 與 doctor 都是醫療相關職業，因此可推知 Kevin 的父母都從事 health care 相關工作。"
+    },
+    {
+      "number": 9,
+      "q": "In a family paragraph, you need to find Paul’s job as fast as possible. Which reading action best matches Scanning?",
+      "o": [
+        "Read every sentence aloud twice.",
+        "Look for “Paul” first, then check the nearby job word.",
+        "Translate every word into Chinese.",
+        "Read only the title and guess."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-scanning"
+      ],
+      "e": "答案是 (B)。Scanning 是先鎖定關鍵字，再快速定位特定資訊；找 Paul 的工作就先掃 Paul。"
+    },
+    {
+      "number": 10,
+      "q": "Which word does NOT have the same vowel sound as the other three in Lesson 1?",
+      "o": [
+        "cat",
+        "hat",
+        "man",
+        "name"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-pronunciation"
+      ],
+      "e": "答案是 (D) name。cat, hat, man 為 /æ/；name 在教材中屬 a_e /e/。"
+    },
+    {
+      "number": 11,
+      "q": "Which pair has the same vowel sound in Lesson 1?",
+      "o": [
+        "cat — cake",
+        "man — name",
+        "rain — cake",
+        "hat — day"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-pronunciation"
+      ],
+      "e": "答案是 (C) rain — cake。教材中 ai 與 a_e 這兩組例字都標示為 /e/。"
+    },
+    {
+      "number": 12,
+      "q": "Choose the best correction for: “Who he is?”",
+      "o": [
+        "Who is he?",
+        "Who he’s?",
+        "Who are he?",
+        "He who is?"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-who",
+        "english-7-1-l1-word-order"
+      ],
+      "e": "答案是 (A) Who is he?。Who 問句的基本語序是 Who + be + subject?"
+    },
+    {
+      "number": 13,
+      "q": "This is Nick. _____ a student, and his father _____ a nurse.",
+      "o": [
+        "He’s / is",
+        "He / are",
+        "He’s / are",
+        "His / is"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be",
+        "english-7-1-l1-pronoun"
+      ],
+      "e": "答案是 (A) He’s / is。He’s = He is；his father 為單數，搭配 is。"
+    },
+    {
+      "number": 14,
+      "q": "A: Nice to meet you.  B: Nice to meet you, too. What is the situation most likely about?",
+      "o": [
+        "Two people meet for the first time.",
+        "Someone asks about age.",
+        "Someone asks about a job only.",
+        "Someone says goodbye at night."
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-dialogue",
+        "english-7-1-l1-context"
+      ],
+      "e": "答案是 (A)。Nice to meet you 是初次見面時常用的招呼語。"
+    },
+    {
+      "number": 15,
+      "q": "Paul is Nick’s father. Lily is Nick’s mother. Bella is Nick’s sister. Who is Paul’s daughter?",
+      "o": [
+        "Lily",
+        "Bella",
+        "Nick",
+        "Abby"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family",
+        "english-7-1-l1-reading",
+        "english-7-1-l1-reasoning"
+      ],
+      "e": "答案是 (B) Bella。Bella 是 Nick 的姊妹，而 Paul 是 Nick 的父親，因此 Bella 也是 Paul 的 daughter。"
+    }
+  ]
+}
