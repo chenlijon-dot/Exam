@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-01-medium",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 1",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 1｜Who’s That Young Man?｜中等",
+    "subtitle": "15 題｜情境應用與閱讀定位",
+    "unit": "英文七上｜Lesson 1",
+    "difficulty": "english-7-1-lesson-01-medium",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 1 教材參考資料自編；題型參考 GEPT 初級情境式詞彙與結構四選一形式，非官方 GEPT 試題。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "詞彙與結構",
+      "q": "Mr. Chen is my mother’s father. He is my _____.",
+      "o": [
+        "grandfather",
+        "uncle",
+        "cousin",
+        "husband"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family"
+      ],
+      "e": "答案是 (A) grandfather。mother’s father 就是外祖父／祖父輩，英文用 grandfather。"
+    },
+    {
+      "number": 2,
+      "q": "Amy is my uncle’s daughter. Amy is my _____.",
+      "o": [
+        "aunt",
+        "mother",
+        "cousin",
+        "wife"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-family"
+      ],
+      "e": "答案是 (C) cousin。叔叔／舅舅的女兒是堂／表姊妹，英文為 cousin。"
+    },
+    {
+      "number": 3,
+      "q": "_____ your brother a junior high school student?",
+      "o": [
+        "Am",
+        "Are",
+        "Is",
+        "Be"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be-question"
+      ],
+      "e": "答案是 (C) Is。your brother 是單數第三人稱，Yes/No 問句把 Is 放句首。"
+    },
+    {
+      "number": 4,
+      "q": "Is Kevin a student? — Yes, _____.",
+      "o": [
+        "he is",
+        "he’s not",
+        "he isn’t",
+        "he are"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be-answer"
+      ],
+      "e": "答案是 (A) he is。Is he...? 的肯定簡答是 Yes, he is."
+    },
+    {
+      "number": 5,
+      "q": "Is Amy a doctor? — No, _____. She is a nurse.",
+      "o": [
+        "she is",
+        "she isn’t",
+        "she aren’t",
+        "she am not"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-be-answer"
+      ],
+      "e": "答案是 (B) she isn’t。Is she...? 的否定簡答可用 No, she isn’t."
+    },
+    {
+      "number": 6,
+      "q": "Mr. Wu is strict. He is a _____ teacher.",
+      "o": [
+        "teacher strict",
+        "strict",
+        "strictly",
+        "strict"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-adjective"
+      ],
+      "e": "答案是 (D) strict。形容詞放在名詞 teacher 前：a strict teacher。"
+    },
+    {
+      "number": 7,
+      "q": "Which sentence is correct?",
+      "o": [
+        "He young is.",
+        "He is young.",
+        "He is a young.",
+        "He young man is."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-adjective",
+        "english-7-1-l1-be"
+      ],
+      "e": "答案是 (B) He is young.。Lesson 1 的基本句型是 S + be + Adj."
+    },
+    {
+      "number": 8,
+      "q": "_____ is that woman? — She is my English teacher.",
+      "o": [
+        "Who",
+        "What",
+        "How old",
+        "Where"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-who"
+      ],
+      "e": "答案是 (A) Who。這裡要問「那位女士是誰／什麼關係」，用 Who。"
+    },
+    {
+      "number": 9,
+      "q": "Which sentence has the correct contraction?",
+      "o": [
+        "Whos he?",
+        "Who’s he?",
+        "Who’re he?",
+        "Who he’s?"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-who",
+        "english-7-1-l1-contraction"
+      ],
+      "e": "答案是 (B) Who’s he?。Who is 可縮寫成 Who’s。"
+    },
+    {
+      "number": 10,
+      "q": "Scott teaches PE at school. Scott is a _____.",
+      "o": [
+        "PE teacher",
+        "doctor",
+        "farmer",
+        "cook"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-occupation",
+        "english-7-1-l1-context"
+      ],
+      "e": "答案是 (A) PE teacher。由 teaches PE at school 可判斷 Scott 是體育老師。"
+    },
+    {
+      "number": 11,
+      "q": "In “The Lins,” which pair is correct?",
+      "o": [
+        "Paul — nurse",
+        "Lily — cook",
+        "Bella — doctor",
+        "Grandfather — teacher"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-reading",
+        "english-7-1-l1-scanning"
+      ],
+      "e": "答案是 (A) Paul — nurse。其餘配對與教材人物職業不符。"
+    },
+    {
+      "number": 12,
+      "q": "You want to find Nick’s mother’s job quickly in a passage. What should you scan for first?",
+      "o": [
+        "Every punctuation mark",
+        "The name Lily and job words",
+        "Only the last sentence",
+        "Only adjectives"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-scanning"
+      ],
+      "e": "答案是 (B)。Scanning 的重點是先決定關鍵字；要找 Nick 母親的職業，可先鎖定 Lily 與職業相關字。"
+    },
+    {
+      "number": 13,
+      "q": "Which word has the same vowel sound as “name” in Lesson 1?",
+      "o": [
+        "cat",
+        "hat",
+        "cake",
+        "man"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-pronunciation"
+      ],
+      "e": "答案是 (C) cake。name 與 cake 都屬教材中的 a_e /e/ 類型。"
+    },
+    {
+      "number": 14,
+      "q": "Choose the best sentence.",
+      "o": [
+        "Lily is beautiful woman.",
+        "Lily is a beautiful woman.",
+        "Lily a beautiful is woman.",
+        "Lily is woman beautiful."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-adjective",
+        "english-7-1-l1-noun-phrase"
+      ],
+      "e": "答案是 (B) Lily is a beautiful woman.。名詞片語為 a + adjective + noun。"
+    },
+    {
+      "number": 15,
+      "q": "A: Nice to meet you.  B: _____",
+      "o": [
+        "Nice to meet you, too.",
+        "I am not.",
+        "Who is he?",
+        "He is young."
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l1-dialogue"
+      ],
+      "e": "答案是 (A) Nice to meet you, too.。這是 Lesson 1 初次見面的常用回應。"
+    }
+  ]
+}
