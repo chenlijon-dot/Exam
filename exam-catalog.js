@@ -31,8 +31,9 @@
   const ENGLISH_7_1_LESSONS = [
     {
       key: 'english-7-1-get-ready', code: 'Get Ready', title: '哈囉你好嗎？', page: 1,
-      type: 'ready', referenceReady: false, bankMenuReady: false,
-      desc: '字母、複習國小英語、英文書寫原則；目錄與課程大綱已確認。'
+      type: 'ready', referenceReady: true, bankMenuReady: false,
+      referencePath: 'chapter-bank/english/7-1/get-ready/reference.json',
+      desc: '字母、招呼、基本介紹、姓名、年齡與英文書寫原則；僅提供教材參考資料，不建立章節題庫。'
     },
     {
       key: 'english-7-1-lesson-01', code: 'Lesson 1', title: 'Who’s That Young Man?', page: 9,
