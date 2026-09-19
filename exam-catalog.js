@@ -269,7 +269,7 @@
       name: '地理', icon: '🗺️', partTitle: '臺灣的環境（上）',
       chapters: [
         { key: 'geo-01', code: '第1章', title: '認識位置與地圖', page: 8, type: 'chapter', referenceReady: true, detail: 'p.6～21 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
-        { key: 'geo-02', code: '第2章', title: '世界中的臺灣', page: 22, type: 'chapter' },
+        { key: 'geo-02', code: '第2章', title: '世界中的臺灣', page: 22, type: 'chapter', referenceReady: true, detail: 'p.22～33 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
         { key: 'geo-inquiry-01', code: '問題探究', title: '立足臺灣、連結世界', page: 32, type: 'inquiry' },
         { key: 'geo-03', code: '第3章', title: '地形', page: 34, type: 'chapter' },
         { key: 'geo-04', code: '第4章', title: '海岸與島嶼', page: 48, type: 'chapter' },
