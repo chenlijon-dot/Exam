@@ -268,7 +268,7 @@
     geography: {
       name: '地理', icon: '🗺️', partTitle: '臺灣的環境（上）',
       chapters: [
-        { key: 'geo-01', code: '第1章', title: '認識位置與地圖', page: 8, type: 'chapter' },
+        { key: 'geo-01', code: '第1章', title: '認識位置與地圖', page: 8, type: 'chapter', referenceReady: true, detail: 'p.6～21 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
         { key: 'geo-02', code: '第2章', title: '世界中的臺灣', page: 22, type: 'chapter' },
         { key: 'geo-inquiry-01', code: '問題探究', title: '立足臺灣、連結世界', page: 32, type: 'inquiry' },
         { key: 'geo-03', code: '第3章', title: '地形', page: 34, type: 'chapter' },
@@ -455,8 +455,8 @@
       <div class="catalog-grid">
         ${area.chapters.map(chapter => `
           <button class="catalog-card chapter-card" data-social-chapter="${chapter.key}">
-            <span class="top"><strong>${chapter.code}　${chapter.title}</strong><span class="catalog-badge reference">目錄已確認</span></span>
-            <span class="desc">課本起始頁 p.${chapter.page}</span>
+            <span class="top"><strong>${chapter.code}　${chapter.title}</strong><span class="catalog-badge ${chapter.referenceReady ? 'reference' : 'reference'}">${chapter.referenceReady ? '教材已收錄' : '目錄已確認'}</span></span>
+            <span class="desc">課本起始頁 p.${chapter.page}${chapter.detail ? '｜' + chapter.detail : ''}</span>
           </button>`).join('')}
       </div>`;
     $('#backSocialSemestersBtn')?.addEventListener('click', () => showSocialSemesters(areaKey));
@@ -475,11 +475,11 @@
       <button class="catalog-back" id="backSocial71ChaptersBtn">← 返回章節</button>
       <div class="catalog-path">社會　›　${area.name}　›　七年級上學期（一上）　›　第一冊　›　${chapter.code} ${chapter.title}</div>
       <h2 class="catalog-title">${chapter.code}　${chapter.title}</h2>
-      <p class="catalog-sub">課本起始頁 p.${chapter.page}｜目前僅完成目錄定位，教材內容與題庫待後續收錄。</p>
+      <p class="catalog-sub">課本起始頁 p.${chapter.page}｜${chapter.referenceReady ? '教材原圖、辨識檔與 canonical 教材知識庫已建立；題庫待後續建置。' : '目前僅完成目錄定位，教材內容與題庫待後續收錄。'}</p>
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" disabled>
-          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge soon">待收錄</span></span>
-          <span class="desc">收到本章課本／講義後，依教材整理 SOP 建立辨識檔與 canonical 教材知識庫。</span>
+          <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge ${chapter.referenceReady ? 'reference' : 'soon'}">${chapter.referenceReady ? '已收錄' : '待收錄'}</span></span>
+          <span class="desc">${chapter.referenceReady ? '原始教材影像已歸檔，教材辨識檔與 canonical 教材知識庫已建立。' : '收到本章課本／講義後，依教材整理 SOP 建立辨識檔與 canonical 教材知識庫。'}</span>
         </button>
         <button class="catalog-card chapter-card" disabled>
           <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge soon">待建</span></span>
