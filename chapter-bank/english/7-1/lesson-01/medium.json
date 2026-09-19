@@ -102,17 +102,17 @@
       "number": 6,
       "q": "Mr. Wu is strict. He is a _____ teacher.",
       "o": [
+        "strict teacher",
         "teacher strict",
-        "strict",
-        "strictly",
-        "strict"
+        "strictly teacher",
+        "teacher strictly"
       ],
-      "a": 3,
+      "a": 0,
       "fixedOptions": false,
       "conceptIds": [
         "english-7-1-l1-adjective"
       ],
-      "e": "答案是 (D) strict。形容詞放在名詞 teacher 前：a strict teacher。"
+      "e": "答案是 (A) strict teacher。形容詞 strict 放在名詞 teacher 前，組成 a strict teacher。"
     },
     {
       "number": 7,
