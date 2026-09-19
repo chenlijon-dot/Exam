@@ -591,18 +591,23 @@
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" id="englishLessonReferenceBtn" ${lesson.referenceReady && lesson.referencePath ? '' : 'disabled'}>
           <span class="top"><strong>📚 教材參考資料</strong><span class="catalog-badge ${lesson.referenceReady ? 'reference' : 'soon'}">${lesson.referenceReady ? '已整理' : '待收錄'}</span></span>
-          <span class="desc">${lesson.referenceReady ? '查看本課字彙、文法、閱讀、發音與考試重點整理。' : lesson.desc + ' 後續依實體課本逐頁建立教材辨識檔與 canonical 教材知識庫。'}</span>
+          <span class="desc">${lesson.referenceReady
+            ? (lesson.type === 'ready'
+              ? '查看字母、招呼、自我介紹、姓名、年齡與英文書寫原則整理。'
+              : '查看本課字彙、文法、閱讀、發音與考試重點整理。')
+            : lesson.desc + ' 後續依實體課本逐頁建立教材辨識檔與 canonical 教材知識庫。'}</span>
         </button>
+        ${lesson.type === 'ready' ? '' : `
         <button class="catalog-card chapter-card" id="englishLessonBankBtn" ${lesson.bankMenuReady && lesson.banks ? '' : 'disabled'}>
           <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge ${lesson.bankMenuReady ? 'reference' : 'soon'}">${lesson.bankMenuReady ? '45 題已建立' : '待建'}</span></span>
           <span class="desc">${lesson.bankMenuReady ? '簡易、中等、困難各 15 題；四選一並附逐題詳解。' : '教材內容確認後，再建立單字、文法、閱讀與各校段考拆解題。'}</span>
-        </button>
+        </button>`}
       </div>`;
     $('#backEnglish71LessonsBtn')?.addEventListener('click', showEnglish71Lessons);
     if (lesson.referenceReady && lesson.referencePath) {
       $('#englishLessonReferenceBtn')?.addEventListener('click', () => showEnglishLessonReference(lessonKey));
     }
-    if (lesson.bankMenuReady && lesson.banks) {
+    if (lesson.type !== 'ready' && lesson.bankMenuReady && lesson.banks) {
       $('#englishLessonBankBtn')?.addEventListener('click', () => showEnglishLessonBanks(lessonKey));
     }
   }
