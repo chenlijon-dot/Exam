@@ -981,7 +981,7 @@ q32-2.png
 
 待完成：
 出版社／學年度／版次確認
-自編題庫
+圖像型題目與地圖判讀題擴充
 各校段考 chapter mapping
 machine-readable curriculum 同步
 ```
@@ -1167,6 +1167,7 @@ assets/math/*.png
 - [x] 自然七上 chapter tree
 - [x] 社會七上第一冊 chapter tree（地理／歷史／公民）
 - [x] 社會地理第1章〈認識位置與地圖〉教材 canonical（p.6～21）
+- [x] 社會地理第1章〈認識位置與地圖〉文字自編題庫：簡易／中等／困難各 10 題，共 30 題
 - [x] 自然 1-2／1-3 canonical 與題庫工作流開始實作
 - [x] 各校段考拆題 SOP
 - [x] 正式歷屆考題 SOP
