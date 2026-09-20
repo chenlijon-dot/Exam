@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-hard",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-2 正負數的加減",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "title": "1-2 正負數的加減｜困難",
+    "subtitle": "10 題｜絕對值方程、等距反推、中點與綜合推理",
+    "unit": "數學七上｜單元 1 數與數線｜1-2 正負數的加減",
+    "difficulty": "math-7-1-1-2-hard",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」的題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。需要數線者使用 Exam number-line SVG renderer 即時繪製。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "若 a<0<b，且 |a|=7、|b|=3，則 a+b 的值為何？",
+      "o": [
+        "-10",
+        "-4",
+        "4",
+        "10"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-signed-numbers",
+        "math-7-1-1-2-absolute-value"
+      ],
+      "e": "a=-7，b=3，所以 a+b=-4。"
+    },
+    {
+      "number": 2,
+      "q": "若 |x-2|=5，則 x 可能為哪一組數？",
+      "o": [
+        "7 或 -3",
+        "5 或 -5",
+        "3 或 -7",
+        "2 或 -5"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-equidistant",
+        "math-7-1-1-2-absolute-value"
+      ],
+      "e": "|x-2|=5 表示 x 距離 2 為 5，所以 x=2+5=7 或 x=2-5=-3。"
+    },
+    {
+      "number": 3,
+      "q": "若 |x+4|=6，則 x 可能為哪一組數？",
+      "o": [
+        "10 或 -2",
+        "2 或 -10",
+        "6 或 -4",
+        "4 或 -6"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-equidistant",
+        "math-7-1-1-2-absolute-value"
+      ],
+      "e": "|x+4|=|x-(-4)|=6，表示 x 距離 -4 為 6，所以 x=2 或 -10。"
+    },
+    {
+      "number": 4,
+      "q": "如圖，A 點表示 -8，B 點表示 4。M 是 A、B 的中點，N 表示 M 的相反數。N 表示哪一個數？",
+      "o": [
+        "-2",
+        "0",
+        "2",
+        "6"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-midpoint",
+        "math-7-1-1-2-opposite-number"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -9,
+        "max": 5,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -8,
+            "label": "A",
+            "style": "solid"
+          },
+          {
+            "x": 4,
+            "label": "B",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "M=[(-8)+4]/2=-2，N 是 M 的相反數，所以 N=2。"
+    },
+    {
+      "number": 5,
+      "q": "如圖，A 點表示 -6，C 點表示 4，B 是 A、C 的中點。則 AB 的長度是多少？",
+      "o": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-midpoint",
+        "math-7-1-1-2-distance"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -7,
+        "max": 5,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -6,
+            "label": "A",
+            "style": "solid"
+          },
+          {
+            "x": 4,
+            "label": "C",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "AC=|-6-4|=10，中點把線段分成兩半，所以 AB=5。"
+    },
+    {
+      "number": 6,
+      "q": "若 |x-5|=|x+1|，則 x 的值是多少？",
+      "o": [
+        "-3",
+        "1",
+        "2",
+        "3"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-equidistant",
+        "math-7-1-1-2-midpoint"
+      ],
+      "e": "這表示 x 到 5 與 -1 的距離相等，因此 x 是 5 與 -1 的中點：(5+(-1))/2=2。"
+    },
+    {
+      "number": 7,
+      "q": "已知 |a-b|=9，且 a=-4，則 b 可能為哪一組數？",
+      "o": [
+        "5 或 -13",
+        "13 或 -5",
+        "5 或 13",
+        "-5 或 -13"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-distance",
+        "math-7-1-1-2-equidistant"
+      ],
+      "e": "|-4-b|=9 等價於 |b+4|=9，所以 b+4=9 或 -9，得 b=5 或 -13。"
+    },
+    {
+      "number": 8,
+      "q": "一部電梯從地下 3 樓（記為 -3）上升到地上 8 樓（記為 8）。若每相鄰一層視為 1 個單位，電梯共移動多少個單位？",
+      "o": [
+        "5",
+        "8",
+        "11",
+        "13"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-context",
+        "math-7-1-1-2-distance"
+      ],
+      "e": "位移距離為 |8-(-3)|=11，所以共移動 11 個單位。"
+    },
+    {
+      "number": 9,
+      "q": "計算 (-15)-(-8)+6-(-4) 的值。",
+      "o": [
+        "-21",
+        "-5",
+        "3",
+        "13"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-mixed-add-sub",
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "e": "(-15)-(-8)+6-(-4)=-15+8+6+4=3。"
+    },
+    {
+      "number": 10,
+      "q": "已知 a=-3、b=5、c=-2，則 |a-b|+c 的值為何？",
+      "o": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-absolute-value",
+        "math-7-1-1-2-mixed-add-sub"
+      ],
+      "e": "|a-b|=|-3-5|=8，再加 c=-2，得 8+(-2)=6。"
+    }
+  ]
+}
