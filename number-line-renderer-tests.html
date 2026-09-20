@@ -60,11 +60,11 @@ const CASES = [
   },
   {
     title:'Case 10｜正方體 3D 投影',
-    spec:{type:'solid-projection',solid:'cube',size:4,view:{yaw:38,pitch:28,roll:0,projection:'orthographic'},showVertexLabels:true,showHiddenEdges:true}
+    spec:{type:'solid-projection',solid:'cube',size:4,view:{yaw:38,pitch:28,roll:0,projection:'orthographic'},showVertexLabels:true,showHiddenEdges:true,showAxes:false}
   },
   {
     title:'Case 11｜長方體斜投影',
-    spec:{type:'solid-projection',solid:'cuboid',width:5,height:3,depth:4,view:{yaw:30,pitch:22,roll:0,projection:'oblique'},showVertexLabels:true,showHiddenEdges:true}
+    spec:{type:'solid-projection',solid:'cuboid',width:5,height:3,depth:4,view:{yaw:30,pitch:22,roll:0,projection:'oblique'},showVertexLabels:true,showHiddenEdges:true,showAxes:false}
   },
   {
     title:'Case 12｜正方體 + XYZ 空間方向軸',
@@ -88,10 +88,17 @@ const CASES = [
         ['D','E'],['E','F'],['F','D'],
         ['A','D'],['B','E'],['C','F']
       ],
+      faces:[
+        ['A','B','C'],
+        ['D','F','E'],
+        ['A','D','E','B'],
+        ['B','E','F','C'],
+        ['C','F','D','A']
+      ],
       view:{yaw:38,pitch:25,roll:0,projection:'orthographic'},
       showVertexLabels:true,
       showHiddenEdges:true,
-      showAxes:true
+      showAxes:false
     }
   },
   {
@@ -110,10 +117,17 @@ const CASES = [
         ['A','B'],['B','C'],['C','D'],['D','A'],
         ['A','E'],['B','E'],['C','E'],['D','E']
       ],
+      faces:[
+        ['A','D','C','B'],
+        ['A','B','E'],
+        ['B','C','E'],
+        ['C','D','E'],
+        ['D','A','E']
+      ],
       view:{yaw:42,pitch:28,roll:0,projection:'orthographic'},
       showVertexLabels:true,
       showHiddenEdges:true,
-      showAxes:true
+      showAxes:false
     }
   }
 ]
