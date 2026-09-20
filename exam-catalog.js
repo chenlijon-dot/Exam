@@ -295,15 +295,36 @@
     history: {
       name: '歷史', icon: '📜', partTitle: '臺灣的歷史（上）',
       chapters: [
-        { key: 'hist-intro', code: '導言', title: '歷史的基礎概念、歷史熱身操', page: 92, type: 'intro' },
-        { key: 'hist-01', code: '第1章', title: '史前臺灣與原住民文化', page: 96, type: 'chapter' },
-        { key: 'hist-02', code: '第2章', title: '大航海時代各方勢力的競逐', page: 106, type: 'chapter' },
+        {
+          key: 'hist-intro', code: '導言', title: '認識歷史', page: 92, type: 'intro',
+          detail: '歷史的基礎概念（p.92）｜歷史熱身操（p.94）'
+        },
+        {
+          key: 'hist-01', code: '第1章', title: '史前臺灣與原住民文化', page: 96, type: 'chapter',
+          detail: '1-1 考古發掘與史前文化（p.98）｜1-2 臺灣原住民的遷徙與傳說（p.101）'
+        },
+        {
+          key: 'hist-02', code: '第2章', title: '大航海時代各方勢力的競逐', page: 106, type: 'chapter',
+          detail: '2-1 大航海時代的到來（p.108）｜2-2 各方勢力在臺灣的競逐（p.110）'
+        },
         { key: 'hist-inquiry-01', code: '歷史探查', title: '外國人眼中的臺灣', page: 116, type: 'inquiry' },
-        { key: 'hist-03', code: '第3章', title: '大航海時代臺灣原住民與外來者', page: 118, type: 'chapter' },
-        { key: 'hist-04', code: '第4章', title: '清帝國統治政策的變遷', page: 126, type: 'chapter' },
+        {
+          key: 'hist-03', code: '第3章', title: '大航海時代臺灣原住民與外來者', page: 118, type: 'chapter',
+          detail: '3-1 歐洲人與原住民（p.120）｜3-2 鄭氏政權與原住民（p.123）'
+        },
+        {
+          key: 'hist-04', code: '第4章', title: '清帝國統治政策的變遷', page: 126, type: 'chapter',
+          detail: '4-1 清初治臺政策與措施（p.128）｜4-2 外力入侵與現代化建設（p.132）'
+        },
         { key: 'hist-inquiry-02', code: '歷史探查', title: '面對臺灣——從被動到積極的清帝國', page: 138, type: 'inquiry' },
-        { key: 'hist-05', code: '第5章', title: '清帝國時期農商業的發展', page: 140, type: 'chapter' },
-        { key: 'hist-06', code: '第6章', title: '清帝國時期社會文化的變遷', page: 150, type: 'chapter' },
+        {
+          key: 'hist-05', code: '第5章', title: '清帝國時期農商業的發展', page: 140, type: 'chapter',
+          detail: '5-1 農業發展（p.142）｜5-2 商業活動（p.144）'
+        },
+        {
+          key: 'hist-06', code: '第6章', title: '清帝國時期社會文化的變遷', page: 150, type: 'chapter',
+          detail: '6-1 漢人社會與文教的發展（p.152）｜6-2 原住民的社會文化變遷（p.156）'
+        },
         { key: 'hist-inquiry-03', code: '歷史探查', title: '開港通商前後的臺灣社會', page: 160, type: 'inquiry' },
         { key: 'hist-people', code: '人物調查', title: '臺灣歷史人物調查', page: 162, type: 'inquiry' }
       ]
