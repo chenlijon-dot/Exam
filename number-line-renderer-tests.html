@@ -69,6 +69,52 @@ const CASES = [
   {
     title:'Case 12｜正方體 + XYZ 空間方向軸',
     spec:{type:'solid-projection',solid:'cube',size:4,view:{yaw:38,pitch:28,roll:0,projection:'orthographic'},showVertexLabels:true,showHiddenEdges:true,showAxes:true}
+  },
+  {
+    title:'Case 13｜自訂三角柱',
+    spec:{
+      type:'solid-projection',
+      solid:'custom',
+      vertices:{
+        A:{x:0,y:0,z:0},
+        B:{x:4,y:0,z:0},
+        C:{x:2,y:3,z:0},
+        D:{x:0,y:0,z:4},
+        E:{x:4,y:0,z:4},
+        F:{x:2,y:3,z:4}
+      },
+      edges:[
+        ['A','B'],['B','C'],['C','A'],
+        ['D','E'],['E','F'],['F','D'],
+        ['A','D'],['B','E'],['C','F']
+      ],
+      view:{yaw:38,pitch:25,roll:0,projection:'orthographic'},
+      showVertexLabels:true,
+      showHiddenEdges:true,
+      showAxes:true
+    }
+  },
+  {
+    title:'Case 14｜自訂四角錐',
+    spec:{
+      type:'solid-projection',
+      solid:'custom',
+      vertices:{
+        A:{x:0,y:0,z:0},
+        B:{x:4,y:0,z:0},
+        C:{x:4,y:4,z:0},
+        D:{x:0,y:4,z:0},
+        E:{x:2,y:2,z:4}
+      },
+      edges:[
+        ['A','B'],['B','C'],['C','D'],['D','A'],
+        ['A','E'],['B','E'],['C','E'],['D','E']
+      ],
+      view:{yaw:42,pitch:28,roll:0,projection:'orthographic'},
+      showVertexLabels:true,
+      showHiddenEdges:true,
+      showAxes:true
+    }
   }
 ]
 
