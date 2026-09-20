@@ -348,7 +348,8 @@
         },
         {
           key: 'civics-03', code: '第3章', title: '家庭生活', page: 184, type: 'chapter',
-          detail: '3-1 家庭中的親屬關係（p.186）｜3-2 家庭型態與生活模式（p.188）｜3-3 家庭成員的權利與義務（p.190）'
+          referenceReady: true,
+          detail: 'p.184～193 教材已收錄；3-1 家庭中的親屬關係（p.186）｜3-2 家庭型態與生活模式（p.188）｜3-3 家庭成員的權利與義務（p.190）｜課後閱讀與圖解公民已納入；辨識檔、canonical 與簡易／中等／困難各20題已建立'
         },
         {
           key: 'civics-04', code: '第4章', title: '變遷中的家庭', page: 194, type: 'chapter',
