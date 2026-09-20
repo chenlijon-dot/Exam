@@ -3,7 +3,8 @@
 
   const SVG_NS = 'http://www.w3.org/2000/svg';
   const VIEW_W = 760;
-  const VIEW_H = 156;
+  const NL_VIEW_H = 156;
+  const GEO_VIEW_H = 420;
   const AXIS_Y = 82;
   const AXIS_LEFT = 58;
   const AXIS_RIGHT = 702;
@@ -45,14 +46,22 @@
     return null;
   }
 
-  function validateDiagramSpec(spec) {
-    if (!spec || typeof spec !== 'object') {
-      return { ok:false, reason:'diagram spec 必須是物件' };
-    }
-    if (spec.type !== 'number-line') {
-      return { ok:false, reason:`不支援的 diagram type: ${String(spec.type || '')}` };
-    }
+  function pointValue(point, key) {
+    return finiteNumber(point?.[key]);
+  }
 
+  function normalizeVertex(point, fallbackLabel = '') {
+    const x = pointValue(point, 'x');
+    const y = pointValue(point, 'y');
+    if (x === null || y === null) return null;
+    return {
+      x,
+      y,
+      label:point?.label === undefined ? fallbackLabel : String(point.label)
+    };
+  }
+
+  function validateNumberLine(spec) {
     const min = finiteNumber(spec.min);
     const max = finiteNumber(spec.max);
     const tickStep = finiteNumber(spec.tickStep ?? 1);
@@ -76,11 +85,131 @@
         min,
         max,
         tickStep,
-        showNumberLabels: spec.showNumberLabels !== false,
-        showArrows: spec.showArrows !== false,
-        points: Array.isArray(spec.points) ? spec.points : []
+        showNumberLabels:spec.showNumberLabels !== false,
+        showArrows:spec.showArrows !== false,
+        points:Array.isArray(spec.points) ? spec.points : []
       }
     };
+  }
+
+  function validateTriangle(spec) {
+    const vertices = Array.isArray(spec.vertices)
+      ? spec.vertices.map((point, index) => normalizeVertex(point, ['A','B','C'][index] || '')).filter(Boolean)
+      : [];
+
+    if (vertices.length !== 3) {
+      return { ok:false, reason:'triangle 需要正好 3 個 vertices' };
+    }
+    return { ok:true, value:{ ...spec, vertices, showVertexLabels:spec.showVertexLabels !== false } };
+  }
+
+  function validateSquare(spec) {
+    let vertices = [];
+    if (Array.isArray(spec.vertices)) {
+      vertices = spec.vertices.map((point, index) =>
+        normalizeVertex(point, ['A','B','C','D'][index] || '')
+      ).filter(Boolean);
+      if (vertices.length !== 4) {
+        return { ok:false, reason:'square 使用 vertices 時需要正好 4 個頂點' };
+      }
+    } else {
+      const x = finiteNumber(spec.x ?? 0);
+      const y = finiteNumber(spec.y ?? 0);
+      const size = finiteNumber(spec.size);
+      if (x === null || y === null || size === null || size <= 0) {
+        return { ok:false, reason:'square 需要 4 個 vertices，或有效的 x/y/size' };
+      }
+      vertices = [
+        { x, y, label:'A' },
+        { x:x + size, y, label:'B' },
+        { x:x + size, y:y + size, label:'C' },
+        { x, y:y + size, label:'D' }
+      ];
+    }
+    return { ok:true, value:{ ...spec, vertices, showVertexLabels:spec.showVertexLabels !== false } };
+  }
+
+  function validateCircle(spec) {
+    const centerSource = spec.center || { x:spec.cx ?? 0, y:spec.cy ?? 0, label:spec.centerLabel || 'O' };
+    const center = normalizeVertex(centerSource, 'O');
+    const radius = finiteNumber(spec.radius);
+    if (!center || radius === null || radius <= 0) {
+      return { ok:false, reason:'circle 需要有效 center 與 radius > 0' };
+    }
+
+    const points = Array.isArray(spec.points)
+      ? spec.points.map(point => normalizeVertex(point, '')).filter(Boolean)
+      : [];
+
+    return {
+      ok:true,
+      value:{
+        ...spec,
+        center,
+        radius,
+        points,
+        showCenter:spec.showCenter !== false,
+        showVertexLabels:spec.showVertexLabels !== false
+      }
+    };
+  }
+
+  function validateCoordinatePlane(spec) {
+    const xMin = finiteNumber(spec.xMin ?? -5);
+    const xMax = finiteNumber(spec.xMax ?? 5);
+    const yMin = finiteNumber(spec.yMin ?? -5);
+    const yMax = finiteNumber(spec.yMax ?? 5);
+    const tickStep = finiteNumber(spec.tickStep ?? 1);
+
+    if (
+      xMin === null || xMax === null || yMin === null || yMax === null ||
+      !(xMax > xMin) || !(yMax > yMin)
+    ) {
+      return { ok:false, reason:'coordinate-plane 需要 xMax>xMin 且 yMax>yMin' };
+    }
+    if (tickStep === null || tickStep <= 0) {
+      return { ok:false, reason:'coordinate-plane tickStep 必須大於 0' };
+    }
+
+    const xTicks = Math.floor((xMax - xMin) / tickStep + 1e-9) + 1;
+    const yTicks = Math.floor((yMax - yMin) / tickStep + 1e-9) + 1;
+    if (xTicks > MAX_TICKS || yTicks > MAX_TICKS) {
+      return { ok:false, reason:'coordinate-plane 刻度數量過多' };
+    }
+
+    return {
+      ok:true,
+      value:{
+        ...spec,
+        xMin,
+        xMax,
+        yMin,
+        yMax,
+        tickStep,
+        showGrid:spec.showGrid !== false,
+        showNumberLabels:spec.showNumberLabels !== false,
+        points:Array.isArray(spec.points) ? spec.points : [],
+        segments:Array.isArray(spec.segments) ? spec.segments : []
+      }
+    };
+  }
+
+  function validateDiagramSpec(spec) {
+    if (!spec || typeof spec !== 'object') {
+      return { ok:false, reason:'diagram spec 必須是物件' };
+    }
+
+    switch (spec.type) {
+      case 'number-line': return validateNumberLine(spec);
+      case 'triangle': return validateTriangle(spec);
+      case 'square': return validateSquare(spec);
+      case 'circle': return validateCircle(spec);
+      case 'coordinate-plane':
+      case 'xy-plane':
+        return validateCoordinatePlane({ ...spec, type:'coordinate-plane' });
+      default:
+        return { ok:false, reason:`不支援的 diagram type: ${String(spec.type || '')}` };
+    }
   }
 
   function enumerateTicks(min, max, step) {
@@ -99,25 +228,33 @@
     return ticks;
   }
 
-  function ariaDescription(spec) {
+  function createSvg(height, ariaLabel) {
+    return svgEl('svg', {
+      viewBox:`0 0 ${VIEW_W} ${height}`,
+      width:'100%',
+      role:'img',
+      'aria-label':ariaLabel,
+      preserveAspectRatio:'xMidYMid meet'
+    });
+  }
+
+  function numberLineAria(spec) {
     if (spec.ariaLabel) return String(spec.ariaLabel);
     const parts = [`數線，範圍 ${formatNumber(spec.min)} 到 ${formatNumber(spec.max)}`];
 
     const validPoints = spec.points
       .map(point => ({
-        x: finiteNumber(point?.x),
-        label: point?.label ? String(point.label) : ''
+        x:finiteNumber(point?.x),
+        label:point?.label ? String(point.label) : ''
       }))
       .filter(point => point.x !== null && point.x >= spec.min && point.x <= spec.max);
 
     if (validPoints.length) {
-      parts.push(
-        validPoints.map(point =>
-          point.label
-            ? `${point.label} 點在 ${formatNumber(point.x)}`
-            : `標記點在 ${formatNumber(point.x)}`
-        ).join('，')
-      );
+      parts.push(validPoints.map(point =>
+        point.label
+          ? `${point.label} 點在 ${formatNumber(point.x)}`
+          : `標記點在 ${formatNumber(point.x)}`
+      ).join('，'));
     }
     return parts.join('；');
   }
@@ -128,50 +265,59 @@
     style.id = 'examDiagramRendererStyles';
     style.textContent = `
       .question-diagram-host,
-      .number-line-diagram{
+      .number-line-diagram,
+      .geometry-diagram,
+      .coordinate-plane-diagram{
         width:100%;
         max-width:760px;
         margin:12px auto 14px;
       }
-      .number-line-diagram svg{
+      .number-line-diagram svg,
+      .geometry-diagram svg,
+      .coordinate-plane-diagram svg{
         display:block;
         width:100%;
         height:auto;
         overflow:visible;
       }
-      .number-line-diagram .nl-axis{
+      .nl-axis,.cp-axis,.geo-edge{
         stroke:#0f172a;
         stroke-width:3;
         vector-effect:non-scaling-stroke;
       }
-      .number-line-diagram .nl-tick{
+      .nl-tick,.cp-tick{
         stroke:#334155;
         stroke-width:2;
         vector-effect:non-scaling-stroke;
       }
-      .number-line-diagram .nl-zero{
-        stroke:#0f172a;
-        stroke-width:3;
-      }
-      .number-line-diagram .nl-number{
+      .nl-zero{stroke:#0f172a;stroke-width:3}
+      .nl-number,.cp-number{
         fill:#334155;
         font:600 17px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
         text-anchor:middle;
       }
-      .number-line-diagram .nl-point-label{
+      .nl-point-label,.geo-label,.cp-label{
         fill:#0f172a;
         font:800 18px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
         text-anchor:middle;
       }
-      .number-line-diagram .nl-point-value{
+      .nl-point-value{
         fill:#475569;
         font:600 14px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
         text-anchor:middle;
       }
-      .number-line-diagram .nl-point{
+      .nl-point,.geo-point,.cp-point{
         stroke:#0f172a;
         stroke-width:2.5;
         vector-effect:non-scaling-stroke;
+      }
+      .geo-fill{fill:#f8fafc;stroke:#0f172a;stroke-width:3;vector-effect:non-scaling-stroke}
+      .geo-center{fill:#0f172a}
+      .cp-grid{stroke:#dbe3ef;stroke-width:1;vector-effect:non-scaling-stroke}
+      .cp-segment{stroke:#2563eb;stroke-width:2.5;vector-effect:non-scaling-stroke}
+      .cp-axis-label{
+        fill:#0f172a;
+        font:800 18px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
       }
       .diagram-fallback{
         margin:12px auto;
@@ -185,8 +331,8 @@
         font-size:.9rem;
       }
       @media(max-width:620px){
-        .number-line-diagram .nl-number{font-size:15px}
-        .number-line-diagram .nl-point-label{font-size:17px}
+        .nl-number,.cp-number{font-size:14px}
+        .nl-point-label,.geo-label,.cp-label{font-size:16px}
       }
     `;
     document.head.appendChild(style);
@@ -194,7 +340,7 @@
 
   function renderNumberLine(container, rawSpec) {
     ensureStyles();
-    const checked = validateDiagramSpec(rawSpec);
+    const checked = validateNumberLine(rawSpec);
     if (!checked.ok) {
       console.warn('[DiagramRenderer]', checked.reason, rawSpec);
       return safeFallback(container);
@@ -205,25 +351,11 @@
     container.innerHTML = '';
     container.classList.add('number-line-diagram');
 
-    const svg = svgEl('svg', {
-      viewBox:`0 0 ${VIEW_W} ${VIEW_H}`,
-      width:'100%',
-      role:'img',
-      'aria-label':ariaDescription(spec),
-      preserveAspectRatio:'xMidYMid meet'
-    });
-
+    const svg = createSvg(NL_VIEW_H, numberLineAria(spec));
     const span = spec.max - spec.min;
-    const xFor = value =>
-      AXIS_LEFT + ((value - spec.min) / span) * (AXIS_RIGHT - AXIS_LEFT);
+    const xFor = value => AXIS_LEFT + ((value - spec.min) / span) * (AXIS_RIGHT - AXIS_LEFT);
 
-    svg.appendChild(svgEl('line', {
-      x1:AXIS_LEFT,
-      y1:AXIS_Y,
-      x2:AXIS_RIGHT,
-      y2:AXIS_Y,
-      class:'nl-axis'
-    }));
+    svg.appendChild(svgEl('line', { x1:AXIS_LEFT, y1:AXIS_Y, x2:AXIS_RIGHT, y2:AXIS_Y, class:'nl-axis' }));
 
     if (spec.showArrows) {
       svg.appendChild(svgEl('polygon', {
@@ -243,22 +375,12 @@
       const x = xFor(value);
       const isZero = Math.abs(value) < 1e-10;
       svg.appendChild(svgEl('line', {
-        x1:x,
-        y1:AXIS_Y - (isZero ? 11 : 8),
-        x2:x,
-        y2:AXIS_Y + (isZero ? 11 : 8),
+        x1:x, y1:AXIS_Y - (isZero ? 11 : 8), x2:x, y2:AXIS_Y + (isZero ? 11 : 8),
         class:isZero ? 'nl-tick nl-zero' : 'nl-tick'
       }));
 
-      if (
-        spec.showNumberLabels &&
-        (index % labelEvery === 0 || index === ticks.length - 1 || isZero)
-      ) {
-        svg.appendChild(svgEl('text', {
-          x,
-          y:AXIS_Y + 31,
-          class:'nl-number'
-        }, formatNumber(value)));
+      if (spec.showNumberLabels && (index % labelEvery === 0 || index === ticks.length - 1 || isZero)) {
+        svg.appendChild(svgEl('text', { x, y:AXIS_Y + 31, class:'nl-number' }, formatNumber(value)));
       }
     });
 
@@ -275,9 +397,7 @@
 
       const x = xFor(value);
       const label = point?.label ? String(point.label) : '';
-      const style = ['solid','hollow','marker'].includes(point?.style)
-        ? point.style
-        : 'solid';
+      const style = ['solid','hollow','marker'].includes(point?.style) ? point.style : 'solid';
 
       if (!label && point?.label !== '') {
         console.warn(`[DiagramRenderer] 第 ${pointIndex + 1} 個 point 缺少 label`);
@@ -290,9 +410,7 @@
         }));
       } else {
         svg.appendChild(svgEl('circle', {
-          cx:x,
-          cy:AXIS_Y,
-          r:6.5,
+          cx:x, cy:AXIS_Y, r:6.5,
           fill:style === 'hollow' ? '#ffffff' : '#0f172a',
           class:'nl-point'
         }));
@@ -300,18 +418,308 @@
 
       if (label) {
         svg.appendChild(svgEl('text', {
-          x,
-          y:point?.showValue ? AXIS_Y - 36 : AXIS_Y - 24,
-          class:'nl-point-label'
+          x, y:point?.showValue ? AXIS_Y - 36 : AXIS_Y - 24, class:'nl-point-label'
         }, label));
       }
 
       if (point?.showValue) {
+        svg.appendChild(svgEl('text', { x, y:AXIS_Y - 19, class:'nl-point-value' }, formatNumber(value)));
+      }
+    });
+
+    container.appendChild(svg);
+    return svg;
+  }
+
+  function geometryBounds(vertices, padding = 1) {
+    const xs = vertices.map(p => p.x);
+    const ys = vertices.map(p => p.y);
+    const minX = Math.min(...xs);
+    const maxX = Math.max(...xs);
+    const minY = Math.min(...ys);
+    const maxY = Math.max(...ys);
+    const spanX = Math.max(1, maxX - minX);
+    const spanY = Math.max(1, maxY - minY);
+    return {
+      minX:minX - spanX * padding * 0.18,
+      maxX:maxX + spanX * padding * 0.18,
+      minY:minY - spanY * padding * 0.22,
+      maxY:maxY + spanY * padding * 0.22
+    };
+  }
+
+  function geometryMapper(bounds) {
+    const left = 90;
+    const right = 670;
+    const top = 48;
+    const bottom = 365;
+    const spanX = Math.max(1e-9, bounds.maxX - bounds.minX);
+    const spanY = Math.max(1e-9, bounds.maxY - bounds.minY);
+    const scale = Math.min((right - left) / spanX, (bottom - top) / spanY);
+    const contentW = spanX * scale;
+    const contentH = spanY * scale;
+    const originX = (VIEW_W - contentW) / 2;
+    const originY = top + (bottom - top - contentH) / 2;
+    return point => ({
+      x:originX + (point.x - bounds.minX) * scale,
+      y:originY + (bounds.maxY - point.y) * scale
+    });
+  }
+
+  function vertexLabelPosition(mapped, center, distance = 22) {
+    let dx = mapped.x - center.x;
+    let dy = mapped.y - center.y;
+    const length = Math.hypot(dx, dy) || 1;
+    dx /= length;
+    dy /= length;
+    return { x:mapped.x + dx * distance, y:mapped.y + dy * distance + 5 };
+  }
+
+  function renderPolygonGeometry(container, rawSpec, type) {
+    ensureStyles();
+    const checked = type === 'triangle' ? validateTriangle(rawSpec) : validateSquare(rawSpec);
+    if (!checked.ok) {
+      console.warn('[DiagramRenderer]', checked.reason, rawSpec);
+      return safeFallback(container);
+    }
+
+    const spec = checked.value;
+    container.innerHTML = '';
+    container.classList.add('geometry-diagram');
+
+    const shapeName = type === 'triangle' ? '三角形' : '正方形';
+    const aria = spec.ariaLabel || `${shapeName}，頂點 ${spec.vertices.map(v => v.label || '').filter(Boolean).join('、')}`;
+    const svg = createSvg(GEO_VIEW_H, aria);
+    const bounds = geometryBounds(spec.vertices);
+    const map = geometryMapper(bounds);
+    const mapped = spec.vertices.map(map);
+    const center = {
+      x:mapped.reduce((sum,p) => sum + p.x, 0) / mapped.length,
+      y:mapped.reduce((sum,p) => sum + p.y, 0) / mapped.length
+    };
+
+    svg.appendChild(svgEl('polygon', {
+      points:mapped.map(p => `${p.x},${p.y}`).join(' '),
+      class:'geo-fill'
+    }));
+
+    mapped.forEach((point, index) => {
+      const vertex = spec.vertices[index];
+      svg.appendChild(svgEl('circle', {
+        cx:point.x, cy:point.y, r:5.5, fill:'#0f172a', class:'geo-point'
+      }));
+
+      if (spec.showVertexLabels && vertex.label) {
+        const labelPos = vertexLabelPosition(point, center);
         svg.appendChild(svgEl('text', {
-          x,
-          y:AXIS_Y - 19,
-          class:'nl-point-value'
+          x:labelPos.x, y:labelPos.y, class:'geo-label'
+        }, vertex.label));
+      }
+    });
+
+    container.appendChild(svg);
+    return svg;
+  }
+
+  function renderTriangle(container, spec) {
+    return renderPolygonGeometry(container, spec, 'triangle');
+  }
+
+  function renderSquare(container, spec) {
+    return renderPolygonGeometry(container, spec, 'square');
+  }
+
+  function renderCircle(container, rawSpec) {
+    ensureStyles();
+    const checked = validateCircle(rawSpec);
+    if (!checked.ok) {
+      console.warn('[DiagramRenderer]', checked.reason, rawSpec);
+      return safeFallback(container);
+    }
+
+    const spec = checked.value;
+    container.innerHTML = '';
+    container.classList.add('geometry-diagram');
+
+    const pointsForBounds = [
+      {x:spec.center.x - spec.radius, y:spec.center.y - spec.radius},
+      {x:spec.center.x + spec.radius, y:spec.center.y + spec.radius},
+      ...spec.points
+    ];
+    const map = geometryMapper(geometryBounds(pointsForBounds, 1.15));
+    const center = map(spec.center);
+    const edge = map({x:spec.center.x + spec.radius, y:spec.center.y});
+    const radiusPx = Math.abs(edge.x - center.x);
+
+    const labels = [
+      spec.showCenter && spec.center.label ? `圓心 ${spec.center.label}` : '',
+      ...spec.points.filter(p => p.label).map(p => `點 ${p.label}`)
+    ].filter(Boolean);
+    const svg = createSvg(GEO_VIEW_H, spec.ariaLabel || `圓形${labels.length ? '，' + labels.join('，') : ''}`);
+
+    svg.appendChild(svgEl('circle', {
+      cx:center.x, cy:center.y, r:radiusPx, class:'geo-fill'
+    }));
+
+    if (spec.showCenter) {
+      svg.appendChild(svgEl('circle', {
+        cx:center.x, cy:center.y, r:5, class:'geo-center'
+      }));
+      if (spec.showVertexLabels && spec.center.label) {
+        svg.appendChild(svgEl('text', {
+          x:center.x + 18, y:center.y - 12, class:'geo-label'
+        }, spec.center.label));
+      }
+    }
+
+    spec.points.forEach(point => {
+      const mapped = map(point);
+      svg.appendChild(svgEl('circle', {
+        cx:mapped.x, cy:mapped.y, r:5.5, fill:'#0f172a', class:'geo-point'
+      }));
+      if (spec.showVertexLabels && point.label) {
+        const dx = mapped.x - center.x;
+        const dy = mapped.y - center.y;
+        const len = Math.hypot(dx, dy) || 1;
+        svg.appendChild(svgEl('text', {
+          x:mapped.x + dx / len * 20,
+          y:mapped.y + dy / len * 20 + 5,
+          class:'geo-label'
+        }, point.label));
+      }
+    });
+
+    container.appendChild(svg);
+    return svg;
+  }
+
+  function renderCoordinatePlane(container, rawSpec) {
+    ensureStyles();
+    const checked = validateCoordinatePlane(rawSpec);
+    if (!checked.ok) {
+      console.warn('[DiagramRenderer]', checked.reason, rawSpec);
+      return safeFallback(container);
+    }
+
+    const spec = checked.value;
+    container.innerHTML = '';
+    container.classList.add('coordinate-plane-diagram');
+
+    const svg = createSvg(GEO_VIEW_H, spec.ariaLabel || `XY 座標平面，x 從 ${formatNumber(spec.xMin)} 到 ${formatNumber(spec.xMax)}，y 從 ${formatNumber(spec.yMin)} 到 ${formatNumber(spec.yMax)}`);
+    const left = 74;
+    const right = 694;
+    const top = 42;
+    const bottom = 360;
+    const xSpan = spec.xMax - spec.xMin;
+    const ySpan = spec.yMax - spec.yMin;
+    const xFor = value => left + ((value - spec.xMin) / xSpan) * (right - left);
+    const yFor = value => bottom - ((value - spec.yMin) / ySpan) * (bottom - top);
+
+    const xTicks = enumerateTicks(spec.xMin, spec.xMax, spec.tickStep);
+    const yTicks = enumerateTicks(spec.yMin, spec.yMax, spec.tickStep);
+    const xLabelEvery = xTicks.length > 17 ? Math.ceil(xTicks.length / 15) : 1;
+    const yLabelEvery = yTicks.length > 13 ? Math.ceil(yTicks.length / 11) : 1;
+
+    if (spec.showGrid) {
+      xTicks.forEach(value => {
+        const x = xFor(value);
+        svg.appendChild(svgEl('line', { x1:x, y1:top, x2:x, y2:bottom, class:'cp-grid' }));
+      });
+      yTicks.forEach(value => {
+        const y = yFor(value);
+        svg.appendChild(svgEl('line', { x1:left, y1:y, x2:right, y2:y, class:'cp-grid' }));
+      });
+    }
+
+    const xAxisY = spec.yMin <= 0 && spec.yMax >= 0 ? yFor(0) : bottom;
+    const yAxisX = spec.xMin <= 0 && spec.xMax >= 0 ? xFor(0) : left;
+
+    svg.appendChild(svgEl('line', { x1:left, y1:xAxisY, x2:right, y2:xAxisY, class:'cp-axis' }));
+    svg.appendChild(svgEl('line', { x1:yAxisX, y1:bottom, x2:yAxisX, y2:top, class:'cp-axis' }));
+
+    svg.appendChild(svgEl('polygon', {
+      points:`${right},${xAxisY} ${right - 12},${xAxisY - 7} ${right - 12},${xAxisY + 7}`,
+      fill:'#0f172a'
+    }));
+    svg.appendChild(svgEl('polygon', {
+      points:`${yAxisX},${top} ${yAxisX - 7},${top + 12} ${yAxisX + 7},${top + 12}`,
+      fill:'#0f172a'
+    }));
+    svg.appendChild(svgEl('text', { x:right - 4, y:xAxisY - 13, class:'cp-axis-label', 'text-anchor':'end' }, 'x'));
+    svg.appendChild(svgEl('text', { x:yAxisX + 12, y:top + 16, class:'cp-axis-label' }, 'y'));
+
+    xTicks.forEach((value, index) => {
+      const x = xFor(value);
+      svg.appendChild(svgEl('line', { x1:x, y1:xAxisY - 5, x2:x, y2:xAxisY + 5, class:'cp-tick' }));
+      if (spec.showNumberLabels && Math.abs(value) > 1e-10 && index % xLabelEvery === 0) {
+        svg.appendChild(svgEl('text', {
+          x, y:Math.min(bottom + 24, xAxisY + 24), class:'cp-number'
         }, formatNumber(value)));
+      }
+    });
+
+    yTicks.forEach((value, index) => {
+      const y = yFor(value);
+      svg.appendChild(svgEl('line', { x1:yAxisX - 5, y1:y, x2:yAxisX + 5, y2:y, class:'cp-tick' }));
+      if (spec.showNumberLabels && Math.abs(value) > 1e-10 && index % yLabelEvery === 0) {
+        const label = svgEl('text', {
+          x:Math.max(left + 14, yAxisX - 12),
+          y:y + 5,
+          class:'cp-number',
+          'text-anchor':'end'
+        }, formatNumber(value));
+        svg.appendChild(label);
+      }
+    });
+
+    if (spec.showNumberLabels && spec.xMin <= 0 && spec.xMax >= 0 && spec.yMin <= 0 && spec.yMax >= 0) {
+      svg.appendChild(svgEl('text', {
+        x:yAxisX - 12, y:xAxisY + 23, class:'cp-number', 'text-anchor':'end'
+      }, '0'));
+    }
+
+    spec.segments.forEach(segment => {
+      const from = normalizeVertex(segment?.from);
+      const to = normalizeVertex(segment?.to);
+      if (!from || !to) return;
+      if (
+        from.x < spec.xMin || from.x > spec.xMax || from.y < spec.yMin || from.y > spec.yMax ||
+        to.x < spec.xMin || to.x > spec.xMax || to.y < spec.yMin || to.y > spec.yMax
+      ) return;
+
+      svg.appendChild(svgEl('line', {
+        x1:xFor(from.x), y1:yFor(from.y),
+        x2:xFor(to.x), y2:yFor(to.y),
+        class:'cp-segment'
+      }));
+    });
+
+    spec.points.forEach(point => {
+      const normalized = normalizeVertex(point);
+      if (!normalized) {
+        console.warn('[DiagramRenderer] coordinate-plane point 格式錯誤', point);
+        return;
+      }
+      if (
+        normalized.x < spec.xMin || normalized.x > spec.xMax ||
+        normalized.y < spec.yMin || normalized.y > spec.yMax
+      ) {
+        console.warn('[DiagramRenderer] coordinate-plane point 超出範圍', point);
+        return;
+      }
+
+      const x = xFor(normalized.x);
+      const y = yFor(normalized.y);
+      const hollow = point?.style === 'hollow';
+      svg.appendChild(svgEl('circle', {
+        cx:x, cy:y, r:6,
+        fill:hollow ? '#ffffff' : '#2563eb',
+        class:'cp-point'
+      }));
+      if (normalized.label) {
+        svg.appendChild(svgEl('text', {
+          x:x + 18, y:y - 12, class:'cp-label'
+        }, normalized.label));
       }
     });
 
@@ -321,21 +729,27 @@
 
   function renderDiagram(container, spec) {
     if (!container) return null;
-    if (!spec || typeof spec !== 'object') {
-      console.warn('[DiagramRenderer] diagram spec 缺失');
+    const checked = validateDiagramSpec(spec);
+    if (!checked.ok) {
+      console.warn('[DiagramRenderer]', checked.reason, spec);
       return safeFallback(container);
     }
 
-    switch (spec.type) {
-      case 'number-line':
-        return renderNumberLine(container, spec);
-      default:
-        console.warn('[DiagramRenderer] 不支援的 diagram type', spec.type);
-        return safeFallback(container);
+    switch (checked.value.type) {
+      case 'number-line': return renderNumberLine(container, checked.value);
+      case 'triangle': return renderTriangle(container, checked.value);
+      case 'square': return renderSquare(container, checked.value);
+      case 'circle': return renderCircle(container, checked.value);
+      case 'coordinate-plane': return renderCoordinatePlane(container, checked.value);
+      default: return safeFallback(container);
     }
   }
 
   window.validateDiagramSpec = validateDiagramSpec;
   window.renderNumberLine = renderNumberLine;
+  window.renderTriangle = renderTriangle;
+  window.renderSquare = renderSquare;
+  window.renderCircle = renderCircle;
+  window.renderCoordinatePlane = renderCoordinatePlane;
   window.renderDiagram = renderDiagram;
 })();
