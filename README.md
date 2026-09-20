@@ -1473,7 +1473,84 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 
 ---
 
-# 26. 目前一句話狀態
+# 26. 自編數學圖形 Renderer
+
+自編數學題的程式生成圖形目前已建立第一個正式 renderer：
+
+```text
+exam-diagram-renderer.js
+→ renderDiagram(container, spec)
+→ renderNumberLine(container, spec)
+→ validateDiagramSpec(spec)
+```
+
+第一版支援 `diagram.type = "number-line"`，用途包含正負數位置、數線讀值、大小比較、相反數、絕對值、兩點距離與未知點等自編題。
+
+題目 JSON 可直接使用：
+
+```json
+{
+  "q": "數線上 A 點表示 -3，B 點表示 2，求 A、B 兩點距離。",
+  "o": ["3", "4", "5", "6"],
+  "a": 2,
+  "diagram": {
+    "type": "number-line",
+    "min": -5,
+    "max": 5,
+    "tickStep": 1,
+    "showNumberLabels": true,
+    "points": [
+      { "x": -3, "label": "A", "style": "solid" },
+      { "x": 2, "label": "B", "style": "solid" }
+    ]
+  }
+}
+```
+
+正式題目 runtime 已直接支援 `question.diagram`，不是額外 runtime patch。顯示優先順序：
+
+```text
+有 image / images
+→ 保留既有原圖流程，原始 evidence 優先
+
+沒有 image / images 且有 diagram
+→ 呼叫 renderDiagram()
+
+兩者皆無
+→ 純文字題
+```
+
+因此正式歷屆題與教材原圖仍使用原始 image assets；SVG renderer 只用於自編題，不取代官方／原卷 evidence。
+
+Number Line v1 已支援：
+
+- 水平數線、左右箭頭、主要刻度與數字標籤。
+- 正數、負數與 0。
+- A/B/C/P/Q 等點標記。
+- `solid`、`hollow`、`marker` 點型。
+- `showValue` 顯示點的數值。
+- SVG `viewBox` responsive 顯示，手機與桌面共用。
+- 自動 ARIA 描述。
+- 非法 `type`、`min >= max`、`tickStep <= 0`、過多刻度與越界點的安全防呆；不使整頁 crash。
+
+5 個 smoke test 放在：
+
+```text
+number-line-renderer-tests.html
+```
+
+測試涵蓋 `-5～5`、`-20～20`、`tickStep=1/2`、正負數、0、單點、多點、實心點與空心點。
+
+v1.1 再考慮：
+
+```text
+selected number labels
+moves / 正負數加減移動箭頭
+```
+
+---
+
+# 27. 目前一句話狀態
 
 截至 2026-09-20：
 
