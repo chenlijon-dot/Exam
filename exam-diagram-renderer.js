@@ -119,7 +119,16 @@
       ['A','E'],['B','F'],['C','G'],['D','H']
     ];
 
-    return { vertices, edges };
+    const faces = [
+      ['A','B','C','D'],
+      ['E','F','G','H'],
+      ['A','B','F','E'],
+      ['B','C','G','F'],
+      ['C','D','H','G'],
+      ['D','A','E','H']
+    ];
+
+    return { vertices, edges, faces };
   }
 
   function validateSolidProjection(spec) {
@@ -170,7 +179,21 @@
         return { ok:false, reason:'custom solid 至少需要 1 條 edge' };
       }
 
-      built = { vertices, edges };
+      let faces = [];
+      if (Array.isArray(spec.faces)) {
+        for (const face of spec.faces) {
+          if (!Array.isArray(face) || face.length < 3) {
+            return { ok:false, reason:'custom solid face 至少需要 3 個頂點' };
+          }
+          const normalizedFace = face.map(name => String(name));
+          if (normalizedFace.some(name => !vertices[name])) {
+            return { ok:false, reason:`custom solid face 包含不存在的頂點: ${normalizedFace.join('-')}` };
+          }
+          faces.push(normalizedFace);
+        }
+      }
+
+      built = { vertices, edges, faces };
     } else {
       built = buildBoxSolid({ ...spec, solid });
       if (!built) {
@@ -199,10 +222,11 @@
         solid,
         vertices:built.vertices,
         edges:built.edges,
+        faces:Array.isArray(built.faces) ? built.faces : [],
         view:{ yaw, pitch, roll, projection },
         showVertexLabels:spec.showVertexLabels !== false,
         showHiddenEdges:spec.showHiddenEdges !== false,
-        showAxes:spec.showAxes !== false,
+        showAxes:spec.showAxes === true,
         axisLength:finiteNumber(spec.axisLength)
       }
     };
@@ -472,20 +496,26 @@
       }
       .solid-edge{
         stroke:#0f172a;
-        stroke-width:3;
+        stroke-width:2.7;
+        fill:none;
+        vector-effect:non-scaling-stroke;
+      }
+      .solid-edge-silhouette{
+        stroke:#0f172a;
+        stroke-width:3.4;
         fill:none;
         vector-effect:non-scaling-stroke;
       }
       .solid-edge-hidden{
         stroke:#64748b;
-        stroke-width:2.2;
-        stroke-dasharray:8 6;
+        stroke-width:1.8;
+        stroke-dasharray:7 6;
         fill:none;
         vector-effect:non-scaling-stroke;
       }
       .solid-axis{
-        stroke:#475569;
-        stroke-width:2;
+        stroke:#94a3b8;
+        stroke-width:1.4;
         fill:none;
         vector-effect:non-scaling-stroke;
       }
@@ -1058,6 +1088,98 @@
     }, label));
   }
 
+  function subtract3D(a, b) {
+    return { x:a.x - b.x, y:a.y - b.y, z:a.z - b.z };
+  }
+
+  function cross3D(a, b) {
+    return {
+      x:a.y * b.z - a.z * b.y,
+      y:a.z * b.x - a.x * b.z,
+      z:a.x * b.y - a.y * b.x
+    };
+  }
+
+  function dot3D(a, b) {
+    return a.x * b.x + a.y * b.y + a.z * b.z;
+  }
+
+  function average3D(points) {
+    const count = Math.max(points.length, 1);
+    return {
+      x:points.reduce((sum, point) => sum + point.x, 0) / count,
+      y:points.reduce((sum, point) => sum + point.y, 0) / count,
+      z:points.reduce((sum, point) => sum + point.z, 0) / count
+    };
+  }
+
+  function edgeKey(a, b) {
+    return [String(a), String(b)].sort().join('|');
+  }
+
+  function classifySolidEdges(spec, rotatedByLabel) {
+    if (!Array.isArray(spec.faces) || !spec.faces.length) {
+      console.warn('[DiagramRenderer] solid-projection 缺少 faces，無法可靠判斷遮蔽；邊線全部以可視實線處理。');
+      return new Map(spec.edges.map(([from, to]) => [edgeKey(from, to), 'visible']));
+    }
+
+    const solidCenter = average3D(Object.values(rotatedByLabel));
+    const faceInfo = spec.faces.map((face, index) => {
+      const vertices = face.map(name => rotatedByLabel[name]).filter(Boolean);
+      if (vertices.length < 3) return { index, face, visible:false };
+
+      const a = vertices[0];
+      const b = vertices[1];
+      const c = vertices[2];
+      let normal = cross3D(subtract3D(b, a), subtract3D(c, a));
+      const faceCenter = average3D(vertices);
+      const outward = subtract3D(faceCenter, solidCenter);
+
+      if (dot3D(normal, outward) < 0) {
+        normal = { x:-normal.x, y:-normal.y, z:-normal.z };
+      }
+
+      // Camera is on the negative-Z side of camera space, looking toward +Z.
+      const visible = normal.z < -1e-9;
+      return { index, face, visible };
+    });
+
+    const adjacent = new Map();
+    faceInfo.forEach(info => {
+      const face = info.face;
+      for (let i = 0; i < face.length; i += 1) {
+        const from = face[i];
+        const to = face[(i + 1) % face.length];
+        const key = edgeKey(from, to);
+        if (!adjacent.has(key)) adjacent.set(key, []);
+        adjacent.get(key).push(info);
+      }
+    });
+
+    const result = new Map();
+    spec.edges.forEach(([from, to]) => {
+      const key = edgeKey(from, to);
+      const faces = adjacent.get(key) || [];
+      if (!faces.length) {
+        result.set(key, 'visible');
+        return;
+      }
+
+      const visibleCount = faces.filter(face => face.visible).length;
+      const hiddenCount = faces.length - visibleCount;
+
+      if (visibleCount > 0 && hiddenCount > 0) {
+        result.set(key, 'silhouette');
+      } else if (visibleCount > 0) {
+        result.set(key, 'visible');
+      } else {
+        result.set(key, 'hidden');
+      }
+    });
+
+    return result;
+  }
+
   function renderSolidProjection(container, rawSpec) {
     ensureStyles();
     const checked = validateSolidProjection(rawSpec);
@@ -1094,11 +1216,6 @@
     const mapped = Object.fromEntries(mappedAll.map(point => [point.label, point]));
     const mappedList = projectedVertices.map(point => mapped[point.label]);
 
-    const depthValues = mappedList.map(point => point.depth);
-    const minDepth = Math.min(...depthValues);
-    const maxDepth = Math.max(...depthValues);
-    const depthMid = (minDepth + maxDepth) / 2;
-
     const svg = createSvg(
       GEO_VIEW_H,
       spec.ariaLabel || `${spec.solid === 'cube' ? '正方體' : spec.solid === 'cuboid' ? '長方體' : '自訂立體'}，頂點 ${Object.values(spec.vertices).map(point => point.label).join('、')} 的二維投影圖${spec.showAxes ? '，含 XYZ 空間方向軸' : ''}`
@@ -1129,6 +1246,7 @@
       }
     }
 
+    const edgeVisibility = classifySolidEdges(spec, rotatedByLabel);
     const edges = spec.edges.map(([from, to]) => {
       const a = mapped[from];
       const b = mapped[to];
@@ -1137,22 +1255,32 @@
         to,
         a,
         b,
-        depth:(a.depth + b.depth) / 2
+        depth:(a.depth + b.depth) / 2,
+        visibility:edgeVisibility.get(edgeKey(from, to)) || 'visible'
       };
     });
 
-    edges.sort((left, right) => right.depth - left.depth);
+    // Draw hidden edges first so visible contours remain visually dominant.
+    edges.sort((left, right) => {
+      const rank = { hidden:0, visible:1, silhouette:2 };
+      return (rank[left.visibility] - rank[right.visibility]) || (right.depth - left.depth);
+    });
 
     edges.forEach(edge => {
-      const hidden = edge.depth > depthMid;
-      if (hidden && !spec.showHiddenEdges) return;
+      if (edge.visibility === 'hidden' && !spec.showHiddenEdges) return;
+
+      const className = edge.visibility === 'hidden'
+        ? 'solid-edge-hidden'
+        : edge.visibility === 'silhouette'
+          ? 'solid-edge-silhouette'
+          : 'solid-edge';
 
       svg.appendChild(svgEl('line', {
         x1:edge.a.screenX,
         y1:edge.a.screenY,
         x2:edge.b.screenX,
         y2:edge.b.screenY,
-        class:hidden ? 'solid-edge-hidden' : 'solid-edge'
+        class:className
       }));
     });
 
