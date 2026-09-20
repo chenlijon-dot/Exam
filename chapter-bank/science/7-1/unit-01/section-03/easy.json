@@ -9,144 +9,306 @@
   },
   "questions": [
     {
-      "q": "酒精燈內的酒精量約占容器多少較適當？",
-      "o": ["裝滿", "約 1/3～2/3", "少於 1/10", "只要有酒精即可"],
+      "q": "搭配下圖酒精燈判斷：燈內的酒精量約占容器多少較適當？",
+      "o": [
+        "裝滿",
+        "約 1/3～2/3",
+        "少於 1/10",
+        "只要有酒精即可"
+      ],
       "a": 1,
       "e": "教材規則為酒精約裝 1/3～2/3，過多或過少都不恰當。",
-      "conceptIds": ["science-7-1-u01-s03-alcohol-lamp"]
+      "conceptIds": [
+        "science-7-1-u01-s03-alcohol-lamp"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-alcohol-lamp.png",
+      "imageAlt": "酒精燈"
     },
     {
       "q": "使用酒精燈後，最適當的熄火方式是？",
-      "o": ["用嘴吹熄", "直接倒水", "用燈帽蓋熄", "用另一盞酒精燈碰熄"],
+      "o": [
+        "用嘴吹熄",
+        "直接倒水",
+        "用燈帽蓋熄",
+        "用另一盞酒精燈碰熄"
+      ],
       "a": 2,
       "e": "酒精燈應以燈帽蓋熄，不可吹熄，也不可用已點燃的酒精燈互相點火。",
-      "conceptIds": ["science-7-1-u01-s03-alcohol-lamp", "science-7-1-u01-s03-lab-safety"]
+      "conceptIds": [
+        "science-7-1-u01-s03-alcohol-lamp",
+        "science-7-1-u01-s03-lab-safety"
+      ]
     },
     {
-      "q": "試管架的主要用途是什麼？",
-      "o": ["精確量取液體", "固定試管避免傾倒", "磨碎固體", "調整光線"],
+      "q": "下圖為試管與試管架。試管架的主要用途是什麼？",
+      "o": [
+        "精確量取液體",
+        "固定試管避免傾倒",
+        "磨碎固體",
+        "調整光線"
+      ],
       "a": 1,
       "e": "試管架用來固定、放置試管，避免試管傾倒或掉落。",
-      "conceptIds": ["science-7-1-u01-s03-test-tube"]
+      "conceptIds": [
+        "science-7-1-u01-s03-test-tube"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-test-tube-rack.png",
+      "imageAlt": "試管與試管架"
     },
     {
       "q": "若要精確量取 25 mL 的水，最適合使用哪一種器材？",
-      "o": ["燒杯", "錐形瓶", "量筒", "培養皿"],
+      "o": [
+        "燒杯",
+        "錐形瓶",
+        "量筒",
+        "培養皿"
+      ],
       "a": 2,
       "e": "燒杯與錐形瓶刻度僅供概略估計；精確量取液體體積應使用量筒。",
-      "conceptIds": ["science-7-1-u01-s03-beaker-vs-cylinder-precision", "science-7-1-u01-s03-cylinder-reading"]
+      "conceptIds": [
+        "science-7-1-u01-s03-beaker-vs-cylinder-precision",
+        "science-7-1-u01-s03-cylinder-reading"
+      ]
     },
     {
-      "q": "下列關於載玻片與蓋玻片的敘述，何者正確？",
-      "o": ["載玻片較小且較薄", "蓋玻片較大且較厚", "載玻片較大較厚，蓋玻片較小較薄", "兩者大小厚度完全相同"],
+      "q": "觀察下圖的載玻片與蓋玻片，下列敘述何者正確？",
+      "o": [
+        "載玻片較小且較薄",
+        "蓋玻片較大且較厚",
+        "載玻片較大較厚，蓋玻片較小較薄",
+        "兩者大小厚度完全相同"
+      ],
       "a": 2,
       "e": "載玻片較大、較厚；蓋玻片較小、較薄。",
-      "conceptIds": ["science-7-1-u01-s03-slide-coverslip"]
+      "conceptIds": [
+        "science-7-1-u01-s03-slide-coverslip"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-slide-coverslip.png",
+      "imageAlt": "載玻片與蓋玻片"
     },
     {
-      "q": "錐形瓶最適合用來做下列哪一件事？",
-      "o": ["精確讀取液體體積", "盛裝或混合液體", "觀察細胞", "直接測量溫度"],
+      "q": "下圖為錐形瓶。它最適合用來做下列哪一件事？",
+      "o": [
+        "精確讀取液體體積",
+        "盛裝或混合液體",
+        "觀察細胞",
+        "直接測量溫度"
+      ],
       "a": 1,
       "e": "錐形瓶可盛裝、混合液體，也可在適當加熱裝置下加熱，但刻度不供精確量測。",
-      "conceptIds": ["science-7-1-u01-s03-conical-flask"]
+      "conceptIds": [
+        "science-7-1-u01-s03-conical-flask"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-conical-flask.png",
+      "imageAlt": "錐形瓶"
     },
     {
-      "q": "加熱燒杯時，在燒杯與火焰之間放置陶瓷纖維網，主要作用是？",
-      "o": ["讓熱分布較均勻", "增加液體體積", "讓燒杯刻度更準", "避免液體蒸發"],
+      "q": "如圖加熱燒杯時，在燒杯與火焰之間放置陶瓷纖維網，主要作用是？",
+      "o": [
+        "讓熱分布較均勻",
+        "增加液體體積",
+        "讓燒杯刻度更準",
+        "避免液體蒸發"
+      ],
       "a": 0,
       "e": "陶瓷纖維網可使熱源較均勻地分布，降低局部受熱過強的風險。",
-      "conceptIds": ["science-7-1-u01-s03-ceramic-mesh-tripod"]
+      "conceptIds": [
+        "science-7-1-u01-s03-ceramic-mesh-tripod"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-heating-setup.png",
+      "imageAlt": "燒杯加熱時使用的陶瓷纖維網與三腳架"
     },
     {
       "q": "下列哪一種器材不應直接拿來加熱？",
-      "o": ["量筒", "燒杯", "錐形瓶", "試管"],
+      "o": [
+        "量筒",
+        "燒杯",
+        "錐形瓶",
+        "試管"
+      ],
       "a": 0,
       "e": "量筒是量取液體體積的器材，不可作為加熱容器。",
-      "conceptIds": ["science-7-1-u01-s03-cylinder-reading", "science-7-1-u01-s03-lab-safety"]
+      "conceptIds": [
+        "science-7-1-u01-s03-cylinder-reading",
+        "science-7-1-u01-s03-lab-safety"
+      ]
     },
     {
-      "q": "用量筒讀取液體體積時，眼睛應該放在哪裡？",
-      "o": ["液面正上方", "液面正下方", "與液面刻度同高", "離量筒越遠越好"],
+      "q": "搭配下圖量筒判斷：讀取液體體積時，眼睛應該放在哪裡？",
+      "o": [
+        "液面正上方",
+        "液面正下方",
+        "與液面刻度同高",
+        "離量筒越遠越好"
+      ],
       "a": 2,
       "e": "視線應與液面同高，避免視差造成讀值偏高或偏低。",
-      "conceptIds": ["science-7-1-u01-s03-cylinder-parallax"]
+      "conceptIds": [
+        "science-7-1-u01-s03-cylinder-parallax"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-graduated-cylinder.png",
+      "imageAlt": "量筒與液面"
     },
     {
       "q": "量筒中的水形成凹液面時，應讀哪個位置？",
-      "o": ["中央最低點", "中央最高點", "左側邊緣", "任一位置都相同"],
+      "o": [
+        "中央最低點",
+        "中央最高點",
+        "左側邊緣",
+        "任一位置都相同"
+      ],
       "a": 0,
       "e": "凹液面應讀中央最低處；凸液面則讀中央最高處。",
-      "conceptIds": ["science-7-1-u01-s03-meniscus-reading"]
+      "conceptIds": [
+        "science-7-1-u01-s03-meniscus-reading"
+      ]
     },
     {
-      "q": "使用滴管吸取液體後，為什麼不應將滴管倒持？",
-      "o": ["會讓刻度變小", "液體可能流入膠頭", "會讓液體變冷", "會使玻璃變厚"],
+      "q": "下圖為滴管。吸取液體後，為什麼不應將滴管倒持？",
+      "o": [
+        "會讓刻度變小",
+        "液體可能流入膠頭",
+        "會讓液體變冷",
+        "會使玻璃變厚"
+      ],
       "a": 1,
       "e": "倒持滴管可能使液體流入膠頭，造成污染或損壞。",
-      "conceptIds": ["science-7-1-u01-s03-dropper"]
+      "conceptIds": [
+        "science-7-1-u01-s03-dropper"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-dropper.png",
+      "imageAlt": "滴管"
     },
     {
       "q": "目鏡 10X、物鏡 40X 時，複式顯微鏡的總放大倍率為多少？",
-      "o": ["4X", "50X", "400X", "4000X"],
+      "o": [
+        "4X",
+        "50X",
+        "400X",
+        "4000X"
+      ],
       "a": 2,
       "e": "總放大倍率＝目鏡倍率 × 物鏡倍率＝10×40＝400 倍。",
-      "conceptIds": ["science-7-1-u01-s03-total-magnification"]
+      "conceptIds": [
+        "science-7-1-u01-s03-total-magnification"
+      ]
     },
     {
       "q": "依本教材的鏡頭外觀判讀，目鏡鏡筒越短通常表示什麼？",
-      "o": ["倍率越大", "倍率越小", "亮度一定越暗", "與倍率無關"],
+      "o": [
+        "倍率越大",
+        "倍率越小",
+        "亮度一定越暗",
+        "與倍率無關"
+      ],
       "a": 0,
       "e": "本教材題型規則：目鏡越短，倍率越大。",
-      "conceptIds": ["science-7-1-u01-s03-eyepiece-length-magnification"]
+      "conceptIds": [
+        "science-7-1-u01-s03-eyepiece-length-magnification"
+      ]
     },
     {
-      "q": "依本教材的鏡頭外觀判讀，物鏡鏡筒越長通常表示什麼？",
-      "o": ["倍率越小", "倍率越大", "視野一定越亮", "無法使用"],
+      "q": "觀察下圖不同長度的物鏡。依本教材的鏡頭外觀判讀，物鏡鏡筒越長通常表示什麼？",
+      "o": [
+        "倍率越小",
+        "倍率越大",
+        "視野一定越亮",
+        "無法使用"
+      ],
       "a": 1,
       "e": "本教材題型規則：物鏡鏡筒越長，倍率越大。",
-      "conceptIds": ["science-7-1-u01-s03-objective-length-magnification"]
+      "conceptIds": [
+        "science-7-1-u01-s03-objective-length-magnification"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/objective-lengths-4.png",
+      "imageAlt": "四個不同長度的物鏡"
     },
     {
       "q": "使用複式顯微鏡低倍觀察時，視野通常如何？",
-      "o": ["較亮、範圍較大", "較暗、範圍較小", "較暗、範圍較大", "亮度與範圍都與倍率無關"],
+      "o": [
+        "較亮、範圍較大",
+        "較暗、範圍較小",
+        "較暗、範圍較大",
+        "亮度與範圍都與倍率無關"
+      ],
       "a": 0,
       "e": "低倍時視野較亮、範圍較大，可看到較多細胞。",
-      "conceptIds": ["science-7-1-u01-s03-low-high-power", "science-7-1-u01-s03-field-of-view"]
+      "conceptIds": [
+        "science-7-1-u01-s03-low-high-power",
+        "science-7-1-u01-s03-field-of-view"
+      ]
     },
     {
       "q": "由低倍物鏡換成高倍物鏡後，視野中的細胞數通常會怎樣？",
-      "o": ["增加", "減少", "完全不變", "先增加再增加"],
+      "o": [
+        "增加",
+        "減少",
+        "完全不變",
+        "先增加再增加"
+      ],
       "a": 1,
       "e": "高倍視野範圍較小，因此能看到的細胞數通常較少。",
-      "conceptIds": ["science-7-1-u01-s03-low-high-power", "science-7-1-u01-s03-field-of-view"]
+      "conceptIds": [
+        "science-7-1-u01-s03-low-high-power",
+        "science-7-1-u01-s03-field-of-view"
+      ]
     },
     {
       "q": "複式顯微鏡所見影像與實物的方向關係為何？",
-      "o": ["上下左右完全相同", "只有左右相反", "只有上下顛倒", "上下顛倒、左右相反"],
+      "o": [
+        "上下左右完全相同",
+        "只有左右相反",
+        "只有上下顛倒",
+        "上下顛倒、左右相反"
+      ],
       "a": 3,
       "e": "複式顯微鏡影像相當於實物旋轉 180°，上下顛倒且左右相反。",
-      "conceptIds": ["science-7-1-u01-s03-image-orientation", "science-7-1-u01-s03-symbol-rotation"]
+      "conceptIds": [
+        "science-7-1-u01-s03-image-orientation",
+        "science-7-1-u01-s03-symbol-rotation"
+      ]
     },
     {
       "q": "解剖顯微鏡所見影像方向通常如何？",
-      "o": ["與實物相同", "上下左右都相反", "只有上下顛倒", "每次都不同"],
+      "o": [
+        "與實物相同",
+        "上下左右都相反",
+        "只有上下顛倒",
+        "每次都不同"
+      ],
       "a": 0,
       "e": "解剖顯微鏡影像方向與實物相同，且較有立體感。",
-      "conceptIds": ["science-7-1-u01-s03-stereo-microscope"]
+      "conceptIds": [
+        "science-7-1-u01-s03-stereo-microscope"
+      ]
     },
     {
       "q": "若要使用複式顯微鏡觀察葉片細胞，標本通常應具備什麼條件？",
-      "o": ["厚且完全不透光", "薄且可透光", "一定要乾燥", "一定要是完整植物"],
+      "o": [
+        "厚且完全不透光",
+        "薄且可透光",
+        "一定要乾燥",
+        "一定要是完整植物"
+      ],
       "a": 1,
       "e": "複式顯微鏡通常觀察薄且透光的標本。",
-      "conceptIds": ["science-7-1-u01-s03-compound-microscope"]
+      "conceptIds": [
+        "science-7-1-u01-s03-compound-microscope"
+      ]
     },
     {
       "q": "要觀察一朵小花的完整外形與雄蕊數目，較適合使用哪一種顯微鏡？",
-      "o": ["複式顯微鏡", "解剖顯微鏡", "量筒", "燒杯"],
+      "o": [
+        "複式顯微鏡",
+        "解剖顯微鏡",
+        "量筒",
+        "燒杯"
+      ],
       "a": 1,
       "e": "完整、較厚且具立體外觀的實物，適合使用解剖顯微鏡。",
-      "conceptIds": ["science-7-1-u01-s03-microscope-selection"]
+      "conceptIds": [
+        "science-7-1-u01-s03-microscope-selection"
+      ]
     }
   ]
 }
