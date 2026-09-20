@@ -69,6 +69,16 @@
       subjectName: '公民',
       backText: '公民章節',
       pathLabel: '公民'
+    },
+    'civics-02': {
+      title: '第2章　人性尊嚴與人權保障',
+      subtitle: '第2章｜選擇難度',
+      path: 'chapter-bank/social/7-1/civics/chapter-02',
+      questionCount: 20,
+      pointsPerQuestion: 5,
+      subjectName: '公民',
+      backText: '公民章節',
+      pathLabel: '公民'
     }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -196,7 +206,7 @@
   }
 
   document.addEventListener('click', event => {
-    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"], [data-social-chapter="hist-01"], [data-social-chapter="hist-02"], [data-social-chapter="hist-03"], [data-social-chapter="civics-01"]');
+    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"], [data-social-chapter="hist-01"], [data-social-chapter="hist-02"], [data-social-chapter="hist-03"], [data-social-chapter="civics-01"], [data-social-chapter="civics-02"]');
     if (!chapter) return;
     event.preventDefault();
     event.stopImmediatePropagation();
