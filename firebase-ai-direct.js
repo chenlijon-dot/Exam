@@ -202,8 +202,8 @@
     }
   }
 
-  function currentMathQuestion() {
-    return window.MathPaperQuestionConfig || {
+  function currentMathQuestion(override = null) {
+    return override || window.MathPaperQuestionConfig || {
       id: 'math-paper-quadratic-test-001',
       semester: '九年級上學期',
       unit: '一元二次方程式',
@@ -213,11 +213,11 @@
     };
   }
 
-  async function gradeMathHandwriting(dataUrl) {
+  async function gradeMathHandwriting(dataUrl, questionOverride = null) {
     const match = String(dataUrl || '').match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/s);
     if (!match) throw new Error('找不到可判讀的手寫圖片。');
 
-    const question = currentMathQuestion();
+    const question = currentMathQuestion(questionOverride);
     const prompt = `你是台灣國中數學老師。請判讀學生手寫作答圖片，除了判斷對錯，也要像老師改作業一樣指出錯在哪一步並教學生如何修正。\n\n題目：${question.text}\n標準答案：${question.expectedAnswer}\n\n額外判分規則：\n${question.gradingInstructions}\n\n判題與教學原則：\n1. 先忠實辨識學生實際寫出的答案與計算步驟，依照書寫順序判讀；看不清楚就不要猜。\n2. 依數學意義判斷，不可只做答案字串比較；數學上等價的寫法視為相同。\n3. 若作答錯誤，必須找出「最早一個可以可靠確認的實質數學錯誤」。不要只說「計算有誤」或「請重新檢查」。\n4. errorStep 要直接指出學生哪一個算式或哪一步出錯；能辨識原算式時，盡量引用該算式。\n5. whyWrong 要用國中學生看得懂的方式說明這一步為什麼不成立，例如等號兩邊沒有做相同運算、正負號改錯、展開括號錯誤、算術計算錯誤等。\n6. correction 要寫出該步正確的改法；必要時可再往下列 1～2 步，讓學生知道怎麼得到正確答案。\n7. nextHint 是簡短的下一步提示，鼓勵學生自己重算；若 correction 已經完整到答案，也可提醒學生代回原式檢查。\n8. 若學生前面的步驟正確、只在後面算錯，不要把前面的正確步驟說成錯誤。\n9. 若學生只有最後答案、沒有足夠過程可定位錯誤，errorStep 請明確寫「目前只看到最後答案，無法定位是哪一步算錯」，不要發明過程。\n10. verdict=correct 時，errorStep、whyWrong、correction、nextHint 請留空，feedback 簡短肯定作答即可。\n11. verdict=unclear 時，不要猜測錯誤位置；說明哪部分無法可靠辨識，建議重寫較清楚。\n12. 不要自行冠上不確定的數學律名稱；只描述實際算式關係。\n13. 所有文字使用台灣繁體中文，語氣像老師批改作業，清楚、具體、不責備。\n\n只回傳 JSON，不要 Markdown：\n{"verdict":"correct|incorrect|unclear","recognizedAnswer":"","recognizedWork":"","errorStep":"","whyWrong":"","correction":"","nextHint":"","feedback":"","confidence":0.0}`;
 
     const { response, modelName } = await generateWithFallback([
@@ -334,6 +334,8 @@
   window.ChrisExamAI = {
     generate,
     getModel,
+    gradeMathHandwriting,
+    renderMathResult,
     model: MODEL,
     models: [...MODEL_CANDIDATES],
     backend: 'Firebase AI Logic'
