@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-1-medium",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-1 正數與負數",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-1",
+    "title": "1-1 正數與負數｜中等",
+    "subtitle": "10 題｜分數刻度、等距點、相反數與絕對值綜合",
+    "unit": "數學七上｜單元 1 數與數線｜1-1 正數與負數",
+    "difficulty": "math-7-1-1-1-medium",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只取概念、題型與難度作參考，非原題複製或改數字重製。需要數線者使用 Exam number-line SVG renderer 即時繪製。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "如圖，-1 到 1 每 1/4 單位畫一個刻度，A 點表示的數是什麼？",
+      "o": [
+        "-3/4",
+        "-1/2",
+        "1/4",
+        "1/2"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -1,
+        "max": 1,
+        "tickStep": 0.25,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -0.5,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "A 點位在 -1 與 0 的正中間，所以表示 -1/2。"
+    },
+    {
+      "number": 2,
+      "q": "若 a 是正數，且 |a|=6，則 a=?",
+      "o": [
+        "-6",
+        "0",
+        "6",
+        "±6"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-positive"
+      ],
+      "e": "已知 a 是正數，所以只可能是 6。"
+    },
+    {
+      "number": 3,
+      "q": "若 x 是負數，且 |x|=8，則 x=?",
+      "o": [
+        "8",
+        "-8",
+        "0",
+        "±8"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-negative"
+      ],
+      "e": "絕對值是 8，而 x 又是負數，所以 x=-8。"
+    },
+    {
+      "number": 4,
+      "q": "比較 -2.3、-2.03、-2.003 的大小，最大的是哪一個？",
+      "o": [
+        "-2.3",
+        "-2.03",
+        "-2.003",
+        "都一樣大"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-negative-decimal-order"
+      ],
+      "e": "負數越接近 0 越大，-2.003 最接近 0，所以最大。"
+    },
+    {
+      "number": 5,
+      "q": "如圖，A 點表示 -4，B 點表示 3。下列哪一個數的絕對值最大？",
+      "o": [
+        "A 點表示的數",
+        "B 點表示的數",
+        "兩者一樣大",
+        "無法比較"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 4,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -4,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 3,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "|-4|=4，|3|=3，所以 A 點表示的數絕對值較大。"
+    },
+    {
+      "number": 6,
+      "q": "如圖，A、B、C、D、E 五點等距排列，且 C 點表示 0，E 點表示 4。則 A 點表示的數是多少？",
+      "o": [
+        "-2",
+        "-4",
+        "-6",
+        "-8"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-equidistant",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 5,
+        "tickStep": 1,
+        "showNumberLabels": false,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -4,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -2,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 0,
+            "label": "C",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 2,
+            "label": "D",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 4,
+            "label": "E",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "C 到 E 經過兩段，0 到 4 共 4 單位，所以每段是 2。A 在 C 左兩段，因此 A=-4。"
+    },
+    {
+      "number": 7,
+      "q": "若 a<0<b，且 |a|>|b|，則 a+b 是什麼數？",
+      "o": [
+        "正數",
+        "負數",
+        "0",
+        "無法判斷"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-signed-order",
+        "math-7-1-1-1-absolute-value"
+      ],
+      "e": "a 是負數，b 是正數，而且 |a| 比 |b| 大，表示負的部分較多，所以 a+b 為負數。"
+    },
+    {
+      "number": 8,
+      "q": "若 P 點表示 -2，Q 點在原點右邊，且 |Q|=|P|，則 Q 點表示的數是多少？",
+      "o": [
+        "-2",
+        "0",
+        "2",
+        "4"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number",
+        "math-7-1-1-1-absolute-value"
+      ],
+      "e": "|P|=2，Q 在原點右邊，所以 Q=2。"
+    },
+    {
+      "number": 9,
+      "q": "若 |x|=4，則下列哪一個敘述正確？",
+      "o": [
+        "x=4",
+        "x=-4",
+        "x=4 或 x=-4",
+        "x=0"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "e": "到原點距離為 4 的點有兩個，分別是 4 與 -4。"
+    },
+    {
+      "number": 10,
+      "q": "如圖，A、B、C 三點分別表示 -1.5、0.5、1.5。下列敘述何者正確？",
+      "o": [
+        "|A|>|C|",
+        "|A|=|C|",
+        "|B|>|C|",
+        "A 與 C 互為相反數，且 B 在原點左邊"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-opposite-number"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -2,
+        "max": 2,
+        "tickStep": 0.5,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -1.5,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 0.5,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1.5,
+            "label": "C",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "|-1.5|=1.5，|1.5|=1.5，所以 |A|=|C|。B 在原點右邊，不是左邊。"
+    }
+  ]
+}
