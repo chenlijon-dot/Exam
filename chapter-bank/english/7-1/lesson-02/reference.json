@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "key": "english-7-1-lesson-02-reference",
+  "lessonKey": "english-7-1-lesson-02",
+  "subject": "english",
+  "grade": 7,
+  "semester": 1,
+  "volume": "第一冊",
+  "publisher": "康軒",
+  "schoolYear": "115 學年度",
+  "lessonCode": "Lesson 2",
+  "title": "What Are These?",
+  "pageRange": "p.23–36",
+  "theme": [
+    "動物",
+    "十二生肖",
+    "指示詞",
+    "名詞複數",
+    "所有格",
+    "大象比較"
+  ],
+  "learningGoals": [
+    "能辨識本課動物與十二生肖相關字彙。",
+    "能正確使用 this / that / it 與 these / those / they。",
+    "能用 What is ...? / What are ...? 詢問單數與複數事物。",
+    "能依規則與不規則變化形成複數名詞。",
+    "能辨識複數字尾 /s/、/z/、/ɪz/ 的發音。",
+    "能使用主格與所有格，並判讀單數／複數名詞所有格。",
+    "能比較 Asian elephants 與 African elephants，並運用 Making Inferences 推論未明說資訊。"
+  ],
+  "sections": [
+    {
+      "id": "word-bank",
+      "title": "Word Bank｜動物",
+      "page": "p.23–24",
+      "type": "groups",
+      "groups": [
+        {
+          "label": "核心動物",
+          "items": [
+            "monkey",
+            "fox",
+            "sheep",
+            "tiger",
+            "zebra",
+            "mouse / mice",
+            "lion",
+            "bear"
+          ]
+        },
+        {
+          "label": "單複數同形",
+          "items": [
+            "fish",
+            "sheep"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogue",
+      "title": "Dialogue｜Chinese Zodiac Animal Signs",
+      "page": "p.25–26",
+      "type": "groups",
+      "groups": [
+        {
+          "label": "十二生肖",
+          "items": [
+            "rat",
+            "ox",
+            "tiger",
+            "rabbit",
+            "dragon",
+            "snake",
+            "horse",
+            "goat",
+            "monkey",
+            "rooster",
+            "dog",
+            "pig"
+          ]
+        },
+        {
+          "label": "情境與重點字彙",
+          "items": [
+            "movie theater",
+            "birth year",
+            "smart",
+            "energetic",
+            "true",
+            "no wonder",
+            "people person",
+            "What about ...?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar-singular",
+      "title": "Grammar｜單數指示詞與 What is ...?",
+      "page": "p.27",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "詢問單數事物",
+          "examples": [
+            "What is this?",
+            "What is that?",
+            "What is it?"
+          ]
+        },
+        {
+          "label": "回答",
+          "examples": [
+            "This is a picture.",
+            "That is an elephant.",
+            "It is an elephant."
+          ]
+        },
+        {
+          "label": "縮寫",
+          "examples": [
+            "what is → what’s",
+            "that is → that’s",
+            "this is 不縮寫"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar-plural",
+      "title": "Grammar｜複數名詞與 What are ...?",
+      "page": "p.28–29",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "詢問複數事物",
+          "examples": [
+            "What are these?",
+            "What are those?",
+            "What are they?"
+          ]
+        },
+        {
+          "label": "回答",
+          "examples": [
+            "These are ...",
+            "Those are ...",
+            "They are ..."
+          ]
+        },
+        {
+          "label": "規則複數",
+          "examples": [
+            "-s",
+            "-es",
+            "-ies",
+            "-ves"
+          ]
+        },
+        {
+          "label": "不規則／特殊複數",
+          "examples": [
+            "fish → fish",
+            "sheep → sheep",
+            "child → children",
+            "man → men",
+            "mouse → mice",
+            "ox → oxen",
+            "person → people / persons",
+            "woman → women"
+          ]
+        },
+        {
+          "label": "複數字尾發音",
+          "examples": [
+            "/s/",
+            "/z/",
+            "/ɪz/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "more-to-know",
+      "title": "More to Know｜代名詞與所有格",
+      "page": "p.30",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "主格／所有格",
+          "examples": [
+            "I / my",
+            "you / your",
+            "he / his",
+            "she / her",
+            "it / its",
+            "we / our",
+            "they / their"
+          ]
+        },
+        {
+          "label": "名詞所有格",
+          "examples": [
+            "the girl’s desk",
+            "the girls’ desks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "Reading｜Asian Elephants VS. African Elephants",
+      "page": "p.31–32",
+      "type": "table",
+      "columns": [
+        "比較項目",
+        "Asian elephants",
+        "African elephants"
+      ],
+      "rows": [
+        [
+          "體型",
+          "較小",
+          "較大"
+        ],
+        [
+          "耳朵",
+          "較短",
+          "較大"
+        ],
+        [
+          "高度",
+          "約 2.75 meters",
+          "約 3.2 meters"
+        ],
+        [
+          "壽命",
+          "約 60 years",
+          "約 70 years"
+        ]
+      ],
+      "notes": [
+        "閱讀主旨：比較 Asian elephants 與 African elephants 的差異。",
+        "Reading Skills：Making Inferences。結合文本線索與背景知識，推論文章未直接說明的資訊。",
+        "教材延伸討論包含 tusks、male / female 與 trunk。"
+      ]
+    },
+    {
+      "id": "listening",
+      "title": "Listening",
+      "page": "p.33",
+      "type": "points",
+      "items": [
+        "Listen and Choose the Correct Picture",
+        "Listen and Choose the Best Response",
+        "Listen and Choose the Best Answer"
+      ]
+    },
+    {
+      "id": "pronunciation",
+      "title": "Pronunciation",
+      "page": "p.34",
+      "type": "table",
+      "columns": [
+        "子音",
+        "教材例字"
+      ],
+      "rows": [
+        [
+          "/p/",
+          "pet, pig, cup, jump"
+        ],
+        [
+          "/b/",
+          "big, black, club, job"
+        ],
+        [
+          "/t/",
+          "table, tea, hot, not"
+        ],
+        [
+          "/d/",
+          "dear, desk, red, sad"
+        ]
+      ]
+    },
+    {
+      "id": "read-up",
+      "title": "Read Up｜World Elephant Day",
+      "page": "p.35–36",
+      "type": "points",
+      "items": [
+        "主題：World Elephant Day。",
+        "idioms：the elephant in the room；an elephant never forgets。",
+        "延伸推論選項包含 rain cats and dogs、white elephant。",
+        "Activity：the lion’s share。"
+      ]
+    },
+    {
+      "id": "exam-focus",
+      "title": "本課高頻考點",
+      "page": "",
+      "type": "points",
+      "items": [
+        "this / that / it 與 these / those / they 的單複數判讀。",
+        "What is ...? / What are ...? 的問句與回答。",
+        "規則複數 -s / -es / -ies / -ves 與不規則複數。",
+        "複數字尾 /s/ /z/ /ɪz/ 的發音。",
+        "主格與所有格；單數與複數名詞所有格。",
+        "Asian / African elephants 的比較資料。",
+        "Making Inferences：由文本線索推論未直接說明的資訊。"
+      ]
+    }
+  ],
+  "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 2 p.23–36 教材辨識檔與教材知識庫整理；供複習與題庫分類使用。"
+}
