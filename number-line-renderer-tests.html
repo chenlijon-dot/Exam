@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Number Line Renderer v1 Tests</title>
+  <title>Math Diagram Renderer Tests</title>
   <style>
     body{margin:0;background:#f6f8fb;color:#172033;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif}
     main{max-width:900px;margin:auto;padding:20px 14px 60px}
@@ -15,8 +15,8 @@
 </head>
 <body>
 <main>
-  <h1>Number Line Renderer v1</h1>
-  <p>5 個正式 smoke test：基本讀值、兩點距離、大範圍／tickStep=2、空心點、多點與 0。</p>
+  <h1>Math Diagram Renderer</h1>
+  <p>數線、三角形、正方形、圓形與 XY 座標平面 smoke tests。</p>
   <div id="cases"></div>
 </main>
 <script src="exam-diagram-renderer.js"></script>
@@ -35,14 +35,30 @@ const CASES = [
     spec:{type:'number-line',min:-20,max:20,tickStep:2,points:[{x:-10,label:'P',style:'solid'},{x:10,label:'Q',style:'solid'}]}
   },
   {
-    title:'Case 4｜空心點',
-    spec:{type:'number-line',min:-5,max:5,tickStep:1,points:[{x:2,label:'P',style:'hollow'}]}
+    title:'Case 4｜三角形頂點標註',
+    spec:{type:'triangle',vertices:[{x:0,y:0,label:'A'},{x:5,y:0,label:'B'},{x:2,y:4,label:'C'}]}
   },
   {
-    title:'Case 5｜多點、正負數與 0',
+    title:'Case 5｜正方形頂點標註',
+    spec:{type:'square',x:0,y:0,size:4,showVertexLabels:true}
+  },
+  {
+    title:'Case 6｜圓形、圓心與圓周點',
+    spec:{type:'circle',center:{x:0,y:0,label:'O'},radius:4,points:[{x:4,y:0,label:'A'},{x:0,y:4,label:'B'}]}
+  },
+  {
+    title:'Case 7｜XY 座標平面與標記點',
+    spec:{type:'coordinate-plane',xMin:-5,xMax:5,yMin:-5,yMax:5,tickStep:1,points:[{x:-3,y:2,label:'A'},{x:2,y:-2,label:'B'}]}
+  },
+  {
+    title:'Case 8｜XY 平面線段',
+    spec:{type:'xy-plane',xMin:-6,xMax:6,yMin:-4,yMax:4,tickStep:1,points:[{x:-4,y:-2,label:'P'},{x:4,y:2,label:'Q'}],segments:[{from:{x:-4,y:-2},to:{x:4,y:2}}]}
+  },
+  {
+    title:'Case 9｜空心點與多點數線',
     spec:{type:'number-line',min:-4,max:4,tickStep:1,points:[{x:-2,label:'A',showValue:true,style:'solid'},{x:0,label:'O',showValue:true,style:'hollow'},{x:3,label:'B',showValue:true,style:'solid'}]}
   }
-];
+]
 
 const root=document.getElementById('cases');
 CASES.forEach((item,index)=>{
