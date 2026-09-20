@@ -559,6 +559,7 @@
     $('#restartBtn').onclick = function() {
       if(!confirm('確定重新作答？目前選擇會清除。'))return;
       graded=false;
+      window.ExamHandwriting?.reset?.();
       render();
       result.style.display='none';
       $('#explainBtn').textContent='顯示詳解';
@@ -570,6 +571,7 @@
     $('#backBtn').onclick = function() {
       const ctx=window.examContextCurrent || getContext(level);
 
+      window.ExamHandwriting?.reset?.();
       examScreen.classList.add('hidden');
       result.style.display='none';
       document.querySelectorAll('.explain').forEach(e=>e.classList.remove('show'));
