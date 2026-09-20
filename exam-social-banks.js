@@ -49,6 +49,16 @@
       subjectName: '歷史',
       backText: '歷史章節',
       pathLabel: '歷史'
+    },
+    'hist-03': {
+      title: '第3章　大航海時代臺灣原住民與外來者',
+      subtitle: '第3章｜選擇難度',
+      path: 'chapter-bank/social/7-1/history/chapter-03',
+      questionCount: 20,
+      pointsPerQuestion: 5,
+      subjectName: '歷史',
+      backText: '歷史章節',
+      pathLabel: '歷史'
     }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -176,7 +186,7 @@
   }
 
   document.addEventListener('click', event => {
-    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"], [data-social-chapter="hist-01"], [data-social-chapter="hist-02"]');
+    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"], [data-social-chapter="hist-01"], [data-social-chapter="hist-02"], [data-social-chapter="hist-03"]');
     if (!chapter) return;
     event.preventDefault();
     event.stopImmediatePropagation();
