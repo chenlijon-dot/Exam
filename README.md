@@ -4,7 +4,7 @@
 >
 > 後續新增科目、學期、單元、小節、教材照片、canonical 教材知識庫、自編題、各校段考、歷屆試題、AI curriculum 或網站功能時，請同步更新本 README。
 >
-> 最後更新：2026-09-20
+> 最後更新：2026-09-21
 
 ---
 
@@ -1472,6 +1472,7 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 - [x] 自然七上 chapter tree
 - [x] 社會七上第一冊 chapter tree
 - [x] 英文 Lesson 1、Lesson 2 reference + 簡易／中等／困難題庫
+- [x] 數學七上 1-1〈正數與負數〉自編題庫：簡易 20 題／中等 10 題／困難 10 題，共 40 題；8 題直接使用 number-line SVG renderer
 - [x] 自然 1-1、1-2、1-3 題庫工作流；1-1 已加入新無敵自然自修題庫
 - [x] 社會地理第1章、第2章三級文字自編題庫
 - [x] 社會地理第3章〈地形〉教材 canonical（p.34～47）
@@ -1486,15 +1487,50 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 
 ### 歷屆試題
 
-- [x] 基測數學 90-1 ～ 96-1 已建立
+- [x] 基測數學 90-1 ～ 96-2 已建立
 - [x] 歷屆 PDF 圖題採 Image / PDF Crop Annotator 人工框選＋crop_manifest 流程
 - [x] 原卷圖題裁圖規則
 - [x] 逐題詳解作為第二輪 QA
 
+## 數學七上 1-1 自編題庫里程碑（2026-09-21）
+
+目前 `1-1 正數與負數` 已正式接入 GitHub 題庫系統：
+
+```text
+chapter-bank/math/7-1/1-1/
+├─ easy.json    20 題
+├─ medium.json  10 題
+└─ hard.json    10 題
+```
+
+來源策略：
+
+```text
+Google Drive canonical 教材知識庫
++ 其他參考題庫 01 的題型 census
+→ 只吸收概念、常見問法、難度與 distractor 結構
+→ 重新設計全新題目
+→ 不直接複製原題文字或原圖
+```
+
+圖題策略：
+
+```text
+自編數線題
+→ question.diagram
+→ type: number-line
+→ exam-diagram-renderer.js
+→ SVG 即時繪製
+```
+
+目前 40 題中有 8 題使用 `number-line` diagram spec；不需 PNG，也不使用外部題庫原圖。
+
+`exam-math-catalog.js` 已將 1-1 從「題庫待建」改為可進入的分級題庫入口，並依難度載入對應 JSON。
+
+---
 ## 下一階段
 
 - [ ] 持續人工 QA 既有歷屆題
-- [ ] 基測數學 96-2
 - [ ] 持續匯入後續基測／教育會考
 - [ ] 補建更多教材 canonical 與 reference
 - [ ] 持續各校段考拆題與 concept mapping
