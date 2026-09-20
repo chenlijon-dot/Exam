@@ -338,7 +338,8 @@
       chapters: [
         {
           key: 'civics-01', code: '第1章', title: '公民與公民德性', page: 166, type: 'chapter',
-          detail: '1-1 什麼是公民？（p.168）｜1-2 現代公民應具備的基本德性（p.170）'
+          referenceReady: true,
+          detail: 'p.166～173 教材已收錄；1-1 什麼是公民？（p.168）｜1-2 現代公民應具備的基本德性（p.170）｜課後閱讀與圖解公民已納入；辨識檔、canonical 與簡易／中等／困難各20題已建立'
         },
         {
           key: 'civics-02', code: '第2章', title: '人性尊嚴與人權保障', page: 174, type: 'chapter',
