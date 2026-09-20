@@ -552,6 +552,59 @@ asset provenance
 
 不要再假設「題目 = 純文字」。
 
+### 7.3.1 圖片傳輸與儲存硬規則
+
+教材圖、考題圖、圖表、地圖、幾何圖、照片等正式內容，**一律保存為真正的圖片檔案**。
+
+標準資料流：
+
+```text
+Google Drive 原始 PDF / 圖片
+        ↓
+必要時裁切題目區域
+        ↓
+PNG / JPG / WebP
+        ↓
+GitHub assets/
+        ↓
+JSON 只記錄相對路徑
+        ↓
+網頁以 <img src="..."> 顯示
+```
+
+正式題庫不得把圖片本體寫成：
+
+```text
+Base64
+data:image/...;base64,...
+巨大內嵌 binary string
+```
+
+原因：
+
+```text
+資料量膨脹
+JSON / HTML / JS 難以閱讀與 diff
+connector / ChatGPT / API 傳輸容易 timeout
+同圖無法有效共用與快取
+維護與除錯困難
+```
+
+題庫資料應只保存：
+
+```json
+{
+  "image": "assets/questions/science/114-dawan/q04.png",
+  "imageAlt": "第4題實驗裝置圖"
+}
+```
+
+或依既有 runtime 支援使用 `images[]`、`optionImage`、`optionImages[]` 等欄位；**欄位內容永遠是檔案路徑，不是圖片文字碼**。
+
+例外僅限非常小、純 UI 用的 icon／SVG；教材 evidence、正式試題圖與作答必要視覺資訊不得用 Base64 內嵌。
+
+Google Drive 保存完整原始 evidence；GitHub `assets/` 只保存網站實際需要顯示的裁切圖或衍生 asset。
+
 ## 7.4 Drive 不直接當即時搜尋引擎
 
 Google Drive 的角色：
