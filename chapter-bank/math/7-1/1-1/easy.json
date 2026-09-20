@@ -1,0 +1,388 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-1-easy",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-1 正數與負數",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-1",
+    "title": "1-1 正數與負數｜簡易",
+    "subtitle": "20 題｜正負數、0、相反數、絕對值與基本數線判讀",
+    "unit": "數學七上｜單元 1 數與數線｜1-1 正數與負數",
+    "difficulty": "math-7-1-1-1-easy",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只取概念、題型與難度作參考，非原題複製或改數字重製。需要數線者使用 Exam number-line SVG renderer 即時繪製。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "下列哪一個數是負數？",
+      "o": [
+        "5",
+        "0",
+        "-3",
+        "2.4"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-signed-numbers"
+      ],
+      "e": "小於 0 的數叫做負數，只有 -3 小於 0，所以選 C。"
+    },
+    {
+      "number": 2,
+      "q": "下列哪一個數既不是正數，也不是負數？",
+      "o": [
+        "1",
+        "0",
+        "-1",
+        "0.5"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-zero"
+      ],
+      "e": "0 既不是正數，也不是負數，所以選 B。"
+    },
+    {
+      "number": 3,
+      "q": "比較 -3 與 2 的大小，下列何者正確？",
+      "o": [
+        "-3 > 2",
+        "-3 < 2",
+        "-3 = 2",
+        "無法比較"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-order"
+      ],
+      "e": "數線上越右邊的數越大，2 在 -3 的右邊，因此 -3 < 2。"
+    },
+    {
+      "number": 4,
+      "q": "下列四個數中，最小的是哪一個？",
+      "o": [
+        "-5",
+        "-2",
+        "0",
+        "3"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-order"
+      ],
+      "e": "在數線上越左邊越小，-5 最左邊，所以最小。"
+    },
+    {
+      "number": 5,
+      "q": "-7 的相反數是什麼？",
+      "o": [
+        "7",
+        "-7",
+        "0",
+        "-14"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number"
+      ],
+      "e": "相反數是與原點距離相同、位在原點另一側的數，所以 -7 的相反數是 7。"
+    },
+    {
+      "number": 6,
+      "q": "|-9| 的值是多少？",
+      "o": [
+        "-9",
+        "9",
+        "0",
+        "18"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "e": "絕對值表示到原點的距離，|-9|=9，所以選 B。"
+    },
+    {
+      "number": 7,
+      "q": "如圖，A 點表示 -3，B 點表示 2。下列敘述何者正確？",
+      "o": [
+        "A 在 B 的右邊",
+        "A 與 B 表示同一個數",
+        "A 在原點右邊",
+        "A 在 B 的左邊"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-reading",
+        "math-7-1-1-1-number-line-order"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -4,
+        "max": 3,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -3,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 2,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "-3 在 2 的左邊，所以 A 在 B 的左邊，選 D。"
+    },
+    {
+      "number": 8,
+      "q": "下列哪一組數全部都是負數？",
+      "o": [
+        "-1、-0.5、-7",
+        "-1、0、-7",
+        "1、-0.5、-7",
+        "-1、0.5、-7"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-signed-numbers"
+      ],
+      "e": "全部都要小於 0 才是負數，只有 A 的三個數都小於 0。"
+    },
+    {
+      "number": 9,
+      "q": "在 -2 與 3 之間（不含 -2 和 3）共有幾個整數？",
+      "o": [
+        "3 個",
+        "4 個",
+        "5 個",
+        "6 個"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-integers",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "e": "介於 -2 與 3 之間的整數有 -1、0、1、2，共 4 個。"
+    },
+    {
+      "number": 10,
+      "q": "若 P 點表示 4，則與 P 點互為相反數的點所表示的數是什麼？",
+      "o": [
+        "-4",
+        "4",
+        "0",
+        "8"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number"
+      ],
+      "e": "4 的相反數是 -4，所以選 A。"
+    },
+    {
+      "number": 11,
+      "q": "下列哪一組數的絕對值相等？",
+      "o": [
+        "-6 與 6",
+        "-6 與 5",
+        "3 與 -4",
+        "0 與 1"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "e": "|-6|=6，|6|=6，兩者絕對值相等，所以選 A。"
+    },
+    {
+      "number": 12,
+      "q": "將 -2、1、-5、0 由小到大排列，何者正確？",
+      "o": [
+        "-5、-2、0、1",
+        "-2、-5、0、1",
+        "0、-5、-2、1",
+        "-5、0、-2、1"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-order"
+      ],
+      "e": "越左邊越小，因此排列為 -5、-2、0、1。"
+    },
+    {
+      "number": 13,
+      "q": "若 M 點表示 -1.5，則 |M| 的值是多少？",
+      "o": [
+        "-1.5",
+        "0",
+        "1.5",
+        "2.5"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "e": "|-1.5|=1.5，所以選 C。"
+    },
+    {
+      "number": 14,
+      "q": "下列哪一個小數是正數？",
+      "o": [
+        "-0.8",
+        "-2.3",
+        "0.8",
+        "-0.08"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-signed-numbers"
+      ],
+      "e": "正數要大於 0，只有 0.8 大於 0。"
+    },
+    {
+      "number": 15,
+      "q": "今天氣溫是 -3°C，這表示氣溫在 0°C 的哪一邊？",
+      "o": [
+        "比 0°C 高 3 度",
+        "比 0°C 低 3 度",
+        "剛好 0°C",
+        "無法判斷"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-signed-context"
+      ],
+      "e": "-3°C 表示比 0°C 低 3 度，所以選 B。"
+    },
+    {
+      "number": 16,
+      "q": "關於 0，下列敘述何者正確？",
+      "o": [
+        "0 是正數",
+        "0 是負數",
+        "0 既不是正數也不是負數",
+        "0 沒有相反數"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-zero",
+        "math-7-1-1-1-opposite-number"
+      ],
+      "e": "0 既不是正數也不是負數，而且 0 的相反數還是 0，所以選 C。"
+    },
+    {
+      "number": 17,
+      "q": "若 C 點表示 -1，D 點表示 3，則哪一個點表示的數比較大？",
+      "o": [
+        "C 點",
+        "D 點",
+        "一樣大",
+        "無法比較"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-order"
+      ],
+      "e": "3 在 -1 的右邊，因此 D 點表示的數比較大。"
+    },
+    {
+      "number": 18,
+      "q": "下列哪一個數離原點最遠？",
+      "o": [
+        "-4",
+        "2",
+        "-3",
+        "1"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "e": "看絕對值大小：4、2、3、1，其中 4 最大，所以 -4 離原點最遠。"
+    },
+    {
+      "number": 19,
+      "q": "2.7 的相反數是什麼？",
+      "o": [
+        "-2.7",
+        "2.7",
+        "0",
+        "-7.2"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number"
+      ],
+      "e": "相反數只改變正負號，所以 2.7 的相反數是 -2.7。"
+    },
+    {
+      "number": 20,
+      "q": "如圖，B 點表示的數是什麼？",
+      "o": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -2,
+        "max": 2,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": 1,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "由圖可知 B 點位在 1 的位置，所以選 B。"
+    }
+  ]
+}
