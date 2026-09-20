@@ -124,13 +124,58 @@
 
   function validateSolidProjection(spec) {
     const solid = String(spec.solid || 'cube');
-    if (!['cube','cuboid'].includes(solid)) {
-      return { ok:false, reason:'solid-projection v1 目前支援 cube / cuboid' };
+    if (!['cube','cuboid','custom'].includes(solid)) {
+      return { ok:false, reason:'solid-projection 目前支援 cube / cuboid / custom' };
     }
 
-    const built = buildBoxSolid({ ...spec, solid });
-    if (!built) {
-      return { ok:false, reason:'solid-projection 尺寸或 origin 格式錯誤' };
+    let built;
+
+    if (solid === 'custom') {
+      const sourceVertices = spec.vertices && typeof spec.vertices === 'object'
+        ? spec.vertices
+        : null;
+      const sourceEdges = Array.isArray(spec.edges) ? spec.edges : null;
+
+      if (!sourceVertices || !sourceEdges) {
+        return { ok:false, reason:'custom solid 需要 vertices 與 edges' };
+      }
+
+      const vertices = {};
+      for (const [name, point] of Object.entries(sourceVertices)) {
+        const vertex = normalizeVertex3D(point, name);
+        if (!vertex) {
+          return { ok:false, reason:`custom solid 頂點 ${name} 格式錯誤` };
+        }
+        vertices[name] = { ...vertex, label:point?.label === undefined ? name : String(point.label) };
+      }
+
+      if (Object.keys(vertices).length < 2) {
+        return { ok:false, reason:'custom solid 至少需要 2 個頂點' };
+      }
+
+      const edges = [];
+      for (const edge of sourceEdges) {
+        if (!Array.isArray(edge) || edge.length !== 2) {
+          return { ok:false, reason:'custom solid edge 必須是 [from, to]' };
+        }
+        const from = String(edge[0]);
+        const to = String(edge[1]);
+        if (!vertices[from] || !vertices[to] || from === to) {
+          return { ok:false, reason:`custom solid edge 無效: ${from}-${to}` };
+        }
+        edges.push([from, to]);
+      }
+
+      if (!edges.length) {
+        return { ok:false, reason:'custom solid 至少需要 1 條 edge' };
+      }
+
+      built = { vertices, edges };
+    } else {
+      built = buildBoxSolid({ ...spec, solid });
+      if (!built) {
+        return { ok:false, reason:'solid-projection 尺寸或 origin 格式錯誤' };
+      }
     }
 
     const view = spec.view && typeof spec.view === 'object' ? spec.view : {};
@@ -1056,7 +1101,7 @@
 
     const svg = createSvg(
       GEO_VIEW_H,
-      spec.ariaLabel || `${spec.solid === 'cube' ? '正方體' : '長方體'}，頂點 A 到 H 的二維投影圖${spec.showAxes ? '，含 XYZ 空間方向軸' : ''}`
+      spec.ariaLabel || `${spec.solid === 'cube' ? '正方體' : spec.solid === 'cuboid' ? '長方體' : '自訂立體'}，頂點 ${Object.values(spec.vertices).map(point => point.label).join('、')} 的二維投影圖${spec.showAxes ? '，含 XYZ 空間方向軸' : ''}`
     );
 
     if (spec.showAxes) {
@@ -1131,9 +1176,13 @@
         dx /= length;
         dy /= length;
 
+        const sourceVertex = Object.values(spec.vertices).find(vertex => vertex.label === point.label);
+        const labelDx = finiteNumber(sourceVertex?.labelDx) ?? 0;
+        const labelDy = finiteNumber(sourceVertex?.labelDy) ?? 0;
+
         svg.appendChild(svgEl('text', {
-          x:point.screenX + dx * 22,
-          y:point.screenY + dy * 22 + 5,
+          x:point.screenX + dx * 22 + labelDx,
+          y:point.screenY + dy * 22 + 5 + labelDy,
           class:'solid-label'
         }, point.label));
       }
