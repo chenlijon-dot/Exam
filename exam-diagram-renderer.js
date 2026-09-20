@@ -156,7 +156,9 @@
         edges:built.edges,
         view:{ yaw, pitch, roll, projection },
         showVertexLabels:spec.showVertexLabels !== false,
-        showHiddenEdges:spec.showHiddenEdges !== false
+        showHiddenEdges:spec.showHiddenEdges !== false,
+        showAxes:spec.showAxes !== false,
+        axisLength:finiteNumber(spec.axisLength)
       }
     };
   }
@@ -435,6 +437,21 @@
         stroke-dasharray:8 6;
         fill:none;
         vector-effect:non-scaling-stroke;
+      }
+      .solid-axis{
+        stroke:#475569;
+        stroke-width:2;
+        fill:none;
+        vector-effect:non-scaling-stroke;
+      }
+      .solid-axis-label{
+        fill:#334155;
+        font:800 17px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
+        text-anchor:middle;
+      }
+      .solid-axis-origin{
+        fill:#475569;
+        font:700 14px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
       }
       .solid-vertex{fill:#0f172a}
       .solid-label{
@@ -927,6 +944,75 @@
     }));
   }
 
+  function solidAxisWorldPoints(spec) {
+    const values = Object.values(spec.vertices);
+    const minX = Math.min(...values.map(point => point.x));
+    const maxX = Math.max(...values.map(point => point.x));
+    const minY = Math.min(...values.map(point => point.y));
+    const maxY = Math.max(...values.map(point => point.y));
+    const minZ = Math.min(...values.map(point => point.z));
+    const maxZ = Math.max(...values.map(point => point.z));
+
+    const origin = {
+      x:minX,
+      y:minY,
+      z:minZ,
+      label:'__axisO'
+    };
+
+    const autoLength = Math.max(
+      maxX - minX,
+      maxY - minY,
+      maxZ - minZ,
+      1
+    ) * 0.72;
+
+    const requested = finiteNumber(spec.axisLength);
+    const length = requested !== null && requested > 0 ? requested : autoLength;
+
+    return [
+      origin,
+      { x:origin.x + length, y:origin.y, z:origin.z, label:'__axisX' },
+      { x:origin.x, y:origin.y + length, z:origin.z, label:'__axisY' },
+      { x:origin.x, y:origin.y, z:origin.z + length, label:'__axisZ' }
+    ];
+  }
+
+  function drawSolidAxis(svg, from, to, label) {
+    svg.appendChild(svgEl('line', {
+      x1:from.screenX,
+      y1:from.screenY,
+      x2:to.screenX,
+      y2:to.screenY,
+      class:'solid-axis'
+    }));
+
+    const dx = to.screenX - from.screenX;
+    const dy = to.screenY - from.screenY;
+    const length = Math.hypot(dx, dy) || 1;
+    const ux = dx / length;
+    const uy = dy / length;
+    const px = -uy;
+    const py = ux;
+    const arrow = 11;
+    const half = 5.5;
+
+    svg.appendChild(svgEl('polygon', {
+      points:[
+        [to.screenX, to.screenY],
+        [to.screenX - ux * arrow + px * half, to.screenY - uy * arrow + py * half],
+        [to.screenX - ux * arrow - px * half, to.screenY - uy * arrow - py * half]
+      ].map(point => point.join(',')).join(' '),
+      fill:'#475569'
+    }));
+
+    svg.appendChild(svgEl('text', {
+      x:to.screenX + ux * 15,
+      y:to.screenY + uy * 15 + 5,
+      class:'solid-axis-label'
+    }, label));
+  }
+
   function renderSolidProjection(container, rawSpec) {
     ensureStyles();
     const checked = validateSolidProjection(rawSpec);
@@ -944,12 +1030,24 @@
       rotatedByLabel[label] = rotatePoint3D(point, spec.view);
     });
 
-    const projectedList = Object.entries(rotatedByLabel).map(([label, point]) => ({
+    const projectedVertices = Object.entries(rotatedByLabel).map(([label, point]) => ({
       ...projectPoint3D(point, spec.view),
       label
     }));
-    const mappedList = mapProjectedPoints(projectedList);
-    const mapped = Object.fromEntries(mappedList.map(point => [point.label, point]));
+
+    const axisProjected = spec.showAxes
+      ? solidAxisWorldPoints(spec).map(point => {
+          const rotated = rotatePoint3D(point, spec.view);
+          return {
+            ...projectPoint3D(rotated, spec.view),
+            label:point.label
+          };
+        })
+      : [];
+
+    const mappedAll = mapProjectedPoints([...projectedVertices, ...axisProjected]);
+    const mapped = Object.fromEntries(mappedAll.map(point => [point.label, point]));
+    const mappedList = projectedVertices.map(point => mapped[point.label]);
 
     const depthValues = mappedList.map(point => point.depth);
     const minDepth = Math.min(...depthValues);
@@ -958,8 +1056,33 @@
 
     const svg = createSvg(
       GEO_VIEW_H,
-      spec.ariaLabel || `${spec.solid === 'cube' ? '正方體' : '長方體'}，頂點 A 到 H 的二維投影圖`
+      spec.ariaLabel || `${spec.solid === 'cube' ? '正方體' : '長方體'}，頂點 A 到 H 的二維投影圖${spec.showAxes ? '，含 XYZ 空間方向軸' : ''}`
     );
+
+    if (spec.showAxes) {
+      const axisO = mapped.__axisO;
+      const axisX = mapped.__axisX;
+      const axisY = mapped.__axisY;
+      const axisZ = mapped.__axisZ;
+
+      if (axisO && axisX && axisY && axisZ) {
+        drawSolidAxis(svg, axisO, axisX, 'x');
+        drawSolidAxis(svg, axisO, axisY, 'y');
+        drawSolidAxis(svg, axisO, axisZ, 'z');
+
+        svg.appendChild(svgEl('circle', {
+          cx:axisO.screenX,
+          cy:axisO.screenY,
+          r:3.8,
+          fill:'#475569'
+        }));
+        svg.appendChild(svgEl('text', {
+          x:axisO.screenX - 12,
+          y:axisO.screenY + 18,
+          class:'solid-axis-origin'
+        }, 'O'));
+      }
+    }
 
     const edges = spec.edges.map(([from, to]) => {
       const a = mapped[from];
