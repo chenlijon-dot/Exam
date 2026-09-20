@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-02-hard",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 2",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 2｜What Are These?｜困難",
+    "subtitle": "15 題｜整合判讀、比較與推論",
+    "unit": "英文七上｜Lesson 2",
+    "difficulty": "english-7-1-lesson-02-hard",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 2 教材參考資料自編；題型參考 GEPT 初級整合式詞彙、結構與閱讀判讀四選一形式，非官方 GEPT 試題。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "整合應用",
+      "q": "A: What is this?  B: _____ an ox.",
+      "o": [
+        "These are",
+        "It is",
+        "Those are",
+        "They are"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-what-singular"
+      ],
+      "e": "答案是 (B) It is。this 是單數，回答可用 It is an ox。"
+    },
+    {
+      "number": 2,
+      "q": "A: What are those?  B: _____ mice.",
+      "o": [
+        "That is",
+        "It is",
+        "Those is",
+        "They are"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-what-plural",
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (D) They are。those 為複數，mouse 的複數為 mice。"
+    },
+    {
+      "number": 3,
+      "q": "Which sentence is NOT correct?",
+      "o": [
+        "These are sheep.",
+        "Those are mice.",
+        "This is an ox.",
+        "These is a fox."
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-demonstratives",
+        "english-7-1-l2-be"
+      ],
+      "e": "答案是 (D) These is a fox.。These 是複數，不能搭配 is，也不應接單數 a fox。"
+    },
+    {
+      "number": 4,
+      "q": "One woman is here, and two _____ are over there.",
+      "o": [
+        "womans",
+        "womens",
+        "women",
+        "woman"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (C) women。woman 的不規則複數是 women。"
+    },
+    {
+      "number": 5,
+      "q": "One person is in the room. Five _____ are outside.",
+      "o": [
+        "persons only",
+        "people",
+        "peoples",
+        "person"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (B) people。教材列出 person → people / persons；一般情境下 people 最自然。"
+    },
+    {
+      "number": 6,
+      "q": "Tom has two sisters. _____ names are Amy and Mia.",
+      "o": [
+        "His",
+        "Her",
+        "Their",
+        "Its"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-possessive"
+      ],
+      "e": "答案是 (C) Their。names 屬於兩位 sisters，所有格用 their。"
+    },
+    {
+      "number": 7,
+      "q": "Which phrase means “那些女孩們的桌子”?",
+      "o": [
+        "those girl’s desks",
+        "those girls desk",
+        "those girls’ desks",
+        "those girl desks’"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-possessive"
+      ],
+      "e": "答案是 (C) those girls’ desks。girls 是複數，所有格在 s 後加 apostrophe。"
+    },
+    {
+      "number": 8,
+      "q": "African elephants are about 3.2 meters tall, while Asian elephants are about 2.75 meters tall. Which inference is best supported?",
+      "o": [
+        "African elephants are taller on average.",
+        "Asian elephants always live longer.",
+        "All African elephants have the same height.",
+        "Asian elephants are heavier."
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading",
+        "english-7-1-l2-inference"
+      ],
+      "e": "答案是 (A)。3.2 大於 2.75，因此可由教材數據推論 African elephants 平均較高；其他選項沒有這段資料支持。"
+    },
+    {
+      "number": 9,
+      "q": "Asian elephants live about 60 years and African elephants about 70 years. Which statement is supported?",
+      "o": [
+        "Asian elephants live about 10 years longer.",
+        "African elephants live about 10 years longer.",
+        "Both live exactly 65 years.",
+        "The passage gives no lifespan information."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading",
+        "english-7-1-l2-inference"
+      ],
+      "e": "答案是 (B)。70 − 60 = 10，因此教材資料支持 African elephants 約多 10 年。"
+    },
+    {
+      "number": 10,
+      "q": "A passage says, “This elephant has very big ears and is about 3.2 meters tall.” Based on Lesson 2, it is more likely a(n) _____.",
+      "o": [
+        "Asian elephant",
+        "African elephant",
+        "mouse",
+        "zebra"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading",
+        "english-7-1-l2-inference"
+      ],
+      "e": "答案是 (B) African elephant。大耳朵與約 3.2 meters 都符合教材中的 African elephant 特徵。"
+    },
+    {
+      "number": 11,
+      "q": "Which question-answer pair is grammatically correct?",
+      "o": [
+        "What is these? — These are lions.",
+        "What are this? — This is a lion.",
+        "What are they? — They are lions.",
+        "What is those? — Those are lions."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-what-plural"
+      ],
+      "e": "答案是 (C) What are they? — They are lions.。they 是複數，問答都使用 are。"
+    },
+    {
+      "number": 12,
+      "q": "Which contraction is correct according to Lesson 2?",
+      "o": [
+        "this is → this’s",
+        "what is → what’s",
+        "these are → these’re",
+        "those are → those’re"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-contraction"
+      ],
+      "e": "答案是 (B) what is → what’s。教材特別指出 what is 可縮寫；this is 不縮寫。"
+    },
+    {
+      "number": 13,
+      "q": "Which two words begin with voiceless sounds taught in Lesson 2?",
+      "o": [
+        "pig — table",
+        "big — desk",
+        "black — dear",
+        "job — red"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-pronunciation"
+      ],
+      "e": "答案是 (A) pig — table。/p/ 與 /t/ 都是本課列出的清音；/b/、/d/ 為相對的濁音。"
+    },
+    {
+      "number": 14,
+      "q": "The reading compares size, ears, height, and lifespan of two kinds of elephants. What is the main idea?",
+      "o": [
+        "How elephants learn tricks",
+        "Differences between Asian and African elephants",
+        "Why elephants live in zoos",
+        "How to draw an elephant"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading"
+      ],
+      "e": "答案是 (B)。教材 p.31–32 的主旨就是比較 Asian elephants 與 African elephants 的差異。"
+    },
+    {
+      "number": 15,
+      "q": "When a reader uses facts in a passage plus background knowledge to decide something the writer does not say directly, the reader is _____.",
+      "o": [
+        "making an inference",
+        "copying a sentence",
+        "checking spelling",
+        "reading only the title"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-inference"
+      ],
+      "e": "答案是 (A) making an inference。Lesson 2 的 Reading Skills 是 Making Inferences：利用文本線索加上背景知識推論未明說資訊。"
+    }
+  ]
+}
