@@ -355,6 +355,9 @@
           `/repos/${RECORD_REPO}/contents/math-handwriting-results/${id}.json?ref=main`
         );
         const result = JSON.parse(base64ToUtf8(data.content || ''));
+        if (result?.status === 'error') {
+          throw new Error(result.error || 'Gemini 手寫判題失敗。');
+        }
         if (result) return result;
       } catch (e) {
         if (e.status !== 404) throw e;
