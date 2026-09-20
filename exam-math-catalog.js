@@ -41,7 +41,15 @@
             hard: 'chapter-bank/math/7-1/1-3/hard.json'
           }
         },
-        { code: '1-4', title: '指數記法與科學記號', page: 63 }
+        {
+          code: '1-4', title: '指數記法與科學記號', page: 63,
+          bankMenuReady: true,
+          banks: {
+            easy: 'chapter-bank/math/7-1/1-4/easy.json',
+            medium: 'chapter-bank/math/7-1/1-4/medium.json',
+            hard: 'chapter-bank/math/7-1/1-4/hard.json'
+          }
+        }
       ]
     },
     {
@@ -1414,14 +1422,14 @@
       <button class="catalog-back" id="backMathUnitsBtn">← 返回單元</button>
       <div class="catalog-path">數學　›　七年級上學期（一上）　›　${unit.number} ${unit.title}</div>
       <h2 class="catalog-title">${unit.number}　${unit.title}</h2>
-      <p class="catalog-sub">課本單元起始頁 p.${unit.page}；1-1、1-2、1-3 已建立分級自編題庫，其餘小節依教材知識庫逐步建立。</p>
+      <p class="catalog-sub">課本單元起始頁 p.${unit.page}；單元 1 的 1-1～1-4 分級自編題庫皆已建立。</p>
       <div class="catalog-grid">
         ${unit.sections.map(section => {
           const ready = section.bankMenuReady === true;
           return `
           <button class="catalog-card chapter-card" data-math-section="${section.code}" ${ready ? '' : 'disabled'}>
             <span class="top"><strong>${section.code}　${section.title}</strong><span class="catalog-badge ${ready ? 'reference' : 'soon'}">${ready ? '題庫已建立' : '目錄已確認'}</span></span>
-            <span class="desc">課本起始頁 p.${section.page}｜${ready ? (section.code === '1-2' ? '簡易 20 題・中等 10 題・困難 10 題｜含數線距離與等距題' : (section.code === '1-3' ? '簡易 20 題・中等 10 題・困難 10 題｜含乘除符號、分配律與情境題' : '簡易 20 題・中等 10 題・困難 10 題')) : '題庫待建'}</span>
+            <span class="desc">課本起始頁 p.${section.page}｜${ready ? (section.code === '1-2' ? '簡易 20 題・中等 10 題・困難 10 題｜含數線距離與等距題' : (section.code === '1-3' ? '簡易 20 題・中等 10 題・困難 10 題｜含乘除符號、分配律與情境題' : (section.code === '1-4' ? '簡易 20 題・中等 10 題・困難 10 題｜含指數、10 的次方與科學記號' : '簡易 20 題・中等 10 題・困難 10 題'))) : '題庫待建'}</span>
           </button>`;
         }).join('')}
       </div>`;
@@ -1452,11 +1460,17 @@
               { key:'medium', icon:'🌿', label:'中等', count:10, desc:'連乘連除、四則混合、巧算與情境應用。' },
               { key:'hard', icon:'🌳', label:'困難', count:10, desc:'符號推理、反推未知數、分配律與綜合運算。' }
             ]
-          : [
-              { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'正負數、0、相反數、絕對值與基本數線判讀。' },
-              { key:'medium', icon:'🌿', label:'中等', count:10, desc:'分數刻度、等距點、相反數與絕對值綜合。' },
-              { key:'hard', icon:'🌳', label:'困難', count:10, desc:'等距、中點、內分點與代數條件綜合推理。' }
-            ])
+          : section.code === '1-4'
+            ? [
+                { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'指數基本概念、10 的次方與科學記號轉換。' },
+                { key:'medium', icon:'🌿', label:'中等', count:10, desc:'負底數、同底數比較、科學記號大小與位數。' },
+                { key:'hard', icon:'🌳', label:'困難', count:10, desc:'含指數混合運算、數量級、反推指數與綜合比較。' }
+              ]
+            : [
+                { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'正負數、0、相反數、絕對值與基本數線判讀。' },
+                { key:'medium', icon:'🌿', label:'中等', count:10, desc:'分數刻度、等距點、相反數與絕對值綜合。' },
+                { key:'hard', icon:'🌳', label:'困難', count:10, desc:'等距、中點、內分點與代數條件綜合推理。' }
+              ])
     ];
 
     setHeader(`數學一上｜${section.code}`, section.title);
