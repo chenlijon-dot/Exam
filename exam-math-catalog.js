@@ -1412,7 +1412,7 @@
     $('#backMathUnitsBtn')?.addEventListener('click', showMath71Units);
     unit.sections.forEach(section => {
       if (!section.bankMenuReady) return;
-      $("[data-math-section="" + section.code + ""]")?.addEventListener('click', () => {
+      $(`[data-math-section="${section.code}"]`)?.addEventListener('click', () => {
         showMath71SectionBanks(unitKey, section.code);
       });
     });
@@ -1446,7 +1446,7 @@
 
     $('#backMathSectionBtn')?.addEventListener('click', () => showMath71Unit(unitKey));
     levels.forEach(level => {
-      $("[data-math-section-bank="" + level.key + ""]")?.addEventListener('click', event => {
+      $(`[data-math-section-bank="${level.key}"]`)?.addEventListener('click', event => {
         openMath71SectionBank(unitKey, sectionCode, level.key, event.currentTarget);
       });
     });
