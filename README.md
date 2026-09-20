@@ -1653,6 +1653,31 @@ chapter-bank/math/7-1/1-4/
 
 `exam-runtime-flex.js` 已把 `handwriting` 視為正式計分題型；最終成績分母包含選擇題與手寫題。
 
+
+正式題庫的手寫介面已改為重用測試版完整工具鏈：
+
+```text
+自由手寫
+＋ 原子筆筆觸
+＋ 橡皮擦
+＋ 直線／三角形／圓形／矩形
+＋ 文字標示
+＋ 指標模式
+＋ 拖移／縮放
+＋ SM-T220 Web Canvas 防掌觸與低採樣率補點
+```
+
+手寫判題不再經 GitHub Token / Exam-Record / GitHub Actions relay；正式改走：
+
+```text
+手寫 PNG
+→ Firebase App Check
+→ Firebase AI Logic
+→ Gemini
+→ verdict / errorStep / whyWrong / correction / nextHint / feedback
+```
+
+只有 `verdict = correct` 才計分；錯誤題直接顯示錯誤位置、原因、修正方式與下一步提示。
 ---
 ## 下一階段
 
