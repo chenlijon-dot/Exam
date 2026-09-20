@@ -719,9 +719,26 @@ canonical 裡整理：
 ```text
 裁出原圖必要區域
 → 保留原始像素
+→ 儲存為 PNG / JPG / WebP
 → 放入 Google Doc／題庫 asset
+→ 題庫 JSON 只記錄圖片路徑
+→ 網頁以 <img> 顯示
 → 不用生成圖取代
 ```
+
+圖片處理硬規則：
+
+```text
+正式教材圖／考題圖
+= 真正的 image file
+
+JSON / JS / HTML
+= 只存相對路徑
+```
+
+不得把教材圖、圖表、地圖、幾何圖、照片轉成 Base64 或 `data:image/...;base64,...` 後塞進題庫資料。這會造成資料膨脹、難以 diff、傳輸容易 timeout，且不利於瀏覽器快取與後續維護。
+
+Google Drive 保存完整原始 evidence；GitHub `assets/` 只保存網站真正需要顯示的裁切圖或題庫 asset。
 
 ---
 
