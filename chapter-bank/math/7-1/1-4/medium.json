@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-4-medium",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-4 指數記法與科學記號",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-4",
+    "title": "1-4 指數記法與科學記號｜中等",
+    "subtitle": "10 題｜負底數、同底數比較、科學記號大小與位數",
+    "unit": "數學七上｜單元 1 數與數線｜1-4 指數記法與科學記號",
+    "difficulty": "math-7-1-1-4-medium",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "計算 (-2)⁴+(-3)² 的值。",
+      "o": [
+        "7",
+        "16",
+        "25",
+        "-25"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-mixed-powers"
+      ],
+      "e": "(-2)⁴=16，(-3)²=9，所以總和為 25。"
+    },
+    {
+      "number": 2,
+      "q": "計算 -2⁴+(-2)⁴ 的值。",
+      "o": [
+        "-32",
+        "-16",
+        "0",
+        "16"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-parentheses-sign",
+        "math-7-1-1-4-mixed-powers"
+      ],
+      "e": "-2⁴=-(2⁴)=-16，而 (-2)⁴=16，所以相加為 0。"
+    },
+    {
+      "number": 3,
+      "q": "下列哪一個值最小？",
+      "o": [
+        "(-3)²",
+        "(-3)³",
+        "-3²",
+        "3²"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-negative-base",
+        "math-7-1-1-4-parentheses-sign"
+      ],
+      "e": "(-3)²=9，(-3)³=-27，-3²=-9，3²=9，所以最小是 -27。"
+    },
+    {
+      "number": 4,
+      "q": "若 a>1，則下列大小關係何者正確？",
+      "o": [
+        "a²>a³",
+        "a³>a²",
+        "a²=a³",
+        "無法判斷"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-power-compare"
+      ],
+      "e": "當 a>1 時，指數越大，冪的值越大，因此 a³>a²。"
+    },
+    {
+      "number": 5,
+      "q": "若 0<a<1，則下列大小關係何者正確？",
+      "o": [
+        "a²>a³",
+        "a²<a³",
+        "a²=a³",
+        "無法判斷"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-power-compare"
+      ],
+      "e": "當 0<a<1 時，指數越大，值越小，所以 a²>a³。"
+    },
+    {
+      "number": 6,
+      "q": "將 7,250,000 寫成科學記號，何者正確？",
+      "o": [
+        "7.25×10⁵",
+        "7.25×10⁶",
+        "72.5×10⁵",
+        "0.725×10⁷"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-to-scientific"
+      ],
+      "e": "7,250,000=7.25×10⁶。"
+    },
+    {
+      "number": 7,
+      "q": "將 0.0000036 寫成科學記號，何者正確？",
+      "o": [
+        "3.6×10⁻⁵",
+        "3.6×10⁻⁶",
+        "36×10⁻⁷",
+        "0.36×10⁻⁵"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-to-scientific"
+      ],
+      "e": "小數點移到 3.6，共向右移 6 位，因此指數為 -6。"
+    },
+    {
+      "number": 8,
+      "q": "比較 4.8×10⁷、9.2×10⁶、3.1×10⁷，最大的是哪一個？",
+      "o": [
+        "4.8×10⁷",
+        "9.2×10⁶",
+        "3.1×10⁷",
+        "三者相等"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare"
+      ],
+      "e": "指數 7 大於 6，所以先排除 9.2×10⁶；同為 10⁷ 時，4.8>3.1，因此 4.8×10⁷ 最大。"
+    },
+    {
+      "number": 9,
+      "q": "某顆細菌的長度約為 2.4×10⁻⁶ 公尺，寫成小數是多少？",
+      "o": [
+        "0.000024",
+        "0.0000024",
+        "0.00000024",
+        "2400000"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-from-scientific",
+        "math-7-1-1-4-context"
+      ],
+      "e": "2.4×10⁻⁶=0.0000024。"
+    },
+    {
+      "number": 10,
+      "q": "5.67×10⁸ 是幾位整數？",
+      "o": [
+        "7 位",
+        "8 位",
+        "9 位",
+        "10 位"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-digit-count"
+      ],
+      "e": "1≤5.67<10，所以 5.67×10⁸ 的整數部分有 8+1=9 位。"
+    }
+  ]
+}
