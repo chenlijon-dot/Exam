@@ -12,7 +12,7 @@
     "unitGroupLabel": "單元 1 數與數線",
     "section": "1-4",
     "title": "1-4 指數記法與科學記號｜困難",
-    "subtitle": "10 題｜含指數混合運算、數量級、反推指數與綜合比較",
+    "subtitle": "12 題｜10 題選擇題＋2 題手寫計分題",
     "unit": "數學七上｜單元 1 數與數線｜1-4 指數記法與科學記號",
     "difficulty": "math-7-1-1-4-hard",
     "difficultyLabel": "困難",
@@ -20,7 +20,8 @@
     "preserveOptionOrder": false,
     "analysisEligible": true,
     "sourceType": "practice-generated",
-    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。"
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。 困難題另含 2 題手寫計分題，交卷時由 Gemini 依答案與計算過程判定；正確才計分，錯誤會回饋問題所在。",
+    "handwritingGrading": "gemini"
   },
   "questions": [
     {
@@ -184,6 +185,34 @@
         "math-7-1-1-4-scientific-compare"
       ],
       "e": "A=0.000099，B=0.000101，所以 A<B。"
+    },
+    {
+      "number": 11,
+      "type": "handwriting",
+      "questionId": "math-7-1-1-4-hard-handwriting-01",
+      "q": "分別計算 (-3)⁴ 與 -3⁴，並比較兩者大小。請說明括號造成的差異。",
+      "handwritingInstruction": "請分別算出兩個值，並寫出哪一個較大。",
+      "expectedAnswer": "(-3)⁴=81，-3⁴=-81，所以 (-3)⁴>-3⁴",
+      "gradingInstructions": "必須辨識 (-3)^4 的底數是 -3，值為 81；-3^4 是 -(3^4)，值為 -81；因此前者較大。若把兩者都算成 81 或都算成 -81，判 incorrect 並指出括號／底數判讀問題。",
+      "conceptIds": [
+        "math-7-1-1-4-negative-base",
+        "math-7-1-1-4-parentheses-sign"
+      ],
+      "e": "(-3)⁴=81；-3⁴=-(3⁴)=-81，因此 (-3)⁴>-3⁴。"
+    },
+    {
+      "number": 12,
+      "type": "handwriting",
+      "questionId": "math-7-1-1-4-hard-handwriting-02",
+      "q": "將 0.0000725 寫成標準科學記號，並指出第一個非 0 數字出現在小數點後第幾位。",
+      "handwritingInstruction": "請寫出科學記號，並說明小數點移動與位數判斷。",
+      "expectedAnswer": "7.25×10⁻⁵；第一個非 0 數字在小數點後第 5 位",
+      "gradingInstructions": "標準答案為 7.25×10^-5，且第一個非 0 數字 7 在小數點後第 5 位。科學記號與位數判斷兩者皆正確才判 correct；若指數正負或位數錯誤，請明確指出。",
+      "conceptIds": [
+        "math-7-1-1-4-to-scientific",
+        "math-7-1-1-4-first-nonzero"
+      ],
+      "e": "0.0000725=7.25×10⁻⁵；第一個非 0 數字在小數點後第 5 位。"
     }
   ]
 }
