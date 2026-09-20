@@ -1531,7 +1531,7 @@ Renderer 目前已支援：
 - `square`：可用 4 個 vertices，或以 `x / y / size` 直接產生正方形，支援 A/B/C/D 頂點標註。
 - `circle`：以圓心與半徑繪製，可標註圓心 O 與圓周上的 A/B/... 點。
 - `coordinate-plane` / `xy-plane`：XY 軸、箭頭、格線、刻度、數字、標記點與線段。
-- `solid-projection`：支援 `cube`、`cuboid` 與 `custom`。`custom` 可直接提供 XYZ 頂點表與 edges，因此三角柱、角錐或其他線框多面體可共用同一套 3D→2D 投影；支援 yaw / pitch / roll、orthographic / oblique、XYZ 方向軸、頂點標註與隱藏邊虛線。
+- `solid-projection`：支援 `cube`、`cuboid` 與 `custom`。`custom` 可提供 XYZ 頂點、edges 與 faces，因此三角柱、角錐或其他凸多面體可共用同一套 3D→2D 投影。邊線可見性目前以 face normal / adjacent faces 判斷：外輪廓與可見邊畫實線、真正被遮蔽的邊才畫虛線；XYZ 軸改為選用，預設不顯示，避免搶走國中立體圖的視覺焦點。
 - SVG `viewBox` responsive 顯示，手機與桌面共用。
 - 自動 ARIA 描述與非法 spec 安全 fallback，不使整頁 crash。
 
