@@ -1266,6 +1266,7 @@ Exam/
 | `ENGLISH_Database.MD` | 英文 GEPT 閱讀／字彙資料庫現況與 authority |
 | `LEARNING_HISTORY_FIREBASE.md` | 現行 Firebase 登入、學習歷程、單字狀態與維護 authority |
 | `Android學生機設計.MD` | Student Exam Android App、SM-T220 裝置與系統層 runbook |
+| `MATH_DIAGRAM_SYSTEM.md` | 自有數學繪圖系統、diagram schema、renderer、3D 教材式投影與 roadmap 的專門 authority |
 | `curriculum-catalog/*.md` | 各科實體教材章節／課次 catalog authority |
 | 有日期的 collection MD | 當次教材收集 snapshot，不作為 live status 的最高 authority |
 
@@ -1388,6 +1389,7 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
    - 英文 GEPT／字彙：`ENGLISH_Database.MD`
    - 學習歷程／Firebase：`LEARNING_HISTORY_FIREBASE.md`
    - Android 學生機：`Android學生機設計.MD`
+   - 數學繪圖系統：`MATH_DIAGRAM_SYSTEM.md`
    - 各科課程樹：`curriculum-catalog/*.md`
 3. 再讀 GitHub `main` 的實際最新程式與資料；文件若與程式／資料不一致，先確認真正 authority，再修文件。
 4. 不要從舊對話印象直接假設 repository 狀態。
@@ -1476,6 +1478,8 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 ---
 
 # 26. 自編數學圖形 Renderer
+
+本節只保留總覽；完整規格與維護規則以 `MATH_DIAGRAM_SYSTEM.md` 為準。
 
 自編數學題的程式生成圖形目前已建立第一個正式 renderer：
 
