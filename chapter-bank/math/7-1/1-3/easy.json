@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-3-easy",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-3 正負數的乘除",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-3",
+    "title": "1-3 正負數的乘除｜簡易",
+    "subtitle": "20 題｜乘除符號、特殊數、基本四則與分配律",
+    "unit": "數學七上｜單元 1 數與數線｜1-3 正負數的乘除",
+    "difficulty": "math-7-1-1-3-easy",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "計算 (-6)×4 的值。",
+      "o": [
+        "-24",
+        "-10",
+        "10",
+        "24"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-multiplication"
+      ],
+      "e": "異號相乘得負，6×4=24，所以答案是 -24。"
+    },
+    {
+      "number": 2,
+      "q": "計算 (-7)×(-3) 的值。",
+      "o": [
+        "-21",
+        "-10",
+        "10",
+        "21"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-multiplication"
+      ],
+      "e": "同號相乘得正，7×3=21，所以答案是 21。"
+    },
+    {
+      "number": 3,
+      "q": "計算 45÷(-9) 的值。",
+      "o": [
+        "-5",
+        "-4",
+        "4",
+        "5"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-division"
+      ],
+      "e": "異號相除得負，45÷9=5，所以答案是 -5。"
+    },
+    {
+      "number": 4,
+      "q": "計算 (-56)÷(-8) 的值。",
+      "o": [
+        "-7",
+        "-6",
+        "6",
+        "7"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-division"
+      ],
+      "e": "同號相除得正，56÷8=7。"
+    },
+    {
+      "number": 5,
+      "q": "計算 (-1)×13 的值。",
+      "o": [
+        "-13",
+        "-1",
+        "1",
+        "13"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-special-factors"
+      ],
+      "e": "乘以 -1 會得到原數的相反數，所以 (-1)×13=-13。"
+    },
+    {
+      "number": 6,
+      "q": "計算 0×(-25) 的值。",
+      "o": [
+        "-25",
+        "0",
+        "25",
+        "無意義"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-special-factors"
+      ],
+      "e": "0 乘以任何數都等於 0。"
+    },
+    {
+      "number": 7,
+      "q": "計算 0÷8 的值。",
+      "o": [
+        "0",
+        "8",
+        "無意義",
+        "不能判斷"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-zero-division"
+      ],
+      "e": "0 除以非 0 的數等於 0，所以 0÷8=0。"
+    },
+    {
+      "number": 8,
+      "q": "下列哪一個算式沒有意義？",
+      "o": [
+        "0÷5",
+        "5÷1",
+        "5÷(-1)",
+        "5÷0"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-zero-division"
+      ],
+      "e": "除數不能為 0，因此 5÷0 沒有意義。"
+    },
+    {
+      "number": 9,
+      "q": "三個負數相乘，乘積的正負為何？",
+      "o": [
+        "一定為正",
+        "一定為負",
+        "一定為 0",
+        "無法判斷"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-sign-parity"
+      ],
+      "e": "負因數有 3 個，是奇數個，因此乘積為負。"
+    },
+    {
+      "number": 10,
+      "q": "四個負數相乘，且沒有任何因數為 0，乘積的正負為何？",
+      "o": [
+        "一定為正",
+        "一定為負",
+        "一定為 0",
+        "無法判斷"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-sign-parity"
+      ],
+      "e": "負因數有 4 個，是偶數個，因此乘積為正。"
+    },
+    {
+      "number": 11,
+      "q": "計算 (-2)×5×(-3) 的值。",
+      "o": [
+        "-30",
+        "-10",
+        "10",
+        "30"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-multi-product"
+      ],
+      "e": "有兩個負因數，所以結果為正；2×5×3=30。"
+    },
+    {
+      "number": 12,
+      "q": "計算 18÷(-3)×2 的值。",
+      "o": [
+        "-12",
+        "-3",
+        "3",
+        "12"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-mixed-mul-div"
+      ],
+      "e": "乘除同級由左至右：18÷(-3)=-6，再乘 2 得 -12。"
+    },
+    {
+      "number": 13,
+      "q": "計算 6+(-2)×5 的值。",
+      "o": [
+        "-20",
+        "-4",
+        "4",
+        "20"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-order-of-operations"
+      ],
+      "e": "先乘除後加減：(-2)×5=-10，6+(-10)=-4。"
+    },
+    {
+      "number": 14,
+      "q": "計算 [(-3)+5]×4 的值。",
+      "o": [
+        "-8",
+        "2",
+        "8",
+        "20"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-parentheses"
+      ],
+      "e": "先算括號：-3+5=2，再算 2×4=8。"
+    },
+    {
+      "number": 15,
+      "q": "利用分配律計算 7×(10-2)，結果為何？",
+      "o": [
+        "42",
+        "56",
+        "70",
+        "84"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-distributive"
+      ],
+      "e": "7×(10-2)=7×10-7×2=70-14=56。"
+    },
+    {
+      "number": 16,
+      "q": "下列哪一個等式正確表示分配律？",
+      "o": [
+        "a(b+c)=ab+c",
+        "a(b+c)=ab+ac",
+        "a(b+c)=a+b+c",
+        "a(b+c)=ab×ac"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-distributive"
+      ],
+      "e": "分配律為 a(b+c)=ab+ac。"
+    },
+    {
+      "number": 17,
+      "q": "計算 (-4)×0×15 的值。",
+      "o": [
+        "-60",
+        "0",
+        "15",
+        "60"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-zero-factor"
+      ],
+      "e": "乘積中只要有一個因數是 0，整個乘積就是 0。"
+    },
+    {
+      "number": 18,
+      "q": "若每前進 1 步記為 +1，每後退 1 步記為 -1。機器人每次後退 3 步，連續做 4 次，總位移為何？",
+      "o": [
+        "-12",
+        "-7",
+        "7",
+        "12"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-repeated-change"
+      ],
+      "e": "每次位移 -3，做 4 次，所以 (-3)×4=-12。"
+    },
+    {
+      "number": 19,
+      "q": "某遊戲答錯一題扣 2 分，小明答錯 6 題，總共扣多少分？",
+      "o": [
+        "-12 分",
+        "-8 分",
+        "8 分",
+        "12 分"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-scoring"
+      ],
+      "e": "每題 -2 分，答錯 6 題，(-2)×6=-12 分。"
+    },
+    {
+      "number": 20,
+      "q": "計算 25×4×(-2) 的值。",
+      "o": [
+        "-200",
+        "-100",
+        "100",
+        "200"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-multiplication-laws"
+      ],
+      "e": "可先算 25×4=100，再乘 -2，得 -200。"
+    }
+  ]
+}
