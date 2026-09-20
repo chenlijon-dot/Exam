@@ -177,6 +177,38 @@
     });
   }
 
+  function renderQuestionDiagrams(root = quiz) {
+    if (!root) return;
+
+    questions.forEach((question, questionIndex) => {
+      if (!question?.diagram) return;
+
+      const imageList = Array.isArray(question.images)
+        ? question.images.filter(Boolean)
+        : (question.image ? [question.image] : []);
+
+      // Existing official/original image flow remains authoritative.
+      // If both are present, image wins and diagram is intentionally ignored.
+      if (imageList.length) return;
+
+      const host = root.querySelector(`[data-diagram-question="${questionIndex}"]`);
+      if (!host) return;
+
+      if (typeof window.renderDiagram !== 'function') {
+        console.warn('[ExamRuntime] diagram renderer is unavailable', question.diagram);
+        host.innerHTML = '<div class="diagram-fallback">圖形載入失敗</div>';
+        return;
+      }
+
+      try {
+        window.renderDiagram(host, question.diagram);
+      } catch (error) {
+        console.warn('[ExamRuntime] diagram render failed', error, question.diagram);
+        host.innerHTML = '<div class="diagram-fallback">圖形資料格式錯誤</div>';
+      }
+    });
+  }
+
   window.startExam = function(selected) {
     if (!banks[selected]) return;
     level = selected;
@@ -221,19 +253,23 @@
       const media = imageList.map((src, imageIndex) =>
         `<div class="question-media"><img src="${escapeHtml(src)}" alt="${escapeHtml(x.imageAlt || `第${i+1}題附圖${imageList.length > 1 ? ` ${imageIndex + 1}` : ''}`)}" loading="lazy"></div>`
       ).join('');
+      const diagramMedia = !imageList.length && x.diagram
+        ? `<div class="question-diagram-host" data-diagram-question="${i}"></div>`
+        : '';
       const optionMedia = x.optionImage ? `<div class="question-media option-media"><img src="${escapeHtml(x.optionImage)}" alt="${escapeHtml(x.optionImageAlt || `第${i+1}題選項圖`)}" loading="lazy"></div>` : '';
       const qtitle = `<div class="qtitle"><span class="num">${x.number || i+1}</span><span class="question-text">${escapeHtml(x.q)}</span></div>`;
 
       if (type === 'manual-study') {
         const instruction = x.manualInstruction || '請在紙上作答；本題不列入自動計分。';
         const answer = x.manualAnswer || x.answer || '';
-        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="manual-study">${intro}${qtitle}${media}${optionMedia}<div class="manual-study-box"><span class="manual-study-badge">紙筆練習｜不計分</span><div class="manual-study-note">${escapeHtml(instruction)}</div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
+        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="manual-study">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="manual-study-box"><span class="manual-study-badge">紙筆練習｜不計分</span><div class="manual-study-note">${escapeHtml(instruction)}</div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
       }
 
       const opts = renderOptionList(x, i);
-      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}">${intro}${qtitle}${media}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
+      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}">${intro}${qtitle}${media}${diagramMedia}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
     }).join('');
     bindOptionImageFallbacks(quiz);
+    renderQuestionDiagrams(quiz);
     renderMath(quiz);
     document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',updateProgress));
     updateProgress();
