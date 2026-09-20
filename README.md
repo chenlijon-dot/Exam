@@ -1531,6 +1531,7 @@ Renderer 目前已支援：
 - `square`：可用 4 個 vertices，或以 `x / y / size` 直接產生正方形，支援 A/B/C/D 頂點標註。
 - `circle`：以圓心與半徑繪製，可標註圓心 O 與圓周上的 A/B/... 點。
 - `coordinate-plane` / `xy-plane`：XY 軸、箭頭、格線、刻度、數字、標記點與線段。
+- `solid-projection`：支援 `cube`、`cuboid` 與 `custom`。`custom` 可直接提供 XYZ 頂點表與 edges，因此三角柱、角錐或其他線框多面體可共用同一套 3D→2D 投影；支援 yaw / pitch / roll、orthographic / oblique、XYZ 方向軸、頂點標註與隱藏邊虛線。
 - SVG `viewBox` responsive 顯示，手機與桌面共用。
 - 自動 ARIA 描述與非法 spec 安全 fallback，不使整頁 crash。
 
@@ -1540,7 +1541,7 @@ Smoke test 放在：
 number-line-renderer-tests.html
 ```
 
-目前共有 9 個 smoke test，涵蓋數線、三角形、正方形、圓形、頂點標註、XY 座標平面、標記點與線段。
+目前 smoke test 已擴充至 14 個，除數線、2D 幾何與 XY 座標平面外，另包含正方體、長方體、XYZ 軸、自訂三角柱與自訂四角錐投影。
 
 v1.1 再考慮：
 
