@@ -57,6 +57,14 @@ const CASES = [
   {
     title:'Case 9｜空心點與多點數線',
     spec:{type:'number-line',min:-4,max:4,tickStep:1,points:[{x:-2,label:'A',showValue:true,style:'solid'},{x:0,label:'O',showValue:true,style:'hollow'},{x:3,label:'B',showValue:true,style:'solid'}]}
+  },
+  {
+    title:'Case 10｜正方體 3D 投影',
+    spec:{type:'solid-projection',solid:'cube',size:4,view:{yaw:38,pitch:28,roll:0,projection:'orthographic'},showVertexLabels:true,showHiddenEdges:true}
+  },
+  {
+    title:'Case 11｜長方體斜投影',
+    spec:{type:'solid-projection',solid:'cuboid',width:5,height:3,depth:4,view:{yaw:30,pitch:22,roll:0,projection:'oblique'},showVertexLabels:true,showHiddenEdges:true}
   }
 ]
 
