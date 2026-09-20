@@ -1473,6 +1473,7 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 - [x] 社會七上第一冊 chapter tree
 - [x] 英文 Lesson 1、Lesson 2 reference + 簡易／中等／困難題庫
 - [x] 數學七上 1-1〈正數與負數〉自編題庫：簡易 20 題／中等 10 題／困難 10 題，共 40 題；8 題直接使用 number-line SVG renderer
+- [x] 數學七上 1-2〈正負數的加減〉自編題庫：簡易 20 題／中等 10 題／困難 10 題，共 40 題；8 題直接使用 number-line SVG renderer
 - [x] 自然 1-1、1-2、1-3 題庫工作流；1-1 已加入新無敵自然自修題庫
 - [x] 社會地理第1章、第2章三級文字自編題庫
 - [x] 社會地理第3章〈地形〉教材 canonical（p.34～47）
@@ -1526,6 +1527,36 @@ Google Drive canonical 教材知識庫
 目前 40 題中有 8 題使用 `number-line` diagram spec；不需 PNG，也不使用外部題庫原圖。
 
 `exam-math-catalog.js` 已將 1-1 從「題庫待建」改為可進入的分級題庫入口，並依難度載入對應 JSON。
+
+---
+## 數學七上 1-2 自編題庫里程碑（2026-09-21）
+
+`1-2 正負數的加減` 已正式接入 GitHub 題庫系統：
+
+```text
+chapter-bank/math/7-1/1-2/
+├─ easy.json    20 題
+├─ medium.json  10 題
+└─ hard.json    10 題
+```
+
+核心範圍涵蓋：
+
+```text
+同號／異號加法
+減法轉加相反數
+加減混合
+相反數抵消
+絕對值
+數線兩點距離
+中點
+等距點
+溫度／收支／樓層等情境
+```
+
+其中 8 題直接使用 `number-line` diagram spec，透過 `exam-diagram-renderer.js` 即時產生 SVG，不使用外部題庫原圖。
+
+`exam-math-catalog.js` 已將 1-2 從「題庫待建」改成可進入的分級題庫入口。
 
 ---
 ## 下一階段
