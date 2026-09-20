@@ -22,6 +22,13 @@
       path: 'chapter-bank/social/7-1/geography/chapter-03',
       questionCount: 20,
       pointsPerQuestion: 5
+    },
+    'geo-04': {
+      title: '第4章　海岸與島嶼',
+      subtitle: '海岸與島嶼｜選擇難度',
+      path: 'chapter-bank/social/7-1/geography/chapter-04',
+      questionCount: 20,
+      pointsPerQuestion: 5
     }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -146,7 +153,7 @@
   }
 
   document.addEventListener('click', event => {
-    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"]');
+    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"]');
     if (!chapter) return;
     event.preventDefault();
     event.stopImmediatePropagation();
