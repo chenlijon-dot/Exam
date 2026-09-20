@@ -2,6 +2,7 @@
   'use strict';
 
   const SCHOOL_BANK_PATH = 'chapter-bank/science/7-1/unit-01/section-02/school-exams.json';
+  const SELF_STUDY_BANK_PATH = 'chapter-bank/science/7-1/unit-01/section-02/self-study.json';
   const $ = (sel, root = document) => root.querySelector(sel);
 
   let unitViewFragment = null;
@@ -147,6 +148,59 @@
     }
   }
 
+
+  async function openSelfStudyBank(button) {
+    const badge = button?.querySelector('.catalog-badge');
+    const oldBadge = badge?.textContent || '';
+    if (button) button.disabled = true;
+    if (badge) badge.textContent = '載入中';
+
+    try {
+      const res = await fetch(SELF_STUDY_BANK_PATH, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const questions = Array.isArray(data.questions) ? data.questions : [];
+      if (!questions.length) {
+        alert('1-2 科學方法的自修題庫目前尚未匯入題目。');
+        return;
+      }
+      if (typeof banks === 'undefined' || typeof startExam !== 'function') {
+        throw new Error('題庫引擎尚未就緒');
+      }
+
+      const key = data.exam?.difficulty || 'science-7-1-u01-s02-self-study';
+      banks[key] = questions;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        ...(data.exam || {}),
+        key,
+        title: '1-2 科學方法｜自修題庫',
+        subtitle: '自然七上｜單元 1 生命現象與科學探究｜1-2 科學方法｜新無敵自然自修',
+        subject: 'science',
+        subjectLabel: '自然',
+        semester: '7-1',
+        semesterLabel: '七年級上學期',
+        unitGroup: 'unit-01',
+        unitGroupLabel: '單元 1 生命現象與科學探究',
+        section: 'section-02',
+        unit: '1-2 科學方法',
+        difficulty: 'selfStudy',
+        difficultyLabel: '自修題庫',
+        scoreMode: 'percent',
+        analysisEligible: true,
+        preserveOptionOrder: true,
+        backLabel: '返回 1-2 題庫',
+        onBack: showScienceMethodMenuAfterExam
+      };
+      startExam(key);
+    } catch (error) {
+      alert(`自修題庫載入失敗：${error.message}`);
+    } finally {
+      if (button) button.disabled = false;
+      if (badge) badge.textContent = oldBadge;
+    }
+  }
+
   async function updateSchoolBankBadge() {
     const badge = $('#scienceMethodSchoolBankBtn .catalog-badge');
     if (!badge) return;
@@ -168,6 +222,7 @@
     $('#scienceMethodMediumBtn')?.addEventListener('click', () => openPractice('medium'));
     $('#scienceMethodHardBtn')?.addEventListener('click', () => openPractice('hard'));
     $('#scienceMethodSchoolBankBtn')?.addEventListener('click', event => openSchoolBank(event.currentTarget));
+    $('#scienceMethodSelfStudyBtn')?.addEventListener('click', event => openSelfStudyBank(event.currentTarget));
   }
 
   function renderScienceMethodMenu() {
@@ -217,6 +272,14 @@
             <span class="catalog-badge school">檢查中</span>
           </span>
           <span class="desc">由各校自然科真實段考拆題；保留原始題號、選項順序、圖片與來源。</span>
+        </button>
+        <button class="catalog-card" id="scienceMethodSelfStudyBtn">
+          <span class="top">
+            <span class="icon">📘</span>
+            <strong>自修題庫</strong>
+            <span class="catalog-badge school">36 題</span>
+          </span>
+          <span class="desc">新無敵自然自修原題；已依正式教材章節重新分流，答案均已核對。</span>
         </button>
       </div>
     `;
