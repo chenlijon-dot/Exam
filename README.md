@@ -537,7 +537,7 @@ past-exams/cap/<year>/<subject>.json
 
 # 12. 正式歷屆考題製作流程（現行標準）
 
-這是目前基測數學 90～95 年實作後整理出的正式 SOP。
+這是目前基測數學 90～96 年實作後整理出的正式 SOP。
 
 ## 12.1 Stage A：先找 authority 原卷
 
@@ -641,21 +641,122 @@ metadata
 
 不要用 AI 重畫「看起來差不多」的版本。
 
+### 12.5.1 目前優先做法：本機手動框選裁圖工具
+
+目前歷屆 PDF 圖題優先使用本機的 **Image / PDF Crop Annotator** 手動框選，不再把「由 ChatGPT 反覆估座標裁圖」當成主要流程。
+
+標準操作：
+
+```text
+開啟原始 PDF
+→ 逐頁檢視
+→ Ctrl + 滾輪放大／縮小
+→ 必要時 Ctrl + 左鍵拖曳平移
+→ 左鍵框選真正需要的題圖
+→ 輸入題號／標籤
+→ 批次裁切
+→ 產生 <原 PDF 檔名>_cropped/
+→ 同時產生 crop_manifest.txt
+```
+
+工具的框選座標保存於原始影像／PDF 頁面座標系，不會因單純縮放或平移而改變；PDF 裁切時會依框選當下的放大倍率重新由 PDF 頁面渲染。因此遇到細小字、座標軸、角度標記時，可先放大再框選，以取得較高解析度輸出。
+
+PDF 模式的輸出資料夾慣例：
+
+```text
+<原 PDF 所在資料夾>/
+├─ 96年第一次數學科.pdf
+└─ 96年第一次數學科_cropped/
+   ├─ ...q2.png
+   ├─ ...q10-1.png
+   ├─ ...q10-2.png
+   └─ crop_manifest.txt
+```
+
+`crop_manifest.txt` 必須保留，作為這批裁圖的 provenance／操作紀錄。至少可追蹤：
+
+```text
+原始 PDF
+原始頁碼
+裁切標籤
+裁切座標
+裁切尺寸
+PDF 輸出倍率
+輸出檔案路徑
+成功／失敗狀態
+批次時間
+```
+
+### 12.5.2 圖片標籤與多圖判讀
+
+框選時直接用題號作標籤，例如：
+
+```text
+q2
+q9
+q18
+```
+
+同一題若需要拆成多張，可使用：
+
+```text
+q10-1
+q10-2
+
+q29-1
+q29-2
+```
+
+目前實務慣例通常是：
+
+```text
+-1 → 題目主圖
+-2 → 第二張補充圖；常見情況是圖形選項
+```
+
+但 **`-1 / -2` 本身不是固定語意**。匯入 GitHub 前仍須同時查看原題、裁圖內容與 `crop_manifest.txt`，再決定應映射成：
+
+```text
+image
+optionImage
+images:[...]
+題組共用圖
+```
+
+例如 `96-1`：
+
+```text
+Q10-1 → 題目主圖
+Q10-2 → 四個圖形選項
+Q29-1 → 題目主圖
+Q29-2 → 四個圖形選項
+```
+
+### 12.5.3 Drive → GitHub assets
+
 圖片儲存總原則：
 
 ```text
-原始完整 evidence → Google Drive
-網站必要裁圖      → GitHub assets
-題庫 JSON          → 只記錄相對路徑
-網頁               → <img src="...">
+原始完整 evidence        → Google Drive
+人工裁切結果 + manifest → Google Drive
+網站必要裁圖            → GitHub assets
+題庫 JSON               → 只記錄相對路徑
+網頁                    → <img src="...">
 ```
 
 正式教材圖、考題圖、地圖、幾何圖、表格、照片等，**禁止以 Base64 / data URL 內嵌進 JSON、JS 或 HTML**。這類圖片一律使用真正的 image file；例外只限極小型純 UI icon。
 
-建議位置：
+GitHub 建議位置：
 
 ```text
 past-exams/bct/<year>/<session>/assets/<subject>/
+```
+
+從 Drive 匯入 GitHub 時可把來源裁圖重新命名為較有語意的 asset 名稱，但不能改變圖的內容。例如：
+
+```text
+96年第一次數學科_p003_q19.png
+→ q19-parallelogram-arcs.png
 ```
 
 單圖：
@@ -664,7 +765,14 @@ past-exams/bct/<year>/<session>/assets/<subject>/
 "image": "past-exams/.../q19-centroid-geometry.png"
 ```
 
-一題多圖：
+題目主圖 + 圖形選項：
+
+```json
+"image": "past-exams/.../q10-kite-main.png",
+"optionImage": "past-exams/.../q10-options.png"
+```
+
+一題多張一般題圖：
 
 ```json
 "images": [
@@ -679,9 +787,10 @@ past-exams/bct/<year>/<session>/assets/<subject>/
 "imageAlt": "..."
 ```
 
-`95-1 Q32` 已正式驗證 `images:[...]` 多圖格式，可作後續範例。
-
+`95-1 Q32` 已正式驗證 `images:[...]` 多圖格式；`96-1 Q10 / Q29` 則已驗證 `image + optionImage` 的「題圖／圖形選項分離」流程。
 ## 12.6 Stage F：圖片匯入後清理
+
+目前建議先以 `crop_manifest.txt` 做一次裁圖 census，確認「哪些題有圖、每題幾張、各張用途」，再寫入 JSON。不要只靠檔名字尾猜用途。
 
 當圖檔已進 GitHub：
 
@@ -858,9 +967,11 @@ q32-2.png
 94-2 數學：33 題
 95-1 數學：33 題
 95-2 數學：33 題
+96-1 數學：33 題
+96-2 數學：待匯入
 ```
 
-90～95 各年度目前已在歷屆 UI 中建立對應數學入口；95-1、95-2 皆已正式掛載。
+90～96 各年度目前已在歷屆 UI 中建立對應數學入口；96 年目前第一次已正式掛載，第二次待匯入。
 
 95-1 目前完整鏈：
 
@@ -892,6 +1003,27 @@ q32-2.png
 ```
 
 95 年度第一次、第二次数學科目前皆已完成。
+
+96-1 目前完整鏈：
+
+```text
+原卷
+→ 33 題文字
+→ 官方答案
+→ 使用 Image / PDF Crop Annotator 人工框選
+→ Google Drive 96年第一次數學科_cropped/
+→ crop_manifest.txt
+→ 14 個圖題
+→ 16 張 PNG
+→ Q10、Q29 各拆成題目主圖 + 圖形選項
+→ GitHub assets
+→ imagePending / optionImagePending = 0
+→ 33 題逐題詳解
+→ 第二輪 QA
+→ UI 掛載
+```
+
+96-2 是下一個基測數學歷屆批次。
 
 ---
 
@@ -1321,13 +1453,15 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 
 ### 歷屆試題
 
-- [x] 基測數學 90-1 ～ 95-2 已建立
+- [x] 基測數學 90-1 ～ 96-1 已建立
+- [x] 歷屆 PDF 圖題採 Image / PDF Crop Annotator 人工框選＋crop_manifest 流程
 - [x] 原卷圖題裁圖規則
 - [x] 逐題詳解作為第二輪 QA
 
 ## 下一階段
 
 - [ ] 持續人工 QA 既有歷屆題
+- [ ] 基測數學 96-2
 - [ ] 持續匯入後續基測／教育會考
 - [ ] 補建更多教材 canonical 與 reference
 - [ ] 持續各校段考拆題與 concept mapping
@@ -1343,4 +1477,4 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 
 截至 2026-09-20：
 
-> 本專案目前已形成「Google Drive 教材 evidence／canonical → GitHub Exam catalog 與結構化可作答題庫 → GitHub Pages 線上學習 → Firebase Authentication／Firestore 個人學習歷程 → Firebase AI Logic 學習分析」的主架構。Private Exam-Record 仍保留既有同步、machine-readable curriculum 與舊 AI workflow 的相容用途，但不再是現行學習歷程的主要 authority。題庫內容繼續遵守實體教材／官方原卷優先、GitHub `origin/main` authority、GitHub-first / remote-first、provenance 不丟失的原則；各科 catalog 以實體教材目錄為依據，動態 readiness 則應逐步由 runtime patch 收斂回正式資料來源。
+> 本專案目前已形成「Google Drive 教材 evidence／canonical → GitHub Exam catalog 與結構化可作答題庫 → GitHub Pages 線上學習 → Firebase Authentication／Firestore 個人學習歷程 → Firebase AI Logic 學習分析」的主架構。Private Exam-Record 仍保留既有同步、machine-readable curriculum 與舊 AI workflow 的相容用途，但不再是現行學習歷程的主要 authority。題庫內容繼續遵守實體教材／官方原卷優先、GitHub `origin/main` authority、GitHub-first / remote-first、provenance 不丟失的原則；正式歷屆 PDF 圖題目前優先以本機 Image / PDF Crop Annotator 人工框選並保留 `crop_manifest.txt`，再將網站需要的裁圖匯入 GitHub assets；各科 catalog 以實體教材目錄為依據，動態 readiness 則應逐步由 runtime patch 收斂回正式資料來源。
