@@ -12,7 +12,7 @@
     "unitGroupLabel": "單元 1 數與數線",
     "section": "1-2",
     "title": "1-2 正負數的加減｜困難",
-    "subtitle": "10 題｜絕對值方程、等距反推、中點與綜合推理",
+    "subtitle": "12 題｜10 題選擇題＋2 題手寫計分題",
     "unit": "數學七上｜單元 1 數與數線｜1-2 正負數的加減",
     "difficulty": "math-7-1-1-2-hard",
     "difficultyLabel": "困難",
@@ -20,7 +20,8 @@
     "preserveOptionOrder": false,
     "analysisEligible": true,
     "sourceType": "practice-generated",
-    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」的題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。需要數線者使用 Exam number-line SVG renderer 即時繪製。"
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」的題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。需要數線者使用 Exam number-line SVG renderer 即時繪製。 困難題另含 2 題手寫計分題，交卷時由 Gemini 依答案與計算過程判定；正確才計分，錯誤會回饋問題所在。",
+    "handwritingGrading": "gemini"
   },
   "questions": [
     {
@@ -232,6 +233,34 @@
         "math-7-1-1-2-mixed-add-sub"
       ],
       "e": "|a-b|=|-3-5|=8，再加 c=-2，得 8+(-2)=6。"
+    },
+    {
+      "number": 11,
+      "type": "handwriting",
+      "questionId": "math-7-1-1-2-hard-handwriting-01",
+      "q": "計算 (-18)-(-7)+12-25，請寫出把減法改寫成加法的過程。",
+      "handwritingInstruction": "請把減法改成加上相反數，再整理計算。",
+      "expectedAnswer": "-24",
+      "gradingInstructions": "正確過程可寫成 -18+7+12+(-25)=-24，或其他等值合理步驟。答案必須為 -24；若符號轉換出錯，請指出哪一步把減去負數或減 25 處理錯誤。",
+      "conceptIds": [
+        "math-7-1-1-2-subtraction-to-addition",
+        "math-7-1-1-2-mixed-add-sub"
+      ],
+      "e": "(-18)-(-7)+12-25=-18+7+12-25=-24。"
+    },
+    {
+      "number": 12,
+      "type": "handwriting",
+      "questionId": "math-7-1-1-2-hard-handwriting-02",
+      "q": "數線上 P 點表示 -5。Q 點與 P 點距離 12，且 Q 在原點右側。請求 Q 的座標，並求線段 PQ 的中點 M。",
+      "handwritingInstruction": "請先利用距離條件求出 Q，再求中點 M。",
+      "expectedAnswer": "Q=7，M=1",
+      "gradingInstructions": "因 Q 在原點右側且距 P=-5 為 12，所以 Q=-5+12=7；中點 M=(-5+7)/2=1。Q 與 M 皆正確才判 correct；若錯誤請指出是距離方向或中點計算哪裡有問題。",
+      "conceptIds": [
+        "math-7-1-1-2-distance",
+        "math-7-1-1-2-midpoint"
+      ],
+      "e": "Q=-5+12=7；M=[(-5)+7]/2=1。"
     }
   ]
 }
