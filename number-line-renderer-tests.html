@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Number Line Renderer v1 Tests</title>
+  <style>
+    body{margin:0;background:#f6f8fb;color:#172033;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif}
+    main{max-width:900px;margin:auto;padding:20px 14px 60px}
+    h1{margin:0 0 8px}
+    .case{background:#fff;border:1px solid #dfe5ee;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 4px 14px rgba(15,23,42,.04)}
+    .case h2{font-size:1rem;margin:0 0 8px}
+    code{background:#eef2f7;border-radius:6px;padding:2px 5px}
+  </style>
+</head>
+<body>
+<main>
+  <h1>Number Line Renderer v1</h1>
+  <p>5 個正式 smoke test：基本讀值、兩點距離、大範圍／tickStep=2、空心點、多點與 0。</p>
+  <div id="cases"></div>
+</main>
+<script src="exam-diagram-renderer.js"></script>
+<script>
+const CASES = [
+  {
+    title:'Case 1｜基本讀值',
+    spec:{type:'number-line',min:-5,max:5,tickStep:1,showNumberLabels:true,showArrows:true,points:[{x:-3,label:'A',style:'solid'}]}
+  },
+  {
+    title:'Case 2｜兩點距離',
+    spec:{type:'number-line',min:-6,max:6,tickStep:1,points:[{x:-4,label:'A',style:'solid'},{x:3,label:'B',style:'solid'}]}
+  },
+  {
+    title:'Case 3｜大範圍與 tickStep=2',
+    spec:{type:'number-line',min:-20,max:20,tickStep:2,points:[{x:-10,label:'P',style:'solid'},{x:10,label:'Q',style:'solid'}]}
+  },
+  {
+    title:'Case 4｜空心點',
+    spec:{type:'number-line',min:-5,max:5,tickStep:1,points:[{x:2,label:'P',style:'hollow'}]}
+  },
+  {
+    title:'Case 5｜多點、正負數與 0',
+    spec:{type:'number-line',min:-4,max:4,tickStep:1,points:[{x:-2,label:'A',showValue:true,style:'solid'},{x:0,label:'O',showValue:true,style:'hollow'},{x:3,label:'B',showValue:true,style:'solid'}]}
+  }
+];
+
+const root=document.getElementById('cases');
+CASES.forEach((item,index)=>{
+  const section=document.createElement('section');
+  section.className='case';
+  section.innerHTML=`<h2>${item.title}</h2><div id="case-${index}"></div>`;
+  root.appendChild(section);
+  renderDiagram(section.querySelector(`#case-${index}`),item.spec);
+});
+</script>
+</body>
+</html>
