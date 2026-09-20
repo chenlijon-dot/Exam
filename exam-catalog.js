@@ -336,12 +336,30 @@
     civics: {
       name: '公民', icon: '🏛️', partTitle: '公民身分及社群',
       chapters: [
-        { key: 'civics-01', code: '第1章', title: '公民與公民德性', page: 166, type: 'chapter' },
-        { key: 'civics-02', code: '第2章', title: '人性尊嚴與人權保障', page: 174, type: 'chapter' },
-        { key: 'civics-03', code: '第3章', title: '家庭生活', page: 184, type: 'chapter' },
-        { key: 'civics-04', code: '第4章', title: '變遷中的家庭', page: 194, type: 'chapter' },
-        { key: 'civics-05', code: '第5章', title: '學生權利與校園生活', page: 204, type: 'chapter' },
-        { key: 'civics-06', code: '第6章', title: '部落與公民參與', page: 216, type: 'chapter' },
+        {
+          key: 'civics-01', code: '第1章', title: '公民與公民德性', page: 166, type: 'chapter',
+          detail: '1-1 什麼是公民？（p.168）｜1-2 現代公民應具備的基本德性（p.170）'
+        },
+        {
+          key: 'civics-02', code: '第2章', title: '人性尊嚴與人權保障', page: 174, type: 'chapter',
+          detail: '2-1 人性尊嚴與人權（p.176）｜2-2 人權保障的落實（p.178）'
+        },
+        {
+          key: 'civics-03', code: '第3章', title: '家庭生活', page: 184, type: 'chapter',
+          detail: '3-1 家庭中的親屬關係（p.186）｜3-2 家庭型態與生活模式（p.188）｜3-3 家庭成員的權利與義務（p.190）'
+        },
+        {
+          key: 'civics-04', code: '第4章', title: '變遷中的家庭', page: 194, type: 'chapter',
+          detail: '4-1 家庭的功能與轉變（p.196）｜4-2 政府如何協助家庭發揮功能？（p.198）'
+        },
+        {
+          key: 'civics-05', code: '第5章', title: '學生權利與校園生活', page: 204, type: 'chapter',
+          detail: '5-1 校園中的權利與維護（p.206）｜5-2 如何參與校園公共事務？（p.210）'
+        },
+        {
+          key: 'civics-06', code: '第6章', title: '部落與公民參與', page: 216, type: 'chapter',
+          detail: '6-1 部落的意義與重要性（p.218）｜6-2 部落的挑戰與公民參與（p.221）'
+        },
         { key: 'civics-fieldwork', code: '資料活動', title: '如何進行田野觀察', page: 226, type: 'activity' },
         { key: 'civics-image-source', code: '附錄', title: '圖片來源', page: 228, type: 'appendix' }
       ]
