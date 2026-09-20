@@ -343,7 +343,8 @@
         },
         {
           key: 'civics-02', code: '第2章', title: '人性尊嚴與人權保障', page: 174, type: 'chapter',
-          detail: '2-1 人性尊嚴與人權（p.176）｜2-2 人權保障的落實（p.178）'
+          referenceReady: true,
+          detail: 'p.174～183 教材已收錄；2-1 人性尊嚴與人權（p.176）｜2-2 人權保障的落實（p.178）｜實作與練習、課後閱讀與圖解公民已納入；辨識檔、canonical 與簡易／中等／困難各20題已建立'
         },
         {
           key: 'civics-03', code: '第3章', title: '家庭生活', page: 184, type: 'chapter',
