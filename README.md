@@ -4,51 +4,62 @@
 >
 > 後續新增科目、學期、單元、小節、教材照片、canonical 教材知識庫、自編題、各校段考、歷屆試題、AI curriculum 或網站功能時，請同步更新本 README。
 >
-> 最後更新：2026-09-19
+> 最後更新：2026-09-20
 
 ---
 
 # 1. 專案定位
 
-本專案不是單純收藏考卷，而是逐步建立一套可以長期擴充的：
+本專案不是單純收藏考卷，而是逐步建立一套可以長期擴充的國中學習平台：
 
 ```text
 國中教材知識庫
-+ 線上題庫
-+ 歷屆試題
++ 線上章節題庫
 + 各校段考
-+ 作答紀錄
-+ AI 弱點診斷
++ 正式歷屆試題
++ 作答與錯題紀錄
++ 英文單字記憶
++ AI 學習診斷
 ```
 
-整體資料流：
+目前整體資料流：
 
 ```text
 原始教材／講義／正式試卷／各校考卷
         ↓
-Google Drive 原始 evidence／canonical 教材知識庫
+Google Drive
+原始 evidence／教材辨識檔／canonical 教材知識庫
         ↓
-章節／課次／concept mapping
+課程 catalog／章節／課次／concept mapping
         ↓
-自編題 + 各校段考題 + 正式歷屆題
+GitHub Exam
+自編題 + 各校段考題 + 正式歷屆題 + 網站程式
         ↓
-GitHub Exam 結構化題庫
+GitHub Pages
+線上作答／錯題複習／教材 reference
         ↓
-GitHub Pages 線上作答
+localStorage 作答暫存
         ↓
-作答紀錄／錯題
+Firebase Authentication + Firestore
+個人學習歷程／英文單字學習狀態
         ↓
-Private Exam-Record + AI 弱點診斷
+Firebase AI Logic
+AI 翻譯、判題與學習診斷
 ```
+
+Private `chenlijon-dot/Exam-Record` 仍保留既有 GitHub 同步、machine-readable curriculum 與舊 AI workflow 的相容用途，但**已不是目前個人學習歷程的主要 authority**。目前學習歷程以 Firebase 架構為準，詳見 `LEARNING_HISTORY_FIREBASE.md`。
 
 核心原則：
 
-- Google Drive 保存教材與原始 evidence。
-- GitHub `chenlijon-dot/Exam` 保存網站程式與真正可作答的題庫。
-- Private `Exam-Record` 保存個人作答資料與 AI curriculum。
+- Google Drive 保存原始教材、試卷 evidence 與 canonical 教材知識庫。
+- GitHub `chenlijon-dot/Exam` 保存網站程式、catalog 與真正可作答的公開結構化題庫。
+- Firebase Authentication / Firestore 保存目前使用中的登入身分與個人學習歷程。
+- Firebase AI Logic 是目前前端 AI 分析的主要直接路徑；舊 Exam-Record AI workflow 僅保留相容性。
+- Private `Exam-Record` 不再視為一般學生學習紀錄的唯一或主要資料庫。
 - 正式歷屆題保留原卷題序與原始選項。
 - 各校段考保留 provenance，再拆回真正對應章節／小節。
 - 所有資料以可追溯、可重新核對、可長期維護為優先。
+- **先找 authority，再修改 authority；能修改正式資料來源，就不要新增 runtime patch。**
 
 ---
 
@@ -78,18 +89,28 @@ Private Exam-Record + AI 弱點診斷
 └─ 歷屆考題
 ```
 
-全站設定：
+社會科依現行國中課本結構再分為：
 
 ```text
-☁️ GitHub 同步設定
+社會
+├─ 地理
+├─ 歷史
+└─ 公民
 ```
 
-章節／課次頁保留：
+目前全站學習功能包含：
 
 ```text
-📊 作答紀錄
-📝 錯題複習
+Google 登入
+我的學習歷程
+作答紀錄
+錯題複習
+Firebase 雲端同步
+AI 學習分析
+GitHub 同步設定（舊同步／相容用途）
 ```
+
+GitHub Token 已不是 Firebase 學習歷程或 Firebase AI Logic 的必要條件。
 
 README 的「最後更新」是文件維護日期；首頁「版本」是 deployment 時間，兩者分開管理。
 
@@ -114,37 +135,60 @@ README 的「最後更新」是文件維護日期；首頁「版本」是 deploy
 
 ---
 
-# 4. 三層資料架構
+# 4. 資料與服務架構
+
+目前系統不再以單純「三層」描述，而是分成四個主要 responsibility：
 
 ```text
 Google Drive
 → 原始教材照片／PDF／講義
 → 正式試卷來源
 → 各校段考與答案卷
+→ 教材辨識檔
 → canonical 教材知識庫
 → 長期 reference authority
 
 GitHub: chenlijon-dot/Exam
 → 網站程式
+→ curriculum catalog
+→ reference JSON
 → 自編章節題庫
 → 各校段考拆題後題庫
 → 正式歷屆試題 JSON
 → 網站必要 assets
+→ GitHub Pages deployment
+
+Firebase
+→ Google Authentication
+→ users/{uid}/attempts
+→ vocabularyProgress
+→ vocabularyState
+→ 學生／管理者學習歷程
+→ Firebase AI Logic
+→ App Check / Firestore Rules
 
 GitHub Private: chenlijon-dot/Exam-Record
-→ 個人作答紀錄
-→ 錯題資料
-→ AI request/result
+→ 既有 GitHub 同步相容資料
 → machine-readable curriculum
+→ 舊 AI request/result workflow
+→ 尚未完全退場的私有輔助資料
 ```
 
 一句話：
 
 ```text
 Drive       = 原始證據與教材長期記憶
-GitHub Exam = 真正拿來作答的正式題庫
-Exam-Record = 個人學習結果與 AI 診斷
+GitHub Exam = 網站、catalog 與正式可作答題庫
+Firebase    = 現行登入、個人學習歷程、單字狀態與主要 AI 服務
+Exam-Record = 私有相容／輔助層，不再是現行學習歷程主 authority
 ```
+
+各層不得互相取代：
+
+- GitHub JSON 是可作答資料，不取代原始教材 evidence。
+- Firebase attempt 是學習結果，不取代題目來源與教材 authority。
+- Exam-Record 的舊同步資料不得反向覆蓋 Firebase 現行學習歷程。
+- Runtime UI patch 不應成為 curriculum readiness 的長期 authority。
 
 ---
 
@@ -901,7 +945,7 @@ q32-2.png
 
 尚未提供教材內容的小節可以先建立 catalog，但不自行猜教材內容。
 
-目前 `1-2 科學方法`、`1-3 認識實驗室` 已開始建立 canonical、練習題與各校題庫工作流。
+目前 `1-2 科學方法` 已有各校題庫；`1-3 認識實驗室` 已建立簡易／中等／困難練習題與各校題庫。教材、題庫 readiness 應以實際 `chapter-bank` 與對應 catalog 為準。
 
 ---
 
@@ -979,6 +1023,10 @@ q32-2.png
 → 核心概念／考點／迷思／題型
 → concept ID 候選
 
+已完成題庫：
+地理第1章〈認識位置與地圖〉：簡易／中等／困難各 10 題
+地理第2章〈世界中的臺灣〉：簡易／中等／困難各 20 題
+
 待完成：
 出版社／學年度／版次確認
 圖像型題目與地圖判讀題擴充
@@ -988,78 +1036,118 @@ machine-readable curriculum 同步
 
 ---
 
-# 19. AI 錯題診斷
+# 19. 學習歷程與 AI 診斷
 
-Private repository：
-
-```text
-Exam-Record
-```
-
-資料流：
+現行學習歷程 authority：
 
 ```text
-Google Drive canonical 教材知識庫
-        ↓
-machine-readable curriculum
-        ↓
-學生錯題
-        ↓
-AI 診斷
+LEARNING_HISTORY_FIREBASE.md
 ```
 
-AI 診斷應依教材與實際錯題證據，不可因一題錯誤就擴張成「整章都不熟」。
+一般測驗：
 
-當 canonical 有足以影響診斷的新內容時，應檢查對應 curriculum 是否需要同步更新。
+```text
+Google 登入
+→ Firebase Authentication
+→ 本機 examRecords.v1
+→ firebase-firestore-sync.js
+→ Firestore users/{uid}/attempts/*
+→ 我的學習歷程／管理學員歷程
+```
+
+英文單字記憶：
+
+```text
+vocabularyProgress
++
+vocabularyState/gept-elementary-markov
+```
+
+目前前端 AI 主要使用：
+
+```text
+firebase-ai-direct.js
+firebase-english-ai-direct.js
+→ Firebase AI Logic
+→ App Check 保護
+```
+
+`exam-gpt-analysis.js` 仍保留透過 Private `Exam-Record` 建立 request/result 的舊流程，因此目前屬於**相容／legacy path**；新功能原則上不要再依賴 GitHub Token 才能使用 AI。
+
+AI 診斷原則：
+
+- 依教材、題目與實際錯題證據分析。
+- 不可因一題錯誤就擴張成「整章都不熟」。
+- 題目內容與答案仍回到原始 evidence／canonical／正式答案 authority。
+- AI 結果是學習輔助，不反向成為教材或正式答案 authority。
+- 修改 Firebase schema 前，先更新 `LEARNING_HISTORY_FIREBASE.md` 並確認舊資料相容性。
 
 ---
 
-# 20. GitHub 主要結構
+# 20. GitHub 主要結構與文件 authority
+
+主要文件：
 
 ```text
 Exam/
 ├─ README.md
 ├─ EXAM_WORKFLOW.md
-├─ CHINESE_SCHOOL_EXAM_WORKFLOW.md
-├─ index.html
-├─ exam-catalog.js
-├─ exam-past-exams.js
-├─ exam-runtime-flex.js
-├─ exam-option-randomizer.js
-├─ exam-records.js
-├─ exam-wrong-ui.js
-├─ exam-records-clear.js
-├─ exam-gpt-analysis.js
-├─ exam-navigation-fix.js
-├─ exam-science-banks.js
-├─ exam-record-layout.js
-├─ exam-branding.js
-├─ exam-browser-history.js
+├─ TEXTBOOK_COLLECTION_WORKFLOW.md
+├─ ENGLISH_Database.MD
+├─ LEARNING_HISTORY_FIREBASE.md
+├─ Android學生機設計.MD
+│
+├─ curriculum-catalog/
+│  ├─ chinese-7-1.md
+│  ├─ english-7-1.md
+│  ├─ math-7-1.md
+│  ├─ science-7-1.md
+│  └─ social-7-1.md
 │
 ├─ chapter-bank/
-│  └─ ...
-│
 ├─ past-exams/
-│  └─ bct/
-│     ├─ 90/
-│     ├─ 91/
-│     ├─ 92/
-│     ├─ 93/
-│     ├─ 94/
-│     └─ 95/
-│
-└─ .github/
-   └─ workflows/
-      └─ pages.yml
+├─ assets/
+├─ index.html
+├─ exam-*.js
+├─ firebase-*.js
+└─ .github/workflows/
 ```
 
-歷屆每批通常包含：
+文件角色：
+
+| 文件 | Authority / 用途 |
+|---|---|
+| `README.md` | 全專案大原則、大架構、authority map、目前總狀態 |
+| `EXAM_WORKFLOW.md` | 所有科目各校段考／公開題庫共同母 SOP |
+| `TEXTBOOK_COLLECTION_WORKFLOW.md` | 課本、講義、教材照片與 Drive canonical 母 SOP |
+| `ENGLISH_Database.MD` | 英文 GEPT 閱讀／字彙資料庫現況與 authority |
+| `LEARNING_HISTORY_FIREBASE.md` | 現行 Firebase 登入、學習歷程、單字狀態與維護 authority |
+| `Android學生機設計.MD` | Student Exam Android App、SM-T220 裝置與系統層 runbook |
+| `curriculum-catalog/*.md` | 各科實體教材章節／課次 catalog authority |
+| 有日期的 collection MD | 當次教材收集 snapshot，不作為 live status 的最高 authority |
+
+`CHINESE_SCHOOL_EXAM_WORKFLOW.md` 已不再是目前 repository 文件；國文與其他科的段考共同規則統一由 `EXAM_WORKFLOW.md` 管理。
+
+程式主要資料區：
 
 ```text
-math.json
-math-explanations.json
-assets/math/*.png
+chapter-bank/
+→ 各科章節自編題／各校題／reference
+
+past-exams/
+→ 正式歷屆試題與必要原卷 assets
+
+curriculum-catalog/
+→ 課程樹與教材定位
+
+firebase-*.js
+→ Authentication / Firestore / AI / account / admin learning
+
+exam-*.js
+→ 題庫 runtime / catalog / navigation / records / subject modules
 ```
+
+詳細題數與某章是否 ready，優先讀實際資料檔與該科 catalog；README 不作為每一個動態題數的唯一 authority。
 
 ---
 
@@ -1082,18 +1170,26 @@ assets/math/*.png
 - 不寫入 repository。
 - 不寫入 README。
 - 不貼到對話。
-- 前端只存於適當 session storage／既有安全流程。
+- 僅供仍需 GitHub 私有資料操作的相容功能使用。
+- 不得把 GitHub Token 當成 Firebase 登入、Firestore 學習歷程或 Firebase AI Logic 的必要條件。
+- 若使用 fine-grained PAT，權限維持最小化。
 
-## Gemini API Key
+## Firebase / AI
 
-- 不進公開 JavaScript。
-- 存 Private `Exam-Record` GitHub Actions Secret。
+- 不把真正的私密服務端 secret 寫入公開 repository。
+- Firebase Web config 本身不是服務端密鑰；真正的存取限制由 Firestore Security Rules、Authentication、App Check 與後端規則負責。
+- 目前 AI 主要透過 Firebase AI Logic；不得為了方便把私人 Gemini server key 直接寫進公開 JavaScript。
+- 舊 Exam-Record / GitHub Actions AI workflow 若仍使用 secret，secret 必須留在 private repository / Actions Secrets。
 
 ## Google Drive
 
-- README 不紀錄 Google 帳號、token、私人 folder ID 或分享憑證。
+- README 不紀錄 Google 帳號 token、私人 folder ID 或分享憑證。
 - Drive 教材與段考原始資料預設視為私人參考資料。
 - Google Drive 的修改範圍仍受第 7 節強制限制。
+
+## 公開 operational identifier
+
+公開文件若記錄 email、Apps Script endpoint、Firebase project identifier 或其他 operational identifier，必須是刻意公開且不構成權限憑證；不必要者不應留在 README。
 
 ---
 
@@ -1101,13 +1197,15 @@ assets/math/*.png
 
 ```text
 這是教材？
-→ canonical 教材資料庫流程
+→ TEXTBOOK_COLLECTION_WORKFLOW
+→ Drive evidence / 辨識檔 / canonical
+→ 必要時更新 curriculum-catalog
 
 這是各校段考？
+→ EXAM_WORKFLOW
 → 原卷／答案留 Drive
 → census
 → 分類索引
-→ 拆題
 → chapter-bank
 
 這是正式基測／會考？
@@ -1118,9 +1216,19 @@ assets/math/*.png
 → 詳解 QA
 → UI
 
-這是學生作答資料？
-→ Exam-Record
+這是英文 GEPT／字彙資料？
+→ ENGLISH_Database.MD
+→ 依各自 authority 流程處理
+
+這是學生作答／學習歷程？
+→ LEARNING_HISTORY_FIREBASE.md
+→ Firebase Authentication / Firestore
+
+這是 Student Exam 平板／Kiosk／SM-T220？
+→ Android學生機設計.MD
 ```
+
+Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資料時使用；不要再把所有學生資料預設導向 Exam-Record。
 
 不要把不同資料模型混在一起。
 
@@ -1130,20 +1238,29 @@ assets/math/*.png
 
 新的 ChatGPT 對話繼續本專案時：
 
-1. 先讀 `chenlijon-dot/Exam/README.md`。
-2. 再讀 GitHub `main` 的實際最新檔案；README 與程式不一致時，以最新程式／資料為準，再修 README。
-3. 不要從舊對話印象直接假設 repository 狀態。
-4. 涉及教材時，先查 Drive 對應 canonical。
-5. 涉及正式歷屆題時，遵守第 11～15 節。
-6. 正式題目遇到模糊／矛盾時立即標記並請使用者協助，不要陷入長時間判讀。
-7. 對單一疑問題可暫停，但其他清楚題目繼續處理。
-8. 文字／JSON／JS／HTML／CSS 預設 GitHub-first。
-9. Binary／PDF／裁圖才回本機，且必須 remote-first。
-10. 本機工作完成後 push 前再 `fetch + rebase`，防止其他工作同時更新 `main`。
-11. Push 後 remote read-back，不能只相信本機。
-12. 網站 UI 問題先確認首頁 deployment 時間戳，排除舊快取。
-13. 完成新 canonical、新章節、新段考批次、新歷屆試卷或重大網站功能後更新 README。
-14. Google Drive 修改只能在 `D:\我的雲端硬碟\國中教材參考資料` 及其子路徑。
+1. 先讀 GitHub `main` 的 `README.md`，掌握大原則與 authority map。
+2. 再依任務讀對應專門文件：
+   - 教材：`TEXTBOOK_COLLECTION_WORKFLOW.md`
+   - 各校段考：`EXAM_WORKFLOW.md`
+   - 英文 GEPT／字彙：`ENGLISH_Database.MD`
+   - 學習歷程／Firebase：`LEARNING_HISTORY_FIREBASE.md`
+   - Android 學生機：`Android學生機設計.MD`
+   - 各科課程樹：`curriculum-catalog/*.md`
+3. 再讀 GitHub `main` 的實際最新程式與資料；文件若與程式／資料不一致，先確認真正 authority，再修文件。
+4. 不要從舊對話印象直接假設 repository 狀態。
+5. 涉及教材時，先查 Drive 對應 canonical。
+6. 涉及正式歷屆題時，遵守第 11～15 節。
+7. 正式題目遇到模糊／矛盾時立即標記並請使用者協助，不要陷入長時間判讀。
+8. 對單一疑問題可暫停，但其他清楚題目繼續處理。
+9. 文字／JSON／JS／HTML／CSS 預設 GitHub-first。
+10. Binary／PDF／裁圖才回本機，且必須 remote-first。
+11. 本機工作完成後 push 前再 `fetch + rebase`，防止其他工作同時更新 `main`。
+12. Push 後 remote read-back，不能只相信本機。
+13. 網站 UI 問題先確認首頁 deployment 時間戳，排除舊快取。
+14. 完成新 canonical、新章節、新段考批次、新歷屆試卷或重大網站功能後，更新真正負責該狀態的文件；README 只同步大架構與重要里程碑。
+15. Google Drive 修改只能在 `D:\我的雲端硬碟\國中教材參考資料` 及其子路徑。
+16. 遇到「static catalog + runtime patch」衝突時，優先收斂正式 authority，不再新增另一層 patch。
+17. 有日期的 collection MD 視為歷史 snapshot；live status 以正式 catalog、資料檔與專門 authority 文件為準。
 
 ---
 
@@ -1151,46 +1268,66 @@ assets/math/*.png
 
 ## 已完成／已建立
 
+### 平台
+
 - [x] GitHub Pages 題庫網站
 - [x] 手機 responsive
 - [x] 五科 + 歷屆考題主入口
+- [x] 社會科採「社會 → 地理／歷史／公民」
 - [x] deployment 時間戳版本
 - [x] 瀏覽器／手機返回鍵逐層導航
 - [x] 作答紀錄／錯題複習
 - [x] 自編題選項隨機排列
 - [x] 各校題／正式歷屆題保留原始選項順序
 - [x] 未答與錯答分離
-- [x] Private Exam-Record 同步
-- [x] AI 錯題診斷架構
+
+### 學習歷程 / AI
+
+- [x] Firebase Google Authentication
+- [x] 一般測驗 Firestore `attempts` 同步
+- [x] 學生「我的學習歷程」
+- [x] 管理者跨學員歷程讀取
+- [x] GEPT 字彙 `vocabularyProgress` / `vocabularyState`
+- [x] Firebase AI Logic 直接分析
+- [x] Firebase App Check
+- [x] 舊 Private Exam-Record 同步／AI path 保留相容性
+
+### 教材與題庫
+
 - [x] Google Drive canonical 教材架構
 - [x] 國文七上 catalog authority
+- [x] 英文七上 catalog authority
+- [x] 數學七上 catalog authority
 - [x] 自然七上 chapter tree
-- [x] 社會七上第一冊 chapter tree（地理／歷史／公民）
-- [x] 社會地理第1章〈認識位置與地圖〉教材 canonical（p.6～21）
-- [x] 社會地理第1章〈認識位置與地圖〉文字自編題庫：簡易／中等／困難各 10 題，共 30 題
-- [x] 社會地理第2章〈世界中的臺灣〉文字自編題庫：簡易／中等／困難各 20 題，共 60 題
-- [x] 自然 1-2／1-3 canonical 與題庫工作流開始實作
+- [x] 社會七上第一冊 chapter tree
+- [x] 英文 Lesson 1、Lesson 2 reference + 簡易／中等／困難題庫
+- [x] 自然 1-2、1-3 題庫工作流
+- [x] 社會地理第1章、第2章三級文字自編題庫
 - [x] 各校段考拆題 SOP
 - [x] 正式歷屆考題 SOP
-- [x] GitHub-first / remote-first 工作規則
-- [x] 歷屆圖題原卷裁圖規則
-- [x] 歷屆逐題詳解作為第二輪 QA
-- [x] 基測數學 90-1 ～ 94-2
-- [x] 基測數學 95-1：33 題＋答案＋原卷圖＋詳解＋UI
-- [x] 基測數學 95-2：33 題＋答案＋20 張原卷圖＋33 題詳解＋UI
+
+### 歷屆試題
+
+- [x] 基測數學 90-1 ～ 95-2 已建立
+- [x] 原卷圖題裁圖規則
+- [x] 逐題詳解作為第二輪 QA
 
 ## 下一階段
 
 - [ ] 持續人工 QA 既有歷屆題
 - [ ] 持續匯入後續基測／教育會考
-- [ ] 補建更多教材 canonical
+- [ ] 補建更多教材 canonical 與 reference
 - [ ] 持續各校段考拆題與 concept mapping
-- [ ] 讓 Drive canonical → Exam-Record curriculum 同步流程更固定
+- [ ] 英文 GEPT 閱讀第六～十二回依 Drive authority 逐步轉為 GitHub 可作答資料
+- [ ] 收斂 static catalog / runtime patch，建立更明確的單一 readiness authority
+- [ ] 建立 repository health check，讓 JSON、bank path、asset、answer index 等基本錯誤在 deployment 前被攔截
+- [ ] 逐步統一新題庫的 `schemaVersion` 與共通 metadata
+- [ ] 讓 canonical → machine-readable curriculum / AI context 的同步規則更固定
 
 ---
 
 # 26. 目前一句話狀態
 
-截至 2026-09-19：
+截至 2026-09-20：
 
-> 本專案已形成穩定的「Google Drive 原始 evidence／canonical → GitHub Exam 結構化可作答題庫 → Private Exam-Record 學習紀錄與 AI curriculum」三層架構。 社會科已依實體七上第一冊目錄建立地理／歷史／公民三大領域與完整章節 catalog，出版社與版次待封面／版權頁確認。正式歷屆題目前採嚴格 GitHub `origin/main` authority 與 remote-first 工作法：先建立文字與官方答案，再裁原卷圖，最後逐題製作詳解並把詳解當成第二輪 QA；遇到模糊字、圖文衝突或解題無法對應官方選項時，不長時間硬猜，而是立即標記單題並交由使用者協助核對更高 authority 的原始來源。基測數學目前已完成 90-1 至 95-2，且 95 年度第一次、第二次皆已完成題目、官方答案、原卷附圖、逐題詳解與 UI 掛載。
+> 本專案目前已形成「Google Drive 教材 evidence／canonical → GitHub Exam catalog 與結構化可作答題庫 → GitHub Pages 線上學習 → Firebase Authentication／Firestore 個人學習歷程 → Firebase AI Logic 學習分析」的主架構。Private Exam-Record 仍保留既有同步、machine-readable curriculum 與舊 AI workflow 的相容用途，但不再是現行學習歷程的主要 authority。題庫內容繼續遵守實體教材／官方原卷優先、GitHub `origin/main` authority、GitHub-first / remote-first、provenance 不丟失的原則；各科 catalog 以實體教材目錄為依據，動態 readiness 則應逐步由 runtime patch 收斂回正式資料來源。
