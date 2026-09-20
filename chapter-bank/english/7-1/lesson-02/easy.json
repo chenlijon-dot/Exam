@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-02-easy",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 2",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 2｜What Are These?｜簡易",
+    "subtitle": "15 題｜基礎字彙、指示詞與複數",
+    "unit": "英文七上｜Lesson 2",
+    "difficulty": "english-7-1-lesson-02-easy",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 2 教材參考資料自編；題型參考 GEPT 初級詞彙與結構四選一形式，非官方 GEPT 試題。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "詞彙與結構",
+      "q": "Which animal is “老虎” in English?",
+      "o": [
+        "tiger",
+        "zebra",
+        "bear",
+        "fox"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-animals"
+      ],
+      "e": "答案是 (A) tiger。tiger 是「老虎」。"
+    },
+    {
+      "number": 2,
+      "q": "Which animal is “斑馬” in English?",
+      "o": [
+        "lion",
+        "zebra",
+        "sheep",
+        "mouse"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-animals"
+      ],
+      "e": "答案是 (B) zebra。zebra 是「斑馬」。"
+    },
+    {
+      "number": 3,
+      "q": "One mouse, two _____.",
+      "o": [
+        "mouses",
+        "mouse",
+        "mice",
+        "mices"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (C) mice。mouse 的不規則複數是 mice。"
+    },
+    {
+      "number": 4,
+      "q": "One child, two _____.",
+      "o": [
+        "childs",
+        "children",
+        "childes",
+        "child"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (B) children。child 的不規則複數是 children。"
+    },
+    {
+      "number": 5,
+      "q": "One sheep, three _____.",
+      "o": [
+        "sheeps",
+        "sheep",
+        "sheepes",
+        "sheepen"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (B) sheep。sheep 的單數與複數同形。"
+    },
+    {
+      "number": 6,
+      "q": "_____ is this? — It is a lion.",
+      "o": [
+        "What",
+        "Who",
+        "How",
+        "Where"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-what-singular"
+      ],
+      "e": "答案是 (A) What。詢問單數事物用 What is this?"
+    },
+    {
+      "number": 7,
+      "q": "What is that? — _____ is a bear.",
+      "o": [
+        "These",
+        "Those",
+        "That",
+        "They"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-demonstratives"
+      ],
+      "e": "答案是 (C) That。that 是單數遠指，回答可用 That is ...。"
+    },
+    {
+      "number": 8,
+      "q": "_____ are these? — They are monkeys.",
+      "o": [
+        "What",
+        "Who",
+        "How old",
+        "Where"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-what-plural"
+      ],
+      "e": "答案是 (A) What。詢問複數事物用 What are these?"
+    },
+    {
+      "number": 9,
+      "q": "These _____ zebras.",
+      "o": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-demonstratives",
+        "english-7-1-l2-be"
+      ],
+      "e": "答案是 (C) are。These 是複數，be 動詞用 are。"
+    },
+    {
+      "number": 10,
+      "q": "What are those? — _____ are tigers.",
+      "o": [
+        "That",
+        "It",
+        "Those",
+        "This"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-demonstratives"
+      ],
+      "e": "答案是 (C) Those。those 是複數遠指。"
+    },
+    {
+      "number": 11,
+      "q": "Which is the correct plural of “man”?",
+      "o": [
+        "mans",
+        "manes",
+        "men",
+        "mens"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (C) men。man 的不規則複數是 men。"
+    },
+    {
+      "number": 12,
+      "q": "Which is the correct plural of “ox”?",
+      "o": [
+        "oxes",
+        "oxen",
+        "oxs",
+        "ox"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (B) oxen。教材列出的不規則複數為 ox → oxen。"
+    },
+    {
+      "number": 13,
+      "q": "I have a dog. _____ name is Lucky.",
+      "o": [
+        "My",
+        "His",
+        "Its",
+        "Their"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-possessive"
+      ],
+      "e": "答案是 (C) Its。主詞是 dog，可用 its 表示「牠的」。"
+    },
+    {
+      "number": 14,
+      "q": "According to the reading, which elephants are bigger?",
+      "o": [
+        "Asian elephants",
+        "African elephants",
+        "They are the same size",
+        "The reading does not compare size"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading"
+      ],
+      "e": "答案是 (B) African elephants。教材指出 African elephants are very big，而 Asian elephants are smaller。"
+    },
+    {
+      "number": 15,
+      "q": "Which word begins with the /p/ sound taught in Lesson 2?",
+      "o": [
+        "pig",
+        "big",
+        "table",
+        "desk"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-pronunciation"
+      ],
+      "e": "答案是 (A) pig。Lesson 2 的 /p/ 例字包含 pet、pig、cup、jump。"
+    }
+  ]
+}
