@@ -4,6 +4,8 @@
   const FIREBASE_VERSION = '12.19.0';
   let firestore = null;
   let db = null;
+  const ATTEMPT_PAGE_SIZE = 10;
+  let visibleAttemptCount = ATTEMPT_PAGE_SIZE;
 
   function esc(value) {
     return String(value ?? '').replace(/[&<>"']/g, ch => ({
@@ -61,6 +63,9 @@
       .ld-subjects{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
       .ld-subject{border:1px solid #e2e8f0;border-radius:11px;padding:10px;display:flex;justify-content:space-between;gap:10px}
       .ld-recent{width:100%;border-collapse:collapse;font-size:.9rem}.ld-recent th,.ld-recent td{padding:8px 6px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top}
+      .ld-more-wrap{display:flex;flex-direction:column;align-items:center;gap:7px;margin-top:12px}
+      .ld-more-btn{border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:11px;padding:9px 16px;font-weight:800;cursor:pointer}
+      .ld-more-btn:hover{background:#dbeafe}
       .ld-note{color:#64748b;font-size:.88rem}
       .ld-error{padding:14px;background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;border-radius:12px}
       @media(max-width:700px){.ld-summary{grid-template-columns:repeat(2,1fr)}.ld-subjects{grid-template-columns:1fr}.ld-recent{font-size:.8rem}.ld-recent th:nth-child(2),.ld-recent td:nth-child(2){display:none}}
@@ -154,7 +159,8 @@
       return `<div class="ld-subject"><span><b>${esc(name)}</b><br><span class="ld-note">${x.count} 次作答</span></span><strong>${avg.toFixed(1)}%</strong></div>`;
     }).join('');
 
-    const recentRows = records.slice(0,10).map(r => `
+    const shownCount = Math.min(visibleAttemptCount, records.length);
+    const recentRows = records.slice(0, shownCount).map(r => `
       <tr>
         <td>${esc(fmtTime(r.submittedAt))}</td>
         <td>${esc(subjectText(r))}</td>
@@ -162,6 +168,15 @@
         <td><b>${esc(resultText(r))}</b></td>
         <td>${Number(r.incorrect || 0)}</td>
       </tr>`).join('');
+
+    const hasMore = shownCount < records.length;
+    const remaining = Math.max(0, records.length - shownCount);
+    const moreBlock = hasMore
+      ? `<div class="ld-more-wrap">
+          <button type="button" class="ld-more-btn" id="learningDashboardMoreBtn">再顯示 10 次作答</button>
+          <div class="ld-note">目前顯示 ${shownCount} / ${records.length} 次，尚有 ${remaining} 次</div>
+        </div>`
+      : `<div class="ld-more-wrap"><div class="ld-note">已顯示全部 ${records.length} 次作答紀錄</div></div>`;
 
     content.innerHTML = `
       <div class="ld-summary">
@@ -175,12 +190,18 @@
         <div class="ld-subjects">${subjectRows || '<div class="ld-note">尚無資料</div>'}</div>
       </div>
       <div class="ld-panel">
-        <h3>最近 10 次作答</h3>
+        <h3>最近 ${shownCount} 次作答</h3>
         <table class="ld-recent">
           <thead><tr><th>時間</th><th>科目</th><th>測驗</th><th>結果</th><th>答錯</th></tr></thead>
           <tbody>${recentRows}</tbody>
         </table>
+        ${moreBlock}
       </div>`;
+
+    document.getElementById('learningDashboardMoreBtn')?.addEventListener('click', () => {
+      visibleAttemptCount += ATTEMPT_PAGE_SIZE;
+      render(records);
+    });
   }
 
   async function openDashboard() {
@@ -189,6 +210,7 @@
     const content = document.getElementById('learningDashboardContent');
     const account = document.getElementById('learningDashboardAccount');
     modal.classList.add('show');
+    visibleAttemptCount = ATTEMPT_PAGE_SIZE;
     content.innerHTML = '<div class="ld-note">正在讀取 Firebase 學習歷程…</div>';
 
     const auth = window.ChrisExamAuth;
@@ -208,7 +230,7 @@
       }
 
       const ref = firestore.collection(db, 'users', auth.uid, 'attempts');
-      const q = firestore.query(ref, firestore.orderBy('submittedAt', 'desc'), firestore.limit(100));
+      const q = firestore.query(ref, firestore.orderBy('submittedAt', 'desc'));
       const snap = await firestore.getDocs(q);
       const records = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
       render(records);
