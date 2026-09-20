@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-medium",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-2 正負數的加減",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "title": "1-2 正負數的加減｜中等",
+    "subtitle": "10 題｜混合運算、距離、中點、等距點與情境應用",
+    "unit": "數學七上｜單元 1 數與數線｜1-2 正負數的加減",
+    "difficulty": "math-7-1-1-2-medium",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」的題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。需要數線者使用 Exam number-line SVG renderer 即時繪製。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "計算 (-6)+15-9 的值。",
+      "o": [
+        "-12",
+        "0",
+        "6",
+        "18"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-mixed-add-sub"
+      ],
+      "e": "(-6)+15-9=9-9=0。"
+    },
+    {
+      "number": 2,
+      "q": "計算 8-(-4)+(-7) 的值。",
+      "o": [
+        "-3",
+        "1",
+        "5",
+        "19"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-mixed-add-sub",
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "e": "8-(-4)+(-7)=8+4-7=5。"
+    },
+    {
+      "number": 3,
+      "q": "計算 (-12)-(-5)-7 的值。",
+      "o": [
+        "-24",
+        "-14",
+        "-10",
+        "0"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-mixed-add-sub",
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "e": "(-12)-(-5)-7=-12+5-7=-14。"
+    },
+    {
+      "number": 4,
+      "q": "計算 |(-3)-5| 的值。",
+      "o": [
+        "2",
+        "8",
+        "-8",
+        "15"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-absolute-value",
+        "math-7-1-1-2-distance"
+      ],
+      "e": "(-3)-5=-8，所以 |(-3)-5|=8。"
+    },
+    {
+      "number": 5,
+      "q": "如圖，A 點表示 -5，B 點表示 2。A、B 兩點距離是多少？",
+      "o": [
+        "3",
+        "5",
+        "7",
+        "-7"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-distance"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -6,
+        "max": 3,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -5,
+            "label": "A",
+            "style": "solid"
+          },
+          {
+            "x": 2,
+            "label": "B",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "AB=|-5-2|=|-7|=7。"
+    },
+    {
+      "number": 6,
+      "q": "如圖，A 點表示 -4，B 點表示 6。若 M 到 A、B 的距離相等，則 M 表示哪一個數？",
+      "o": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-equidistant",
+        "math-7-1-1-2-midpoint"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 7,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -4,
+            "label": "A",
+            "style": "solid"
+          },
+          {
+            "x": 6,
+            "label": "B",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "到 A、B 等距的點就是中點，M=[(-4)+6]/2=1。"
+    },
+    {
+      "number": 7,
+      "q": "如圖，P 點表示 3。若 Q 與 P 的距離為 7，則 Q 可能表示哪一組數？",
+      "o": [
+        "10 或 -4",
+        "10 或 4",
+        "7 或 -7",
+        "4 或 -10"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-equidistant"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -6,
+        "max": 11,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": 3,
+            "label": "P",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "距 P=3 為 7 的點在左右各一個：3+7=10，3-7=-4。"
+    },
+    {
+      "number": 8,
+      "q": "某地早晨氣溫為 -3°C，下午先下降 5°C，晚上又上升 9°C。晚上氣溫是多少？",
+      "o": [
+        "-17°C",
+        "-1°C",
+        "1°C",
+        "11°C"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-temperature",
+        "math-7-1-1-2-mixed-add-sub"
+      ],
+      "e": "-3-5+9=-8+9=1，所以晚上氣溫為 1°C。"
+    },
+    {
+      "number": 9,
+      "q": "已知 a=5，且 a+b=-2，則 b 的值為何？",
+      "o": [
+        "-7",
+        "-3",
+        "3",
+        "7"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-missing-addend"
+      ],
+      "e": "5+b=-2，所以 b=-2-5=-7。"
+    },
+    {
+      "number": 10,
+      "q": "計算 18+(-25)+7+(-10) 的值。",
+      "o": [
+        "-10",
+        "-5",
+        "0",
+        "10"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-addition-laws",
+        "math-7-1-1-2-mixed-add-sub"
+      ],
+      "e": "可重排為 (18+7)+[(-25)+(-10)]=25-35=-10。"
+    }
+  ]
+}
