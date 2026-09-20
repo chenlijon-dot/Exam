@@ -174,7 +174,675 @@ Superseded by:
 
 ---
 
-# 4. P0：Repository Health Check
+# 4. 專案真正目標：題庫 AI 化
+
+本專案的終極目標不是建立「很多題目的網站」，而是建立一套能理解教材、理解題目、理解學生錯誤，並在正確時間挑出最值得練習題目的智慧學習系統。
+
+核心句：
+
+> **不是讓學生做更多題，而是讓學生在正確的時間，做最值得做的題。**
+
+學生不應漫無目的地瀏覽大量題庫，而應形成：
+
+```text
+學習教材
+↓
+少量作答
+↓
+留下正確／錯誤紀錄
+↓
+判斷弱點
+↓
+凸顯需要複習的章節／concept
+↓
+從大題庫海撈最合適的題
+↓
+再次作答
+↓
+重新評估掌握程度
+↓
+安排下一輪複習
+```
+
+因此：
+
+```text
+題庫數量 ≠ 學習品質
+
+題庫 + 結構化知識 + 學習歷程 + 智慧選題
+= Adaptive Learning
+```
+
+AI 的角色不是取代教材 authority，也不是隨意生成大量題目，而是協助：
+
+```text
+理解題目在考什麼
+理解學生錯在哪裡
+判斷下一題應該做什麼
+```
+
+---
+
+# 5. 六大主流與系統角色
+
+目前專案大致沿著六條主流發展。
+
+## 5.1 課本
+
+課本是主要 curriculum backbone。
+
+目前國文、英文、數學、自然、社會逐步建立：
+
+```text
+實體課本
+→ 原始照片 evidence
+→ 教材辨識
+→ canonical 教材知識庫
+→ concept / 考點 / 迷思 / 題型
+→ 題庫
+```
+
+Google Drive 保留原始 evidence 與 canonical，讓人可以重新核對。
+
+## 5.2 講義
+
+目前主要出現在自然／生物。
+
+講義不能直接取代課本，但可補充：
+
+```text
+老師強調內容
+考試常見重點
+額外例題
+常見迷思
+補充圖表
+```
+
+目前自然 canonical 已經開始保留：
+
+```text
+資料來源
+核心概念
+常見迷思
+題型
+concept ID 候選
+來源影像
+```
+
+未來應保留「課本來源」與「講義來源」的 provenance，不混成無法追溯的一份文字。
+
+## 5.3 英文特殊主線
+
+英文不完全以課本 Lesson 作為唯一主軸。
+
+目前重要 backbone 是：
+
+```text
+GEPT 初級 vocabulary universe
++ GEPT 初級閱讀
++ 國中課本 Lesson
+```
+
+Google Drive 已有 structured vocabulary master，可逐步建立：
+
+```text
+word
+→ normalized word
+→ part of speech
+→ meaning / sense
+→ level
+→ sentence / grammar
+→ reading context
+→ GEPT question
+→ textbook lesson mapping
+```
+
+英文可作為「reference-aware 智慧複習」最早的 prototype。
+
+## 5.4 各校段考題
+
+各校段考是真實考試題型的重要來源，但也是最複雜的資料線。
+
+困難包括：
+
+```text
+不同學校
+不同年度
+不同題號格式
+不同章節範圍
+圖題
+表格
+題組
+共用圖片
+答案卷分離
+```
+
+目前自然、國文已經有逐題 chapter / lesson index Google Sheet，這是未來 Question Registry 的早期雛形。
+
+長期每一題應能回答：
+
+```text
+哪一校？
+哪一年？
+哪一次段考？
+原題號？
+答案來源？
+屬於哪個章節？
+考哪些 concept？
+有沒有圖片？
+```
+
+圖題不應視為特殊例外，而應成為 Question Model 的正式一級資料。
+
+## 5.5 數學手寫板
+
+數學手寫板不是教材來源，而是「作答與評量引擎」。
+
+長期角色：
+
+```text
+題目
+↓
+學生手寫
+↓
+答案／步驟辨識
+↓
+判斷哪一步開始錯
+↓
+錯誤類型
+↓
+concept / misconception
+↓
+再選補強題
+```
+
+它未來能把單純的「答案錯」提升成：
+
+```text
+計算錯
+符號錯
+公式選錯
+概念錯
+步驟錯
+```
+
+因此數學手寫板應直接接入弱點導航與智慧選題。
+
+## 5.6 正式歷屆考題
+
+基測／會考維持獨立正式資料區塊。
+
+原則：
+
+```text
+原卷 authority
+→ 原始題序
+→ 原始選項
+→ 官方答案
+→ 原圖 asset
+→ 結構化 JSON
+→ concept mapping
+```
+
+正式歷屆題是高價值的真實評量資料，不應與 AI 自編題混淆來源。
+
+---
+
+# 6. 四層智慧學習資料架構
+
+未來整個 Exam 可以理解成四層。
+
+## 6.1 Evidence Layer
+
+Google Drive 保存：
+
+```text
+課本照片
+講義照片
+教材 PDF
+各校原卷
+答案卷
+基測／會考原卷
+英文來源資料
+```
+
+這一層的功能是「證據保存與重新核對」，不是即時 query engine。
+
+## 6.2 Knowledge Layer
+
+由 evidence 建立：
+
+```text
+canonical
+chapter
+section
+concept
+definition
+rule
+formula
+vocabulary
+misconception
+skill
+question type
+prerequisite
+```
+
+這一層回答：**這個章節到底在教什麼？**
+
+## 6.3 Question Layer
+
+所有不同來源的題目逐步轉成共同 metadata：
+
+```text
+questionId
+sourceType
+subject
+grade
+semester
+chapter
+section
+conceptIds
+difficulty
+questionType
+cognitiveSkill
+misconceptionTags
+hasVisual
+images
+groupId
+provenance
+```
+
+題目本體仍可分散保存，但索引要能統一查詢。
+
+## 6.4 Learner State Layer
+
+Firebase 保存學生實際學習狀態：
+
+```text
+attempts
+wrong answers
+recent score
+answer history
+vocabulary progress
+last practiced
+repeated errors
+mastery state
+```
+
+這一層回答：**這個學生現在會什麼？還不會什麼？**
+
+---
+
+# 7. Unified Knowledge / Question Database
+
+未來「大資料庫」不應等於把所有檔案搬到同一個資料夾。
+
+應採：
+
+> **資料分開保存，索引統一。**
+
+建議建立三個核心 registry。
+
+## 7.1 Concept Registry
+
+例如：`concept-registry.json`
+
+```json
+{
+  "id": "science.variable-control",
+  "subject": "science",
+  "grade": 7,
+  "semester": 1,
+  "chapter": "1",
+  "section": "1-2",
+  "title": "變因控制",
+  "prerequisites": [],
+  "misconceptions": [
+    "confuse-independent-controlled-variable"
+  ]
+}
+```
+
+## 7.2 Question Registry
+
+例如：`question-index.json`
+
+它不必複製所有題目內容，主要保存可搜尋 metadata。
+
+```json
+{
+  "questionId": "school-114-dawan-science-q08",
+  "sourceType": "school-exam",
+  "subject": "science",
+  "section": "1-2",
+  "conceptIds": ["science.variable-control"],
+  "difficulty": "medium",
+  "questionType": "experiment-scenario",
+  "cognitiveSkill": "application",
+  "hasVisual": false
+}
+```
+
+## 7.3 Asset Registry
+
+特別處理：
+
+```text
+題目圖片
+選項圖片
+共用題組圖
+表格
+幾何圖
+地圖
+圖表
+```
+
+Question Model 應正式支援：
+
+```text
+text
+options
+answer
+stimulus
+images[]
+optionImages[]
+sharedGroupId
+asset provenance
+```
+
+不要再假設「題目 = 純文字」。
+
+## 7.4 Drive 不直接當即時搜尋引擎
+
+Google Drive 的角色：
+
+```text
+evidence authority
+canonical authority
+human-readable database
+```
+
+網站真正海撈時，應查 derived machine-readable database。
+
+未來可能是：
+
+```text
+concept-registry.json
+question-index.json
+asset-index.json
+```
+
+資料量再大後，可以進一步產生 `exam-knowledge.db`，例如 SQLite。
+
+---
+
+# 8. 錯誤紀錄導航（Learning Weakness Navigator）
+
+目前 Firebase 已經累積：
+
+```text
+作答次數
+分數
+錯題數
+最近作答
+科目概況
+```
+
+下一步不是單純增加更多歷程列表，而是建立「錯誤導航」。
+
+學生下次進入學習歷程時，系統應直接指出：
+
+```text
+哪些科目需要注意
+哪些章節需要複習
+哪些 concept 仍然反覆出錯
+哪些錯誤已經改善
+哪些內容太久沒有再次驗證
+```
+
+第一版可以先做到 chapter / lesson level，不必等待所有 concept 完成。
+
+例如：
+
+```text
+🔴 自然｜1-2 科學方法
+最近 2 次：55 → 75
+最近仍錯 5 題
+狀態：需要加強
+
+🟠 社會｜第1章 認識位置與地圖
+近期正確率約 70%
+狀態：尚未穩定
+
+🟢 國文｜第二課 生之歌選
+近期連續高分
+狀態：已掌握
+```
+
+## 8.1 錯誤必須有生命週期
+
+不能因為一題曾經答錯，就永久標成弱點。
+
+建議狀態：
+
+```text
+NEW_ERROR
+↓
+NEEDS_REVIEW
+↓
+RELEARNING
+↓
+RETEST_PENDING
+↓
+MASTERED
+```
+
+UI 可簡化成：
+
+```text
+🔴 需要加強
+🟠 尚未穩定
+🟢 已掌握
+```
+
+掌握狀態必須能隨新資料重新變動。
+
+## 8.2 複習優先度
+
+第一代不需要 AI 就能計算。
+
+概念上：
+
+```text
+Review Priority
+=
+recent error severity
++ repeated errors
++ low recent score
++ time since last review
++ instability
+```
+
+因此：
+
+```text
+以前 40 分，但後來連續 100、100
+→ 優先度下降
+
+70、70、75，而且最近還錯
+→ 優先度提高
+```
+
+不要只使用 lifetime average。
+
+---
+
+# 9. 智慧選題（Adaptive Question Selection）
+
+錯誤導航之後，下一步才是「挑下一題」。
+
+系統不應只做：
+
+```text
+1-2 科學方法
+→ 隨機抽 10 題
+```
+
+而應考慮：
+
+```text
+目前 mastery
+最近錯誤
+重複錯誤
+距離上次複習時間
+題目難度
+question type
+cognitive skill
+是否做過
+是否含圖片
+來源類型
+```
+
+例如：
+
+```text
+今日建議 12 題
+
+4 題：最近弱點
+3 題：剛學的新內容
+2 題：一週前需要 spaced review
+2 題：真實段考／歷屆應用
+1 題：挑戰題
+```
+
+大量題庫是系統的武器庫，不是學生的壓力來源。
+
+## 9.1 類比題
+
+真正的智慧選題不只是找同一章，而是做到：
+
+```text
+同 concept
++ 不同情境
+```
+
+例如「操縱變因」可以跨：
+
+```text
+光照對植物生長
+水溫對溶解速度
+肥料對植物高度
+不同材質對保溫效果
+```
+
+表面情境不同，但測量同一個 reasoning skill。
+
+## 9.2 已驗證題庫優先
+
+AI 不應以無限制生成題目為主要來源。
+
+```text
+已驗證題庫
+→ 優先選題
+
+既有題目不足
+→ AI 生成補強題
+
+AI 生成題
+→ sourceType = practice-generated
+→ 不冒充正式段考／歷屆題
+```
+
+---
+
+# 10. 智慧複習的三個精度階段
+
+系統可以循序發展，不需要一次做到最細。
+
+## Level 1：Chapter / Lesson Level
+
+現在就能開始。
+
+```text
+自然 1-2 弱
+社會第1章弱
+英文 Lesson 1 弱
+```
+
+主要利用目前 Firebase attempts。
+
+## Level 2：Concept Level
+
+canonical 與 concept mapping 成熟後：
+
+```text
+自然 1-2
+├─ 操縱變因：弱
+├─ 應變變因：尚可
+└─ 控制變因：熟
+```
+
+這一層開始需要 Concept Registry + Question Registry。
+
+## Level 3：Misconception / Error Pattern Level
+
+最終目標不是只知道「正負數不會」，而是知道「負負轉換時反覆符號錯誤」。
+
+也不是只知道「科學方法不熟」，而是知道「常把操縱變因與控制變因混淆」。
+
+數學手寫板特別適合發展到這一層。
+
+---
+
+# 11. 英文先行、其他科逐步接入
+
+目前英文已有較成熟 reference layer：
+
+```text
+GEPT vocabulary master
+GEPT reading
+textbook lesson
+Firebase vocabulary progress
+```
+
+因此英文可以率先測試：
+
+```text
+錯字／弱字
+↓
+GEPT vocabulary reference
+↓
+間隔複習
+↓
+再次出現
+↓
+熟練度更新
+```
+
+其他科目前多仍以題庫／章節層為主，但 Google Drive 已經逐步保存：
+
+```text
+原始資料
+教材辨識
+canonical
+concept ID 候選
+```
+
+所以不需要現在就重建資料。
+
+未來只要逐科補上：
+
+```text
+canonical
+→ Concept Registry
+→ Question Registry
+→ Learner State
+```
+
+就能逐步接進智慧複習。
+
+---
+# 12. P0：Repository Health Check
 
 這是目前最值得優先建立的工程基礎。
 
@@ -191,7 +859,7 @@ scripts/
 
 或類似 validator。
 
-## 4.1 第一版至少檢查
+## 12.1 第一版至少檢查
 
 ### JSON
 
@@ -227,7 +895,7 @@ sourceType 是否合理
 preserveOptionOrder 是否符合來源類型
 ```
 
-## 4.2 Error / Warning 分級
+## 12.2 Error / Warning 分級
 
 不要第一版就因 legacy schema 把整個 deploy 卡死。
 
@@ -259,7 +927,7 @@ legacy module
 
 ---
 
-# 5. P0：建立單一 Curriculum / Bank Manifest
+# 13. P0：建立單一 Curriculum / Bank Manifest
 
 目前 curriculum readiness 可能同時存在於：
 
@@ -320,13 +988,13 @@ manifest
 
 ---
 
-# 6. P1：題庫 Schema 收斂
+# 14. P1：題庫 Schema 收斂
 
 目前 chapter-bank 已經存在多個世代的資料格式。
 
 這不是錯，但新資料應逐步統一。
 
-## 6.1 建議正式欄位
+## 14.1 建議正式欄位
 
 所有新 bank 至少考慮：
 
@@ -377,7 +1045,7 @@ officialDisposition
 pendingQuestions
 ```
 
-## 6.2 不一次硬轉全部舊資料
+## 14.2 不一次硬轉全部舊資料
 
 策略應是：
 
@@ -391,7 +1059,7 @@ validator 先 warning
 
 ---
 
-# 7. P1：Module Inventory
+# 15. P1：Module Inventory
 
 目前 root 已有不少歷史模組與不同版本。
 
@@ -434,7 +1102,7 @@ EXPERIMENTAL
 
 ---
 
-# 8. P1：Deployment Workflow 收斂
+# 16. P1：Deployment Workflow 收斂
 
 目前 Pages workflow 除了 deploy，還會：
 
@@ -464,7 +1132,7 @@ source repo
 → deploy
 ```
 
-## 8.1 應保留
+## 16.1 應保留
 
 ```text
 build SHA
@@ -474,7 +1142,7 @@ Pages deploy
 validation
 ```
 
-## 8.2 應逐步搬回 source
+## 16.2 應逐步搬回 source
 
 ```text
 功能性 script 注入
@@ -485,7 +1153,7 @@ legacy module workaround
 
 ---
 
-# 9. P1：清理 One-shot / Legacy Workflow
+# 17. P1：清理 One-shot / Legacy Workflow
 
 目前 repository 曾出現只為單次修補而建立的 workflow。
 
@@ -506,7 +1174,7 @@ legacy module workaround
 
 ---
 
-# 10. P1：Firebase / Exam-Record 邊界固定
+# 18. P1：Firebase / Exam-Record 邊界固定
 
 目前主線已經是：
 
@@ -539,7 +1207,7 @@ private derived data
 
 ---
 
-# 11. P1：Catalog 與實際 Bank 自動比對
+# 19. P1：Catalog 與實際 Bank 自動比對
 
 目前已發生：
 
@@ -570,7 +1238,7 @@ bank 已存在
 
 ---
 
-# 12. P2：README 動態資訊減量
+# 20. P2：README 動態資訊減量
 
 README 應繼續保存：
 
@@ -603,7 +1271,7 @@ catalog
 
 ---
 
-# 13. P2：Android 文件拆分
+# 21. P2：Android 文件拆分
 
 目前 `Android學生機設計.MD` 同時包含：
 
@@ -642,7 +1310,7 @@ Superseded by LEARNING_HISTORY_FIREBASE.md
 
 ---
 
-# 14. P2：英文資料庫整理
+# 22. P2：英文資料庫整理
 
 英文目前資料量大，已經需要獨立治理。
 
@@ -666,7 +1334,7 @@ GitHub JSON = 可作答衍生資料
 
 ---
 
-# 15. P2：教材 Canonical → Machine-readable Curriculum
+# 23. P2：教材 Canonical → Machine-readable Curriculum
 
 目前 canonical 多為人類可讀文件。
 
@@ -690,7 +1358,7 @@ Machine-readable curriculum 應由 canonical 衍生，不可反向取代 canonic
 
 ---
 
-# 16. P2：題庫可追溯性
+# 24. P2：題庫可追溯性
 
 未來每一道正式來源題目，都應能回答：
 
@@ -722,7 +1390,7 @@ conceptIds
 
 ---
 
-# 17. P2：自動化 Smoke Test
+# 25. P2：自動化 Smoke Test
 
 除了 validator，未來可加入簡單 runtime smoke test。
 
@@ -749,7 +1417,7 @@ history navigation 卡死
 
 ---
 
-# 18. 安全與隱私目標
+# 26. 安全與隱私目標
 
 ## GitHub
 
@@ -785,7 +1453,7 @@ private Drive identifier
 
 ---
 
-# 19. 專案目錄未來建議
+# 27. 專案目錄未來建議
 
 目前不急著搬檔。
 
@@ -821,7 +1489,7 @@ Exam/
 
 ---
 
-# 20. 建議實施順序
+# 28. 建議實施順序
 
 ## Phase 1：先讓 repository 不容易壞
 
@@ -879,9 +1547,40 @@ Exam/
 [ ] machine-readable curriculum
 ```
 
+## Phase 7：錯誤紀錄導航
+
+```text
+[ ] chapter / lesson weakness aggregation
+[ ] 最近分數／錯題／作答時間
+[ ] NEEDS_REVIEW / MASTERED 狀態
+[ ] 我的學習歷程加入「建議複習」
+[ ] lifetime average 與 recent trend 分離
+```
+
+## Phase 8：Knowledge / Question Registry
+
+```text
+[ ] Concept Registry
+[ ] Question Registry
+[ ] Asset Registry
+[ ] 各來源題目 concept mapping
+[ ] 圖題／題組一級資料模型
+```
+
+## Phase 9：智慧選題
+
+```text
+[ ] Review Priority
+[ ] spaced review
+[ ] 類比題推薦
+[ ] 真實段考／歷屆題混合
+[ ] concept-level mastery
+[ ] misconception-level reinforcement
+```
+
 ---
 
-# 21. Definition of Done
+# 29. Definition of Done
 
 未來可以把「Exam 架構穩定第一階段」定義為：
 
@@ -902,9 +1601,17 @@ Exam/
 
 ---
 
-# 22. 目前最推薦的下一步
+# 30. 目前最推薦的下一步
 
-如果只選一件事：
+需要區分「戰略目標」與「工程下一步」。
+
+## 戰略目標
+
+> **建立錯誤紀錄導航，最終進入智慧選題與 adaptive review。**
+
+學生每一次作答都應逐步轉化成下一次複習的依據。
+
+## 工程下一步
 
 > **先建立 Repo Health Check v1。**
 
@@ -914,44 +1621,63 @@ Exam/
 現在資料量已經夠大
 題庫會持續快速增加
 多科、多 schema、多 asset、多 module
+未來還要建立 registry 與智慧選題
 ```
 
 此時先建立 validator，等於先裝安全網。
 
-完成 validator 後，再進行：
+完成 validator 後，再逐步進行：
 
 ```text
 manifest
 → schema 收斂
-→ module cleanup
-→ directory refactor
+→ Concept / Question Registry
+→ 錯誤導航
+→ 智慧選題
+→ module cleanup / directory refactor
 ```
 
-會安全得多。
+如此可以一邊持續擴充教材與題庫，一邊讓系統逐步 AI 化，而不是為了新功能破壞既有資料。
 
 ---
+# 31. 長期目標
 
-# 23. 長期目標
-
-最終希望 Exam 變成：
+最終希望 Exam 形成完整閉環：
 
 ```text
-教材 evidence
+Google Drive
+教材 evidence / canonical
         ↓
-canonical knowledge
+Knowledge Layer
+Concept Registry
         ↓
-machine-readable curriculum
+Question Layer
+Question Registry / Asset Registry
         ↓
-structured question banks
+GitHub Exam
+validated structured question banks
         ↓
-validated repository
+學生作答
         ↓
-web learning
+Firebase Learner State
         ↓
-Firebase learning history
+錯誤紀錄導航
         ↓
-AI diagnosis / adaptive practice
+Mastery / Misconception
+        ↓
+智慧選題 / 類比練習 / spaced review
+        ↓
+再次作答
+        └──────────────→ 回到 Learner State
 ```
+
+最終系統不是回答：
+
+> 「還有多少題沒做？」
+
+而是回答：
+
+> **「現在最值得做哪幾題？」**
 
 同時仍保持：
 
@@ -959,9 +1685,12 @@ AI diagnosis / adaptive practice
 資料可追溯
 答案可核對
 教材不亂猜
+不同來源不混淆
+錯誤可以被修復
+掌握程度可以重新評估
 架構可維護
 學生介面簡單
 新資料可以持續加入
 ```
 
-這是目前 Exam 專案未來整建與擴充的主要藍圖。
+這是目前 Exam 專案未來整建與 AI 化的主要藍圖。
