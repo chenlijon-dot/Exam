@@ -51,6 +51,9 @@
   }
 
   function isNativeInkSession() {
+    const overlay = document.getElementById('mathPaperCanvasOverlay');
+    if (overlay?.dataset?.fullToolset === '1') return false;
+
     const bridge = getNativeBridge();
     return !!(
       bridge &&
