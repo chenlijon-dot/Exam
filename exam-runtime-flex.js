@@ -251,7 +251,7 @@
       if (button) button.textContent = '✍️ 修改手寫作答';
       if (image) image.src = answer.dataUrl;
       preview?.classList.add('show');
-      if (status) status.textContent = '已完成手寫作答；交卷時會送交 Gemini 判題。';
+      if (status) status.textContent = '已完成手寫作答；交卷時會送交 Firebase Gemini 判題。';
     } else {
       if (button) button.textContent = '✍️ 開始手寫作答';
       if (image) image.removeAttribute('src');
@@ -308,12 +308,27 @@
     );
     const recognizedAnswer = gradingResult?.recognizedAnswer || '';
     const recognizedWork = gradingResult?.recognizedWork || '';
+    const errorStep = gradingResult?.errorStep || '';
+    const whyWrong = gradingResult?.whyWrong || '';
+    const correction = gradingResult?.correction || '';
+    const nextHint = gradingResult?.nextHint || '';
+    const confidence = typeof gradingResult?.confidence === 'number'
+      ? `${Math.round(gradingResult.confidence * 100)}%`
+      : '';
+    const modelName = gradingResult?.modelName || '';
 
     box.className = `handwriting-grade show ${css}`;
     box.innerHTML = `<strong>${title}</strong>` +
       (recognizedAnswer ? `<div>辨識答案：${escapeHtml(recognizedAnswer)}</div>` : '') +
       (recognizedWork ? `<div>辨識過程：${escapeHtml(recognizedWork)}</div>` : '') +
-      `<div>${escapeHtml(feedback)}</div>`;
+      (errorStep ? `<div><b>錯在這一步：</b>${escapeHtml(errorStep)}</div>` : '') +
+      (whyWrong ? `<div><b>為什麼錯：</b>${escapeHtml(whyWrong)}</div>` : '') +
+      (correction ? `<div><b>應該這樣改：</b>${escapeHtml(correction)}</div>` : '') +
+      (nextHint ? `<div><b>接著試試看：</b>${escapeHtml(nextHint)}</div>` : '') +
+      `<div>${escapeHtml(feedback)}</div>` +
+      ((confidence || modelName)
+        ? `<div class="tiny" style="margin-top:6px">${confidence ? `判讀信心：${confidence}` : ''}${confidence && modelName ? '　' : ''}${modelName ? `模型：${escapeHtml(modelName)} · Firebase AI Logic` : ''}</div>`
+        : '');
   }
 
   window.startExam = function(selected) {
@@ -339,7 +354,7 @@
       const scoredTotal = mcqTotal + handwritingTotal;
       status.innerHTML = `<span class="pill" id="progress">已作答 0 / ${scoredTotal}</span>` +
         (ctx.scoreMode === 'percent'
-          ? `<span class="pill">選擇題 ${mcqTotal} 題</span>${handwritingTotal ? `<span class="pill">手寫 ${handwritingTotal} 題｜Gemini 判題</span>` : ''}<span class="pill">以正答率顯示</span>`
+          ? `<span class="pill">選擇題 ${mcqTotal} 題</span>${handwritingTotal ? `<span class="pill">手寫 ${handwritingTotal} 題｜Firebase Gemini 判題</span>` : ''}<span class="pill">以正答率顯示</span>`
           : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * scoredTotal} 分</span>`) +
         (manualTotal ? `<span class="pill">紙筆練習 ${manualTotal} 題｜不計分</span>` : '');
     }
@@ -376,9 +391,9 @@
       }
 
       if (type === 'handwriting') {
-        const instruction = x.handwritingInstruction || '請寫出完整計算過程與答案；本題會在交卷時由 Gemini 判題並計分。';
+        const instruction = x.handwritingInstruction || '請寫出完整計算過程與答案；本題會在交卷時由 Firebase Gemini 判題並計分。';
         const answer = x.expectedAnswer || x.manualAnswer || '';
-        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="handwriting">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="handwriting-box"><span class="handwriting-badge">✍️ 手寫計分題｜Gemini 判題</span><div class="handwriting-note">${escapeHtml(instruction)}</div><button type="button" class="handwriting-open" data-handwriting-open="${i}">✍️ 開始手寫作答</button><div class="handwriting-preview"><img alt="第${x.number || i+1}題手寫作答預覽"></div><div class="handwriting-status">尚未作答。</div><div class="handwriting-grade"></div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
+        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="handwriting">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="handwriting-box"><span class="handwriting-badge">✍️ 手寫計分題｜Firebase Gemini 判題</span><div class="handwriting-note">${escapeHtml(instruction)}</div><button type="button" class="handwriting-open" data-handwriting-open="${i}">✍️ 開始手寫作答</button><div class="handwriting-preview"><img alt="第${x.number || i+1}題手寫作答預覽"></div><div class="handwriting-status">尚未作答。</div><div class="handwriting-grade"></div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
       }
 
       const opts = renderOptionList(x, i);
@@ -429,24 +444,14 @@
         .map((question, index) => ({ question, index }))
         .filter(item => isHandwriting(item.question));
 
-      const hasAnsweredHandwriting = handwritingItems.some(({question,index}) => {
-        const key = handwritingKey(question,index,ctx);
-        return !!window.ExamHandwriting?.getAnswer?.(key)?.dataUrl;
-      });
-
       if (handwritingItems.length && !window.ExamHandwriting?.uploadAndGrade) {
         alert('手寫判題模組尚未載入，請重新整理頁面後再試。');
         return;
       }
 
-      if (hasAnsweredHandwriting && !window.ExamHandwriting?.hasToken?.()) {
-        alert('手寫題需要 Gemini 判題；請先到「GitHub 同步設定」輸入 Token，再交卷。');
-        return;
-      }
-
       const oldText = submitButton.textContent;
       submitButton.disabled = true;
-      submitButton.textContent = handwritingItems.length ? 'Gemini 判題中…' : '計算成績中…';
+      submitButton.textContent = handwritingItems.length ? 'Firebase Gemini 判題中…' : '計算成績中…';
 
       try {
         let mcqCorrect = 0;
@@ -487,17 +492,17 @@
             return { index, result:missing };
           }
 
-          if (status) status.textContent = 'Gemini 正在判讀這一題的手寫答案…';
+          if (status) status.textContent = 'Firebase Gemini 正在判讀這一題的手寫答案…';
           const gradingResult = await window.ExamHandwriting.uploadAndGrade({
             key,
             question,
             context:ctx
           });
           if (status) status.textContent = gradingResult?.verdict === 'correct'
-            ? 'Gemini 判題完成：正確。'
+            ? 'Firebase Firebase Gemini 判題完成：正確。'
             : gradingResult?.verdict === 'incorrect'
-              ? 'Gemini 判題完成：需要修正。'
-              : 'Gemini 判題完成：無法可靠判定。';
+              ? 'Firebase Firebase Gemini 判題完成：需要修正。'
+              : 'Firebase Firebase Gemini 判題完成：無法可靠判定。';
           renderHandwritingGrade(index, gradingResult);
           return { index, result:gradingResult };
         }));
@@ -517,7 +522,7 @@
           `<strong>${info.prominent}</strong>` +
           `<div>${info.detail}｜錯誤或未答 ${missed} 題</div>` +
           (handwritingTotal
-            ? `<div class="tiny" style="margin-top:7px">選擇題 ${mcqCorrect}/${mcqTotal}｜手寫題 ${handwritingCorrect}/${handwritingTotal}（Gemini 判題）</div>`
+            ? `<div class="tiny" style="margin-top:7px">選擇題 ${mcqCorrect}/${mcqTotal}｜手寫題 ${handwritingCorrect}/${handwritingTotal}（Firebase Gemini 判題）</div>`
             : '') +
           (manualTotal ? `<div class="tiny" style="margin-top:6px">另有紙筆練習 ${manualTotal} 題，不列入正答率。</div>` : '');
 
