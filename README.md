@@ -1503,7 +1503,7 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 chapter-bank/math/7-1/1-1/
 ├─ easy.json    20 題
 ├─ medium.json  10 題
-└─ hard.json    10 題
+└─ hard.json    12 題（10 選擇＋2 手寫）
 ```
 
 來源策略：
@@ -1526,7 +1526,7 @@ Google Drive canonical 教材知識庫
 → SVG 即時繪製
 ```
 
-目前 40 題中有 8 題使用 `number-line` diagram spec；不需 PNG，也不使用外部題庫原圖。
+目前共 42 題；其中 8 題使用 `number-line` diagram spec，困難題另含 2 題手寫計分題。
 
 `exam-math-catalog.js` 已將 1-1 從「題庫待建」改為可進入的分級題庫入口，並依難度載入對應 JSON。
 
@@ -1539,7 +1539,7 @@ Google Drive canonical 教材知識庫
 chapter-bank/math/7-1/1-2/
 ├─ easy.json    20 題
 ├─ medium.json  10 題
-└─ hard.json    10 題
+└─ hard.json    12 題（10 選擇＋2 手寫）
 ```
 
 核心範圍涵蓋：
@@ -1569,7 +1569,7 @@ chapter-bank/math/7-1/1-2/
 chapter-bank/math/7-1/1-3/
 ├─ easy.json    20 題
 ├─ medium.json  10 題
-└─ hard.json    10 題
+└─ hard.json    12 題（10 選擇＋2 手寫）
 ```
 
 核心範圍：
@@ -1586,7 +1586,7 @@ chapter-bank/math/7-1/1-3/
 計分、位移與重複變化量情境
 ```
 
-本節以計算與代數結構為主，因此這批 40 題沒有強行加入數線圖；圖形 renderer 僅在題意真正需要時使用。
+本節目前共 42 題；以計算與代數結構為主，因此沒有強行加入數線圖。困難題另含 2 題手寫計分題。
 
 `exam-math-catalog.js` 已將 1-3 從「題庫待建」改成可進入的分級題庫入口。
 
@@ -1599,7 +1599,7 @@ chapter-bank/math/7-1/1-3/
 chapter-bank/math/7-1/1-4/
 ├─ easy.json    20 題
 ├─ medium.json  10 題
-└─ hard.json    10 題
+└─ hard.json    12 題（10 選擇＋2 手寫）
 ```
 
 核心範圍：
@@ -1615,7 +1615,7 @@ chapter-bank/math/7-1/1-4/
 含指數混合運算
 ```
 
-本節以符號、位值與數量級判斷為主，這批題目沒有強行加入圖形；diagram renderer 仍維持「題意需要才使用」的原則。
+本節目前共 42 題；以符號、位值與數量級判斷為主，因此沒有強行加入圖形。困難題另含 2 題手寫計分題。
 
 `exam-math-catalog.js` 已將 1-4 從「題庫待建」改成可進入的分級題庫入口，因此單元 1 的 1-1～1-4 已全部完成。
 
