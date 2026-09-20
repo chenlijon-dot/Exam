@@ -1485,7 +1485,7 @@ exam-diagram-renderer.js
 → validateDiagramSpec(spec)
 ```
 
-第一版支援 `diagram.type = "number-line"`，用途包含正負數位置、數線讀值、大小比較、相反數、絕對值、兩點距離與未知點等自編題。
+目前 diagram renderer 已支援 `number-line`、`triangle`、`square`、`circle`、`coordinate-plane`（亦接受 `xy-plane` alias）。用途包含正負數位置、數線讀值、基本幾何圖形、頂點標註與 XY 座標平面題。
 
 題目 JSON 可直接使用：
 
@@ -1523,24 +1523,23 @@ exam-diagram-renderer.js
 
 因此正式歷屆題與教材原圖仍使用原始 image assets；SVG renderer 只用於自編題，不取代官方／原卷 evidence。
 
-Number Line v1 已支援：
+Renderer 目前已支援：
 
-- 水平數線、左右箭頭、主要刻度與數字標籤。
-- 正數、負數與 0。
-- A/B/C/P/Q 等點標記。
-- `solid`、`hollow`、`marker` 點型。
-- `showValue` 顯示點的數值。
+- `number-line`：水平數線、左右箭頭、主要刻度、數字標籤、正負數與 0、solid/hollow/marker 點型。
+- `triangle`：以 3 個 vertices 繪製三角形，可用 A/B/C 等標註頂點。
+- `square`：可用 4 個 vertices，或以 `x / y / size` 直接產生正方形，支援 A/B/C/D 頂點標註。
+- `circle`：以圓心與半徑繪製，可標註圓心 O 與圓周上的 A/B/... 點。
+- `coordinate-plane` / `xy-plane`：XY 軸、箭頭、格線、刻度、數字、標記點與線段。
 - SVG `viewBox` responsive 顯示，手機與桌面共用。
-- 自動 ARIA 描述。
-- 非法 `type`、`min >= max`、`tickStep <= 0`、過多刻度與越界點的安全防呆；不使整頁 crash。
+- 自動 ARIA 描述與非法 spec 安全 fallback，不使整頁 crash。
 
-5 個 smoke test 放在：
+Smoke test 放在：
 
 ```text
 number-line-renderer-tests.html
 ```
 
-測試涵蓋 `-5～5`、`-20～20`、`tickStep=1/2`、正負數、0、單點、多點、實心點與空心點。
+目前共有 9 個 smoke test，涵蓋數線、三角形、正方形、圓形、頂點標註、XY 座標平面、標記點與線段。
 
 v1.1 再考慮：
 
