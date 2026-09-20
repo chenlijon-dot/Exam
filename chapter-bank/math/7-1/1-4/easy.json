@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-4-easy",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-4 指數記法與科學記號",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-4",
+    "title": "1-4 指數記法與科學記號｜簡易",
+    "subtitle": "20 題｜指數基本概念、10 的次方與科學記號轉換",
+    "unit": "數學七上｜單元 1 數與數線｜1-4 指數記法與科學記號",
+    "difficulty": "math-7-1-1-4-easy",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "將 3×3×3×3 寫成指數記法，下列何者正確？",
+      "o": [
+        "3³",
+        "3⁴",
+        "4³",
+        "12¹"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-exponent-notation"
+      ],
+      "e": "4 個 3 相乘，底數是 3、指數是 4，所以寫成 3⁴。"
+    },
+    {
+      "number": 2,
+      "q": "在 5⁶ 中，底數是多少？",
+      "o": [
+        "5",
+        "6",
+        "11",
+        "30"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-base-exponent"
+      ],
+      "e": "5⁶ 表示 6 個 5 相乘，底數是 5。"
+    },
+    {
+      "number": 3,
+      "q": "在 7⁴ 中，指數是多少？",
+      "o": [
+        "4",
+        "7",
+        "11",
+        "28"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-base-exponent"
+      ],
+      "e": "7⁴ 中的上標 4 是指數。"
+    },
+    {
+      "number": 4,
+      "q": "計算 2⁵ 的值。",
+      "o": [
+        "10",
+        "16",
+        "32",
+        "64"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-power-evaluation"
+      ],
+      "e": "2⁵=2×2×2×2×2=32。"
+    },
+    {
+      "number": 5,
+      "q": "計算 (-3)² 的值。",
+      "o": [
+        "-9",
+        "-6",
+        "6",
+        "9"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-negative-base"
+      ],
+      "e": "(-3)²=(-3)×(-3)=9。"
+    },
+    {
+      "number": 6,
+      "q": "計算 (-2)³ 的值。",
+      "o": [
+        "-8",
+        "-6",
+        "6",
+        "8"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-negative-base"
+      ],
+      "e": "(-2)³=(-2)×(-2)×(-2)=-8。"
+    },
+    {
+      "number": 7,
+      "q": "下列何者的值為 -16？",
+      "o": [
+        "(-4)²",
+        "-4²",
+        "(-2)⁴",
+        "4²"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-parentheses-sign"
+      ],
+      "e": "-4² 表示 -(4²)=-16；而 (-4)²=16。"
+    },
+    {
+      "number": 8,
+      "q": "10³ 的值是多少？",
+      "o": [
+        "100",
+        "1000",
+        "10000",
+        "0.001"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-powers-of-ten"
+      ],
+      "e": "10³=10×10×10=1000。"
+    },
+    {
+      "number": 9,
+      "q": "10⁰ 的值是多少？",
+      "o": [
+        "0",
+        "1",
+        "10",
+        "100"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-powers-of-ten"
+      ],
+      "e": "10⁰=1。"
+    },
+    {
+      "number": 10,
+      "q": "10⁻² 的值是多少？",
+      "o": [
+        "100",
+        "10",
+        "0.1",
+        "0.01"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-powers-of-ten"
+      ],
+      "e": "10⁻²=1/10²=1/100=0.01。"
+    },
+    {
+      "number": 11,
+      "q": "下列哪一個是標準科學記號？",
+      "o": [
+        "0.56×10⁴",
+        "5.6×10³",
+        "56×10²",
+        "5600×10⁰"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "e": "標準科學記號要求係數介於 1 與 10 之間，只有 5.6×10³ 符合。"
+    },
+    {
+      "number": 12,
+      "q": "將 320000 寫成科學記號，何者正確？",
+      "o": [
+        "3.2×10⁴",
+        "3.2×10⁵",
+        "32×10⁴",
+        "0.32×10⁶"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-to-scientific"
+      ],
+      "e": "320000=3.2×100000=3.2×10⁵。"
+    },
+    {
+      "number": 13,
+      "q": "將 0.00047 寫成科學記號，何者正確？",
+      "o": [
+        "4.7×10⁻⁴",
+        "4.7×10⁻⁵",
+        "47×10⁻⁵",
+        "0.47×10⁻³"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-to-scientific"
+      ],
+      "e": "0.00047=4.7×10⁻⁴。"
+    },
+    {
+      "number": 14,
+      "q": "2.5×10⁴ 等於多少？",
+      "o": [
+        "250",
+        "2500",
+        "25000",
+        "250000"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-from-scientific"
+      ],
+      "e": "2.5×10⁴=2.5×10000=25000。"
+    },
+    {
+      "number": 15,
+      "q": "6.2×10⁻³ 等於多少？",
+      "o": [
+        "0.00062",
+        "0.0062",
+        "0.062",
+        "6200"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-from-scientific"
+      ],
+      "e": "10⁻³ 表示小數點向左移 3 位，所以 6.2×10⁻³=0.0062。"
+    },
+    {
+      "number": 16,
+      "q": "比較 3.1×10⁵ 與 8.2×10⁴ 的大小，何者正確？",
+      "o": [
+        "3.1×10⁵ < 8.2×10⁴",
+        "3.1×10⁵ = 8.2×10⁴",
+        "3.1×10⁵ > 8.2×10⁴",
+        "無法比較"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare"
+      ],
+      "e": "兩數皆為正數，先比 10 的指數；5>4，所以 3.1×10⁵ 較大。"
+    },
+    {
+      "number": 17,
+      "q": "比較 5.4×10⁻³ 與 7.1×10⁻⁴ 的大小，何者正確？",
+      "o": [
+        "5.4×10⁻³ > 7.1×10⁻⁴",
+        "5.4×10⁻³ < 7.1×10⁻⁴",
+        "兩者相等",
+        "無法比較"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare"
+      ],
+      "e": "10⁻³ 比 10⁻⁴ 大一個數量級，因此 5.4×10⁻³ 較大。"
+    },
+    {
+      "number": 18,
+      "q": "4.3×10⁶ 是幾位整數？",
+      "o": [
+        "5 位",
+        "6 位",
+        "7 位",
+        "8 位"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-digit-count"
+      ],
+      "e": "1≤4.3<10，乘 10⁶ 後得到 7 位整數，所以是 7 位數。"
+    },
+    {
+      "number": 19,
+      "q": "2.8×10⁻⁵ 的第一個非 0 數字出現在小數點後第幾位？",
+      "o": [
+        "第 3 位",
+        "第 4 位",
+        "第 5 位",
+        "第 6 位"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-first-nonzero"
+      ],
+      "e": "2.8×10⁻⁵=0.000028，第一個非 0 數字 2 在小數點後第 5 位。"
+    },
+    {
+      "number": 20,
+      "q": "下列哪一個數最大？",
+      "o": [
+        "2×10³",
+        "9×10²",
+        "5×10³",
+        "8×10¹"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare"
+      ],
+      "e": "5×10³=5000，2×10³=2000，9×10²=900，8×10¹=80，所以最大是 5×10³。"
+    }
+  ]
+}
