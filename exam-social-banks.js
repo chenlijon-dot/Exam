@@ -15,6 +15,13 @@
       path: 'chapter-bank/social/7-1/geography/chapter-02',
       questionCount: 20,
       pointsPerQuestion: 5
+    },
+    'geo-03': {
+      title: '第3章　地形',
+      subtitle: '地形｜選擇難度',
+      path: 'chapter-bank/social/7-1/geography/chapter-03',
+      questionCount: 20,
+      pointsPerQuestion: 5
     }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -139,7 +146,7 @@
   }
 
   document.addEventListener('click', event => {
-    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"]');
+    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"]');
     if (!chapter) return;
     event.preventDefault();
     event.stopImmediatePropagation();
