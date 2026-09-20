@@ -1623,6 +1623,37 @@ chapter-bank/math/7-1/1-4/
 `exam-math-catalog.js` 已將 1-4 從「題庫待建」改成可進入的分級題庫入口，因此單元 1 的 1-1～1-4 已全部完成。
 
 ---
+## 數學困難題手寫計分（2026-09-21）
+
+數學七上單元 1 的 `1-1`～`1-4` 困難題目前各增加 2 題 `type: "handwriting"`：
+
+```text
+每節困難題
+→ 10 題選擇題
+→ 2 題手寫計分題
+→ 共 12 題
+```
+
+手寫題與選擇題共用同一次「交卷看成績」：
+
+```text
+選擇題
+→ 前端立即對答案
+
+手寫題
+→ 原生 Ink / Web Canvas 作答
+→ 上傳手寫 PNG 與題目 metadata
+→ Gemini 判讀答案與計算過程
+→ verdict = correct 才計分
+→ incorrect 顯示第一個實質錯誤與修正方向
+→ unclear 不計分並顯示無法可靠判讀
+```
+
+共用模組：`exam-handwriting.js`。
+
+`exam-runtime-flex.js` 已把 `handwriting` 視為正式計分題型；最終成績分母包含選擇題與手寫題。
+
+---
 ## 下一階段
 
 - [ ] 持續人工 QA 既有歷屆題
