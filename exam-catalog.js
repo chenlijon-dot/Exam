@@ -307,7 +307,8 @@
         },
         {
           key: 'hist-02', code: '第2章', title: '大航海時代各方勢力的競逐', page: 106, type: 'chapter',
-          detail: '2-1 大航海時代的到來（p.108）｜2-2 各方勢力在臺灣的競逐（p.110）'
+          referenceReady: true,
+          detail: 'p.106～117 教材已收錄；2-1 大航海時代的到來（p.108）｜2-2 各方勢力在臺灣的競逐（p.110）｜歷史探查 外國人眼中的臺灣（p.116～117）；辨識檔、canonical 與簡易／中等／困難各20題已建立'
         },
         { key: 'hist-inquiry-01', code: '歷史探查', title: '外國人眼中的臺灣', page: 116, type: 'inquiry' },
         {
