@@ -29,6 +29,16 @@
       path: 'chapter-bank/social/7-1/geography/chapter-04',
       questionCount: 20,
       pointsPerQuestion: 5
+    },
+    'hist-01': {
+      title: '第1章　史前臺灣與原住民文化',
+      subtitle: '導言＋第1章｜選擇難度',
+      path: 'chapter-bank/social/7-1/history/chapter-01',
+      questionCount: 20,
+      pointsPerQuestion: 5,
+      subjectName: '歷史',
+      backText: '歷史章節',
+      pathLabel: '歷史'
     }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -123,12 +133,15 @@
     const content = $('#catalogContent');
     if (!content) return;
     const chapter = CHAPTERS[currentChapterKey];
-    if ($('#catalogHeaderTitle')) $('#catalogHeaderTitle').textContent = `社會七上｜地理${chapter.title.split('　')[0]}`;
+    const subjectName = chapter.subjectName || '地理';
+    const backText = chapter.backText || '地理章節';
+    const pathLabel = chapter.pathLabel || '地理';
+    if ($('#catalogHeaderTitle')) $('#catalogHeaderTitle').textContent = `社會七上｜${subjectName}${chapter.title.split('　')[0]}`;
     if ($('#catalogHeaderSub')) $('#catalogHeaderSub').textContent = chapter.subtitle;
     document.title = `${chapter.title.replace('　',' ')}｜社會七上`;
     content.innerHTML = `
-      <button class="catalog-back" id="backSocialGeo01Btn">← 返回地理章節</button>
-      <div class="catalog-path">社會　›　地理　›　七年級上學期（一上）　›　第一冊　›　${chapter.title}</div>
+      <button class="catalog-back" id="backSocialGeo01Btn">← 返回${backText}</button>
+      <div class="catalog-path">社會　›　${pathLabel}　›　七年級上學期（一上）　›　第一冊　›　${chapter.title}</div>
       <h2 class="catalog-title">${chapter.title}</h2>
       <p class="catalog-sub">目前先以文字選擇題為主；每個難度 ${chapter.questionCount} 題，每題 ${chapter.pointsPerQuestion} 分。</p>
       <div class="catalog-grid">
@@ -153,7 +166,7 @@
   }
 
   document.addEventListener('click', event => {
-    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"]');
+    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"], [data-social-chapter="hist-01"]');
     if (!chapter) return;
     event.preventDefault();
     event.stopImmediatePropagation();
