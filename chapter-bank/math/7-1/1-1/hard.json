@@ -12,7 +12,7 @@
     "unitGroupLabel": "單元 1 數與數線",
     "section": "1-1",
     "title": "1-1 正數與負數｜困難",
-    "subtitle": "10 題｜等距、中點、內分點與代數條件綜合推理",
+    "subtitle": "12 題｜10 題選擇題＋2 題手寫計分題",
     "unit": "數學七上｜單元 1 數與數線｜1-1 正數與負數",
     "difficulty": "math-7-1-1-1-hard",
     "difficultyLabel": "困難",
@@ -20,7 +20,8 @@
     "preserveOptionOrder": false,
     "analysisEligible": true,
     "sourceType": "practice-generated",
-    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只取概念、題型與難度作參考，非原題複製或改數字重製。需要數線者使用 Exam number-line SVG renderer 即時繪製。"
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只取概念、題型與難度作參考，非原題複製或改數字重製。需要數線者使用 Exam number-line SVG renderer 即時繪製。 困難題另含 2 題手寫計分題，交卷時由 Gemini 依答案與計算過程判定；正確才計分，錯誤會回饋問題所在。",
+    "handwritingGrading": "gemini"
   },
   "questions": [
     {
@@ -267,6 +268,34 @@
         "math-7-1-1-1-midpoint"
       ],
       "e": "C=6，而 A 與 C 互為相反數，所以 A=-6。B 是 A 與 2 的中點，B=(-6+2)/2=-2。"
+    },
+    {
+      "number": 11,
+      "type": "handwriting",
+      "questionId": "math-7-1-1-1-hard-handwriting-01",
+      "q": "在數線上，A 點表示 -8，B 點表示 6。請寫出 A、B 的中點 M 所表示的數，再求 M 的相反數 N。",
+      "handwritingInstruction": "請寫出中點的計算過程，並清楚寫出 M、N 的值。",
+      "expectedAnswer": "M=-1，N=1",
+      "gradingInstructions": "請判斷學生是否正確求出中點 M=(-8+6)/2=-1，並進一步得到其相反數 N=1。若只寫 N=1 但沒有足以支持答案的合理過程，可視情況降低信心；若 M 或 N 任一錯誤則判 incorrect，並指出第一個錯誤。",
+      "conceptIds": [
+        "math-7-1-1-1-midpoint",
+        "math-7-1-1-1-opposite-number"
+      ],
+      "e": "中點 M=[(-8)+6]/2=-1；-1 的相反數是 1，所以 N=1。"
+    },
+    {
+      "number": 12,
+      "type": "handwriting",
+      "questionId": "math-7-1-1-1-hard-handwriting-02",
+      "q": "已知 a<0<b，|a|=9，而且 a+b=-4。請求出 b，並比較 |a| 與 |b| 的大小。",
+      "handwritingInstruction": "請先由條件求出 a，再列式求 b，最後寫出絕對值大小關係。",
+      "expectedAnswer": "a=-9，b=5，且 |a|>|b|",
+      "gradingInstructions": "正確邏輯為：由 a<0 且 |a|=9 得 a=-9；代入 a+b=-4 得 b=5；最後 |a|=9、|b|=5，所以 |a|>|b|。三部分皆正確才判 correct；若有錯，指出第一個錯誤。",
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-signed-order"
+      ],
+      "e": "由 a<0、|a|=9 得 a=-9；-9+b=-4，所以 b=5；因此 |a|=9>|b|=5。"
     }
   ]
 }
