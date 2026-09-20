@@ -49,9 +49,15 @@
     },
     {
       key: 'english-7-1-lesson-02', code: 'Lesson 2', title: 'What Are These?', page: 23,
-      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      type: 'lesson', referenceReady: true, bankMenuReady: true,
+      referencePath: 'chapter-bank/english/7-1/lesson-02/reference.json',
+      banks: {
+        easy: 'chapter-bank/english/7-1/lesson-02/easy.json',
+        medium: 'chapter-bank/english/7-1/lesson-02/medium.json',
+        hard: 'chapter-bank/english/7-1/lesson-02/hard.json'
+      },
       detail: '動物公仔大集合｜亞洲象？非洲象？傻傻分不清', readingSkill: 'Making Inferences 推論',
-      desc: '動物；指示詞、名詞複數、What 問句。'
+      desc: '動物、十二生肖；指示詞、名詞複數、What 問句、所有格與大象比較；教材與分級題庫已整理。'
     },
     {
       key: 'english-7-1-review-01', code: 'Review 1', title: 'Lesson 1–2 複習', page: 37,
@@ -674,7 +680,7 @@
         difficulty: key,
         examType: exam.examType || 'english-school-lesson-practice',
         preserveOptionOrder: exam.preserveOptionOrder === true,
-        backLabel: '返回 Lesson 1 題庫',
+        backLabel: `返回 ${lesson.code} 題庫`,
         onBack: () => showEnglishLessonBanks(lessonKey)
       };
 
