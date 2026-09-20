@@ -202,9 +202,9 @@
     {
       key: 'unit-1', number: '單元 1', title: '生命現象與科學探究',
       sections: [
-        { key: 'science-7-1-1-1', code: '1-1', title: '生命現象和生物圈', enabled: false },
+        { key: 'science-7-1-1-1', code: '1-1', title: '生命現象和生物圈', enabled: true, desc: '生命現象、生物圈、環境限制因子與生物適應' },
         { key: 'science-method', code: '1-2', title: '科學方法', enabled: true, desc: '科學方法步驟、實驗組與對照組、變因與資料判讀' },
-        { key: 'science-7-1-1-3', code: '1-3', title: '認識實驗室', enabled: false },
+        { key: 'science-7-1-1-3', code: '1-3', title: '認識實驗室', enabled: true, desc: '實驗器材、量筒、複式與解剖顯微鏡、倍率、成像與操作' },
         { key: 'science-7-1-core-1', code: '核心素養', title: '生活在沙漠中的生物', enabled: false, type: 'literacy' }
       ]
     },
@@ -959,7 +959,7 @@
       <button class="catalog-back" id="backSemestersBtn">← 返回學期</button>
       <div class="catalog-path">自然　›　七年級上學期（一上）</div>
       <h2 class="catalog-title">請選擇單元</h2>
-      <p class="catalog-sub">目前 1-2「科學方法」已有題庫；其餘單元與小節先完成分類，題目後續加入。</p>
+      <p class="catalog-sub">目前單元 1 的 1-1、1-2、1-3 已有題庫入口；其餘單元與小節先完成分類，題目後續加入。</p>
       <div class="catalog-grid">
         ${SCIENCE_7_1_UNITS.map(u => {
           const ready = u.sections.filter(s => s.enabled).length;
