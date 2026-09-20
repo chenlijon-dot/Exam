@@ -297,11 +297,13 @@
       chapters: [
         {
           key: 'hist-intro', code: '導言', title: '認識歷史', page: 92, type: 'intro',
-          detail: '歷史的基礎概念（p.92）｜歷史熱身操（p.94）'
+          referenceReady: true,
+          detail: '歷史的基礎概念（p.92）｜歷史紀年方式（p.93）｜歷史熱身操（p.94～95）；已併入第1章 canonical 與後續題庫範圍'
         },
         {
           key: 'hist-01', code: '第1章', title: '史前臺灣與原住民文化', page: 96, type: 'chapter',
-          detail: '1-1 考古發掘與史前文化（p.98）｜1-2 臺灣原住民的遷徙與傳說（p.101）'
+          referenceReady: true,
+          detail: '建置範圍含導言 p.92～95；第1章 p.96～105。1-1 考古發掘與史前文化（p.98）｜1-2 臺灣原住民的遷徙與傳說（p.101）；辨識檔與 canonical 教材知識庫已建立'
         },
         {
           key: 'hist-02', code: '第2章', title: '大航海時代各方勢力的競逐', page: 106, type: 'chapter',
