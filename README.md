@@ -1314,6 +1314,7 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 - [x] 英文 Lesson 1、Lesson 2 reference + 簡易／中等／困難題庫
 - [x] 自然 1-2、1-3 題庫工作流
 - [x] 社會地理第1章、第2章三級文字自編題庫
+- [x] 社會地理第3章〈地形〉教材 canonical（p.34～47）
 - [x] 各校段考拆題 SOP
 - [x] 正式歷屆考題 SOP
 
