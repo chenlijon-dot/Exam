@@ -6,7 +6,8 @@
     easy: `${ROOT}/easy.json`,
     medium: `${ROOT}/medium.json`,
     hard: `${ROOT}/hard.json`,
-    school: `${ROOT}/school-exams.json`
+    school: `${ROOT}/school-exams.json`,
+    selfStudy: `${ROOT}/self-study.json`
   };
 
   const LEVELS = {
@@ -114,7 +115,8 @@
   }
 
   function makeContext(data, key, isSchool) {
-    const difficultyLabel = isSchool ? '各校題庫' : LEVELS[key]?.label || key;
+    const isSelfStudy = key === 'selfStudy';
+    const difficultyLabel = isSchool ? '各校題庫' : (isSelfStudy ? '自修題庫' : LEVELS[key]?.label || key);
     return {
       ...(data.exam || {}),
       key: data.exam?.difficulty || `science-7-1-u01-s03-${key}`,
@@ -130,10 +132,10 @@
       unit: '1-3 認識實驗室',
       difficulty: key,
       difficultyLabel,
-      scoreMode: isSchool ? 'percent' : 'fixed',
-      pointsPerQuestion: isSchool ? undefined : 5,
+      scoreMode: (isSchool || isSelfStudy) ? 'percent' : 'fixed',
+      pointsPerQuestion: (isSchool || isSelfStudy) ? undefined : 5,
       analysisEligible: true,
-      preserveOptionOrder: isSchool ? true : false,
+      preserveOptionOrder: (isSchool || isSelfStudy) ? true : false,
       examType: !!isSchool,
       backLabel: '返回 1-3 題庫',
       onBack: renderMenu
@@ -196,6 +198,7 @@
     $('#scienceLabMediumBtn')?.addEventListener('click', e => openBank('medium', e.currentTarget));
     $('#scienceLabHardBtn')?.addEventListener('click', e => openBank('hard', e.currentTarget));
     $('#scienceLabSchoolBtn')?.addEventListener('click', e => openBank('school', e.currentTarget));
+    $('#scienceLabSelfStudyBtn')?.addEventListener('click', e => openBank('selfStudy', e.currentTarget));
   }
 
   function renderMenu() {
@@ -227,6 +230,10 @@
         <button class="catalog-card" id="scienceLabSchoolBtn">
           <span class="top"><span class="icon">🏫</span><strong>各校題庫</strong><span class="catalog-badge school">檢查中</span></span>
           <span class="desc">各校自然科真實段考拆題；保留原始題號、選項順序與來源。</span>
+        </button>
+        <button class="catalog-card" id="scienceLabSelfStudyBtn">
+          <span class="top"><span class="icon">📘</span><strong>自修題庫</strong><span class="catalog-badge school">38 題</span></span>
+          <span class="desc">新無敵自然自修原題；已依正式教材章節重新分流，答案均已核對。</span>
         </button>
       </div>
     `;
