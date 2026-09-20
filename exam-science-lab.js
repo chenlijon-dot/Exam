@@ -42,8 +42,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // exam-catalog.js was created when only 1-2 had a usable bank, so its static
-  // metadata still renders Unit 1 as "1 節可作答" and 1-3 as disabled.  Patch
+  // Keep Unit 1 summary synchronized for older cached catalog markup. Patch
   // only the currently rendered cards, once per catalog navigation.  Do NOT use
   // a MutationObserver here: changing badge text from inside an observer causes
   // another mutation and can create an endless callback loop on mobile browsers.
@@ -51,7 +50,7 @@
     const card = $('[data-science-unit="unit-1"]');
     if (!card) return;
     const badge = card.querySelector('.catalog-badge');
-    if (badge && badge.textContent !== '2 節可作答') badge.textContent = '2 節可作答';
+    if (badge && badge.textContent !== '3 節可作答') badge.textContent = '3 節可作答';
     badge?.classList.remove('soon');
   }
 
