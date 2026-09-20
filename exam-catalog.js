@@ -313,7 +313,8 @@
         { key: 'hist-inquiry-01', code: '歷史探查', title: '外國人眼中的臺灣', page: 116, type: 'inquiry' },
         {
           key: 'hist-03', code: '第3章', title: '大航海時代臺灣原住民與外來者', page: 118, type: 'chapter',
-          detail: '3-1 歐洲人與原住民（p.120）｜3-2 鄭氏政權與原住民（p.123）'
+          referenceReady: true,
+          detail: 'p.118～125 教材已收錄；3-1 歐洲人與原住民（p.120）｜3-2 鄭氏政權與原住民（p.123）｜課後閱讀 臺灣梅花鹿（p.124）｜歷史漫談 第3章回顧（p.125）；辨識檔與 canonical 教材知識庫已建立'
         },
         {
           key: 'hist-04', code: '第4章', title: '清帝國統治政策的變遷', page: 126, type: 'chapter',
