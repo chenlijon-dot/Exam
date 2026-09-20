@@ -338,7 +338,49 @@ word
 
 數學手寫板不是教材來源，而是「作答與評量引擎」。
 
-長期角色：
+### 目前已落地
+
+截至 2026-09-21，數學七上單元 1 的 1-1～1-4 已把 `type: "handwriting"` 納入正式計分題型；每節困難題各有 2 題手寫題，共 8 題。
+
+目前正式流程：
+
+```text
+題目
+↓
+exam-runtime-flex.js
+↓
+exam-handwriting.js
+↓
+完整 Web Canvas 作答工具
+↓
+Firebase App Check
+↓
+Firebase AI Logic / Gemini
+↓
+辨識答案與計算過程
+↓
+correct / incorrect / unclear
+↓
+納入正式測驗成績
+```
+
+正式手寫畫布目前可使用：
+
+```text
+自由手寫
+原子筆
+橡皮擦
+直線／三角形／圓形／矩形
+文字標示
+指標模式
+拖移／縮放
+```
+
+`verdict = correct` 才計分；錯誤時可回傳錯誤位置、原因、修正方向與下一步提示。正式題庫手寫判題已不再依賴 GitHub Token／Exam-Record／GitHub Actions relay。
+
+### 長期角色
+
+下一階段不是只判斷答案對錯，而是把過程診斷進一步結構化：
 
 ```text
 題目
@@ -356,7 +398,7 @@ concept / misconception
 再選補強題
 ```
 
-它未來能把單純的「答案錯」提升成：
+希望逐步區分：
 
 ```text
 計算錯
@@ -366,7 +408,7 @@ concept / misconception
 步驟錯
 ```
 
-因此數學手寫板應直接接入弱點導航與智慧選題。
+因此數學手寫板後續應直接接入 Learner State、弱點導航與智慧選題。
 
 ## 5.6 正式歷屆考題
 
