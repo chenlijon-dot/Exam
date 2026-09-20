@@ -14,7 +14,15 @@
     {
       key: 'unit-1', number: '單元 1', title: '數與數線', page: 4,
       sections: [
-        { code: '1-1', title: '正數與負數', page: 8 },
+        {
+          code: '1-1', title: '正數與負數', page: 8,
+          bankMenuReady: true,
+          banks: {
+            easy: 'chapter-bank/math/7-1/1-1/easy.json',
+            medium: 'chapter-bank/math/7-1/1-1/medium.json',
+            hard: 'chapter-bank/math/7-1/1-1/hard.json'
+          }
+        },
         { code: '1-2', title: '正負數的加減', page: 23 },
         { code: '1-3', title: '正負數的乘除', page: 46 },
         { code: '1-4', title: '指數記法與科學記號', page: 63 }
@@ -1390,15 +1398,101 @@
       <button class="catalog-back" id="backMathUnitsBtn">← 返回單元</button>
       <div class="catalog-path">數學　›　七年級上學期（一上）　›　${unit.number} ${unit.title}</div>
       <h2 class="catalog-title">${unit.number}　${unit.title}</h2>
-      <p class="catalog-sub">課本單元起始頁 p.${unit.page}；小節位置已確認，題庫與教材知識庫後續逐節建立。</p>
+      <p class="catalog-sub">課本單元起始頁 p.${unit.page}；1-1 已建立分級自編題庫，其餘小節依教材知識庫逐步建立。</p>
       <div class="catalog-grid">
-        ${unit.sections.map(section => `
-          <button class="catalog-card chapter-card" disabled>
-            <span class="top"><strong>${section.code}　${section.title}</strong><span class="catalog-badge soon">目錄已確認</span></span>
-            <span class="desc">課本起始頁 p.${section.page}｜題庫待建</span>
-          </button>`).join('')}
+        ${unit.sections.map(section => {
+          const ready = section.bankMenuReady === true;
+          return `
+          <button class="catalog-card chapter-card" data-math-section="${section.code}" ${ready ? '' : 'disabled'}>
+            <span class="top"><strong>${section.code}　${section.title}</strong><span class="catalog-badge ${ready ? 'reference' : 'soon'}">${ready ? '題庫已建立' : '目錄已確認'}</span></span>
+            <span class="desc">課本起始頁 p.${section.page}｜${ready ? '簡易 20 題・中等 10 題・困難 10 題' : '題庫待建'}</span>
+          </button>`;
+        }).join('')}
       </div>`;
     $('#backMathUnitsBtn')?.addEventListener('click', showMath71Units);
+    unit.sections.forEach(section => {
+      if (!section.bankMenuReady) return;
+      $("[data-math-section="" + section.code + ""]")?.addEventListener('click', () => {
+        showMath71SectionBanks(unitKey, section.code);
+      });
+    });
+  }
+
+  function showMath71SectionBanks(unitKey, sectionCode) {
+    const unit = MATH_7_1_UNITS.find(item => item.key === unitKey);
+    const section = unit?.sections?.find(item => item.code === sectionCode);
+    if (!unit || !section?.bankMenuReady) return;
+
+    const levels = [
+      { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'正負數、0、相反數、絕對值與基本數線判讀。' },
+      { key:'medium', icon:'🌿', label:'中等', count:10, desc:'分數刻度、等距點、相反數與絕對值綜合。' },
+      { key:'hard', icon:'🌳', label:'困難', count:10, desc:'等距、中點、內分點與代數條件綜合推理。' }
+    ];
+
+    setHeader(`數學一上｜${section.code}`, section.title);
+    document.title = `${section.code} ${section.title}｜數學一上`;
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backMathSectionBtn">← 返回 ${unit.number}</button>
+      <div class="catalog-path">數學　›　七年級上學期（一上）　›　${unit.number} ${unit.title}　›　${section.code}</div>
+      <h2 class="catalog-title">${section.code}　${section.title}</h2>
+      <p class="catalog-sub">全新自編 40 題；需要數線的題目由 SVG number-line renderer 即時繪製。</p>
+      <div class="catalog-grid">
+        ${levels.map(level => `
+          <button class="catalog-card" data-math-section-bank="${level.key}">
+            <span class="top"><span class="icon">${level.icon}</span><strong>${level.label}</strong><span class="catalog-badge reference">${level.count} 題</span></span>
+            <span class="desc">${level.desc}</span>
+          </button>`).join('')}
+      </div>`;
+
+    $('#backMathSectionBtn')?.addEventListener('click', () => showMath71Unit(unitKey));
+    levels.forEach(level => {
+      $("[data-math-section-bank="" + level.key + ""]")?.addEventListener('click', event => {
+        openMath71SectionBank(unitKey, sectionCode, level.key, event.currentTarget);
+      });
+    });
+  }
+
+  async function openMath71SectionBank(unitKey, sectionCode, difficultyKey, button) {
+    const unit = MATH_7_1_UNITS.find(item => item.key === unitKey);
+    const section = unit?.sections?.find(item => item.code === sectionCode);
+    const path = section?.banks?.[difficultyKey];
+    if (!unit || !section || !path || !button) return;
+
+    const oldHtml = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="top"><span class="icon">⏳</span><strong>準備題目…</strong></span><span class="desc">正在載入題目與詳解</span>';
+
+    try {
+      const response = await fetch(path, { cache:'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      const questions = Array.isArray(data.questions) ? data.questions : [];
+      const expected = difficultyKey === 'easy' ? 20 : 10;
+      if (questions.length !== expected) throw new Error(`題數異常：${questions.length}/${expected}`);
+      if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
+
+      const exam = data.exam || {};
+      const key = exam.key || exam.difficulty || `math-7-1-${sectionCode}-${difficultyKey}`;
+
+      banks[key] = questions;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        ...exam,
+        key,
+        difficulty:key,
+        examType:exam.examType || 'math-school-section-practice',
+        preserveOptionOrder:exam.preserveOptionOrder === true,
+        backLabel:`返回 ${section.code} 題庫`,
+        onBack:() => showMath71SectionBanks(unitKey, sectionCode)
+      };
+
+      window.startExam(key);
+    } catch (error) {
+      console.error('[math-section-bank] load failed', error);
+      alert(`題庫載入失敗：${error.message}`);
+      button.disabled = false;
+      button.innerHTML = oldHtml;
+    }
   }
 
   function showMath71Extras() {
