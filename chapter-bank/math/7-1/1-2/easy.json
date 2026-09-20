@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-easy",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-2 正負數的加減",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "title": "1-2 正負數的加減｜簡易",
+    "subtitle": "20 題｜同號異號加法、減法、絕對值與基本數線",
+    "unit": "數學七上｜單元 1 數與數線｜1-2 正負數的加減",
+    "difficulty": "math-7-1-1-2-easy",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」的題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。需要數線者使用 Exam number-line SVG renderer 即時繪製。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "計算 (-7)+(-5) 的值。",
+      "o": [
+        "-12",
+        "-2",
+        "2",
+        "12"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-same-sign-add"
+      ],
+      "e": "兩數同為負數，絕對值相加 7+5=12，保留負號，所以答案是 -12。"
+    },
+    {
+      "number": 2,
+      "q": "計算 8+(-3) 的值。",
+      "o": [
+        "-11",
+        "-5",
+        "5",
+        "11"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-different-sign-add"
+      ],
+      "e": "異號相加，用較大絕對值減較小絕對值：8-3=5，且 8 的絕對值較大，所以結果為正 5。"
+    },
+    {
+      "number": 3,
+      "q": "計算 (-9)+14 的值。",
+      "o": [
+        "-23",
+        "-5",
+        "5",
+        "23"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-different-sign-add"
+      ],
+      "e": "14-9=5，且 14 的絕對值較大，所以結果為 5。"
+    },
+    {
+      "number": 4,
+      "q": "計算 6-10 的值。",
+      "o": [
+        "-16",
+        "-4",
+        "4",
+        "16"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction"
+      ],
+      "e": "6-10=6+(-10)=-4。"
+    },
+    {
+      "number": 5,
+      "q": "計算 (-4)-(-7) 的值。",
+      "o": [
+        "-11",
+        "-3",
+        "3",
+        "11"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "e": "減去負數等於加上它的相反數：(-4)-(-7)=(-4)+7=3。"
+    },
+    {
+      "number": 6,
+      "q": "計算 (-12)-5 的值。",
+      "o": [
+        "-17",
+        "-7",
+        "7",
+        "17"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction"
+      ],
+      "e": "(-12)-5=(-12)+(-5)=-17。"
+    },
+    {
+      "number": 7,
+      "q": "計算 0+(-8) 的值。",
+      "o": [
+        "-8",
+        "0",
+        "8",
+        "16"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-add-zero"
+      ],
+      "e": "任何數加 0 都不改變原數，所以 0+(-8)=-8。"
+    },
+    {
+      "number": 8,
+      "q": "計算 (-3)+3 的值。",
+      "o": [
+        "-6",
+        "0",
+        "3",
+        "6"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-opposite-cancel"
+      ],
+      "e": "-3 與 3 互為相反數，相加為 0。"
+    },
+    {
+      "number": 9,
+      "q": "計算 4-(-6) 的值。",
+      "o": [
+        "-10",
+        "-2",
+        "2",
+        "10"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "e": "4-(-6)=4+6=10。"
+    },
+    {
+      "number": 10,
+      "q": "計算 (-7)-(-2) 的值。",
+      "o": [
+        "-9",
+        "-5",
+        "5",
+        "9"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "e": "(-7)-(-2)=(-7)+2=-5。"
+    },
+    {
+      "number": 11,
+      "q": "計算 |(-5)+2| 的值。",
+      "o": [
+        "-7",
+        "-3",
+        "3",
+        "7"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-absolute-value"
+      ],
+      "e": "先算絕對值內部：(-5)+2=-3，再取絕對值，|-3|=3。"
+    },
+    {
+      "number": 12,
+      "q": "計算 |3-8| 的值。",
+      "o": [
+        "-5",
+        "5",
+        "11",
+        "24"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-absolute-value"
+      ],
+      "e": "3-8=-5，|-5|=5。"
+    },
+    {
+      "number": 13,
+      "q": "某地清晨氣溫為 -2°C，中午上升 6°C，則中午氣溫為多少？",
+      "o": [
+        "-8°C",
+        "-4°C",
+        "4°C",
+        "8°C"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-temperature"
+      ],
+      "e": "-2+6=4，所以中午氣溫為 4°C。"
+    },
+    {
+      "number": 14,
+      "q": "小明帳戶原本記為 -50 元，後來存入 80 元，新的帳戶餘額為多少？",
+      "o": [
+        "-130 元",
+        "-30 元",
+        "30 元",
+        "130 元"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-balance"
+      ],
+      "e": "以存入為正，新的餘額為 -50+80=30 元。"
+    },
+    {
+      "number": 15,
+      "q": "如圖，數線上 A 點表示 -3，B 點表示 4。A、B 兩點距離是多少？",
+      "o": [
+        "1",
+        "7",
+        "-7",
+        "12"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-distance"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 6,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -3,
+            "label": "A",
+            "style": "solid"
+          },
+          {
+            "x": 4,
+            "label": "B",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "距離為 |(-3)-4|=|-7|=7。"
+    },
+    {
+      "number": 16,
+      "q": "如圖，A 點表示 -4，B 點表示 2。A、B 的中點 M 表示哪一個數？",
+      "o": [
+        "-3",
+        "-1",
+        "1",
+        "3"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-midpoint"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 3,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -4,
+            "label": "A",
+            "style": "solid"
+          },
+          {
+            "x": 2,
+            "label": "B",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "中點坐標為 [(-4)+2]/2=-1。"
+    },
+    {
+      "number": 17,
+      "q": "如圖，P 點表示 -2。若 Q 在 P 的右方 5 個單位，則 Q 表示哪一個數？",
+      "o": [
+        "-7",
+        "-3",
+        "3",
+        "7"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-number-line-shift"
+      ],
+      "diagram": {
+        "type": "number-line",
+        "min": -4,
+        "max": 5,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -2,
+            "label": "P",
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "往右 5 個單位表示加 5，所以 Q=-2+5=3。"
+    },
+    {
+      "number": 18,
+      "q": "下列哪一個式子與 a-b 相等？",
+      "o": [
+        "a+b",
+        "a+(-b)",
+        "(-a)+b",
+        "(-a)+(-b)"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction-to-addition"
+      ],
+      "e": "減去一個數等於加上它的相反數，因此 a-b=a+(-b)。"
+    },
+    {
+      "number": 19,
+      "q": "計算 (-2)+5+(-3) 的值。",
+      "o": [
+        "-10",
+        "-4",
+        "0",
+        "4"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-mixed-add-sub"
+      ],
+      "e": "可先把 -2 與 -3 合併成 -5，再算 -5+5=0。"
+    },
+    {
+      "number": 20,
+      "q": "計算 7+(-7)+4 的值。",
+      "o": [
+        "-4",
+        "0",
+        "4",
+        "18"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-2-opposite-cancel"
+      ],
+      "e": "7 與 -7 互為相反數，先相加得 0，再加 4，結果為 4。"
+    }
+  ]
+}
