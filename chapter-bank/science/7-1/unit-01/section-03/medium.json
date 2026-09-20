@@ -9,144 +9,315 @@
   },
   "questions": [
     {
-      "q": "小琳用量筒量水，眼睛位置比液面高。若其他操作都正確，她讀到的數值最可能如何？",
-      "o": ["偏高", "偏低", "完全不受影響", "一定是零"],
+      "q": "搭配下圖量筒判斷：小琳量水時眼睛位置比液面高。若其他操作都正確，她讀到的數值最可能如何？",
+      "o": [
+        "偏高",
+        "偏低",
+        "完全不受影響",
+        "一定是零"
+      ],
       "a": 0,
       "e": "由液面上方斜看刻度會產生視差，本教材規則為眼睛位置過高時讀值偏高。",
-      "conceptIds": ["science-7-1-u01-s03-cylinder-parallax"]
+      "conceptIds": [
+        "science-7-1-u01-s03-cylinder-parallax"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lab-graduated-cylinder.png",
+      "imageAlt": "量筒與液面"
     },
     {
       "q": "小傑用量筒量水時，視線低於液面。若其他操作都正確，他讀到的數值最可能如何？",
-      "o": ["偏高", "偏低", "一定正確", "一定比量筒容量大"],
+      "o": [
+        "偏高",
+        "偏低",
+        "一定正確",
+        "一定比量筒容量大"
+      ],
       "a": 1,
       "e": "本教材規則為眼睛位置過低時，讀值偏低。",
-      "conceptIds": ["science-7-1-u01-s03-cylinder-parallax"]
+      "conceptIds": [
+        "science-7-1-u01-s03-cylinder-parallax"
+      ]
     },
     {
-      "q": "某學生將 50 mL 水倒入有刻度燒杯後讀值，再宣稱測得 50.0 mL。最大的問題是什麼？",
-      "o": ["燒杯刻度不適合做精確量測", "燒杯不能裝水", "燒杯一定會漏水", "水不能量體積"],
+      "q": "參考下圖的燒杯與量筒。某學生將 50 mL 水倒入有刻度燒杯後讀值，再宣稱測得 50.0 mL。最大的問題是什麼？",
+      "o": [
+        "燒杯刻度不適合做精確量測",
+        "燒杯不能裝水",
+        "燒杯一定會漏水",
+        "水不能量體積"
+      ],
       "a": 0,
       "e": "燒杯刻度僅供概略估計；要較精確量取體積應使用量筒。",
-      "conceptIds": ["science-7-1-u01-s03-beaker-vs-cylinder-precision"]
+      "conceptIds": [
+        "science-7-1-u01-s03-beaker-vs-cylinder-precision"
+      ],
+      "images": [
+        "chapter-bank/science/7-1/unit-01/section-03/assets/lab-beaker.png",
+        "chapter-bank/science/7-1/unit-01/section-03/assets/lab-graduated-cylinder.png"
+      ],
+      "imageAlt": "燒杯與量筒"
     },
     {
       "q": "加熱燒杯中的水時，溫度計應如何放置較恰當？",
-      "o": ["球部懸在水中且不接觸杯底", "球部緊貼杯底", "直接放在火焰旁", "整支溫度計沉到杯底"],
+      "o": [
+        "球部懸在水中且不接觸杯底",
+        "球部緊貼杯底",
+        "直接放在火焰旁",
+        "整支溫度計沉到杯底"
+      ],
       "a": 0,
       "e": "溫度計球部若接觸杯底，可能量到受熱容器的溫度而非水溫；應懸在液體中。",
-      "conceptIds": ["science-7-1-u01-s03-lab-safety"]
+      "conceptIds": [
+        "science-7-1-u01-s03-lab-safety"
+      ]
     },
     {
       "q": "某複式顯微鏡目鏡為 15X，物鏡有 4X、10X、40X。使用 10X 物鏡時總倍率為多少？",
-      "o": ["25X", "150X", "400X", "600X"],
+      "o": [
+        "25X",
+        "150X",
+        "400X",
+        "600X"
+      ],
       "a": 1,
       "e": "總倍率＝15×10＝150 倍。",
-      "conceptIds": ["science-7-1-u01-s03-total-magnification"]
+      "conceptIds": [
+        "science-7-1-u01-s03-total-magnification"
+      ]
     },
     {
       "q": "固定同一目鏡，以低倍物鏡觀察時看到 24 個細胞；換成高倍物鏡後，最可能看到下列哪一種情形？",
-      "o": ["細胞變大、可見數目變少", "細胞變小、可見數目變多", "細胞大小和數目都不變", "細胞變大、可見數目一定更多"],
+      "o": [
+        "細胞變大、可見數目變少",
+        "細胞變小、可見數目變多",
+        "細胞大小和數目都不變",
+        "細胞變大、可見數目一定更多"
+      ],
       "a": 0,
       "e": "倍率提高時單一影像變大，但視野範圍縮小，所以可見細胞數通常減少。",
-      "conceptIds": ["science-7-1-u01-s03-low-high-power", "science-7-1-u01-s03-field-of-view"]
+      "conceptIds": [
+        "science-7-1-u01-s03-low-high-power",
+        "science-7-1-u01-s03-field-of-view"
+      ]
     },
     {
-      "q": "使用低倍物鏡已找到目標，準備換高倍物鏡。第一個最重要的動作是？",
-      "o": ["先把欲觀察部位移到視野中央", "立刻轉粗調節輪到底", "先把標本拿走", "先關閉光源"],
+      "q": "參考下圖低倍與高倍物鏡。使用低倍物鏡已找到目標，準備換高倍物鏡時，第一個最重要的動作是？",
+      "o": [
+        "先把欲觀察部位移到視野中央",
+        "立刻轉粗調節輪到底",
+        "先把標本拿走",
+        "先關閉光源"
+      ],
       "a": 0,
       "e": "高倍視野較小，換高倍前先將目標置中，較不容易找不到目標。",
-      "conceptIds": ["science-7-1-u01-s03-low-to-high-sequence"]
+      "conceptIds": [
+        "science-7-1-u01-s03-low-to-high-sequence"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/objective-low-high.png",
+      "imageAlt": "低倍與高倍物鏡"
     },
     {
-      "q": "低倍換成高倍後，影像仍在視野但有些模糊。最適合下一步使用哪一構造？",
-      "o": ["細調節輪", "大幅轉動粗調節輪", "載物臺夾", "目鏡直接拔下"],
+      "q": "參考下圖低倍與高倍物鏡。換成高倍後影像仍在視野但有些模糊，最適合下一步使用哪一構造？",
+      "o": [
+        "細調節輪",
+        "大幅轉動粗調節輪",
+        "載物臺夾",
+        "目鏡直接拔下"
+      ],
       "a": 0,
       "e": "高倍時以細調節輪微調焦距，避免大幅使用粗調節輪。",
-      "conceptIds": ["science-7-1-u01-s03-focus-adjustment", "science-7-1-u01-s03-low-to-high-sequence"]
+      "conceptIds": [
+        "science-7-1-u01-s03-focus-adjustment",
+        "science-7-1-u01-s03-low-to-high-sequence"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/objective-low-high.png",
+      "imageAlt": "低倍與高倍物鏡"
     },
     {
       "q": "複式顯微鏡下看到某標本影像位於視野右上方。若要把影像移到視野中央，玻片應往哪個方向移？",
-      "o": ["右上", "右下", "左上", "左下"],
+      "o": [
+        "右上",
+        "右下",
+        "左上",
+        "左下"
+      ],
       "a": 0,
       "e": "視野右上方的影像代表實物在玻片左下；要把實物移到中央，玻片應往右上移。",
-      "conceptIds": ["science-7-1-u01-s03-slide-movement", "science-7-1-u01-s03-image-orientation"]
+      "conceptIds": [
+        "science-7-1-u01-s03-slide-movement",
+        "science-7-1-u01-s03-image-orientation"
+      ]
     },
     {
-      "q": "複式顯微鏡視野中的草履蟲正在往左下方游出視野。若要持續追蹤，玻片應往哪裡移？",
-      "o": ["左下", "右上", "左上", "右下"],
+      "q": "依下圖判斷：複式顯微鏡視野中的草履蟲正在往左下方游出視野。若要持續追蹤，玻片應往哪裡移？",
+      "o": [
+        "左下",
+        "右上",
+        "左上",
+        "右下"
+      ],
       "a": 0,
       "e": "追蹤活體時，玻片往影像游出的同一方向移，可讓玻片造成的反向影像位移把生物拉回視野。",
-      "conceptIds": ["science-7-1-u01-s03-live-specimen-tracking"]
+      "conceptIds": [
+        "science-7-1-u01-s03-live-specimen-tracking"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/live-specimen-tracking.png",
+      "imageAlt": "複式顯微鏡下微生物移動與方向示意"
     },
     {
       "q": "用解剖顯微鏡看到昆蟲位在視野右上方，要把它移到中央，載物板上的昆蟲應往哪裡移？",
-      "o": ["左下", "右上", "左上", "右下"],
+      "o": [
+        "左下",
+        "右上",
+        "左上",
+        "右下"
+      ],
       "a": 0,
       "e": "解剖顯微鏡影像方向與實物相同，因此要把右上方實物移到中央，直接往左下移。",
-      "conceptIds": ["science-7-1-u01-s03-stereo-microscope", "science-7-1-u01-s03-specimen-image-movement"]
+      "conceptIds": [
+        "science-7-1-u01-s03-stereo-microscope",
+        "science-7-1-u01-s03-specimen-image-movement"
+      ]
     },
     {
       "q": "一隻小蟲在解剖顯微鏡載物板上向左上移動，視野中會看到它往哪裡移？",
-      "o": ["左上", "右下", "右上", "方向完全不固定"],
+      "o": [
+        "左上",
+        "右下",
+        "右上",
+        "方向完全不固定"
+      ],
       "a": 0,
       "e": "解剖顯微鏡影像方向與實物相同，因此移動方向也相同。",
-      "conceptIds": ["science-7-1-u01-s03-stereo-microscope"]
+      "conceptIds": [
+        "science-7-1-u01-s03-stereo-microscope"
+      ]
     },
     {
       "q": "玻片上寫小寫字母 e，使用複式顯微鏡觀察。判讀影像時最正確的做法是？",
-      "o": ["把原圖整體旋轉 180°", "只做左右鏡射", "只做上下翻轉", "完全不改方向"],
+      "o": [
+        "把原圖整體旋轉 180°",
+        "只做左右鏡射",
+        "只做上下翻轉",
+        "完全不改方向"
+      ],
       "a": 0,
       "e": "複式顯微鏡成像上下顛倒且左右相反，等效於整體旋轉 180°。",
-      "conceptIds": ["science-7-1-u01-s03-symbol-rotation", "science-7-1-u01-s03-image-orientation"]
+      "conceptIds": [
+        "science-7-1-u01-s03-symbol-rotation",
+        "science-7-1-u01-s03-image-orientation"
+      ]
     },
     {
-      "q": "甲、乙兩個物鏡中，甲鏡筒明顯比乙長。固定同一目鏡時，下列何者較合理？",
-      "o": ["甲倍率較高、視野較小", "甲倍率較低、視野較小", "甲倍率較高、視野較大", "兩者倍率一定相同"],
+      "q": "依下圖物鏡長短判斷：甲鏡筒明顯比乙長。固定同一目鏡時，下列何者較合理？",
+      "o": [
+        "甲倍率較高、視野較小",
+        "甲倍率較低、視野較小",
+        "甲倍率較高、視野較大",
+        "兩者倍率一定相同"
+      ],
       "a": 0,
       "e": "物鏡越長倍率越大；倍率越大，視野範圍越小。",
-      "conceptIds": ["science-7-1-u01-s03-objective-length-magnification", "science-7-1-u01-s03-field-of-view"]
+      "conceptIds": [
+        "science-7-1-u01-s03-objective-length-magnification",
+        "science-7-1-u01-s03-field-of-view"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/objective-lengths-4.png",
+      "imageAlt": "四個不同長度物鏡"
     },
     {
-      "q": "P、Q 兩個目鏡中，P 鏡筒比 Q 短。固定同一物鏡時，哪個組合的總倍率較高？",
-      "o": ["使用 P", "使用 Q", "一定相同", "只看目鏡長短無法判斷"],
+      "q": "依下圖鏡頭組合判斷：P、Q 兩個目鏡中，P 鏡筒比 Q 短。固定同一物鏡時，哪個組合的總倍率較高？",
+      "o": [
+        "使用 P",
+        "使用 Q",
+        "一定相同",
+        "只看目鏡長短無法判斷"
+      ],
       "a": 0,
       "e": "本教材題型規則為目鏡越短倍率越大，因此使用 P 的總倍率較高。",
-      "conceptIds": ["science-7-1-u01-s03-eyepiece-length-magnification"]
+      "conceptIds": [
+        "science-7-1-u01-s03-eyepiece-length-magnification"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/lens-combinations.png",
+      "imageAlt": "不同長度的物鏡與目鏡組合"
     },
     {
-      "q": "下列哪個觀察任務最適合使用複式顯微鏡？",
-      "o": ["觀察葉片細胞內的葉綠體", "計算整朵花的雄蕊數", "觀察整隻甲蟲背部外形", "觀察石頭表面凹凸"],
+      "q": "參考下圖兩類顯微鏡，下列哪個觀察任務最適合使用複式顯微鏡？",
+      "o": [
+        "觀察葉片細胞內的葉綠體",
+        "計算整朵花的雄蕊數",
+        "觀察整隻甲蟲背部外形",
+        "觀察石頭表面凹凸"
+      ],
       "a": 0,
       "e": "細胞內較小構造通常需較高倍率且使用薄透光標本，適合複式顯微鏡。",
-      "conceptIds": ["science-7-1-u01-s03-microscope-selection"]
+      "conceptIds": [
+        "science-7-1-u01-s03-microscope-selection"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/microscope-types.png",
+      "imageAlt": "複式顯微鏡與解剖顯微鏡"
     },
     {
       "q": "下列哪個觀察任務最適合使用解剖顯微鏡？",
-      "o": ["觀察完整昆蟲的外部構造", "觀察口腔皮膜單一細胞核", "觀察葉片薄片細胞內部", "觀察染色後細胞質"],
+      "o": [
+        "觀察完整昆蟲的外部構造",
+        "觀察口腔皮膜單一細胞核",
+        "觀察葉片薄片細胞內部",
+        "觀察染色後細胞質"
+      ],
       "a": 0,
       "e": "較大、完整、具立體外形的實物適合使用解剖顯微鏡。",
-      "conceptIds": ["science-7-1-u01-s03-microscope-selection"]
+      "conceptIds": [
+        "science-7-1-u01-s03-microscope-selection"
+      ]
     },
     {
-      "q": "右手寫觀察紀錄時，使用複式顯微鏡較常見的正確姿勢是？",
-      "o": ["左眼看目鏡，右眼張開", "右眼看目鏡，左眼緊閉且右手停筆", "雙眼都緊閉", "把目鏡拿到手上看"],
+      "q": "依下圖觀察姿勢判斷：右手寫觀察紀錄時，使用複式顯微鏡較常見的正確姿勢是？",
+      "o": [
+        "左眼看目鏡，右眼張開",
+        "右眼看目鏡，左眼緊閉且右手停筆",
+        "雙眼都緊閉",
+        "把目鏡拿到手上看"
+      ],
       "a": 0,
       "e": "右手記錄時可用左眼觀察目鏡、右眼保持張開，以便同步記錄。",
-      "conceptIds": ["science-7-1-u01-s03-microscope-observation-posture"]
+      "conceptIds": [
+        "science-7-1-u01-s03-microscope-observation-posture"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/microscope-observation-posture.png",
+      "imageAlt": "複式顯微鏡觀察姿勢選項圖"
     },
     {
       "q": "換成高倍物鏡後視野明顯變暗。下列哪一組處理較合理？",
-      "o": ["增加入光，再用細調節輪微調", "關小光圈並大轉粗調節輪", "把標本換成完全不透光", "拔掉目鏡"],
+      "o": [
+        "增加入光，再用細調節輪微調",
+        "關小光圈並大轉粗調節輪",
+        "把標本換成完全不透光",
+        "拔掉目鏡"
+      ],
       "a": 0,
       "e": "高倍視野較暗，可增加入光；若影像模糊則用細調節輪微調。",
-      "conceptIds": ["science-7-1-u01-s03-light-adjustment", "science-7-1-u01-s03-focus-adjustment"]
+      "conceptIds": [
+        "science-7-1-u01-s03-light-adjustment",
+        "science-7-1-u01-s03-focus-adjustment"
+      ]
     },
     {
-      "q": "小惠把同一細胞由低倍換高倍觀察，發現影像變大、視野變暗。下列哪個敘述最能同時解釋這兩個現象？",
-      "o": ["倍率提高且視野範圍、入光條件改變", "細胞真的突然變大", "玻片中的水全部蒸發", "解剖顯微鏡自動啟動"],
+      "q": "參考下圖不同倍率的視野。小惠把同一細胞由低倍換高倍觀察，發現影像變大、視野變暗。下列哪個敘述最能同時解釋這兩個現象？",
+      "o": [
+        "倍率提高且視野範圍、入光條件改變",
+        "細胞真的突然變大",
+        "玻片中的水全部蒸發",
+        "解剖顯微鏡自動啟動"
+      ],
       "a": 0,
       "e": "高倍使影像放大，同時視野範圍縮小且通常較暗，並不是細胞本身突然變大。",
-      "conceptIds": ["science-7-1-u01-s03-low-high-power", "science-7-1-u01-s03-field-of-view"]
+      "conceptIds": [
+        "science-7-1-u01-s03-low-high-power",
+        "science-7-1-u01-s03-field-of-view"
+      ],
+      "image": "chapter-bank/science/7-1/unit-01/section-03/assets/field-of-view-series.png",
+      "imageAlt": "不同倍率下的顯微鏡視野"
     }
   ]
 }
