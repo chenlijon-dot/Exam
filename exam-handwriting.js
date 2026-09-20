@@ -322,7 +322,7 @@
     });
 
     const request = {
-      schemaVersion:2,
+      schemaVersion:1,
       id,
       requestedAt:new Date().toISOString(),
       subject:context.subjectLabel || context.subject || '數學',
