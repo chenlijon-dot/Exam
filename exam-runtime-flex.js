@@ -100,6 +100,19 @@
       .manual-study-box{margin:12px 0 4px;border:1px dashed #94a3b8;background:#f8fafc;border-radius:12px;padding:12px 14px}
       .manual-study-badge{display:inline-block;font-size:.78rem;font-weight:800;color:#7c3aed;background:#f5f3ff;border-radius:999px;padding:3px 8px;margin-bottom:7px}
       .manual-study-note{font-size:.9rem;color:#64748b;line-height:1.6}
+      .handwriting-box{margin:12px 0 4px;border:1px solid #bfdbfe;background:#eff6ff;border-radius:12px;padding:12px 14px}
+      .handwriting-badge{display:inline-block;font-size:.78rem;font-weight:800;color:#1d4ed8;background:#dbeafe;border-radius:999px;padding:3px 8px;margin-bottom:7px}
+      .handwriting-note{font-size:.9rem;color:#475569;line-height:1.6;margin-bottom:10px}
+      .handwriting-open{border:0;border-radius:10px;padding:9px 14px;font-weight:800;background:#2563eb;color:#fff;cursor:pointer}
+      .handwriting-preview{display:none;margin-top:10px}
+      .handwriting-preview.show{display:block}
+      .handwriting-preview img{display:block;max-width:240px;width:100%;height:auto;border:1px solid #cbd5e1;border-radius:10px;background:#fff;padding:5px}
+      .handwriting-status{margin-top:8px;font-size:.86rem;color:#64748b}
+      .handwriting-grade{display:none;margin-top:12px;border-radius:12px;padding:11px 12px;line-height:1.65}
+      .handwriting-grade.show{display:block}
+      .handwriting-grade.correct{border:1px solid #86efac;background:#f0fdf4;color:#166534}
+      .handwriting-grade.incorrect{border:1px solid #fca5a5;background:#fef2f2;color:#991b1b}
+      .handwriting-grade.unclear{border:1px solid #fde68a;background:#fffbeb;color:#92400e}
       @media(max-width:620px){.question-media{padding:7px}.passage-box{padding:12px}.katex{font-size:1.02em}.option-list.option-layout-grid-2x2{grid-template-columns:1fr}.option-choice-media img{max-height:240px}}
     `;
     document.head.appendChild(style);
@@ -145,6 +158,18 @@
 
   function isManualStudy(question) {
     return questionType(question) === 'manual-study';
+  }
+
+  function isHandwriting(question) {
+    return questionType(question) === 'handwriting';
+  }
+
+  function handwritingKey(question, questionIndex, ctx = window.examContextCurrent || getContext(level)) {
+    const number = question?.number || questionIndex + 1;
+    if (window.ExamHandwriting?.answerKey) {
+      return window.ExamHandwriting.answerKey(ctx?.key || level || 'exam', number);
+    }
+    return `${ctx?.key || level || 'exam'}::${number}`;
   }
 
   function renderOptionList(question, questionIndex) {
@@ -209,11 +234,94 @@
     });
   }
 
+  function refreshHandwritingCard(questionIndex) {
+    const question = questions[questionIndex];
+    if (!isHandwriting(question)) return;
+    const card = quiz?.querySelector(`[data-q="${questionIndex}"]`);
+    if (!card) return;
+
+    const key = handwritingKey(question, questionIndex);
+    const answer = window.ExamHandwriting?.getAnswer?.(key);
+    const button = card.querySelector('.handwriting-open');
+    const preview = card.querySelector('.handwriting-preview');
+    const image = card.querySelector('.handwriting-preview img');
+    const status = card.querySelector('.handwriting-status');
+
+    if (answer?.dataUrl) {
+      if (button) button.textContent = '✍️ 修改手寫作答';
+      if (image) image.src = answer.dataUrl;
+      preview?.classList.add('show');
+      if (status) status.textContent = '已完成手寫作答；交卷時會送交 Gemini 判題。';
+    } else {
+      if (button) button.textContent = '✍️ 開始手寫作答';
+      if (image) image.removeAttribute('src');
+      preview?.classList.remove('show');
+      if (status) status.textContent = '尚未作答。';
+    }
+  }
+
+  function bindHandwritingButtons(root = quiz) {
+    if (!root) return;
+    root.querySelectorAll('[data-handwriting-open]').forEach(button => {
+      if (button.dataset.bound === '1') return;
+      button.dataset.bound = '1';
+      button.addEventListener('click', async () => {
+        const questionIndex = Number(button.dataset.handwritingOpen);
+        const question = questions[questionIndex];
+        if (!isHandwriting(question)) return;
+        if (!window.ExamHandwriting?.openCanvas) {
+          alert('手寫模組尚未載入，請重新整理頁面後再試。');
+          return;
+        }
+
+        const ctx = window.examContextCurrent || getContext(level);
+        const key = handwritingKey(question, questionIndex, ctx);
+        await window.ExamHandwriting.openCanvas({
+          key,
+          title:`第 ${question.number || questionIndex + 1} 題｜${question.q}`,
+          subtitle:question.handwritingInstruction || '請寫出完整計算過程與答案'
+        });
+        refreshHandwritingCard(questionIndex);
+        updateProgress();
+      });
+    });
+    questions.forEach((q,i) => {
+      if (isHandwriting(q)) refreshHandwritingCard(i);
+    });
+  }
+
+  function renderHandwritingGrade(questionIndex, gradingResult) {
+    const card = quiz?.querySelector(`[data-q="${questionIndex}"]`);
+    const box = card?.querySelector('.handwriting-grade');
+    if (!box) return;
+
+    const verdict = gradingResult?.verdict || 'unclear';
+    const css = verdict === 'correct' ? 'correct' : verdict === 'incorrect' ? 'incorrect' : 'unclear';
+    const title = verdict === 'correct'
+      ? '✓ Gemini 判定正確'
+      : verdict === 'incorrect'
+        ? '✗ 作答需要修正'
+        : '？Gemini 無法可靠判定';
+
+    const feedback = gradingResult?.feedback || (
+      verdict === 'incorrect' ? '答案或計算過程有誤。' : '無法可靠判讀這份手寫作答。'
+    );
+    const recognizedAnswer = gradingResult?.recognizedAnswer || '';
+    const recognizedWork = gradingResult?.recognizedWork || '';
+
+    box.className = `handwriting-grade show ${css}`;
+    box.innerHTML = `<strong>${title}</strong>` +
+      (recognizedAnswer ? `<div>辨識答案：${escapeHtml(recognizedAnswer)}</div>` : '') +
+      (recognizedWork ? `<div>辨識過程：${escapeHtml(recognizedWork)}</div>` : '') +
+      `<div>${escapeHtml(feedback)}</div>`;
+  }
+
   window.startExam = function(selected) {
     if (!banks[selected]) return;
     level = selected;
     questions = banks[level];
     graded = false;
+    window.ExamHandwriting?.reset?.();
     const ctx = getContext(selected);
     window.examContextCurrent = ctx;
 
@@ -222,16 +330,18 @@
     $('#catalogShell')?.classList.add('hidden');
 
     $('#examTitle').textContent = ctx.title || names[level] || '線上測驗';
-    $('#examSub').textContent = ctx.subtitle || `${questions.length} 題選擇題`;
+    $('#examSub').textContent = ctx.subtitle || `${questions.length} 題`;
     const status = $('#examScreen .status');
     if (status) {
-      const autoTotal = questions.filter(q => !isManualStudy(q)).length;
-      const manualTotal = questions.length - autoTotal;
-      status.innerHTML = `<span class="pill" id="progress">已作答 0 / ${autoTotal}</span>` +
+      const handwritingTotal = questions.filter(isHandwriting).length;
+      const manualTotal = questions.filter(isManualStudy).length;
+      const mcqTotal = questions.length - handwritingTotal - manualTotal;
+      const scoredTotal = mcqTotal + handwritingTotal;
+      status.innerHTML = `<span class="pill" id="progress">已作答 0 / ${scoredTotal}</span>` +
         (ctx.scoreMode === 'percent'
-          ? `<span class="pill">自動評量 ${autoTotal} 題</span><span class="pill">以正答率顯示</span>`
-          : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * autoTotal} 分</span>`) +
-        (manualTotal ? `<span class="pill">紙筆 ${manualTotal} 題｜不計分</span>` : '');
+          ? `<span class="pill">選擇題 ${mcqTotal} 題</span>${handwritingTotal ? `<span class="pill">手寫 ${handwritingTotal} 題｜Gemini 判題</span>` : ''}<span class="pill">以正答率顯示</span>`
+          : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * scoredTotal} 分</span>`) +
+        (manualTotal ? `<span class="pill">紙筆練習 ${manualTotal} 題｜不計分</span>` : '');
     }
     $('#backBtn').textContent = ctx.backLabel || (ctx.examType ? '返回歷屆考題' : '選擇其他難度');
     render();
@@ -265,11 +375,18 @@
         return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="manual-study">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="manual-study-box"><span class="manual-study-badge">紙筆練習｜不計分</span><div class="manual-study-note">${escapeHtml(instruction)}</div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
       }
 
+      if (type === 'handwriting') {
+        const instruction = x.handwritingInstruction || '請寫出完整計算過程與答案；本題會在交卷時由 Gemini 判題並計分。';
+        const answer = x.expectedAnswer || x.manualAnswer || '';
+        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="handwriting">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="handwriting-box"><span class="handwriting-badge">✍️ 手寫計分題｜Gemini 判題</span><div class="handwriting-note">${escapeHtml(instruction)}</div><button type="button" class="handwriting-open" data-handwriting-open="${i}">✍️ 開始手寫作答</button><div class="handwriting-preview"><img alt="第${x.number || i+1}題手寫作答預覽"></div><div class="handwriting-status">尚未作答。</div><div class="handwriting-grade"></div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
+      }
+
       const opts = renderOptionList(x, i);
       return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}">${intro}${qtitle}${media}${diagramMedia}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
     }).join('');
     bindOptionImageFallbacks(quiz);
     renderQuestionDiagrams(quiz);
+    bindHandwritingButtons(quiz);
     renderMath(quiz);
     document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',updateProgress));
     updateProgress();
@@ -286,38 +403,146 @@
 
   window.updateProgress = function() {
     let answered = 0;
-    let autoTotal = 0;
+    let scoredTotal = 0;
+    const ctx = window.examContextCurrent || getContext(level);
+
     questions.forEach((q,i) => {
       if (isManualStudy(q)) return;
-      autoTotal++;
-      if (document.querySelector(`input[name=q${i}]:checked`)) answered++;
+      scoredTotal++;
+      if (isHandwriting(q)) {
+        const key = handwritingKey(q, i, ctx);
+        if (window.ExamHandwriting?.getAnswer?.(key)?.dataUrl) answered++;
+      } else if (document.querySelector(`input[name=q${i}]:checked`)) {
+        answered++;
+      }
     });
+
     const el = $('#progress');
-    if (el) el.textContent=`已作答 ${answered} / ${autoTotal}`;
+    if (el) el.textContent=`已作答 ${answered} / ${scoredTotal}`;
   };
 
-  const originalSubmit = $('#submitBtn')?.onclick;
   if ($('#submitBtn')) {
-    $('#submitBtn').onclick = function() {
-      let correct=0;
-      let autoTotal=0;
-      questions.forEach((x,i)=>{
-        if (isManualStudy(x)) return;
-        autoTotal++;
-        const picked=document.querySelector(`input[name=q${i}]:checked`);
-        const labels=[...document.querySelectorAll(`[data-q="${i}"] .option`)];
-        labels.forEach((l,j)=>{l.classList.remove('correct','wrong');if(j===x.a)l.classList.add('correct')});
-        if(picked){const p=Number(picked.value);if(p===x.a)correct++;else labels[p]?.classList.add('wrong')}
-      });
-      graded=true;
+    $('#submitBtn').onclick = async function() {
+      const submitButton = this;
       const ctx = window.examContextCurrent || getContext(level);
-      const manualTotal = questions.length - autoTotal;
-      const info=scoreInfo(correct,autoTotal,ctx);
-      const missed=autoTotal-correct;
-      result.innerHTML=`<div>${ctx.resultLabel || '本次結果'}</div><strong>${info.prominent}</strong><div>${info.detail}｜錯誤或未答 ${missed} 題</div>${manualTotal ? `<div class="tiny" style="margin-top:6px">另有紙筆練習 ${manualTotal} 題，不列入正答率。</div>` : ''}`;
-      result.style.display='block';
-      document.dispatchEvent(new CustomEvent('exam:submitted', {detail:{...ctx,correct,total:autoTotal,manualStudyTotal:manualTotal,score:info.score}}));
-      result.scrollIntoView({behavior:'smooth',block:'center'});
+      const handwritingItems = questions
+        .map((question, index) => ({ question, index }))
+        .filter(item => isHandwriting(item.question));
+
+      const hasAnsweredHandwriting = handwritingItems.some(({question,index}) => {
+        const key = handwritingKey(question,index,ctx);
+        return !!window.ExamHandwriting?.getAnswer?.(key)?.dataUrl;
+      });
+
+      if (handwritingItems.length && !window.ExamHandwriting?.uploadAndGrade) {
+        alert('手寫判題模組尚未載入，請重新整理頁面後再試。');
+        return;
+      }
+
+      if (hasAnsweredHandwriting && !window.ExamHandwriting?.hasToken?.()) {
+        alert('手寫題需要 Gemini 判題；請先到「GitHub 同步設定」輸入 Token，再交卷。');
+        return;
+      }
+
+      const oldText = submitButton.textContent;
+      submitButton.disabled = true;
+      submitButton.textContent = handwritingItems.length ? 'Gemini 判題中…' : '計算成績中…';
+
+      try {
+        let mcqCorrect = 0;
+        let mcqTotal = 0;
+
+        questions.forEach((x,i) => {
+          if (isManualStudy(x) || isHandwriting(x)) return;
+          mcqTotal++;
+          const picked=document.querySelector(`input[name=q${i}]:checked`);
+          const labels=[...document.querySelectorAll(`[data-q="${i}"] .option`)];
+          labels.forEach((l,j)=>{
+            l.classList.remove('correct','wrong');
+            if(j===x.a) l.classList.add('correct');
+          });
+          if(picked){
+            const p=Number(picked.value);
+            if(p===x.a) mcqCorrect++;
+            else labels[p]?.classList.add('wrong');
+          }
+        });
+
+        const handwritingResults = await Promise.all(handwritingItems.map(async ({question,index}) => {
+          const key = handwritingKey(question,index,ctx);
+          const status = quiz?.querySelector(`[data-q="${index}"] .handwriting-status`);
+          const hasAnswer = !!window.ExamHandwriting?.getAnswer?.(key)?.dataUrl;
+
+          if (!hasAnswer) {
+            const missing = {
+              status:'completed',
+              verdict:'incorrect',
+              recognizedAnswer:'',
+              recognizedWork:'',
+              feedback:'本題未作答。',
+              confidence:1
+            };
+            if (status) status.textContent = '未作答，手寫題本題不計分。';
+            renderHandwritingGrade(index, missing);
+            return { index, result:missing };
+          }
+
+          if (status) status.textContent = 'Gemini 正在判讀這一題的手寫答案…';
+          const gradingResult = await window.ExamHandwriting.uploadAndGrade({
+            key,
+            question,
+            context:ctx
+          });
+          if (status) status.textContent = gradingResult?.verdict === 'correct'
+            ? 'Gemini 判題完成：正確。'
+            : gradingResult?.verdict === 'incorrect'
+              ? 'Gemini 判題完成：需要修正。'
+              : 'Gemini 判題完成：無法可靠判定。';
+          renderHandwritingGrade(index, gradingResult);
+          return { index, result:gradingResult };
+        }));
+
+        const handwritingCorrect = handwritingResults.filter(item => item.result?.verdict === 'correct').length;
+        const handwritingTotal = handwritingItems.length;
+        const correct = mcqCorrect + handwritingCorrect;
+        const scoredTotal = mcqTotal + handwritingTotal;
+        const manualTotal = questions.filter(isManualStudy).length;
+
+        graded=true;
+        const info=scoreInfo(correct,scoredTotal,ctx);
+        const missed=scoredTotal-correct;
+
+        result.innerHTML =
+          `<div>${ctx.resultLabel || '本次結果'}</div>` +
+          `<strong>${info.prominent}</strong>` +
+          `<div>${info.detail}｜錯誤或未答 ${missed} 題</div>` +
+          (handwritingTotal
+            ? `<div class="tiny" style="margin-top:7px">選擇題 ${mcqCorrect}/${mcqTotal}｜手寫題 ${handwritingCorrect}/${handwritingTotal}（Gemini 判題）</div>`
+            : '') +
+          (manualTotal ? `<div class="tiny" style="margin-top:6px">另有紙筆練習 ${manualTotal} 題，不列入正答率。</div>` : '');
+
+        result.style.display='block';
+        document.dispatchEvent(new CustomEvent('exam:submitted', {
+          detail:{
+            ...ctx,
+            correct,
+            total:scoredTotal,
+            mcqCorrect,
+            mcqTotal,
+            handwritingCorrect,
+            handwritingTotal,
+            manualStudyTotal:manualTotal,
+            score:info.score
+          }
+        }));
+        result.scrollIntoView({behavior:'smooth',block:'center'});
+      } catch (error) {
+        console.error('[ExamRuntime] submission failed', error);
+        alert(`交卷尚未完成：${error.message}`);
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = oldText;
+      }
     };
   }
 
