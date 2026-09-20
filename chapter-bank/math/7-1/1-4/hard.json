@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-4-hard",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-4 指數記法與科學記號",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-4",
+    "title": "1-4 指數記法與科學記號｜困難",
+    "subtitle": "10 題｜含指數混合運算、數量級、反推指數與綜合比較",
+    "unit": "數學七上｜單元 1 數與數線｜1-4 指數記法與科學記號",
+    "difficulty": "math-7-1-1-4-hard",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "計算 (-2)⁵-(-2)⁴ 的值。",
+      "o": [
+        "-48",
+        "-16",
+        "16",
+        "48"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-mixed-powers",
+        "math-7-1-1-4-negative-base"
+      ],
+      "e": "(-2)⁵=-32，(-2)⁴=16，所以 -32-16=-48。"
+    },
+    {
+      "number": 2,
+      "q": "計算 3²×2-(-2)³ 的值。",
+      "o": [
+        "10",
+        "18",
+        "26",
+        "32"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-mixed-powers"
+      ],
+      "e": "3²×2=9×2=18，(-2)³=-8，所以 18-(-8)=26。"
+    },
+    {
+      "number": 3,
+      "q": "下列哪一個數最小？",
+      "o": [
+        "6.1×10⁻⁵",
+        "2.9×10⁻⁴",
+        "8.3×10⁻⁶",
+        "4.7×10⁻⁵"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare"
+      ],
+      "e": "對正數而言，10 的指數越小，數值越小。只有 8.3×10⁻⁶ 的指數是 -6，因此最小。"
+    },
+    {
+      "number": 4,
+      "q": "若 A=4.2×10⁵，B=3.9×10⁴，則 A 約為 B 的幾倍？",
+      "o": [
+        "約 1 倍",
+        "約 10 倍",
+        "約 100 倍",
+        "約 1000 倍"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-order-of-magnitude"
+      ],
+      "e": "A/B=(4.2/3.9)×10≈10.8，所以約為 10 倍。"
+    },
+    {
+      "number": 5,
+      "q": "若 1≤a<10，且 a×10⁻⁷ 的第一個非 0 數字出現在小數點後第幾位？",
+      "o": [
+        "第 5 位",
+        "第 6 位",
+        "第 7 位",
+        "第 8 位"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-first-nonzero"
+      ],
+      "e": "標準科學記號 a×10⁻⁷ 的第一個非 0 數字在小數點後第 7 位。"
+    },
+    {
+      "number": 6,
+      "q": "某數寫成科學記號為 7.03×10⁹，則這個數共有幾位整數？",
+      "o": [
+        "8 位",
+        "9 位",
+        "10 位",
+        "11 位"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-digit-count"
+      ],
+      "e": "1≤7.03<10，乘 10⁹ 後共有 9+1=10 位。"
+    },
+    {
+      "number": 7,
+      "q": "下列哪一個等式正確？",
+      "o": [
+        "0.052=5.2×10⁻¹",
+        "0.052=5.2×10⁻²",
+        "0.052=52×10⁻²",
+        "0.052=0.52×10⁻²"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation",
+        "math-7-1-1-4-to-scientific"
+      ],
+      "e": "0.052=5.2×10⁻²，且係數 5.2 符合 1≤a<10。"
+    },
+    {
+      "number": 8,
+      "q": "若 x=3.6×10⁻⁴，則 10x 等於多少？",
+      "o": [
+        "3.6×10⁻⁵",
+        "3.6×10⁻⁴",
+        "3.6×10⁻³",
+        "36×10⁻⁴"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-place-value"
+      ],
+      "e": "乘 10 會讓 10 的指數增加 1，所以 10x=3.6×10⁻³。"
+    },
+    {
+      "number": 9,
+      "q": "若 4.5×10ⁿ=450000，則 n 的值是多少？",
+      "o": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-reverse-exponent"
+      ],
+      "e": "450000=4.5×10⁵，所以 n=5。"
+    },
+    {
+      "number": 10,
+      "q": "比較 A=9.9×10⁻⁵ 與 B=1.01×10⁻⁴，何者較大？",
+      "o": [
+        "A>B",
+        "A<B",
+        "A=B",
+        "無法比較"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare"
+      ],
+      "e": "A=0.000099，B=0.000101，所以 A<B。"
+    }
+  ]
+}
