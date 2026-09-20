@@ -59,6 +59,16 @@
       subjectName: '歷史',
       backText: '歷史章節',
       pathLabel: '歷史'
+    },
+    'civics-01': {
+      title: '第1章　公民與公民德性',
+      subtitle: '第1章｜選擇難度',
+      path: 'chapter-bank/social/7-1/civics/chapter-01',
+      questionCount: 20,
+      pointsPerQuestion: 5,
+      subjectName: '公民',
+      backText: '公民章節',
+      pathLabel: '公民'
     }
   };
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -186,7 +196,7 @@
   }
 
   document.addEventListener('click', event => {
-    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"], [data-social-chapter="hist-01"], [data-social-chapter="hist-02"], [data-social-chapter="hist-03"]');
+    const chapter = event.target.closest?.('[data-social-chapter="geo-01"], [data-social-chapter="geo-02"], [data-social-chapter="geo-03"], [data-social-chapter="geo-04"], [data-social-chapter="hist-01"], [data-social-chapter="hist-02"], [data-social-chapter="hist-03"], [data-social-chapter="civics-01"]');
     if (!chapter) return;
     event.preventDefault();
     event.stopImmediatePropagation();
