@@ -8,6 +8,9 @@
 
   function isNativeInkSession() {
     try {
+      const overlay = document.getElementById('mathPaperCanvasOverlay');
+      if (overlay?.dataset?.fullToolset === '1') return false;
+
       const bridge = window.StudentExamNative;
       const image = document.getElementById('paperAnswerImage');
       const hasSavedAnswer = String(image?.getAttribute('src') || '').startsWith('data:image/');
