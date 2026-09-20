@@ -61,6 +61,106 @@
     };
   }
 
+  function normalizeVertex3D(point, fallbackLabel = '') {
+    const x = finiteNumber(point?.x);
+    const y = finiteNumber(point?.y);
+    const z = finiteNumber(point?.z);
+    if (x === null || y === null || z === null) return null;
+    return {
+      x,
+      y,
+      z,
+      label:point?.label === undefined ? fallbackLabel : String(point.label)
+    };
+  }
+
+  function buildBoxSolid(spec) {
+    const origin = normalizeVertex3D(spec.origin || { x:0, y:0, z:0 }, '');
+    if (!origin) return null;
+
+    let width;
+    let height;
+    let depth;
+
+    if (spec.solid === 'cube') {
+      const size = finiteNumber(spec.size);
+      if (size === null || size <= 0) return null;
+      width = size;
+      height = size;
+      depth = size;
+    } else {
+      width = finiteNumber(spec.width);
+      height = finiteNumber(spec.height);
+      depth = finiteNumber(spec.depth);
+      if (
+        width === null || height === null || depth === null ||
+        width <= 0 || height <= 0 || depth <= 0
+      ) return null;
+    }
+
+    const x = origin.x;
+    const y = origin.y;
+    const z = origin.z;
+
+    const vertices = {
+      A:{ x, y, z, label:'A' },
+      B:{ x:x + width, y, z, label:'B' },
+      C:{ x:x + width, y:y + height, z, label:'C' },
+      D:{ x, y:y + height, z, label:'D' },
+      E:{ x, y, z:z + depth, label:'E' },
+      F:{ x:x + width, y, z:z + depth, label:'F' },
+      G:{ x:x + width, y:y + height, z:z + depth, label:'G' },
+      H:{ x, y:y + height, z:z + depth, label:'H' }
+    };
+
+    const edges = [
+      ['A','B'],['B','C'],['C','D'],['D','A'],
+      ['E','F'],['F','G'],['G','H'],['H','E'],
+      ['A','E'],['B','F'],['C','G'],['D','H']
+    ];
+
+    return { vertices, edges };
+  }
+
+  function validateSolidProjection(spec) {
+    const solid = String(spec.solid || 'cube');
+    if (!['cube','cuboid'].includes(solid)) {
+      return { ok:false, reason:'solid-projection v1 目前支援 cube / cuboid' };
+    }
+
+    const built = buildBoxSolid({ ...spec, solid });
+    if (!built) {
+      return { ok:false, reason:'solid-projection 尺寸或 origin 格式錯誤' };
+    }
+
+    const view = spec.view && typeof spec.view === 'object' ? spec.view : {};
+    const yaw = finiteNumber(view.yaw ?? 38);
+    const pitch = finiteNumber(view.pitch ?? 28);
+    const roll = finiteNumber(view.roll ?? 0);
+    const projection = String(view.projection || 'orthographic');
+
+    if (yaw === null || pitch === null || roll === null) {
+      return { ok:false, reason:'solid-projection view 角度必須是有限數值' };
+    }
+    if (!['orthographic','oblique'].includes(projection)) {
+      return { ok:false, reason:'solid-projection v1 projection 僅支援 orthographic / oblique' };
+    }
+
+    return {
+      ok:true,
+      value:{
+        ...spec,
+        type:'solid-projection',
+        solid,
+        vertices:built.vertices,
+        edges:built.edges,
+        view:{ yaw, pitch, roll, projection },
+        showVertexLabels:spec.showVertexLabels !== false,
+        showHiddenEdges:spec.showHiddenEdges !== false
+      }
+    };
+  }
+
   function validateNumberLine(spec) {
     const min = finiteNumber(spec.min);
     const max = finiteNumber(spec.max);
@@ -207,6 +307,8 @@
       case 'coordinate-plane':
       case 'xy-plane':
         return validateCoordinatePlane({ ...spec, type:'coordinate-plane' });
+      case 'solid-projection':
+        return validateSolidProjection(spec);
       default:
         return { ok:false, reason:`不支援的 diagram type: ${String(spec.type || '')}` };
     }
@@ -267,14 +369,16 @@
       .question-diagram-host,
       .number-line-diagram,
       .geometry-diagram,
-      .coordinate-plane-diagram{
+      .coordinate-plane-diagram,
+      .solid-projection-diagram{
         width:100%;
         max-width:760px;
         margin:12px auto 14px;
       }
       .number-line-diagram svg,
       .geometry-diagram svg,
-      .coordinate-plane-diagram svg{
+      .coordinate-plane-diagram svg,
+      .solid-projection-diagram svg{
         display:block;
         width:100%;
         height:auto;
@@ -318,6 +422,25 @@
       .cp-axis-label{
         fill:#0f172a;
         font:800 18px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
+      }
+      .solid-edge{
+        stroke:#0f172a;
+        stroke-width:3;
+        fill:none;
+        vector-effect:non-scaling-stroke;
+      }
+      .solid-edge-hidden{
+        stroke:#64748b;
+        stroke-width:2.2;
+        stroke-dasharray:8 6;
+        fill:none;
+        vector-effect:non-scaling-stroke;
+      }
+      .solid-vertex{fill:#0f172a}
+      .solid-label{
+        fill:#0f172a;
+        font:800 18px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
+        text-anchor:middle;
       }
       .diagram-fallback{
         margin:12px auto;
@@ -727,6 +850,176 @@
     return svg;
   }
 
+  function degreesToRadians(value) {
+    return Number(value) * Math.PI / 180;
+  }
+
+  function rotatePoint3D(point, view) {
+    const yaw = degreesToRadians(view.yaw);
+    const pitch = degreesToRadians(view.pitch);
+    const roll = degreesToRadians(view.roll);
+
+    let x = point.x;
+    let y = point.y;
+    let z = point.z;
+
+    const xYaw = x * Math.cos(yaw) - z * Math.sin(yaw);
+    const zYaw = x * Math.sin(yaw) + z * Math.cos(yaw);
+    x = xYaw;
+    z = zYaw;
+
+    const yPitch = y * Math.cos(pitch) - z * Math.sin(pitch);
+    const zPitch = y * Math.sin(pitch) + z * Math.cos(pitch);
+    y = yPitch;
+    z = zPitch;
+
+    const xRoll = x * Math.cos(roll) - y * Math.sin(roll);
+    const yRoll = x * Math.sin(roll) + y * Math.cos(roll);
+    x = xRoll;
+    y = yRoll;
+
+    return { x, y, z, label:point.label };
+  }
+
+  function projectPoint3D(point, view) {
+    if (view.projection === 'oblique') {
+      const depthFactor = 0.42;
+      return {
+        x:point.x + point.z * depthFactor,
+        y:point.y + point.z * depthFactor * 0.62,
+        depth:point.z,
+        label:point.label
+      };
+    }
+
+    return {
+      x:point.x,
+      y:point.y,
+      depth:point.z,
+      label:point.label
+    };
+  }
+
+  function mapProjectedPoints(projected) {
+    const xs = projected.map(point => point.x);
+    const ys = projected.map(point => point.y);
+    const minX = Math.min(...xs);
+    const maxX = Math.max(...xs);
+    const minY = Math.min(...ys);
+    const maxY = Math.max(...ys);
+    const spanX = Math.max(1e-9, maxX - minX);
+    const spanY = Math.max(1e-9, maxY - minY);
+
+    const left = 105;
+    const right = 655;
+    const top = 58;
+    const bottom = 352;
+    const scale = Math.min((right - left) / spanX, (bottom - top) / spanY);
+    const usedW = spanX * scale;
+    const usedH = spanY * scale;
+    const offsetX = (VIEW_W - usedW) / 2;
+    const offsetY = top + (bottom - top - usedH) / 2;
+
+    return projected.map(point => ({
+      ...point,
+      screenX:offsetX + (point.x - minX) * scale,
+      screenY:offsetY + (maxY - point.y) * scale
+    }));
+  }
+
+  function renderSolidProjection(container, rawSpec) {
+    ensureStyles();
+    const checked = validateSolidProjection(rawSpec);
+    if (!checked.ok) {
+      console.warn('[DiagramRenderer]', checked.reason, rawSpec);
+      return safeFallback(container);
+    }
+
+    const spec = checked.value;
+    container.innerHTML = '';
+    container.classList.add('solid-projection-diagram');
+
+    const rotatedByLabel = {};
+    Object.entries(spec.vertices).forEach(([label, point]) => {
+      rotatedByLabel[label] = rotatePoint3D(point, spec.view);
+    });
+
+    const projectedList = Object.entries(rotatedByLabel).map(([label, point]) => ({
+      ...projectPoint3D(point, spec.view),
+      label
+    }));
+    const mappedList = mapProjectedPoints(projectedList);
+    const mapped = Object.fromEntries(mappedList.map(point => [point.label, point]));
+
+    const depthValues = mappedList.map(point => point.depth);
+    const minDepth = Math.min(...depthValues);
+    const maxDepth = Math.max(...depthValues);
+    const depthMid = (minDepth + maxDepth) / 2;
+
+    const svg = createSvg(
+      GEO_VIEW_H,
+      spec.ariaLabel || `${spec.solid === 'cube' ? '正方體' : '長方體'}，頂點 A 到 H 的二維投影圖`
+    );
+
+    const edges = spec.edges.map(([from, to]) => {
+      const a = mapped[from];
+      const b = mapped[to];
+      return {
+        from,
+        to,
+        a,
+        b,
+        depth:(a.depth + b.depth) / 2
+      };
+    });
+
+    edges.sort((left, right) => right.depth - left.depth);
+
+    edges.forEach(edge => {
+      const hidden = edge.depth > depthMid;
+      if (hidden && !spec.showHiddenEdges) return;
+
+      svg.appendChild(svgEl('line', {
+        x1:edge.a.screenX,
+        y1:edge.a.screenY,
+        x2:edge.b.screenX,
+        y2:edge.b.screenY,
+        class:hidden ? 'solid-edge-hidden' : 'solid-edge'
+      }));
+    });
+
+    const center = {
+      x:mappedList.reduce((sum, point) => sum + point.screenX, 0) / mappedList.length,
+      y:mappedList.reduce((sum, point) => sum + point.screenY, 0) / mappedList.length
+    };
+
+    mappedList.forEach(point => {
+      svg.appendChild(svgEl('circle', {
+        cx:point.screenX,
+        cy:point.screenY,
+        r:4.8,
+        class:'solid-vertex'
+      }));
+
+      if (spec.showVertexLabels) {
+        let dx = point.screenX - center.x;
+        let dy = point.screenY - center.y;
+        const length = Math.hypot(dx, dy) || 1;
+        dx /= length;
+        dy /= length;
+
+        svg.appendChild(svgEl('text', {
+          x:point.screenX + dx * 22,
+          y:point.screenY + dy * 22 + 5,
+          class:'solid-label'
+        }, point.label));
+      }
+    });
+
+    container.appendChild(svg);
+    return svg;
+  }
+
   function renderDiagram(container, spec) {
     if (!container) return null;
     const checked = validateDiagramSpec(spec);
@@ -741,6 +1034,7 @@
       case 'square': return renderSquare(container, checked.value);
       case 'circle': return renderCircle(container, checked.value);
       case 'coordinate-plane': return renderCoordinatePlane(container, checked.value);
+      case 'solid-projection': return renderSolidProjection(container, checked.value);
       default: return safeFallback(container);
     }
   }
@@ -751,5 +1045,6 @@
   window.renderSquare = renderSquare;
   window.renderCircle = renderCircle;
   window.renderCoordinatePlane = renderCoordinatePlane;
+  window.renderSolidProjection = renderSolidProjection;
   window.renderDiagram = renderDiagram;
 })();
