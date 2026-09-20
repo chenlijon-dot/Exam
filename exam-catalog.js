@@ -285,7 +285,7 @@
         { key: 'geo-02', code: '第2章', title: '世界中的臺灣', page: 22, type: 'chapter', referenceReady: true, detail: 'p.22～33 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
         { key: 'geo-inquiry-01', code: '問題探究', title: '立足臺灣、連結世界', page: 32, type: 'inquiry' },
         { key: 'geo-03', code: '第3章', title: '地形', page: 34, type: 'chapter', referenceReady: true, detail: 'p.34～47 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
-        { key: 'geo-04', code: '第4章', title: '海岸與島嶼', page: 48, type: 'chapter' },
+        { key: 'geo-04', code: '第4章', title: '海岸與島嶼', page: 48, type: 'chapter', referenceReady: true, detail: 'p.48～59 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
         { key: 'geo-inquiry-02', code: '問題探究', title: '從高山高麗菜看臺灣山地的開發與影響', page: 58, type: 'inquiry' },
         { key: 'geo-05', code: '第5章', title: '天氣與氣候', page: 60, type: 'chapter' },
         { key: 'geo-06', code: '第6章', title: '水文', page: 76, type: 'chapter' },
