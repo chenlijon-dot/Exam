@@ -1429,7 +1429,7 @@
           return `
           <button class="catalog-card chapter-card" data-math-section="${section.code}" ${ready ? '' : 'disabled'}>
             <span class="top"><strong>${section.code}　${section.title}</strong><span class="catalog-badge ${ready ? 'reference' : 'soon'}">${ready ? '題庫已建立' : '目錄已確認'}</span></span>
-            <span class="desc">課本起始頁 p.${section.page}｜${ready ? (section.code === '1-2' ? '簡易 20 題・中等 10 題・困難 10 題｜含數線距離與等距題' : (section.code === '1-3' ? '簡易 20 題・中等 10 題・困難 10 題｜含乘除符號、分配律與情境題' : (section.code === '1-4' ? '簡易 20 題・中等 10 題・困難 10 題｜含指數、10 的次方與科學記號' : '簡易 20 題・中等 10 題・困難 10 題'))) : '題庫待建'}</span>
+            <span class="desc">課本起始頁 p.${section.page}｜${ready ? (section.code === '1-2' ? '簡易 20 題・中等 10 題・困難 12 題（含 2 題手寫）｜含數線距離與等距題' : (section.code === '1-3' ? '簡易 20 題・中等 10 題・困難 12 題（含 2 題手寫）｜含乘除符號、分配律與情境題' : (section.code === '1-4' ? '簡易 20 題・中等 10 題・困難 12 題（含 2 題手寫）｜含指數、10 的次方與科學記號' : '簡易 20 題・中等 10 題・困難 12 題（含 2 題手寫）'))) : '題庫待建'}</span>
           </button>`;
         }).join('')}
       </div>`;
@@ -1452,24 +1452,24 @@
         ? [
             { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'同號異號加法、減法、絕對值與基本數線。' },
             { key:'medium', icon:'🌿', label:'中等', count:10, desc:'混合運算、距離、中點、等距點與情境應用。' },
-            { key:'hard', icon:'🌳', label:'困難', count:10, desc:'絕對值方程、等距反推、中點與綜合推理。' }
+            { key:'hard', icon:'🌳', label:'困難', count:12, desc:'絕對值方程、等距反推、中點與綜合推理。' }
           ]
         : section.code === '1-3'
           ? [
               { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'乘除符號、特殊數、基本四則與分配律。' },
               { key:'medium', icon:'🌿', label:'中等', count:10, desc:'連乘連除、四則混合、巧算與情境應用。' },
-              { key:'hard', icon:'🌳', label:'困難', count:10, desc:'符號推理、反推未知數、分配律與綜合運算。' }
+              { key:'hard', icon:'🌳', label:'困難', count:12, desc:'符號推理、反推未知數、分配律與綜合運算。' }
             ]
           : section.code === '1-4'
             ? [
                 { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'指數基本概念、10 的次方與科學記號轉換。' },
                 { key:'medium', icon:'🌿', label:'中等', count:10, desc:'負底數、同底數比較、科學記號大小與位數。' },
-                { key:'hard', icon:'🌳', label:'困難', count:10, desc:'含指數混合運算、數量級、反推指數與綜合比較。' }
+                { key:'hard', icon:'🌳', label:'困難', count:12, desc:'含指數混合運算、數量級、反推指數與綜合比較。' }
               ]
             : [
                 { key:'easy', icon:'🌱', label:'簡易', count:20, desc:'正負數、0、相反數、絕對值與基本數線判讀。' },
                 { key:'medium', icon:'🌿', label:'中等', count:10, desc:'分數刻度、等距點、相反數與絕對值綜合。' },
-                { key:'hard', icon:'🌳', label:'困難', count:10, desc:'等距、中點、內分點與代數條件綜合推理。' }
+                { key:'hard', icon:'🌳', label:'困難', count:12, desc:'等距、中點、內分點與代數條件綜合推理。' }
               ])
     ];
 
@@ -1479,7 +1479,7 @@
       <button class="catalog-back" id="backMathSectionBtn">← 返回 ${unit.number}</button>
       <div class="catalog-path">數學　›　七年級上學期（一上）　›　${unit.number} ${unit.title}　›　${section.code}</div>
       <h2 class="catalog-title">${section.code}　${section.title}</h2>
-      <p class="catalog-sub">全新自編 40 題；需要數線的題目由 SVG number-line renderer 即時繪製。</p>
+      <p class="catalog-sub">全新自編 42 題；困難題含 10 題選擇題＋2 題手寫計分題，手寫題在交卷時由 Gemini 判題。需要數線的題目由 SVG number-line renderer 即時繪製。</p>
       <div class="catalog-grid">
         ${levels.map(level => `
           <button class="catalog-card" data-math-section-bank="${level.key}">
@@ -1511,7 +1511,7 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
-      const expected = difficultyKey === 'easy' ? 20 : 10;
+      const expected = difficultyKey === 'easy' ? 20 : (difficultyKey === 'hard' ? 12 : 10);
       if (questions.length !== expected) throw new Error(`題數異常：${questions.length}/${expected}`);
       if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
