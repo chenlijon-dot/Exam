@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-02-medium",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 2",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 2｜What Are These?｜中等",
+    "subtitle": "15 題｜情境應用、複數與閱讀比較",
+    "unit": "英文七上｜Lesson 2",
+    "difficulty": "english-7-1-lesson-02-medium",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依 115 學年度康軒版國中英文第一冊 Lesson 2 教材參考資料自編；題型參考 GEPT 初級情境式詞彙與結構四選一形式，非官方 GEPT 試題。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "section": "詞彙與結構",
+      "q": "Look at the animal near me. _____ is a fox.",
+      "o": [
+        "This",
+        "These",
+        "Those",
+        "They"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-demonstratives"
+      ],
+      "e": "答案是 (A) This。animal 是單數，且 near me 表示近指。"
+    },
+    {
+      "number": 2,
+      "q": "Look at the animals over there. _____ are bears.",
+      "o": [
+        "This",
+        "That",
+        "Those",
+        "It"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-demonstratives"
+      ],
+      "e": "答案是 (C) Those。animals 是複數，over there 表示遠指。"
+    },
+    {
+      "number": 3,
+      "q": "A: What are these?  B: _____ sheep.",
+      "o": [
+        "It is",
+        "This is",
+        "They are",
+        "That is"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-what-plural"
+      ],
+      "e": "答案是 (C) They are。these 為複數，回答用 They are ...。"
+    },
+    {
+      "number": 4,
+      "q": "Which sentence is correct?",
+      "o": [
+        "What is these?",
+        "What are this?",
+        "What are those?",
+        "What is they?"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-what-plural"
+      ],
+      "e": "答案是 (C) What are those?。those 是複數，搭配 are。"
+    },
+    {
+      "number": 5,
+      "q": "Which plural form is correct?",
+      "o": [
+        "foxs",
+        "foxes",
+        "foxies",
+        "foxen"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (B) foxes。以 x 結尾的名詞通常加 -es。"
+    },
+    {
+      "number": 6,
+      "q": "Which plural form is correct?",
+      "o": [
+        "babys",
+        "babyes",
+        "babies",
+        "baby"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (C) babies。子音 + y 結尾，變 y 為 i 再加 -es。"
+    },
+    {
+      "number": 7,
+      "q": "Which plural form follows the -ves pattern?",
+      "o": [
+        "knives",
+        "cats",
+        "boxes",
+        "mice"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-plural"
+      ],
+      "e": "答案是 (A) knives。教材整理的複數規則包含 -ves 類型。"
+    },
+    {
+      "number": 8,
+      "q": "Amy and Ben are students. _____ school is near the park.",
+      "o": [
+        "His",
+        "Her",
+        "Their",
+        "Our"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-possessive"
+      ],
+      "e": "答案是 (C) Their。Amy and Ben 是複數第三人稱，所有格用 their。"
+    },
+    {
+      "number": 9,
+      "q": "The desk belongs to one girl. Which phrase is correct?",
+      "o": [
+        "the girls desk",
+        "the girl’s desk",
+        "the girls’ desk",
+        "the girl desk’s"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-possessive"
+      ],
+      "e": "答案是 (B) the girl’s desk。單數名詞所有格通常加 ’s。"
+    },
+    {
+      "number": 10,
+      "q": "The desks belong to several girls. Which phrase is correct?",
+      "o": [
+        "the girls’ desks",
+        "the girl’s desks",
+        "the girls desks’",
+        "the girl desks"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-possessive"
+      ],
+      "e": "答案是 (A) the girls’ desks。規則複數名詞以 s 結尾，所有格在 s 後加 apostrophe。"
+    },
+    {
+      "number": 11,
+      "q": "According to the reading, an African elephant is about _____ meters tall.",
+      "o": [
+        "2.75",
+        "3.2",
+        "6",
+        "70"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading"
+      ],
+      "e": "答案是 (B) 3.2。教材比較資料中 African elephant 約 3.2 meters。"
+    },
+    {
+      "number": 12,
+      "q": "According to the reading, Asian elephants live about _____ years.",
+      "o": [
+        "20",
+        "35",
+        "60",
+        "70"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading"
+      ],
+      "e": "答案是 (C) 60。教材指出 Asian elephants 的 lifespan 約 60 years。"
+    },
+    {
+      "number": 13,
+      "q": "You want to compare the ears of Asian and African elephants quickly. What should you look for first?",
+      "o": [
+        "The words “ears,” “Asian,” and “African”",
+        "Every verb in the passage",
+        "Only the title",
+        "Only the last word of each sentence"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-reading",
+        "english-7-1-l2-inference"
+      ],
+      "e": "答案是 (A)。先鎖定比較主題與關鍵字，能快速找到耳朵差異的資訊。"
+    },
+    {
+      "number": 14,
+      "q": "Which pair begins with the sounds /b/ and /d/ in that order?",
+      "o": [
+        "big — desk",
+        "pig — table",
+        "table — dear",
+        "desk — black"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-pronunciation"
+      ],
+      "e": "答案是 (A) big — desk。big 以 /b/ 開頭；desk 以 /d/ 開頭。"
+    },
+    {
+      "number": 15,
+      "q": "A: My birth year is the Year of the Monkey.  B: Really? _____ you?",
+      "o": [
+        "What is",
+        "What are",
+        "What about",
+        "What animal"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l2-dialogue"
+      ],
+      "e": "答案是 (C) What about you?。教材 Dialogue 收錄 What about ...?，用來把話題轉回對方。"
+    }
+  ]
+}
