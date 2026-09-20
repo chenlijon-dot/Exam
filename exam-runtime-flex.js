@@ -499,10 +499,10 @@
             context:ctx
           });
           if (status) status.textContent = gradingResult?.verdict === 'correct'
-            ? 'Firebase Firebase Gemini 判題完成：正確。'
+            ? 'Firebase Gemini 判題完成：正確。'
             : gradingResult?.verdict === 'incorrect'
-              ? 'Firebase Firebase Gemini 判題完成：需要修正。'
-              : 'Firebase Firebase Gemini 判題完成：無法可靠判定。';
+              ? 'Firebase Gemini 判題完成：需要修正。'
+              : 'Firebase Gemini 判題完成：無法可靠判定。';
           renderHandwritingGrade(index, gradingResult);
           return { index, result:gradingResult };
         }));
