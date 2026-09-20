@@ -867,6 +867,53 @@ AB / AC / BD / ABC
 <school>-<year>-q<question>-options.png
 ```
 
+## 14.5 圖片一律使用實體檔案，禁止 Base64
+
+正式題庫的教材圖、考題圖、表格、地圖、幾何圖、照片、圖形選項，一律保存為真正的圖片檔案。
+
+標準：
+
+```text
+原卷／原 PDF
+→ 裁出作答必要區域
+→ PNG / JPG / WebP
+→ GitHub assets
+→ JSON 記錄相對路徑
+→ 網頁用 <img> 顯示
+```
+
+例如：
+
+```json
+{
+  "image": "assets/questions/science/114-dawan/q04.png",
+  "imageAlt": "第4題附圖"
+}
+```
+
+禁止：
+
+```text
+"image": "data:image/png;base64,..."
+把整張圖片 Base64 塞進 JSON
+把 Base64 塞進 JS / HTML
+把大型 binary 轉成文字後再經 connector / ChatGPT 搬運
+```
+
+理由：
+
+```text
+Base64 會膨脹資料量
+Git diff 幾乎不可讀
+容易超過 API / connector payload
+容易 timeout / truncation
+瀏覽器與 repository 都更難維護
+```
+
+例外只限非常小、純 UI 裝飾用途的 icon／SVG；任何會影響題意或作答的圖片都不得 Base64 內嵌。
+
+原始完整 evidence 留在 Google Drive；GitHub 只放網站真正需要的裁切 asset。
+
 ---
 
 # 15. 各章節「各校題庫」功能建置方式
