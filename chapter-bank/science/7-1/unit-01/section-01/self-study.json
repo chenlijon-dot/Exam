@@ -7,13 +7,8 @@
     "sourceTitle": "新無敵國中自然 1",
     "sourceSection": "1-1 多彩多姿的生命世界",
     "questionCount": 27,
-    "answerableQuestionCount": 23,
-    "pendingImageQuestionNumbers": [
-      13,
-      14,
-      15,
-      25
-    ],
+    "answerableQuestionCount": 27,
+    "pendingImageQuestionNumbers": [],
     "preserveOptionOrder": true,
     "analysisEligible": true,
     "answerAuthority": "新無敵自然自修解答篇 p.365；會考試題範例 p.19 印刷答案"
@@ -304,8 +299,9 @@
       "originalQuestionNumber": 13,
       "answerSourceFile": "IMG_20260921_001127.jpg",
       "answerSourcePage": 365,
-      "imagePending": true,
-      "imageSourceFile": "IMG_20260920_215708_Q13-Q15.png"
+      "imageSourceFile": "IMG_20260920_215708_Q13-Q15.png",
+      "image": "chapter-bank/science/7-1/unit-01/section-01/assets/biosphere-vertical-q13-q15.png",
+      "imageAlt": "生物圈垂直分布示意圖，標示 A～D"
     },
     {
       "number": 14,
@@ -328,8 +324,9 @@
       "originalQuestionNumber": 14,
       "answerSourceFile": "IMG_20260921_001127.jpg",
       "answerSourcePage": 365,
-      "imagePending": true,
-      "imageSourceFile": "IMG_20260920_215708_Q13-Q15.png"
+      "imageSourceFile": "IMG_20260920_215708_Q13-Q15.png",
+      "image": "chapter-bank/science/7-1/unit-01/section-01/assets/biosphere-vertical-q13-q15.png",
+      "imageAlt": "生物圈垂直分布示意圖，標示 A～D"
     },
     {
       "number": 15,
@@ -352,8 +349,9 @@
       "originalQuestionNumber": 15,
       "answerSourceFile": "IMG_20260921_001127.jpg",
       "answerSourcePage": 365,
-      "imagePending": true,
-      "imageSourceFile": "IMG_20260920_215708_Q13-Q15.png"
+      "imageSourceFile": "IMG_20260920_215708_Q13-Q15.png",
+      "image": "chapter-bank/science/7-1/unit-01/section-01/assets/biosphere-vertical-q13-q15.png",
+      "imageAlt": "生物圈垂直分布示意圖，標示 A～D"
     },
     {
       "number": 16,
@@ -574,10 +572,11 @@
       "originalQuestionNumber": 1,
       "answerSourceFile": "IMG_20260921_001127.jpg",
       "answerSourcePage": 365,
-      "imagePending": true,
       "imageSourceFile": "IMG_20260920_215753_Q1.png",
       "introLabel": "題組資料｜破紀錄的耐熱細菌",
-      "intro": "進行生命科學研究的科學家或臨床醫生和牙醫都利用 121°C 的高壓蒸汽機來滅菌消毒，因為在這麼高的溫度中所有的生物都會死光光。可是一種新發現的細菌卻是個例外，它們在 130°C 的高溫中還能夠生存。不過，這種耐熱細菌只有在海底熱泉中才找得到。\\n\\n在這 20 多年來，科學家一直在尋找破紀錄的耐高溫細菌，前一個紀錄保持者延胡索酸火葉菌（Pyrolobus fumarii）能耐熱約 113°C，而且其呼吸作用是利用硫而不是氧，所以大部分科學家把注意力放在硫細菌。\\n\\n但是美國麻州大學的兩位科學家卻注意到大部分的耐熱細菌在呼吸作用時會利用到鐵，所以他們在太平洋的深海熱泉中尋覓代謝鐵的細菌。深海熱泉被岩漿加熱，因為壓力的關係，最高溫可達 400°C。當他們把熱泉水放在含有氧化鐵的試管中時，發現有種古細菌能還原氧化鐵並且在 100°C 時還能生長。當他們測試該細菌的耐熱極限時，在 130°C 的高溫中還能夠生存，該古細菌被命名為「品系 121」。\\n\\n古細菌常被發現能耐高溫、低溫、高鹽、強酸或強鹼。他們的研究與探索開啟了耐高溫細菌的搜尋，地球上第一個生命可能就是這樣的生物，因為地球在形成之後還經歷頗長的一段時間才冷卻。"
+      "intro": "進行生命科學研究的科學家或臨床醫生和牙醫都利用 121°C 的高壓蒸汽機來滅菌消毒，因為在這麼高的溫度中所有的生物都會死光光。可是一種新發現的細菌卻是個例外，它們在 130°C 的高溫中還能夠生存。不過，這種耐熱細菌只有在海底熱泉中才找得到。\\n\\n在這 20 多年來，科學家一直在尋找破紀錄的耐高溫細菌，前一個紀錄保持者延胡索酸火葉菌（Pyrolobus fumarii）能耐熱約 113°C，而且其呼吸作用是利用硫而不是氧，所以大部分科學家把注意力放在硫細菌。\\n\\n但是美國麻州大學的兩位科學家卻注意到大部分的耐熱細菌在呼吸作用時會利用到鐵，所以他們在太平洋的深海熱泉中尋覓代謝鐵的細菌。深海熱泉被岩漿加熱，因為壓力的關係，最高溫可達 400°C。當他們把熱泉水放在含有氧化鐵的試管中時，發現有種古細菌能還原氧化鐵並且在 100°C 時還能生長。當他們測試該細菌的耐熱極限時，在 130°C 的高溫中還能夠生存，該古細菌被命名為「品系 121」。\\n\\n古細菌常被發現能耐高溫、低溫、高鹽、強酸或強鹼。他們的研究與探索開啟了耐高溫細菌的搜尋，地球上第一個生命可能就是這樣的生物，因為地球在形成之後還經歷頗長的一段時間才冷卻。",
+      "image": "chapter-bank/science/7-1/unit-01/section-01/assets/biosphere-vertical-literacy-q1.png",
+      "imageAlt": "地球生物圈垂直分布圖，標示甲、乙、丙、丁"
     },
     {
       "number": 26,
