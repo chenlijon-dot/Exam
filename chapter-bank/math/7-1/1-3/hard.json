@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-3-hard",
+    "examType": "math-school-section-practice",
+    "examTypeLabel": "數學七上 1-3 正負數的乘除",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-3",
+    "title": "1-3 正負數的乘除｜困難",
+    "subtitle": "10 題｜符號推理、反推未知數、分配律與綜合運算",
+    "unit": "數學七上｜單元 1 數與數線｜1-3 正負數的乘除",
+    "difficulty": "math-7-1-1-3-hard",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive canonical 教材知識庫與「其他參考題庫 01」題型 census 自編；只吸收概念、題型與難度結構，不直接複製來源題目或圖形。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "q": "計算 (-1)×(-2)×(-3)×(-4)×(-5) 的值。",
+      "o": [
+        "-120",
+        "-60",
+        "60",
+        "120"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-sign-parity",
+        "math-7-1-1-3-multi-product"
+      ],
+      "e": "共有 5 個負因數，是奇數個，因此結果為負；1×2×3×4×5=120，所以答案 -120。"
+    },
+    {
+      "number": 2,
+      "q": "若 a×(-6)=42，則 a 的值為何？",
+      "o": [
+        "-7",
+        "-6",
+        "6",
+        "7"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-missing-factor"
+      ],
+      "e": "a=42÷(-6)=-7。"
+    },
+    {
+      "number": 3,
+      "q": "若 (-48)÷b=6，則 b 的值為何？",
+      "o": [
+        "-8",
+        "-6",
+        "6",
+        "8"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-missing-divisor"
+      ],
+      "e": "(-48)÷b=6，所以 -48=6b，得 b=-8。"
+    },
+    {
+      "number": 4,
+      "q": "計算 (-30)÷5×2+7 的值。",
+      "o": [
+        "-19",
+        "-5",
+        "5",
+        "19"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-mixed-operations",
+        "math-7-1-1-3-left-to-right"
+      ],
+      "e": "乘除由左至右：(-30)÷5=-6，-6×2=-12，再加 7 得 -5。"
+    },
+    {
+      "number": 5,
+      "q": "利用分配律計算 48×(-7)+52×(-7) 的值。",
+      "o": [
+        "-700",
+        "-350",
+        "350",
+        "700"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-factor-common",
+        "math-7-1-1-3-distributive"
+      ],
+      "e": "48×(-7)+52×(-7)=(48+52)×(-7)=100×(-7)=-700。"
+    },
+    {
+      "number": 6,
+      "q": "計算 (-4)×[6-(-3)]÷(-2) 的值。",
+      "o": [
+        "-18",
+        "-9",
+        "9",
+        "18"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-mixed-operations"
+      ],
+      "e": "先算括號：6-(-3)=9；(-4)×9=-36；(-36)÷(-2)=18。"
+    },
+    {
+      "number": 7,
+      "q": "若 a、b 都不為 0，且 ab<0，a÷b<0。下列何者一定正確？",
+      "o": [
+        "a、b 同號",
+        "a、b 異號",
+        "a=b",
+        "|a|=|b|"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-sign-reasoning"
+      ],
+      "e": "乘積與商都為負，都表示 a、b 異號，所以選 B。"
+    },
+    {
+      "number": 8,
+      "q": "某遊戲答對一題得 4 分，答錯一題扣 3 分。小華答對 8 題、答錯 5 題，總分是多少？",
+      "o": [
+        "7 分",
+        "17 分",
+        "23 分",
+        "47 分"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-scoring",
+        "math-7-1-1-3-mixed-operations"
+      ],
+      "e": "總分=8×4+5×(-3)=32-15=17 分。"
+    },
+    {
+      "number": 9,
+      "q": "計算 125×(-8)+125×3 的值。",
+      "o": [
+        "-1375",
+        "-625",
+        "625",
+        "1375"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-factor-common",
+        "math-7-1-1-3-distributive"
+      ],
+      "e": "125×(-8)+125×3=125×(-8+3)=125×(-5)=-625。"
+    },
+    {
+      "number": 10,
+      "q": "若 x=(-2)×(-3)×(-4)，y=(-2)×3×4，則 x-y 的值為何？",
+      "o": [
+        "0",
+        "24",
+        "48",
+        "96"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "math-7-1-1-3-sign-parity",
+        "math-7-1-1-3-mixed-operations"
+      ],
+      "e": "x 有 3 個負因數，所以 x=-24；y 只有 1 個負因數，所以 y=-24。因此 x-y=(-24)-(-24)=0。"
+    }
+  ]
+}
