@@ -641,6 +641,17 @@ metadata
 
 不要用 AI 重畫「看起來差不多」的版本。
 
+圖片儲存總原則：
+
+```text
+原始完整 evidence → Google Drive
+網站必要裁圖      → GitHub assets
+題庫 JSON          → 只記錄相對路徑
+網頁               → <img src="...">
+```
+
+正式教材圖、考題圖、地圖、幾何圖、表格、照片等，**禁止以 Base64 / data URL 內嵌進 JSON、JS 或 HTML**。這類圖片一律使用真正的 image file；例外只限極小型純 UI icon。
+
 建議位置：
 
 ```text
