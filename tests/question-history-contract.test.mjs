@@ -52,6 +52,12 @@ assert.match(
   'attempt lifecycle initialization must iterate difficulty buttons with querySelectorAll'
 );
 
+assert.match(
+  records,
+  /storeAttemptLocally\(attempt\)[\s\S]*?exam:attempt-recorded/,
+  'a successfully stored attempt must emit exam:attempt-recorded'
+);
+
 assert.doesNotMatch(
   records,
   /(?<!querySelectorAll\()\$\(['"]\.difficulty['"]\)\.forEach/,
@@ -157,7 +163,12 @@ const historyUi = read('exam-question-history.js');
 assert.match(historyUi, /錯題/, 'history UI must render wrong-count annotations');
 assert.match(historyUi, /作答/, 'history UI must render answered-count annotations after submit');
 assert.match(historyUi, /exam:started/, 'history UI must reset/load on exam start');
-assert.match(historyUi, /exam:submitted/, 'history UI must expand after submit');
+assert.match(historyUi, /exam:submitted/, 'history UI must enter submitted mode after submit');
+assert.match(
+  historyUi,
+  /exam:attempt-recorded/,
+  'history UI must consume the authoritative stored-attempt event'
+);
 assert.match(historyUi, /resetForRetry/, 'history UI must expose retry reset');
 
 
