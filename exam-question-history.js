@@ -8,6 +8,7 @@
   let recallAttempts = [];
   let recallIndex = -1;
   let recallLoading = false;
+  let recallLoadToken = 0;
 
   function formatActiveHistory(stats) {
     const wrongCount = Number(stats?.wrongCount || 0);
@@ -91,11 +92,13 @@
   }
 
   function resetRecallState({ removeButton = true } = {}) {
+    recallLoadToken += 1;
     recallAttempts = [];
     recallIndex = -1;
     recallLoading = false;
     clearRecallCardState();
     clearRecallControls();
+    document.querySelector('#questionHistoryRecallMessage')?.remove();
     if (removeButton) clearRecallButton();
   }
 
@@ -203,6 +206,7 @@
 
   async function enterRecallMode() {
     if (!submitted || recallLoading) return;
+    const requestToken = ++recallLoadToken;
     const examKey = currentExamKey();
     const store = historyStore();
     if (!examKey || !store?.loadExamAttempts) {
@@ -220,6 +224,7 @@
     try {
       const currentAttempt = latestLocalAttempt();
       const attempts = await store.loadExamAttempts(examKey, 50);
+      if (requestToken !== recallLoadToken || !submitted) return;
       recallAttempts = (attempts || [])
         .filter(attempt => String(attempt?.examKey || '') === examKey)
         .filter(attempt => !sameAttempt(attempt, currentAttempt));
@@ -237,6 +242,7 @@
       console.warn('[QuestionHistory] same-exam recall failed', error);
       showRecallMessage('歷史紀錄目前無法讀取');
     } finally {
+      if (requestToken !== recallLoadToken) return;
       recallLoading = false;
       const currentButton = document.querySelector('#questionHistoryRecallBtn');
       if (currentButton) {
