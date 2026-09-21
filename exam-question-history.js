@@ -124,7 +124,7 @@
       if (historical.wrong) card.classList.add('history-wrong');
 
       const info = document.createElement('div');
-      info.dataset.historyAnswer = '1';
+      info.setAttribute('data-history-answer', '1');
       info.className = historical.wrong
         ? 'question-history-answer wrong'
         : 'question-history-answer correct';
