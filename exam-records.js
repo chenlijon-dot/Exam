@@ -556,7 +556,7 @@
       }));
 
       if (!getToken()) {
-        showSyncToast('作答紀錄與錯題已存到這台裝置。尚未設定 GitHub Token，所以這次未同步到雲端。', false);
+        showSyncToast('✓ 作答紀錄與錯題已存到這台裝置。');
         return;
       }
       showSyncToast('本機紀錄已保存，正在同步到 GitHub…');
