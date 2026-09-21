@@ -149,83 +149,105 @@ Exam-Record = 個人學習結果
 
 ---
 
-# 3. 收到新考卷後的標準流程
+# 3. 收到圖片考題後的高速三階段流程
 
-本流程分成「快速擷取」與「正式納入」兩段。大量圖片／PDF 不再逐題跑完整正式流程。
+大量圖片考題不逐題跑完整 pipeline，而固定採以下三步。
 
-## 3.1 第一階段：整卷快速擷取（RAW → STAGING）
+## 3.1 第一步：辨識 → 文字檔 → 題目骨架
+
+使用者提供題目圖片；附圖題若可分離，使用者會自行切成獨立圖片區塊。
+
+ChatGPT 先整批完成：
 
 ```text
-1. 在 Drive 找到題目卷
-2. 有答案卷則一起定位，但此階段不要求完成答案 QA
-3. 確認學校／年度／學期／年級／科目／段考次別
-4. 確認頁碼／題號／大題順序
-5. 連續辨識整卷
-6. 保留題號、題幹、選項、題組文字
-7. 圖題先記 [有圖] / image pending / 頁碼
-8. 看不清處標 [待人工確認]
-9. 寫入 staging 文字檔／校正版
-10. 整卷或整批完成後才停
+題目圖片
+→ 辨識題號／題幹／選項
+→ 寫入題庫辨識文字檔
+→ 建立題目骨架
+→ 有圖題標記預期圖片檔名
 ```
 
-RAW → STAGING 階段預設不做：
+此階段不要求：
 
 ```text
-完整 census 深度分類
-Google Sheet 精細 mapping
-canonical 逐題回查
-正式 answerVerified
-questionId / revision
-chapter-bank sidecar
-runtime 接線
+逐題詳解
+questionId
+revision
+完整 conceptIds
+正式 runtime
 Pages deploy
 ```
 
-這一段的目標是先把原卷內容快速、完整地「吃進來」。
+模糊題直接標 `[待人工確認]`，繼續下一題。
 
-## 3.2 第二階段：正式納入（STAGING → ACTIVE）
+## 3.2 第二步：PS5.1 上傳使用者已切好的題目圖片
 
-staging 文字層完整後，再批次進行：
+ChatGPT 根據本批實際資料夾與 GitHub assets 路徑，提供 PowerShell 5.1 指令。
 
-```text
-1. 完整閱讀整份考卷
-2. 建立正式 census
-3. 在 Google Sheet 建立整卷逐題索引
-4. 第一輪 chapter / lesson mapping
-5. 不確定題回查 canonical
-6. 無法可靠判斷者標 unknown
-7. 判斷題型與 runtime 需求
-8. 以官方答案卷核對答案
-9. 完成 provenance / answerVerified
-10. 正式題建立 questionId + revision
-11. 適合網站呈現者寫入 chapter-bank
-12. pending 題保留但不混入正式自動評量
-13. 更新 runtime / schoolCount / subtitle
-14. 驗證 JSON、導航、返回、再次進入
-15. commit / push main
-16. Pages 部署後實機抽查
-17. 日後教材增加時重新掃 unknown 與低信心分類
-```
-
-正式 promotion 另須遵守 README 第 23.1 節與 question-bank governance spec。
-
-沒有答案卷時仍可做：
+使用者執行：
 
 ```text
-原卷保存
-census
-Sheet 索引
-章節初步 mapping
-pending 題目保存
+本機裁圖資料夾
+→ Copy-Item 到 E:\Exam\assets\...
+→ git add
+→ commit
+→ fetch + rebase
+→ push main
 ```
 
-但不可：
+圖片上傳完成後，ChatGPT 必須做 remote read-back：
 
 ```text
-把 AI 推測答案標成官方答案
-把未驗證題混進正式自動評量
-設 answerVerified: true
+確認檔案存在
+確認檔名
+確認題號與圖片對應
 ```
+
+binary 不經 ChatGPT connector 反覆搬運。
+
+## 3.3 第三步：接圖 → 詳解 → 正式題庫 → 上線
+
+圖片 remote read-back 成功後，ChatGPT 再一次完成：
+
+```text
+題目骨架
++
+GitHub 題圖
+↓
+image / optionImage / images 接線
+↓
+答案核對
+↓
+逐題詳解
+↓
+正式 provenance / chapter mapping
+↓
+questionId + revision
+↓
+canonical option identity / preserveOptionOrder
+↓
+符合目前作答歷史與回溯規則
+↓
+正式 JSON
+↓
+runtime
+↓
+QA
+↓
+GitHub Pages
+```
+
+正式題建立後必須遵守：
+
+```text
+README 23.1
+question-bank-governance-design.md
+question-history-recall-design.md
+```
+
+清楚題先上線；少數有疑義者留 pending，不拖住整批。
+
+沒有答案卷時，仍可完成第一、第二階段；第三階段只將答案已可靠確認的題目升格 active。
 
 ---
 
@@ -1463,54 +1485,29 @@ working tree 不乾淨時不要硬 pull。
 
 # 24. 日常 ChatGPT 作業方式
 
-## 純文字考題
+## 圖片考題的日常作業
 
-若任務是「先辨識／先吃資料」：
-
-```text
-讀 Drive 原卷
-→ 整批轉 staging 文字
-→ 標記待人工確認
-→ 暫停於 STAGING
-```
-
-若任務是「正式納入題庫」：
+預設直接套用第 3 節三階段：
 
 ```text
-staging 文字
-→ census
-→ Sheet mapping
-→ 讀 canonical
-→ 答案 QA
+第一步
+圖片 → 辨識文字 → 題目骨架
+
+第二步
+ChatGPT 給 PS5.1
+→ 使用者上傳裁好的題圖到 GitHub
+
+第三步
+ChatGPT remote read-back
+→ 接圖
+→ 詳解
 → questionId / revision
-→ GitHub 建／更新 sidecar JSON
-→ 更新 runtime merge config
-→ commit main
-→ Pages 實測
+→ 回溯相容
+→ runtime
+→ deploy
 ```
 
-## 有圖題
-
-快速擷取階段：
-
-```text
-原卷圖片／PDF
-→ 先辨識文字
-→ 記錄圖題頁碼／題號
-→ 標 image pending
-→ 繼續整批
-```
-
-正式納入階段：
-
-```text
-完成 census / mapping / 答案驗證
-→ 判斷必要圖片
-→ 原卷裁 PNG
-→ assets 放 GitHub
-→ JSON 引用 image / optionImage
-→ Pages 實測
-```
+不要在第一步就逐題做完整正式化。
 
 ## 教材又新增
 
