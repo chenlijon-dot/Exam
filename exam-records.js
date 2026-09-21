@@ -525,6 +525,10 @@
       const added = storeAttemptLocally(attempt);
       if (!added) return;
 
+      document.dispatchEvent(new CustomEvent('exam:attempt-recorded', {
+        detail: { attempt }
+      }));
+
       if (!getToken()) {
         showSyncToast('作答紀錄與錯題已存到這台裝置。尚未設定 GitHub Token，所以這次未同步到雲端。', false);
         return;
