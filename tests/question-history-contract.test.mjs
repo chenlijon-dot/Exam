@@ -48,6 +48,18 @@ assert.match(
 
 assert.match(
   records,
+  /\$\$\(['"]\.difficulty['"]\)\.forEach/,
+  'attempt lifecycle initialization must iterate difficulty buttons with querySelectorAll'
+);
+
+assert.doesNotMatch(
+  records,
+  /(?<!\$)\$\(['"]\.difficulty['"]\)\.forEach/,
+  'querySelector result must not be treated as an array during records initialization'
+);
+
+assert.match(
+  records,
   /schemaVersion:\s*3/,
   'new attempts must use schemaVersion 3'
 );
