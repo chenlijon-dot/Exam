@@ -2,6 +2,8 @@
   "schemaVersion": 1,
   "questions": [
     {
+      "questionId": "260921090617062",
+      "revision": 1,
       "number": 7,
       "section": "第一部分：詞彙和結構",
       "q": "Everyone likes our _____ teacher. She teaches biology quite patiently and always shows us lots of examples.",
@@ -12,6 +14,8 @@
       "e": "答案是 (B) science。後句明確說她教 biology（生物），因此是 science teacher（自然科／科學老師）。scarf 是圍巾，geography 是地理，scene 是場景。"
     },
     {
+      "questionId": "260921090617063",
+      "revision": 1,
       "number": 8,
       "q": "We weren’t early enough to _____ the train. We could only see it leaving!",
       "o": ["get on", "turn on", "depend on", "keep on"],
@@ -21,6 +25,8 @@
       "e": "答案是 (A) get on。get on the train 表示『上火車』。因為到得不夠早，只能看著車離開，所以是沒趕上車。turn on 是打開電器，depend on 是依靠，keep on 是持續。"
     },
     {
+      "questionId": "260921090617064",
+      "revision": 1,
       "number": 9,
       "q": "_____ up earlier, and we can catch the first bus.",
       "o": ["Get", "Getting", "Got", "You got"],
@@ -30,6 +36,8 @@
       "e": "答案是 (A) Get。這是『祈使句 + and + 結果句』：Get up earlier, and we can catch the first bus. 意思是『早一點起床，我們就能趕上第一班公車。』祈使句動詞要用原形。"
     },
     {
+      "questionId": "260921090617065",
+      "revision": 1,
       "number": 10,
       "q": "Little George is so short _____ he can’t reach the cookie jar by himself.",
       "o": ["to", "for", "that", "because"],
@@ -39,6 +47,8 @@
       "e": "答案是 (C) that。固定句型 so + 形容詞 + that + 子句，表示『如此……以致於……』。句意為 George 太矮了，以致於他自己拿不到餅乾罐。"
     },
     {
+      "questionId": "260921090617066",
+      "revision": 1,
       "number": 11,
       "q": "Tom forgot to do the dishes, so Mrs. Lin made him _____ the floor instead.",
       "o": ["mop", "mopping", "mopped", "to mop"],
@@ -48,6 +58,8 @@
       "e": "答案是 (A) mop。使役動詞 make 的句型是 make + 人 + 原形動詞，所以 made him mop the floor。不能用 to mop。"
     },
     {
+      "questionId": "260921090617067",
+      "revision": 1,
       "number": 12,
       "q": "We’ve already had too much information every day, _____?",
       "o": ["isn’t it", "don’t we", "doesn’t it", "haven’t we"],
@@ -57,6 +69,8 @@
       "e": "答案是 (D) haven’t we。主句是 We’ve had...，We’ve = We have，使用現在完成式且為肯定句，因此附加問句用否定的 haven’t we?"
     },
     {
+      "questionId": "260921090617068",
+      "revision": 1,
       "number": 13,
       "q": "After a two-hour search, the missing boy _____ in a toy store nearby.",
       "o": ["found", "was finding", "was found", "has found"],
@@ -66,6 +80,8 @@
       "e": "答案是 (C) was found。失蹤男孩是『被找到』，因此要用被動語態 be + p.p.；事件發生在過去，所以用 was found。"
     },
     {
+      "questionId": "260921090617069",
+      "revision": 1,
       "number": 14,
       "q": "Ms. Simmons asked us _____ in class.",
       "o": ["don’t talk", "not talk", "to not talk", "not to talk"],
@@ -75,6 +91,8 @@
       "e": "答案是 (D) not to talk。ask + 人 + to V 表示『要求某人做某事』；否定式把 not 放在 to 前面：ask + 人 + not to V。"
     },
     {
+      "questionId": "260921090617070",
+      "revision": 1,
       "number": 15,
       "q": "Did you see the girl _____ lost her puppy?",
       "o": ["×", "which", "she", "who"],
