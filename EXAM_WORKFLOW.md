@@ -151,27 +151,63 @@ Exam-Record = 個人學習結果
 
 # 3. 收到新考卷後的標準流程
 
+本流程分成「快速擷取」與「正式納入」兩段。大量圖片／PDF 不再逐題跑完整正式流程。
+
+## 3.1 第一階段：整卷快速擷取（RAW → STAGING）
+
 ```text
 1. 在 Drive 找到題目卷
-2. 在 Drive 找到答案卷
+2. 有答案卷則一起定位，但此階段不要求完成答案 QA
 3. 確認學校／年度／學期／年級／科目／段考次別
-4. 完整閱讀整份考卷
-5. 建立 census
-6. 在 Google Sheet 建立整卷逐題索引
-7. 先做第一輪 chapter / lesson mapping
-8. 對不確定題回查 canonical 教材知識庫
-9. 無法可靠判斷的題標 unknown
-10. 判斷每題題型與 runtime 需求
-11. 以官方答案卷核對答案
-12. 只把已適合網站呈現的題目放入 GitHub 題庫
-13. pending 題保留但不混入正式自動評量
-14. 更新章節「各校題庫」載入設定
-15. 更新學校數／題數資訊
-16. 驗證 JSON、runtime、導航、返回、再次進入
-17. commit / push main
-18. Pages 部署後實機抽查
-19. 日後教材增加時重新掃 unknown 與低信心分類
+4. 確認頁碼／題號／大題順序
+5. 連續辨識整卷
+6. 保留題號、題幹、選項、題組文字
+7. 圖題先記 [有圖] / image pending / 頁碼
+8. 看不清處標 [待人工確認]
+9. 寫入 staging 文字檔／校正版
+10. 整卷或整批完成後才停
 ```
+
+RAW → STAGING 階段預設不做：
+
+```text
+完整 census 深度分類
+Google Sheet 精細 mapping
+canonical 逐題回查
+正式 answerVerified
+questionId / revision
+chapter-bank sidecar
+runtime 接線
+Pages deploy
+```
+
+這一段的目標是先把原卷內容快速、完整地「吃進來」。
+
+## 3.2 第二階段：正式納入（STAGING → ACTIVE）
+
+staging 文字層完整後，再批次進行：
+
+```text
+1. 完整閱讀整份考卷
+2. 建立正式 census
+3. 在 Google Sheet 建立整卷逐題索引
+4. 第一輪 chapter / lesson mapping
+5. 不確定題回查 canonical
+6. 無法可靠判斷者標 unknown
+7. 判斷題型與 runtime 需求
+8. 以官方答案卷核對答案
+9. 完成 provenance / answerVerified
+10. 正式題建立 questionId + revision
+11. 適合網站呈現者寫入 chapter-bank
+12. pending 題保留但不混入正式自動評量
+13. 更新 runtime / schoolCount / subtitle
+14. 驗證 JSON、導航、返回、再次進入
+15. commit / push main
+16. Pages 部署後實機抽查
+17. 日後教材增加時重新掃 unknown 與低信心分類
+```
+
+正式 promotion 另須遵守 README 第 23.1 節與 question-bank governance spec。
 
 沒有答案卷時仍可做：
 
@@ -1429,11 +1465,24 @@ working tree 不乾淨時不要硬 pull。
 
 ## 純文字考題
 
+若任務是「先辨識／先吃資料」：
+
 ```text
-讀 Drive 原卷 + 答案卷
+讀 Drive 原卷
+→ 整批轉 staging 文字
+→ 標記待人工確認
+→ 暫停於 STAGING
+```
+
+若任務是「正式納入題庫」：
+
+```text
+staging 文字
 → census
 → Sheet mapping
 → 讀 canonical
+→ 答案 QA
+→ questionId / revision
 → GitHub 建／更新 sidecar JSON
 → 更新 runtime merge config
 → commit main
@@ -1442,13 +1491,25 @@ working tree 不乾淨時不要硬 pull。
 
 ## 有圖題
 
+快速擷取階段：
+
 ```text
-先完成 census / mapping / 答案驗證
+原卷圖片／PDF
+→ 先辨識文字
+→ 記錄圖題頁碼／題號
+→ 標 image pending
+→ 繼續整批
+```
+
+正式納入階段：
+
+```text
+完成 census / mapping / 答案驗證
 → 判斷必要圖片
 → 原卷裁 PNG
 → assets 放 GitHub
 → JSON 引用 image / optionImage
-→ localhost / Pages 實測
+→ Pages 實測
 ```
 
 ## 教材又新增
@@ -1511,6 +1572,48 @@ MutationObserver 卡死修正
 ```
 
 這證明同一套流程可以跨科使用。
+
+---
+
+## 24.1 圖片大量匯入時的 ChatGPT 預設
+
+使用者若說：
+
+```text
+先辨識
+先轉文字
+先吃題目
+先整理圖片
+先把這幾章轉成文字檔
+```
+
+一律優先解讀為：
+
+```text
+RAW → STAGING
+```
+
+除非使用者明確再說：
+
+```text
+正式納入
+建立題庫
+上 GitHub
+上線
+```
+
+否則不要自行展開：
+
+```text
+questionId
+revision
+Sheet mapping
+runtime
+deploy
+完整正式 QA
+```
+
+目標是維持大量圖片輸入吞吐量，避免治理成本前移。
 
 ---
 
