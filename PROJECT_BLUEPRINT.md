@@ -2041,6 +2041,8 @@ Exam/
 [x] 同 examKey 最多回溯 50 次 attempt
 [x] 重新做題會重設 recall state 並建立新的 attempt session
 [x] GEPT Vocabulary 維持 vocabId / vocabularyProgress，與固定 question history 隔離
+[x] GEPT Vocabulary 保存 vocabularyItems[] session snapshot，可回溯整份動態題組
+[x] GEPT session recall 與一般固定題 recall 雙向隔離
 [ ] chapter / lesson weakness aggregation
 [ ] 最近分數／錯題／作答時間的 Learner State 彙整層
 [ ] NEEDS_REVIEW / MASTERED 狀態
@@ -2143,6 +2145,10 @@ handwriting valid-history filtering
 retry reset
 ↓
 GEPT Vocabulary history isolation
+↓
+GEPT dynamic-session snapshot recall
+↓
+non-GEPT / GEPT recall state isolation
 ```
 
 下一階段才開始：
