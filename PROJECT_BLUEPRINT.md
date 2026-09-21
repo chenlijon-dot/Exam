@@ -410,6 +410,75 @@ concept / misconception
 
 因此數學手寫板後續應直接接入 Learner State、弱點導航與智慧選題。
 
+### 手寫答案保存：目前建議
+
+截至 2026-09-21，正式手寫題已經有穩定的 `questionId` identity，但學生「手寫答案本體」的長期保存格式仍應與一般選擇題分開設計。
+
+目前建議採 **PNG + JSON metadata** 兩層保存，而不是把整張手寫圖塞進 JSON：
+
+```text
+Canvas 作答
+↓
+PNG / WebP
+→ 保存學生實際筆跡，作為原始作答 evidence
+
+JSON / Firebase attempt metadata
+→ questionId
+→ questionRevision
+→ answerType: handwriting
+→ handwritingImagePath / storage reference
+→ submittedAt
+→ AI grading result
+→ 後續 misconception / concept diagnosis
+```
+
+建議的 attempt 資料形狀：
+
+```json
+{
+  "questionId": "math-7-1-1-1-hard-handwriting-01",
+  "questionRevision": 1,
+  "answerType": "handwriting",
+  "handwritingImagePath": "math-handwriting-images/<attempt-id>.png",
+  "submittedAt": "2026-09-21T09:40:00+08:00",
+  "grading": {
+    "verdict": "incorrect",
+    "errorStep": "第二行移項符號錯誤",
+    "whyWrong": "將負項移至等號另一側時未改號",
+    "correction": "移項後應改變符號",
+    "nextHint": "重新檢查第二行的移項"
+  }
+}
+```
+
+原則：
+
+- PNG / WebP 是學生當次手寫答案的**原始 evidence**；JSON 只保存索引、狀態與結構化判題結果。
+- 不建議把 base64 圖片長期直接塞入 attempt JSON / Firestore document，避免文件膨脹與同步成本增加。
+- `questionId` 指向題目 identity；`questionRevision` 指向學生作答當時看到的題目版本，兩者都應保存。
+- 一般選擇題可保存 canonical option index；手寫題則使用 `answerType: handwriting` + image reference，不應硬套 selected option schema。
+- AI 判題結果是衍生資料；原始手寫影像應保留，未來模型或 rubric 更新時才有重新判讀的可能。
+
+第二階段可選擇再保存 **stroke data**：
+
+```json
+{
+  "strokes": [
+    {
+      "points": [
+        {"x": 120, "y": 80, "t": 0},
+        {"x": 123, "y": 82, "t": 16},
+        {"x": 129, "y": 86, "t": 32}
+      ]
+    }
+  ]
+}
+```
+
+stroke data 的用途是重新渲染、筆畫時序分析、局部修改與未來更細的步驟辨識；它不是第一階段必要條件。第一階段先以 **影像 evidence + JSON metadata + grading result** 為主，避免過早增加資料量與 schema 複雜度。
+
+後續真正實作保存層時，還需要再決定影像實際 storage authority、retention、權限與 Firebase attempt schema；在這些規格確認前，本節是目前工作進度與建議，不代表已經完成 persistence migration。
+
 ## 5.6 正式歷屆考題
 
 基測／會考維持獨立正式資料區塊。
