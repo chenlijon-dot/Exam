@@ -17,7 +17,8 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": false,
-    "sourceNote": "文字層依 Google Drive《97年第一次數學科.pdf》原卷第 1～5 頁 34 題與第 6 頁答案表建立。Google Drive《97年第一次數學科_cropped》已有 18 個圖題、19 張裁圖；本版先建立文字、官方答案與永久 questionId/revision，圖像尚待匯入 GitHub assets 後清除 imagePending / optionImagePending。"
+    "sourceNote": "題目、原始選項與答案依 Google Drive《97年第一次數學科.pdf》原卷還原；原卷第 1～5 頁為 34 題試題，第 6 頁為答案表。共 18 個圖題、19 張原卷裁圖已由 Google Drive《97年第一次數學科_cropped》匯入 GitHub；Q30 分為題目長條圖與四個盒狀圖選項。裁圖 provenance 保留於 crop_manifest.txt。",
+    "sourceType": "official-past-exam"
   },
   "questions": [
     {
@@ -31,7 +32,7 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900001",
+      "questionId": "260921232500001",
       "revision": 1
     },
     {
@@ -45,7 +46,7 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900002",
+      "questionId": "260921232500002",
       "revision": 1
     },
     {
@@ -59,7 +60,7 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900003",
+      "questionId": "260921232500003",
       "revision": 1
     },
     {
@@ -73,9 +74,10 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900004",
+      "questionId": "260921232500004",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q04-number-line.png",
+      "imageAlt": "第4題數線上 p、q、r、s 四點位置關係"
     },
     {
       "number": 5,
@@ -88,9 +90,10 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900005",
+      "questionId": "260921232500005",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q05-parabola-translation.png",
+      "imageAlt": "第5題座標平面上的拋物線 y=x² 與點 P"
     },
     {
       "number": 6,
@@ -103,7 +106,7 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900006",
+      "questionId": "260921232500006",
       "revision": 1
     },
     {
@@ -117,7 +120,7 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900007",
+      "questionId": "260921232500007",
       "revision": 1
     },
     {
@@ -131,7 +134,7 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900008",
+      "questionId": "260921232500008",
       "revision": 1
     },
     {
@@ -145,9 +148,10 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900009",
+      "questionId": "260921232500009",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q09-two-circles-tangents.png",
+      "imageAlt": "第9題兩圓、公切線 AC、BD、弦 AB、CD 與交點 P"
     },
     {
       "number": 10,
@@ -160,7 +164,7 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900010",
+      "questionId": "260921232500010",
       "revision": 1
     },
     {
@@ -174,7 +178,7 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900011",
+      "questionId": "260921232500011",
       "revision": 1
     },
     {
@@ -188,9 +192,10 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900012",
+      "questionId": "260921232500012",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q12-hexagon-chain.png",
+      "imageAlt": "第12題黑白正六邊形排列的長條型鏈子"
     },
     {
       "number": 13,
@@ -203,9 +208,10 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900013",
+      "questionId": "260921232500013",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q13-mask-area.png",
+      "imageAlt": "第13題由正方形厚紙板剪成的面具圖形"
     },
     {
       "number": 14,
@@ -218,9 +224,10 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900014",
+      "questionId": "260921232500014",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q14-triangle-angle.png",
+      "imageAlt": "第14題三角形 ABC 與 D、E 點角度關係"
     },
     {
       "number": 15,
@@ -233,7 +240,7 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900015",
+      "questionId": "260921232500015",
       "revision": 1
     },
     {
@@ -247,7 +254,7 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900016",
+      "questionId": "260921232500016",
       "revision": 1
     },
     {
@@ -261,7 +268,7 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900017",
+      "questionId": "260921232500017",
       "revision": 1
     },
     {
@@ -275,9 +282,10 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900018",
+      "questionId": "260921232500018",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q18-overlapping-triangles.png",
+      "imageAlt": "第18題三角形 ABC 與 DEC 重疊、平行線及交點 F"
     },
     {
       "number": 19,
@@ -290,9 +298,10 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900019",
+      "questionId": "260921232500019",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q19-circle-square-arcs.png",
+      "imageAlt": "第19題圓內正方形 AEFD 與圓周 A、B、C、D 各點"
     },
     {
       "number": 20,
@@ -305,9 +314,10 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900020",
+      "questionId": "260921232500020",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q20-circle-parallel-chords.png",
+      "imageAlt": "第20題圓弧上 A、B、C、D 與平行線 BC、AD"
     },
     {
       "number": 21,
@@ -320,9 +330,10 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900021",
+      "questionId": "260921232500021",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q21-reflections-triangle.png",
+      "imageAlt": "第21題三角形 ABC 內點 P 及其關於三邊的對稱點 D、E、F"
     },
     {
       "number": 22,
@@ -335,9 +346,10 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900022",
+      "questionId": "260921232500022",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q22-three-ropes.png",
+      "imageAlt": "第22題三條繩子穿過木板的左右端點示意圖"
     },
     {
       "number": 23,
@@ -350,9 +362,10 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900023",
+      "questionId": "260921232500023",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q23-shooting-frequency-table.png",
+      "imageAlt": "第23題投進球數 0 至 6 的次數分配表"
     },
     {
       "number": 24,
@@ -365,7 +378,7 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900024",
+      "questionId": "260921232500024",
       "revision": 1
     },
     {
@@ -379,7 +392,7 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900025",
+      "questionId": "260921232500025",
       "revision": 1
     },
     {
@@ -393,7 +406,7 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900026",
+      "questionId": "260921232500026",
       "revision": 1
     },
     {
@@ -407,7 +420,7 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900027",
+      "questionId": "260921232500027",
       "revision": 1
     },
     {
@@ -421,7 +434,7 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900028",
+      "questionId": "260921232500028",
       "revision": 1
     },
     {
@@ -435,9 +448,10 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900029",
+      "questionId": "260921232500029",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q29-centroid-parallel-line.png",
+      "imageAlt": "第29題三角形 ABC 的重心 G、平行線 L 與 D、E、F 各點"
     },
     {
       "number": 30,
@@ -450,10 +464,12 @@
       ],
       "a": 3,
       "fixedOptions": true,
-      "questionId": "260921235900030",
+      "questionId": "260921232500030",
       "revision": 1,
-      "imagePending": true,
-      "optionImagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q30-bar-chart.png",
+      "imageAlt": "第30題某班 40 人投籃成績次數長條圖",
+      "optionImage": "past-exams/bct/97/first/assets/math/q30-options-boxplots.png",
+      "optionImageAlt": "第30題 A 至 D 四個盒狀圖選項"
     },
     {
       "number": 31,
@@ -466,9 +482,10 @@
       ],
       "a": 1,
       "fixedOptions": true,
-      "questionId": "260921235900031",
+      "questionId": "260921232500031",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q31-triangular-pyramids.png",
+      "imageAlt": "第31題兩個三角錐 ABCD、EFGH 與甲乙丙丁四個三角形"
     },
     {
       "number": 32,
@@ -481,9 +498,10 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900032",
+      "questionId": "260921232500032",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q32-incircle-angle.png",
+      "imageAlt": "第32題四邊形 ABCD 的內切圓 O 與圓心角"
     },
     {
       "number": 33,
@@ -496,9 +514,10 @@
       ],
       "a": 0,
       "fixedOptions": true,
-      "questionId": "260921235900033",
+      "questionId": "260921232500033",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q33-equilateral-construction.png",
+      "imageAlt": "第33題圓 O、直徑 AD 與甲乙兩種正三角形作圖法"
     },
     {
       "number": 34,
@@ -511,9 +530,10 @@
       ],
       "a": 2,
       "fixedOptions": true,
-      "questionId": "260921235900034",
+      "questionId": "260921232500034",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/97/first/assets/math/q34-three-tangent-circles.png",
+      "imageAlt": "第34題三個兩兩相切的圓 O₁、O₂、O₃ 與半圓弧 AB"
     }
   ]
 }
