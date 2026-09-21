@@ -237,4 +237,28 @@ assert.match(
   'vocabulary answered count must derive from correct + wrong'
 );
 
+
+const vocabPersistStart = vocab.indexOf('async function persistSessionProgress');
+assert.notEqual(vocabPersistStart, -1, 'vocabulary persistence function must exist');
+const vocabPersist = vocab.slice(vocabPersistStart, vocab.indexOf('function makeCard', vocabPersistStart));
+
+const blankReturn = vocabPersist.indexOf('if (selected === null) return;');
+const firstProgressIncrement = vocabPersist.indexOf('reviewCount: Number(current.reviewCount || 0) + 1');
+assert.ok(
+  blankReturn >= 0 && firstProgressIncrement >= 0 && blankReturn < firstProgressIncrement,
+  'blank vocabulary answers must exit before progress increments'
+);
+
+assert.doesNotMatch(
+  vocabPersist,
+  /unansweredCount:\s*api\.fs\.increment/,
+  'new vocabulary Firestore writes must not increment unansweredCount'
+);
+
+assert.match(
+  vocab,
+  /historyDomain[^\n]*vocabulary|gept-vocabulary-memory/,
+  'vocabulary remains a separate history domain'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
