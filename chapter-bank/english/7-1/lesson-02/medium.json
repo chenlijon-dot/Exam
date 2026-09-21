@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921092048061",
+      "revision": 1,
       "number": 1,
       "section": "詞彙與結構",
       "q": "Look at the animal near me. _____ is a fox.",
@@ -35,6 +37,8 @@
       "e": "答案是 (A) This。animal 是單數，且 near me 表示近指。"
     },
     {
+      "questionId": "260921092048062",
+      "revision": 1,
       "number": 2,
       "q": "Look at the animals over there. _____ are bears.",
       "o": [
@@ -51,6 +55,8 @@
       "e": "答案是 (C) Those。animals 是複數，over there 表示遠指。"
     },
     {
+      "questionId": "260921092048063",
+      "revision": 1,
       "number": 3,
       "q": "A: What are these?  B: _____ sheep.",
       "o": [
@@ -67,6 +73,8 @@
       "e": "答案是 (C) They are。these 為複數，回答用 They are ...。"
     },
     {
+      "questionId": "260921092048064",
+      "revision": 1,
       "number": 4,
       "q": "Which sentence is correct?",
       "o": [
@@ -83,6 +91,8 @@
       "e": "答案是 (C) What are those?。those 是複數，搭配 are。"
     },
     {
+      "questionId": "260921092048065",
+      "revision": 1,
       "number": 5,
       "q": "Which plural form is correct?",
       "o": [
@@ -99,6 +109,8 @@
       "e": "答案是 (B) foxes。以 x 結尾的名詞通常加 -es。"
     },
     {
+      "questionId": "260921092048066",
+      "revision": 1,
       "number": 6,
       "q": "Which plural form is correct?",
       "o": [
@@ -115,6 +127,8 @@
       "e": "答案是 (C) babies。子音 + y 結尾，變 y 為 i 再加 -es。"
     },
     {
+      "questionId": "260921092048067",
+      "revision": 1,
       "number": 7,
       "q": "Which plural form follows the -ves pattern?",
       "o": [
@@ -131,6 +145,8 @@
       "e": "答案是 (A) knives。教材整理的複數規則包含 -ves 類型。"
     },
     {
+      "questionId": "260921092048068",
+      "revision": 1,
       "number": 8,
       "q": "Amy and Ben are students. _____ school is near the park.",
       "o": [
@@ -147,6 +163,8 @@
       "e": "答案是 (C) Their。Amy and Ben 是複數第三人稱，所有格用 their。"
     },
     {
+      "questionId": "260921092048069",
+      "revision": 1,
       "number": 9,
       "q": "The desk belongs to one girl. Which phrase is correct?",
       "o": [
@@ -163,6 +181,8 @@
       "e": "答案是 (B) the girl’s desk。單數名詞所有格通常加 ’s。"
     },
     {
+      "questionId": "260921092048070",
+      "revision": 1,
       "number": 10,
       "q": "The desks belong to several girls. Which phrase is correct?",
       "o": [
@@ -179,6 +199,8 @@
       "e": "答案是 (A) the girls’ desks。規則複數名詞以 s 結尾，所有格在 s 後加 apostrophe。"
     },
     {
+      "questionId": "260921092048071",
+      "revision": 1,
       "number": 11,
       "q": "According to the reading, an African elephant is about _____ meters tall.",
       "o": [
@@ -195,6 +217,8 @@
       "e": "答案是 (B) 3.2。教材比較資料中 African elephant 約 3.2 meters。"
     },
     {
+      "questionId": "260921092048072",
+      "revision": 1,
       "number": 12,
       "q": "According to the reading, Asian elephants live about _____ years.",
       "o": [
@@ -211,6 +235,8 @@
       "e": "答案是 (C) 60。教材指出 Asian elephants 的 lifespan 約 60 years。"
     },
     {
+      "questionId": "260921092048073",
+      "revision": 1,
       "number": 13,
       "q": "You want to compare the ears of Asian and African elephants quickly. What should you look for first?",
       "o": [
@@ -228,6 +254,8 @@
       "e": "答案是 (A)。先鎖定比較主題與關鍵字，能快速找到耳朵差異的資訊。"
     },
     {
+      "questionId": "260921092048074",
+      "revision": 1,
       "number": 14,
       "q": "Which pair begins with the sounds /b/ and /d/ in that order?",
       "o": [
@@ -244,6 +272,8 @@
       "e": "答案是 (A) big — desk。big 以 /b/ 開頭；desk 以 /d/ 開頭。"
     },
     {
+      "questionId": "260921092048075",
+      "revision": 1,
       "number": 15,
       "q": "A: My birth year is the Year of the Monkey.  B: Really? _____ you?",
       "o": [
