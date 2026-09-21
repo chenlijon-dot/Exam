@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921090617141",
+      "revision": 1,
       "number": 1,
       "section": "第一部分：詞彙和結構",
       "q": "Nick hasn’t decided his _____ — his dad wants him to study medicine as he did.",
@@ -28,6 +30,8 @@
       "e": "答案是 (A) major。decide one’s major 表示『決定主修科目』；後文提到父親希望他念醫學，更能確認是在談大學主修。"
     },
     {
+      "questionId": "260921090617142",
+      "revision": 1,
       "number": 2,
       "q": "Frank’s spent lots of time learning English just to improve his reading _____.",
       "o": ["section", "ability", "safety", "activity"],
@@ -37,6 +41,8 @@
       "e": "答案是 (B) ability。reading ability 是『閱讀能力』。section 是部分，safety 是安全，activity 是活動。"
     },
     {
+      "questionId": "260921090617143",
+      "revision": 1,
       "number": 3,
       "q": "After the accident happened for two weeks, the people were still asking who should be _____ for it.",
       "o": ["additional", "certain", "responsible", "childish"],
@@ -46,6 +52,8 @@
       "e": "答案是 (C) responsible。be responsible for ... 表示『對……負責』。"
     },
     {
+      "questionId": "260921090617144",
+      "revision": 1,
       "number": 4,
       "q": "The police were trying to find out what _____ the air crash.",
       "o": ["caused", "accepted", "caught", "attempted"],
@@ -55,6 +63,8 @@
       "e": "答案是 (A) caused。警方想找出『是什麼造成空難』，cause 作動詞就是『造成、導致』。"
     },
     {
+      "questionId": "260921090617145",
+      "revision": 1,
       "number": 5,
       "q": "Most people don’t like those who often _____. So, be humble, and don’t talk too much.",
       "o": ["show up", "call on", "show off", "call off"],
@@ -64,6 +74,8 @@
       "e": "答案是 (C) show off，表示『炫耀、賣弄』。後句說要謙虛，不要說太多，與 show off 語意相對。"
     },
     {
+      "questionId": "260921090617146",
+      "revision": 1,
       "number": 6,
       "q": "In winter, we often put on _____ before going to bed.",
       "o": ["patterns", "blouses", "pajamas", "panties"],
@@ -73,6 +85,8 @@
       "e": "答案是 (C) pajamas。睡前通常換上『睡衣』。"
     },
     {
+      "questionId": "260921090617147",
+      "revision": 1,
       "number": 7,
       "q": "Don’t _____ when others are talking.",
       "o": ["interrupt", "indicate", "introduce", "influence"],
@@ -82,6 +96,8 @@
       "e": "答案是 (A) interrupt。interrupt someone 表示『打斷某人說話』。"
     },
     {
+      "questionId": "260921090617148",
+      "revision": 1,
       "number": 8,
       "q": "What a nice dinner, honey! The restaurant is good, and the food is perfect. _____, it’s our anniversary — here’s to another 10 years!",
       "o": ["After all", "All the time", "Above all", "All of a sudden"],
@@ -91,6 +107,8 @@
       "e": "答案是 (A) After all，表示『畢竟、終究』。句意是餐廳與食物都很好，而且畢竟今天是結婚紀念日。"
     },
     {
+      "questionId": "260921090617149",
+      "revision": 1,
       "number": 9,
       "q": "It’s hot here. Do you mind _____ the window for me?",
       "o": ["to open", "you open", "opening", "you opening"],
@@ -100,6 +118,8 @@
       "e": "答案是 (C) opening。Do you mind + V-ing 是固定句型，表示『你介意做……嗎？』。"
     },
     {
+      "questionId": "260921090617150",
+      "revision": 1,
       "number": 10,
       "q": "It’s been a while since we last met, _____?",
       "o": ["isn’t it", "don’t we", "hasn’t it", "didn’t we"],
@@ -109,6 +129,8 @@
       "e": "答案是 (C) hasn’t it。主句 It’s been = It has been，附加問句依助動詞 has 形成 hasn’t it。"
     },
     {
+      "questionId": "260921090617151",
+      "revision": 1,
       "number": 11,
       "q": "James should _____ the shot, but he didn’t — that’s why we lost!",
       "o": ["make", "made", "have made", "making"],
@@ -118,6 +140,8 @@
       "e": "答案是 (C) have made。should have + p.p. 表示『本來應該做卻沒有做』；後面的 but he didn’t 正好呼應。"
     },
     {
+      "questionId": "260921090617152",
+      "revision": 1,
       "number": 12,
       "q": "Not only Judy but Wendy _____ the drums well. They’re both marvelous!",
       "o": ["play", "plays", "have played", "had played"],
@@ -127,6 +151,8 @@
       "e": "答案是 (B) plays。not only A but B 作主詞時，動詞通常與較接近的主詞 B 一致；Wendy 是第三人稱單數，所以用 plays。"
     },
     {
+      "questionId": "260921090617153",
+      "revision": 1,
       "number": 13,
       "q": "We really don’t know _____.",
       "o": ["where does Tom live", "where Tom live", "where does Tom to live", "where Tom lives"],
@@ -136,6 +162,8 @@
       "e": "答案是 (D) where Tom lives。間接問句要用直述句語序：疑問詞 + 主詞 + 動詞。"
     },
     {
+      "questionId": "260921090617154",
+      "revision": 1,
       "number": 14,
       "q": "Remember to give us a call after you _____ in Moscow.",
       "o": ["arriving", "arrive", "will arrive", "arrived"],
@@ -145,6 +173,8 @@
       "e": "答案是 (B) arrive。表示未來時間的 after 子句通常用現在式代替 will + V。"
     },
     {
+      "questionId": "260921090617155",
+      "revision": 1,
       "number": 15,
       "q": "The typhoon _____ we talked about last week will hit tomorrow.",
       "o": ["×", "where", "of which", "when"],
@@ -154,6 +184,8 @@
       "e": "答案是 (A) ×。關係代名詞在子句中作 talked about 的受詞，可以省略：the typhoon (that/which) we talked about。"
     },
     {
+      "questionId": "260921090617156",
+      "revision": 1,
       "number": 16,
       "section": "第二部分：段落填空",
       "groupId": "round05-cloze-16-20",
@@ -167,6 +199,8 @@
       "e": "答案是 (B) but。not only A, but B 可表『不只 A，而且 B』；此處表示她們不只外表不同，想法也不同。"
     },
     {
+      "questionId": "260921090617157",
+      "revision": 1,
       "number": 17,
       "groupId": "round05-cloze-16-20",
       "q": "第 17 空應填入哪一個選項？",
@@ -177,6 +211,8 @@
       "e": "答案是 (C) the flute。後文說 Mindy knows nothing about music，前面因此應填一種樂器。play the flute 是『吹長笛』。"
     },
     {
+      "questionId": "260921090617158",
+      "revision": 1,
       "number": 18,
       "groupId": "round05-cloze-16-20",
       "q": "第 18 空應填入哪一個選項？",
@@ -187,6 +223,8 @@
       "e": "答案是 (B) keeps。keep a diary 是固定搭配，表示『寫日記／記日記』。"
     },
     {
+      "questionId": "260921090617159",
+      "revision": 1,
       "number": 19,
       "groupId": "round05-cloze-16-20",
       "q": "第 19 空應填入哪一個選項？",
@@ -197,6 +235,8 @@
       "e": "答案是 (D) common。have something in common 表示『有共同之處』。"
     },
     {
+      "questionId": "260921090617160",
+      "revision": 1,
       "number": 20,
       "groupId": "round05-cloze-16-20",
       "q": "第 20 空應填入哪一個選項？",
@@ -207,6 +247,8 @@
       "e": "依原書選項判讀答案為 (C) possibly。原句印作 try to help others as possibly as they can，這在自然英文中不理想；較自然會寫 as much as they can 或 as much as possible。此處保留原書題文與選項。"
     },
     {
+      "questionId": "260921090617161",
+      "revision": 1,
       "number": 21,
       "section": "第二部分：段落填空",
       "groupId": "round05-cloze-21-25",
@@ -220,6 +262,8 @@
       "e": "答案是 (B) does。Who 在此作主詞，問『家裡誰做大部分家事？』，一般現在式用 does。"
     },
     {
+      "questionId": "260921090617162",
+      "revision": 1,
       "number": 22,
       "groupId": "round05-cloze-21-25",
       "q": "第 22 空應填入哪一個選項？",
@@ -230,6 +274,8 @@
       "e": "答案是 (C) realize。家人直到媽媽生病，才『意識到』她有多忙、多累。"
     },
     {
+      "questionId": "260921090617163",
+      "revision": 1,
       "number": 23,
       "groupId": "round05-cloze-21-25",
       "q": "第 23 空應填入哪一個選項？",
@@ -240,6 +286,8 @@
       "e": "答案是 (A) rest。the rest of our family 表示『家裡其他的人／其餘家人』。"
     },
     {
+      "questionId": "260921090617164",
+      "revision": 1,
       "number": 24,
       "groupId": "round05-cloze-21-25",
       "q": "第 24 空應填入哪一個選項？",
@@ -250,6 +298,8 @@
       "e": "答案是 (D) has worked。From then on 常搭配現在完成式；主詞 each 是單數，因此用 has worked。"
     },
     {
+      "questionId": "260921090617165",
+      "revision": 1,
       "number": 25,
       "groupId": "round05-cloze-21-25",
       "q": "第 25 空應填入哪一個選項？",
@@ -260,6 +310,8 @@
       "e": "答案是 (A) set。set the table 是固定片語，表示『擺餐具、準備餐桌』。"
     },
     {
+      "questionId": "260921090617166",
+      "revision": 1,
       "number": 26,
       "section": "第三部分：閱讀理解",
       "groupId": "round05-reading-26-27",
@@ -273,6 +325,8 @@
       "e": "答案是 (B) SUSA。Jane 需要收音機、相機、深色，且預算只有 NT$5,000。SUSA 售價 NT$3,980，有 Radio、camera，顏色有 Gray、Blue，全部符合。"
     },
     {
+      "questionId": "260921090617167",
+      "revision": 1,
       "number": 27,
       "groupId": "round05-reading-26-27",
       "q": "Ms. Smith bought two cellphones at Jessie’s Sell Phones on the last day of June. She bought two STCs. How much did she save during the sale?",
@@ -283,6 +337,8 @@
       "e": "答案是 (C) $16,000。STC 原價 NT$20,000，特價 NT$12,000，每支省 NT$8,000；兩支共省 NT$16,000。"
     },
     {
+      "questionId": "260921090617168",
+      "revision": 1,
       "number": 28,
       "section": "第三部分：閱讀理解",
       "groupId": "round05-reading-28-29",
@@ -296,6 +352,8 @@
       "e": "答案是 (B)。文章直接說 Dad is a bit nervous，因為 He’s afraid his English won’t be good enough，所以他擔心英文溝通。"
     },
     {
+      "questionId": "260921090617169",
+      "revision": 1,
       "number": 29,
       "groupId": "round05-reading-28-29",
       "q": "Why has Carrie’s mother packed extra clothes?",
@@ -306,6 +364,8 @@
       "e": "答案是 (C)。母親要求大家多帶衣服，是因為她聽說 Britain 的天氣 changes all the time，也就是擔心天氣多變。"
     },
     {
+      "questionId": "260921090617170",
+      "revision": 1,
       "number": 30,
       "section": "第三部分：閱讀理解",
       "groupId": "round05-reading-30-32",
@@ -319,6 +379,8 @@
       "e": "答案是 (B)。Mary 工作一週很辛苦，Peter 也一直加班，兩人因此決定留在家裡安靜休息。"
     },
     {
+      "questionId": "260921090617171",
+      "revision": 1,
       "number": 31,
       "groupId": "round05-reading-30-32",
       "q": "Why did Mary order pizza?",
@@ -329,6 +391,8 @@
       "e": "答案是 (B)。文中明確說 She had decided earlier that she didn’t want to cook on the last day of the year。"
     },
     {
+      "questionId": "260921090617172",
+      "revision": 1,
       "number": 32,
       "groupId": "round05-reading-30-32",
       "q": "Why did Peter and Mary get sick?",
@@ -339,6 +403,8 @@
       "e": "答案是 (A)。兩人吃完披薩不久都出現噁心、暈眩、嘔吐，最後還後悔叫了披薩；依上下文可推知披薩有問題。"
     },
     {
+      "questionId": "260921090617173",
+      "revision": 1,
       "number": 33,
       "section": "第三部分：閱讀理解",
       "groupId": "round05-reading-33-35",
@@ -352,6 +418,8 @@
       "e": "答案是 (D)。全文從微笑、幫助別人、傾聽，到做自己，都在說明『如何建立友誼、交到好朋友』。"
     },
     {
+      "questionId": "260921090617174",
+      "revision": 1,
       "number": 34,
       "groupId": "round05-reading-33-35",
       "q": "According to the writer, what is NOT a good way to make friends?",
@@ -362,6 +430,8 @@
       "e": "答案是 (D)。文章說 You do not need to please all the people，因此『討好每個人』不是作者建議的方法。"
     },
     {
+      "questionId": "260921090617175",
+      "revision": 1,
       "number": 35,
       "groupId": "round05-reading-33-35",
       "q": "What does the writer mean by saying “break the walls between people”?",
