@@ -131,6 +131,61 @@
     };
   }
 
+  function clampHistoryLimit(limitCount = 50) {
+    return Math.max(1, Math.min(Number(limitCount) || 50, 50));
+  }
+
+  async function loadRecentQuestionAttempts(limitCount = 50) {
+    if (!activeUser?.uid || !db || !firestore) return [];
+
+    try {
+      const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
+      const historyQuery = firestore.query(
+        attemptsRef,
+        firestore.where('historyDomain', '==', 'question'),
+        firestore.orderBy('submittedAt', 'desc'),
+        firestore.limit(clampHistoryLimit(limitCount))
+      );
+      const snapshot = await firestore.getDocs(historyQuery);
+      return snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+    } catch (error) {
+      console.warn('[FirestoreSync] recent question history unavailable', error);
+      return [];
+    }
+  }
+
+  async function loadExamAttempts(examKey, limitCount = 50) {
+    const normalizedExamKey = String(examKey || '').trim();
+    if (!normalizedExamKey || !activeUser?.uid || !db || !firestore) return [];
+
+    try {
+      const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
+      const historyQuery = firestore.query(
+        attemptsRef,
+        firestore.where('historyDomain', '==', 'question'),
+        firestore.where('examKey', '==', normalizedExamKey),
+        firestore.orderBy('submittedAt', 'desc'),
+        firestore.limit(clampHistoryLimit(limitCount))
+      );
+      const snapshot = await firestore.getDocs(historyQuery);
+      return snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+    } catch (error) {
+      console.warn('[FirestoreSync] same-exam history unavailable', error);
+      return [];
+    }
+  }
+
+  window.ChrisExamHistoryStore = {
+    loadRecentQuestionAttempts,
+    loadExamAttempts
+  };
+
   async function initFirestore() {
     hookLocalRecordWrites();
 
