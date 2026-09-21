@@ -1088,7 +1088,7 @@ RAW：原卷 8 頁 + cropped 15 張 PNG
 Stage 1：34 題文字骨架 + 官方答案 + expectedImages mapping
 → Stage 2：使用者以 PowerShell 5.1 上傳 18 張 PNG
 → remote read-back 18 / 18
-→ 16 題具 image／optionImage（Q22 同時具 image + optionImage）
+→ 17 個圖題；16 題 image + 2 題 optionImage（Q22 同時具 image + optionImage）
 → 第二輪 QA
 → 34 題逐題詳解
 → 批次核發永久 questionId + revision: 1
