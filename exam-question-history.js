@@ -84,7 +84,7 @@
   }
 
   function clearRecallControls() {
-    document.querySelector('#questionHistoryRecallControls')?.remove();
+    document.querySelectorAll('[data-question-history-recall-controls]').forEach(el => el.remove());
   }
 
   function clearRecallButton() {
@@ -142,39 +142,24 @@
   }
 
   function updateRecallControls() {
-    const controls = document.querySelector('#questionHistoryRecallControls');
-    if (!controls || recallIndex < 0 || recallIndex >= recallAttempts.length) return;
+    if (recallIndex < 0 || recallIndex >= recallAttempts.length) return;
 
     const attempt = recallAttempts[recallIndex];
-    const position = controls.querySelector('[data-recall-position]');
-    const older = controls.querySelector('[data-recall-older]');
-    const newer = controls.querySelector('[data-recall-newer]');
+    const time = formatRecallTime(attempt?.submittedAt);
+    const label = `第 ${recallIndex + 1} / ${recallAttempts.length} 次${time ? `｜${time}` : ''}`;
 
-    if (position) {
-      const time = formatRecallTime(attempt?.submittedAt);
-      position.textContent = `第 ${recallIndex + 1} / ${recallAttempts.length} 次${time ? `｜${time}` : ''}`;
-    }
-    if (older) older.disabled = recallIndex >= recallAttempts.length - 1;
-    if (newer) newer.disabled = recallIndex <= 0;
+    document.querySelectorAll('[data-question-history-recall-controls]').forEach(controls => {
+      const position = controls.querySelector('[data-recall-position]');
+      const older = controls.querySelector('[data-recall-older]');
+      const newer = controls.querySelector('[data-recall-newer]');
+
+      if (position) position.textContent = label;
+      if (older) older.disabled = recallIndex >= recallAttempts.length - 1;
+      if (newer) newer.disabled = recallIndex <= 0;
+    });
   }
 
-  function ensureRecallControls() {
-    let controls = document.querySelector('#questionHistoryRecallControls');
-    if (controls) return controls;
-
-    controls = document.createElement('div');
-    controls.id = 'questionHistoryRecallControls';
-    controls.className = 'question-history-recall-controls';
-    controls.innerHTML = `
-      <button type="button" class="secondary" data-recall-older>前一次</button>
-      <span class="question-history-recall-position" data-recall-position></span>
-      <button type="button" class="secondary" data-recall-newer>後一次</button>
-    `;
-
-    const actions = document.querySelector('#examScreen .actions');
-    if (actions) actions.insertAdjacentElement('beforebegin', controls);
-    else document.querySelector('#result')?.insertAdjacentElement('afterend', controls);
-
+  function wireRecallControls(controls) {
     controls.querySelector('[data-recall-older]')?.addEventListener('click', () => {
       if (recallIndex >= recallAttempts.length - 1) return;
       recallIndex += 1;
@@ -185,8 +170,41 @@
       recallIndex -= 1;
       renderRecallAttempt();
     });
+  }
 
+  function createRecallControls(id) {
+    const controls = document.createElement('div');
+    controls.id = id;
+    controls.dataset.questionHistoryRecallControls = '1';
+    controls.className = 'question-history-recall-controls';
+    controls.innerHTML = `
+      <button type="button" class="secondary" data-recall-older>前一次</button>
+      <span class="question-history-recall-position" data-recall-position></span>
+      <button type="button" class="secondary" data-recall-newer>後一次</button>
+    `;
+    wireRecallControls(controls);
     return controls;
+  }
+
+  function ensureRecallControls() {
+    let topControls = document.querySelector('#questionHistoryRecallControlsTop');
+    if (!topControls) {
+      topControls = createRecallControls('questionHistoryRecallControlsTop');
+      const quiz = document.querySelector('#quiz');
+      if (quiz) quiz.insertAdjacentElement('beforebegin', topControls);
+      else document.querySelector('#result')?.insertAdjacentElement('afterend', topControls);
+    }
+
+    let bottomControls = document.querySelector('#questionHistoryRecallControls');
+    if (!bottomControls) {
+      bottomControls = createRecallControls('questionHistoryRecallControls');
+      const actions = document.querySelector('#examScreen .actions');
+      if (actions) actions.insertAdjacentElement('beforebegin', bottomControls);
+      else document.querySelector('#quiz')?.insertAdjacentElement('afterend', bottomControls);
+    }
+
+    updateRecallControls();
+    return bottomControls;
   }
 
   function showRecallMessage(message) {
