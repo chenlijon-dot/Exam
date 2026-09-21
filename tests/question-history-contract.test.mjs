@@ -82,4 +82,43 @@ assert.match(randomizer, /optionCanonicalIndices/, 'option randomizer must prese
 assert.match(records, /selectedCanonicalIndex/, 'attempt records must store canonical selected option');
 assert.match(records, /correctCanonicalIndex/, 'attempt records must store canonical correct option');
 
+
+const firestoreSync = read('firebase-firestore-sync.js');
+
+assert.match(
+  firestoreSync,
+  /window\.ChrisExamHistoryStore/,
+  'Firestore sync must expose a question history store'
+);
+
+assert.match(
+  firestoreSync,
+  /loadRecentQuestionAttempts/,
+  'history store must expose recent fixed-question attempts'
+);
+
+assert.match(
+  firestoreSync,
+  /loadExamAttempts/,
+  'history store must expose same-exam attempts'
+);
+
+assert.match(
+  firestoreSync,
+  /where\(['"]historyDomain['"],\s*['"]==['"],\s*['"]question['"]\)/,
+  'fixed-question history queries must exclude vocabulary history'
+);
+
+assert.match(
+  firestoreSync,
+  /where\(['"]examKey['"],\s*['"]==['"]/,
+  'same-exam history query must filter by examKey'
+);
+
+assert.match(
+  firestoreSync,
+  /Math\.min\([^\n]*50\)/,
+  'history query limit must be capped at 50'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
