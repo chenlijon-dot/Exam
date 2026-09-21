@@ -68,5 +68,20 @@ assert.match(code, /vocabRecallBtn/, 'GEPT submit flow must expose its own recal
 assert.match(code, /vocabularyItems/, 'GEPT recall must render stored vocabulary session snapshots');
 assert.match(code, /data-vocab-recall-controls/, 'GEPT recall must expose synchronized top/bottom navigation');
 assert.match(code, /exam:attempt-recorded/, 'GEPT recall button must appear after authoritative attempt persistence');
+assert.match(
+  code,
+  /exam:started[\s\S]*?examType !== 'gept-vocabulary-memory'[\s\S]*?resetVocabularyRecall\(\)/,
+  'starting a non-GEPT exam must clear all vocabulary recall state'
+);
+assert.match(
+  code,
+  /renderVocabularyRecallAttempt\(\)[\s\S]*?examContextCurrent\?\.examType !== 'gept-vocabulary-memory'/,
+  'vocabulary recall renderer must refuse to overwrite non-GEPT exams'
+);
+assert.match(
+  code,
+  /enterVocabularyRecall\(\)[\s\S]*?examContextCurrent\?\.examType !== 'gept-vocabulary-memory'/,
+  'vocabulary recall entry must be blocked outside GEPT'
+);
 
-console.log('vocabulary history semantics + session recall: PASS');
+console.log('vocabulary history semantics + session recall isolation: PASS');
