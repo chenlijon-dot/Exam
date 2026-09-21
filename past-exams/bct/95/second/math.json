@@ -21,6 +21,8 @@
              },
     "questions":  [
                       {
+                          "questionId":  "260921082708351",
+                          "revision":  1,
                           "number":  1,
                           "q":  "計算 11－3²×〔2－（－3）²〕＋6 之值為何？",
                           "o":  [
@@ -33,6 +35,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708352",
+                          "revision":  1,
                           "number":  2,
                           "q":  "如右圖，將 5 個全等的灰色菱形放在圓 O 的內部，使其對角線 OA、OB、OC、OD、OE 均為圓 O 的半徑，且弧 AB＝弧 BC＝弧 CD＝弧 DE＝弧 EA。若右圖的四直線 L₁、L₂、L₃、L₄ 中有兩直線是灰色圖形的對稱軸，則這兩直線為何？",
                           "o":  [
@@ -47,6 +51,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q02-rhombuses-symmetry-circle.png"
                       },
                       {
+                          "questionId":  "260921082708353",
+                          "revision":  1,
                           "number":  3,
                           "q":  "在坐標平面上，下列哪一點在方程式 3x－2y＝7 的圖形上？",
                           "o":  [
@@ -59,6 +65,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708354",
+                          "revision":  1,
                           "number":  4,
                           "q":  "安安與家人到游泳池游泳，買 2 張全票與 3 張學生票共付了 155 元。設學生票每張 x 元，全票每張比學生票貴 15 元，則下列哪一個式子可用來表示題目中的數量關係？",
                           "o":  [
@@ -71,6 +79,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708355",
+                          "revision":  1,
                           "number":  5,
                           "q":  "右圖為小華 6～12 月份每月的零用錢與支出費用折線圖。若小華將每月剩餘金額儲存起來，則下列何者可為小華 6～12 月份每月所存金額的折線圖？",
                           "o":  [
@@ -87,6 +97,8 @@
                           "optionImage":  "past-exams/bct/95/second/assets/math/q05-options.png"
                       },
                       {
+                          "questionId":  "260921082708356",
+                          "revision":  1,
                           "number":  6,
                           "q":  "下列哪一選項中的兩數互質？",
                           "o":  [
@@ -99,6 +111,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708357",
+                          "revision":  1,
                           "number":  7,
                           "q":  "若二元一次聯立方程式 3x－2y＝9、4x＋3y＝29 的解為 x＝a，y＝b，則 a＋b＝？",
                           "o":  [
@@ -111,6 +125,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708358",
+                          "revision":  1,
                           "number":  8,
                           "q":  "如下圖，數線上有相異四點 A、B、C、D，分別表示 32、4x－8、3x＋7、43 四個數。若 x 為一正整數，且 A、B、C、D 的相對位置如圖所示，則 x＝？",
                           "o":  [
@@ -125,6 +141,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q08-number-line.png"
                       },
                       {
+                          "questionId":  "260921082708359",
+                          "revision":  1,
                           "number":  9,
                           "q":  "如右圖，圓上有 A、B、C 三點，直線 L 與圓相切於 A，CD 為∠ACB 的角平分線，且與 L 交於 D 點。若弧 AB＝80°，弧 BC＝60°，則∠ADC＝？",
                           "o":  [
@@ -139,6 +157,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q09-circle-tangent-angle-bisector.png"
                       },
                       {
+                          "questionId":  "260921082708360",
+                          "revision":  1,
                           "number":  10,
                           "q":  "如右圖，AB⊥BC、AD⊥CD，且 AB＝7，BC＝a，CD＝b，AD＝9，求（a＋b）（a－b）＝？",
                           "o":  [
@@ -153,6 +173,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q10-quadrilateral-right-angles.png"
                       },
                       {
+                          "questionId":  "260921082708361",
+                          "revision":  1,
                           "number":  11,
                           "q":  "有甲、乙兩個箱子，甲箱重 47 公斤，其重量比乙箱的 3 倍還重，且比乙箱的 4 倍還輕。若乙箱重 x 公斤，依題意可得到下列哪一個關係式？",
                           "o":  [
@@ -165,6 +187,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708362",
+                          "revision":  1,
                           "number":  12,
                           "q":  "右圖的兩長方形 ABCD、ECGF 為相似形，且 AD 的對應邊為 EF。若 AB＝6，FG＝4，BG＝25，則兩長方形的面積和為何？",
                           "o":  [
@@ -179,6 +203,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q12-similar-rectangles.png"
                       },
                       {
+                          "questionId":  "260921082708363",
+                          "revision":  1,
                           "number":  13,
                           "q":  "小娟想用 60 塊邊長為 1 的正方形紙板，緊密地拼成面積為 60 的長方形，則此長方形的周長最小可為多少？",
                           "o":  [
@@ -191,6 +217,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708364",
+                          "revision":  1,
                           "number":  14,
                           "q":  "已知方程式（x/3－1）（x＋2）＝0 的兩根為 a、b，其中 a＞b，則下列哪一個選項是正確的？",
                           "o":  [
@@ -203,6 +231,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708365",
+                          "revision":  1,
                           "number":  15,
                           "q":  "如右圖，在坐標平面上，小明從 A（0，－8）出發，每天皆向右走 1 單位，向上走 3 單位。第一天由 A 點走到 A₁ 點，第二天由 A₁ 點走到 A₂ 點，……。求小明第九天會到達下列哪一點？",
                           "o":  [
@@ -217,6 +247,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q15-coordinate-steps.png"
                       },
                       {
+                          "questionId":  "260921082708366",
+                          "revision":  1,
                           "number":  16,
                           "q":  "已知 n 滿足 n/7.24＝16.13/8.13。若將 n 描在數線上，則下列哪一個數在數線上的位置最接近 n？",
                           "o":  [
@@ -229,6 +261,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708367",
+                          "revision":  1,
                           "number":  17,
                           "q":  "如右圖，柱體的兩底面為全等的五邊形、側面均為與兩底面垂直的長方形。根據右圖的數據及符號，求此柱體體積為何？",
                           "o":  [
@@ -243,6 +277,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q17-pentagonal-prism.png"
                       },
                       {
+                          "questionId":  "260921082708368",
+                          "revision":  1,
                           "number":  18,
                           "q":  "已知方程式 x²－5625＝0 的兩根為 ±75，則下列何者可為方程式 x²＋6x－5616＝0 的解？",
                           "o":  [
@@ -255,6 +291,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708369",
+                          "revision":  1,
                           "number":  19,
                           "q":  "已知 1²＋1＝2²－2，2²＋2＝3²－3，3²＋3＝4²－4，……，99²＋99＝100²－100。若 1123²＋1123＋2248＋1125＝a²，且 a＞0，則 a＝？",
                           "o":  [
@@ -267,6 +305,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708370",
+                          "revision":  1,
                           "number":  20,
                           "q":  "以下是甲、乙兩人化簡式子的過程。甲：化簡（3x－7）/6＋（5x－9）/4；①將式子乘以 24，得 4（3x－7）＋6（5x－9）；②去括號，得 12x－28＋30x－54；③合併同類項，得化簡結果為 42x－82。乙：化簡（2x＋1）/3－（－3x＋2）/2；①將式子乘以 6，得 2（2x＋1）－3（－3x＋2）；②去括號，得 4x＋2＋9x＋6；③合併同類項，得化簡結果為 13x＋8。對於兩人的化簡過程，下列判斷何者正確？",
                           "o":  [
@@ -279,6 +319,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708371",
+                          "revision":  1,
                           "number":  21,
                           "q":  "右圖為 7 個正方形紙板緊密地拼成長方形 ABCD 的方式。求 AB：AD＝？",
                           "o":  [
@@ -293,6 +335,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q21-seven-squares-rectangle.png"
                       },
                       {
+                          "questionId":  "260921082708372",
+                          "revision":  1,
                           "number":  22,
                           "q":  "下表為小美採買火鍋料的收據，但因汙損導致幾個重要數據無法辨識。已知：綜合火鍋料每包 89 元、2 包、178 元；粉絲每包 39 元；火鍋肉片 3 包、金額 264 元；金針菇每包 25 元、3 包、75 元；茼蒿每包 30 元；雞蛋每包 17 元、2 包；購買包數共 16 包，應付總額 740 元。根據收據判斷粉絲與茼蒿的數量差異為何？",
                           "o":  [
@@ -307,6 +351,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q22-hotpot-receipt-table.png"
                       },
                       {
+                          "questionId":  "260921082708373",
+                          "revision":  1,
                           "number":  23,
                           "q":  "如右圖，圓 O₁、圓 O₂ 為大小不同的兩圓，且 P、Q 分別為圓上的一點。若 PQ 是兩圓的公切線，則下列敘述何者正確？",
                           "o":  [
@@ -321,6 +367,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q23-two-circles-common-tangent.png"
                       },
                       {
+                          "questionId":  "260921082708374",
+                          "revision":  1,
                           "number":  24,
                           "q":  "已知甲、乙、丙三人的錢數比為 3：5：6。若丙分別給甲、乙兩人各 30 元後，甲、乙、丙的錢數比變為 7：11：10，則此三人共有多少元？",
                           "o":  [
@@ -333,6 +381,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708375",
+                          "revision":  1,
                           "number":  25,
                           "q":  "如下圖(一)，AM 為△ABC 的中線，∠C＞∠B。將 A 點摺向 M，使得 A、M 兩點重疊，出現摺線 DE，如下圖(二)。若展開，如下圖(三)所示，則對於 DE 的敘述，下列哪一個選項是正確的？",
                           "o":  [
@@ -347,6 +397,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q25-folding-median-figures.png"
                       },
                       {
+                          "questionId":  "260921082708376",
+                          "revision":  1,
                           "number":  26,
                           "q":  "如右圖，在甲、乙兩個筒內各放入 3 個球，並將球分別標上 1、2、3 與 2、3、4。假設兩筒中每個球被取出的機會均相等。若阿友自甲筒取出一球，阿哲自乙筒取出一球，則阿友取出的球其號碼小於阿哲的機率是多少？",
                           "o":  [
@@ -361,6 +413,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q26-two-cylinder-balls.png"
                       },
                       {
+                          "questionId":  "260921082708377",
+                          "revision":  1,
                           "number":  27,
                           "q":  "右圖中的兩直線 L₁、L₂ 相交於 O 點，其中 A、B 兩點在 L₁ 上，C、D 兩點在 L₂ 上。已知 CD 上有一點 P，且 M、N 分別是 PA 與 PB 的中點。今將 P 點沿 CD 自 C 移向 D 點，則關於 MN、△PAB 的變化，下列敘述何者正確？",
                           "o":  [
@@ -375,6 +429,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q27-intersecting-lines-midpoints.png"
                       },
                       {
+                          "questionId":  "260921082708378",
+                          "revision":  1,
                           "number":  28,
                           "q":  "右圖為 A、B、C、D 四點在方格紙上的位置圖，其中每一點均位於某兩線的交點上。關於△ABC 與△ABD 的形狀，下列判斷何者正確？",
                           "o":  [
@@ -389,6 +445,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q28-grid-points.png"
                       },
                       {
+                          "questionId":  "260921082708379",
+                          "revision":  1,
                           "number":  29,
                           "q":  "如下圖(四)，等臂天平呈平衡狀態，其中甲秤盤放方塊，乙秤盤放砝碼。若每個方塊、砝碼的重量分別為 x、y，且 x＜y，則經下列哪一選項的操作，可使天平呈下圖(五)的狀態？",
                           "o":  [
@@ -403,6 +461,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q29-balance-scales.png"
                       },
                       {
+                          "questionId":  "260921082708380",
+                          "revision":  1,
                           "number":  30,
                           "introLabel":  "第30～31題題組",
                           "intro":  "如右圖，坐標平面有一正方形 ABCD，A、C 的坐標分別為（1，1）、（－1，－1）。已知甲、乙兩人在 A 點第 1 次相遇後，甲自 A 點以每秒 a 公尺的速率，沿著正方形的邊以逆時針方向等速行走；乙自 A 點以每秒 b 公尺的速率，沿著正方形的邊以順時針方向等速行走。",
@@ -419,6 +479,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q30-q31-square-coordinate-walk.png"
                       },
                       {
+                          "questionId":  "260921082708381",
+                          "revision":  1,
                           "number":  31,
                           "introLabel":  "第30～31題題組",
                           "intro":  "如右圖，坐標平面有一正方形 ABCD，A、C 的坐標分別為（1，1）、（－1，－1）。已知甲、乙兩人在 A 點第 1 次相遇後，甲自 A 點以每秒 a 公尺的速率，沿著正方形的邊以逆時針方向等速行走；乙自 A 點以每秒 b 公尺的速率，沿著正方形的邊以順時針方向等速行走。",
@@ -435,6 +497,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q30-q31-square-coordinate-walk.png"
                       },
                       {
+                          "questionId":  "260921082708382",
+                          "revision":  1,
                           "number":  32,
                           "q":  "右圖是兩全等的正方形 ABCD 與 APQR 重疊情形。若∠BAP＝30°，AB＝6√3，則圖中灰色部分面積為何？",
                           "o":  [
@@ -449,6 +513,8 @@
                           "image":  "past-exams/bct/95/second/assets/math/q32-overlapping-squares-shaded.png"
                       },
                       {
+                          "questionId":  "260921082708383",
+                          "revision":  1,
                           "number":  33,
                           "q":  "下圖(六)是甲、乙兩校的工藝成績折線圖，下圖(七)是丙、丁兩校的家政成績折線圖。根據圖中的資訊，判斷下列敘述何者正確？",
                           "o":  [
