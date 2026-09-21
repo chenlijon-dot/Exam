@@ -1819,189 +1819,158 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 
 ---
 
-## 23.0 圖片／PDF → 題庫的快速匯入線（RAW → STAGING → ACTIVE）
+## 23.0 圖片考題高速建置：三階段標準流程
 
-大量教材照片、講義翻拍、題庫圖片、掃描 PDF 的輸入工作，**不得一開始就套用完整正式題庫治理流程**。
+圖片型考題的正式生產流程固定為三步。目標是把「辨識」「binary 上傳」「正式題庫收尾」拆開，避免同一題在每一階段反覆停頓。
 
-正式狀態分為三層：
+### 第 1 階段：辨識圖片 → 文字檔 → 題目骨架
 
-```text
-RAW
-= 原始圖片／PDF／掃描 evidence
-= 保留來源與頁序
-= 不要求 questionId
+使用者提供題目圖片；若題目有附圖，使用者會盡量先切成獨立圖片區塊。
 
-STAGING
-= 已完成文字辨識／人工可讀校正
-= 已依題號或頁面切成可整理單位
-= 可以繼續補答案、分類、詳解
-= 仍不是正式題庫
-= 不要求 questionId / revision / conceptIds / runtime / deploy
-
-ACTIVE
-= 已通過正式 QA gate
-= 已建立永久 questionId + revision
-= provenance / answer / schema 已確認
-= 可進正式 bank、runtime、Pages 與歷史回溯
-```
-
-### 23.0.1 快線只做「擷取與整理」
-
-大量圖片輸入時，第一輪預設工作是：
+ChatGPT 第一輪只做：
 
 ```text
-圖片／PDF
+讀取整批題目圖片
 ↓
-依頁碼／題號排序
+辨識題號／題幹／選項／可見答案
 ↓
-辨識文字
+整理成文字檔
 ↓
-保留題號、題幹、選項、表格／圖片提示
+直接建立題目骨架
 ↓
-寫入辨識文字檔／staging 文件
+為需要附圖的題目記錄預期圖片檔名／標籤
+```
+
+題目骨架可先包含：
+
+```text
+number / originalQuestionNumber
+q
+o[]
+a（來源清楚時）
+source/provenance 基本資訊
+imageLabel / expectedImageName（有圖題）
+```
+
+這一階段的原則：
+
+- 整批連續辨識，不逐題停下做正式 QA。
+- 模糊處直接標 `[待人工確認]`。
+- 不要求先完成詳解。
+- 不要求先建立 `questionId / revision`。
+- 不做 runtime / Pages deploy。
+- 不要求 ChatGPT 搬運 binary 圖片。
+- 題目已經先「做成可接圖的題目骨架」，不是只留下散亂 OCR 文字。
+
+### 第 2 階段：使用者用 PowerShell 5.1 上傳已切割題圖
+
+需要附圖的題目，由使用者自行準備／切割好圖片。
+
+ChatGPT 的工作是：
+
+```text
+依本批實際路徑
+→ 給 PowerShell 5.1 指令
+→ 指定來源圖片資料夾
+→ 指定 E:\Exam 對應 assets 目錄
+→ Copy-Item
+→ git add / commit / fetch / rebase / push
+```
+
+使用者執行 PS5.1，把 binary 圖片直接送到 GitHub。
+
+原則：
+
+- 圖片 binary 不經聊天／connector 來回搬運。
+- 使用既有 `E:\Exam` 本機 repository。
+- 上傳前後保留圖片檔名與題號對應。
+- Push 前依本專案 Git 規則 `fetch + rebase`，避免覆蓋其他工作。
+- Push 完後由 ChatGPT 做 GitHub remote read-back，確認圖片實際存在。
+
+標準 PS5.1 任務形式由 ChatGPT 依當批路徑產生，例如：
+
+```powershell
+$repo = "E:\Exam"
+$src  = "<本批裁圖資料夾>"
+$dst  = Join-Path $repo "<GitHub assets 相對目錄>"
+
+New-Item -ItemType Directory -Force -Path $dst | Out-Null
+Copy-Item (Join-Path $src "*.png") $dst -Force
+
+Set-Location $repo
+git fetch origin main
+git checkout main
+git rebase origin/main
+git add "<GitHub assets 相對目錄>"
+git commit -m "<本批圖片 commit>"
+git fetch origin main
+git rebase origin/main
+git push origin main
+```
+
+實際執行時，ChatGPT 應替換成當批真實路徑與檔名，不要求使用者自己猜。
+
+### 第 3 階段：接圖 → 詳解 → 正式題庫 → 回溯相容 → 上線
+
+圖片確認已在 GitHub 後，ChatGPT 一次完成正式收尾：
+
+```text
+remote read-back 圖片
 ↓
-標記看不清或待確認處
+題目骨架接上 image / optionImage / images
 ↓
-繼續下一張
-```
-
-第一輪**不要因單題正式化而停下整批工作**。
-
-RAW → STAGING 階段預設不做：
-
-```text
-questionId
-revision
-完整 conceptIds
-逐題詳解
-精細 chapter mapping
-正式 answerVerified
-runtime loader
-GitHub Pages 接線
-deployment
-正式 active promotion
-```
-
-如果來源本身已有清楚答案，可以忠實抄入 staging；但「抄入」不等於已完成正式答案 QA。
-
-### 23.0.2 批次優先，不逐張正式化
-
-錯誤工作方式：
-
-```text
-第 1 張圖
-→ 辨識
-→ QA
-→ questionId
-→ JSON
-→ GitHub
-→ deploy
-
-第 2 張圖
-→ 再重跑整套
-```
-
-標準工作方式：
-
-```text
-整批 10 / 30 / 100 張
+核對題幹／選項／答案
 ↓
-先全部 RAW → STAGING
+製作逐題詳解
 ↓
-形成一份完整可校正文字層
+補正式 provenance / chapter mapping
 ↓
-再批次進行答案／分類／QA
+批次核發永久 questionId
 ↓
-最後才 STAGING → ACTIVE
+revision = 1
+↓
+套用 canonical option identity / preserveOptionOrder 規則
+↓
+確認與現行作答歷史／回溯功能相容
+↓
+寫入正式 chapter-bank / past-exams
+↓
+runtime 接線
+↓
+QA
+↓
+GitHub Pages 上線
 ```
 
-單張模糊、公式不清、圖中文字不確定時：
+這一階段才套用第 23.1 節 Definition of Done 與 question-bank governance spec。
+
+若少數題目仍有疑義：
 
 ```text
-標記 [待人工確認]
-→ 保留來源頁碼／檔名
-→ 跳過
-→ 繼續整批
+清楚題 → 正式上線
+疑義題 → pending
 ```
 
-不得讓一個疑難點拖垮整批辨識。
+不得讓少數 pending 題拖住整批正式題。
 
-### 23.0.3 STAGING 是正式允許的中間狀態
-
-STAGING 不是失敗，也不是垃圾檔。
-
-它的用途就是：
+### 三階段的工作分工
 
 ```text
-高速吸收圖片資料
-保留原始順序
-集中人工校正
-批次去重
-批次答案核對
-批次分類
-批次 promotion
+第 1 階段
+ChatGPT 主導
+→ 圖片辨識 + 文字檔 + 題目骨架
+
+第 2 階段
+使用者執行
+→ ChatGPT 提供 PS5.1
+→ 使用者把已裁題圖直接推上 GitHub
+
+第 3 階段
+ChatGPT 主導
+→ 接圖 + 詳解 + questionId/revision + 回溯規則 + 正式上線
 ```
 
-STAGING 可放在 Google Drive 的：
-
-```text
-整理資料/
-教材辨識檔
-題庫辨識文字檔
-題庫原始文字校正版
-staging 題目整理檔
-```
-
-依資料類型選擇，不強迫第一輪就建立正式 GitHub JSON。
-
-### 23.0.4 正式治理只卡在 STAGING → ACTIVE
-
-第 23.1 節的 Definition of Done：
-
-> **只限制題目從 STAGING 升格 ACTIVE，不限制 RAW → STAGING 的快速擷取。**
-
-因此：
-
-```text
-RAW → STAGING
-目標 = 快、完整、可回查
-
-STAGING → ACTIVE
-目標 = 正確、可追溯、可長期維護
-```
-
-兩者不得混成同一步。
-
-### 23.0.5 ChatGPT 接到「先辨識圖片」時的預設行為
-
-若使用者明確說：
-
-```text
-先辨識
-先吃資料
-先轉文字
-先整理圖片內容
-先做 2-3 / 2-4 / 3-1 的辨識文字檔
-```
-
-預設解讀為：
-
-```text
-只做 RAW → STAGING
-```
-
-除非使用者另外要求「正式納入題庫／上線」，否則不要自行展開：
-
-```text
-questionId
-revision
-GitHub bank
-runtime
-deploy
-完整正式 QA
-```
-
-這條規則的目的，是確保大量圖片資料輸入時維持吞吐量。
+這是圖片考題的預設高速建置模式。除非使用者另有指示，不再把 questionId、詳解、runtime、deploy 前移到第 1 階段。
 
 ---
 
