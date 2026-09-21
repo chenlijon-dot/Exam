@@ -506,14 +506,20 @@
   document.addEventListener('exam:submitted', () => {
     loadToken += 1;
     submitted = true;
-
-    const currentAttempt = latestLocalAttempt();
-    if (currentAttempt && String(currentAttempt.examKey || '') === activeExamKey) {
-      mergeCurrentAttempt(currentAttempt);
-    }
-
     renderAll();
-    if (currentAttempt?.historyDomain === 'question') ensureRecallButton();
+  });
+
+  document.addEventListener('exam:attempt-recorded', event => {
+    const currentAttempt = event.detail?.attempt || null;
+    if (!submitted || !currentAttempt) return;
+    if (String(currentAttempt.examKey || '') !== activeExamKey) return;
+
+    mergeCurrentAttempt(currentAttempt);
+    renderAll();
+
+    if (currentAttempt.historyDomain === 'question') {
+      ensureRecallButton();
+    }
   });
 
   window.addEventListener?.('chrisexam-firestore-ready', () => {
