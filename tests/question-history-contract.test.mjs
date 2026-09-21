@@ -36,6 +36,12 @@ assert.match(
 
 assert.match(
   runtime,
+  /window\.startExam\s*=\s*function[\s\S]*?submitButton\.disabled\s*=\s*false/,
+  'starting a new exam session must re-enable the submit button'
+);
+
+assert.match(
+  runtime,
   /exam:retry-started/,
   'retry must create a fresh attempt session boundary'
 );
