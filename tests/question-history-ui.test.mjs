@@ -51,4 +51,22 @@ assert.deepEqual(
 );
 assert.ok(!neverWrong.join(' ').includes('錯題 0 次'));
 
+
+const recallView = ui.buildRecallAttemptView({
+  answers: [
+    { questionId: 'q1', result: 'incorrect', selectedDisplayLabel: 'C' },
+    { questionId: 'q2', result: 'correct', selectedDisplayLabel: 'A' },
+    { questionId: 'q3', result: 'unclear', selectedDisplayLabel: 'B' },
+    { questionId: '', result: 'incorrect', selectedDisplayLabel: 'D' }
+  ]
+});
+
+assert.deepEqual(
+  JSON.parse(JSON.stringify(recallView)),
+  {
+    q1: { wrong: true, label: '當時：選 C｜錯誤' },
+    q2: { wrong: false, label: '當時：選 A｜正確' }
+  }
+);
+
 console.log('question-history UI formatting: PASS');
