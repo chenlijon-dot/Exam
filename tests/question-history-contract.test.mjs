@@ -222,6 +222,16 @@ assert.match(historyUi, /後一次/, 'same-exam recall must expose newer-attempt
 assert.match(historyUi, /history-wrong/, 'same-exam recall must support red wrong-question highlighting');
 assert.match(historyUi, /loadExamAttempts/, 'same-exam recall must load attempts for the current examKey');
 assert.match(historyUi, /questionHistoryRecallControls/, 'recall navigation must have a removable controls container');
+assert.match(
+  historyUi,
+  /questionHistoryRecallControlsTop/,
+  'recall mode must expose a synchronized control row above the question list'
+);
+assert.match(
+  historyUi,
+  /querySelectorAll\('\[data-question-history-recall-controls\]'\)/,
+  'all recall control rows must update and clear together'
+);
 assert.match(historyUi, /data-history-answer/, 'historical selected answer/result must be rendered separately');
 
 
