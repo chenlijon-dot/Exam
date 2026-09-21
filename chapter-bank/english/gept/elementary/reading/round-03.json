@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921090617071",
+      "revision": 1,
       "number": 1,
       "section": "第一部分：詞彙和結構",
       "q": "Thanks for giving me such good _____. I believe it'll help a lot.",
@@ -28,6 +30,8 @@
       "e": "答案是 (A) suggestion。句意是『謝謝你給我這麼好的建議，我相信會很有幫助。』suggestion 是建議；spirits 是精神／情緒，success 是成功，suites 是套房／套裝。原句的 such good suggestion 在自然英文中通常會寫成 such a good suggestion 或 such good suggestions；此處依原書選項判讀。"
     },
     {
+      "questionId": "260921090617072",
+      "revision": 1,
       "number": 2,
       "q": "We can _____ the books to your house, but you'll be charged NT$150.",
       "o": ["deliver", "develop", "discover", "decrease"],
@@ -37,6 +41,8 @@
       "e": "答案是 (A) deliver。deliver the books to your house 表示『把書送到你家』。develop 是發展，discover 是發現，decrease 是減少。"
     },
     {
+      "questionId": "260921090617073",
+      "revision": 1,
       "number": 3,
       "q": "Smoking cigarettes damages your lung, one of the most important _____ in your body.",
       "o": ["models", "orphans", "supplies", "organs"],
@@ -46,6 +52,8 @@
       "e": "答案是 (D) organs。肺是身體的重要『器官』之一。models 是模型，orphans 是孤兒，supplies 是物資。"
     },
     {
+      "questionId": "260921090617074",
+      "revision": 1,
       "number": 4,
       "q": "I can’t watch those ghost movies — they’re so _____ that I can’t fall asleep at night.",
       "o": ["scared", "exact", "neat", "horrible"],
@@ -55,6 +63,8 @@
       "e": "答案是 (D) horrible。鬼片『很可怕』，以致晚上睡不著。horrible 可形容令人害怕或很糟的事物；scared 通常形容『感到害怕的人』。"
     },
     {
+      "questionId": "260921090617075",
+      "revision": 1,
       "number": 5,
       "q": "Before leaving for the party, Helen _____ herself and got dressed up.",
       "o": ["made up", "made sure", "made sense", "made faces"],
@@ -64,6 +74,8 @@
       "e": "答案是 (A) made up。make oneself up / make up 表示『化妝』；她參加派對前先化妝並盛裝打扮。made sure 是確認，made sense 是有道理，made faces 是做鬼臉。"
     },
     {
+      "questionId": "260921090617076",
+      "revision": 1,
       "number": 6,
       "q": "The patient was happy after Dr. Smith carefully _____ her chest and said, “You’re fine.”",
       "o": ["exhausted", "excited", "examined", "employed"],
@@ -73,6 +85,8 @@
       "e": "答案是 (C) examined。醫師仔細『檢查』病人的胸部後說她沒事。exhausted 是使筋疲力盡，excited 是使興奮，employed 是雇用。"
     },
     {
+      "questionId": "260921090617077",
+      "revision": 1,
       "number": 7,
       "q": "The pilot of this flight has flown for 30 years. He has enough _____ to land this plane.",
       "o": ["experience", "difficulties", "balconies", "paths"],
@@ -82,6 +96,8 @@
       "e": "答案是 (A) experience。飛行了 30 年，表示他有足夠的『經驗』降落飛機。experience 在此作不可數名詞。"
     },
     {
+      "questionId": "260921090617078",
+      "revision": 1,
       "number": 8,
       "q": "You’re getting fatter and fatter. That’s why you need to _____ and exercise more.",
       "o": ["go on a diet", "break your promise", "face the music", "make up your mind"],
@@ -91,6 +107,8 @@
       "e": "答案是 (A) go on a diet，表示『節食、控制飲食』。句子說愈來愈胖，因此需要節食並多運動。"
     },
     {
+      "questionId": "260921090617079",
+      "revision": 1,
       "number": 9,
       "q": "_____ better grades, you’d better pay less attention on the smartphones.",
       "o": ["Have", "Having", "To have", "If you have"],
@@ -100,6 +118,8 @@
       "e": "答案是 (C) To have。句首不定詞表示目的：『為了得到更好的成績，你最好少把注意力放在手機上。』原書使用 pay attention on；較常見的標準搭配是 pay attention to。"
     },
     {
+      "questionId": "260921090617080",
+      "revision": 1,
       "number": 10,
       "q": "Sarah has three sisters, and _____ of them graduated from Harvard University.",
       "o": ["both", "much", "all", "little"],
@@ -109,6 +129,8 @@
       "e": "答案是 (C) all。前面明確說有 three sisters，三者全部要用 all。both 只用於兩者；much / little 修飾不可數名詞。"
     },
     {
+      "questionId": "260921090617081",
+      "revision": 1,
       "number": 11,
       "q": "Mrs. Kim’s son died young, so she often feels _____.",
       "o": ["sadly", "easy sad", "easily sadly", "sad easily"],
@@ -118,6 +140,8 @@
       "e": "答案依原書選項判讀為 (D) sad easily。feel 是連綴動詞，核心補語應用形容詞 sad，而不是副詞 sadly。四個選項中只有 (D) 保留形容詞 sad，因此最接近正確句型。這題原書選項疑似有誤植；自然英文會更常寫 she often feels sad。"
     },
     {
+      "questionId": "260921090617082",
+      "revision": 1,
       "number": 12,
       "q": "We have to leave now, but they _____.",
       "o": ["mustn’t", "haven’t", "don’t need to", "couldn’t"],
@@ -127,6 +151,8 @@
       "e": "答案是 (C) don’t need to。前句是『我們現在必須離開』，but 表示對比，因此『但他們不需要』最合理。mustn’t 是禁止，不等於不需要。"
     },
     {
+      "questionId": "260921090617083",
+      "revision": 1,
       "number": 13,
       "q": "Dad’s computer _____ for a couple of times. Perhaps he should buy a new one.",
       "o": ["fixed", "has fixed", "has been fixing", "has been fixed"],
@@ -136,6 +162,8 @@
       "e": "答案是 (D) has been fixed。電腦是『被修理』，要用被動語態；for a couple of times 表示到現在已發生數次，因此用現在完成式被動 has been fixed。"
     },
     {
+      "questionId": "260921090617084",
+      "revision": 1,
       "number": 14,
       "q": "The number of people in this town _____ increasing year by year.",
       "o": ["are", "have", "is", "should"],
@@ -145,6 +173,8 @@
       "e": "答案是 (C) is。主詞是 The number，視為單數，因此用 is increasing。要注意 a number of + 複數名詞才通常搭配複數動詞。"
     },
     {
+      "questionId": "260921090617085",
+      "revision": 1,
       "number": 15,
       "q": "Believe me — Sharon’s the prettiest girl _____ I’ve ever seen!",
       "o": ["who", "which", "that", "where"],
@@ -154,6 +184,8 @@
       "e": "答案是 (C) that。先行詞 girl 前有最高級 the prettiest 修飾時，傳統考試文法常優先用 that 引導關係子句：the prettiest girl that I’ve ever seen。"
     },
     {
+      "questionId": "260921090617086",
+      "revision": 1,
       "number": 16,
       "section": "第二部分：段落填空",
       "groupId": "round03-cloze-16-20",
@@ -167,6 +199,8 @@
       "e": "答案是 (A) wake。wake someone up 是固定片語『把某人喚醒、使某人清醒』。清晨新鮮涼爽的空氣讓人精神起來。"
     },
     {
+      "questionId": "260921090617087",
+      "revision": 1,
       "number": 17,
       "groupId": "round03-cloze-16-20",
       "q": "第 17 空應填入哪一個選項？",
@@ -177,6 +211,8 @@
       "e": "答案是 (C) love。love to take an early morning walk 表示『喜歡清晨散步』。enjoy 後面通常接 V-ing，不能直接接 to take；hate 與 quit 不合全文正面語意。"
     },
     {
+      "questionId": "260921090617088",
+      "revision": 1,
       "number": 18,
       "groupId": "round03-cloze-16-20",
       "q": "第 18 空應填入哪一個選項？",
@@ -187,6 +223,8 @@
       "e": "答案是 (D) exercise。早晨健行／散步屬於一種運動，people think they can stay healthy by this sort of exercise。"
     },
     {
+      "questionId": "260921090617089",
+      "revision": 1,
       "number": 19,
       "groupId": "round03-cloze-16-20",
       "q": "第 19 空應填入哪一個選項？",
@@ -197,6 +235,8 @@
       "e": "答案是 (D) it is。句子需要主詞加 be 動詞：Last, it is also a good way to make new friends。it 指前面所述的晨間健行。"
     },
     {
+      "questionId": "260921090617090",
+      "revision": 1,
       "number": 20,
       "groupId": "round03-cloze-16-20",
       "q": "第 20 空應填入哪一個選項？",
@@ -207,6 +247,8 @@
       "e": "答案是 (A) As。As they walk through the hills each morning 表示『當／隨著他們每天早晨走過山丘時』，與後面常遇見新舊朋友的情境最合。"
     },
     {
+      "questionId": "260921090617091",
+      "revision": 1,
       "number": 21,
       "groupId": "round03-cloze-21-25",
       "introLabel": "Questions 21–25｜Tim Duncan 的童年回憶",
@@ -219,6 +261,8 @@
       "e": "答案是 (D) attention。catch one’s attention 是固定搭配『吸引某人的注意』。報紙上的照片吸引了 Ben 的注意。"
     },
     {
+      "questionId": "260921090617092",
+      "revision": 1,
       "number": 22,
       "groupId": "round03-cloze-21-25",
       "q": "第 22 空應填入哪一個選項？",
@@ -229,6 +273,8 @@
       "e": "答案是 (C) laughed at。後面接 and made fun of him，表示大家會『嘲笑他』。laugh at 與 make fun of 語意相近。"
     },
     {
+      "questionId": "260921090617093",
+      "revision": 1,
       "number": 23,
       "groupId": "round03-cloze-21-25",
       "q": "第 23 空應填入哪一個選項？",
@@ -239,6 +285,8 @@
       "e": "答案是 (B) another。another + 單數可數名詞表示『另一個、再一個』；another NBA title = 又一座 NBA 冠軍。"
     },
     {
+      "questionId": "260921090617094",
+      "revision": 1,
       "number": 24,
       "groupId": "round03-cloze-21-25",
       "q": "第 24 空應填入哪一個選項？",
@@ -249,6 +297,8 @@
       "e": "答案是 (A) that。imagine 後接 that 名詞子句：Ben couldn’t imagine that such a quiet little Tim would become an NBA superstar one day。後面的子句本身結構完整，因此用 that。"
     },
     {
+      "questionId": "260921090617095",
+      "revision": 1,
       "number": 25,
       "groupId": "round03-cloze-21-25",
       "q": "第 25 空應填入哪一個選項？",
@@ -259,6 +309,8 @@
       "e": "答案是 (B) hanging。spend + time + V-ing 是固定句型；hang out with classmates 表示『和同學一起玩／相處』，所以是 spent time hanging out。"
     },
     {
+      "questionId": "260921090617096",
+      "revision": 1,
       "number": 26,
       "section": "第三部分：閱讀理解",
       "groupId": "round03-reading-26-27",
@@ -272,6 +324,8 @@
       "e": "答案是 (C) swimming pool。須知要求穿泳帽、護目鏡和泳衣，並寫著 Do not RUN in the pool area，因此可判斷 Turbo Slides 是游泳池／水上設施。"
     },
     {
+      "questionId": "260921090617097",
+      "revision": 1,
       "number": 27,
       "groupId": "round03-reading-26-27",
       "q": "Which of the following statements is TRUE?",
@@ -282,6 +336,8 @@
       "e": "答案是 (D)。成人每人 $10、兒童每人 $5，所以兩位大人加兩位小孩共 10×2 + 5×2 = $30。規定是 12 歲以下兒童需由成人陪同，不是成人一定要帶小孩；6 點後只是沒有救生員，沒有折扣資訊。"
     },
     {
+      "questionId": "260921090617098",
+      "revision": 1,
       "number": 28,
       "groupId": "round03-reading-28-29",
       "introLabel": "Questions 28–29｜資源回收公告",
@@ -294,6 +350,8 @@
       "e": "答案是 (C)。公告明確寫 Before recycling them, please follow the instructions，接著列出清洗、壓扁等步驟，所以主旨是『回收前應該做什麼』。"
     },
     {
+      "questionId": "260921090617099",
+      "revision": 1,
       "number": 29,
       "groupId": "round03-reading-28-29",
       "q": "What are we asked to do with the bottles, jars, and cans?",
@@ -304,6 +362,8 @@
       "e": "答案是 (D) To clean them。公告第一項指示是 Wash all bottles, jars, and cans，也就是先把它們洗乾淨。"
     },
     {
+      "questionId": "260921090617100",
+      "revision": 1,
       "number": 30,
       "groupId": "round03-reading-30-32",
       "introLabel": "Questions 30–32｜Mrs. Zoe 的語言旅行經驗",
@@ -316,6 +376,8 @@
       "e": "答案是 (C) Mrs. Zoe’s language experiences。文章依序寫她用英文去英國、因不會法文而在法國不順、回國學法文後再去巴黎，以及現在學義大利文；核心是她的語言學習與旅行經驗。"
     },
     {
+      "questionId": "260921090617101",
+      "revision": 1,
       "number": 31,
       "groupId": "round03-reading-30-32",
       "q": "Which of the following statements is NOT TRUE about Mrs. Zoe?",
@@ -326,6 +388,8 @@
       "e": "答案是 (A)。文章只提到她兩年前第一次獨自出國去 Britain，沒有說她去英國超過一次；France 則明確有去年一次、學法文六個月後又去 Paris 一次。她是日本人，且能靠學校英文與後來學法文、義大利文旅行，顯示具一定語言能力。"
     },
     {
+      "questionId": "260921090617102",
+      "revision": 1,
       "number": 32,
       "groupId": "round03-reading-30-32",
       "q": "Which country will Mrs. Zoe probably go to next?",
@@ -336,6 +400,8 @@
       "e": "答案是 (B) Italy。最後一句說 Now she’s learning Italian and has been prepared to go abroad with her husband，因此最合理推論她下一個可能去的國家是義大利。"
     },
     {
+      "questionId": "260921090617103",
+      "revision": 1,
       "number": 33,
       "groupId": "round03-reading-33-35",
       "introLabel": "Questions 33–35｜Jean 幫忙照顧孩子",
@@ -348,6 +414,8 @@
       "e": "答案是 (D) Jean babysitting three kids。全文從 Jean 到 Putts 家、餵三個孩子、幫 Anna 洗澡、處理 Ted 和 Kate 偷吃蛋糕、哄孩子睡覺到整理廚房，都圍繞她幫忙照顧三個孩子。"
     },
     {
+      "questionId": "260921090617104",
+      "revision": 1,
       "number": 34,
       "groupId": "round03-reading-33-35",
       "q": "What happened immediately after the kids ate the cake?",
@@ -358,6 +426,8 @@
       "e": "答案是 (C) The kids brushed their teeth。Jean 發現 Ted 和 Kate 偷吃蛋糕後，答應不告訴父母，條件是他們刷牙並在十分鐘內上床；下一段立刻寫 The kids both hurried into the bathroom and brushed their teeth。"
     },
     {
+      "questionId": "260921090617105",
+      "revision": 1,
       "number": 35,
       "groupId": "round03-reading-33-35",
       "q": "Who didn’t eat the chocolate cake?",
