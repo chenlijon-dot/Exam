@@ -53,7 +53,7 @@ BLUEPRINT = 工作進度 + 架構方向 + 下一步建議
 目前已納入永久 identity 治理的正式固定題目共：
 
 ```text
-2,159 題
+2,193 題
 ```
 
 範圍包含：
@@ -219,7 +219,7 @@ manifest
 | `ENGLISH_Database.MD` | 英文 GEPT 閱讀與字彙 authority |
 | `LEARNING_HISTORY_FIREBASE.md` | Firebase 學習歷程 authority |
 | `docs/superpowers/specs/2026-09-21-question-bank-governance-design.md` | 正式題庫永久 identity / append-only / revision 設計規格 |
-| Google Drive `題庫永久questionId全科修整成果報告_2026-09-21.md` | 2,159 題 migration 完成成果 snapshot |
+| Google Drive `題庫永久questionId全科修整成果報告_2026-09-21.md` | 2,193 題 migration 完成成果 snapshot |
 | `Android學生機設計.MD` | Student Exam Android / SM-T220 runbook |
 | `curriculum-catalog/*.md` | 各科實體教材課程樹 authority |
 | 有日期的 collection MD | 歷史 snapshot |
@@ -1960,7 +1960,7 @@ Exam/
 
 ```text
 [x] 正式固定題庫全科盤點
-[x] 2,159 題建立永久 question identity
+[x] 2,193 題建立永久 question identity
 [x] 既有 handwriting legacy ID 保留
 [x] 正式題建立 revision: 1
 [x] GEPT Vocabulary 維持 vocabId domain identity
@@ -2100,7 +2100,7 @@ Exam/
 
 ```text
 正式固定題庫
-→ 2,159 題 permanent questionId
+→ 2,193 題 permanent questionId
 → revision
 → append-only governance
 ```
