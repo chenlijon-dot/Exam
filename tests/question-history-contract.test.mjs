@@ -209,4 +209,11 @@ assert.match(
   'retry/reset must know how to remove recall-only status messages'
 );
 
+
+assert.match(
+  historyUi,
+  /resetRecallState\(\{\s*removeButton:false,\s*invalidateLoad:false\s*\}\)/,
+  'no-history reset must not invalidate its own active recall request'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
