@@ -1092,6 +1092,112 @@ q32-2.png
 
 ---
 
+## 17A. 自然科目前檔案結構與題庫定位
+
+自然科目前實際上線資料集中在七年級上學期，接手自然科工作時，應先從 runtime loader 反查實際路徑，不要只依檔名猜測 readiness。
+
+目前主要 runtime：
+
+```text
+exam-science-life.js    → 單元 1／1-1
+exam-science-banks.js   → 單元 1／1-2
+exam-science-lab.js     → 單元 1／1-3
+exam-science-unit2.js   → 單元 2／2-1、2-2
+```
+
+### 17A.1 單元 1：生命現象與科學探究
+
+目前資料結構：
+
+```text
+chapter-bank/science/7-1/unit-01/
+├─ section-01/                    # 1-1 生命現象和生物圈
+│  ├─ easy.json                   # 目前 0 題
+│  ├─ medium.json                 # 目前 0 題
+│  ├─ hard.json                   # 目前 0 題
+│  ├─ school-exams.json           # 目前 0 題
+│  └─ self-study.json             # 27 題；自修原始題
+│
+├─ section-02/                    # 1-2 科學方法
+│  ├─ school-exams.json           # 4 題
+│  └─ self-study.json             # 36 題；自修原始題
+│
+└─ section-03/                    # 1-3 認識實驗室
+   ├─ easy.json                   # 20 題
+   ├─ medium.json                 # 20 題
+   ├─ hard.json                   # 20 題
+   ├─ school-exams.json           # 6 題
+   └─ self-study.json             # 38 題；自修原始題
+```
+
+**1-2 是目前的特殊結構。** 簡易／中等／困難各 20 題，共 60 題，仍直接存在網站根目錄 `index.html` 的 `const banks = {...}` 中，由 `exam-science-banks.js` 透過既有 `banks.easy / medium / hard` 啟動。它們目前不是 `section-02/easy.json`、`medium.json`、`hard.json`；不要因看到這三個 JSON 不存在就誤判 1-2 沒有三級題庫。
+
+目前單元 1 正式題數：
+
+```text
+1-1： 27
+1-2：100 = 60 三級題 + 4 各校題 + 36 自修題
+1-3：104 = 60 三級題 + 6 各校題 + 38 自修題
+合計：231
+```
+
+以上 231 題截至 2026-09-21 均已建立永久 `questionId` 與 `revision: 1`。其中 1-2 的 60 題雖位於 `index.html`，仍屬正式固定題目，同樣使用永久 question identity。
+
+### 17A.2 單元 2：生物體的構造
+
+目前已建立 runtime 的小節為 2-1、2-2：
+
+```text
+chapter-bank/science/7-1/unit-02/
+├─ section-01/                    # 2-1 生物體的基本構造
+│  ├─ easy.json                   # 目前 0 題
+│  ├─ medium.json                 # 目前 0 題
+│  ├─ hard.json                   # 目前 0 題
+│  ├─ school-exams.json           # 目前 0 題
+│  └─ self-study.json             # 20 題；自修原始題
+│
+└─ section-02/                    # 2-2 細胞的形態和構造
+   ├─ easy.json                   # 目前 0 題
+   ├─ medium.json                 # 目前 0 題
+   ├─ hard.json                   # 目前 0 題
+   ├─ school-exams.json           # 目前 0 題
+   └─ self-study.json             # 52 題；自修原始題
+```
+
+目前單元 2 正式題數為 **72 題**，全部來自已匯入的自修原始題：2-1 共 20 題、2-2 共 52 題。這 72 題截至 2026-09-21 均已建立永久 `questionId` 與 `revision: 1`。
+
+2-3〈有關生命的物質〉、2-4〈從細胞到生物體〉仍屬 chapter tree 中的正式小節，但目前尚未建立上述正式題庫內容；後續有題目時再發新的永久 `questionId`，不可預先占號或重編既有題目。
+
+### 17A.3 自修原始題的定位
+
+自然科的 `self-study.json` 是正式題庫來源之一，不是暫存檔或 reference。已匯入並進入正式 `questions[]` 的自修原始題，應與自編三級題、各校段考題一樣納入永久 identity、作答紀錄與後續 Question Registry。
+
+目前已處理：
+
+```text
+1-1 self-study：27 題
+1-2 self-study：36 題
+1-3 self-study：38 題
+2-1 self-study：20 題
+2-2 self-study：52 題
+合計：173 題
+```
+
+若題目含原始圖片，圖片 asset 與題目 provenance 應保留；建立 `questionId` 時只增加 identity metadata，不改寫題目、選項、答案或圖片對應。
+
+### 17A.4 目前自然科 questionId 進度
+
+截至 2026-09-21：
+
+```text
+單元 1：231 題完成
+單元 2： 72 題完成
+-----------------
+目前合計：303 題完成永久 question identity
+```
+
+空的 `questions[]` 不發 `questionId`。後續新增正式題目時直接發新 ID；既有 ID 不因排序、搬檔、增加新題或 catalog 調整而重新編號。
+
 # 18. 社會七上 chapter tree
 
 目前 authority 章節樹來自 2026-09-19 使用者提供的國一上學期社會課本第一冊實體目錄照片；出版社／學年度／版次尚待封面或版權頁確認。
