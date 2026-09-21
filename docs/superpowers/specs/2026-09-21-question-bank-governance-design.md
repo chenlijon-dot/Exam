@@ -79,7 +79,19 @@ Example:
 260921070301003
 ```
 
-The timestamp portion records creation time. The final three digits allow up to 999 questions created in the same second.
+The timestamp portion records the **identity issuance time**, not the original date when the question was written, published, scanned, or first appeared in a school exam. This distinction matters when existing historical banks receive IDs later during migration.
+
+Source dates continue to live in provenance fields such as:
+
+```text
+year
+schoolYear
+examYear
+sourceFile
+sourcePage
+```
+
+The final three digits allow up to 999 questions to receive IDs in the same second.
 
 The generator must check the repository authority before assigning IDs. If the same timestamp sequence already exists, increment the sequence. GitHub write conflicts remain the final protection against concurrent assignment.
 
@@ -98,6 +110,20 @@ The chosen ID is:
 - independent from subject or directory names
 
 No subject, chapter, school, or exam title is encoded into the permanent ID because those classifications may change while the question identity must not.
+
+### 3.2 Type rule
+
+`questionId` is always stored and transported as a **string**, even though its current format is numeric-looking.
+
+Correct:
+
+```json
+{ "questionId": "260921070301001" }
+```
+
+Do not store it as a JavaScript or Firestore number.
+
+This prevents future integer-precision problems, preserves formatting, and keeps the identity type stable across JSON, Firebase, JavaScript, and tooling.
 
 ---
 
@@ -124,6 +150,45 @@ For a fixed canonical bank, existing display numbers should remain stable and ne
 However, some runtime-generated or merged views may display questions in another order. Such UI order must never be used as the historical identity.
 
 This is especially important for merged school-exam collections where runtime code may currently reassign display numbers.
+
+## 4.1 Option identity must survive shuffling
+
+A/B/C/D position is presentation state, not answer identity.
+
+Because practice banks may shuffle options, Firebase history must not rely only on:
+
+```text
+selectedIndex
+correctIndex
+```
+
+The runtime should preserve a canonical option identity derived from the source question before shuffling.
+
+A minimal compatible model is:
+
+```text
+selectedCanonicalIndex
+correctCanonicalIndex
+```
+
+Example:
+
+```text
+canonical option 0 = Taipei
+canonical option 1 = Kaohsiung
+canonical option 2 = Taichung
+canonical option 3 = Tainan
+
+runtime display:
+A = Tainan
+B = Kaohsiung
+C = Taipei
+D = Taichung
+```
+
+If the learner chooses display B, the historical record stores canonical option 1.
+
+Existing `selectedText` / `correctText` may remain useful for display and legacy compatibility, but option text must not become the primary permanent identity because wording may later receive typo corrections.
 
 ---
 
@@ -201,6 +266,10 @@ Existing stable `examKey` / `difficulty` values should remain stable for fixed b
 
 Appending new questions to a formal bank does not create a new bank identity. Older attempts may simply contain fewer question IDs than the current bank.
 
+A historical attempt must preserve which questions were **actually present in that attempt**. A question added later must not be interpreted as "unanswered" in an older attempt where it did not yet exist.
+
+Therefore each attempt must retain the set/order of question IDs actually presented at that time.
+
 Therefore recall works by:
 
 ```text
@@ -230,22 +299,26 @@ attempt
 ├─ examKey
 ├─ submittedAt
 ├─ score / accuracy
+├─ presentedQuestionIds[]
 └─ answers[]
    ├─ questionId
    ├─ questionRevision
    ├─ questionType
-   ├─ selected...
-   ├─ isCorrect
-   └─ provenance needed for display/debugging
+   ├─ selectedCanonicalIndex
+   ├─ correctCanonicalIndex
+   ├─ result
+   └─ minimal provenance/snapshot needed for display/debugging
 ```
 
 The permanent ID is the primary aggregation key for:
 
 ```text
-attemptCount
+shownCount
+answeredCount
 correctCount
 wrongCount
 unansweredCount
+unclearCount
 lastAttemptAt
 lastSelectedAnswer
 lastResult
@@ -258,6 +331,62 @@ examKey + number + question text
 ```
 
 This fallback is compatibility-only and must not become the new formal identity rule.
+
+### 8.1 "Shown" is not the same as "answered"
+
+For long-term analytics:
+
+```text
+shownCount
+→ the question appeared in a submitted attempt
+
+answeredCount
+→ the learner actually supplied an answer
+
+correctCount
+→ answered and correct
+
+wrongCount
+→ answered and wrong
+
+unansweredCount
+→ shown but no answer
+
+unclearCount
+→ grading was attempted but could not be reliably classified
+```
+
+The UI may simplify this to:
+
+```text
+作答 4 次｜錯 3 次
+```
+
+but the underlying counters remain separate.
+
+### 8.2 Historical snapshot and Firestore size
+
+The permanent lookup authority is:
+
+```text
+questionId + questionRevision
+```
+
+Firebase should avoid repeatedly storing large duplicated payloads when a stable question lookup is sufficient.
+
+Especially avoid using attempt documents as another full question bank containing repeated:
+
+```text
+long question text
+all option text
+full explanation
+long passage
+image binary data
+```
+
+However, do not blindly remove every snapshot field. Historical display may need enough compact data to explain what the learner saw if a question is later revised.
+
+The implementation plan should define the smallest useful historical snapshot. Image content itself is never embedded in Firebase; only path/reference metadata may be stored.
 
 ---
 
@@ -284,6 +413,33 @@ Existing handwriting `questionId` values should be preserved where already forma
 
 Handwriting attempt history must eventually store the Gemini grading result under the same permanent question identity.
 
+Handwriting grading states are not binary. Preserve at least:
+
+```text
+correct
+incorrect
+unclear
+unanswered
+```
+
+`unclear` must **not** increment `wrongCount`. An AI/vision confidence failure is not evidence that the learner's mathematics was wrong.
+
+### 9.3 Manual-study questions
+
+A `manual-study` question may be tracked as presented, but must not contribute to correct/wrong statistics unless a later explicit grading mechanism exists.
+
+For current ungraded manual-study items:
+
+```text
+shownCount
+→ allowed
+
+answeredCount / correctCount / wrongCount
+→ not inferred automatically
+```
+
+### 9.4 GEPT vocabulary memory
+
 ### 9.3 GEPT vocabulary memory
 
 Vocabulary memory is a special dynamic system.
@@ -298,7 +454,7 @@ Therefore dynamically generated vocabulary exams do not need to manufacture a ne
 
 Per-word longitudinal statistics continue to aggregate by `vocabId`.
 
-### 9.4 Dynamic generated practice
+### 9.5 Dynamic generated practice
 
 AI-generated or temporary generated questions remain `draft` or `test` unless explicitly promoted into the formal bank.
 
@@ -334,6 +490,16 @@ No bulk cleanup should silently change:
 
 unless that is a separately reviewed correction.
 
+## 10.1 Formal asset immutability
+
+Question meaning may depend on an image, diagram, map, table, or other asset.
+
+A formal question must not keep the same revision while its referenced asset is silently replaced with semantically different content.
+
+Non-semantic maintenance such as file compression or equivalent-quality restoration may keep the same revision if the learner-visible meaning is unchanged.
+
+If labels, values, geometry, map content, table data, or other meaning-bearing visual content changes, increment the question revision or create a new question identity when the result is materially a different question.
+
 ---
 
 ## 11. Recall feature enabled by this governance
@@ -361,7 +527,21 @@ Each question can show:
 
 Newly appended questions naturally show no previous history until attempted.
 
+They must be shown as having no history, **not** as unanswered in earlier attempts where they were not present.
+
 The recall feature must not depend on current question position.
+
+For the current bank, aggregation should conceptually be:
+
+```text
+current questionId
+↓
+find historical attempts whose presentedQuestionIds included it
+↓
+aggregate shown / answered / correct / wrong / unanswered / unclear
+↓
+show latest applicable answer/result
+```
 
 ---
 
@@ -393,6 +573,9 @@ This becomes the authority for:
 - migration
 - Firebase mapping
 - subject-specific exceptions
+- canonical option identity
+- asset/revision rules
+- historical presented-question semantics
 - future recall compatibility
 
 Other workflow documents should reference this authority rather than duplicating the full rules.
@@ -409,12 +592,47 @@ This governance change does not yet:
 - change exam rendering
 - migrate historical Firebase data
 - create question statistics collections
+- optimize or compact existing Firebase attempt documents
 
 Those belong to the implementation plan after this design is approved.
 
 ---
 
-## 14. Success criteria
+## 14. Validator requirements
+
+The governance must eventually be enforced automatically, not only documented.
+
+Repository validation should progressively check:
+
+```text
+all active formal questions have questionId
+questionId is a string
+questionId format is valid
+questionId is globally unique
+existing formal IDs are not silently removed or replaced
+revision is valid
+required answers remain valid
+referenced assets exist
+formal bank additions preserve append-only expectations
+```
+
+Where feasible, diff-aware validation should warn or fail when an existing active question ID suddenly maps to materially different content without an explicit revision.
+
+The first validator version may distinguish:
+
+```text
+ERROR
+→ identity collision, missing formal ID, invalid answer, broken required asset
+
+WARNING
+→ legacy question awaiting migration, suspicious content mutation, incomplete revision metadata
+```
+
+---
+
+---
+
+## 15. Success criteria
 
 The governance is successful when future developers and AI sessions can answer consistently:
 
@@ -426,3 +644,9 @@ The governance is successful when future developers and AI sessions can answer c
 6. Can test questions change freely before promotion? — Yes.
 7. Can the same formal question be reused in multiple review sets? — Yes, using the same `questionId`.
 8. Does GEPT vocabulary continue to use `vocabId` as its stable learning identity? — Yes.
+9. Is `questionId` always represented as a string? — Yes.
+10. Does option shuffling preserve canonical answer identity? — Yes.
+11. Can the system distinguish a question not present in an old exam from a question that was present but unanswered? — Yes.
+12. Does handwriting `unclear` avoid being counted as a learner error? — Yes.
+13. Can a semantic asset change occur without revision? — No.
+14. Is governance enforceable by repository validation rather than documentation alone? — Yes.
