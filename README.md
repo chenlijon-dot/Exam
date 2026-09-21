@@ -971,9 +971,10 @@ q32-2.png
 96-2 數學：33 題
 97-1 數學：34 題
 97-2 數學：34 題
+98-1 數學：34 題
 ```
 
-90～96 各年度第一次、第二次數學皆已完成；97-1、97-2 也皆已建立 34 題文字、官方答案、永久 `questionId` / `revision: 1`、原卷裁圖、34 題逐題詳解，並完成第二輪 QA 與歷屆 UI 掛載。已上線共 16 份數學考卷、517 題。
+90～96 各年度第一次、第二次數學皆已完成；97-1、97-2 與 98-1 也皆已建立完整文字、官方答案、永久 `questionId` / `revision: 1`、原卷裁圖、逐題詳解，並完成第二輪 QA 與歷屆 UI 掛載。已上線共 17 份數學考卷、551 題。
 
 95-1 目前完整鏈：
 
@@ -1046,7 +1047,7 @@ q32-2.png
 → UI 掛載
 ```
 
-因此目前已掛入歷屆 UI 的基測數學共 517 題。
+因此目前已掛入歷屆 UI 的基測數學共 551 題。
 
 97-2 目前完整鏈：
 
@@ -1063,6 +1064,20 @@ q32-2.png
 → imagePending / optionImagePending = 0
 → 34 題逐題詳解
 → 第二輪 QA
+→ UI 掛載
+```
+
+98-1 目前完整鏈：
+
+```text
+RAW：原卷 8 頁 + cropped 15 張 PNG
+→ STAGING：34 題文字骨架 + 官方答案 + 圖題 mapping
+→ 批次核發永久 questionId + revision: 1
+→ 12 題 image + 3 題 optionImage（Q12 同時具 image + optionImage）
+→ imagePending / optionImagePending = 0
+→ 34 題逐題詳解
+→ 第二輪 QA
+→ ACTIVE promotion
 → UI 掛載
 ```
 
