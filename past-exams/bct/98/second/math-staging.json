@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "stagingStatus": "recognized",
+  "workflowStage": "stage-1-skeleton",
+  "source": {
+    "type": "official-past-exam",
+    "examYear": 98,
+    "session": "second",
+    "subject": "math",
+    "pdf": "98年第二次數學科.pdf",
+    "croppedFolder": "98年第二次數學科_cropped",
+    "cropCount": 18,
+    "cropQuestionCount": 17,
+    "answerAuthority": "原卷第 8 頁官方答案表"
+  },
+  "exam": {
+    "key": "bct-98-second-math",
+    "title": "98 年第二次基測｜數學科",
+    "preserveOptionOrder": true,
+    "analysisEligible": false
+  },
+  "notes": [
+    "依 README 23.0 圖片考題高速三階段流程第 1 階段建立。",
+    "本檔目前只有文字骨架、官方答案與預期圖片 mapping；尚未核發 questionId / revision。",
+    "尚未製作逐題詳解、正式 QA、runtime/UI、ACTIVE promotion。",
+    "圖片將由使用者以 PowerShell 5.1 從本機 cropped 資料夾上傳 GitHub assets，再進第 3 階段正式收尾。"
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "originalQuestionNumber": 1,
+      "q": "若下列有一圖形為線對稱圖形，則此圖應為何者？",
+      "o": [
+        "圖(A)",
+        "圖(B)",
+        "圖(C)",
+        "圖(D)"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "optionImage",
+          "source": "98年第二次數學科_p001_q1.png",
+          "expected": "q01-options-symmetry.png",
+          "label": "Q1 四個圖形選項"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "originalQuestionNumber": 2,
+      "q": "小琳班上 25 位同學射飛鏢命中紅心的次數依序為 3、5、5、5、2、4、6、7、3、9、0、9、3、3、4、5、1、2、3、8、1、4、6、0、3。此資料的眾數為何？",
+      "o": [
+        "3",
+        "5",
+        "6",
+        "9"
+      ],
+      "a": 0,
+      "fixedOptions": true
+    },
+    {
+      "number": 3,
+      "originalQuestionNumber": 3,
+      "q": "化簡（4x²－5x＋7）－（－2x²＋x－4）之後，可得下列哪一個結果？",
+      "o": [
+        "2x²－4x＋3",
+        "2x²－6x＋11",
+        "6x²－4x＋3",
+        "6x²－6x＋11"
+      ],
+      "a": 3,
+      "fixedOptions": true
+    },
+    {
+      "number": 4,
+      "originalQuestionNumber": 4,
+      "q": "下圖的數線上有 A、B、C、D 四點，其中哪一點所表示的數最接近 √13.1？",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p001_q4.png",
+          "expected": "q04-number-line-sqrt13-1.png",
+          "label": "Q4 數線與 A、B、C、D 四點"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "originalQuestionNumber": 5,
+      "q": "如右圖，將一根木棒的一端固定在 O 點，另一端綁一重物。小如將此重物拉到 A 點後放開，讓此重物由 A 點擺動至 B 點。若下列有一圖形為此重物移動的路徑，則此圖形應為何者？",
+      "o": [
+        "弧",
+        "拋物線",
+        "傾斜直線",
+        "水平直線"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p001_q5.png",
+          "expected": "q05-pendulum-path.png",
+          "label": "Q5 木棒 O、重物與 A、B 位置圖"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "originalQuestionNumber": 6,
+      "q": "有甲、乙、丙三數，其中甲×乙＝108，甲×丙＝270。求 2×乙：5×丙＝？",
+      "o": [
+        "2：3",
+        "3：5",
+        "5：3",
+        "4：25"
+      ],
+      "a": 3,
+      "fixedOptions": true
+    },
+    {
+      "number": 7,
+      "originalQuestionNumber": 7,
+      "q": "有一丟銅板遊戲，其規則是丟出正面得 3 分，丟出反面得 2 分。小民參加此遊戲，共丟了 26 次，得 68 分，求小民共丟出幾次反面？",
+      "o": [
+        "6",
+        "10",
+        "13",
+        "20"
+      ],
+      "a": 1,
+      "fixedOptions": true
+    },
+    {
+      "number": 8,
+      "originalQuestionNumber": 8,
+      "q": "如右圖，圓 O 上依序有 A、B、C、D、E 五點，且扇形 OAB、OBC、OCD、ODE、OEA 的面積恰成為一等差數列。若∠AOB＝24°，則∠DOE＝？",
+      "o": [
+        "72°",
+        "84°",
+        "96°",
+        "108°"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p002_q8.png",
+          "expected": "q08-five-sectors.png",
+          "label": "Q8 圓 O 與 A、B、C、D、E 五點"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "originalQuestionNumber": 9,
+      "q": "解方程式 x－2÷(5/6)＝1/30，得 x＝？",
+      "o": [
+        "51/25",
+        "73/30",
+        "73/36",
+        "60/27"
+      ],
+      "a": 1,
+      "fixedOptions": true
+    },
+    {
+      "number": 10,
+      "originalQuestionNumber": 10,
+      "q": "計算（－1/3）³×（－18）＋3/4÷（－3）之值為何？",
+      "o": [
+        "－17/36",
+        "－11/12",
+        "5/12",
+        "7/4"
+      ],
+      "a": 2,
+      "fixedOptions": true
+    },
+    {
+      "number": 11,
+      "originalQuestionNumber": 11,
+      "q": "如右圖，△ABC 中，D、E 兩點分別在 AB、AC 上，其中∠ADE＝∠ACB＝90°，且 DE＝1，BC＝2。若 AD＝x，AE＝y，則 CE＝？",
+      "o": [
+        "x",
+        "y",
+        "2x－y",
+        "2y－x"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p002_q11.png",
+          "expected": "q11-right-triangle-de.png",
+          "label": "Q11 △ABC 與 D、E"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "originalQuestionNumber": 12,
+      "q": "已知座標平面上有一點 A，座標為（1，2）。若有一點 B 在第二象限，且 B 點到 x 軸的距離與 A 點到 x 軸的距離相等，則直線 AB 的方程式為何？",
+      "o": [
+        "x＝1",
+        "x＝2",
+        "y＝2",
+        "x＋y＝3"
+      ],
+      "a": 2,
+      "fixedOptions": true
+    },
+    {
+      "number": 13,
+      "originalQuestionNumber": 13,
+      "q": "如右圖，座標平面上，一圓與方程式 y＝4 的直線相切於點（－3，4），且交 y 軸於 A 點。若 B 點在圓上，且 AB⊥y 軸，則 AB＝？",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p003_q13.png",
+          "expected": "q13-circle-coordinate.png",
+          "label": "Q13 座標平面上的圓、直線 y=4、A、B"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "originalQuestionNumber": 14,
+      "q": "等差數列 a₁，a₂，a₃，…，aₙ 中，若 a₃－a₂＝6，則 a₃₃₀－a₂₀＝？",
+      "o": [
+        "6",
+        "1854",
+        "1860",
+        "1866"
+      ],
+      "a": 2,
+      "fixedOptions": true
+    },
+    {
+      "number": 15,
+      "originalQuestionNumber": 15,
+      "q": "若 x 為整數，且滿足不等式 3x－7＞3－x，則 2x＋5 之值可能為下列哪一數？",
+      "o": [
+        "9",
+        "10",
+        "12",
+        "13"
+      ],
+      "a": 3,
+      "fixedOptions": true
+    },
+    {
+      "number": 16,
+      "originalQuestionNumber": 16,
+      "q": "一數線以右方為正向。在此數線上，A 點所表示的數為 2又1/4，從 A 點先向右移動 3又1/3 單位，再向左移動 6又1/5 單位到達 B 點，則 B 點所表示的數介於哪兩數之間？",
+      "o": [
+        "0 和－1",
+        "－1 和－2",
+        "－2 和－3",
+        "－3 和－4"
+      ],
+      "a": 0,
+      "fixedOptions": true
+    },
+    {
+      "number": 17,
+      "originalQuestionNumber": 17,
+      "q": "右圖表示 E、F、G、H、I、J、M、N 八點在長方形 ABCD 四邊上的位置，其中 AE＝EF＝FB＝DG＝GH＝HC，且 AI＝IJ＝JD＝BM＝MN＝NC。若長方形 ABCD 的周長為 32，對角線長為 12，則 EI、FJ、BD、MG、NH 五線段的長度和為何？",
+      "o": [
+        "28",
+        "36",
+        "44",
+        "48"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p003_q17.png",
+          "expected": "q17-rectangle-eight-points.png",
+          "label": "Q17 長方形 ABCD 與八個分點"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "originalQuestionNumber": 18,
+      "q": "用配方法將 y＝－2x²＋12x＋1 化成 y＝－2（x＋h）²＋k 的型式，求 h＋k＝？",
+      "o": [
+        "16",
+        "21",
+        "－20",
+        "－14"
+      ],
+      "a": 0,
+      "fixedOptions": true
+    },
+    {
+      "number": 19,
+      "originalQuestionNumber": 19,
+      "q": "右圖為正十二邊形，其頂點依序為 A₁、A₂、…、A₁₂。若連接 A₃A₇、A₇A₁₀，則∠A₃A₇A₁₀＝？",
+      "o": [
+        "45°",
+        "60°",
+        "75°",
+        "90°"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p004_q19.png",
+          "expected": "q19-regular-dodecagon.png",
+          "label": "Q19 正十二邊形"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "originalQuestionNumber": 20,
+      "q": "某棟大樓頂樓裝有紅、藍、綠三盞燈，其中紅燈每 35 分鐘閃一次，藍燈每 40 分鐘閃一次，綠燈每 25 分鐘閃一次。若這三盞燈於晚上 7 點同時閃一次，則當晚 8 點 55 分後，哪一盞燈先閃？",
+      "o": [
+        "紅燈",
+        "藍燈",
+        "綠燈",
+        "三盞燈同時閃"
+      ],
+      "a": 1,
+      "fixedOptions": true
+    },
+    {
+      "number": 21,
+      "originalQuestionNumber": 21,
+      "q": "右圖為兩正方形 ABCD、EFGH 與正三角形 IJK 的位置圖，其中 D、E、J 三點分別在 IJ、CD、EH 上。若∠CEF＝55°，則∠IDA 與∠KJH 的角度和為何？",
+      "o": [
+        "55°",
+        "60°",
+        "65°",
+        "70°"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p004_q21.png",
+          "expected": "q21-squares-equilateral.png",
+          "label": "Q21 兩正方形與正三角形"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "originalQuestionNumber": 22,
+      "q": "下圖為某校各社團人數的圓形圖。若將該校各社團人數的相對次數畫成長條圖，則此圖應為下列何者？",
+      "o": [
+        "圖(A)",
+        "圖(B)",
+        "圖(C)",
+        "圖(D)"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p004_q22-1.png",
+          "expected": "q22-pie-chart.png",
+          "label": "Q22 社團人數圓形圖"
+        },
+        {
+          "role": "optionImage",
+          "source": "98年第二次數學科_p004_q22-2.png",
+          "expected": "q22-options-bar-charts.png",
+          "label": "Q22 四個相對次數長條圖選項"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "originalQuestionNumber": 23,
+      "q": "已知一元二次方程式 x²＋ax－16＝0 的兩根均為整數，a＞0 且 a 為二位數，求 a 的個位數字與十位數字相差為何？",
+      "o": [
+        "0",
+        "1",
+        "4",
+        "6"
+      ],
+      "a": 2,
+      "fixedOptions": true
+    },
+    {
+      "number": 24,
+      "originalQuestionNumber": 24,
+      "q": "如右圖，△ABD 中，DA＝DB，E 為 AB 的中點，AC⊥BD，且 AC 交 BD 於 C 點。若∠B＝70°，則∠DEC＝？",
+      "o": [
+        "40°",
+        "50°",
+        "60°",
+        "70°"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p005_q24.png",
+          "expected": "q24-isosceles-triangle.png",
+          "label": "Q24 △ABD、E、C"
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "originalQuestionNumber": 25,
+      "q": "右圖為平行四邊形 ABCD 與△AEF 的重疊情形，其中 E 是 AB 的中點，D 在 AF 上。若 AB＝2AD，∠A＝60°，∠AEF＝90°，則平行四邊形 ABCD 與△AEF 的面積比為何？",
+      "o": [
+        "3：1",
+        "2：1",
+        "3：2",
+        "2√3：3"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p005_q25.png",
+          "expected": "q25-parallelogram-triangle.png",
+          "label": "Q25 平行四邊形 ABCD 與 △AEF"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "originalQuestionNumber": 26,
+      "q": "某抽獎盒內有 99 顆球，其中白球有 50 顆，且盒內每顆球被抽中的機會均相等。若小涓自此盒中抽球，且每抽中一顆白球即可獲得一項贈品，則下列關於小涓抽球的敘述何者錯誤？",
+      "o": [
+        "一次抽出 50 球不一定可獲得贈品",
+        "只抽一球就獲得贈品的機率大於 1/2",
+        "一次抽出 80 球至少可獲得 31 項贈品",
+        "一次抽出 62 球與一次抽出 61 球，可獲得贈品的機率相等"
+      ],
+      "a": 0,
+      "fixedOptions": true
+    },
+    {
+      "number": 27,
+      "originalQuestionNumber": 27,
+      "q": "如右圖，D、A 兩點分別是兩正三角形 ABC、DEF 的重心，其中 AB 與 DF 相交於 M 點，AC 與 DE 相交於 N 點。若△ABC 與△DEF 的面積均為 18，則四邊形 AMDN 的面積為何？",
+      "o": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p005_q27.png",
+          "expected": "q27-two-equilateral-centroids.png",
+          "label": "Q27 兩正三角形與重心"
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "originalQuestionNumber": 28,
+      "q": "估算 2009×（－2009/2008）的值最接近下列哪一數？",
+      "o": [
+        "－2008",
+        "－2009",
+        "－2010",
+        "－2011"
+      ],
+      "a": 2,
+      "fixedOptions": true
+    },
+    {
+      "number": 29,
+      "originalQuestionNumber": 29,
+      "q": "如右圖，有一菱形 ABCD，AB＝4，面積為 2√2。若 AD 上有一點 M，則 M 到直線 BC 的距離為何？",
+      "o": [
+        "√2/4",
+        "√2/2",
+        "2√2",
+        "8√2"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p006_q29.png",
+          "expected": "q29-rhombus-distance.png",
+          "label": "Q29 菱形 ABCD 與點 M"
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "originalQuestionNumber": 30,
+      "q": "在座標平面上，方程式 y＝2x²－9 的圖形交 x 軸於 A、A′ 兩點；方程式 y＝2（x－2/13）²－8 的圖形交 x 軸於 B、B′ 兩點；方程式 y＝－2（x＋3/17）²＋5 的圖形交 x 軸於 C、C′ 兩點。比較 AA′、BB′、CC′ 的長度，下列關係何者正確？",
+      "o": [
+        "AA′＝BB′＝CC′",
+        "AA′＝BB′＞CC′",
+        "AA′＜BB′＜CC′",
+        "AA′＞BB′＞CC′"
+      ],
+      "a": 3,
+      "fixedOptions": true
+    },
+    {
+      "number": 31,
+      "originalQuestionNumber": 31,
+      "q": "某服飾店的促銷方式是：每件衣服的定價均相同，且每買 2 件衣服可免費多帶走 1 件衣服；此外，若在店內購物總額滿 1000 元，再打 9 折。已知促銷期間小芳帶走 4 件衣服及 1 條定價 450 元的皮帶，共花 1080 元，則每件衣服的定價在下列哪一範圍內？",
+      "o": [
+        "240～280 元",
+        "200～240 元",
+        "160～200 元",
+        "120～160 元"
+      ],
+      "a": 0,
+      "fixedOptions": true
+    },
+    {
+      "number": 32,
+      "originalQuestionNumber": 32,
+      "q": "右圖有 AB 與 AC 兩線段。若一圓 O 過 A、B 兩點，且與直線 AC 相切，則下列哪一條直線會通過圓心 O？",
+      "o": [
+        "∠CAB 的角平分線",
+        "AC 的中垂線",
+        "過 C 點與 AC 垂直的直線",
+        "過 A 點與 AC 垂直的直線"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p006_q32.png",
+          "expected": "q32-tangent-circle-segments.png",
+          "label": "Q32 線段 AB、AC 與切圓條件示意"
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "originalQuestionNumber": 33,
+      "q": "如下圖（一），有甲、乙、丙三個大小相同的圓柱形杯子，杯深 20 公分，且各裝有 15 公分高的水。如下圖（二），將大小相同的彈珠丟入三個杯中（甲杯 2 顆，乙杯 4 顆，丙杯 6 顆），結果甲的水位上升到 18 公分，乙、丙兩杯水滿溢出。求丙溢出的水量是乙溢出的幾倍？",
+      "o": [
+        "1.5",
+        "2",
+        "3",
+        "4"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p007_q33.png",
+          "expected": "q33-cylinders-marbles.png",
+          "label": "Q33 三杯水與彈珠圖（一）（二）"
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "originalQuestionNumber": 34,
+      "q": "右圖的長方形為某園遊會場地（長為 90 公尺，寬為 42 公尺），其中每一個灰色小格為面積相等的正方形，且各代表一個攤位。若圖中灰色區域（即攤位）的總面積為 720 平方公尺，則此園遊會場地共有多少個攤位？",
+      "o": [
+        "40",
+        "45",
+        "72",
+        "80"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "imageStatus": "awaiting-upload",
+      "expectedImages": [
+        {
+          "role": "image",
+          "source": "98年第二次數學科_p007_q34.png",
+          "expected": "q34-fairground-grid.png",
+          "label": "Q34 園遊會長方形場地與灰色攤位格"
+        }
+      ]
+    }
+  ]
+}
