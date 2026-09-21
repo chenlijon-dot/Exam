@@ -121,4 +121,13 @@ assert.match(
   'history query limit must be capped at 50'
 );
 
+
+const historyUi = read('exam-question-history.js');
+
+assert.match(historyUi, /錯題/, 'history UI must render wrong-count annotations');
+assert.match(historyUi, /作答/, 'history UI must render answered-count annotations after submit');
+assert.match(historyUi, /exam:started/, 'history UI must reset/load on exam start');
+assert.match(historyUi, /exam:submitted/, 'history UI must expand after submit');
+assert.match(historyUi, /resetForRetry/, 'history UI must expose retry reset');
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
