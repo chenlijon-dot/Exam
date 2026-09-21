@@ -20,6 +20,40 @@
     const n = Number(value || 0);
     return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0;
   };
+
+  function answeredCount(stats) {
+    return Number(stats?.correctCount || 0) + Number(stats?.wrongCount || 0);
+  }
+
+  function formatActiveHistory(stats) {
+    const wrongCount = Number(stats?.wrongCount || 0);
+    return wrongCount > 0 ? `錯題 ${wrongCount} 次` : null;
+  }
+
+  function formatSubmittedHistory(stats) {
+    const answered = answeredCount(stats);
+    if (answered <= 0) return null;
+
+    const wrongCount = Number(stats?.wrongCount || 0);
+    const firstLine = wrongCount > 0
+      ? `作答 ${answered} 次｜錯題 ${wrongCount} 次`
+      : `作答 ${answered} 次`;
+
+    const selected = String(stats?.lastSelectedLabel || '').trim();
+    const resultLabel = stats?.lastResult === 'correct'
+      ? '正確'
+      : stats?.lastResult === 'incorrect'
+        ? '錯誤'
+        : '';
+
+    const secondLine = selected && resultLabel
+      ? `上次：選 ${selected}｜${resultLabel}`
+      : resultLabel
+        ? `上次：${resultLabel}`
+        : '';
+
+    return secondLine ? [firstLine, secondLine] : [firstLine];
+  }
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
     '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
   }[ch]));
@@ -107,6 +141,8 @@
       unansweredCount: 0,
       exposureCount: 0,
       targetCount: 0,
+      lastSelectedLabel: '',
+      lastResult: '',
       lastReviewedAt: ''
     };
   }
@@ -121,6 +157,8 @@
       unansweredCount: Math.max(countOf(a.unansweredCount), countOf(cloud.unansweredCount)),
       exposureCount: Math.max(countOf(a.exposureCount), countOf(cloud.exposureCount)),
       targetCount: Math.max(countOf(a.targetCount), countOf(cloud.targetCount)),
+      lastSelectedLabel: cloud.lastSelectedLabel || a.lastSelectedLabel || '',
+      lastResult: cloud.lastResult || a.lastResult || '',
       lastReviewedAt: cloud.lastReviewedAt || a.lastReviewedAt || ''
     };
   }
@@ -271,7 +309,7 @@
     const stats = progress[progressKey(item)] || blankProgress();
     return {
       number,
-      q: `${item.question}　｜　已複習 ${stats.reviewCount} 次`,
+      q: item.question,
       o: [...(item.options || [])],
       a: Number(item.answerIndex),
       fixedOptions: true,
@@ -281,9 +319,70 @@
       wordNorm: item.wordNorm,
       chinese: item.question,
       reviewCountBefore: Number(stats.reviewCount || 0),
+      correctCountBefore: Number(stats.correctCount || 0),
       wrongCountBefore: Number(stats.wrongCount || 0),
+      lastSelectedLabelBefore: String(stats.lastSelectedLabel || ''),
+      lastResultBefore: String(stats.lastResult || ''),
       sourceLevel: 'elementary'
     };
+  }
+
+  function clearVocabularyHistoryAnnotations() {
+    document.querySelectorAll('[data-vocab-history]').forEach(el => el.remove());
+  }
+
+  function vocabularyStatsBefore(item) {
+    return {
+      correctCount: Number(item?.correctCountBefore || 0),
+      wrongCount: Number(item?.wrongCountBefore || 0),
+      lastSelectedLabel: String(item?.lastSelectedLabelBefore || ''),
+      lastResult: String(item?.lastResultBefore || '')
+    };
+  }
+
+  function renderVocabularyHistory(submitted = false) {
+    if (!activeSession?.generated?.length) return;
+    clearVocabularyHistoryAnnotations();
+
+    activeSession.generated.forEach((item, index) => {
+      const card = document.querySelector(`.card[data-q="${index}"]`);
+      if (!card) return;
+
+      const before = vocabularyStatsBefore(item);
+      let lines = null;
+
+      if (!submitted) {
+        const text = formatActiveHistory(before);
+        if (!text) return;
+        lines = [text];
+      } else {
+        const picked = document.querySelector(`input[name=q${index}]:checked`);
+        const selected = picked ? Number(picked.value) : null;
+        const stats = { ...before };
+
+        if (selected !== null) {
+          const isCorrect = selected === item.a;
+          if (isCorrect) stats.correctCount += 1;
+          else stats.wrongCount += 1;
+          stats.lastSelectedLabel = ['A','B','C','D'][selected] || '';
+          stats.lastResult = isCorrect ? 'correct' : 'incorrect';
+        }
+
+        lines = formatSubmittedHistory(stats);
+        if (!lines?.length) return;
+      }
+
+      const box = document.createElement('div');
+      box.setAttribute('data-vocab-history', '1');
+      box.className = submitted ? 'vocab-history submitted' : 'vocab-history active';
+      box.innerHTML = lines.map((line, lineIndex) =>
+        `<div class="${lineIndex === 0 ? 'vocab-history-summary' : 'vocab-history-last'}">${escapeHtml(line)}</div>`
+      ).join('');
+
+      const title = card.querySelector('.qtitle');
+      if (title) title.insertAdjacentElement('afterend', box);
+      else card.insertAdjacentElement('afterbegin', box);
+    });
   }
 
   function mergeMarkovAfter(history, delta, continuation) {
@@ -346,6 +445,10 @@
       .vocab-start-btn:disabled{opacity:.55;cursor:wait}
       .vocab-data-note{margin-top:12px;color:#64748b;font-size:.86rem;line-height:1.6}
       .vocab-sync-toast{position:fixed;right:18px;bottom:18px;z-index:10000;background:#0f172a;color:#fff;border-radius:12px;padding:10px 14px;box-shadow:0 12px 30px rgba(15,23,42,.28);font-size:.9rem}
+      .vocab-history{margin:8px 0 2px;width:max-content;max-width:100%;font-size:.84rem;line-height:1.45}
+      .vocab-history.active{padding:4px 9px;border-radius:999px;background:#fef2f2;color:#b91c1c;font-weight:800}
+      .vocab-history.submitted{padding:7px 10px;border-radius:10px;background:#f8fafc;border:1px solid #e2e8f0;color:#334155}
+      .vocab-history-summary{font-weight:800}.vocab-history-last{margin-top:2px;color:#64748b}
       #quiz .explain{white-space:pre-line}
       @media(max-width:620px){.vocab-setup-panel{padding:17px;border-radius:16px}.vocab-count-btn{flex:1 1 calc(50% - 10px)}}
     `;
@@ -468,6 +571,7 @@
       const selected = picked ? Number(picked.value) : null;
       const isCorrect = selected !== null && selected === item.a;
       const isWrong = selected !== null && selected !== item.a;
+      if (selected === null) return;
       const key = progressKey(item);
       const current = local[key] || blankProgress();
       const exposureCount = countOf(markov.exposure[item.wordNorm]);
@@ -477,9 +581,11 @@
         reviewCount: Number(current.reviewCount || 0) + 1,
         wrongCount: Number(current.wrongCount || 0) + (isWrong ? 1 : 0),
         correctCount: Number(current.correctCount || 0) + (isCorrect ? 1 : 0),
-        unansweredCount: Number(current.unansweredCount || 0) + (selected === null ? 1 : 0),
+        unansweredCount: Number(current.unansweredCount || 0),
         exposureCount,
         targetCount,
+        lastSelectedLabel: ['A','B','C','D'][selected] || '',
+        lastResult: isCorrect ? 'correct' : 'incorrect',
         lastReviewedAt: new Date().toISOString()
       };
       updates.push({ item, selected, isCorrect, isWrong, exposureCount, targetCount });
@@ -505,9 +611,10 @@
           reviewCount: api.fs.increment(1),
           wrongCount: api.fs.increment(update.isWrong ? 1 : 0),
           correctCount: api.fs.increment(update.isCorrect ? 1 : 0),
-          unansweredCount: api.fs.increment(update.selected === null ? 1 : 0),
           exposureCount: update.exposureCount,
           targetCount: update.targetCount,
+          lastSelectedLabel: ['A','B','C','D'][update.selected] || '',
+          lastResult: update.isCorrect ? 'correct' : 'incorrect',
           lastReviewedAt: api.fs.serverTimestamp(),
           userEmail: api.email || ''
         }, { merge:true });
@@ -573,9 +680,16 @@
     enhanceGeptLanding();
   }
 
+  document.addEventListener('exam:started', event => {
+    if (event.detail?.examType !== 'gept-vocabulary-memory') return;
+    if (!activeSession || activeSession.key !== event.detail.key) return;
+    renderVocabularyHistory(false);
+  });
+
   document.addEventListener('exam:submitted', event => {
     if (event.detail?.examType !== 'gept-vocabulary-memory') return;
     if (!activeSession || activeSession.key !== event.detail.key) return;
+    renderVocabularyHistory(true);
     persistSessionProgress(activeSession);
   });
 
@@ -590,6 +704,9 @@
     openSetup,
     loadMarkovHistory,
     requestMarkovExam: requestVocabularyExam,
+    answeredCount,
+    formatActiveHistory,
+    formatSubmittedHistory,
     apiUrl: API_URL
   };
 })();
