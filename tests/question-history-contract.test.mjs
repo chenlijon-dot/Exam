@@ -137,4 +137,17 @@ assert.match(
   'submit must invalidate pending active history load before merging the current attempt'
 );
 
+
+assert.match(
+  firestoreSync,
+  /chrisexam-firestore-ready/,
+  'Firestore sync must announce when history reads are ready'
+);
+
+assert.match(
+  historyUi,
+  /chrisexam-firestore-ready/,
+  'history UI must retry loading when Firestore becomes ready'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
