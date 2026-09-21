@@ -71,6 +71,7 @@
         ${card({id:'bct94Btn',icon:'🗓️',title:'94 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、答案、原卷附圖與逐題詳解。'})}
         ${card({id:'bct95Btn',icon:'🗓️',title:'95 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立 33 題、官方答案、原卷附圖與逐題詳解。'})}
         ${card({id:'bct96Btn',icon:'🗓️',title:'96 年度',badge:'已收錄',desc:'第一次、第二次数學科皆已建立 33 題、官方答案、原卷附圖與逐題詳解。'})}
+        ${card({id:'bct97Btn',icon:'🗓️',title:'97 年度',badge:'建置中',desc:'第一次數學科 34 題、官方答案與原卷附圖已建立；逐題詳解待補。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
     $('#bct91Btn')?.addEventListener('click', showBct91Sessions);
@@ -79,6 +80,7 @@
     $('#bct94Btn')?.addEventListener('click', showBct94Sessions);
     $('#bct95Btn')?.addEventListener('click', showBct95Sessions);
     $('#bct96Btn')?.addEventListener('click', showBct96Sessions);
+    $('#bct97Btn')?.addEventListener('click', showBct97Sessions);
   }
 
   function showBct90Sessions() {
@@ -177,6 +179,19 @@
       </div>`;
     $('#bct96FirstBtn')?.addEventListener('click', showBct96FirstSubjects);
     $('#bct96SecondBtn')?.addEventListener('click', showBct96SecondSubjects);
+  }
+
+  function showBct97Sessions() {
+    setHeader('97 年度基測', '選擇測驗次別');
+    content().innerHTML = `
+      ${backButton('backBct97Btn','返回年度',showBctYears)}
+      <div class="catalog-path">歷屆考題　›　基測　›　97 年度</div>
+      <h2 class="catalog-title">請選擇次別</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct97FirstBtn',icon:'1️⃣',title:'第一次',badge:'34 題',desc:'97 年度第一次基測；數學科原題、官方答案與原卷附圖已建立，詳解待補。'})}
+        ${card({id:'bct97SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'97 年度第二次基測尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct97FirstBtn')?.addEventListener('click', showBct97FirstSubjects);
   }
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
     const hasMath = Number.isInteger(mathCount);
@@ -438,6 +453,27 @@
       path:'past-exams/bct/96/second/math.json',
       explanationsPath:'past-exams/bct/96/second/math-explanations.json',
       onBack:showBct96SecondSubjects
+    }));
+  }
+
+
+  function showBct97FirstSubjects() {
+    setHeader('97 年度第一次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct97FirstBtn','返回次別',showBct97Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　97 年度　›　第一次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct97FirstChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct97FirstEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct97FirstMathBtn',icon:'📐',title:'數學科',badge:'34 題',desc:'34 題原題、官方答案與 19 張原卷裁圖已建立；逐題詳解待補。'})}
+        ${card({id:'bct97FirstScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct97FirstSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct97FirstMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct97FirstMathBtn',
+      path:'past-exams/bct/97/first/math.json',
+      onBack:showBct97FirstSubjects
     }));
   }
 
