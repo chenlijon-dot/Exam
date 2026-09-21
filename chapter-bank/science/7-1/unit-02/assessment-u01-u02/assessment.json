@@ -15,9 +15,15 @@
     "answerAuthority": "新無敵國中自然 1 解答篇 p.370",
     "preserveOptionOrder": true,
     "analysisEligible": true,
-    "lifecycle": "staging",
-    "buildStage": "stage-1-text-skeleton",
-    "note": "高速三階段流程 Stage 1：僅完成題目文字、選項、正式答案與圖片 pending；尚未發 questionId/revision，尚未補詳解，尚未啟用 UI。"
+    "lifecycle": "active",
+    "buildStage": "stage-3-active",
+    "note": "高速三階段流程完成：25題文字與正式答案、6張原題裁圖、25題逐題詳解、永久 questionId/revision、回溯相容與 ACTIVE promotion。",
+    "formalQuestionCount": 25,
+    "explanationCount": 25,
+    "pendingImageQuestionNumbers": [],
+    "questionIdPolicy": "permanent-global-string",
+    "revisionPolicy": "first formal promotion = revision 1; future corrections preserve questionId and increment revision",
+    "historyPolicy": "stable exam key + permanent questionId; historical attempts resolve by questionId/revision, not display order"
   },
   "groups": [
     {
@@ -52,7 +58,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 1
+      "originalQuestionNumber": 1,
+      "questionId": "260922070300001",
+      "revision": 1,
+      "e": "實驗室安全以教師指示與規範為準，不可因為想進行實驗就任意碰觸儀器或藥品；保持通風、看清藥品標籤與維持環境整潔都是正確的安全做法。",
+      "lifecycle": "active"
     },
     {
       "number": 2,
@@ -74,7 +84,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 2
+      "originalQuestionNumber": 2,
+      "questionId": "260922070300002",
+      "revision": 1,
+      "e": "在其他條件相同時，換成高倍物鏡後，視野範圍會縮小，而且進入眼睛的有效光量較少，所以視野通常較暗。",
+      "lifecycle": "active"
     },
     {
       "number": 3,
@@ -96,7 +110,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 3
+      "originalQuestionNumber": 3,
+      "questionId": "260922070300003",
+      "revision": 1,
+      "e": "需要養分、生長與繁殖以延續種族都屬常見生命現象；但並非所有生物都具有明顯的移動或遷移能力，例如植物通常不會整體遷移。",
+      "lifecycle": "active"
     },
     {
       "number": 4,
@@ -118,7 +136,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 4
+      "originalQuestionNumber": 4,
+      "questionId": "260922070300004",
+      "revision": 1,
+      "e": "仙人掌針狀葉可減少蒸散、捕蟲植物可補充礦物質、水筆仔具有胎生苗，都是適應環境的例子；青蛙並不是以回聲定位作為主要辨識環境的方式。",
+      "lifecycle": "active"
     },
     {
       "number": 5,
@@ -141,8 +163,12 @@
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
       "originalQuestionNumber": 5,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_223035_Q5.png"
+      "questionId": "260922070300005",
+      "revision": 1,
+      "e": "軟木栓由植物細胞形成，顯微鏡下常可見規則、近似小格子的細胞室外形；依原題圖形選項應選圖A。",
+      "lifecycle": "active",
+      "optionImage": "chapter-bank/science/7-1/unit-02/assessment-u01-u02/assets/IMG_20260920_223035_Q5.png",
+      "optionImageAlt": "軟木栓細胞外形的四個圖形選項"
     },
     {
       "number": 6,
@@ -164,7 +190,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 6
+      "originalQuestionNumber": 6,
+      "questionId": "260922070300006",
+      "revision": 1,
+      "e": "細胞學說認為生物體由細胞組成、細胞是構造與功能的基本單位，且新細胞來自原有細胞；『由非生物自然組合產生現有細胞』不符合細胞學說。",
+      "lifecycle": "active"
     },
     {
       "number": 7,
@@ -186,7 +216,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 7
+      "originalQuestionNumber": 7,
+      "questionId": "260922070300007",
+      "revision": 1,
+      "e": "水蘊草與軟木栓都是植物來源，細胞外側具有較堅硬的細胞壁，因此外形較規則且不容易變形。",
+      "lifecycle": "active"
     },
     {
       "number": 8,
@@ -208,7 +242,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 8
+      "originalQuestionNumber": 8,
+      "questionId": "260922070300008",
+      "revision": 1,
+      "e": "植物的洋蔥表皮細胞具有細胞壁，人體口腔皮膜細胞沒有細胞壁；兩者都有細胞膜、細胞質與細胞核，而洋蔥鱗葉表皮通常不具葉綠體。",
+      "lifecycle": "active"
     },
     {
       "number": 9,
@@ -231,8 +269,12 @@
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
       "originalQuestionNumber": 9,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_223040_Q9.png"
+      "questionId": "260922070300009",
+      "revision": 1,
+      "e": "換高倍觀察前應先把目標移到視野中央，再轉換到高倍物鏡，最後用細調節輪調焦；依圖中物像位置與物鏡標示，正確順序為（丙）→（甲）→（戊）。",
+      "lifecycle": "active",
+      "image": "chapter-bank/science/7-1/unit-02/assessment-u01-u02/assets/IMG_20260920_223040_Q9.png",
+      "imageAlt": "複式顯微鏡物鏡與水蚤在視野中的位置示意圖"
     },
     {
       "number": 10,
@@ -254,7 +296,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 10
+      "originalQuestionNumber": 10,
+      "questionId": "260922070300010",
+      "revision": 1,
+      "e": "蘿蔔是植物的根，由多種組織共同構成並執行吸收、運輸與儲存等功能，因此屬於器官層次。",
+      "lifecycle": "active"
     },
     {
       "number": 11,
@@ -276,7 +322,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 11
+      "originalQuestionNumber": 11,
+      "questionId": "260922070300011",
+      "revision": 1,
+      "e": "細菌與草履蟲都是單細胞生物，可由細胞直接構成個體；動物可有器官系統層次，而本課程中植物通常整理到細胞→組織→器官→個體，所以尤加利樹的敘述錯誤。",
+      "lifecycle": "active"
     },
     {
       "number": 12,
@@ -299,8 +349,12 @@
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
       "originalQuestionNumber": 12,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_223040_Q12.png"
+      "questionId": "260922070300012",
+      "revision": 1,
+      "e": "物鏡倍率越高，視野通常越暗，需要增加進光量才能維持清楚觀察；依圖判讀乙為需要最大光圈的情況。",
+      "lifecycle": "active",
+      "image": "chapter-bank/science/7-1/unit-02/assessment-u01-u02/assets/IMG_20260920_223040_Q12.png",
+      "imageAlt": "同一標本以不同物鏡倍率觀察的四個視野"
     },
     {
       "number": 13,
@@ -322,7 +376,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 13
+      "originalQuestionNumber": 13,
+      "questionId": "260922070300013",
+      "revision": 1,
+      "e": "總放大倍率＝目鏡倍率×物鏡倍率。九種搭配得到50、100、500、100、200、1000、150、300、1500倍，其中100倍重複一次，因此共有8種不同倍率。",
+      "lifecycle": "active"
     },
     {
       "number": 14,
@@ -344,7 +402,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 14
+      "originalQuestionNumber": 14,
+      "questionId": "260922070300014",
+      "revision": 1,
+      "e": "顯微鏡的光圈用來控制進入顯微鏡的光量；焦距主要由調節輪處理，反光鏡則負責反射光線。",
+      "lifecycle": "active"
     },
     {
       "number": 15,
@@ -366,7 +428,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 15
+      "originalQuestionNumber": 15,
+      "questionId": "260922070300015",
+      "revision": 1,
+      "e": "『水分可能會促進黴菌生長』是針對觀察現象提出可檢驗的解釋，因此屬於假說。",
+      "lifecycle": "active"
     },
     {
       "number": 16,
@@ -388,7 +454,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 16
+      "originalQuestionNumber": 16,
+      "questionId": "260922070300016",
+      "revision": 1,
+      "e": "仙人掌針狀葉主要是對缺水環境的適應；高海拔處空氣稀薄；深海缺乏足夠陽光供綠色植物行光合作用，因此依序為水分→空氣→陽光。",
+      "lifecycle": "active"
     },
     {
       "number": 17,
@@ -410,7 +480,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 17
+      "originalQuestionNumber": 17,
+      "questionId": "260922070300017",
+      "revision": 1,
+      "e": "植物細胞由外向內依序可整理為細胞壁、細胞膜、細胞質，再到位於細胞質中的細胞核，所以順序為丁→丙→乙→甲。",
+      "lifecycle": "active"
     },
     {
       "number": 18,
@@ -433,8 +507,12 @@
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
       "originalQuestionNumber": 18,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_223051_Q18.png"
+      "questionId": "260922070300018",
+      "revision": 1,
+      "e": "珊瑚所共生的藻類需要光才能進行光合作用，因此珊瑚較適合生活在陽光能到達的淺海區；依圖中位置判讀為丙。",
+      "lifecycle": "active",
+      "image": "chapter-bank/science/7-1/unit-02/assessment-u01-u02/assets/IMG_20260920_223051_Q18.png",
+      "imageAlt": "海平面上下高度與甲乙丙丁位置的地形剖面圖"
     },
     {
       "number": 19,
@@ -456,7 +534,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 19
+      "originalQuestionNumber": 19,
+      "questionId": "260922070300019",
+      "revision": 1,
+      "e": "題目要檢驗的是『水袋透明度』是否影響驅蠅效果，因此研究者主動改變的操作變因就是水袋的透明度，其餘條件應盡量控制一致。",
+      "lifecycle": "active"
     },
     {
       "number": 20,
@@ -479,8 +561,12 @@
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
       "originalQuestionNumber": 20,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_223051_Q20.png"
+      "questionId": "260922070300020",
+      "revision": 1,
+      "e": "解剖顯微鏡以雙眼觀察時，需要調整雙眼視筒／目鏡間距，使左右眼看到的影像重合；依圖中標示此構造為乙。",
+      "lifecycle": "active",
+      "image": "chapter-bank/science/7-1/unit-02/assessment-u01-u02/assets/IMG_20260920_223051_Q20.png",
+      "imageAlt": "解剖顯微鏡構造甲乙丙丁標示圖"
     },
     {
       "number": 21,
@@ -503,8 +589,12 @@
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
       "originalQuestionNumber": 21,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_223055_Q21.png"
+      "questionId": "260922070300021",
+      "revision": 1,
+      "e": "櫻桃是果實，屬植物的生殖器官；芋頭的地下莖、竹子的莖與落地生根的葉主要屬營養器官。",
+      "lifecycle": "active",
+      "optionImage": "chapter-bank/science/7-1/unit-02/assessment-u01-u02/assets/IMG_20260920_223055_Q21.png",
+      "optionImageAlt": "芋頭、竹子、櫻桃與落地生根的植物器官圖形選項"
     },
     {
       "number": 22,
@@ -526,7 +616,11 @@
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
       "preserveOptionOrder": true,
-      "originalQuestionNumber": 22
+      "originalQuestionNumber": 22,
+      "questionId": "260922070300022",
+      "revision": 1,
+      "e": "題幹指出此物質會阻斷細胞釋放能量的生理過程；細胞進行呼吸作用、釋放可利用能量的主要胞器是粒線體，因此選粒線體。",
+      "lifecycle": "active"
     },
     {
       "number": 23,
@@ -550,7 +644,12 @@
       "preserveOptionOrder": true,
       "groupId": "assessment-u01-u02-group-01",
       "intro": "大雄家裡面養了一隻秋田犬，有一天這隻秋田犬在大雄家的花園尿尿，大雄沒有發現也沒有去清理，結果過了兩天後，發現花園裡被尿液浸過的土壤所種的花草全部枯萎了。請由上述內容回答1～3題。",
-      "originalQuestionNumber": 1
+      "originalQuestionNumber": 1,
+      "questionId": "260922070300023",
+      "revision": 1,
+      "e": "尿液的溶質濃度高於純水，若外界溶液相對較濃，根細胞中的水會經滲透作用向外移動，使細胞失水並導致植物萎凋。",
+      "lifecycle": "active",
+      "introLabel": "題組｜請閱讀情境後作答"
     },
     {
       "number": 24,
@@ -574,7 +673,12 @@
       "preserveOptionOrder": true,
       "groupId": "assessment-u01-u02-group-01",
       "intro": "大雄家裡面養了一隻秋田犬，有一天這隻秋田犬在大雄家的花園尿尿，大雄沒有發現也沒有去清理，結果過了兩天後，發現花園裡被尿液浸過的土壤所種的花草全部枯萎了。請由上述內容回答1～3題。",
-      "originalQuestionNumber": 2
+      "originalQuestionNumber": 2,
+      "questionId": "260922070300024",
+      "revision": 1,
+      "e": "水分子通過選擇性通透膜，由水分較多處往水分較少處淨移動的現象稱為滲透作用。",
+      "lifecycle": "active",
+      "introLabel": "題組｜請閱讀情境後作答"
     },
     {
       "number": 25,
@@ -598,7 +702,12 @@
       "preserveOptionOrder": true,
       "groupId": "assessment-u01-u02-group-01",
       "intro": "大雄家裡面養了一隻秋田犬，有一天這隻秋田犬在大雄家的花園尿尿，大雄沒有發現也沒有去清理，結果過了兩天後，發現花園裡被尿液浸過的土壤所種的花草全部枯萎了。請由上述內容回答1～3題。",
-      "originalQuestionNumber": 3
+      "originalQuestionNumber": 3,
+      "questionId": "260922070300025",
+      "revision": 1,
+      "e": "植物細胞置於較高濃度的外液後會失水，原生質體縮小，細胞膜與細胞壁分離，形成質壁分離現象；細胞壁本身不會隨之明顯萎縮。",
+      "lifecycle": "active",
+      "introLabel": "題組｜請閱讀情境後作答"
     }
   ]
 }
