@@ -215,6 +215,7 @@
         { key: 'science-7-1-2-2', code: '2-2', title: '細胞的形態和構造', enabled: true, desc: '細胞膜、細胞核、粒線體、葉綠體、細胞壁與細胞功能' },
         { key: 'science-7-1-2-3', code: '2-3', title: '有關生命的物質', enabled: true, desc: '擴散、滲透、選擇性通透與物質進出細胞' },
         { key: 'science-7-1-2-4', code: '2-4', title: '從細胞到生物體', enabled: true, desc: '細胞、組織、器官、器官系統與生物體組成層次' },
+        { key: 'science-7-1-assessment-u01-u02', code: '學力測驗', title: '單元一～單元二', enabled: false, type: 'assessment', desc: '單元 1～2 綜合學力測驗；依圖片考題高速三階段流程建置。' },
         { key: 'science-7-1-core-2', code: '核心素養', title: '生命的起源', enabled: false, type: 'literacy' }
       ]
     },
@@ -1004,7 +1005,7 @@
       <h2 class="catalog-title">${unit.number}　${unit.title}</h2>
       <p class="catalog-sub">已建立教材小節分類；標示「題庫可用」者可以開始作答。</p>
       <div class="catalog-grid">
-        ${unit.sections.map(s => `<button class="catalog-card chapter-card" data-science-section="${s.key}" ${s.enabled ? '' : 'disabled'}><span class="top"><strong>${s.code}　${s.title}</strong><span class="catalog-badge ${s.enabled ? '' : (s.type === 'literacy' ? 'core' : 'soon')}">${s.enabled ? '題庫可用' : (s.type === 'literacy' ? '核心素養｜待建' : '建置中')}</span></span><span class="desc">${s.enabled ? (s.desc || '進入題庫') : '章節位置已建立，題目後續補入。'}</span></button>`).join('')}
+        ${unit.sections.map(s => `<button class="catalog-card chapter-card" data-science-section="${s.key}" ${s.enabled ? '' : 'disabled'}><span class="top"><strong>${s.code}　${s.title}</strong><span class="catalog-badge ${s.enabled ? '' : (s.type === 'literacy' ? 'core' : 'soon')}">${s.enabled ? '題庫可用' : (s.type === 'literacy' ? '核心素養｜待建' : (s.type === 'assessment' ? '學力測驗｜待匯入' : '建置中'))}</span></span><span class="desc">${s.enabled ? (s.desc || '進入題庫') : (s.desc || '章節位置已建立，題目後續補入。')}</span></button>`).join('')}
       </div>`;
     $('#backScienceUnitsBtn')?.addEventListener('click', showScience71Units);
     if (unitKey === 'unit-1') $('[data-science-section="science-method"]')?.addEventListener('click', enterScienceMethod);
