@@ -216,4 +216,25 @@ assert.match(
   'no-history reset must not invalidate its own active recall request'
 );
 
+
+const vocab = read('exam-english-vocabulary-simple.js');
+
+assert.doesNotMatch(
+  vocab,
+  /q:\s*`[^\n]*已複習\s*\$\{stats\.reviewCount\}/,
+  'active vocabulary question text must not expose review count'
+);
+
+assert.match(
+  vocab,
+  /selected\s*===\s*null/,
+  'vocabulary persistence must explicitly handle blank selection'
+);
+
+assert.match(
+  vocab,
+  /correctCount\s*\|\|\s*0[\s\S]*wrongCount\s*\|\|\s*0/,
+  'vocabulary answered count must derive from correct + wrong'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
