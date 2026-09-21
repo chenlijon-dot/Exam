@@ -137,7 +137,7 @@
     try {
       const attempts = await store.loadRecentQuestionAttempts(50);
       if (token !== loadToken) return false;
-      aggregate = window.ExamQuestionHistoryCore.aggregateQuestionHistory(attempts || {});
+      aggregate = window.ExamQuestionHistoryCore.aggregateQuestionHistory(attempts || []);
       renderAll();
       return true;
     } catch (error) {
@@ -229,6 +229,7 @@
   });
 
   document.addEventListener('exam:submitted', () => {
+    loadToken += 1;
     submitted = true;
 
     const currentAttempt = latestLocalAttempt();
