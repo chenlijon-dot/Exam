@@ -204,9 +204,10 @@
       <h2 class="catalog-title">請選擇次別</h2>
       <div class="catalog-grid">
         ${card({id:'bct98FirstBtn',icon:'1️⃣',title:'第一次',badge:'34 題',desc:'98 年度第一次基測；數學科 34 題、官方答案、原卷附圖與逐題詳解已建立。'})}
-        ${card({id:'bct98SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'98 年度第二次基測尚未匯入。',disabled:true})}
+        ${card({id:'bct98SecondBtn',icon:'2️⃣',title:'第二次',badge:'34 題',desc:'98 年度第二次基測；數學科 34 題、官方答案、原卷附圖與逐題詳解已建立。'})}
       </div>`;
     $('#bct98FirstBtn')?.addEventListener('click', showBct98FirstSubjects);
+    $('#bct98SecondBtn')?.addEventListener('click', showBct98SecondSubjects);
   }
 
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
@@ -536,6 +537,27 @@
     }));
   }
 
+  function showBct98SecondSubjects() {
+    setHeader('98 年度第二次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct98SecondBtn','返回次別',showBct98Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　98 年度　›　第二次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct98SecondChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct98SecondEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct98SecondMathBtn',icon:'📐',title:'數學科',badge:'34 題',desc:'34 題原題、官方答案、18 張原卷裁圖與逐題詳解已建立。'})}
+        ${card({id:'bct98SecondScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct98SecondSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct98SecondMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct98SecondMathBtn',
+      path:'past-exams/bct/98/second/math.json',
+      explanationsPath:'past-exams/bct/98/second/math-explanations.json',
+      onBack:showBct98SecondSubjects
+    }));
+  }
+
   async function loadCompanionExplanations(path, data) {
     if (!path) return;
     try {
@@ -596,6 +618,7 @@
   window.showBct97FirstSubjects = showBct97FirstSubjects;
   window.showBct97SecondSubjects = showBct97SecondSubjects;
   window.showBct98FirstSubjects = showBct98FirstSubjects;
+  window.showBct98SecondSubjects = showBct98SecondSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
