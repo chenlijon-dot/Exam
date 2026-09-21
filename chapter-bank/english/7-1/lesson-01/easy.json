@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921092048001",
+      "revision": 1,
       "number": 1,
       "section": "詞彙與結構",
       "q": "My father’s brother is my _____.",
@@ -35,6 +37,8 @@
       "e": "答案是 (A) uncle。father’s brother 是「爸爸的兄弟」，也就是叔叔／伯伯。"
     },
     {
+      "questionId": "260921092048002",
+      "revision": 1,
       "number": 2,
       "q": "My mother’s sister is my _____.",
       "o": [
@@ -51,6 +55,8 @@
       "e": "答案是 (B) aunt。mother’s sister 是阿姨／姨媽。"
     },
     {
+      "questionId": "260921092048003",
+      "revision": 1,
       "number": 3,
       "q": "Jack and I have the same uncle. Jack is my _____.",
       "o": [
@@ -67,6 +73,8 @@
       "e": "答案是 (C) cousin。兩人共享同一位叔伯／舅舅，最符合堂／表兄弟姊妹關係。"
     },
     {
+      "questionId": "260921092048004",
+      "revision": 1,
       "number": 4,
       "q": "A father and a mother are _____.",
       "o": [
@@ -83,6 +91,8 @@
       "e": "答案是 (B) parents。father + mother 合稱 parents。"
     },
     {
+      "questionId": "260921092048005",
+      "revision": 1,
       "number": 5,
       "q": "Peter _____ a student.",
       "o": [
@@ -99,6 +109,8 @@
       "e": "答案是 (C) is。Peter 是單數第三人稱，be 動詞用 is。"
     },
     {
+      "questionId": "260921092048006",
+      "revision": 1,
       "number": 6,
       "q": "You _____ my cousin.",
       "o": [
@@ -115,6 +127,8 @@
       "e": "答案是 (B) are。主詞 You 搭配 are。"
     },
     {
+      "questionId": "260921092048007",
+      "revision": 1,
       "number": 7,
       "q": "I _____ a junior high school student.",
       "o": [
@@ -131,6 +145,8 @@
       "e": "答案是 (A) am。主詞 I 搭配 am。"
     },
     {
+      "questionId": "260921092048008",
+      "revision": 1,
       "number": 8,
       "q": "He is not a doctor. Which short form is correct?",
       "o": [
@@ -147,6 +163,8 @@
       "e": "答案是 (C) He isn’t a doctor.。is not 可縮寫為 isn’t。"
     },
     {
+      "questionId": "260921092048009",
+      "revision": 1,
       "number": 9,
       "q": "_____ is that young man? — He is my uncle.",
       "o": [
@@ -163,6 +181,8 @@
       "e": "答案是 (B) Who。Lesson 1 用 Who 詢問人物姓名或關係。"
     },
     {
+      "questionId": "260921092048010",
+      "revision": 1,
       "number": 10,
       "q": "Mr. Lee is 25 years old. He is a _____ man.",
       "o": [
@@ -179,6 +199,8 @@
       "e": "答案是 (A) young。題目描述 25 歲的男子，young 最符合語意。"
     },
     {
+      "questionId": "260921092048011",
+      "revision": 1,
       "number": 11,
       "q": "According to “The Lins,” Bella is a(n) _____.",
       "o": [
@@ -196,6 +218,8 @@
       "e": "答案是 (C) English teacher。教材中的 Bella 是 Nick 的姊姊，也是英文老師。"
     },
     {
+      "questionId": "260921092048012",
+      "revision": 1,
       "number": 12,
       "q": "According to “The Lins,” Paul is a _____.",
       "o": [
@@ -213,6 +237,8 @@
       "e": "答案是 (A) nurse。Paul 是 Nick 的父親，職業是 nurse。"
     },
     {
+      "questionId": "260921092048013",
+      "revision": 1,
       "number": 13,
       "q": "According to “The Lins,” Lily is a _____.",
       "o": [
@@ -230,6 +256,8 @@
       "e": "答案是 (B) doctor。Lily 是 Nick 的母親，職業是 doctor。"
     },
     {
+      "questionId": "260921092048014",
+      "revision": 1,
       "number": 14,
       "q": "According to “The Lins,” Nick’s grandmother is a _____.",
       "o": [
@@ -247,6 +275,8 @@
       "e": "答案是 (C) cook。Nick 的 grandmother 在教材中是 cook。"
     },
     {
+      "questionId": "260921092048015",
+      "revision": 1,
       "number": 15,
       "q": "Which word has the /æ/ sound taught in Lesson 1?",
       "o": [
