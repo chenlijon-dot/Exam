@@ -62,4 +62,18 @@ assert.match(
   'blank handwriting must use an explicit unanswered state'
 );
 
+
+assert.ok(records.includes("const questionId = source.questionId"), 'history records must read permanent questionId');
+assert.ok(records.includes("const questionRevision = Number(source.revision || 1)"), 'history records must preserve revision');
+assert.ok(records.includes("selectedIndex === null || correctIndex === null"), 'blank MCQ must be excluded from question history');
+assert.ok(records.includes("verdict === 'correct' || verdict === 'incorrect'"), 'only clearly graded handwriting enters history');
+assert.ok(records.includes("answers: historyAnswers"), 'schema-v3 answers must contain only valid history answers');
+assert.ok(records.includes("wrongAnswers: historyAnswers.filter"), 'wrongAnswers must derive from valid history answers');
+
+const index = read('index.html');
+assert.ok(
+  index.indexOf('exam-question-history-core.js') < index.indexOf('exam-records.js'),
+  'question history core must load before exam-records'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
