@@ -569,6 +569,7 @@
   if ($('#restartBtn')) {
     $('#restartBtn').onclick = function() {
       if(!confirm('確定重新作答？目前選擇會清除。'))return;
+      window.ExamQuestionHistoryUI?.resetForRetry?.();
       graded=false;
       window.ExamHandwriting?.reset?.();
       render();
