@@ -1,0 +1,152 @@
+name: Deploy question history preview
+
+on:
+  push:
+    branches: [question-history-recall]
+    paths:
+      - '.github/workflows/pages-question-history-preview.yml'
+      - 'index.html'
+      - 'exam-*.js'
+      - 'firebase-*.js'
+      - 'chapter-bank/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy-preview:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}preview/question-history-recall/
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout production main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site
+
+      - name: Checkout preview branch
+        uses: actions/checkout@v4
+        with:
+          ref: question-history-recall
+          path: preview-src
+
+      - name: Build production root and preview subsite
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          import subprocess
+          import os
+
+          root = Path.cwd()
+          site = root / 'site'
+          preview_src = root / 'preview-src'
+          preview = site / 'preview' / 'question-history-recall'
+
+          if preview.exists():
+              shutil.rmtree(preview)
+
+          def ignore_git(path, names):
+              return {'.git'} if '.git' in names else set()
+
+          shutil.copytree(preview_src, preview, ignore=ignore_git)
+
+          def git_value(repo, *args):
+              return subprocess.check_output(
+                  ['git', '-C', str(repo), *args],
+                  text=True
+              ).strip()
+
+          def commit_timestamp(repo):
+              iso = git_value(repo, 'show', '-s', '--format=%cI', 'HEAD')
+              env = os.environ.copy()
+              env['TZ'] = 'Asia/Taipei'
+              return subprocess.check_output(
+                  ['date', '-d', iso, '+%Y-%m-%d %H:%M'],
+                  text=True,
+                  env=env
+              ).strip()
+
+          def build(repo, preview_mode=False):
+              sha = git_value(repo, 'rev-parse', 'HEAD')
+              ts = commit_timestamp(repo)
+
+              html_path = repo / 'index.html'
+              html = html_path.read_text(encoding='utf-8')
+              html = html.replace('__BUILD_SHA__', sha)
+
+              base = repo / 'chapter-bank' / 'english' / 'gept' / 'elementary' / 'vocabulary' / 'static'
+              static_files = [base / f'gept-vocab-{i:02d}.js' for i in range(1, 9)]
+              static_files.append(base / 'gept-vocab-ready.js')
+              missing = [str(p) for p in static_files if not p.is_file()]
+              if missing:
+                  raise SystemExit('Missing static vocabulary files: ' + ', '.join(missing))
+
+              marker = '<script src="exam-navigation-fix.js?v='
+              if 'gept-vocab-01.js?v=' not in html:
+                  pos = html.find(marker)
+                  if pos < 0:
+                      raise SystemExit(f'Could not find exam-navigation-fix.js in {html_path}')
+                  tags = ''.join(
+                      f'<script src="{p.relative_to(repo).as_posix()}?v={sha}"></script>\n'
+                      for p in static_files
+                  )
+                  html = html[:pos] + tags + html[pos:]
+
+              html = html.replace(
+                  '<section id="startScreen">',
+                  '<section id="startScreen" class="hidden">'
+              )
+
+              if 'exam-browser-history.js?v=' not in html:
+                  html = html.replace(
+                      '</body>',
+                      f'<script src="exam-browser-history.js?v={sha}"></script></body>'
+                  )
+
+              if 'exam-branding.js?v=' not in html:
+                  html = html.replace(
+                      '</body>',
+                      f'<script src="exam-branding.js?v={sha}"></script></body>'
+                  )
+
+              html_path.write_text(html, encoding='utf-8')
+
+              branding_path = repo / 'exam-branding.js'
+              branding = branding_path.read_text(encoding='utf-8')
+              label = f'測試版 {ts}' if preview_mode else ts
+              branding = branding.replace('__BUILD_TIMESTAMP__', label)
+              branding_path.write_text(branding, encoding='utf-8')
+
+              print(('PREVIEW' if preview_mode else 'PRODUCTION'), sha, label)
+
+          build(site, preview_mode=False)
+          build(preview, preview_mode=True)
+          PY
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload combined Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
