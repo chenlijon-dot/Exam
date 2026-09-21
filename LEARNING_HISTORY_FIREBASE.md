@@ -1,6 +1,6 @@
 # Firebase 學習歷程資料與管理設定
 
-更新日期：2026-09-17
+更新日期：2026-09-21
 
 本文件記錄 `chenlijon-dot/Exam` 目前的 Firebase 學習歷程架構、資料格式、登入與權限設計、學生端與管理者端功能，以及 GEPT 初級字庫記憶系統的學習狀態、出題流程與維護注意事項。
 
@@ -134,9 +134,28 @@ chenlijon@gmail.com
 localStorage key: examRecords.v1
 ```
 
-主要由 `exam-records.js` 建立。
+主要由 `exam-records.js` 建立。2026-09-21 起，新完成的正式 attempt 使用：
 
-目前紀錄 schema 約為 `schemaVersion: 2`，常見欄位包含：
+```text
+schemaVersion: 3
+historyDomain: "question" | "vocabulary" | "none"
+```
+
+目前正式固定題使用：
+
+```text
+historyDomain: "question"
+```
+
+GEPT Vocabulary 的整份 attempt 標記為：
+
+```text
+historyDomain: "vocabulary"
+```
+
+`none` 保留給未來明確不參與任何縱向題目歷史的 attempt；目前一般正式題與 GEPT Vocabulary 不使用它。
+
+一般 attempt 常見 exam-level 欄位包含：
 
 ```text
 recordType
@@ -157,8 +176,78 @@ total
 manualStudyCount
 answers
 wrongAnswers
-metadata
 ```
+
+對 `historyDomain: "question"`，`answers[]` 只保存「真的有作答，而且可以可靠判定 correct / incorrect」的題目歷史。每筆有效固定題答案至少保存：
+
+```text
+questionId
+questionRevision
+questionType
+selectedDisplayIndex
+selectedDisplayLabel
+selectedCanonicalIndex
+correctCanonicalIndex
+selectedText
+result: "correct" | "incorrect"
+```
+
+其中：
+
+```text
+questionId / questionRevision
+→ 永久題目身份
+
+selectedCanonicalIndex / correctCanonicalIndex
+→ 選項洗牌後仍維持語意身份
+
+selectedDisplayIndex / selectedDisplayLabel
+→ 保留學生當時畫面真正看到、真正選到的選項位置與字母
+```
+
+下列狀態不進固定題的 per-question history：
+
+```text
+blank MCQ
+manual-study
+handwriting blank
+handwriting unclear
+```
+
+數學 handwriting 只有：
+
+```text
+correct
+incorrect
+```
+
+會進 `answers[]`。空白 handwriting 使用 `unanswered`，AI 無法可靠判讀使用 `unclear`，兩者都不增加題目層 `answeredCount` / `wrongCount`。
+
+一般固定題的題目層 authority 仍是：
+
+```text
+users/{uid}/attempts/{attemptId}
+```
+
+Release 1 不建立：
+
+```text
+users/{uid}/questionProgress/{questionId}
+```
+
+避免 attempts 與 counter 文件形成雙 authority。
+
+正式 attempt 的完成邊界是：
+
+```text
+MCQ grading
+→ 等待所有適用的 handwriting grading 完成
+→ exam:submitted
+→ capture schema-v3 attempt
+→ localStorage / Firebase sync
+```
+
+按「重新做題」會建立新的 attempt session，重設作答計時與 duplicate guard；同一個已完成 session 不允許再次正式 submit。
 
 一般測驗的 Firestore 同步來源，就是此本機紀錄。
 
@@ -227,7 +316,7 @@ vocabularyState
 users/{uid}/attempts/{autoId}
 ```
 
-並額外加入：
+attempt 本體保留本機的 `schemaVersion: 3` 與 `historyDomain`，並額外加入：
 
 ```text
 firebaseUid
@@ -241,37 +330,74 @@ syncedAt
 
 ```text
 firebaseUid
-```
+→ 學生 Firebase UID
 
-用於識別學生 UID。
-
-```text
 userEmail
-```
+→ 管理介面顯示學員 Email
 
-讓管理介面可直接顯示學員 Email。
-
-```text
 cloudSchemaVersion: 1
-```
+→ Firestore transport / cloud wrapper 版本；不取代 attempt.schemaVersion
 
-為目前 Firestore 雲端 schema 版本。
-
-```text
 syncedAtClient
+→ 前端同步時間
+
+syncedAt
+→ Firestore serverTimestamp()
 ```
 
-為前端同步時間。
+因此要判斷 attempt 的題目歷史語意，應看：
 
 ```text
-syncedAt
+attempt.schemaVersion
+attempt.historyDomain
+attempt.answers[]
 ```
 
-使用 Firestore `serverTimestamp()`。
+不是只看 `cloudSchemaVersion`。
 
----
+對固定題：
 
-## 7. 一般測驗 Firestore 同步模組
+```text
+schemaVersion = 3
+historyDomain = "question"
+answers[] = 有 permanent questionId 且有明確 grading 的有效作答
+```
+
+對 GEPT Vocabulary：
+
+```text
+historyDomain = "vocabulary"
+單字層 authority 仍是 vocabularyProgress / vocabularyState
+```
+
+另外，為了讓動態字庫考卷可以回看「當時那一整份題組」，新版 vocabulary attempt 會額外保存：
+
+```text
+vocabularySource
+vocabularyItems[]
+```
+
+其中每個 `vocabularyItems[]` 至少保留：
+
+```text
+vocabId
+number
+question / chinese
+word / wordNorm
+options[]
+selectedIndex
+selectedDisplayLabel
+correctIndex
+correctDisplayLabel
+selectedText
+correctText
+result
+explanation
+```
+
+這個 session snapshot 只用來重建歷史考卷畫面，不取代 `vocabId` 的單字 identity，也不取代 `vocabularyProgress` / `vocabularyState` 的長期學習 authority。
+
+## 7. 一般測驗 Firestore 同步與題目歷史讀取模組
 
 檔案：
 
@@ -279,11 +405,13 @@ syncedAt
 firebase-firestore-sync.js
 ```
 
+### 7.1 Attempt 同步
+
 主要行為：
 
 1. 攔截 `localStorage.setItem()`。
 2. 監看 `examRecords.v1`。
-3. 當有新的作答紀錄時擷取最新一筆。
+3. 當有新的 completed attempt 時擷取最新一筆。
 4. 使用目前登入的 Firebase UID。
 5. 寫入：
 
@@ -297,9 +425,103 @@ users/{uid}/attempts/{autoId}
 ✓ 學習歷程已同步到 Firebase
 ```
 
-為避免重複同步，程式使用 fingerprint 判定最近一筆資料是否已上傳。
+為避免同一 completed attempt 重複同步，程式使用 fingerprint 防重複；新的「重新做題」session 仍可產生新的合法 attempt。
 
----
+### 7.2 History readers
+
+瀏覽器另外公開：
+
+```js
+window.ChrisExamHistoryStore = {
+  loadRecentQuestionAttempts(limit = 50),
+  loadExamAttempts(examKey, limit = 50),
+  loadVocabularyAttempts(limit = 50)
+}
+```
+
+其中前兩個屬於固定題；`loadVocabularyAttempts()` 只讀 `historyDomain == "vocabulary"`，供 GEPT Vocabulary session recall 使用。
+
+用途分成兩種。
+
+每題跨考卷聚合：
+
+```text
+users/{uid}/attempts
+where historyDomain == "question"
+```
+
+reader 會把 Firestore 與同裝置 `localStorage` 的 attempts 合併、去重，再由前端依 `submittedAt` 排序並裁切最多 50 筆。
+
+這 50 份可以來自不同 `examKey`，再以永久 `questionId` 聚合：
+
+```text
+answeredCount
+correctCount
+wrongCount
+lastAttemptAt
+lastSelectedAnswer
+lastResult
+```
+
+其中 invariant：
+
+```text
+answeredCount = correctCount + wrongCount
+```
+
+同一份考卷回溯：
+
+```text
+Firestore:
+where examKey == current examKey
+
+local fallback:
+historyDomain == "question"
++
+examKey == current examKey
+```
+
+兩邊結果合併後再確認 `historyDomain == "question"`、依 `submittedAt` 排序並裁切最多 50 筆。
+
+現在剛交卷且正在畫面上顯示的 submission 會從歷史回溯清單排除，所以「前一次」指真正上一回。
+
+若 Firebase 尚未 ready、尚未登入或 query 失敗：
+
+```text
+return []
+```
+
+history 功能不得阻塞考試本體。
+
+Firebase 初始化完成後會送出：
+
+```text
+chrisexam-firestore-ready
+```
+
+讓 history UI 重新讀取。
+
+### 7.3 Index-free recall reader
+
+2026-09-21 實機驗收時，為避免把 Firestore query failure 誤顯示成「沒有更早的作答紀錄」，history reader 已改成單欄位 query + local fallback：
+
+```text
+Firestore 單欄位查詢
++
+localStorage attempts
+↓
+merge / dedupe
+↓
+client-side submittedAt sort
+↓
+slice(0, 50)
+```
+
+因此目前固定題與 GEPT session recall 都不依賴 `historyDomain + examKey + submittedAt` 這類 composite index。
+
+如果未來為效能重新導入 server-side `orderBy / limit`，才依 Firebase 實際回報建立最小必要 index。
+
+本版仍不建立第二份 `questionProgress` authority。
 
 ## 8. 學生端「我的學習歷程」
 
@@ -635,24 +857,59 @@ submittedAt
 
 若未來 schema 改變，應確保所有新紀錄仍保留可排序的 ISO 日期時間值，或統一改成 Firestore Timestamp。
 
-### 15.6 不要把 exposure 與 review 混為一談
+### 15.6 不要把 exposure、target 與有效作答混為一談
 
-英文單字記憶目前至少有三個不同概念：
+英文單字記憶至少有三個不同概念：
 
 ```text
 exposureCount
 → 這個英文曾在 A/B/C/D 任一選項出現幾次
 
 targetCount
-→ 這個英文正式當過題目答案幾次
+→ 這個英文正式被選成題目答案幾次
 
 reviewCount
-→ 這個英文作為正式題目後，完成交卷幾次
+→ 新版語意：這個英文作為 target 且學生真的有選答案、完成有效作答幾次
 ```
 
-這三個數字用途不同，不應在 UI 或後續分析中互相替代。
+2026-09-21 起，字彙題空白時會在 persistent progress increment 前直接退出，因此不再增加：
 
----
+```text
+reviewCount
+correctCount
+wrongCount
+lastReviewedAt
+```
+
+也不建立該題新的 `vocabularyProgress` Firestore update。
+
+但舊資料的 `reviewCount` 可能曾包含 unanswered，因此學生可見的可靠作答次數 authority 一律使用：
+
+```text
+answeredCount = correctCount + wrongCount
+```
+
+不要用 legacy `reviewCount` 反推 answeredCount。
+
+### 15.7 固定題 history query 與 index
+
+固定題 history Release 1 只讀：
+
+```text
+最近最多 50 份 historyDomain == "question" attempts
+同 examKey 回溯最近最多 50 份 attempts
+```
+
+若 production browser 沒有回報 index error，就不要先建立 speculative composite index。
+
+若 Firestore 明確回報：
+
+```text
+failed-precondition
+index required
+```
+
+只建立 Firebase 指定的 index，並把實際建立內容補回本文件。
 
 ## 16. 建議後續擴充
 
@@ -1096,37 +1353,65 @@ exposureCount = 2
 
 ## 21.3 reviewCount
 
-定義：
+新版定義：
 
 ```text
-該單字作為正式題目後完成交卷一次
+該單字成為正式 target
++
+學生真的選了 A/B/C/D
++
+完成交卷
 → reviewCount +1
 ```
 
-目前正常情況下 `targetCount` 與 `reviewCount` 會接近，但兩者概念不同：
+空白題不再增加 `reviewCount`。
+
+`targetCount` 與 `reviewCount` 概念不同：
 
 ```text
 targetCount
-→ 出題系統曾正式選它幾次
+→ 出題系統正式選它當答案幾次
 
 reviewCount
-→ 使用者完成交卷幾次
+→ 學生對這個 target 完成有效作答幾次
 ```
+
+所以學生留白時：
+
+```text
+targetCount 可增加
+reviewCount 不增加
+```
+
+舊版資料的 `reviewCount` 可能包含 unanswered，不能當作可靠的 answeredCount authority。
 
 ## 21.4 correctCount / wrongCount / unansweredCount
 
 ```text
 correctCount
-→ 正式題目答對幾次
+→ 正式 target 有效作答且答對幾次
 
 wrongCount
-→ 正式題目答錯幾次
-
-unansweredCount
-→ 正式題目未作答幾次
+→ 正式 target 有效作答且答錯幾次
 ```
 
----
+學生可見的可靠作答次數：
+
+```text
+answeredCount = correctCount + wrongCount
+```
+
+`unansweredCount` 是 legacy compatibility 欄位。2026-09-21 起的新字彙作答流程：
+
+```text
+blank
+→ 不增加 correctCount
+→ 不增加 wrongCount
+→ 不增加 reviewCount
+→ 不增加 unansweredCount
+→ 不更新 lastReviewedAt
+→ 不建立該題 vocabularyProgress Firestore update
+```
 
 # 22. vocabularyProgress 文件
 
@@ -1135,6 +1420,20 @@ unansweredCount
 ```text
 users/{uid}/vocabularyProgress/gept-elementary:{vocabId}
 ```
+
+永久 identity：
+
+```text
+vocabId
+```
+
+目前 GEPT 初級 authority 字庫為 Google Sheet `GEPT_beginner_vocabulary_master`；`Vocabulary` tab 的正式 source row 以 `id` 作為 vocab identity。前端進入題庫後使用：
+
+```text
+progressKey = gept-elementary:{vocabId}
+```
+
+不要把動態生成的生字題硬轉成一般固定題 `questionId`。
 
 目前常見欄位：
 
@@ -1148,46 +1447,48 @@ chinese
 reviewCount
 wrongCount
 correctCount
-unansweredCount
+unansweredCount        # legacy compatibility
 exposureCount
 targetCount
+lastSelectedLabel
+lastResult
 lastReviewedAt
 userEmail
 ```
 
-範例：
+例如：
 
 ```text
-word              revise
-chinese           修訂
-correctCount      1
-exposureCount     2
-reviewCount       1
-targetCount       1
-unansweredCount   0
+word               revise
+correctCount       1
+wrongCount         0
+reviewCount        1
+targetCount        1
+lastSelectedLabel  B
+lastResult         correct
 ```
 
-解讀：
+學生顯示的「作答幾次」必須用：
 
 ```text
-看過 2 次
-正式考過 1 次
-完成正式作答 1 次
-答對 1 次
-未作答 0 次
+correctCount + wrongCount
 ```
+
+不能直接使用 legacy `reviewCount`。
 
 ### 重要限制
 
-`vocabularyProgress` 目前主要在單字成為正式 target 並交卷後建立 / 更新。
+`vocabularyProgress` 只會在單字成為正式 target 且學生有有效選答後建立 / 更新。
 
 因此：
 
 ```text
-只曾當過 distractor、從未當過 target 的字
+只曾當過 distractor
+或
+曾當 target 但那次完全空白
 ```
 
-可能還沒有自己的 `vocabularyProgress` 文件。
+都可能還沒有自己的新 `vocabularyProgress` update。
 
 所以若要回答：
 
@@ -1197,7 +1498,39 @@ unansweredCount   0
 
 不能只掃 `vocabularyProgress`，必須以 `vocabularyState` 裡的完整 `exposure` map 為準。
 
----
+## 22.1 GEPT Vocabulary session recall
+
+GEPT Vocabulary 的題目是動態生成，不能用一般固定題的 `questionId + same examKey` 模式回溯。
+
+因此 session recall 使用：
+
+```text
+attempt.historyDomain = "vocabulary"
+attempt.vocabularyItems[]
+```
+
+每次新版本交卷會保存當次實際出現的整份題組 snapshot。之後學生按「回溯」時，系統讀取最近最多 50 份 vocabulary attempts，排除目前這一份，並重建較早的整份動態考卷。
+
+UI 規則：
+
+```text
+錯題卡 → 紅色
+正確答案 → 綠色
+顯示「當時：選 X｜正確 / 錯誤」
+上下各一組「前一次｜第 N / M 次｜時間｜後一次」
+```
+
+隔離規則：
+
+```text
+GEPT recall 只允許在 examType == gept-vocabulary-memory 執行
+任何非 GEPT exam:started
+→ 立即清除 vocabulary recall button / controls / state
+```
+
+因此 GEPT session recall 不得覆寫 Lesson、GEPT Reading 或其他固定題考卷。
+
+舊版 vocabulary attempts 因沒有保存 `vocabularyItems[]`，不能可靠重建整份歷史題組；只保留其既有單字層統計，不做猜測式回溯。
 
 # 23. vocabularyState 文件
 
@@ -1392,7 +1725,7 @@ exam-vocabulary-layout-fix.js
 
 # 27. 查詢字庫學習歷程時的資料來源
 
-若只查單一已正式考過的單字，可直接查看：
+若只查單一已正式有效作答過的單字，可直接查看：
 
 ```text
 users/{uid}/vocabularyProgress/gept-elementary:{vocabId}
@@ -1422,25 +1755,29 @@ targetCount
 
 為主。
 
-如果需要答對 / 答錯 / 未作答統計，再與：
+若需要有效作答統計，再與：
 
 ```text
 vocabularyProgress
 ```
 
-合併。
+合併，且使用：
+
+```text
+answeredCount = correctCount + wrongCount
+```
+
+不要以 legacy `reviewCount` 或 `unansweredCount` 當作學生真正作答次數。
 
 因此完整查詢概念是：
 
 ```text
 vocabularyState
-→ 告訴我們「看過 / 正式考過」
+→ 告訴我們「看過 / 正式被出成 target」
 
 vocabularyProgress
-→ 告訴我們「正式作答結果」
+→ 告訴我們「有效作答結果」
 ```
-
----
 
 # 28. 後續維護規則
 

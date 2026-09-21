@@ -2027,23 +2027,39 @@ Exam/
 
 ## Phase 7：作答歷程回溯與錯誤紀錄導航
 
-第一步先把已完成的永久 question identity 接進 Firebase attempt。
+第一階段「永久題目層回溯」已完成主要 runtime 地基；尚未進入 weakness / mastery / adaptive learner-state materialization。
 
 ```text
-[ ] 正式以 exam:submitted 完成後建立 attempt
-[ ] answers[] 保存 questionId / questionRevision
+[x] 正式以 exam:submitted 完成後建立 attempt
+[x] answers[] 保存 questionId / questionRevision
 [ ] attempt 保存 presentedQuestionIds[]
-[ ] 選擇題保存 canonical option identity
-[ ] handwriting 保存 correct / incorrect / unclear / unanswered
-[ ] unclear 不計入 learner wrongCount
-[ ] 考卷加入「回溯」功能
-[ ] 每題顯示累積作答次數 / 錯誤次數 / 上次結果
+[x] 選擇題保存 canonical option identity
+[x] handwriting 明確區分 correct / incorrect / unclear / unanswered
+[x] blank / unclear 不計入 learner answeredCount / wrongCount
+[x] 考卷加入「回溯」功能
+[x] 每題顯示累積作答次數 / 錯誤次數 / 上次結果
+[x] 同 examKey 最多回溯 50 次 attempt
+[x] 重新做題會重設 recall state 並建立新的 attempt session
+[x] GEPT Vocabulary 維持 vocabId / vocabularyProgress，與固定 question history 隔離
+[x] GEPT Vocabulary 保存 vocabularyItems[] session snapshot，可回溯整份動態題組
+[x] GEPT session recall 與一般固定題 recall 雙向隔離
 [ ] chapter / lesson weakness aggregation
-[ ] 最近分數／錯題／作答時間
+[ ] 最近分數／錯題／作答時間的 Learner State 彙整層
 [ ] NEEDS_REVIEW / MASTERED 狀態
 [ ] 我的學習歷程加入「建議複習」
 [ ] lifetime average 與 recent trend 分離
+[ ] questionProgress materialized cache
 ```
+
+Release 1 的固定題 authority 仍是：
+
+```text
+users/{uid}/attempts/{attemptId}
+```
+
+不建立雙寫的 `questionProgress/{questionId}`。每題統計由最近最多 50 份 `historyDomain == "question"` attempt 即時計算；同一份考卷回溯則限制同 `examKey` 最多 50 份。
+
+`presentedQuestionIds[]` 仍保留為未來 Learner State / exposure 模型的候選欄位，但不是這一版 per-question recall 的完成條件。這一版刻意只把「實際有作答且可靠 grading」的 response 納入歷史。
 
 回溯不是獨立附加功能，而是 Learner State 從「整份考卷成績」進化到「永久題目層歷史」的第一步。
 
@@ -2107,37 +2123,51 @@ Exam/
 
 因此現在不再需要先解決「同一題到底是不是同一題」；這個最重要的 identity 問題已經有正式答案。
 
-## 30.2 學習功能主線：先把 identity 接進 Firebase 回溯
+## 30.2 學習功能主線：固定題回溯地基已落地，下一階段進入錯誤導航
 
-目前最值得往前推的學習功能是：
-
-> **作答歷程回溯 → 每題歷史 → 錯誤導航 → 智慧複習。**
-
-建議順序：
+目前已完成：
 
 ```text
-exam:submitted
+exam:submitted completed-attempt boundary
 ↓
-attempt answers[] 保存 questionId / revision
+schemaVersion 3
 ↓
-presentedQuestionIds[]
+questionId / questionRevision
 ↓
-canonical option / handwriting result
+canonical option identity
 ↓
-同一 examKey 的歷次 Firebase attempts
+handwriting valid-history filtering
 ↓
-回溯前一次作答
+每題歷史 badge
 ↓
-每題累積：作答幾次 / 錯幾次 / 上次結果
+同 examKey 回溯
 ↓
+retry reset
+↓
+GEPT Vocabulary history isolation
+↓
+GEPT dynamic-session snapshot recall
+↓
+non-GEPT / GEPT recall state isolation
+```
+
+下一階段才開始：
+
+```text
 chapter / lesson weakness
 ↓
 concept-level weakness
 ↓
+NEEDS_REVIEW / MASTERED
+↓
+recent trend
+↓
 adaptive review
 ```
 
-這條主線不需要等待所有 Concept Registry 或 manifest 都完成才開始。
+`presentedQuestionIds[]` 若未來要支援「看過但未答」或 exposure 型 Learner State，可再加入；本版 recall 不依賴它。
+
+這條主線仍不需要等待所有 Concept Registry 或 manifest 都完成才繼續，但 weakness / adaptive 功能不得反過來改寫 attempts 作為固定題歷史 authority 的原則。
 
 ## 30.3 工程安全網：Repo Health Check v1
 

@@ -336,6 +336,11 @@
     level = selected;
     questions = banks[level];
     graded = false;
+    const submitButton = $('#submitBtn');
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = '交卷看成績';
+    }
     window.ExamHandwriting?.reset?.();
     const ctx = getContext(selected);
     window.examContextCurrent = ctx;
@@ -438,6 +443,7 @@
 
   if ($('#submitBtn')) {
     $('#submitBtn').onclick = async function() {
+      if (graded) return;
       const submitButton = this;
       const ctx = window.examContextCurrent || getContext(level);
       const handwritingItems = questions
@@ -481,7 +487,7 @@
           if (!hasAnswer) {
             const missing = {
               status:'completed',
-              verdict:'incorrect',
+              verdict:'unanswered',
               recognizedAnswer:'',
               recognizedWork:'',
               feedback:'本題未作答。',
@@ -536,6 +542,12 @@
             mcqTotal,
             handwritingCorrect,
             handwritingTotal,
+            handwritingResults: handwritingResults.map(({ index, result: grading }) => ({
+              index,
+              verdict: grading?.verdict || 'unclear',
+              recognizedAnswer: grading?.recognizedAnswer || '',
+              confidence: Number(grading?.confidence ?? 0)
+            })),
             manualStudyTotal:manualTotal,
             score:info.score
           }
@@ -545,7 +557,7 @@
         console.error('[ExamRuntime] submission failed', error);
         alert(`交卷尚未完成：${error.message}`);
       } finally {
-        submitButton.disabled = false;
+        submitButton.disabled = graded;
         submitButton.textContent = oldText;
       }
     };
@@ -563,7 +575,13 @@
   if ($('#restartBtn')) {
     $('#restartBtn').onclick = function() {
       if(!confirm('確定重新作答？目前選擇會清除。'))return;
+      window.ExamQuestionHistoryUI?.resetForRetry?.();
       graded=false;
+      const submitButton = $('#submitBtn');
+      if (submitButton) submitButton.disabled = false;
+      document.dispatchEvent(new CustomEvent('exam:retry-started', {
+        detail: window.examContextCurrent || {}
+      }));
       window.ExamHandwriting?.reset?.();
       render();
       result.style.display='none';

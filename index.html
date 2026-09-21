@@ -160,16 +160,17 @@ function grade(){
 function toggleExplain(){const boxes=[...document.querySelectorAll('.explain')];const show=boxes.some(x=>!x.classList.contains('show'));boxes.forEach(x=>x.classList.toggle('show',show));document.getElementById('explainBtn').textContent=show?'隱藏詳解':'顯示詳解';}
 function restart(){if(!confirm('確定要清除目前答案，重新作答嗎？'))return;graded=false;render();result.style.display='none';document.getElementById('explainBtn').textContent='顯示詳解';window.scrollTo({top:0,behavior:'smooth'});}
 function backToLevels(){startScreen.classList.remove('hidden');examScreen.classList.add('hidden');result.style.display='none';window.scrollTo({top:0,behavior:'smooth'});}
-document.getElementById('submitBtn').addEventListener('click',grade);
-document.getElementById('explainBtn').addEventListener('click',toggleExplain);
-document.getElementById('restartBtn').addEventListener('click',restart);
-document.getElementById('backBtn').addEventListener('click',backToLevels);
+// Control buttons are owned by exam-runtime-flex.js.
+// Do not attach the legacy handlers here: they share the global graded state
+// and would run before the authoritative runtime handlers.
 </script>
 <script src="exam-diagram-renderer.js?v=__BUILD_SHA__"></script>
 <script src="exam-handwriting.js?v=__BUILD_SHA__"></script>
 <script src="exam-runtime-flex.js?v=__BUILD_SHA__"></script>
 <script src="exam-option-randomizer.js?v=__BUILD_SHA__"></script>
+<script src="exam-question-history-core.js?v=__BUILD_SHA__"></script>
 <script src="exam-records.js?v=__BUILD_SHA__"></script>
+<script src="exam-question-history.js?v=__BUILD_SHA__"></script>
 <script src="exam-wrong-ui.js?v=__BUILD_SHA__"></script>
 <script src="exam-records-clear.js?v=__BUILD_SHA__"></script>
 <script src="exam-gpt-analysis.js?v=__BUILD_SHA__"></script>

@@ -789,3 +789,103 @@ adaptive practice
 That later project may decide whether a materialized `questionProgress` cache is warranted by real usage.
 
 Until then, `attempts` remains the single general fixed-question history authority.
+
+---
+
+## 19. Implementation addendum — 2026-09-21 live validation
+
+Live browser validation added two implementation details without changing the core identity model.
+
+### 19.1 Index-free history readers
+
+The first implementation used compound Firestore queries for recall. During live validation this made a query failure indistinguishable from “no earlier attempt”.
+
+The production reader therefore uses:
+
+```text
+single-field Firestore query
++
+same-device localStorage fallback
+↓
+merge / dedupe
+↓
+client-side submittedAt ordering
+↓
+maximum 50 records
+```
+
+This keeps recall non-blocking and avoids requiring speculative composite indexes.
+
+### 19.2 GEPT Vocabulary session recall
+
+GEPT Vocabulary remains a separate identity domain:
+
+```text
+vocabId
+vocabularyProgress
+vocabularyState
+```
+
+It still does not manufacture permanent `questionId` values and does not consume the fixed-question 50-attempt window.
+
+However, live validation showed that learners also need to review an earlier **whole generated vocabulary exam**. New vocabulary attempts therefore additionally preserve a presentation snapshot:
+
+```text
+historyDomain: "vocabulary"
+vocabularySource
+vocabularyItems[]
+```
+
+Each `vocabularyItems[]` item preserves enough presentation evidence to reconstruct that historical generated paper:
+
+```text
+vocabId
+question / chinese
+word / wordNorm
+options[]
+selectedIndex / selectedDisplayLabel
+correctIndex / correctDisplayLabel
+selectedText / correctText
+result
+explanation
+```
+
+This snapshot is a historical presentation record only. The longitudinal learning authority remains `vocabId` + `vocabularyProgress` / `vocabularyState`.
+
+Vocabulary session recall is strictly isolated:
+
+```text
+examType == "gept-vocabulary-memory"
+→ vocabulary recall allowed
+
+any other examType
+→ clear vocabulary recall button / controls / state
+→ vocabulary recall renderer refuses to modify the exam
+```
+
+Legacy vocabulary attempts created before `vocabularyItems[]` existed cannot reliably reconstruct an old generated paper and are not guessed from aggregate progress.
+
+### 19.3 Live lifecycle fixes locked by regression tests
+
+Live validation also confirmed and fixed these lifecycle requirements:
+
+```text
+new exam session
+→ submit button must be enabled again
+
+completed attempt
+→ repeated submit in the same session is blocked
+
+retry
+→ opens a fresh attempt session
+
+attempt stored successfully
+→ emit exam:attempt-recorded
+→ history UI consumes that authoritative attempt
+
+legacy index.html submit listeners
+→ must not coexist with exam-runtime-flex ownership
+```
+
+These are now part of the runtime regression contract.
+

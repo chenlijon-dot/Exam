@@ -59,7 +59,7 @@
     return window.examContextCurrent || {};
   }
 
-  function captureAttempt() {
+  function captureAttempt(submissionDetail = {}) {
     const allCards = $$('.card[data-q]');
     const cards = allCards.filter(card => card.dataset.questionType !== 'manual-study');
     const manualStudyCount = allCards.length - cards.length;
@@ -68,56 +68,151 @@
     const ctx = currentContext();
     const fallbackDiff = difficultyFromTitle();
     const isAccuracyExam = ctx.scoreMode === 'percent' || ctx.examType === true;
-    let correct = 0, incorrect = 0, unanswered = 0;
+    const isVocabularyExam = ctx.examType === 'gept-vocabulary-memory';
+    const handwritingByIndex = new Map(
+      (submissionDetail.handwritingResults || []).map(item => [Number(item.index), item])
+    );
 
-    const answers = cards.map((card, idx) => {
+    let correct = 0;
+    let incorrect = 0;
+    let unanswered = 0;
+    const historyAnswers = [];
+    const vocabularyItems = [];
+
+    cards.forEach((card, idx) => {
       const sourceIndex = Number(card.dataset.q ?? idx);
       const source = (typeof questions !== 'undefined' && questions[sourceIndex]) ? questions[sourceIndex] : {};
+      const questionType = card.dataset.questionType || 'mcq';
+      const questionId = source.questionId == null ? '' : String(source.questionId);
+      const questionRevision = Number(source.revision || 1);
       const question = $('.question-text', card)?.textContent.trim()
         || $('.qtitle', card)?.textContent.replace(/^\s*\d+\s*/, '').trim()
         || `第${idx+1}題`;
+      const explanation = $('.explain', card)?.textContent.replace(/^答案：\s*[A-D]\s*/,'').trim() || '';
+      const number = Number(card.dataset.questionNumber || source.number || idx + 1);
+
+      if (questionType === 'handwriting') {
+        const grading = handwritingByIndex.get(sourceIndex) || {};
+        const verdict = grading.verdict || 'unanswered';
+
+        if (verdict === 'correct') correct++;
+        else if (verdict === 'incorrect') incorrect++;
+        else unanswered++;
+
+        if (questionId && (verdict === 'correct' || verdict === 'incorrect')) {
+          historyAnswers.push({
+            questionId,
+            questionRevision,
+            questionType,
+            number,
+            question,
+            options: [],
+            selectedIndex: null,
+            selectedDisplayIndex: null,
+            selectedCanonicalIndex: null,
+            selectedLetter: null,
+            selectedDisplayLabel: null,
+            selectedText: grading.recognizedAnswer || '',
+            correctIndex: null,
+            correctCanonicalIndex: null,
+            correctLetter: null,
+            correctText: source.expectedAnswer || source.manualAnswer || '',
+            isCorrect: verdict === 'correct',
+            result: verdict,
+            explanation,
+            intro: source.intro || '',
+            introLabel: source.introLabel || '',
+            image: source.image || '',
+            imageAlt: source.imageAlt || ''
+          });
+        }
+        return;
+      }
+
       const selected = $('input[type=radio]:checked', card);
       const selectedIndex = selected ? Number(selected.value) : null;
       const correctLabel = $('.option.correct', card);
       const correctInput = correctLabel ? $('input[type=radio]', correctLabel) : null;
       const correctIndex = correctInput ? Number(correctInput.value) : null;
-      const explanation = $('.explain', card)?.textContent.replace(/^答案：\s*[A-D]\s*/,'').trim() || '';
       const options = $$('.option', card).map(o => o.textContent.trim().replace(/^\([A-D]\)\s*/, ''));
       const isCorrect = selectedIndex !== null && correctIndex !== null && selectedIndex === correctIndex;
-      const number = Number(card.dataset.questionNumber || source.number || idx + 1);
+      const canonicalIndices = Array.isArray(source.optionCanonicalIndices) &&
+        source.optionCanonicalIndices.length === options.length
+        ? source.optionCanonicalIndices
+        : options.map((_, optionIndex) => optionIndex);
+      const selectedCanonicalIndex = selectedIndex === null
+        ? null
+        : Number(canonicalIndices[selectedIndex] ?? selectedIndex);
+      const correctCanonicalIndex = correctIndex === null
+        ? null
+        : Number(canonicalIndices[correctIndex] ?? correctIndex);
 
       if (selectedIndex === null) unanswered++;
       else if (isCorrect) correct++;
       else incorrect++;
 
-      return {
+      if (isVocabularyExam && source.vocabId != null) {
+        vocabularyItems.push({
+          vocabId: String(source.vocabId),
+          number,
+          question,
+          chinese: source.chinese || question,
+          word: source.word || '',
+          wordNorm: source.wordNorm || '',
+          options,
+          selectedIndex,
+          selectedDisplayLabel: selectedIndex === null ? '' : LETTERS[selectedIndex],
+          correctIndex,
+          correctDisplayLabel: correctIndex === null ? '' : LETTERS[correctIndex],
+          selectedText: selectedIndex === null ? '' : (options[selectedIndex] || ''),
+          correctText: correctIndex === null ? '' : (options[correctIndex] || ''),
+          result: selectedIndex === null
+            ? 'unanswered'
+            : (isCorrect ? 'correct' : 'incorrect'),
+          explanation
+        });
+      }
+
+      if (!questionId || selectedIndex === null || correctIndex === null) return;
+
+      historyAnswers.push({
+        questionId,
+        questionRevision,
+        questionType,
         number,
         question,
         options,
         selectedIndex,
-        selectedLetter: selectedIndex === null ? null : LETTERS[selectedIndex],
-        selectedText: selectedIndex === null ? null : options[selectedIndex],
+        selectedDisplayIndex: selectedIndex,
+        selectedCanonicalIndex,
+        selectedLetter: LETTERS[selectedIndex],
+        selectedDisplayLabel: LETTERS[selectedIndex],
+        selectedText: options[selectedIndex],
         correctIndex,
-        correctLetter: correctIndex === null ? null : LETTERS[correctIndex],
-        correctText: correctIndex === null ? null : options[correctIndex],
+        correctCanonicalIndex,
+        correctLetter: LETTERS[correctIndex],
+        correctText: options[correctIndex],
         isCorrect,
+        result: isCorrect ? 'correct' : 'incorrect',
         explanation,
         intro: source.intro || '',
         introLabel: source.introLabel || '',
         image: source.image || '',
         imageAlt: source.imageAlt || ''
-      };
+      });
     });
 
     const submittedAt = nowIso();
     const durationSeconds = examStartedAt ? Math.max(0, Math.round((Date.now() - examStartedAt) / 1000)) : 0;
-    const total = answers.length;
+    const total = cards.length;
     const accuracyPercent = total ? Number((correct * 100 / total).toFixed(1)) : 0;
     const pointsPerQuestion = Number(ctx.pointsPerQuestion ?? 5);
     const score = isAccuracyExam ? null : correct * pointsPerQuestion;
+    const historyDomain = ctx.examType === 'gept-vocabulary-memory' ? 'vocabulary' : 'question';
 
     return {
-      schemaVersion: 2,
+      schemaVersion: 3,
+      historyDomain,
       recordType: isAccuracyExam ? 'past-exam' : 'practice',
       metricType: isAccuracyExam ? 'accuracy' : 'score',
       examKey: ctx.key || ctx.difficulty || fallbackDiff.key,
@@ -140,8 +235,10 @@
       unanswered,
       total,
       manualStudyCount,
-      answers,
-      wrongAnswers: answers.filter(a => a.selectedIndex !== null && !a.isCorrect)
+      vocabularySource: isVocabularyExam ? (ctx.vocabularySource || '') : '',
+      vocabularyItems,
+      answers: historyAnswers,
+      wrongAnswers: historyAnswers.filter(answer => answer.result === 'incorrect')
     };
   }
 
@@ -442,34 +539,35 @@
 
   function hookExamStart() {
     document.addEventListener('exam:started', resetAttemptTimer);
-    $$('.difficulty').forEach(btn => btn.addEventListener('click', resetAttemptTimer));
+    document.addEventListener('exam:retry-started', resetAttemptTimer);
+    document.querySelectorAll('.difficulty').forEach(btn => btn.addEventListener('click', resetAttemptTimer));
   }
 
   function hookSubmission() {
-    document.addEventListener('click', e => {
-      const submit = e.target.closest?.('#submitBtn');
-      if (!submit) return;
-      setTimeout(async () => {
-        const attempt = captureAttempt();
-        if (!attempt) return;
-        const added = storeAttemptLocally(attempt);
-        if (!added) return;
+    document.addEventListener('exam:submitted', async event => {
+      const detail = event.detail || {};
+      const attempt = captureAttempt(detail);
+      if (!attempt) return;
+      const added = storeAttemptLocally(attempt);
+      if (!added) return;
 
-        if (!getToken()) {
-          showSyncToast('作答紀錄與錯題已存到這台裝置。尚未設定 GitHub Token，所以這次未同步到雲端。', false);
-          return;
-        }
-        showSyncToast('本機紀錄已保存，正在同步到 GitHub…');
-        try {
-          await syncAttempt(attempt);
-          showSyncToast('✓ 作答紀錄與錯題已同步到私人 GitHub 資料庫。');
-        } catch (err) {
-          showSyncToast(`本機紀錄已保存，但 GitHub 同步失敗：${err.message}`, false);
-        }
-      }, 0);
+      document.dispatchEvent(new CustomEvent('exam:attempt-recorded', {
+        detail: { attempt }
+      }));
+
+      if (!getToken()) {
+        showSyncToast('✓ 作答紀錄與錯題已存到這台裝置。');
+        return;
+      }
+      showSyncToast('本機紀錄已保存，正在同步到 GitHub…');
+      try {
+        await syncAttempt(attempt);
+        showSyncToast('✓ 作答紀錄與錯題已同步到私人 GitHub 資料庫。');
+      } catch (err) {
+        showSyncToast(`本機紀錄已保存，但 GitHub 同步失敗：${err.message}`, false);
+      }
     });
   }
-
   function init() {
     injectStyles();
     makeModal('historyModal', '作答紀錄');
