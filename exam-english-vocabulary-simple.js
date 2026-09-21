@@ -495,6 +495,7 @@
   }
 
   function renderVocabularyRecallAttempt() {
+    if (window.examContextCurrent?.examType !== 'gept-vocabulary-memory') return;
     if (vocabularyRecallIndex < 0 || vocabularyRecallIndex >= vocabularyRecallAttempts.length) return;
     const attempt = vocabularyRecallAttempts[vocabularyRecallIndex];
     const items = Array.isArray(attempt?.vocabularyItems) ? attempt.vocabularyItems : [];
@@ -549,6 +550,11 @@
   }
 
   async function enterVocabularyRecall() {
+    if (window.examContextCurrent?.examType !== 'gept-vocabulary-memory') {
+      vocabularyCurrentAttempt = null;
+      resetVocabularyRecall();
+      return;
+    }
     if (vocabularyRecallLoading) return;
     const store = window.ChrisExamHistoryStore;
     if (!store?.loadVocabularyAttempts) {
@@ -594,6 +600,10 @@
   }
 
   function ensureVocabularyRecallButton() {
+    if (window.examContextCurrent?.examType !== 'gept-vocabulary-memory') {
+      clearVocabularyRecallButton();
+      return null;
+    }
     let button = document.querySelector('#vocabRecallBtn');
     if (button) return button;
     const actions = document.querySelector('#examScreen .actions');
@@ -916,7 +926,12 @@
   }
 
   document.addEventListener('exam:started', event => {
-    if (event.detail?.examType !== 'gept-vocabulary-memory') return;
+    if (event.detail?.examType !== 'gept-vocabulary-memory') {
+      vocabularyCurrentAttempt = null;
+      resetVocabularyRecall();
+      clearVocabularyHistoryAnnotations();
+      return;
+    }
     if (!activeSession || activeSession.key !== event.detail.key) return;
     vocabularyCurrentAttempt = null;
     resetVocabularyRecall();
