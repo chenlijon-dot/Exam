@@ -58,4 +58,15 @@ assert.deepEqual(
   ['作答 4 次', '上次：選 A｜正確']
 );
 
-console.log('vocabulary history semantics: PASS');
+const recordsCode = fs.readFileSync(new URL('../exam-records.js', import.meta.url), 'utf8');
+const firestoreCode = fs.readFileSync(new URL('../firebase-firestore-sync.js', import.meta.url), 'utf8');
+
+assert.match(recordsCode, /vocabularyItems/, 'GEPT attempts must persist vocabulary session snapshots');
+assert.match(recordsCode, /vocabId/, 'GEPT session snapshots must preserve vocabId');
+assert.match(firestoreCode, /loadVocabularyAttempts/, 'history store must expose vocabulary session history');
+assert.match(code, /vocabRecallBtn/, 'GEPT submit flow must expose its own recall button');
+assert.match(code, /vocabularyItems/, 'GEPT recall must render stored vocabulary session snapshots');
+assert.match(code, /data-vocab-recall-controls/, 'GEPT recall must expose synchronized top/bottom navigation');
+assert.match(code, /exam:attempt-recorded/, 'GEPT recall button must appear after authoritative attempt persistence');
+
+console.log('vocabulary history semantics + session recall: PASS');
