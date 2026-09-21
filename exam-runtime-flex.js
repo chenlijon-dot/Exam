@@ -336,6 +336,11 @@
     level = selected;
     questions = banks[level];
     graded = false;
+    const submitButton = $('#submitBtn');
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = '交卷看成績';
+    }
     window.ExamHandwriting?.reset?.();
     const ctx = getContext(selected);
     window.examContextCurrent = ctx;
