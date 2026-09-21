@@ -1309,6 +1309,116 @@ chapter-bank/science/7-1/unit-02/
 machine-readable curriculum 同步
 ```
 
+
+## 18.1 社會科目前正式題庫檔案結構
+
+社會科網站入口固定採「社會 → 地理／歷史／公民」三分支。正式固定題庫目前集中在：
+
+```text
+chapter-bank/social/7-1/
+├─ geography/
+├─ history/
+└─ civics/
+```
+
+runtime authority 為 `exam-social-banks.js`。接手社會科題庫時，應先從其中的 chapter registry 反查實際 `path`，不要只依 catalog 章節存在與否推定題庫已上線。
+
+目前三級題庫檔名統一使用：
+
+```text
+practice-easy.json
+practice-medium.json
+practice-hard.json
+```
+
+### 18.1.1 地理
+
+目前正式上線第 1～4 章：
+
+```text
+chapter-bank/social/7-1/geography/
+├─ chapter-01/                    # 第1章 認識位置與地圖
+│  ├─ practice-easy.json          # 10 題
+│  ├─ practice-medium.json        # 10 題
+│  └─ practice-hard.json          # 10 題
+├─ chapter-02/                    # 第2章 世界中的臺灣
+│  ├─ practice-easy.json          # 20 題
+│  ├─ practice-medium.json        # 20 題
+│  └─ practice-hard.json          # 20 題
+├─ chapter-03/                    # 第3章 地形
+│  ├─ practice-easy.json          # 20 題
+│  ├─ practice-medium.json        # 20 題
+│  └─ practice-hard.json          # 20 題
+└─ chapter-04/                    # 第4章 海岸與島嶼
+   ├─ practice-easy.json          # 20 題
+   ├─ practice-medium.json        # 20 題
+   └─ practice-hard.json          # 20 題
+```
+
+目前地理正式題庫共 **210 題**。第 5 章〈天氣與氣候〉、第 6 章〈水文〉仍存在於正式 chapter tree，但目前尚未建立並接入上述正式題庫。
+
+### 18.1.2 歷史
+
+目前正式上線第 1～3 章：
+
+```text
+chapter-bank/social/7-1/history/
+├─ chapter-01/                    # 第1章 史前臺灣與原住民文化
+│  ├─ practice-easy.json          # 20 題
+│  ├─ practice-medium.json        # 20 題
+│  └─ practice-hard.json          # 20 題
+├─ chapter-02/                    # 第2章 大航海時代各方勢力的競逐
+│  ├─ practice-easy.json          # 20 題
+│  ├─ practice-medium.json        # 20 題
+│  └─ practice-hard.json          # 20 題
+└─ chapter-03/                    # 第3章 大航海時代臺灣原住民與外來者
+   ├─ practice-easy.json          # 20 題
+   ├─ practice-medium.json        # 20 題
+   └─ practice-hard.json          # 20 題
+```
+
+目前歷史正式題庫共 **180 題**。第 4～6 章目前尚未建立並接入正式三級題庫。
+
+### 18.1.3 公民
+
+目前正式上線第 1～3 章：
+
+```text
+chapter-bank/social/7-1/civics/
+├─ chapter-01/                    # 第1章 公民與公民德性
+│  ├─ practice-easy.json          # 20 題
+│  ├─ practice-medium.json        # 20 題
+│  └─ practice-hard.json          # 20 題
+├─ chapter-02/                    # 第2章 人性尊嚴與人權保障
+│  ├─ practice-easy.json          # 20 題
+│  ├─ practice-medium.json        # 20 題
+│  └─ practice-hard.json          # 20 題
+└─ chapter-03/                    # 第3章 家庭生活
+   ├─ practice-easy.json          # 20 題
+   ├─ practice-medium.json        # 20 題
+   └─ practice-hard.json          # 20 題
+```
+
+目前公民正式題庫共 **180 題**。第 4～6 章目前尚未建立並接入正式三級題庫。
+
+### 18.1.4 題庫 identity 進度
+
+截至 2026-09-21，目前正式上線的社會科固定題庫已全部完成永久 question identity：
+
+```text
+地理：210 題
+歷史：180 題
+公民：180 題
+-------------
+合計：570 題
+```
+
+以上 570 題均已有永久 `questionId` 與 `revision: 1`。既有 `questionId` 不因新增題目、排序、搬移檔案或 catalog 調整而重新編號。
+
+目前上述 runtime 題庫中沒有另外接入 `school-exams.json` 或 `self-study.json` sidecar。未來若匯入各校段考、自修原始題或其他正式固定題型，只要進入正式 `questions[]`，就應依相同治理規則發新的永久 `questionId`；不要與既有三級題重新編號。
+
+`reference.json`、教材 canonical、課本原始 evidence 與題庫 `questions[]` 的角色不同；reference／教材資料本身不因本次 question identity migration 而轉成正式作答題目。
+
 ---
 
 # 18A. 英文資料結構與定位
