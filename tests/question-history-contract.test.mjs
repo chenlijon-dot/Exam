@@ -76,4 +76,10 @@ assert.ok(
   'question history core must load before exam-records'
 );
 
+
+const randomizer = read('exam-option-randomizer.js');
+assert.match(randomizer, /optionCanonicalIndices/, 'option randomizer must preserve canonical option identity');
+assert.match(records, /selectedCanonicalIndex/, 'attempt records must store canonical selected option');
+assert.match(records, /correctCanonicalIndex/, 'attempt records must store canonical correct option');
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
