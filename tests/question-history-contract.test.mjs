@@ -153,6 +153,30 @@ assert.match(
 
 assert.match(
   firestoreSync,
+  /localAttempts\(\)/,
+  'history readers must include local attempt fallback'
+);
+
+assert.match(
+  firestoreSync,
+  /mergeHistoryAttempts/,
+  'history readers must merge cloud and local attempts'
+);
+
+assert.doesNotMatch(
+  firestoreSync,
+  /where\(['"]historyDomain['"],\s*['"]==['"],\s*['"]question['"]\)[\s\S]{0,500}orderBy\(['"]submittedAt['"]/,
+  'recent history must not require a composite index with submittedAt ordering'
+);
+
+assert.doesNotMatch(
+  firestoreSync,
+  /where\(['"]examKey['"],\s*['"]==['"][\s\S]{0,500}orderBy\(['"]submittedAt['"]/,
+  'same-exam history must not require a composite index with submittedAt ordering'
+);
+
+assert.match(
+  firestoreSync,
   /Math\.min\([^\n]*50\)/,
   'history query limit must be capped at 50'
 );
