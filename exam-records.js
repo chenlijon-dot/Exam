@@ -59,7 +59,7 @@
     return window.examContextCurrent || {};
   }
 
-  function captureAttempt() {
+  function captureAttempt(submissionDetail = {}) {
     const allCards = $$('.card[data-q]');
     const cards = allCards.filter(card => card.dataset.questionType !== 'manual-study');
     const manualStudyCount = allCards.length - cards.length;
@@ -446,30 +446,26 @@
   }
 
   function hookSubmission() {
-    document.addEventListener('click', e => {
-      const submit = e.target.closest?.('#submitBtn');
-      if (!submit) return;
-      setTimeout(async () => {
-        const attempt = captureAttempt();
-        if (!attempt) return;
-        const added = storeAttemptLocally(attempt);
-        if (!added) return;
+    document.addEventListener('exam:submitted', async event => {
+      const detail = event.detail || {};
+      const attempt = captureAttempt(detail);
+      if (!attempt) return;
+      const added = storeAttemptLocally(attempt);
+      if (!added) return;
 
-        if (!getToken()) {
-          showSyncToast('作答紀錄與錯題已存到這台裝置。尚未設定 GitHub Token，所以這次未同步到雲端。', false);
-          return;
-        }
-        showSyncToast('本機紀錄已保存，正在同步到 GitHub…');
-        try {
-          await syncAttempt(attempt);
-          showSyncToast('✓ 作答紀錄與錯題已同步到私人 GitHub 資料庫。');
-        } catch (err) {
-          showSyncToast(`本機紀錄已保存，但 GitHub 同步失敗：${err.message}`, false);
-        }
-      }, 0);
+      if (!getToken()) {
+        showSyncToast('作答紀錄與錯題已存到這台裝置。尚未設定 GitHub Token，所以這次未同步到雲端。', false);
+        return;
+      }
+      showSyncToast('本機紀錄已保存，正在同步到 GitHub…');
+      try {
+        await syncAttempt(attempt);
+        showSyncToast('✓ 作答紀錄與錯題已同步到私人 GitHub 資料庫。');
+      } catch (err) {
+        showSyncToast(`本機紀錄已保存，但 GitHub 同步失敗：${err.message}`, false);
+      }
     });
   }
-
   function init() {
     injectStyles();
     makeModal('historyModal', '作答紀錄');
