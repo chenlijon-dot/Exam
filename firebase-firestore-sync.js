@@ -233,9 +233,37 @@
     return mergeHistoryAttempts(cloud, local).slice(0, limitValue);
   }
 
+  async function loadVocabularyAttempts(limitCount = 50) {
+    const limitValue = clampHistoryLimit(limitCount);
+    const local = localAttempts().filter(attempt =>
+      attempt?.historyDomain === 'vocabulary'
+    );
+
+    let cloud = [];
+    if (activeUser?.uid && db && firestore) {
+      try {
+        const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
+        const historyQuery = firestore.query(
+          attemptsRef,
+          firestore.where('historyDomain', '==', 'vocabulary')
+        );
+        const snapshot = await firestore.getDocs(historyQuery);
+        cloud = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+      } catch (error) {
+        console.warn('[FirestoreSync] vocabulary history cloud read unavailable; using local fallback', error);
+      }
+    }
+
+    return mergeHistoryAttempts(cloud, local).slice(0, limitValue);
+  }
+
   window.ChrisExamHistoryStore = {
     loadRecentQuestionAttempts,
-    loadExamAttempts
+    loadExamAttempts,
+    loadVocabularyAttempts
   };
 
   async function initFirestore() {
