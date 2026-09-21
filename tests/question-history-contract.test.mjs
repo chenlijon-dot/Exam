@@ -190,4 +190,23 @@ assert.match(
   'current visible submission must be excluded from historical recall'
 );
 
+
+assert.match(
+  historyUi,
+  /recallLoadToken/,
+  'same-exam recall must track asynchronous recall requests'
+);
+
+assert.match(
+  historyUi,
+  /resetRecallState[\s\S]*?recallLoadToken\s*\+=\s*1/,
+  'retry must invalidate an in-flight recall request'
+);
+
+assert.match(
+  historyUi,
+  /questionHistoryRecallMessage/,
+  'retry/reset must know how to remove recall-only status messages'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
