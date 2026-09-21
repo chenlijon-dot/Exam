@@ -8,32 +8,19 @@
     "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
     "mappedSection": "2-4 從細胞到生物體",
     "questionCount": 46,
-    "answerableQuestionCount": 33,
-    "pendingImageQuestionNumbers": [
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      39,
-      41,
-      43
-    ],
+    "answerableQuestionCount": 46,
+    "pendingImageQuestionNumbers": [],
     "preserveOptionOrder": true,
     "analysisEligible": true,
     "answerAuthority": "新無敵自然自修解答篇 p.369–370；會考試題範例 p.90 印刷答案；科學素養篇 p.370",
-    "buildStage": "text-first; explanations and final image links pending",
-    "note": "來源解答列出進階Q48，但本批指定原始影像未見Q48題面，因此未臆造收錄。"
+    "buildStage": "complete: text, verified answers, image links, explanations",
+    "note": "來源解答列出進階Q48，但本批指定原始影像未見Q48題面，因此未臆造收錄。",
+    "explanationStatus": "46/46"
   },
   "questions": [
     {
       "questionId": "260922003100500",
-      "revision": 1,
+      "revision": 2,
       "number": 1,
       "q": "人體手臂外部的「表皮」在組成層次上屬於下列何者？",
       "o": [
@@ -43,7 +30,7 @@
         "器官系統"
       ],
       "a": 1,
-      "e": "",
+      "e": "人體表皮由許多相似細胞共同排列並執行保護功能，因此屬於組織層次。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -59,7 +46,7 @@
     },
     {
       "questionId": "260922003100501",
-      "revision": 1,
+      "revision": 2,
       "number": 2,
       "q": "承1題，下列何者與其層次相當？",
       "o": [
@@ -69,7 +56,7 @@
         "皮膜"
       ],
       "a": 3,
-      "e": "",
+      "e": "皮膜與表皮都由許多相似細胞共同形成並執行特定功能，屬組織層次；胃、眼睛與心臟屬器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -85,7 +72,7 @@
     },
     {
       "questionId": "260922003100502",
-      "revision": 1,
+      "revision": 2,
       "number": 3,
       "q": "香蕉缺乏下列哪一個層次？",
       "o": [
@@ -95,7 +82,7 @@
         "器官系統"
       ],
       "a": 3,
-      "e": "",
+      "e": "植物具有細胞、組織與器官，但一般不以動物式的「器官系統」層次來描述，因此香蕉缺乏器官系統層次。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -111,7 +98,7 @@
     },
     {
       "questionId": "260922003100503",
-      "revision": 1,
+      "revision": 2,
       "number": 4,
       "q": "下列何者無細胞間分工合作現象？",
       "o": [
@@ -121,7 +108,7 @@
         "香蕉"
       ],
       "a": 1,
-      "e": "",
+      "e": "草履蟲只有一個細胞，單一細胞即完成全部生命現象，因此沒有多細胞生物的細胞分工合作。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -137,7 +124,7 @@
     },
     {
       "questionId": "260922003100504",
-      "revision": 1,
+      "revision": 2,
       "number": 5,
       "q": "細胞形狀與下列何者關係密切？",
       "o": [
@@ -147,7 +134,7 @@
         "細胞構造多寡"
       ],
       "a": 0,
-      "e": "",
+      "e": "細胞的形狀通常與功能相適應，例如神經細胞多突起利於傳訊、肌肉細胞細長利於收縮。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -163,7 +150,7 @@
     },
     {
       "questionId": "260922003100505",
-      "revision": 1,
+      "revision": 2,
       "number": 6,
       "q": "下列何項器官與其他器官的功能明顯不同？",
       "o": [
@@ -173,7 +160,7 @@
         "種子"
       ],
       "a": 0,
-      "e": "",
+      "e": "花主要負責生殖；葉、果實、種子中葉偏營養功能，而果實與種子也和繁殖相關。依來源題答案，本題選花。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -189,7 +176,7 @@
     },
     {
       "questionId": "260922003100506",
-      "revision": 1,
+      "revision": 2,
       "number": 7,
       "q": "因燒燙傷而必需進行體表皮膚移植，請問這類手術屬於何種人體層次的手術？",
       "o": [
@@ -199,7 +186,7 @@
         "細胞層次手術"
       ],
       "a": 1,
-      "e": "",
+      "e": "皮膚由多種組織共同形成並執行保護、感覺等功能，屬器官，因此皮膚移植屬器官層次。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -215,7 +202,7 @@
     },
     {
       "questionId": "260922003100507",
-      "revision": 1,
+      "revision": 2,
       "number": 8,
       "q": "下列何者不是單細胞生物？",
       "o": [
@@ -225,7 +212,7 @@
         "水蚤"
       ],
       "a": 3,
-      "e": "",
+      "e": "水蚤是多細胞動物；眼蟲、草履蟲與矽藻可視為單細胞生物。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -241,7 +228,7 @@
     },
     {
       "questionId": "260922003100508",
-      "revision": 1,
+      "revision": 2,
       "number": 9,
       "q": "在植物的器官中，下列何者與其他三者的功能有顯著不同？",
       "o": [
@@ -251,7 +238,7 @@
         "根"
       ],
       "a": 2,
-      "e": "",
+      "e": "根、莖、葉是營養器官；花是生殖器官，功能類別與其他三者不同。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -267,7 +254,7 @@
     },
     {
       "questionId": "260922003100509",
-      "revision": 1,
+      "revision": 2,
       "number": 10,
       "q": "一棵結滿果實的李樹上（沒有花），有幾種器官？",
       "o": [
@@ -277,7 +264,7 @@
         "6種"
       ],
       "a": 0,
-      "e": "",
+      "e": "沒有花但有根、莖、葉、果實、種子的李樹，共可辨認5種器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -293,7 +280,7 @@
     },
     {
       "questionId": "260922003100510",
-      "revision": 1,
+      "revision": 2,
       "number": 11,
       "q": "下列何者在生物體組成的層次上與其他三者不同？",
       "o": [
@@ -303,7 +290,7 @@
         "骨組織"
       ],
       "a": 2,
-      "e": "",
+      "e": "花由多種組織構成，是器官；血液與骨組織屬組織。依題目四者比較，花的層次不同。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -319,7 +306,7 @@
     },
     {
       "questionId": "260922003100511",
-      "revision": 1,
+      "revision": 2,
       "number": 12,
       "q": "下列構造中，何者屬於組織的層次？",
       "o": [
@@ -329,7 +316,7 @@
         "腎臟"
       ],
       "a": 1,
-      "e": "",
+      "e": "葉脈由運輸等不同組織構成並位於葉內，來源題將其歸入組織層次。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -345,7 +332,7 @@
     },
     {
       "questionId": "260922003100512",
-      "revision": 1,
+      "revision": 2,
       "number": 13,
       "q": "下列種層次是臺灣五葉松所缺乏的？",
       "o": [
@@ -355,7 +342,7 @@
         "器官系統"
       ],
       "a": 3,
-      "e": "",
+      "e": "植物具有細胞、組織與器官，但一般不使用動物式器官系統層次，因此臺灣五葉松缺乏器官系統。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -371,7 +358,7 @@
     },
     {
       "questionId": "260922003100513",
-      "revision": 1,
+      "revision": 2,
       "number": 14,
       "q": "下列何者不是器官？",
       "o": [
@@ -381,7 +368,7 @@
         "西瓜的種子"
       ],
       "a": 1,
-      "e": "",
+      "e": "血液包含血球與血漿，屬結締組織；葉片、胃與種子都屬器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -397,7 +384,7 @@
     },
     {
       "questionId": "260922003100514",
-      "revision": 1,
+      "revision": 2,
       "number": 15,
       "q": "下列何項器官能夠執行水分的吸收與養分的儲存？",
       "o": [
@@ -407,7 +394,7 @@
         "花"
       ],
       "a": 0,
-      "e": "",
+      "e": "根能吸收土壤中的水分與無機鹽，某些根也可儲存養分，因此最符合題意。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -423,7 +410,7 @@
     },
     {
       "questionId": "260922003100515",
-      "revision": 1,
+      "revision": 2,
       "number": 16,
       "q": "有關單細胞及多細胞生物之比較，下列何者錯誤？",
       "o": [
@@ -433,7 +420,7 @@
         "單細胞生物之細胞可獨立存活，而多細胞生物之細胞則不行"
       ],
       "a": 2,
-      "e": "",
+      "e": "多細胞生物的不同細胞會分化並各司其職；不能以「多細胞細胞內胞器種類一定較少」作為普遍差異。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -449,7 +436,7 @@
     },
     {
       "questionId": "260922003100516",
-      "revision": 1,
+      "revision": 2,
       "number": 17,
       "q": "植物體可分為營養器官和生殖器官，下列何者為營養器官？",
       "o": [
@@ -459,7 +446,7 @@
         "葵瓜子"
       ],
       "a": 0,
-      "e": "",
+      "e": "甘薯是膨大的根，主要和吸收、運輸及儲存養分等營養功能有關，因此屬營養器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -475,7 +462,7 @@
     },
     {
       "questionId": "260922003100517",
-      "revision": 1,
+      "revision": 2,
       "number": 18,
       "q": "已知人體動、靜脈中均充滿血液，血液中包含許多血球細胞及血漿（主成分為水），因此可知血液屬於下列哪一種生物組成層次？",
       "o": [
@@ -485,7 +472,7 @@
         "細胞"
       ],
       "a": 2,
-      "e": "",
+      "e": "血液由血球與血漿共同組成，具有運輸、防禦等共同功能，屬組織層次。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -501,7 +488,7 @@
     },
     {
       "questionId": "260922003100518",
-      "revision": 1,
+      "revision": 2,
       "number": 19,
       "q": "組成個體的層次包括：（甲）細胞；（乙）器官；（丙）器官系統；（丁）組織。則變形蟲與樹蕨各具有哪些層次？",
       "o": [
@@ -511,7 +498,7 @@
         "變形蟲僅具有甲；樹蕨具有甲乙丁"
       ],
       "a": 3,
-      "e": "",
+      "e": "變形蟲本身就是單一細胞，只具有細胞層次；樹蕨具有細胞、組織與器官，但不列動物式器官系統。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -527,7 +514,7 @@
     },
     {
       "questionId": "260922003100519",
-      "revision": 1,
+      "revision": 2,
       "number": 20,
       "q": "（甲）單一葉肉細胞；（乙）葉綠體；（丙）葉；（丁）表皮組織。若將上述不同構造依照生物組成層次由「簡→繁」排列，正確順序應為何？",
       "o": [
@@ -537,7 +524,7 @@
         "乙→甲→丁→丙"
       ],
       "a": 3,
-      "e": "",
+      "e": "葉綠體是胞器，葉肉細胞是細胞，表皮是組織，葉是器官，所以由簡到繁為乙→甲→丁→丙。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -553,7 +540,7 @@
     },
     {
       "questionId": "260922003100520",
-      "revision": 1,
+      "revision": 2,
       "number": 21,
       "q": "小花拿到一個未知的人體標本玻片，利用複式顯微鏡觀察，發現細胞有許多突起，則這可能是何種細胞？",
       "o": [
@@ -563,7 +550,7 @@
         "皮膜細胞"
       ],
       "a": 1,
-      "e": "",
+      "e": "神經細胞具有多個突起，適合接收並快速傳遞訊息，因此顯微鏡下看到多突起細胞最可能是神經細胞。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -579,7 +566,7 @@
     },
     {
       "questionId": "260922003100521",
-      "revision": 1,
+      "revision": 2,
       "number": 22,
       "q": "關於單細胞生物與多細胞生物的敘述，下列哪一項是正確的？",
       "o": [
@@ -589,7 +576,7 @@
         "多細胞生物的細胞大小、形狀均相同"
       ],
       "a": 0,
-      "e": "",
+      "e": "多細胞生物的細胞具有分化與分工合作現象；各細胞形狀與功能可不同。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -605,7 +592,7 @@
     },
     {
       "questionId": "260922003100522",
-      "revision": 1,
+      "revision": 2,
       "number": 23,
       "q": "常吃的甘薯之所以被歸類成植物的營養器官，下列哪種理由最正確？",
       "o": [
@@ -615,7 +602,7 @@
         "組成甘薯的細胞形態、功能相同"
       ],
       "a": 1,
-      "e": "",
+      "e": "甘薯是膨大的塊根，主要執行儲存養分等營養功能，因此屬植物營養器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -631,7 +618,7 @@
     },
     {
       "questionId": "260922003100523",
-      "revision": 1,
+      "revision": 2,
       "number": 24,
       "q": "下列哪些在個體組成的層次上屬於「組織」？（甲）腎臟；（乙）氣管；（丙）肌肉；（丁）血液。",
       "o": [
@@ -641,7 +628,7 @@
         "甲丁"
       ],
       "a": 2,
-      "e": "",
+      "e": "肌肉與血液都由多個相似或相關細胞共同執行功能，屬組織；腎臟與氣管屬器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -657,7 +644,7 @@
     },
     {
       "questionId": "260922003100524",
-      "revision": 1,
+      "revision": 2,
       "number": 25,
       "q": "植物根尖的生長點細胞群具有能不斷產生新細胞的特性，則生長點屬於植物的何種層次？",
       "o": [
@@ -667,7 +654,7 @@
         "器官系統"
       ],
       "a": 1,
-      "e": "",
+      "e": "生長點由一群具有相似分裂功能的分生細胞組成，因此屬組織層次。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -683,7 +670,7 @@
     },
     {
       "questionId": "260922003100525",
-      "revision": 1,
+      "revision": 2,
       "number": 26,
       "q": "志明在生物實驗時，觀察洋蔥表皮，他利用高倍顯微鏡看到如圖所示，發現均屬於扁平鱗狀的細胞，且具有保護裏層的功用。則志明應將洋蔥表皮歸納為下列何者？",
       "o": [
@@ -693,7 +680,7 @@
         "器官系統"
       ],
       "a": 2,
-      "e": "",
+      "e": "圖中許多形態相近的洋蔥表皮細胞共同排列並執行保護功能，符合組織的定義。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -706,12 +693,12 @@
       "sourceFile": "IMG_20260920_222909.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222909_Q32.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q32-onion-epidermis.png",
+      "imageAlt": "顯微鏡下洋蔥表皮細胞排列圖"
     },
     {
       "questionId": "260922003100526",
-      "revision": 1,
+      "revision": 2,
       "number": 27,
       "q": "由圖中笠藻可知它只有一個細胞核，請問它可歸類為下列何者？",
       "o": [
@@ -721,7 +708,7 @@
         "藍綠菌"
       ],
       "a": 1,
-      "e": "",
+      "e": "笠藻整個個體只有一個細胞，雖外形較大且有複雜構造，仍屬單細胞生物。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -734,12 +721,12 @@
       "sourceFile": "IMG_20260920_222914.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222914_Q36-Q38.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q36-38-acetabularia.png",
+      "imageAlt": "笠藻構造與漢默林切接實驗流程圖"
     },
     {
       "questionId": "260922003100527",
-      "revision": 1,
+      "revision": 2,
       "number": 28,
       "q": "漢默林的笠藻實驗要證明什麼？",
       "o": [
@@ -749,7 +736,7 @@
         "笠藻經手術後，可互換部分身體"
       ],
       "a": 0,
-      "e": "",
+      "e": "漢默林笠藻實驗透過切割與移接，顯示含細胞核部分能長期控制形態與生命活動，支持細胞核的重要性。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -762,12 +749,12 @@
       "sourceFile": "IMG_20260920_222914.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222914_Q36-Q38.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q36-38-acetabularia.png",
+      "imageAlt": "笠藻構造與漢默林切接實驗流程圖"
     },
     {
       "questionId": "260922003100528",
-      "revision": 1,
+      "revision": 2,
       "number": 29,
       "q": "由圖示中，階段④與階段⑥的結果似乎不同，下列哪一項解釋較合理？",
       "o": [
@@ -777,7 +764,7 @@
         "細胞質本身仍會製造控制傘部形狀的物質，而直接控制傘部的生長"
       ],
       "a": 1,
-      "e": "",
+      "e": "短期再生可能受到原細胞質中既存、由原細胞核先前製造的物質影響；時間拉長後，新細胞核的控制效果才顯現。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -790,12 +777,12 @@
       "sourceFile": "IMG_20260920_222914.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222914_Q36-Q38.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q36-38-acetabularia.png",
+      "imageAlt": "笠藻構造與漢默林切接實驗流程圖"
     },
     {
       "questionId": "260922003100529",
-      "revision": 1,
+      "revision": 2,
       "number": 30,
       "q": "海報中這兩個細胞，何者是植物細胞？判斷依據是何種構造？",
       "o": [
@@ -805,7 +792,7 @@
         "Q，丁"
       ],
       "a": 1,
-      "e": "",
+      "e": "植物細胞具有細胞壁等動物細胞沒有的構造。依圖中標示，Q具植物細胞特徵，判斷依據為甲。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -818,12 +805,12 @@
       "sourceFile": "IMG_20260920_222925.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222925_Q39-Q41.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q39-41-cell-comparison.png",
+      "imageAlt": "P、Q兩種細胞及甲至己構造標示圖"
     },
     {
       "questionId": "260922003100530",
-      "revision": 1,
+      "revision": 2,
       "number": 31,
       "q": "若將碘液滴在細胞上，哪一部分會被染得特別明顯？",
       "o": [
@@ -833,7 +820,7 @@
         "己"
       ],
       "a": 2,
-      "e": "",
+      "e": "碘液可使細胞核等構造較明顯；依圖標示，丁為題目所指會明顯染色的構造。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -846,12 +833,12 @@
       "sourceFile": "IMG_20260920_222925.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222925_Q39-Q41.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q39-41-cell-comparison.png",
+      "imageAlt": "P、Q兩種細胞及甲至己構造標示圖"
     },
     {
       "questionId": "260922003100531",
-      "revision": 1,
+      "revision": 2,
       "number": 32,
       "q": "哪一構造較可能進行光合作用？",
       "o": [
@@ -861,7 +848,7 @@
         "己"
       ],
       "a": 3,
-      "e": "",
+      "e": "光合作用發生於葉綠體；依圖標示，己為葉綠體，所以選己。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -874,12 +861,12 @@
       "sourceFile": "IMG_20260920_222925.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222925_Q39-Q41.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q39-41-cell-comparison.png",
+      "imageAlt": "P、Q兩種細胞及甲至己構造標示圖"
     },
     {
       "questionId": "260922003100532",
-      "revision": 1,
+      "revision": 2,
       "number": 33,
       "q": "右圖以人體消化系統為實例說明人體的構造層次，其中①～⑤分別代表人體不同層次。何者是由數個組織構成且具有特定功能？",
       "o": [
@@ -889,7 +876,7 @@
         "⑤"
       ],
       "a": 1,
-      "e": "",
+      "e": "由多種組織共同構成並執行特定功能的是器官。依圖的層次標示，③代表器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -902,12 +889,12 @@
       "sourceFile": "IMG_20260920_222930.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222930_Q45-Q47.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q45-47-organization-levels.png",
+      "imageAlt": "人體消化系統的細胞、組織、器官、器官系統與個體層次圖"
     },
     {
       "questionId": "260922003100533",
-      "revision": 1,
+      "revision": 2,
       "number": 34,
       "q": "大牛家裡庭院所種的玫瑰花正在盛開，則「花」相當於哪個層次？",
       "o": [
@@ -917,7 +904,7 @@
         "①"
       ],
       "a": 2,
-      "e": "",
+      "e": "花由不同組織共同構成並執行生殖功能，屬器官；依圖對應為③。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -930,12 +917,12 @@
       "sourceFile": "IMG_20260920_222930.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222930_Q45-Q47.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q45-47-organization-levels.png",
+      "imageAlt": "生物體組成層次對照圖"
     },
     {
       "questionId": "260922003100534",
-      "revision": 1,
+      "revision": 2,
       "number": 35,
       "q": "承46題，該玫瑰花沒有哪一個層次？",
       "o": [
@@ -945,7 +932,7 @@
         "①"
       ],
       "a": 0,
-      "e": "",
+      "e": "玫瑰具有細胞、組織、器官與個體層次，但植物通常不列動物式器官系統，因此缺少④所代表的器官系統。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -958,12 +945,12 @@
       "sourceFile": "IMG_20260920_222930.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222930_Q45-Q47.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/advanced-q45-47-organization-levels.png",
+      "imageAlt": "生物體組成層次對照圖"
     },
     {
       "questionId": "260922003100535",
-      "revision": 1,
+      "revision": 2,
       "number": 36,
       "q": "下列哪一個生物構造的組成層次最低？",
       "o": [
@@ -973,7 +960,7 @@
         "血管"
       ],
       "a": 1,
-      "e": "",
+      "e": "白血球是一個細胞；淋巴結、肋骨與血管都由多種組織構成，層次較高，所以白血球層次最低。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -989,7 +976,7 @@
     },
     {
       "questionId": "260922003100536",
-      "revision": 1,
+      "revision": 2,
       "number": 37,
       "q": "有關人體個體組成層次的敘述，下列何者正確？",
       "o": [
@@ -999,7 +986,7 @@
         "神經組織包含肌肉細胞"
       ],
       "a": 0,
-      "e": "",
+      "e": "心臟是器官，由肌肉組織、神經組織等多種組織構成，因此「心臟包含肌肉組織」正確。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1015,7 +1002,7 @@
     },
     {
       "questionId": "260922003100537",
-      "revision": 1,
+      "revision": 2,
       "number": 38,
       "q": "媽媽從市場買了一塊排骨肉。在生物學上，下列何者與排骨肉屬於不同的生物體組成層次？",
       "o": [
@@ -1025,7 +1012,7 @@
         "豌豆莢中的豌豆"
       ],
       "a": 3,
-      "e": "",
+      "e": "排骨肉主要可視為組織；維管束、下表皮與口腔皮膜也屬組織，而豌豆是種子，屬器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1041,7 +1028,7 @@
     },
     {
       "questionId": "260922003100538",
-      "revision": 1,
+      "revision": 2,
       "number": 39,
       "q": "下列各圖為植物的某一部分，何者為該植物的營養器官？",
       "o": [
@@ -1051,7 +1038,7 @@
         "豌豆"
       ],
       "a": 1,
-      "e": "",
+      "e": "甘蔗題圖所示部分為莖，屬營養器官；蘋果、金針花、豌豆所示多與生殖器官相關。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1064,12 +1051,12 @@
       "sourceFile": "IMG_20260920_222943.jpg",
       "answerSourceFile": "IMG_20260920_223009.jpg",
       "answerSourcePage": 88,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222943_Q7.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/cap-step1-q7-plant-organs.png",
+      "imageAlt": "蘋果、甘蔗、金針花與豌豆的植物器官選項圖"
     },
     {
       "questionId": "260922003100539",
-      "revision": 1,
+      "revision": 2,
       "number": 40,
       "q": "下列「動物體——植物體」的構造配對，何組屬於同一種生物組成層次？",
       "o": [
@@ -1079,7 +1066,7 @@
         "大腦——根"
       ],
       "a": 3,
-      "e": "",
+      "e": "大腦與植物的根都由多種組織構成並執行特定功能，皆屬器官層次。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1095,7 +1082,7 @@
     },
     {
       "questionId": "260922003100540",
-      "revision": 1,
+      "revision": 2,
       "number": 41,
       "q": "明倫把右表中的四項構造，對應到個體的組成層次如下：甲—ㄇ；乙—ㄅ；丙—ㄆ；丁—ㄈ。則明倫的對應中，有幾項是正確的？",
       "o": [
@@ -1105,7 +1092,7 @@
         "1"
       ],
       "a": 2,
-      "e": "",
+      "e": "依表中各構造與細胞、組織、器官、器官系統定義逐一比對，共有2項配對正確。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1118,12 +1105,12 @@
       "sourceFile": "IMG_20260920_222956.jpg",
       "answerSourceFile": "IMG_20260920_223009.jpg",
       "answerSourcePage": 89,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222956_Q6.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/cap-step2-q6-level-mapping-table.png",
+      "imageAlt": "四項生物構造與個體組成層次對應表"
     },
     {
       "questionId": "260922003100541",
-      "revision": 1,
+      "revision": 2,
       "number": 42,
       "q": "媽媽從市場買了一塊雞胸肉。下列何者與雞胸肉屬於不同的組成層次？",
       "o": [
@@ -1133,7 +1120,7 @@
         "豌豆莢中的豌豆"
       ],
       "a": 3,
-      "e": "",
+      "e": "雞胸肉主要是肌肉組織；葉脈、葉下表皮與口腔皮膜也屬組織，而豌豆是種子，屬器官。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1149,7 +1136,7 @@
     },
     {
       "questionId": "260922003100542",
-      "revision": 1,
+      "revision": 2,
       "number": 43,
       "q": "下列各圖中的植物，方框處何者不包含該植物的生殖器官？",
       "o": [
@@ -1159,7 +1146,7 @@
         "葡萄"
       ],
       "a": 0,
-      "e": "",
+      "e": "胡蘿蔔方框所示主要為根，屬營養器官，不包含花、果實或種子等生殖器官，因此選胡蘿蔔。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1172,12 +1159,12 @@
       "sourceFile": "IMG_20260920_223009.jpg",
       "answerSourceFile": "IMG_20260920_223009.jpg",
       "answerSourcePage": 90,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_223009_Q8.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-04/assets/cap-step2-q8-plant-reproductive-organs.png",
+      "imageAlt": "胡蘿蔔、水仙花、草莓與葡萄的植物器官圖"
     },
     {
       "questionId": "260922003100543",
-      "revision": 1,
+      "revision": 2,
       "number": 44,
       "q": "關於人體細胞的敘述，下列何者正確？",
       "o": [
@@ -1187,7 +1174,7 @@
         "幹細胞增殖方式不同於一般細胞"
       ],
       "a": 3,
-      "e": "",
+      "e": "題目來源將一般人體細胞與幹細胞的分裂、分化特性做比較；幹細胞可自我更新並分化，但其增殖調控具有特殊性，因此選D。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1203,7 +1190,7 @@
     },
     {
       "questionId": "260922003100544",
-      "revision": 1,
+      "revision": 2,
       "number": 45,
       "q": "人體骨髓中造血幹細胞是屬於下列何者？",
       "o": [
@@ -1212,7 +1199,7 @@
         "胚胎幹細胞"
       ],
       "a": 1,
-      "e": "",
+      "e": "骨髓中的造血幹細胞存在於出生後個體，可分化成多種血球，屬成體幹細胞。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -1228,7 +1215,7 @@
     },
     {
       "questionId": "260922003100545",
-      "revision": 1,
+      "revision": 2,
       "number": 46,
       "q": "幹細胞的「自我更新」是指什麼？",
       "o": [
@@ -1238,7 +1225,7 @@
         "定時產生新細胞"
       ],
       "a": 1,
-      "e": "",
+      "e": "自我更新是幹細胞分裂後仍保留具有幹細胞性質的細胞，使幹細胞族群得以長期維持。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
