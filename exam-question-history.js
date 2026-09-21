@@ -240,6 +240,11 @@
     renderAll();
   });
 
+  window.addEventListener?.('chrisexam-firestore-ready', () => {
+    if (!activeExamKey) return;
+    loadAggregateForCurrentExam();
+  });
+
   window.addEventListener?.('chrisexam-firestore-synced', () => {
     if (!activeExamKey) return;
     loadAggregateForCurrentExam();
