@@ -514,7 +514,7 @@
   function hookExamStart() {
     document.addEventListener('exam:started', resetAttemptTimer);
     document.addEventListener('exam:retry-started', resetAttemptTimer);
-    $('.difficulty').forEach(btn => btn.addEventListener('click', resetAttemptTimer));
+    document.querySelectorAll('.difficulty').forEach(btn => btn.addEventListener('click', resetAttemptTimer));
   }
 
   function hookSubmission() {
