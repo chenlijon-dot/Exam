@@ -159,4 +159,35 @@ assert.match(historyUi, /loadExamAttempts/, 'same-exam recall must load attempts
 assert.match(historyUi, /questionHistoryRecallControls/, 'recall navigation must have a removable controls container');
 assert.match(historyUi, /data-history-answer/, 'historical selected answer/result must be rendered separately');
 
+
+assert.match(
+  historyUi,
+  /loadExamAttempts\(examKey,\s*50\)/,
+  'same-exam recall must request no more than 50 attempts'
+);
+
+assert.match(
+  historyUi,
+  /recallIndex\s*\+=\s*1/,
+  'older recall navigation must move to an earlier historical attempt'
+);
+
+assert.match(
+  historyUi,
+  /recallIndex\s*-=\s*1/,
+  'newer recall navigation must move toward a newer historical attempt'
+);
+
+assert.match(
+  historyUi,
+  /function resetForRetry\(\)[\s\S]*?resetRecallState\(\)/,
+  'retry must clear recall state'
+);
+
+assert.match(
+  historyUi,
+  /filter\(attempt\s*=>\s*!sameAttempt\(attempt,\s*currentAttempt\)\)/,
+  'current visible submission must be excluded from historical recall'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
