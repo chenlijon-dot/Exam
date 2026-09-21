@@ -370,6 +370,33 @@ historyDomain = "vocabulary"
 單字層 authority 仍是 vocabularyProgress / vocabularyState
 ```
 
+另外，為了讓動態字庫考卷可以回看「當時那一整份題組」，新版 vocabulary attempt 會額外保存：
+
+```text
+vocabularySource
+vocabularyItems[]
+```
+
+其中每個 `vocabularyItems[]` 至少保留：
+
+```text
+vocabId
+number
+question / chinese
+word / wordNorm
+options[]
+selectedIndex
+selectedDisplayLabel
+correctIndex
+correctDisplayLabel
+selectedText
+correctText
+result
+explanation
+```
+
+這個 session snapshot 只用來重建歷史考卷畫面，不取代 `vocabId` 的單字 identity，也不取代 `vocabularyProgress` / `vocabularyState` 的長期學習 authority。
+
 ## 7. 一般測驗 Firestore 同步與題目歷史讀取模組
 
 檔案：
@@ -400,16 +427,19 @@ users/{uid}/attempts/{autoId}
 
 為避免同一 completed attempt 重複同步，程式使用 fingerprint 防重複；新的「重新做題」session 仍可產生新的合法 attempt。
 
-### 7.2 固定題 history reader
+### 7.2 History readers
 
 瀏覽器另外公開：
 
 ```js
 window.ChrisExamHistoryStore = {
   loadRecentQuestionAttempts(limit = 50),
-  loadExamAttempts(examKey, limit = 50)
+  loadExamAttempts(examKey, limit = 50),
+  loadVocabularyAttempts(limit = 50)
 }
 ```
+
+其中前兩個屬於固定題；`loadVocabularyAttempts()` 只讀 `historyDomain == "vocabulary"`，供 GEPT Vocabulary session recall 使用。
 
 用途分成兩種。
 
@@ -418,9 +448,9 @@ window.ChrisExamHistoryStore = {
 ```text
 users/{uid}/attempts
 where historyDomain == "question"
-orderBy submittedAt desc
-limit <= 50
 ```
+
+reader 會把 Firestore 與同裝置 `localStorage` 的 attempts 合併、去重，再由前端依 `submittedAt` 排序並裁切最多 50 筆。
 
 這 50 份可以來自不同 `examKey`，再以永久 `questionId` 聚合：
 
@@ -442,12 +472,16 @@ answeredCount = correctCount + wrongCount
 同一份考卷回溯：
 
 ```text
-users/{uid}/attempts
-where historyDomain == "question"
+Firestore:
 where examKey == current examKey
-orderBy submittedAt desc
-limit <= 50
+
+local fallback:
+historyDomain == "question"
++
+examKey == current examKey
 ```
+
+兩邊結果合併後再確認 `historyDomain == "question"`、依 `submittedAt` 排序並裁切最多 50 筆。
 
 現在剛交卷且正在畫面上顯示的 submission 會從歷史回溯清單排除，所以「前一次」指真正上一回。
 
@@ -467,20 +501,27 @@ chrisexam-firestore-ready
 
 讓 history UI 重新讀取。
 
-### 7.3 Firestore composite index 原則
+### 7.3 Index-free recall reader
 
-回溯 query 若在實際登入瀏覽器中收到：
+2026-09-21 實機驗收時，為避免把 Firestore query failure 誤顯示成「沒有更早的作答紀錄」，history reader 已改成單欄位 query + local fallback：
 
 ```text
-failed-precondition
-index required
+Firestore 單欄位查詢
++
+localStorage attempts
+↓
+merge / dedupe
+↓
+client-side submittedAt sort
+↓
+slice(0, 50)
 ```
 
-才依 Firebase 回傳連結建立它指定的最小 composite index。
+因此目前固定題與 GEPT session recall 都不依賴 `historyDomain + examKey + submittedAt` 這類 composite index。
 
-目前不因推測預建額外 index，也不為了 history 改成第二份 `questionProgress` authority。
+如果未來為效能重新導入 server-side `orderBy / limit`，才依 Firebase 實際回報建立最小必要 index。
 
-第八刀 code regression 已確認 reader contract 正常；真正 composite-index 是否需要，仍以 production browser 的 Firebase 回應為準。
+本版仍不建立第二份 `questionProgress` authority。
 
 ## 8. 學生端「我的學習歷程」
 
@@ -1456,6 +1497,40 @@ correctCount + wrongCount
 ```
 
 不能只掃 `vocabularyProgress`，必須以 `vocabularyState` 裡的完整 `exposure` map 為準。
+
+## 22.1 GEPT Vocabulary session recall
+
+GEPT Vocabulary 的題目是動態生成，不能用一般固定題的 `questionId + same examKey` 模式回溯。
+
+因此 session recall 使用：
+
+```text
+attempt.historyDomain = "vocabulary"
+attempt.vocabularyItems[]
+```
+
+每次新版本交卷會保存當次實際出現的整份題組 snapshot。之後學生按「回溯」時，系統讀取最近最多 50 份 vocabulary attempts，排除目前這一份，並重建較早的整份動態考卷。
+
+UI 規則：
+
+```text
+錯題卡 → 紅色
+正確答案 → 綠色
+顯示「當時：選 X｜正確 / 錯誤」
+上下各一組「前一次｜第 N / M 次｜時間｜後一次」
+```
+
+隔離規則：
+
+```text
+GEPT recall 只允許在 examType == gept-vocabulary-memory 執行
+任何非 GEPT exam:started
+→ 立即清除 vocabulary recall button / controls / state
+```
+
+因此 GEPT session recall 不得覆寫 Lesson、GEPT Reading 或其他固定題考卷。
+
+舊版 vocabulary attempts 因沒有保存 `vocabularyItems[]`，不能可靠重建整份歷史題組；只保留其既有單字層統計，不做猜測式回溯。
 
 # 23. vocabularyState 文件
 
