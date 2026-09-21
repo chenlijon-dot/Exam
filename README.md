@@ -1642,6 +1642,8 @@ Exam/
 | `TEXTBOOK_COLLECTION_WORKFLOW.md` | 課本、講義、教材照片與 Drive canonical 母 SOP |
 | `ENGLISH_Database.MD` | 英文 GEPT 閱讀／字彙資料庫現況與 authority |
 | `LEARNING_HISTORY_FIREBASE.md` | 現行 Firebase 登入、學習歷程、單字狀態與維護 authority |
+| `docs/superpowers/specs/2026-09-21-question-bank-governance-design.md` | 正式題庫永久 `questionId`、append-only、revision、正式化／退役治理 authority |
+| `docs/superpowers/specs/2026-09-21-question-history-recall-design.md` | 固定題／GEPT 作答歷史、回溯與 history-domain 規格 authority |
 | `Android學生機設計.MD` | Student Exam Android App、SM-T220 裝置與系統層 runbook |
 | `MATH_DIAGRAM_SYSTEM.md` | 自有數學繪圖系統、diagram schema、renderer、3D 教材式投影與 roadmap 的專門 authority |
 | `curriculum-catalog/*.md` | 各科實體教材章節／課次 catalog authority |
@@ -1741,6 +1743,11 @@ exam-*.js
 → ENGLISH_Database.MD
 → 依各自 authority 流程處理
 
+這是新自編題／新匯入題，準備納入正式題庫？
+→ 先讀本節 23.1
+→ 再讀 question-bank-governance-design.md
+→ 通過正式題目 Definition of Done 後才可標為 active
+
 這是學生作答／學習歷程？
 → LEARNING_HISTORY_FIREBASE.md
 → Firebase Authentication / Firestore
@@ -1755,6 +1762,287 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 
 ---
 
+## 23.1 新正式題目納入硬規則（Definition of Done）
+
+本節是**未來所有正式題庫的共同入口規則**。
+
+不論題目來自：
+
+```text
+AI 自編
+人工自編
+教材轉題
+各校段考
+正式歷屆
+外部公開題庫
+批次匯入
+```
+
+只要最後要成為網站上的「正式固定題」，都必須遵守同一套治理方式。
+
+完整 identity / revision 設計 authority：
+
+```text
+docs/superpowers/specs/2026-09-21-question-bank-governance-design.md
+```
+
+### 23.1.1 先分類來源，再建立題目
+
+正式題目先確定：
+
+```text
+practice-generated
+official-past-exam
+school-exam
+```
+
+不得先把題目塞進 bank，之後才回頭猜來源。
+
+其中：
+
+```text
+practice-generated
+→ 必須依教材 evidence / canonical / curriculum 建立
+→ AI 不得脫離教材 authority 自由補內容
+
+school-exam
+→ 原卷與答案 authority 保留
+→ school / year / exam / originalQuestionNumber 等 provenance 不得丟失
+
+official-past-exam
+→ 原卷題序、原始選項、官方答案、原圖 asset 均保留
+```
+
+### 23.1.2 draft / test 不等於正式題
+
+AI 或工具生成的新題，預設只能視為：
+
+```text
+draft
+或
+test
+```
+
+只有經過 QA 並明確 promotion 後，才成為：
+
+```text
+active
+```
+
+一旦成為 active 正式題，就進入永久 identity 與 append-only 管理。
+
+### 23.1.3 正式固定題必須有永久 identity
+
+每一題 active 的正式靜態題都必須有：
+
+```text
+questionId: string
+revision: integer
+```
+
+新題第一次正式納入：
+
+```text
+revision = 1
+```
+
+目前 `questionId` 建議格式：
+
+```text
+YYMMDDHHmmssSSS
+```
+
+產生 ID 前必須先查 repository authority，避免重複。
+
+禁止把下列欄位當永久 identity：
+
+```text
+number
+originalQuestionNumber
+陣列 index
+畫面順序
+章節內第幾題
+```
+
+### 23.1.4 正式題庫一律 append-only
+
+active 後：
+
+```text
+新增題目
+→ append
+
+新增題目後
+→ 不重編既有 questionId
+
+搬章節／換顯示順序／被另一份考卷重用
+→ questionId 不變
+
+既有正式題
+→ 不可偷偷換成另一題
+```
+
+修正同一題的：
+
+```text
+錯字
+詳解
+metadata
+已查證的答案修正
+同一題的非實質內容修訂
+```
+
+保留同一個 `questionId`，並提高 `revision`。
+
+若修改後已經變成**實質不同的新題目**：
+
+```text
+舊題保留／retire
++
+新題取得新的 questionId
+```
+
+不得用舊 ID 覆蓋成新題。
+
+### 23.1.5 選項 identity 與洗牌規則
+
+題庫來源中的選項順序是 canonical presentation。
+
+自編練習題允許 runtime 洗牌，但必須保留 canonical option identity，讓：
+
+```text
+selectedCanonicalIndex
+correctCanonicalIndex
+```
+
+可以跨不同 A/B/C/D 顯示位置正確追蹤。
+
+各校段考／正式歷屆原則上：
+
+```text
+preserveOptionOrder = true
+```
+
+保留原卷選項順序。
+
+### 23.1.6 正式納入前的最低 QA gate
+
+一題要從 draft / test 升格 active，至少確認：
+
+```text
+[ ] sourceType 已確定
+[ ] authority / provenance 可追溯
+[ ] 題幹完整
+[ ] 選項完整（若為選擇題）
+[ ] 正確答案已核對
+[ ] explanation / 詳解已完成必要 QA
+[ ] 圖片／表格／diagram asset 已完成或有明確 pending 狀態
+[ ] questionId 已核發且全 repo 唯一
+[ ] revision 已設定
+[ ] chapter / lesson / section 定位正確
+[ ] conceptIds 能可靠建立時已建立；不能可靠建立時不亂猜
+[ ] source schema 可被正式 loader 讀取
+[ ] UI 實際可作答
+[ ] GitHub remote read-back 已確認
+```
+
+其中任何 blocking 項目未完成：
+
+> **不得因為「題目看起來可以做」就直接視為正式題。**
+
+### 23.1.7 新題與既有歷史必須相容
+
+正式題一旦建立 history，就必須維持：
+
+```text
+questionId
++
+questionRevision
+```
+
+可回溯。
+
+因此未來新增題目：
+
+- 不得讓舊 attempt 因重編題號而指到另一題。
+- 不得把 display `number` 當歷史 identity。
+- 不得因加入新題就重算舊題的永久 ID。
+- 修訂題目時必須讓舊 attempt 仍能知道學生當時看到的是哪個 revision。
+
+學習歷程的實際保存與回溯規則以：
+
+```text
+LEARNING_HISTORY_FIREBASE.md
+docs/superpowers/specs/2026-09-21-question-history-recall-design.md
+```
+
+為 authority。
+
+### 23.1.8 GEPT Vocabulary 是明確例外
+
+GEPT Vocabulary 是動態生成系統，永久 learning-item identity 已經是：
+
+```text
+vocabId
+```
+
+因此：
+
+```text
+不要為每次動態出現的字彙題製造 questionId
+```
+
+整份歷史考卷回溯使用：
+
+```text
+historyDomain = vocabulary
+vocabularyItems[] session snapshot
+```
+
+但長期單字統計 authority 仍是：
+
+```text
+vocabId
+vocabularyProgress
+vocabularyState
+```
+
+### 23.1.9 未來 AI／批次工具也必須遵守同一規則
+
+自動生成工具可以：
+
+```text
+產生 draft
+補 metadata
+建議 concept
+協助 QA
+批次建立候選題
+```
+
+但不得因為是自動化就跳過 promotion gate。
+
+標準流程固定為：
+
+```text
+authority / evidence
+↓
+draft / test
+↓
+QA
+↓
+永久 questionId + revision
+↓
+active 正式題
+↓
+append-only 維護
+↓
+作答歷史可長期回溯
+```
+
+這是後續擴充全科題庫時的預設規則；除非 README 或更高 authority 明確修訂，否則新題一律依此方式建立。
+
+---
+
 # 24. 新對話／接手規則
 
 新的 ChatGPT 對話繼續本專案時：
@@ -1765,6 +2053,8 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
    - 各校段考：`EXAM_WORKFLOW.md`
    - 英文 GEPT／字彙：`ENGLISH_Database.MD`
    - 學習歷程／Firebase：`LEARNING_HISTORY_FIREBASE.md`
+   - 正式題目建立／questionId／revision：`docs/superpowers/specs/2026-09-21-question-bank-governance-design.md`
+   - 題目歷史／回溯：`docs/superpowers/specs/2026-09-21-question-history-recall-design.md`
    - Android 學生機：`Android學生機設計.MD`
    - 數學繪圖系統：`MATH_DIAGRAM_SYSTEM.md`
    - 各科課程樹：`curriculum-catalog/*.md`
@@ -1772,17 +2062,18 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 4. 不要從舊對話印象直接假設 repository 狀態。
 5. 涉及教材時，先查 Drive 對應 canonical。
 6. 涉及正式歷屆題時，遵守第 11～15 節。
-7. 正式題目遇到模糊／矛盾時立即標記並請使用者協助，不要陷入長時間判讀。
+7. 涉及任何新正式固定題建立／匯入／AI 生成／promotion 時，必須遵守第 23.1 節與 question-bank governance spec；未通過 Definition of Done 不得標為 active。
+9. 正式題目遇到模糊／矛盾時立即標記並請使用者協助，不要陷入長時間判讀。
 8. 對單一疑問題可暫停，但其他清楚題目繼續處理。
-9. 文字／JSON／JS／HTML／CSS 預設 GitHub-first。
-10. Binary／PDF／裁圖才回本機，且必須 remote-first。
-11. 本機工作完成後 push 前再 `fetch + rebase`，防止其他工作同時更新 `main`。
-12. Push 後 remote read-back，不能只相信本機。
-13. 網站 UI 問題先確認首頁 deployment 時間戳，排除舊快取。
-14. 完成新 canonical、新章節、新段考批次、新歷屆試卷或重大網站功能後，更新真正負責該狀態的文件；README 只同步大架構與重要里程碑。
-15. Google Drive 修改只能在 `D:\我的雲端硬碟\國中教材參考資料` 及其子路徑。
-16. 遇到「static catalog + runtime patch」衝突時，優先收斂正式 authority，不再新增另一層 patch。
-17. 有日期的 collection MD 視為歷史 snapshot；live status 以正式 catalog、資料檔與專門 authority 文件為準。
+10. 文字／JSON／JS／HTML／CSS 預設 GitHub-first。
+11. Binary／PDF／裁圖才回本機，且必須 remote-first。
+12. 本機工作完成後 push 前再 `fetch + rebase`，防止其他工作同時更新 `main`。
+13. Push 後 remote read-back，不能只相信本機。
+14. 網站 UI 問題先確認首頁 deployment 時間戳，排除舊快取。
+15. 完成新 canonical、新章節、新段考批次、新歷屆試卷或重大網站功能後，更新真正負責該狀態的文件；README 只同步大架構與重要里程碑。
+16. Google Drive 修改只能在 `D:\我的雲端硬碟\國中教材參考資料` 及其子路徑。
+17. 遇到「static catalog + runtime patch」衝突時，優先收斂正式 authority，不再新增另一層 patch。
+18. 有日期的 collection MD 視為歷史 snapshot；live status 以正式 catalog、資料檔與專門 authority 文件為準。
 
 ---
 
@@ -1810,6 +2101,11 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 - [x] 學生「我的學習歷程」
 - [x] 管理者跨學員歷程讀取
 - [x] GEPT 字彙 `vocabularyProgress` / `vocabularyState`
+- [x] 固定題 schema v3：`questionId / questionRevision / canonical option identity`
+- [x] 每題作答次數／錯題次數／上次結果
+- [x] 同一固定考卷歷次回溯與前後導航
+- [x] GEPT Vocabulary `vocabularyItems[]` session snapshot 與整份考卷回溯
+- [x] 固定題 recall 與 GEPT session recall 狀態隔離
 - [x] Firebase AI Logic 直接分析
 - [x] Firebase App Check
 - [x] 舊 Private Exam-Record 同步／AI path 保留相容性
