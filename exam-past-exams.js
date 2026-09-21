@@ -70,7 +70,7 @@
         ${card({id:'bct93Btn',icon:'🗓️',title:'93 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、答案、原卷附圖與詳解。'})}
         ${card({id:'bct94Btn',icon:'🗓️',title:'94 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立題目、答案、原卷附圖與逐題詳解。'})}
         ${card({id:'bct95Btn',icon:'🗓️',title:'95 年度',badge:'已收錄',desc:'第一次、第二次數學科皆已建立 33 題、官方答案、原卷附圖與逐題詳解。'})}
-        ${card({id:'bct96Btn',icon:'🗓️',title:'96 年度',badge:'已收錄',desc:'第一次數學科 33 題、官方答案、原卷附圖與逐題詳解已建立；第二次待匯入。'})}
+        ${card({id:'bct96Btn',icon:'🗓️',title:'96 年度',badge:'已收錄',desc:'第一次、第二次数學科皆已建立 33 題、官方答案、原卷附圖與逐題詳解。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
     $('#bct91Btn')?.addEventListener('click', showBct91Sessions);
