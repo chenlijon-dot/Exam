@@ -972,9 +972,10 @@ q32-2.png
 97-1 數學：34 題
 97-2 數學：34 題
 98-1 數學：34 題
+98-2 數學：34 題
 ```
 
-90～96 各年度第一次、第二次數學皆已完成；97-1、97-2 與 98-1 也皆已建立完整文字、官方答案、永久 `questionId` / `revision: 1`、原卷裁圖、逐題詳解，並完成第二輪 QA 與歷屆 UI 掛載。已上線共 17 份數學考卷、551 題。
+90～96 各年度第一次、第二次數學皆已完成；97-1、97-2、98-1、98-2 也皆已建立完整文字、官方答案、永久 `questionId` / `revision: 1`、原卷裁圖、逐題詳解，並完成第二輪 QA 與歷屆 UI 掛載。已上線共 18 份數學考卷、585 題。
 
 95-1 目前完整鏈：
 
@@ -1047,7 +1048,7 @@ q32-2.png
 → UI 掛載
 ```
 
-因此目前已掛入歷屆 UI 的基測數學共 551 題。
+因此目前已掛入歷屆 UI 的基測數學共 585 題。
 
 97-2 目前完整鏈：
 
@@ -1077,6 +1078,22 @@ RAW：原卷 8 頁 + cropped 15 張 PNG
 → imagePending / optionImagePending = 0
 → 34 題逐題詳解
 → 第二輪 QA
+→ ACTIVE promotion
+→ UI 掛載
+```
+
+98-2 目前完整鏈：
+
+```text
+Stage 1：34 題文字骨架 + 官方答案 + expectedImages mapping
+→ Stage 2：使用者以 PowerShell 5.1 上傳 18 張 PNG
+→ remote read-back 18 / 18
+→ 16 題具 image／optionImage（Q22 同時具 image + optionImage）
+→ 第二輪 QA
+→ 34 題逐題詳解
+→ 批次核發永久 questionId + revision: 1
+→ preserveOptionOrder = true
+→ 回溯相容
 → ACTIVE promotion
 → UI 掛載
 ```
