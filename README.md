@@ -1205,6 +1205,141 @@ machine-readable curriculum 同步
 
 ---
 
+# 18A. 英文資料結構與定位
+
+英文目前有三條不同資料主線，**不要把七上章節題庫、GEPT 閱讀題、GEPT 字彙資料庫混在一起**。接手英文工作時，先依下列結構定位資料。
+
+## 18A.1 七年級上學期章節題庫
+
+七上 catalog authority：
+
+```text
+curriculum-catalog/english-7-1.md
+```
+
+目前正式可作答的章節題庫為 Lesson 1、Lesson 2；每課簡易／中等／困難各 15 題，共 45 題／課、90 題。實際檔名是 `easy.json / medium.json / hard.json`，**不是** `practice-easy.json` 等名稱。
+
+```text
+chapter-bank/english/7-1/
+├─ get-ready/
+│  └─ reference.json
+├─ lesson-01/
+│  ├─ reference.json
+│  ├─ easy.json
+│  ├─ medium.json
+│  └─ hard.json
+└─ lesson-02/
+   ├─ reference.json
+   ├─ easy.json
+   ├─ medium.json
+   └─ hard.json
+```
+
+前端 registry / runtime authority 在：
+
+```text
+exam-catalog.js
+```
+
+其中 `ENGLISH_7_1_LESSONS` 直接記錄 `referencePath` 與各 difficulty bank path。找不到英文七上題庫時，**先讀 `exam-catalog.js`，不要猜路徑或檔名**。
+
+目前 Lesson 1、Lesson 2 共 90 題已建立永久 `questionId` 與 `revision: 1`；後續新增 Lesson 3～6、Review 或其他固定正式題庫時，依正式題目 identity 規則發新 `questionId`，既有 ID 不重編。
+
+## 18A.2 GEPT 閱讀題庫
+
+GEPT Reading 是**固定正式題目**，資料模型與一般正式題庫相同，因此每題使用永久 `questionId`。
+
+目前 GitHub 已上線第一～第五回：
+
+```text
+chapter-bank/english/gept/elementary/reading/
+├─ round-01.json             35 題
+├─ round-02.json             26 題
+├─ round-02-q07-15.json       9 題
+├─ round-03.json             35 題
+├─ round-04.json             35 題
+└─ round-05.json             35 題
+```
+
+第二回因既有資料結構拆成主檔 26 題＋補充檔 9 題，合計仍為 35 題。以上共 175 題已建立永久 `questionId` 與 `revision: 1`。
+
+GEPT Reading runtime registry：
+
+```text
+exam-english-gept.js
+```
+
+目前第六回在 registry 中仍為 `ready: false`，尚無正式 `round-06.json`；後續第六～十二回依 Drive authority 完成轉檔並正式上線時，再各自發新的永久 `questionId`。
+
+## 18A.3 GEPT 初級字彙資料庫：特殊例外
+
+GEPT Vocabulary **不是固定靜態題庫**。題目由字庫動態產生，因此不要替每次生成的 10／20／50／100 題建立永久 `questionId`。
+
+字彙 canonical authority 在 Google Drive / Google Sheet，而不是 GitHub chapter-bank。主要來源：
+
+```text
+GEPT_beginner_vocabulary_master
+Spreadsheet ID: 1ontnUCuHdV68ngqNi6D1HXJOj3vmxiegsFGjfKVLSrE
+Worksheet: Vocabulary
+```
+
+主要欄位：
+
+```text
+id
+word
+word_norm
+part_of_speech
+chinese
+note
+level
+academic_vocab
+source_page
+```
+
+目前約 2397 source rows、2216 distinct `word_norm`。既有 source `id` 已被前端／服務層作為 `vocabId` identity 使用；**不得因排序、整理或新增字彙而重新編號**，也不要改成 timestamp questionId。
+
+字彙系統 identity 分工：
+
+```text
+vocabId
+→ 字彙 record 的長期 identity
+→ Firebase vocabularyProgress 文件識別的一部分
+
+wordNorm
+→ 同一英文單字的語意／曝光統計單位
+→ vocabularyState exposure / targetCount
+
+questionId
+→ 不用於每次動態生成的 GEPT Vocabulary 題目
+```
+
+目前 Firebase progress key 維持：
+
+```text
+gept-elementary:{vocabId}
+```
+
+前端相容邏輯可接受 `item.vocabId ?? item.id`。未規劃 Firestore migration 前，**不要修改既有 progress key 或重編 vocabId**。
+
+相關 authority / runtime：
+
+```text
+ENGLISH_Database.MD
+LEARNING_HISTORY_FIREBASE.md
+exam-english-vocabulary-simple.js
+```
+
+因此英文題目 identity 的快速判斷是：
+
+```text
+英文七上固定章節題 → questionId
+GEPT Reading 固定閱讀題 → questionId
+GEPT Vocabulary 動態生字題 → vocabId，不發永久 questionId
+```
+
+---
+
 # 19. 學習歷程與 AI 診斷
 
 現行學習歷程 authority：
