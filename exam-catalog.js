@@ -213,8 +213,8 @@
       sections: [
         { key: 'science-7-1-2-1', code: '2-1', title: '生物體的基本構造', enabled: true, desc: '細胞學說、虎克、單細胞生物、細胞來源與幹細胞' },
         { key: 'science-7-1-2-2', code: '2-2', title: '細胞的形態和構造', enabled: true, desc: '細胞膜、細胞核、粒線體、葉綠體、細胞壁與細胞功能' },
-        { key: 'science-7-1-2-3', code: '2-3', title: '有關生命的物質', enabled: false },
-        { key: 'science-7-1-2-4', code: '2-4', title: '從細胞到生物體', enabled: false },
+        { key: 'science-7-1-2-3', code: '2-3', title: '有關生命的物質', enabled: true, desc: '擴散、滲透、選擇性通透與物質進出細胞' },
+        { key: 'science-7-1-2-4', code: '2-4', title: '從細胞到生物體', enabled: true, desc: '細胞、組織、器官、器官系統與生物體組成層次' },
         { key: 'science-7-1-core-2', code: '核心素養', title: '生命的起源', enabled: false, type: 'literacy' }
       ]
     },
@@ -980,7 +980,7 @@
       <button class="catalog-back" id="backSemestersBtn">← 返回學期</button>
       <div class="catalog-path">自然　›　七年級上學期（一上）</div>
       <h2 class="catalog-title">請選擇單元</h2>
-      <p class="catalog-sub">目前單元 1 的 1-1、1-2、1-3，以及單元 2 的 2-1、2-2 已有題庫入口；其餘小節先完成分類，題目後續加入。</p>
+      <p class="catalog-sub">目前單元 1 的 1-1、1-2、1-3，以及單元 2 的 2-1、2-2、2-3、2-4 已有題庫入口；其餘小節先完成分類，題目後續加入。</p>
       <div class="catalog-grid">
         ${SCIENCE_7_1_UNITS.map(u => {
           const ready = u.sections.filter(s => s.enabled).length;
