@@ -112,6 +112,18 @@ assert.ok(
   'question history core must load before exam-records'
 );
 
+assert.doesNotMatch(
+  index,
+  /submitBtn['"]\)\.addEventListener\(['"]click['"],\s*grade\)/,
+  'legacy submit click handler must not compete with exam-runtime-flex'
+);
+
+assert.doesNotMatch(
+  index,
+  /(restartBtn|backBtn|explainBtn)['"]\)\.addEventListener\(['"]click['"]/,
+  'legacy exam control listeners must not compete with exam-runtime-flex'
+);
+
 
 const randomizer = read('exam-option-randomizer.js');
 assert.match(randomizer, /optionCanonicalIndices/, 'option randomizer must preserve canonical option identity');
