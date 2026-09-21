@@ -29,6 +29,24 @@ assert.doesNotMatch(
 );
 
 assert.match(
+  runtime,
+  /if\s*\(graded\)\s*return;/,
+  'a completed attempt must not be submitted again before retry'
+);
+
+assert.match(
+  runtime,
+  /exam:retry-started/,
+  'retry must create a fresh attempt session boundary'
+);
+
+assert.match(
+  records,
+  /document\.addEventListener\(['"]exam:retry-started['"],\s*resetAttemptTimer\)/,
+  'retry must reset attempt timing and duplicate-submit guard'
+);
+
+assert.match(
   records,
   /schemaVersion:\s*3/,
   'new attempts must use schemaVersion 3'
