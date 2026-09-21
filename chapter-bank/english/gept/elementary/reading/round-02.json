@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921090617036",
+      "revision": 1,
       "number": 1,
       "section": "第一部分：詞彙和結構",
       "q": "I don’t like the _____ of the shoes. Do you have some other latest pairs?",
@@ -28,6 +30,8 @@
       "e": "答案是 (B) style。後句問有沒有其他『最新款』，重點是在鞋子的款式，因此用 style。size 是尺寸、color 是顏色、price 是價格，都和 latest pairs 的語意連結較弱。"
     },
     {
+      "questionId": "260921090617037",
+      "revision": 1,
       "number": 2,
       "q": "Teresa hoped to paint the _____ yellow, but I’d like it white.",
       "o": ["ceiling", "cereal", "floor", "sheet"],
@@ -37,6 +41,8 @@
       "e": "答案是 (A) ceiling。paint the ceiling 表示『粉刷天花板』。cereal 是穀片；floor 雖也可粉刷，但題意中的 yellow / white 搭配室內裝潢時 ceiling 最自然；sheet 是床單或薄片。"
     },
     {
+      "questionId": "260921090617038",
+      "revision": 1,
       "number": 3,
       "q": "Dad _____ a new clock on the wall — looking fashionable.",
       "o": ["heated", "hung", "hid", "held"],
@@ -46,6 +52,8 @@
       "e": "答案是 (B) hung。hang a clock on the wall 是『把時鐘掛在牆上』；hang 的過去式與過去分詞在此是 hung。heated 是加熱、hid 是藏起來、held 是拿著。"
     },
     {
+      "questionId": "260921090617039",
+      "revision": 1,
       "number": 4,
       "q": "Treat others _____, and you will win respect from them.",
       "o": ["positively", "rapidly", "politely", "rudely"],
@@ -55,6 +63,8 @@
       "e": "答案是 (C) politely。要獲得別人的尊重，就應該『有禮貌地』對待別人。rudely 是粗魯地，與句意相反；rapidly 是快速地；positively 是正面地。"
     },
     {
+      "questionId": "260921090617040",
+      "revision": 1,
       "number": 5,
       "q": "Our boss wanted us to be _____, so we’d better hurry up.",
       "o": ["on time", "out of time", "in time", "not in time"],
@@ -64,6 +74,8 @@
       "e": "答案是 (A) on time，表示『準時』。老闆要大家準時，所以才說最好快一點。in time 是『及時、在來得及之前』，語意不同。"
     },
     {
+      "questionId": "260921090617041",
+      "revision": 1,
       "number": 6,
       "q": "The advice John gave is _____. Let’s try another way.",
       "o": ["mean", "helpful", "kind", "useless"],
@@ -73,6 +85,8 @@
       "e": "答案是 (D) useless。既然接著說『我們試別的方法吧』，表示 John 的建議沒有用。helpful 與語意相反；mean 和 kind 通常用來形容人或態度。"
     },
     {
+      "questionId": "260921090617042",
+      "revision": 1,
       "number": 16,
       "section": "第二部分：段落填空",
       "groupId": "round02-cloze-16-20",
@@ -86,6 +100,8 @@
       "e": "答案是 (D) that。find 後面接一個完整陳述句作受詞：Kelly found that all the others were busy...，that 引導名詞子句。how / what / whether 都不符合後面完整句子的語意。"
     },
     {
+      "questionId": "260921090617043",
+      "revision": 1,
       "number": 17,
       "groupId": "round02-cloze-16-20",
       "q": "第 17 空應填入哪一個選項？",
@@ -96,6 +112,8 @@
       "e": "答案是 (B) activities。後文列出傳簡訊、看報紙等不同事情，因此 everyone was busy with their own activities 最能概括『各忙各的活動』。"
     },
     {
+      "questionId": "260921090617044",
+      "revision": 1,
       "number": 18,
       "groupId": "round02-cloze-16-20",
       "q": "第 18 空應填入哪一個選項？",
@@ -106,6 +124,8 @@
       "e": "答案是 (D) attention。pay attention 是固定搭配『注意』；pay so much attention 表示她非常專注於手機，以致沒發現 Kelly 在看她。"
     },
     {
+      "questionId": "260921090617045",
+      "revision": 1,
       "number": 19,
       "groupId": "round02-cloze-16-20",
       "q": "第 19 空應填入哪一個選項？",
@@ -116,6 +136,8 @@
       "e": "答案是 (C) worried。look 在這裡是連綴動詞，後面要接形容詞描述主詞狀態；她第一次搭台北捷運，看起來擔心，因此用 worried，而不是副詞 worriedly。"
     },
     {
+      "questionId": "260921090617046",
+      "revision": 1,
       "number": 20,
       "groupId": "round02-cloze-16-20",
       "q": "第 20 空應填入哪一個選項？",
@@ -126,6 +148,8 @@
       "e": "答案是 (A) finally。前面一直在等車，後來『終於』等到捷運進站，finally 最符合時間順序。shortly 是不久、hardly 是幾乎不、lately 是最近。"
     },
     {
+      "questionId": "260921090617047",
+      "revision": 1,
       "number": 21,
       "groupId": "round02-cloze-21-25",
       "introLabel": "Questions 21–25｜星空與星座由來",
@@ -138,6 +162,8 @@
       "e": "答案是 (A) up。look up 表示『抬頭看』；看到上方天空、星星與月亮，語意正好吻合。"
     },
     {
+      "questionId": "260921090617048",
+      "revision": 1,
       "number": 22,
       "groupId": "round02-cloze-21-25",
       "q": "第 22 空應填入哪一個選項？",
@@ -148,6 +174,8 @@
       "e": "答案是 (C) move。see + 受詞 + 原形動詞，可表示看見某動作的完整過程，因此 see ... shooting stars move fast across the night sky 最合適。"
     },
     {
+      "questionId": "260921090617049",
+      "revision": 1,
       "number": 23,
       "groupId": "round02-cloze-21-25",
       "q": "第 23 空應填入哪一個選項？",
@@ -158,6 +186,8 @@
       "e": "答案是 (D) created。古人為了解釋未知的天象而『創造』故事與童話。made sure 是確認；increased 是增加；took over 是接管。"
     },
     {
+      "questionId": "260921090617050",
+      "revision": 1,
       "number": 24,
       "groupId": "round02-cloze-21-25",
       "q": "第 24 空應填入哪一個選項？",
@@ -168,6 +198,8 @@
       "e": "答案是 (A) that。that 引導關係子句，修飾前面的 unknown happening(s)：『他們無法理解的未知天象』。其餘選項不能在此直接修飾前面的名詞。"
     },
     {
+      "questionId": "260921090617051",
+      "revision": 1,
       "number": 25,
       "groupId": "round02-cloze-21-25",
       "q": "第 25 空應填入哪一個選項？",
@@ -178,6 +210,8 @@
       "e": "答案是 (B) fortune。星座信仰常被認為會影響人的 life and fortune，也就是『生活與運勢』。failure 是失敗；manners 是禮貌；machines 是機器。"
     },
     {
+      "questionId": "260921090617052",
+      "revision": 1,
       "number": 26,
       "section": "第三部分：閱讀理解",
       "groupId": "round02-reading-26-27",
@@ -191,6 +225,8 @@
       "e": "答案是 (C) Once a year。標題寫 ANNUAL SALE；annual 就是『每年的、年度的』，所以一年一次。"
     },
     {
+      "questionId": "260921090617053",
+      "revision": 1,
       "number": 27,
       "groupId": "round02-reading-26-27",
       "q": "How much will you have to pay for a game?",
@@ -201,6 +237,8 @@
       "e": "答案是 (B) 75% of the cost。廣告寫 25% OFF ALL GAMES，表示折掉原價的 25%，實付 100% − 25% = 75%。"
     },
     {
+      "questionId": "260921090617054",
+      "revision": 1,
       "number": 28,
       "groupId": "round02-reading-28-29",
       "introLabel": "Questions 28–29｜Carrie 寫給 Mark 的信",
@@ -213,6 +251,8 @@
       "e": "答案是 (D) On the street。文章直接說 While I was walking down the street, I saw a man...，之後確認那人是 Jackie Chan。"
     },
     {
+      "questionId": "260921090617055",
+      "revision": 1,
       "number": 29,
       "groupId": "round02-reading-28-29",
       "q": "Where is Carrie originally from?",
@@ -223,6 +263,8 @@
       "e": "答案是 (C) Tainan。Carrie 在信末問家裡情況並說 I miss Tainan，表示台南是她原本的家鄉。"
     },
     {
+      "questionId": "260921090617056",
+      "revision": 1,
       "number": 30,
       "groupId": "round02-reading-30-32",
       "introLabel": "Questions 30–32｜阿里山神木",
@@ -235,6 +277,8 @@
       "e": "答案是 (D) the decrease of “God Trees”。第一段先介紹神木曾經很多，第二段說因商業砍伐在數十年間大量消失，並提到後來的保護工作；全文主軸是神木數量的減少。"
     },
     {
+      "questionId": "260921090617057",
+      "revision": 1,
       "number": 31,
       "groupId": "round02-reading-30-32",
       "q": "When were most of the “God Trees” in Taiwan destroyed?",
@@ -245,6 +289,8 @@
       "e": "答案是 (D) In the 20th century。文章說 early twentieth century 還有很多大樹，而被發現後很快開始遭砍伐，within a few decades most disappeared，因此主要發生在 20 世紀。"
     },
     {
+      "questionId": "260921090617058",
+      "revision": 1,
       "number": 32,
       "groupId": "round02-reading-30-32",
       "q": "What of the following statements is TRUE?",
@@ -255,6 +301,8 @@
       "e": "答案是 (C)。文中稱神木為 man has ever found 的 oldest living things，並說可活到 3,000 年，因此就題目提供的四個敘述而言，(C) 最符合文章資訊。(A) 與 3,000 年矛盾；(B) 錯在仍有少數被保護；(D) 文章並未說樹只能生長在阿里山。"
     },
     {
+      "questionId": "260921090617059",
+      "revision": 1,
       "number": 33,
       "groupId": "round02-reading-33-35",
       "introLabel": "Questions 33–35｜冰淇淋的歷史",
@@ -267,6 +315,8 @@
       "e": "答案是 (C) Ice with honey on top。第一段直接指出兩千多年前羅馬富人吃的是 ice with honey on top of it，當時牛奶還沒有加入。"
     },
     {
+      "questionId": "260921090617060",
+      "revision": 1,
       "number": 34,
       "groupId": "round02-reading-33-35",
       "q": "Hundreds of years ago, who could have ice cream?",
@@ -277,6 +327,8 @@
       "e": "答案是 (B) Only people with a lot of money。文章說 Back then, ice cream was very expensive and only the rich could afford it，所以只有有錢人買得起。"
     },
     {
+      "questionId": "260921090617061",
+      "revision": 1,
       "number": 35,
       "groupId": "round02-reading-33-35",
       "q": "What happened in the 1800’s?",
