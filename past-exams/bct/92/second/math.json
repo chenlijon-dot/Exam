@@ -21,6 +21,8 @@
   },
   "questions": [
     {
+      "questionId": "260921082708157",
+      "revision": 1,
       "number": 1,
       "q": "求聯立方程式 \\(\\begin{cases}x+2y=-1\\\\3x+2y=5\\end{cases}\\) 的解為何？",
       "o": ["\\(x=2，y=-\\frac32\\)", "\\(x=3，y=1\\)", "\\(x=1，y=-1\\)", "\\(x=3，y=-2\\)"],
@@ -28,6 +30,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708158",
+      "revision": 1,
       "number": 2,
       "q": "如下圖，利用等臂天平比較甲、乙、丙、丁四個物品的重量。請問甲、乙、丙、丁四個物品中哪一個重量最輕？",
       "o": ["甲", "乙", "丙", "丁"],
@@ -37,6 +41,8 @@
       "image": "past-exams/bct/92/second/assets/math/q02-balances.png"
     },
     {
+      "questionId": "260921082708159",
+      "revision": 1,
       "number": 3,
       "q": "小英的家在坐標平面上的位置為 \\(P(-2,1)\\)，x 軸的正向指向東方，y 軸的正向指向北方。如果從小英的家向東走 3 單位，再向南走 4 單位，就到達小華的家，那麼下列哪一個點表示小華家的位置？",
       "o": ["\\(E(-5,5)\\)", "\\(F(-5,-3)\\)", "\\(G(1,5)\\)", "\\(H(1,-3)\\)"],
@@ -44,6 +50,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708160",
+      "revision": 1,
       "number": 4,
       "q": "如右圖，直線 \\(L\\) 的方程式為 \\(x+y-3=0\\)。請問 \\(P、Q、R、S\\) 四點中，哪一個點的坐標是此方程式的解？",
       "o": ["P", "Q", "R", "S"],
@@ -53,6 +61,8 @@
       "image": "past-exams/bct/92/second/assets/math/q04-coordinate-line.png"
     },
     {
+      "questionId": "260921082708161",
+      "revision": 1,
       "number": 5,
       "q": "下列哪一個選項為 \\([(2x^2+x-3)-(-x^2-3x+4)]\\div(x-1)\\) 的商式？",
       "o": ["\\(3x-7\\)", "\\(3x+7\\)", "\\(x-1\\)", "\\(x+1\\)"],
@@ -60,6 +70,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708162",
+      "revision": 1,
       "number": 6,
       "q": "已知 \\(\\triangle ABC\\) 中，\\(\\overline{AB}=4\\)，\\(\\overline{AC}=3\\)，\\(\\angle BAC=50^\\circ\\)。請問下列四個三角形中，哪一個與 \\(\\triangle ABC\\) 相似？",
       "o": ["圖 (A)", "圖 (B)", "圖 (C)", "圖 (D)"],
@@ -69,6 +81,8 @@
       "optionImage": "past-exams/bct/92/second/assets/math/q06-options.png"
     },
     {
+      "questionId": "260921082708163",
+      "revision": 1,
       "number": 7,
       "q": "已知線型函數 \\(f(x)=ax+b\\)，其對應關係如下表。求 \\(\\beta+\\gamma=?\\)",
       "o": ["4", "6", "8", "12"],
@@ -78,6 +92,8 @@
       "image": "past-exams/bct/92/second/assets/math/q07-table.png"
     },
     {
+      "questionId": "260921082708164",
+      "revision": 1,
       "number": 8,
       "q": "若 45 可分解為 \\(a\\times b\\)，其中 \\(a、b\\) 均為正整數，則下列哪一個不可能是 \\(a+b\\) 之值？",
       "o": ["46", "42", "18", "14"],
@@ -85,6 +101,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708165",
+      "revision": 1,
       "number": 9,
       "q": "比較 \\(\\frac52、\\sqrt{\\frac52}、\\frac5{\\sqrt2}、\\frac{\\sqrt5}{2}\\) 四數的值，何者最大？",
       "o": ["\\(\\frac52\\)", "\\(\\sqrt{\\frac52}\\)", "\\(\\frac5{\\sqrt2}\\)", "\\(\\frac{\\sqrt5}{2}\\)"],
@@ -92,6 +110,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708166",
+      "revision": 1,
       "number": 10,
       "q": "如右圖，三條直線 \\(L_1、L_2、L_3\\) 中，\\(L_1\\) 與 \\(L_2\\) 平行，\\(L_1\\) 與 \\(L_3\\) 不垂直，下列哪一個關係是錯誤的？",
       "o": ["\\(\\angle1=\\angle6\\)", "\\(\\angle2=\\angle8\\)", "\\(\\angle3=\\angle7\\)", "\\(\\angle4=\\angle6\\)"],
@@ -101,6 +121,8 @@
       "image": "past-exams/bct/92/second/assets/math/q10-parallel-lines.png"
     },
     {
+      "questionId": "260921082708167",
+      "revision": 1,
       "number": 11,
       "q": "數列 \\(a、b、c\\) 為等差數列，公差為 3。若數列 \\(a+5、b+10、c+15\\) 也為等差數列，則公差為何？",
       "o": ["3", "5", "8", "15"],
@@ -108,6 +130,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708168",
+      "revision": 1,
       "number": 12,
       "q": "某年度全國高中職及五專錄取學生人數用四捨五入法，以千人為單位，其概數為 300000 人。下列何者不可能是正確的錄取學生人數？",
       "o": ["299500 人", "299501 人", "300500 人", "300499 人"],
@@ -115,6 +139,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708169",
+      "revision": 1,
       "number": 13,
       "q": "求 \\(2001\\times2002-1999\\times2004\\) 之值為何？",
       "o": ["6", "16", "26", "36"],
@@ -122,6 +148,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708170",
+      "revision": 1,
       "number": 14,
       "q": "如右圖，\\(\\triangle ASH\\) 為直角三角形，其中 \\(\\angle A=90^\\circ\\)，\\(L\\) 為 \\(\\overline{SH}\\) 的中垂線，交 \\(\\overline{AH}\\) 於 \\(R\\) 點。若 \\(\\overline{AS}=3\\)，\\(\\overline{SH}=5\\)，則 \\(\\overline{RH}=?\\)",
       "o": ["1.5", "2", "\\(\\frac{25}{8}\\)", "2.5"],
@@ -131,6 +159,8 @@
       "image": "past-exams/bct/92/second/assets/math/q14-right-triangle.png"
     },
     {
+      "questionId": "260921082708171",
+      "revision": 1,
       "number": 15,
       "q": "若一元二次方程式 \\(x^2-2x-323=0\\) 的兩根為 \\(a、b\\)，且 \\(a>b\\)，則 \\(2a+b=?\\)",
       "o": ["-53", "15", "55", "21"],
@@ -138,6 +168,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708172",
+      "revision": 1,
       "number": 16,
       "q": "在數線上，\\(O\\) 為原點，\\(A\\) 點的坐標為 \\(a\\)，\\(B\\) 點的坐標為 \\(b\\)。利用下列三個已知條件，判斷 \\(A、B、O\\) 三點在數線上的位置關係。已知條件：1. \\(a+b<0\\)　2. \\(a-b>0\\)　3. \\(ab>0\\)。下列圖形何者正確？",
       "o": ["圖 (A)", "圖 (B)", "圖 (C)", "圖 (D)"],
@@ -147,6 +179,8 @@
       "optionImage": "past-exams/bct/92/second/assets/math/q16-options.png"
     },
     {
+      "questionId": "260921082708173",
+      "revision": 1,
       "number": 17,
       "q": "如右圖，兩圓相交於 \\(A、B\\) 兩點。若 \\(C、B、D\\) 三點共線，\\(\\widehat{BC}=90^\\circ\\)，\\(\\widehat{ABC}=160^\\circ\\)，則 \\(\\widehat{ABD}=?\\)",
       "o": ["100°", "160°", "200°", "280°"],
@@ -156,6 +190,8 @@
       "image": "past-exams/bct/92/second/assets/math/q17-two-circles.png"
     },
     {
+      "questionId": "260921082708174",
+      "revision": 1,
       "number": 18,
       "q": "如右圖，有若干位學生排出正五邊形的隊形，由內而外共排了 6 圈，且學生人數剛好排完。已知最內圈每邊 3 人，往外每圈每邊增加 2 人（即由內向外算起第 2 圈每邊 5 人，第 3 圈每邊 7 人，……）。請問此隊形的學生共有多少人？",
       "o": ["210", "240", "285", "630"],
@@ -165,6 +201,8 @@
       "image": "past-exams/bct/92/second/assets/math/q18-pentagon-formation.png"
     },
     {
+      "questionId": "260921082708175",
+      "revision": 1,
       "number": 19,
       "q": "如右圖，四邊形甲、乙、丙、丁的四邊各自等長。請問下列哪一個敘述是正確的？",
       "o": ["甲與乙相似", "甲與丙相似", "乙與丙相似", "丙與丁相似"],
@@ -174,6 +212,8 @@
       "image": "past-exams/bct/92/second/assets/math/q19-quadrilaterals-grid.png"
     },
     {
+      "questionId": "260921082708176",
+      "revision": 1,
       "number": 20,
       "q": "一台研磨機，在運轉 20 秒後開始研磨咖啡豆，之後每運轉 10 秒可磨掉 50 公克的咖啡豆。以這樣的研磨速度，若要磨掉 \\(x\\) 公克的咖啡豆，則研磨機要運轉幾秒鐘？",
       "o": ["\\(\\frac{x}{50}\\times10+20\\)", "\\(\\frac{x}{50}\\times10-20\\)", "\\(\\frac{x}{10}\\times50+20\\)", "\\(\\frac{x}{10}\\times50-20\\)"],
@@ -181,6 +221,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708177",
+      "revision": 1,
       "number": 21,
       "q": "如右圖，有一扇形，\\(\\overline{OA}=8\\) 公分，\\(\\angle AOB=135^\\circ\\)，求 \\(\\widehat{AB}\\) 的長為多少公分？",
       "o": ["\\(3\\pi\\)", "\\(6\\pi\\)", "\\(12\\pi\\)", "\\(24\\pi\\)"],
@@ -190,6 +232,8 @@
       "image": "past-exams/bct/92/second/assets/math/q21-sector.png"
     },
     {
+      "questionId": "260921082708178",
+      "revision": 1,
       "number": 22,
       "q": "某一組資料有八個正整數，已知其中七個數為 1、6、3、5、2、2、6。下列哪一個數不可能是這一組資料的中位數？",
       "o": ["3", "3.5", "4", "4.5"],
@@ -197,6 +241,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708179",
+      "revision": 1,
       "number": 23,
       "q": "若一次函數 \\(f(x)=ax-3\\)，其中 \\(a>0\\)，則下列哪一個選項可能是此函數圖形？",
       "o": ["圖 (A)", "圖 (B)", "圖 (C)", "圖 (D)"],
@@ -206,6 +252,8 @@
       "optionImage": "past-exams/bct/92/second/assets/math/q23-options.png"
     },
     {
+      "questionId": "260921082708180",
+      "revision": 1,
       "number": 24,
       "q": "求 \\(-9\\frac14-\\frac25\\times[\\frac74-(\\frac38-\\frac12)]\\) 之值為何？",
       "o": ["-10", "\\(-\\frac{99}{10}\\)", "\\(-\\frac{17}{2}\\)", "\\(-\\frac{43}{5}\\)"],
@@ -213,6 +261,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708181",
+      "revision": 1,
       "number": 25,
       "q": "在坐標平面上，\\(y=2x^2-8\\) 的圖形經由下列哪一種方式移動後，可得到 \\(y=2(x-5)^2+12\\) 的圖形？",
       "o": ["先向左移 5 單位，再向上移 20 單位", "先向右移 5 單位，再向上移 20 單位", "先向下移 5 單位，再向右移 20 單位", "先向上移 5 單位，再向左移 20 單位"],
@@ -220,6 +270,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708182",
+      "revision": 1,
       "number": 26,
       "q": "如右圖，圓上三弦 \\(\\overline{AB}、\\overline{CD}、\\overline{EF}\\)，欲在圓內找一點，使其到三弦的距離相等。下列四種做法中，哪一種是正確的？",
       "o": [
@@ -234,6 +286,8 @@
       "image": "past-exams/bct/92/second/assets/math/q26-circle-chords.png"
     },
     {
+      "questionId": "260921082708183",
+      "revision": 1,
       "number": 27,
       "q": "在 \\(\\triangle ABC\\) 中，\\(\\overline{AB}<\\overline{AC}\\)，\\(\\overline{AH}\\perp\\overline{BC}\\) 且 \\(H\\) 在 \\(\\overline{BC}\\) 上，下列哪一個選項是正確的？",
       "o": ["\\(\\angle B=\\angle C\\)", "\\(\\angle B<\\angle C\\)", "\\(\\angle BAH=\\angle CAH\\)", "\\(\\angle BAH<\\angle CAH\\)"],
@@ -241,6 +295,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708184",
+      "revision": 1,
       "number": 28,
       "q": "右圖是一坐標平面。已知籃框位置 \\(B\\) 點在 y 軸上，今有一選手將球從 \\(A\\) 點的位置投出，球經過的路徑是拋物線，由 \\(B\\) 點空心進籃。若此拋物線是下列某一函數的圖形，則此函數為何？",
       "o": ["\\(y=6-\\frac12(x+2)^2\\)", "\\(y=6-\\frac12(x-2)^2\\)", "\\(y=6+\\frac12(x-2)^2\\)", "\\(y=6+\\frac12(x+2)^2\\)"],
@@ -250,6 +306,8 @@
       "image": "past-exams/bct/92/second/assets/math/q28-basketball-parabola.png"
     },
     {
+      "questionId": "260921082708185",
+      "revision": 1,
       "number": 29,
       "q": "兩個罐子裝有相同重量的酒精溶液，其中水與酒精的重量比分別為 3：1 和 1：1，若將這兩罐溶液全倒入一個較大的容器中且沒有溢出，則後來所得的混合液中，水與酒精的重量比為何？",
       "o": ["2：1", "3：2", "4：1", "5：3"],
@@ -257,6 +315,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708186",
+      "revision": 1,
       "number": 30,
       "introLabel": "第30～31題題組",
       "intro": "已知某種彩券的頭獎開獎方法是：在每一個球被取到的機率相等的情況下，從 42 個分別標記號碼 01～42 的球中，依取後不放回的方式，取出不同的六個球，此六個球所代表的號碼即為頭獎。各獎項獎金的分配方式依右表比例分配。",
@@ -268,6 +328,8 @@
       "image": "past-exams/bct/92/second/assets/math/q30-prize-table.png"
     },
     {
+      "questionId": "260921082708187",
+      "revision": 1,
       "number": 31,
       "q": "若某一期的頭獎獎金總額為 9000 萬元，則該期貳獎獎金總額約為多少萬元？（用四捨五入法取到萬元）",
       "o": ["236", "1080", "2842", "3420"],
