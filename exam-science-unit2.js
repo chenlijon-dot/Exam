@@ -29,6 +29,12 @@
       root: 'chapter-bank/science/7-1/unit-02/section-04',
       selfStudyCount: 46,
       selfStudyDesc: '新無敵自然自修原題；細胞、組織、器官、器官系統與生物體組成層次。'
+    },
+    'science-7-1-assessment-u01-u02': {
+      code: '學力測驗',
+      title: '單元一～單元二',
+      type: 'assessment',
+      assessmentPath: 'chapter-bank/science/7-1/unit-02/assessment-u01-u02/assessment.json'
     }
   };
 
@@ -120,6 +126,63 @@
       backLabel:`返回 ${section.code} 題庫`,
       onBack:() => renderMenu(section)
     };
+  }
+
+
+  function makeAssessmentContext(data, section) {
+    const bankKey = data.exam?.key || 'science-7-1-assessment-u01-u02';
+    return {
+      ...(data.exam || {}),
+      key: bankKey,
+      title: '學力診斷評量｜單元一～單元二',
+      subtitle: '自然七上｜單元 1 生命現象與科學探究＋單元 2 生物體的構造｜25 題',
+      subject:'science',
+      subjectLabel:'自然',
+      semester:'7-1',
+      semesterLabel:'七年級上學期',
+      unitGroup:'unit-01-unit-02',
+      unitGroupLabel:'單元一～單元二',
+      section:'assessment-u01-u02',
+      unit:'學力診斷評量｜單元一～單元二',
+      difficulty:'assessment',
+      difficultyLabel:'學力測驗',
+      scoreMode:'percent',
+      analysisEligible:true,
+      preserveOptionOrder:true,
+      backLabel:'返回單元 2',
+      onBack:restoreUnitView
+    };
+  }
+
+  async function openAssessment(section, button) {
+    const badge = button?.querySelector('.catalog-badge');
+    const oldBadge = badge?.textContent || '';
+    if (button) button.disabled = true;
+    if (badge) badge.textContent = '載入中';
+
+    try {
+      const data = await fetchBank(section.assessmentPath);
+      const questions = data.questions.filter(q => !q.imagePending && !q.optionImagePending);
+      if (!questions.length) {
+        alert('學力測驗尚未完成匯入。');
+        restoreUnitView();
+        return;
+      }
+      if (typeof banks === 'undefined' || typeof startExam !== 'function') {
+        throw new Error('題庫引擎尚未就緒');
+      }
+      const bankKey = data.exam?.key || 'science-7-1-assessment-u01-u02';
+      banks[bankKey] = questions;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[bankKey] = makeAssessmentContext(data, section);
+      startExam(bankKey);
+    } catch (error) {
+      restoreUnitView();
+      alert(`學力測驗載入失敗：${error.message}`);
+    } finally {
+      if (button) button.disabled = false;
+      if (badge) badge.textContent = oldBadge;
+    }
   }
 
   async function openBank(section, key, button) {
@@ -226,6 +289,12 @@
     if (!key || !SECTIONS[key]) return;
     event.preventDefault();
     event.stopImmediatePropagation();
+    const section = SECTIONS[key];
+    if (section.type === 'assessment') {
+      saveUnitView();
+      openAssessment(section, card);
+      return;
+    }
     openMenu(key);
   }, true);
 })();
