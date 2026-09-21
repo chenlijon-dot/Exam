@@ -15,6 +15,20 @@
       root: 'chapter-bank/science/7-1/unit-02/section-02',
       selfStudyCount: 52,
       selfStudyDesc: '新無敵自然自修原題；細胞膜、細胞核、粒線體、葉綠體、細胞壁與細胞功能。'
+    },
+    'science-7-1-2-3': {
+      code: '2-3',
+      title: '有關生命的物質',
+      root: 'chapter-bank/science/7-1/unit-02/section-03',
+      selfStudyCount: 33,
+      selfStudyDesc: '新無敵自然自修原題；擴散、滲透、選擇性通透與物質進出細胞。'
+    },
+    'science-7-1-2-4': {
+      code: '2-4',
+      title: '從細胞到生物體',
+      root: 'chapter-bank/science/7-1/unit-02/section-04',
+      selfStudyCount: 46,
+      selfStudyDesc: '新無敵自然自修原題；細胞、組織、器官、器官系統與生物體組成層次。'
     }
   };
 
@@ -94,7 +108,7 @@
       semesterLabel:'七年級上學期',
       unitGroup:'unit-02',
       unitGroupLabel:'單元 2 生物體的構造',
-      section: section.code === '2-1' ? 'section-01' : 'section-02',
+      section: ({'2-1':'section-01','2-2':'section-02','2-3':'section-03','2-4':'section-04'})[section.code] || section.code,
       unit: `${section.code} ${section.title}`,
       difficulty:key,
       difficultyLabel:label,
