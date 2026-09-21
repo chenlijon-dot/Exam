@@ -91,8 +91,8 @@
     document.querySelector('#questionHistoryRecallBtn')?.remove();
   }
 
-  function resetRecallState({ removeButton = true } = {}) {
-    recallLoadToken += 1;
+  function resetRecallState({ removeButton = true, invalidateLoad = true } = {}) {
+    if (invalidateLoad) recallLoadToken += 1;
     recallAttempts = [];
     recallIndex = -1;
     recallLoading = false;
@@ -230,7 +230,7 @@
         .filter(attempt => !sameAttempt(attempt, currentAttempt));
 
       if (!recallAttempts.length) {
-        resetRecallState({ removeButton:false });
+        resetRecallState({ removeButton:false, invalidateLoad:false });
         showRecallMessage('沒有更早的作答紀錄');
         return;
       }
