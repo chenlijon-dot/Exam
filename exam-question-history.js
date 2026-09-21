@@ -5,6 +5,9 @@
   let submitted = false;
   let loadToken = 0;
   let activeExamKey = '';
+  let recallAttempts = [];
+  let recallIndex = -1;
+  let recallLoading = false;
 
   function formatActiveHistory(stats) {
     const wrongCount = Number(stats?.wrongCount || 0);
@@ -34,6 +37,234 @@
         : '';
 
     return secondLine ? [firstLine, secondLine] : [firstLine];
+  }
+
+  function buildRecallAttemptView(attempt) {
+    const view = {};
+    for (const answer of attempt?.answers || []) {
+      const questionId = answer?.questionId == null ? '' : String(answer.questionId);
+      if (!questionId || (answer.result !== 'correct' && answer.result !== 'incorrect')) continue;
+
+      const displayAnswer = String(
+        answer.selectedDisplayLabel || answer.selectedLetter || answer.selectedText || ''
+      ).trim();
+      const resultLabel = answer.result === 'correct' ? '正確' : '錯誤';
+      const label = displayAnswer
+        ? `當時：選 ${displayAnswer}｜${resultLabel}`
+        : `當時：${resultLabel}`;
+
+      view[questionId] = {
+        wrong: answer.result === 'incorrect',
+        label
+      };
+    }
+    return view;
+  }
+
+  function formatRecallTime(value) {
+    if (!value) return '';
+    try {
+      return new Intl.DateTimeFormat('zh-TW', {
+        year:'numeric',
+        month:'2-digit',
+        day:'2-digit',
+        hour:'2-digit',
+        minute:'2-digit',
+        hour12:false
+      }).format(new Date(value));
+    } catch {
+      return String(value);
+    }
+  }
+
+  function clearRecallCardState() {
+    document.querySelectorAll('.history-wrong').forEach(card => card.classList.remove('history-wrong'));
+    document.querySelectorAll('[data-history-answer]').forEach(el => el.remove());
+  }
+
+  function clearRecallControls() {
+    document.querySelector('#questionHistoryRecallControls')?.remove();
+  }
+
+  function clearRecallButton() {
+    document.querySelector('#questionHistoryRecallBtn')?.remove();
+  }
+
+  function resetRecallState({ removeButton = true } = {}) {
+    recallAttempts = [];
+    recallIndex = -1;
+    recallLoading = false;
+    clearRecallCardState();
+    clearRecallControls();
+    if (removeButton) clearRecallButton();
+  }
+
+  function sameAttempt(candidate, currentAttempt) {
+    if (!candidate || !currentAttempt) return false;
+    if (String(candidate.examKey || '') !== String(currentAttempt.examKey || '')) return false;
+    const candidateTime = String(candidate.submittedAt || '');
+    const currentTime = String(currentAttempt.submittedAt || '');
+    return !!candidateTime && candidateTime === currentTime;
+  }
+
+  function renderRecallAttempt() {
+    clearRecallCardState();
+    if (recallIndex < 0 || recallIndex >= recallAttempts.length) return;
+
+    const attempt = recallAttempts[recallIndex];
+    const view = buildRecallAttemptView(attempt);
+
+    document.querySelectorAll('.card[data-q]').forEach((card, index) => {
+      if (card.dataset.questionType === 'manual-study') return;
+      const { source } = cardSource(card, index);
+      const questionId = source?.questionId == null ? '' : String(source.questionId);
+      const historical = view[questionId];
+      if (!historical) return;
+
+      if (historical.wrong) card.classList.add('history-wrong');
+
+      const info = document.createElement('div');
+      info.dataset.historyAnswer = '1';
+      info.className = historical.wrong
+        ? 'question-history-answer wrong'
+        : 'question-history-answer correct';
+      info.textContent = historical.label;
+
+      const annotation = card.querySelector('[data-question-history-annotation]');
+      if (annotation) annotation.insertAdjacentElement('afterend', info);
+      else card.querySelector('.qtitle')?.insertAdjacentElement('afterend', info);
+    });
+
+    updateRecallControls();
+  }
+
+  function updateRecallControls() {
+    const controls = document.querySelector('#questionHistoryRecallControls');
+    if (!controls || recallIndex < 0 || recallIndex >= recallAttempts.length) return;
+
+    const attempt = recallAttempts[recallIndex];
+    const position = controls.querySelector('[data-recall-position]');
+    const older = controls.querySelector('[data-recall-older]');
+    const newer = controls.querySelector('[data-recall-newer]');
+
+    if (position) {
+      const time = formatRecallTime(attempt?.submittedAt);
+      position.textContent = `第 ${recallIndex + 1} / ${recallAttempts.length} 次${time ? `｜${time}` : ''}`;
+    }
+    if (older) older.disabled = recallIndex >= recallAttempts.length - 1;
+    if (newer) newer.disabled = recallIndex <= 0;
+  }
+
+  function ensureRecallControls() {
+    let controls = document.querySelector('#questionHistoryRecallControls');
+    if (controls) return controls;
+
+    controls = document.createElement('div');
+    controls.id = 'questionHistoryRecallControls';
+    controls.className = 'question-history-recall-controls';
+    controls.innerHTML = `
+      <button type="button" class="secondary" data-recall-older>前一次</button>
+      <span class="question-history-recall-position" data-recall-position></span>
+      <button type="button" class="secondary" data-recall-newer>後一次</button>
+    `;
+
+    const actions = document.querySelector('#examScreen .actions');
+    if (actions) actions.insertAdjacentElement('beforebegin', controls);
+    else document.querySelector('#result')?.insertAdjacentElement('afterend', controls);
+
+    controls.querySelector('[data-recall-older]')?.addEventListener('click', () => {
+      if (recallIndex >= recallAttempts.length - 1) return;
+      recallIndex += 1;
+      renderRecallAttempt();
+    });
+    controls.querySelector('[data-recall-newer]')?.addEventListener('click', () => {
+      if (recallIndex <= 0) return;
+      recallIndex -= 1;
+      renderRecallAttempt();
+    });
+
+    return controls;
+  }
+
+  function showRecallMessage(message) {
+    let el = document.querySelector('#questionHistoryRecallMessage');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'questionHistoryRecallMessage';
+      el.className = 'question-history-recall-message';
+      const result = document.querySelector('#result');
+      if (result) result.insertAdjacentElement('afterend', el);
+    }
+    if (!el) return;
+    el.textContent = message;
+    clearTimeout(el._historyHideTimer);
+    el._historyHideTimer = setTimeout(() => el.remove(), 3000);
+  }
+
+  async function enterRecallMode() {
+    if (!submitted || recallLoading) return;
+    const examKey = currentExamKey();
+    const store = historyStore();
+    if (!examKey || !store?.loadExamAttempts) {
+      showRecallMessage('歷史紀錄目前無法讀取');
+      return;
+    }
+
+    recallLoading = true;
+    const button = document.querySelector('#questionHistoryRecallBtn');
+    if (button) {
+      button.disabled = true;
+      button.textContent = '載入回溯…';
+    }
+
+    try {
+      const currentAttempt = latestLocalAttempt();
+      const attempts = await store.loadExamAttempts(examKey, 50);
+      recallAttempts = (attempts || [])
+        .filter(attempt => String(attempt?.examKey || '') === examKey)
+        .filter(attempt => !sameAttempt(attempt, currentAttempt));
+
+      if (!recallAttempts.length) {
+        resetRecallState({ removeButton:false });
+        showRecallMessage('沒有更早的作答紀錄');
+        return;
+      }
+
+      recallIndex = 0;
+      ensureRecallControls();
+      renderRecallAttempt();
+    } catch (error) {
+      console.warn('[QuestionHistory] same-exam recall failed', error);
+      showRecallMessage('歷史紀錄目前無法讀取');
+    } finally {
+      recallLoading = false;
+      const currentButton = document.querySelector('#questionHistoryRecallBtn');
+      if (currentButton) {
+        currentButton.disabled = false;
+        currentButton.textContent = '回溯';
+      }
+    }
+  }
+
+  function ensureRecallButton() {
+    if (!submitted || !activeExamKey) return null;
+    let button = document.querySelector('#questionHistoryRecallBtn');
+    if (button) return button;
+
+    const actions = document.querySelector('#examScreen .actions');
+    if (!actions) return null;
+
+    button = document.createElement('button');
+    button.type = 'button';
+    button.id = 'questionHistoryRecallBtn';
+    button.className = 'secondary question-history-recall-btn';
+    button.textContent = '回溯';
+    button.addEventListener('click', enterRecallMode);
+
+    const restart = actions.querySelector('#restartBtn');
+    if (restart) actions.insertBefore(button, restart);
+    else actions.appendChild(button);
+    return button;
   }
 
   function currentQuestions() {
@@ -184,6 +415,7 @@
 
   function resetForRetry() {
     submitted = false;
+    resetRecallState();
     clearAnnotations();
     renderAll();
   }
@@ -216,6 +448,42 @@
       }
       .question-history-summary{font-weight:800}
       .question-history-last{margin-top:2px;color:#64748b}
+      .card.history-wrong{
+        border:2px solid #dc2626!important;
+        background:#fef2f2!important;
+        box-shadow:0 0 0 2px rgba(220,38,38,.08);
+      }
+      .question-history-answer{
+        margin:6px 0 2px;
+        padding:6px 9px;
+        border-radius:9px;
+        font-size:.84rem;
+        font-weight:800;
+      }
+      .question-history-answer.wrong{background:#fee2e2;color:#991b1b}
+      .question-history-answer.correct{background:#f0fdf4;color:#166534}
+      .question-history-recall-controls{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:10px;
+        flex-wrap:wrap;
+        margin:12px 0;
+        padding:10px;
+        border:1px solid #e2e8f0;
+        border-radius:12px;
+        background:#fff;
+      }
+      .question-history-recall-position{font-weight:800;color:#334155}
+      .question-history-recall-message{
+        margin:10px 0;
+        padding:9px 12px;
+        border-radius:10px;
+        background:#f8fafc;
+        color:#475569;
+        text-align:center;
+        font-size:.9rem;
+      }
     `;
     document.head.appendChild(style);
   }
@@ -224,6 +492,7 @@
     activeExamKey = currentExamKey();
     submitted = false;
     aggregate = {};
+    resetRecallState();
     clearAnnotations();
     loadAggregateForCurrentExam();
   });
@@ -238,6 +507,7 @@
     }
 
     renderAll();
+    if (currentAttempt?.historyDomain === 'question') ensureRecallButton();
   });
 
   window.addEventListener?.('chrisexam-firestore-ready', () => {
@@ -260,6 +530,7 @@
   window.ExamQuestionHistoryUI = {
     formatActiveHistory,
     formatSubmittedHistory,
+    buildRecallAttemptView,
     loadAggregateForCurrentExam,
     resetForRetry
   };
