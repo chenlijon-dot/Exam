@@ -1176,7 +1176,7 @@ Stage 1：34 題文字骨架 + 官方答案 + expectedImages mapping
 exam-science-life.js    → 單元 1／1-1
 exam-science-banks.js   → 單元 1／1-2
 exam-science-lab.js     → 單元 1／1-3
-exam-science-unit2.js   → 單元 2／2-1、2-2
+exam-science-unit2.js   → 單元 2／2-1、2-2、2-3、2-4＋單元一～單元二學力診斷評量
 ```
 
 ### 17A.1 單元 1：生命現象與科學探究
@@ -1219,28 +1219,41 @@ chapter-bank/science/7-1/unit-01/
 
 ### 17A.2 單元 2：生物體的構造
 
-目前已建立 runtime 的小節為 2-1、2-2：
+目前已建立 runtime 的小節為 2-1、2-2、2-3、2-4，並在 2-4 下方建立「學力測驗（單元一～單元二）」：
 
 ```text
 chapter-bank/science/7-1/unit-02/
 ├─ section-01/                    # 2-1 生物體的基本構造
-│  ├─ easy.json                   # 目前 0 題
-│  ├─ medium.json                 # 目前 0 題
-│  ├─ hard.json                   # 目前 0 題
-│  ├─ school-exams.json           # 目前 0 題
 │  └─ self-study.json             # 20 題；自修原始題
-│
-└─ section-02/                    # 2-2 細胞的形態和構造
-   ├─ easy.json                   # 目前 0 題
-   ├─ medium.json                 # 目前 0 題
-   ├─ hard.json                   # 目前 0 題
-   ├─ school-exams.json           # 目前 0 題
-   └─ self-study.json             # 52 題；自修原始題
+├─ section-02/                    # 2-2 細胞的形態和構造
+│  └─ self-study.json             # 52 題；自修原始題
+├─ section-03/                    # 2-3 有關生命的物質
+│  └─ self-study.json             # 33 題；自修原始題
+├─ section-04/                    # 2-4 從細胞到生物體
+│  └─ self-study.json             # 46 題；自修原始題
+└─ assessment-u01-u02/
+   ├─ assessment.json             # 第1次學力診斷評量，25 題
+   └─ assets/                     # 6 張原題裁圖
 ```
 
-目前單元 2 正式題數為 **72 題**，全部來自已匯入的自修原始題：2-1 共 20 題、2-2 共 52 題。這 72 題截至 2026-09-21 均已建立永久 `questionId` 與 `revision: 1`。
+單元 2 四節自修正式題數為 **151 題**：2-1 共 20 題、2-2 共 52 題、2-3 共 33 題、2-4 共 46 題。
 
-2-3〈有關生命的物質〉、2-4〈從細胞到生物體〉仍屬 chapter tree 中的正式小節，但目前尚未建立上述正式題庫內容；後續有題目時再發新的永久 `questionId`，不可預先占號或重編既有題目。
+「第1次 學力診斷評量｜單元一～單元二」另有 **25 題**，依圖片考題高速三階段流程完成：
+```text
+Stage 1：25 題文字骨架 + 解答篇 p.370 正式答案 + 6 題 image pending
+→ Stage 2：使用者以 PowerShell 5.1 上傳 6 張裁圖
+→ remote read-back 6 / 6
+→ Stage 3：Q5、Q21 接 optionImage；Q9、Q12、Q18、Q20 接 image
+→ imagePending / optionImagePending = 0
+→ 25 題逐題詳解
+→ 第二輪 QA
+→ 批次核發永久 questionId + revision: 1
+→ lifecycle = active
+→ 回溯相容
+→ UI 正式掛載
+```
+
+此評量使用穩定 `examKey = science-7-1-assessment-u01-u02`；歷史作答以 `examKey + questionId` 回溯，不依顯示題序。
 
 ### 17A.3 自修原始題的定位
 
@@ -1254,20 +1267,23 @@ chapter-bank/science/7-1/unit-02/
 1-3 self-study：38 題
 2-1 self-study：20 題
 2-2 self-study：52 題
-合計：173 題
+2-3 self-study：33 題
+2-4 self-study：46 題
+合計：252 題
 ```
 
 若題目含原始圖片，圖片 asset 與題目 provenance 應保留；建立 `questionId` 時只增加 identity metadata，不改寫題目、選項、答案或圖片對應。
 
 ### 17A.4 目前自然科 questionId 進度
 
-截至 2026-09-21：
+截至 2026-09-22：
 
 ```text
 單元 1：231 題完成
-單元 2： 72 題完成
+單元 2 四節自修：151 題完成
+單元一～二學力診斷評量：25 題完成
 -----------------
-目前合計：303 題完成永久 question identity
+目前合計：407 題完成永久 question identity
 ```
 
 空的 `questions[]` 不發 `questionId`。後續新增正式題目時直接發新 ID；既有 ID 不因排序、搬檔、增加新題或 catalog 調整而重新編號。
