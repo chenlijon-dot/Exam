@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921092048046",
+      "revision": 1,
       "number": 1,
       "section": "詞彙與結構",
       "q": "Which animal is “老虎” in English?",
@@ -35,6 +37,8 @@
       "e": "答案是 (A) tiger。tiger 是「老虎」。"
     },
     {
+      "questionId": "260921092048047",
+      "revision": 1,
       "number": 2,
       "q": "Which animal is “斑馬” in English?",
       "o": [
@@ -51,6 +55,8 @@
       "e": "答案是 (B) zebra。zebra 是「斑馬」。"
     },
     {
+      "questionId": "260921092048048",
+      "revision": 1,
       "number": 3,
       "q": "One mouse, two _____.",
       "o": [
@@ -67,6 +73,8 @@
       "e": "答案是 (C) mice。mouse 的不規則複數是 mice。"
     },
     {
+      "questionId": "260921092048049",
+      "revision": 1,
       "number": 4,
       "q": "One child, two _____.",
       "o": [
@@ -83,6 +91,8 @@
       "e": "答案是 (B) children。child 的不規則複數是 children。"
     },
     {
+      "questionId": "260921092048050",
+      "revision": 1,
       "number": 5,
       "q": "One sheep, three _____.",
       "o": [
@@ -99,6 +109,8 @@
       "e": "答案是 (B) sheep。sheep 的單數與複數同形。"
     },
     {
+      "questionId": "260921092048051",
+      "revision": 1,
       "number": 6,
       "q": "_____ is this? — It is a lion.",
       "o": [
@@ -115,6 +127,8 @@
       "e": "答案是 (A) What。詢問單數事物用 What is this?"
     },
     {
+      "questionId": "260921092048052",
+      "revision": 1,
       "number": 7,
       "q": "What is that? — _____ is a bear.",
       "o": [
@@ -131,6 +145,8 @@
       "e": "答案是 (C) That。that 是單數遠指，回答可用 That is ...。"
     },
     {
+      "questionId": "260921092048053",
+      "revision": 1,
       "number": 8,
       "q": "_____ are these? — They are monkeys.",
       "o": [
@@ -147,6 +163,8 @@
       "e": "答案是 (A) What。詢問複數事物用 What are these?"
     },
     {
+      "questionId": "260921092048054",
+      "revision": 1,
       "number": 9,
       "q": "These _____ zebras.",
       "o": [
@@ -164,6 +182,8 @@
       "e": "答案是 (C) are。These 是複數，be 動詞用 are。"
     },
     {
+      "questionId": "260921092048055",
+      "revision": 1,
       "number": 10,
       "q": "What are those? — _____ are tigers.",
       "o": [
@@ -180,6 +200,8 @@
       "e": "答案是 (C) Those。those 是複數遠指。"
     },
     {
+      "questionId": "260921092048056",
+      "revision": 1,
       "number": 11,
       "q": "Which is the correct plural of “man”?",
       "o": [
@@ -196,6 +218,8 @@
       "e": "答案是 (C) men。man 的不規則複數是 men。"
     },
     {
+      "questionId": "260921092048057",
+      "revision": 1,
       "number": 12,
       "q": "Which is the correct plural of “ox”?",
       "o": [
@@ -212,6 +236,8 @@
       "e": "答案是 (B) oxen。教材列出的不規則複數為 ox → oxen。"
     },
     {
+      "questionId": "260921092048058",
+      "revision": 1,
       "number": 13,
       "q": "I have a dog. _____ name is Lucky.",
       "o": [
@@ -228,6 +254,8 @@
       "e": "答案是 (C) Its。主詞是 dog，可用 its 表示「牠的」。"
     },
     {
+      "questionId": "260921092048059",
+      "revision": 1,
       "number": 14,
       "q": "According to the reading, which elephants are bigger?",
       "o": [
@@ -244,6 +272,8 @@
       "e": "答案是 (B) African elephants。教材指出 African elephants are very big，而 Asian elephants are smaller。"
     },
     {
+      "questionId": "260921092048060",
+      "revision": 1,
       "number": 15,
       "q": "Which word begins with the /p/ sound taught in Lesson 2?",
       "o": [
