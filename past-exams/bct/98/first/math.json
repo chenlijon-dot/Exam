@@ -19,7 +19,7 @@
     "analysisEligible": false,
     "sourceType": "official-past-exam",
     "promotionStatus": "staging",
-    "sourceNote": "依 README 23.0/23.1 快速資料層流程整批處理：原卷 8 頁、34 題，已完成 RAW→STAGING 文字層與官方答案抄錄，並整批預配永久 questionId/revision。Google Drive《98年第一次數學科_cropped》共有 15 張裁圖；目前尚未匯入 GitHub assets，故保留 imagePending / optionImagePending。Q3、Q12、Q32 含圖形選項；Q12 同時有題目主圖與圖形選項。尚未接 runtime/UI，待圖片匯入與第二輪 QA 後再 promotion 為 active。"
+    "sourceNote": "依 README 23.0/23.1 快速資料層流程整批處理：原卷 8 頁、34 題，已完成 RAW→STAGING 文字層與官方答案抄錄；Google Drive《98年第一次數學科_cropped》共 15 張裁圖，已整批匯入 GitHub assets。Q3、Q32 使用 optionImage；Q12 使用 image + optionImage；其餘圖題使用 image。永久 questionId/revision 已批次核發，尚待逐題詳解／第二輪 QA 與 UI 掛載完成後 promotion 為 active。"
   },
   "questions": [
     {
@@ -63,7 +63,8 @@
       "fixedOptions": true,
       "questionId": "260922010500003",
       "revision": 1,
-      "optionImagePending": true
+      "optionImage": "past-exams/bct/98/first/assets/math/q03-options-number-lines.png",
+      "optionImageAlt": "第3題 A 至 D 四個數線位置關係選項"
     },
     {
       "number": 4,
@@ -78,7 +79,8 @@
       "fixedOptions": true,
       "questionId": "260922010500004",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q04-right-triangle-circumcenter.png",
+      "imageAlt": "第4題座標平面上的直角三角形 ABC 與外心 M"
     },
     {
       "number": 5,
@@ -121,7 +123,8 @@
       "fixedOptions": true,
       "questionId": "260922010500007",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q07-transversal-angles.png",
+      "imageAlt": "第7題截線與兩直線形成的八個角"
     },
     {
       "number": 8,
@@ -178,7 +181,8 @@
       "fixedOptions": true,
       "questionId": "260922010500011",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q11-route-comparison.png",
+      "imageAlt": "第11題甲乙丙三人由 A 地到 B 地的三條路線圖"
     },
     {
       "number": 12,
@@ -193,8 +197,10 @@
       "fixedOptions": true,
       "questionId": "260922010500012",
       "revision": 1,
-      "imagePending": true,
-      "optionImagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q12-reference-number-line.png",
+      "imageAlt": "第12題不等式 x－1＜0 的數線表示",
+      "optionImage": "past-exams/bct/98/first/assets/math/q12-options-number-lines.png",
+      "optionImageAlt": "第12題 A 至 D 四個數線解集選項"
     },
     {
       "number": 13,
@@ -223,7 +229,8 @@
       "fixedOptions": true,
       "questionId": "260922010500014",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q14-circle-arcs.png",
+      "imageAlt": "第14題圓上 A、B、C、D 四點與相關圓弧"
     },
     {
       "number": 15,
@@ -308,7 +315,8 @@
       "fixedOptions": true,
       "questionId": "260922010500020",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q20-rectangle-angle-bisector.png",
+      "imageAlt": "第20題長方形 ABCD、點 E 與角平分線 AE"
     },
     {
       "number": 21,
@@ -323,7 +331,8 @@
       "fixedOptions": true,
       "questionId": "260922010500021",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q21-cylinders-water.png",
+      "imageAlt": "第21題甲乙兩個圓柱形容器"
     },
     {
       "number": 22,
@@ -352,7 +361,8 @@
       "fixedOptions": true,
       "questionId": "260922010500023",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q23-isosceles-trapezoid.png",
+      "imageAlt": "第23題等腰梯形 ABCD、CD 中垂線 L 與點 P"
     },
     {
       "number": 24,
@@ -423,7 +433,8 @@
       "fixedOptions": true,
       "questionId": "260922010500028",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q28-rectangle-arc.png",
+      "imageAlt": "第28題長方形 ABCD、圓弧 DE 與點 E、F、G"
     },
     {
       "number": 29,
@@ -438,7 +449,8 @@
       "fixedOptions": true,
       "questionId": "260922010500029",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q29-four-rectangles.png",
+      "imageAlt": "第29題矩形 ABCD 被過 P 的兩直線分成甲乙丙丁四個矩形"
     },
     {
       "number": 30,
@@ -481,7 +493,8 @@
       "fixedOptions": true,
       "questionId": "260922010500032",
       "revision": 1,
-      "optionImagePending": true
+      "optionImage": "past-exams/bct/98/first/assets/math/q32-options-pie-charts.png",
+      "optionImageAlt": "第32題 A 至 D 四個圓形圖選項"
     },
     {
       "number": 33,
@@ -496,7 +509,8 @@
       "fixedOptions": true,
       "questionId": "260922010500033",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q33-tangent-circle-construction.png",
+      "imageAlt": "第33題兩條不平行直線與作相切圓的甲乙作法示意圖"
     },
     {
       "number": 34,
@@ -511,7 +525,8 @@
       "fixedOptions": true,
       "questionId": "260922010500034",
       "revision": 1,
-      "imagePending": true
+      "image": "past-exams/bct/98/first/assets/math/q34-broken-bar-chart.png",
+      "imageAlt": "第34題部分破損的投籃成績長條圖"
     }
   ]
 }
