@@ -216,6 +216,7 @@
       });
 
       await flushPending();
+      window.dispatchEvent(new CustomEvent('chrisexam-firestore-ready'));
       console.info('[FirestoreSync] ready');
     } catch (error) {
       console.error('[FirestoreSync] init failed', error);
