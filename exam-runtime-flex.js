@@ -481,7 +481,7 @@
           if (!hasAnswer) {
             const missing = {
               status:'completed',
-              verdict:'incorrect',
+              verdict:'unanswered',
               recognizedAnswer:'',
               recognizedWork:'',
               feedback:'本題未作答。',
@@ -536,6 +536,12 @@
             mcqTotal,
             handwritingCorrect,
             handwritingTotal,
+            handwritingResults: handwritingResults.map(({ index, result: grading }) => ({
+              index,
+              verdict: grading?.verdict || 'unclear',
+              recognizedAnswer: grading?.recognizedAnswer || '',
+              confidence: Number(grading?.confidence ?? 0)
+            })),
             manualStudyTotal:manualTotal,
             score:info.score
           }
