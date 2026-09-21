@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921092048076",
+      "revision": 1,
       "number": 1,
       "section": "整合應用",
       "q": "A: What is this?  B: _____ an ox.",
@@ -35,6 +37,8 @@
       "e": "答案是 (B) It is。this 是單數，回答可用 It is an ox。"
     },
     {
+      "questionId": "260921092048077",
+      "revision": 1,
       "number": 2,
       "q": "A: What are those?  B: _____ mice.",
       "o": [
@@ -52,6 +56,8 @@
       "e": "答案是 (D) They are。those 為複數，mouse 的複數為 mice。"
     },
     {
+      "questionId": "260921092048078",
+      "revision": 1,
       "number": 3,
       "q": "Which sentence is NOT correct?",
       "o": [
@@ -69,6 +75,8 @@
       "e": "答案是 (D) These is a fox.。These 是複數，不能搭配 is，也不應接單數 a fox。"
     },
     {
+      "questionId": "260921092048079",
+      "revision": 1,
       "number": 4,
       "q": "One woman is here, and two _____ are over there.",
       "o": [
@@ -85,6 +93,8 @@
       "e": "答案是 (C) women。woman 的不規則複數是 women。"
     },
     {
+      "questionId": "260921092048080",
+      "revision": 1,
       "number": 5,
       "q": "One person is in the room. Five _____ are outside.",
       "o": [
@@ -101,6 +111,8 @@
       "e": "答案是 (B) people。教材列出 person → people / persons；一般情境下 people 最自然。"
     },
     {
+      "questionId": "260921092048081",
+      "revision": 1,
       "number": 6,
       "q": "Tom has two sisters. _____ names are Amy and Mia.",
       "o": [
@@ -117,6 +129,8 @@
       "e": "答案是 (C) Their。names 屬於兩位 sisters，所有格用 their。"
     },
     {
+      "questionId": "260921092048082",
+      "revision": 1,
       "number": 7,
       "q": "Which phrase means “那些女孩們的桌子”?",
       "o": [
@@ -133,6 +147,8 @@
       "e": "答案是 (C) those girls’ desks。girls 是複數，所有格在 s 後加 apostrophe。"
     },
     {
+      "questionId": "260921092048083",
+      "revision": 1,
       "number": 8,
       "q": "African elephants are about 3.2 meters tall, while Asian elephants are about 2.75 meters tall. Which inference is best supported?",
       "o": [
@@ -150,6 +166,8 @@
       "e": "答案是 (A)。3.2 大於 2.75，因此可由教材數據推論 African elephants 平均較高；其他選項沒有這段資料支持。"
     },
     {
+      "questionId": "260921092048084",
+      "revision": 1,
       "number": 9,
       "q": "Asian elephants live about 60 years and African elephants about 70 years. Which statement is supported?",
       "o": [
@@ -167,6 +185,8 @@
       "e": "答案是 (B)。70 − 60 = 10，因此教材資料支持 African elephants 約多 10 年。"
     },
     {
+      "questionId": "260921092048085",
+      "revision": 1,
       "number": 10,
       "q": "A passage says, “This elephant has very big ears and is about 3.2 meters tall.” Based on Lesson 2, it is more likely a(n) _____.",
       "o": [
@@ -184,6 +204,8 @@
       "e": "答案是 (B) African elephant。大耳朵與約 3.2 meters 都符合教材中的 African elephant 特徵。"
     },
     {
+      "questionId": "260921092048086",
+      "revision": 1,
       "number": 11,
       "q": "Which question-answer pair is grammatically correct?",
       "o": [
@@ -200,6 +222,8 @@
       "e": "答案是 (C) What are they? — They are lions.。they 是複數，問答都使用 are。"
     },
     {
+      "questionId": "260921092048087",
+      "revision": 1,
       "number": 12,
       "q": "Which contraction is correct according to Lesson 2?",
       "o": [
@@ -216,6 +240,8 @@
       "e": "答案是 (B) what is → what’s。教材特別指出 what is 可縮寫；this is 不縮寫。"
     },
     {
+      "questionId": "260921092048088",
+      "revision": 1,
       "number": 13,
       "q": "Which two words begin with voiceless sounds taught in Lesson 2?",
       "o": [
@@ -232,6 +258,8 @@
       "e": "答案是 (A) pig — table。/p/ 與 /t/ 都是本課列出的清音；/b/、/d/ 為相對的濁音。"
     },
     {
+      "questionId": "260921092048089",
+      "revision": 1,
       "number": 14,
       "q": "The reading compares size, ears, height, and lifespan of two kinds of elephants. What is the main idea?",
       "o": [
@@ -248,6 +276,8 @@
       "e": "答案是 (B)。教材 p.31–32 的主旨就是比較 Asian elephants 與 African elephants 的差異。"
     },
     {
+      "questionId": "260921092048090",
+      "revision": 1,
       "number": 15,
       "q": "When a reader uses facts in a passage plus background knowledge to decide something the writer does not say directly, the reader is _____.",
       "o": [
