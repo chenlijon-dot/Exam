@@ -48,13 +48,13 @@ assert.match(
 
 assert.match(
   records,
-  /\$\$\(['"]\.difficulty['"]\)\.forEach/,
+  /document\.querySelectorAll\(['"]\.difficulty['"]\)\.forEach/,
   'attempt lifecycle initialization must iterate difficulty buttons with querySelectorAll'
 );
 
 assert.doesNotMatch(
   records,
-  /(?<!\$)\$\(['"]\.difficulty['"]\)\.forEach/,
+  /(?<!querySelectorAll\()\$\(['"]\.difficulty['"]\)\.forEach/,
   'querySelector result must not be treated as an array during records initialization'
 );
 
