@@ -203,24 +203,63 @@ machine-readable curriculum
 
 # 5. 收到課本／講義照片後的標準流程
 
+本流程拆成兩階段，避免大量圖片輸入被後段整理工作拖慢。
+
+## 5.1 第一階段：快速擷取（RAW → STAGING）
+
 ```text
 1. 確認科目
 2. 確認冊別／年級學期
-3. 確認出版社與學年度／版本
-4. 確認課次／章節／小節
-5. 確認頁碼是否連續
-6. 判斷照片方向
-7. 只做 deterministic 影像整理
-8. 建立／找到 Drive 對應資料夾
-9. 將原始／整理後圖片放入「原始資料」
-10. 建立或更新該單元「教材辨識檔」
-11. 讀完整批教材
-12. 讀既有 canonical
-13. 分析新增內容
-14. 更新 canonical Google Doc
-15. 必要時更新 GitHub README / catalog
-16. 記錄目前建置狀態
+3. 確認課次／章節／小節
+4. 確認頁碼／檔名順序
+5. 必要時翻正、旋轉
+6. 建立／找到 Drive 對應資料夾
+7. 原始圖片／PDF 歸入「原始資料」
+8. 連續辨識整批圖片
+9. 依原順序寫入教材辨識檔／題庫辨識文字檔
+10. 模糊處標 [待人工確認]
+11. 整批完成後才停止
 ```
+
+這一階段的目標是：
+
+```text
+快
+完整
+忠實
+可回查
+```
+
+預設不做：
+
+```text
+concept ID 完整整理
+正式題庫 JSON
+questionId
+revision
+runtime
+GitHub Pages deploy
+逐題正式 QA
+```
+
+## 5.2 第二階段：整理與正式化（STAGING → canonical / ACTIVE）
+
+整批文字層完成後，再進行：
+
+```text
+1. 讀完整批辨識文字
+2. 讀既有 canonical
+3. 校正明顯辨識錯誤
+4. 分析新增教材內容
+5. 更新 canonical Google Doc
+6. 整理核心概念／考點／迷思／題型
+7. 題庫型資料再做答案核對與切題
+8. 明確要上線時才轉 GitHub 正式題庫
+9. 必要時更新 README / catalog
+10. 記錄目前建置狀態
+```
+
+**RAW → STAGING 與 STAGING → ACTIVE 不得混在同一個逐頁循環中。**
 
 這裡的「教材辨識檔」與「教材知識庫」角色不同：
 
@@ -922,7 +961,11 @@ A/B/C/D
 
 # 18. 題庫轉成 GitHub 可作答資料
 
-題庫辨識完成後，才轉成網站題庫。
+題庫辨識完成後，先視為 **STAGING**；只有明確要正式上線時，才進入 GitHub 可作答題庫的 promotion 流程。
+
+題庫辨識／校正本身不要求 questionId，也不要求同步完成 runtime / deploy。
+
+正式 promotion 時才套用 README 第 23.1 節的 Definition of Done。
 
 基本原則：
 
@@ -1114,10 +1157,11 @@ Esc 行為：
 7. 再分析本輪新照片／PDF
 8. 圖片只做 deterministic 翻正／整理
 9. 課本／講義原圖歸「原始資料」
-10. 建立／更新教材辨識檔
-11. 分析結果併入「整理資料」canonical
-12. 題庫則以校正後 Google Doc 作主要 authority，再轉成 JSON
-13. 若課名／目錄／catalog／題庫狀態改變，再更新 GitHub
+10. 若使用者要求「先辨識／先吃資料／先轉文字」，只做 RAW → STAGING
+11. 連續完成整批教材辨識檔，不因單頁 QA / questionId / GitHub 上線而中斷
+12. 整批完成後，才分析結果並併入「整理資料」canonical
+13. 題庫則以校正後文字檔／Google Doc 作 staging authority，再進正式 promotion
+14. 若課名／目錄／catalog／題庫狀態改變，再更新 GitHub
 ```
 
 不得：
