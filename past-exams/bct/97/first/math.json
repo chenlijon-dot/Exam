@@ -17,7 +17,7 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": false,
-    "sourceNote": "文字層依 Google Drive《97年第一次數學科.pdf》原卷第 1～5 頁 34 題與第 6 頁答案表建立。Google Drive《97年第一次數學科_cropped》已有 18 個圖題、19 張裁圖；本版先建立文字與永久 questionId/revision，圖像尚待匯入 GitHub assets 後清除 imagePending / optionImagePending。"
+    "sourceNote": "文字層依 Google Drive《97年第一次數學科.pdf》原卷第 1～5 頁 34 題與第 6 頁答案表建立。Google Drive《97年第一次數學科_cropped》已有 18 個圖題、19 張裁圖；本版先建立文字、官方答案與永久 questionId/revision，圖像尚待匯入 GitHub assets 後清除 imagePending / optionImagePending。"
   },
   "questions": [
     {
@@ -333,7 +333,7 @@
         "1/6",
         "1/9"
       ],
-      "a": 2,
+      "a": 1,
       "fixedOptions": true,
       "questionId": "260921235900022",
       "revision": 1,
@@ -419,7 +419,7 @@
         "38",
         "39"
       ],
-      "a": 3,
+      "a": 0,
       "fixedOptions": true,
       "questionId": "260921235900028",
       "revision": 1
@@ -448,7 +448,7 @@
         "圖(C)",
         "圖(D)"
       ],
-      "a": 1,
+      "a": 3,
       "fixedOptions": true,
       "questionId": "260921235900030",
       "revision": 1,
