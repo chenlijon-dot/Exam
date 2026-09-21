@@ -28,4 +28,38 @@ assert.doesNotMatch(
   'raw submit-button clicks must not create completed attempts'
 );
 
-console.log('question-history lifecycle contract: PASS');
+assert.match(
+  records,
+  /schemaVersion:\s*3/,
+  'new attempts must use schemaVersion 3'
+);
+
+assert.match(
+  records,
+  /historyDomain/,
+  'new attempts must declare a historyDomain'
+);
+
+assert.match(
+  runtime,
+  /handwritingResults:\s*handwritingResults\.map/,
+  'exam:submitted must carry compact handwriting results'
+);
+
+const blankHandwritingStart = runtime.indexOf('if (!hasAnswer)');
+assert.notEqual(blankHandwritingStart, -1, 'blank handwriting branch must exist');
+const blankHandwritingBlock = runtime.slice(blankHandwritingStart, blankHandwritingStart + 700);
+
+assert.doesNotMatch(
+  blankHandwritingBlock,
+  /verdict:\s*['"]incorrect['"]/,
+  'blank handwriting must not be classified as incorrect'
+);
+
+assert.match(
+  blankHandwritingBlock,
+  /verdict:\s*['"]unanswered['"]/,
+  'blank handwriting must use an explicit unanswered state'
+);
+
+console.log('question-history lifecycle + schema-v3 contract: PASS');
