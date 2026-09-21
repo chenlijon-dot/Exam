@@ -18,10 +18,15 @@
 
     const optionImages = Array.isArray(question.optionImages) ? question.optionImages : [];
     const optionImageAlts = Array.isArray(question.optionImageAlts) ? question.optionImageAlts : [];
+    const canonicalIndices = Array.isArray(question.optionCanonicalIndices) &&
+      question.optionCanonicalIndices.length === question.o.length
+      ? [...question.optionCanonicalIndices]
+      : question.o.map((_, index) => index);
     const items = question.o.map((text, index) => ({
       text,
       image: optionImages[index] || '',
       imageAlt: optionImageAlts[index] || '',
+      canonicalIndex: canonicalIndices[index],
       correct: index === question.a
     }));
 
@@ -31,6 +36,7 @@
     }
 
     question.o = items.map(x => x.text);
+    question.optionCanonicalIndices = items.map(x => x.canonicalIndex);
     question.a = items.findIndex(x => x.correct);
 
     if (optionImages.length) {
