@@ -68,6 +68,7 @@
     const ctx = currentContext();
     const fallbackDiff = difficultyFromTitle();
     const isAccuracyExam = ctx.scoreMode === 'percent' || ctx.examType === true;
+    const isVocabularyExam = ctx.examType === 'gept-vocabulary-memory';
     const handwritingByIndex = new Map(
       (submissionDetail.handwritingResults || []).map(item => [Number(item.index), item])
     );
@@ -76,6 +77,7 @@
     let incorrect = 0;
     let unanswered = 0;
     const historyAnswers = [];
+    const vocabularyItems = [];
 
     cards.forEach((card, idx) => {
       const sourceIndex = Number(card.dataset.q ?? idx);
@@ -149,6 +151,28 @@
       else if (isCorrect) correct++;
       else incorrect++;
 
+      if (isVocabularyExam && source.vocabId != null) {
+        vocabularyItems.push({
+          vocabId: String(source.vocabId),
+          number,
+          question,
+          chinese: source.chinese || question,
+          word: source.word || '',
+          wordNorm: source.wordNorm || '',
+          options,
+          selectedIndex,
+          selectedDisplayLabel: selectedIndex === null ? '' : LETTERS[selectedIndex],
+          correctIndex,
+          correctDisplayLabel: correctIndex === null ? '' : LETTERS[correctIndex],
+          selectedText: selectedIndex === null ? '' : (options[selectedIndex] || ''),
+          correctText: correctIndex === null ? '' : (options[correctIndex] || ''),
+          result: selectedIndex === null
+            ? 'unanswered'
+            : (isCorrect ? 'correct' : 'incorrect'),
+          explanation
+        });
+      }
+
       if (!questionId || selectedIndex === null || correctIndex === null) return;
 
       historyAnswers.push({
@@ -211,6 +235,8 @@
       unanswered,
       total,
       manualStudyCount,
+      vocabularySource: isVocabularyExam ? (ctx.vocabularySource || '') : '',
+      vocabularyItems,
       answers: historyAnswers,
       wrongAnswers: historyAnswers.filter(answer => answer.result === 'incorrect')
     };
