@@ -21,6 +21,8 @@
   },
   "questions": [
     {
+      "questionId": "260921082708318",
+      "revision": 1,
       "number": 1,
       "q": "計算（－12）＋（－18）÷（－6）－（－3）×2 之值為何？",
       "o": [
@@ -33,6 +35,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708319",
+      "revision": 1,
       "number": 2,
       "q": "下列何者為 2/25 的科學符號（即科學記號）？",
       "o": [
@@ -45,6 +49,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708320",
+      "revision": 1,
       "number": 3,
       "q": "右圖為甲廠牌房車自西元 2000 年至 2005 年市場占有率折線圖。請問甲廠牌房車在西元 2005 年市場占有率是西元 2000 年的幾倍？",
       "o": [
@@ -59,6 +65,8 @@
       "image": "past-exams/bct/95/first/assets/math/q03-market-share-line-chart.png"
     },
     {
+      "questionId": "260921082708321",
+      "revision": 1,
       "number": 4,
       "q": "今有一粒均勻骰子，已知守守第一次丟出 1 點，第二次也丟出 1 點。若第三次丟出 1 點、3 點、5 點的機率分別為 a、b、c，則 a、b、c 的大小關係為何？",
       "o": [
@@ -71,6 +79,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708322",
+      "revision": 1,
       "number": 5,
       "q": "若使用兩塊全等的三角形紙板可緊密拼出一個大三角形，則原來的小紙板必須是何種圖形？",
       "o": [
@@ -83,6 +93,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708323",
+      "revision": 1,
       "number": 6,
       "q": "有甲、乙、丙、丁、戊五塊三角形紙板，已知各紙板其中的兩內角分別為甲：55°、80°，乙：55°、45°，丙：45°、80°，丁：55°、65°，戊：45°、55°。在甲、乙、丙、丁四塊紙板中，哪一塊與戊不相似？",
       "o": [
@@ -95,6 +107,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708324",
+      "revision": 1,
       "number": 7,
       "q": "下圖為五個公車站 P、O、Q、R、S 在某一筆直道路上的位置。今有一公車距離 P 站 4.3 公里，距離 Q 站 0.6 公里，則此公車的位置會在哪兩站之間？",
       "o": [
@@ -109,6 +123,8 @@
       "image": "past-exams/bct/95/first/assets/math/q07-bus-stop-number-line.png"
     },
     {
+      "questionId": "260921082708325",
+      "revision": 1,
       "number": 8,
       "q": "將 231192 做質因數分解後可得 2ᵃ×3²×c²×19，求 a＋c＝？",
       "o": [
@@ -121,6 +137,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708326",
+      "revision": 1,
       "number": 9,
       "q": "下列哪一個式子是錯誤的？",
       "o": [
@@ -133,6 +151,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708327",
+      "revision": 1,
       "number": 10,
       "q": "右圖是由四個半徑為 1 的 1/4 圓與六個邊長為 1 的正方形所組成。判斷下列各選項所敘述的圖形，哪一個的面積與右圖灰色區域面積相等？",
       "o": [
@@ -147,6 +167,8 @@
       "image": "past-exams/bct/95/first/assets/math/q10-quarter-circles-squares.png"
     },
     {
+      "questionId": "260921082708328",
+      "revision": 1,
       "number": 11,
       "q": "右圖是小克班上同學工藝成績折線圖。根據圖中的數據，判斷該班平均工藝成績為幾分？",
       "o": [
@@ -161,6 +183,8 @@
       "image": "past-exams/bct/95/first/assets/math/q11-craft-score-line-chart.png"
     },
     {
+      "questionId": "260921082708329",
+      "revision": 1,
       "number": 12,
       "q": "下列哪一個選項為方程式 4x²－16x＋15＝0 的兩根？",
       "o": [
@@ -173,6 +197,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708330",
+      "revision": 1,
       "number": 13,
       "q": "小君帶 200 元到文具行購買每枝 17 元的鉛筆和每枝 30 元的原子筆。若小君買的鉛筆比原子筆多 3 枝，則小君最多可買到幾枝原子筆？",
       "o": [
@@ -185,6 +211,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708331",
+      "revision": 1,
       "number": 14,
       "q": "x＝－3 可為下列哪一個不等式的解？",
       "o": [
@@ -197,6 +225,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708332",
+      "revision": 1,
       "number": 15,
       "q": "如右圖，四邊形 ABCD 為長方形，BD 為對角線。今分別以 B、D 為圓心，AB 為半徑畫弧，交 BD 於 E、F 兩點。若 AB＝8，BC＝5π，則圖中灰色區域的面積為何？",
       "o": [
@@ -211,6 +241,8 @@
       "image": "past-exams/bct/95/first/assets/math/q15-rectangle-arcs-shaded.png"
     },
     {
+      "questionId": "260921082708333",
+      "revision": 1,
       "number": 16,
       "q": "在坐標平面上，直線 L 的方程式為 y＝－3x＋a。若 a＞0，則 L 不通過第幾象限？",
       "o": [
@@ -223,6 +255,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708334",
+      "revision": 1,
       "number": 17,
       "q": "（69又17/23）×（70又6/23）＝a＋b，若 a 為正整數且 0＜b＜1，則 a＝？",
       "o": [
@@ -235,6 +269,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708335",
+      "revision": 1,
       "number": 18,
       "q": "化簡（5/3 x－25/6 y）－（20/3 x－11/12 y）之後，可得下列哪一個結果？",
       "o": [
@@ -247,6 +283,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708336",
+      "revision": 1,
       "number": 19,
       "q": "如右圖，AB＝BC，BC＞AC，P、Q 兩點在 AM 上，其中 AP＝PQ，且 Q 為△ABC 的重心。若兩直線 BP、BQ 與 AC 分別交於 S、R 兩點，則下列關係何者正確？",
       "o": [
@@ -261,6 +299,8 @@
       "image": "past-exams/bct/95/first/assets/math/q19-centroid-geometry.png"
     },
     {
+      "questionId": "260921082708337",
+      "revision": 1,
       "number": 20,
       "q": "某漱口水瓶上標示正確使用方式：一次使用量為瓶蓋容量的 1/3。小瑜買了一瓶，誤將 1/3 看成 1/2，在使用 10 次後才發現錯誤，此時漱口水已剩原來的 3/4，若往後小瑜依正確方式使用完畢，則還可以用多少次？",
       "o": [
@@ -273,6 +313,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708338",
+      "revision": 1,
       "number": 21,
       "q": "如右圖，△ABC 中，AB＝3，AC＝4，BC＝5。若三直線 AB、AC、BC 分別與圓 O 切於 D、E、F 三點，則 BE＝？",
       "o": [
@@ -287,6 +329,8 @@
       "image": "past-exams/bct/95/first/assets/math/q21-tangent-circle-triangle.png"
     },
     {
+      "questionId": "260921082708339",
+      "revision": 1,
       "number": 22,
       "q": "如右圖，有一圓及長方形 ABCD，其中 A、B、C、D 四點皆在圓上且 BC＜CD。今分別以 BC、CD 為邊長作甲、乙兩正方形。若圓半徑為 1.5 公分，則甲、乙面積和為多少平方公分？",
       "o": [
@@ -301,6 +345,8 @@
       "image": "past-exams/bct/95/first/assets/math/q22-cyclic-rectangle-squares.png"
     },
     {
+      "questionId": "260921082708340",
+      "revision": 1,
       "number": 23,
       "q": "如右圖，A、B、C 三點在圓上，D 點在圓內，E 點在圓外，L 為過 B 點之切線。根據圖中∠1、∠2、∠3、∠4 的位置，判斷下列哪一個角的角度最大？",
       "o": [
@@ -315,6 +361,8 @@
       "image": "past-exams/bct/95/first/assets/math/q23-circle-angles-tangent.png"
     },
     {
+      "questionId": "260921082708341",
+      "revision": 1,
       "number": 24,
       "q": "甲、乙兩店賣豆漿，每杯售價均相同。已知：甲店的促銷方式是每買 2 杯，第 1 杯原價，第 2 杯半價；乙店的促銷方式是每買 3 杯，第 1、2 杯原價，第 3 杯免費。例如，分別在甲、乙兩店購買豆漿 5 杯，均需 4 杯的價錢。若東東想買豆漿 24 杯，則下列哪一個方式花的錢最少？",
       "o": [
@@ -327,6 +375,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708342",
+      "revision": 1,
       "number": 25,
       "q": "如右圖，A、B 兩點在 x 軸上。今甲、乙兩車分別從 A、B 兩點同時出發，以逆時針方向分別繞著大、小圓周行駛。若甲車每 35 分鐘繞一圈，乙車每 20 分鐘繞一圈，則當乙車剛好繞完第三圈時，甲車位於第幾象限？",
       "o": [
@@ -341,6 +391,8 @@
       "image": "past-exams/bct/95/first/assets/math/q25-concentric-circles-coordinate-plane.png"
     },
     {
+      "questionId": "260921082708343",
+      "revision": 1,
       "number": 26,
       "q": "甲、乙、丙、丁、戊五人各站在不同的位置。已知乙在甲的正西方 2 公尺處，丙在甲的正東方 3 公尺處，丁在甲的正北方 6 公尺處。若戊在丙的正北方 m 公尺處，使得乙、丁、戊的位置恰在一直線上，則 m＝？",
       "o": [
@@ -353,6 +405,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708344",
+      "revision": 1,
       "number": 27,
       "q": "有甲、乙兩種長方形紙板各若干張，其中甲的長為 85 公分，寬為 30 公分；乙的長為 85 公分，寬為 40 公分，如圖(一)所示。今依同種紙板不相鄰的規則，將所有紙板由左至右緊密排成圖(二)的長方形 ABCD，則下列哪一個選項可能是 AD 的長度？",
       "o": [
@@ -367,6 +421,8 @@
       "image": "past-exams/bct/95/first/assets/math/q27-rectangular-paper-arrangement.png"
     },
     {
+      "questionId": "260921082708345",
+      "revision": 1,
       "number": 28,
       "q": "L₁、L₂ 是否分別為圖(三)、圖(四)的對稱軸？",
       "o": [
@@ -383,6 +439,8 @@
       "image": "past-exams/bct/95/first/assets/math/q28-q29-grid-diagonal-set.png"
     },
     {
+      "questionId": "260921082708346",
+      "revision": 1,
       "number": 29,
       "q": "如右圖，若將 2700 個大小相同的小正方形緊密地排出一個長邊有 60 個小正方形、短邊有 45 個小正方形的長方形後，在此長方形中畫一條對角線，則此線通過幾個小正方形？",
       "o": [
@@ -397,6 +455,8 @@
       "image": "past-exams/bct/95/first/assets/math/q29-60x45-grid-diagonal.png"
     },
     {
+      "questionId": "260921082708347",
+      "revision": 1,
       "number": 30,
       "q": "已知某捐血中心四月的捐血人數比三月減少 30 人，其中男性人數四月比三月增加 1/5，女性人數四月比三月減少 1/7。若三月的捐血人數為 2040 人，且男性有 x 人，則下列哪一式子可表示三、四月份捐血人數的差異？",
       "o": [
@@ -409,6 +469,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708348",
+      "revision": 1,
       "number": 31,
       "q": "若 a、b 為方程式（x－29）²＝247 的兩根，則下列敘述何者正確？",
       "o": [
@@ -421,6 +483,8 @@
       "fixedOptions": true
     },
     {
+      "questionId": "260921082708349",
+      "revision": 1,
       "number": 32,
       "q": "如圖(五)，將四邊形鐵板 ABCD（四個內角均不為直角）平放，沿 CD 畫一直線 L，沿 AD 畫一直線 M。甲、乙兩人想用此鐵板，在 M 的另一側畫一直線 L₁ 與 L 平行，其作法分別如下：甲：如圖(六)，將鐵板翻至 M 的另一側，下移一些並將 AD 緊靠在直線 M 上，再沿 CD 畫一直線 L₁，如圖(七)。乙：如圖(八)，將鐵板轉動到 M 的另一側，下移一些並將 AD 緊靠在直線 M 上，再沿 CD 畫一直線 L₁，如圖(九)。對於兩人的作法，下列判斷何者正確？",
       "o": [
@@ -438,6 +502,8 @@
       ]
     },
     {
+      "questionId": "260921082708350",
+      "revision": 1,
       "number": 33,
       "q": "如右圖，甲、乙、丙、丁為四個全等的六邊形，且緊密地圍著灰色正方形戊。若甲、乙、丙、丁、戊的每一邊長均為 1，則戊面積與甲面積的比值為何？",
       "o": [
