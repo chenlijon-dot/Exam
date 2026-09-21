@@ -8,30 +8,18 @@
     "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
     "mappedSection": "2-3 有關生命的物質",
     "questionCount": 33,
-    "answerableQuestionCount": 21,
-    "pendingImageQuestionNumbers": [
-      10,
-      16,
-      20,
-      22,
-      24,
-      25,
-      26,
-      27,
-      28,
-      30,
-      31,
-      32
-    ],
+    "answerableQuestionCount": 33,
+    "pendingImageQuestionNumbers": [],
     "preserveOptionOrder": true,
     "analysisEligible": true,
     "answerAuthority": "新無敵自然自修解答篇 p.369–370；會考試題範例 p.90 印刷答案",
-    "buildStage": "text-first; explanations and final image links pending"
+    "buildStage": "complete: text, verified answers, image links, explanations",
+    "explanationStatus": "33/33"
   },
   "questions": [
     {
       "questionId": "260922003100001",
-      "revision": 1,
+      "revision": 2,
       "number": 1,
       "q": "下列何種物質可藉擴散作用直接通過細胞膜？",
       "o": [
@@ -41,7 +29,7 @@
         "礦物質"
       ],
       "a": 1,
-      "e": "",
+      "e": "氧氣與二氧化碳等小型氣體分子可依濃度差直接穿過細胞膜；葡萄糖、胺基酸與礦物質離子通常需膜上特殊蛋白協助。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -57,7 +45,7 @@
     },
     {
       "questionId": "260922003100002",
-      "revision": 1,
+      "revision": 2,
       "number": 2,
       "q": "對於擴散作用的敘述，下列何者錯誤？",
       "o": [
@@ -67,7 +55,7 @@
         "外力介入可使分子移動加速"
       ],
       "a": 0,
-      "e": "",
+      "e": "擴散是粒子本身不規則運動造成的淨移動，不必額外施力；整體趨勢是由高濃度往低濃度。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -83,7 +71,7 @@
     },
     {
       "questionId": "260922003100003",
-      "revision": 1,
+      "revision": 2,
       "number": 3,
       "q": "若將紅血球置於甲（1.35%）、乙（1.15%）、丙（0.95%）、丁（0.75%）四瓶不同濃度的鹽水中，若三瓶中的紅血球萎縮，只有一瓶中的紅血球脹大，則紅血球細胞質的鹽濃度大約為多少？",
       "o": [
@@ -93,7 +81,7 @@
         "0.6%"
       ],
       "a": 2,
-      "e": "",
+      "e": "只有0.75%鹽水使紅血球吸水膨大，而0.95%以上使其失水萎縮，所以細胞內等張濃度介於0.75%與0.95%之間，約0.9%。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -109,7 +97,7 @@
     },
     {
       "questionId": "260922003100004",
-      "revision": 1,
+      "revision": 2,
       "number": 4,
       "q": "細胞進行生理活動時，物質會進出細胞，下列相關的敘述何者錯誤？",
       "o": [
@@ -119,7 +107,7 @@
         "氧氣藉由擴散作用直接進入細胞，二氧化碳也可藉此作用離開細胞"
       ],
       "a": 2,
-      "e": "",
+      "e": "大型蛋白質不能靠一般膜上運輸蛋白直接穿越細胞膜；氧氣、二氧化碳可擴散，水可滲透，葡萄糖可由特殊蛋白協助運輸。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -135,7 +123,7 @@
     },
     {
       "questionId": "260922003100005",
-      "revision": 1,
+      "revision": 2,
       "number": 5,
       "q": "老師拿了幾株香水百合進實驗教室，很快地教室內香氣四溢，大家直呼好香，則是什麼原因造成全班香氣四溢？",
       "o": [
@@ -145,7 +133,7 @@
         "滲透作用"
       ],
       "a": 1,
-      "e": "",
+      "e": "香味分子由百合附近的高濃度區向教室其他低濃度區擴散，因此很快可在全班聞到香味。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -161,7 +149,7 @@
     },
     {
       "questionId": "260922003100006",
-      "revision": 1,
+      "revision": 2,
       "number": 6,
       "q": "（甲）水；（乙）胺基酸；（丙）澱粉；（丁）二氧化碳；（戊）蛋白質；（己）葡萄糖；（庚）氧氣。上述物質中，有幾種不能通過細胞膜？",
       "o": [
@@ -171,7 +159,7 @@
         "5種"
       ],
       "a": 0,
-      "e": "",
+      "e": "澱粉與蛋白質分子太大，不能直接穿過細胞膜；水、氣體及部分小分子可透過相應方式進出，因此不能通過者共有2種。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -187,7 +175,7 @@
     },
     {
       "questionId": "260922003100007",
-      "revision": 1,
+      "revision": 2,
       "number": 7,
       "q": "將紅血球置於生理食鹽水中，結果紅血球不會變形的原因為何？",
       "o": [
@@ -197,7 +185,7 @@
         "紅血球因鹽水而破壞細胞膜功能"
       ],
       "a": 2,
-      "e": "",
+      "e": "生理食鹽水與紅血球細胞質的水勢近似，水仍會雙向移動，但進出量大致相等，所以紅血球外形維持不變。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -213,7 +201,7 @@
     },
     {
       "questionId": "260922003100008",
-      "revision": 1,
+      "revision": 2,
       "number": 8,
       "q": "將食物放在濃食鹽水中，不易腐敗，因即使細菌掉在裡面，也會脫水而死。現在，如果把食物放到濃葡萄糖水中，其結果將會如何？",
       "o": [
@@ -223,7 +211,7 @@
         "細菌會脹破而死，所以食物不會腐敗"
       ],
       "a": 2,
-      "e": "",
+      "e": "濃葡萄糖水與濃食鹽水一樣可形成高滲環境，使細菌失水，抑制其生長，因此可降低腐敗。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -239,7 +227,7 @@
     },
     {
       "questionId": "260922003100009",
-      "revision": 1,
+      "revision": 2,
       "number": 9,
       "q": "下列哪一種物質進入細胞的方式和葡萄糖是相同的？",
       "o": [
@@ -249,7 +237,7 @@
         "澱粉"
       ],
       "a": 1,
-      "e": "",
+      "e": "葡萄糖與胺基酸都無法像氧氣、二氧化碳那樣直接穿過脂雙層，需藉膜上特殊蛋白協助運輸。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -265,7 +253,7 @@
     },
     {
       "questionId": "260922003100010",
-      "revision": 1,
+      "revision": 2,
       "number": 10,
       "q": "物質進出細胞的原理，下列模式圖哪些是正確的？",
       "o": [
@@ -275,7 +263,7 @@
         "乙丁"
       ],
       "a": 2,
-      "e": "",
+      "e": "判斷模式要抓兩原則：氣體可順濃度梯度直接擴散；葡萄糖、胺基酸等需膜蛋白協助。圖中符合者為甲、丁。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -288,12 +276,12 @@
       "sourceFile": "IMG_20260920_222840.jpg",
       "answerSourceFile": "IMG_20260921_001204.jpg",
       "answerSourcePage": 369,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222840_Q12.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/basic-q12-diffusion-models.png",
+      "imageAlt": "物質進出細胞的四個模式圖"
     },
     {
       "questionId": "260922003100011",
-      "revision": 1,
+      "revision": 2,
       "number": 11,
       "q": "生活在水中的腎形蟲、眼蟲等單細胞生物，藉由下列何種方式與外界進行物質的交換？",
       "o": [
@@ -303,7 +291,7 @@
         "蒸散作用"
       ],
       "a": 2,
-      "e": "",
+      "e": "單細胞生物沒有專門的循環器官，細胞直接與外界接觸，可藉擴散等方式交換氧氣、二氧化碳等物質。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -319,7 +307,7 @@
     },
     {
       "questionId": "260922003100012",
-      "revision": 1,
+      "revision": 2,
       "number": 12,
       "q": "一般植物不能以海水灌溉，其原因為何？",
       "o": [
@@ -329,7 +317,7 @@
         "海水阻礙水分的運輸，導致光合作用停止而死亡"
       ],
       "a": 1,
-      "e": "",
+      "e": "海水溶質濃度高於根細胞，水會由根細胞向外滲出，造成細胞失水、質壁分離，嚴重時植物死亡。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -345,7 +333,7 @@
     },
     {
       "questionId": "260922003100013",
-      "revision": 1,
+      "revision": 2,
       "number": 13,
       "q": "小威觀察水綿，發現無法區分細胞壁和細胞膜，他可以使用何種方法將此兩個構造分離？",
       "o": [
@@ -355,7 +343,7 @@
         "滴入純水"
       ],
       "a": 0,
-      "e": "",
+      "e": "滴入濃鹽水後，植物細胞失水，細胞膜連同原生質體向內縮離細胞壁，因而可看出細胞膜與細胞壁的位置差異。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -371,7 +359,7 @@
     },
     {
       "questionId": "260922003100014",
-      "revision": 1,
+      "revision": 2,
       "number": 14,
       "q": "美國加州的赤杉高達100公尺以上，仍能屹立不倒，主要是赤杉的細胞多了哪一個可支持植物體的構造？",
       "o": [
@@ -381,7 +369,7 @@
         "液胞"
       ],
       "a": 2,
-      "e": "",
+      "e": "植物細胞壁堅硬，可提供支持與保護，使大型植物能維持形狀並承受機械力量。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -397,7 +385,7 @@
     },
     {
       "questionId": "260922003100015",
-      "revision": 1,
+      "revision": 2,
       "number": 15,
       "q": "安利在特殊顯微室內利用特殊工具，將細胞膜上的特殊蛋白嵌制固定，則下列哪些物質便無法順利進入細胞中？（甲）氧氣；（乙）二氧化碳；（丙）礦物質；（丁）胺基酸；（戊）葡萄糖。",
       "o": [
@@ -407,7 +395,7 @@
         "甲丁戊"
       ],
       "a": 2,
-      "e": "",
+      "e": "礦物質、胺基酸與葡萄糖進出通常依賴膜蛋白；氧氣與二氧化碳可直接擴散，因此被固定膜蛋白後受影響的是丙、丁、戊。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -423,7 +411,7 @@
     },
     {
       "questionId": "260922003100016",
-      "revision": 1,
+      "revision": 2,
       "number": 16,
       "q": "敏華的紅血球在不同濃度的蔗糖溶液中浸泡半小時後結果如圖，試依血球外形的變化，判斷蔗糖溶液濃度由高而低應為何？",
       "o": [
@@ -433,7 +421,7 @@
         "乙＞甲＞丁＞丙"
       ],
       "a": 2,
-      "e": "",
+      "e": "外液濃度越高，紅血球失水越多、越皺縮；外液濃度越低，紅血球吸水越多、越膨大。依圖判讀濃度順序為丙＞乙＞丁＞甲。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -446,12 +434,12 @@
       "sourceFile": "IMG_20260920_222856.jpg",
       "answerSourceFile": "IMG_20260921_001204.jpg",
       "answerSourcePage": 369,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222856_Q24.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/basic-q24-rbc-osmosis.png",
+      "imageAlt": "紅血球置於不同蔗糖濃度後的外形變化"
     },
     {
       "questionId": "260922003100017",
-      "revision": 1,
+      "revision": 2,
       "number": 17,
       "q": "翔泰發現：細胞內外存在著物質濃度差異時，氣體可以任意進出細胞，但養分和廢物通過細胞膜時卻有一定的方向，不能任意進出，這個現象和細胞膜的何種性質有關？",
       "o": [
@@ -461,7 +449,7 @@
         "主要由脂質所組成"
       ],
       "a": 2,
-      "e": "",
+      "e": "細胞膜上的特殊蛋白具有選擇性，可協助特定養分、離子等進出，使細胞膜表現出選擇性通透的特性。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -477,7 +465,7 @@
     },
     {
       "questionId": "260922003100018",
-      "revision": 1,
+      "revision": 2,
       "number": 18,
       "q": "中華小廚師做神奇能量泡菜時，會將蘿蔔切塊後放入鹽水中浸泡，再放入冰箱內一段時間，最後蘿蔔會變軟。下列有關經過處理後蘿蔔變軟的解釋，何者正確？",
       "o": [
@@ -487,7 +475,7 @@
         "冰箱內的低溫使細胞壁萎縮"
       ],
       "a": 2,
-      "e": "",
+      "e": "鹽水濃度高於蘿蔔細胞液，水由細胞內向外滲出，細胞膨壓下降，所以蘿蔔組織變軟。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -503,7 +491,7 @@
     },
     {
       "questionId": "260922003100019",
-      "revision": 1,
+      "revision": 2,
       "number": 19,
       "q": "已知雞的紅血球具有細胞核，故可用以萃取遺傳物質。在萃取遺傳物質前雞血需用蒸餾水處理，其較可能原因為何？",
       "o": [
@@ -513,7 +501,7 @@
         "為了使遺傳物質藉擴散作用溶入水中"
       ],
       "a": 0,
-      "e": "",
+      "e": "蒸餾水濃度極低，水大量進入雞紅血球，使細胞膨脹甚至破裂，方便取得位於細胞核內的遺傳物質。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -529,7 +517,7 @@
     },
     {
       "questionId": "260922003100020",
-      "revision": 1,
+      "revision": 2,
       "number": 20,
       "q": "將薊頭漏斗倒放於燒杯中，漏斗底部包有半透膜，內裝有15%的澱粉溶液，燒杯中裝有蒸餾水。經過一段時間後，漏斗內的水位會如何變化？（半透膜能讓水分子通過，但不能讓澱粉分子通過）",
       "o": [
@@ -539,7 +527,7 @@
         "無法判斷"
       ],
       "a": 0,
-      "e": "",
+      "e": "漏斗內澱粉溶液的溶質濃度高於外側蒸餾水，而半透膜只讓水通過，因此水淨流入漏斗，液面上升。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -552,12 +540,12 @@
       "sourceFile": "IMG_20260920_222909.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222909_Q28.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/advanced-q28-thistle-funnel.png",
+      "imageAlt": "薊頭漏斗、半透膜與澱粉溶液的滲透裝置"
     },
     {
       "questionId": "260922003100021",
-      "revision": 1,
+      "revision": 2,
       "number": 21,
       "q": "對水中的草履蟲而言，下列敘述何者正確？",
       "o": [
@@ -567,7 +555,7 @@
         "草履蟲體內養分濃度高於外界"
       ],
       "a": 1,
-      "e": "",
+      "e": "草履蟲代謝會產生二氧化碳，因此細胞內二氧化碳濃度通常較外界高，二氧化碳可順濃度梯度向外擴散。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -583,7 +571,7 @@
     },
     {
       "questionId": "260922003100022",
-      "revision": 1,
+      "revision": 2,
       "number": 22,
       "q": "乃論取醃漬前的小黃瓜組織做成玻片標本，觀察結果如圖甲；在標本蓋玻片邊緣滴加某液體3～5滴後，15分鐘再觀察結果如圖乙，則滴加的液體不可能是何者？",
       "o": [
@@ -593,7 +581,7 @@
         "醬油"
       ],
       "a": 0,
-      "e": "",
+      "e": "圖乙呈現原生質體離開細胞壁的質壁分離，表示外液為高滲溶液；純水會使細胞吸水，不會造成此現象。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -606,12 +594,12 @@
       "sourceFile": "IMG_20260920_222914.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222914_Q34.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/advanced-q34-plasmolysis.png",
+      "imageAlt": "植物細胞滴加溶液前後的質壁分離示意圖"
     },
     {
       "questionId": "260922003100023",
-      "revision": 1,
+      "revision": 2,
       "number": 23,
       "q": "承34題，若改為在原玻片標本蓋玻片邊緣滴加3～5滴純水，15分鐘後細胞將會出現何種變化？",
       "o": [
@@ -621,7 +609,7 @@
         "細胞膨脹但不會破裂"
       ],
       "a": 3,
-      "e": "",
+      "e": "已質壁分離的植物細胞加入純水後會吸水恢復膨脹；因有細胞壁限制，通常不會像動物細胞那樣脹破。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -637,7 +625,7 @@
     },
     {
       "questionId": "260922003100024",
-      "revision": 1,
+      "revision": 2,
       "number": 24,
       "q": "裁切重量相同（W0）的紅蘿蔔條，分別置於不同蔗糖濃度（2%～10%）的小燒杯中，經一小時後夾起蘿蔔條以面紙擦乾後再秤重（W1），如圖。蘿蔔條在各燒杯中發生了何種現象？",
       "o": [
@@ -647,7 +635,7 @@
         "代謝作用"
       ],
       "a": 2,
-      "e": "",
+      "e": "紅蘿蔔條在不同蔗糖濃度中產生重量改變，是水經選擇性通透膜移動的滲透作用。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -660,12 +648,12 @@
       "sourceFile": "IMG_20260920_222925.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222925_Q42-Q44.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/advanced-q42-44-sucrose-graph.png",
+      "imageAlt": "紅蘿蔔條置於不同蔗糖濃度後的重量變化圖"
     },
     {
       "questionId": "260922003100025",
-      "revision": 1,
+      "revision": 2,
       "number": 25,
       "q": "置於2%蔗糖燒杯內的蘿蔔條，後來重量的變化為何？又該如何解釋？",
       "o": [
@@ -675,7 +663,7 @@
         "重量減輕；水分滲透出蘿蔔條的量小於滲透進入的量"
       ],
       "a": 0,
-      "e": "",
+      "e": "2%蔗糖外液較稀，水淨移入紅蘿蔔細胞，因此蘿蔔條重量增加；本質是進入的水量大於移出的水量。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -688,12 +676,12 @@
       "sourceFile": "IMG_20260920_222925.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222925_Q42-Q44.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/advanced-q42-44-sucrose-graph.png",
+      "imageAlt": "紅蘿蔔條置於不同蔗糖濃度後的重量變化圖"
     },
     {
       "questionId": "260922003100026",
-      "revision": 1,
+      "revision": 2,
       "number": 26,
       "q": "由圖中資料可推知蘿蔔在何種蔗糖濃度中其細胞較能保持原來形狀？",
       "o": [
@@ -703,7 +691,7 @@
         "10%"
       ],
       "a": 0,
-      "e": "",
+      "e": "重量幾乎不改變時，表示外液與細胞液接近等張。依圖曲線接近變化為零的位置約在4%蔗糖。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -716,12 +704,12 @@
       "sourceFile": "IMG_20260920_222925.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222925_Q42-Q44.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/advanced-q42-44-sucrose-graph.png",
+      "imageAlt": "紅蘿蔔條置於不同蔗糖濃度後的重量變化圖"
     },
     {
       "questionId": "260922003100027",
-      "revision": 1,
+      "revision": 2,
       "number": 27,
       "q": "選擇水分子能通過、但蛋白質不能通過的膜為材料，做成四個大小相同的袋子，分別裝入濃度相同的蛋白質溶液，使其總重皆為20公克；分別浸泡在10%、20%、30%及40%的蛋白質溶液中，經一段時間後總重分別為28、23、18、13公克。判斷原先袋內的蛋白質溶液濃度，最可能在何種範圍？",
       "o": [
@@ -731,7 +719,7 @@
         "40%以上"
       ],
       "a": 1,
-      "e": "",
+      "e": "袋重在20%外液仍增加、30%外液已減少，表示袋內濃度介於20%與30%之間；等張點就在兩者之間。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -744,12 +732,12 @@
       "sourceFile": "IMG_20260920_222930.jpg",
       "answerSourceFile": "IMG_20260921_001216.jpg",
       "answerSourcePage": 370,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222930_Q1.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/cap-step1-q1-semipermeable-table.png",
+      "imageAlt": "不同外液蛋白質濃度與半透膜袋重量變化表"
     },
     {
       "questionId": "260922003100028",
-      "revision": 1,
+      "revision": 2,
       "number": 28,
       "q": "兩個去皮且挖洞的馬鈴薯，未煮過的放在甲組，有煮過的放在乙組，都在洞中盛裝20%蔗糖溶液，並分別置於裝有蒸餾水的容器中。經一段時間後，只在乙組的蒸餾水內明顯測到蔗糖。此兩組有差異的最可能原因是乙組馬鈴薯細胞的哪一構造失去功能所造成？",
       "o": [
@@ -759,7 +747,7 @@
         "葉綠體"
       ],
       "a": 1,
-      "e": "",
+      "e": "活的生馬鈴薯細胞膜仍具選擇性通透；煮熟後細胞膜功能受破壞，蔗糖可外漏，因此乙組外液能驗出蔗糖。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -772,12 +760,12 @@
       "sourceFile": "IMG_20260920_222943.jpg",
       "answerSourceFile": "IMG_20260920_223009.jpg",
       "answerSourcePage": 88,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222943_Q2.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/cap-step1-q2-potato-osmosis.png",
+      "imageAlt": "生馬鈴薯與熟馬鈴薯的滲透實驗裝置"
     },
     {
       "questionId": "260922003100029",
-      "revision": 1,
+      "revision": 2,
       "number": 29,
       "q": "下列有關物質進出細胞的敘述，何者正確？",
       "o": [
@@ -787,7 +775,7 @@
         "二氧化碳要藉細胞膜上特殊的蛋白質才能進出細胞膜"
       ],
       "a": 1,
-      "e": "",
+      "e": "水分子的跨膜移動可視為滲透；葡萄糖需蛋白協助，氧氣不需先分解，二氧化碳也可直接擴散。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -803,7 +791,7 @@
     },
     {
       "questionId": "260922003100030",
-      "revision": 1,
+      "revision": 2,
       "number": 30,
       "q": "實驗室中常用一種半透膜進行滲透作用實驗（此膜可讓水通過，但蔗糖分子卻無法通過）。將半透膜作成袋子，袋內裝入2%蔗糖溶液，放在裝有8%蔗糖溶液的燒杯內，袋子發生的變化應是下列何者？",
       "o": [
@@ -813,7 +801,7 @@
         "D"
       ],
       "a": 1,
-      "e": "",
+      "e": "袋內2%蔗糖、袋外8%蔗糖，外液較高滲，水由袋內流向袋外，所以袋體積縮小；依選項圖為B。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -826,12 +814,14 @@
       "sourceFile": "IMG_20260920_222956.jpg",
       "answerSourceFile": "IMG_20260920_223009.jpg",
       "answerSourcePage": 89,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222956_Q1-1.png;IMG_20260920_222956_Q1-2-OPTION.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/cap-step2-q1-osmosis-bag.png",
+      "imageAlt": "半透膜袋置於不同蔗糖濃度的滲透裝置",
+      "optionImage": "chapter-bank/science/7-1/unit-02/section-03/assets/cap-step2-q1-options.png",
+      "optionImageAlt": "半透膜袋外形變化的四個選項圖"
     },
     {
       "questionId": "260922003100031",
-      "revision": 1,
+      "revision": 2,
       "number": 31,
       "q": "燒杯內裝有5%澱粉液，袋內裝有5%的葡萄糖液。已知袋子的膜只能讓水及葡萄糖通過，放置一小時後，會發生什麼現象？",
       "o": [
@@ -841,7 +831,7 @@
         "袋內的液體加入碘液後呈現藍黑色"
       ],
       "a": 1,
-      "e": "",
+      "e": "膜可讓葡萄糖與水通過、不能讓澱粉通過，所以袋內葡萄糖會擴散到袋外，之後可在袋外檢出葡萄糖。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -854,12 +844,12 @@
       "sourceFile": "IMG_20260920_222956.jpg",
       "answerSourceFile": "IMG_20260920_223009.jpg",
       "answerSourcePage": 89,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222956_Q2.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/cap-step2-q2-selective-membrane.png",
+      "imageAlt": "澱粉液、葡萄糖液與選擇性通透膜實驗"
     },
     {
       "questionId": "260922003100032",
-      "revision": 1,
+      "revision": 2,
       "number": 32,
       "q": "右圖為物質進出細胞的模式圖，關於甲～丁四種物質的敘述，下列何者錯誤？",
       "o": [
@@ -869,7 +859,7 @@
         "丁物質可能是水分子"
       ],
       "a": 0,
-      "e": "",
+      "e": "甲若代表大型澱粉，不能僅靠一般膜上特殊運輸蛋白直接跨膜；乙、丙、丁的濃度差與水／氣體移動模式則可成立。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
@@ -882,12 +872,12 @@
       "sourceFile": "IMG_20260920_222956.jpg",
       "answerSourceFile": "IMG_20260920_223009.jpg",
       "answerSourcePage": 89,
-      "imagePending": true,
-      "pendingAssetSource": "IMG_20260920_222956_Q3.png"
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/cap-step2-q3-membrane-transport.png",
+      "imageAlt": "甲乙丙丁四種物質進出細胞膜模式圖"
     },
     {
       "questionId": "260922003100033",
-      "revision": 1,
+      "revision": 2,
       "number": 33,
       "q": "關於物質進出細胞的方式，下列何者正確？",
       "o": [
@@ -897,7 +887,7 @@
         "胺基酸通過細胞膜稱為滲透作用"
       ],
       "a": 0,
-      "e": "",
+      "e": "氧氣、二氧化碳等氣體可直接順濃度梯度擴散；葡萄糖與胺基酸需膜蛋白協助，蛋白質不能靠一般運輸方式直接跨膜。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "2-3 物質進出細胞的方式／2-4 生物體的組成層次（來源書合併出題）",
