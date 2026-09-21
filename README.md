@@ -1804,6 +1804,192 @@ Private `Exam-Record` 只在既有相容流程或明確需要 private GitHub 資
 
 ---
 
+## 23.0 圖片／PDF → 題庫的快速匯入線（RAW → STAGING → ACTIVE）
+
+大量教材照片、講義翻拍、題庫圖片、掃描 PDF 的輸入工作，**不得一開始就套用完整正式題庫治理流程**。
+
+正式狀態分為三層：
+
+```text
+RAW
+= 原始圖片／PDF／掃描 evidence
+= 保留來源與頁序
+= 不要求 questionId
+
+STAGING
+= 已完成文字辨識／人工可讀校正
+= 已依題號或頁面切成可整理單位
+= 可以繼續補答案、分類、詳解
+= 仍不是正式題庫
+= 不要求 questionId / revision / conceptIds / runtime / deploy
+
+ACTIVE
+= 已通過正式 QA gate
+= 已建立永久 questionId + revision
+= provenance / answer / schema 已確認
+= 可進正式 bank、runtime、Pages 與歷史回溯
+```
+
+### 23.0.1 快線只做「擷取與整理」
+
+大量圖片輸入時，第一輪預設工作是：
+
+```text
+圖片／PDF
+↓
+依頁碼／題號排序
+↓
+辨識文字
+↓
+保留題號、題幹、選項、表格／圖片提示
+↓
+寫入辨識文字檔／staging 文件
+↓
+標記看不清或待確認處
+↓
+繼續下一張
+```
+
+第一輪**不要因單題正式化而停下整批工作**。
+
+RAW → STAGING 階段預設不做：
+
+```text
+questionId
+revision
+完整 conceptIds
+逐題詳解
+精細 chapter mapping
+正式 answerVerified
+runtime loader
+GitHub Pages 接線
+deployment
+正式 active promotion
+```
+
+如果來源本身已有清楚答案，可以忠實抄入 staging；但「抄入」不等於已完成正式答案 QA。
+
+### 23.0.2 批次優先，不逐張正式化
+
+錯誤工作方式：
+
+```text
+第 1 張圖
+→ 辨識
+→ QA
+→ questionId
+→ JSON
+→ GitHub
+→ deploy
+
+第 2 張圖
+→ 再重跑整套
+```
+
+標準工作方式：
+
+```text
+整批 10 / 30 / 100 張
+↓
+先全部 RAW → STAGING
+↓
+形成一份完整可校正文字層
+↓
+再批次進行答案／分類／QA
+↓
+最後才 STAGING → ACTIVE
+```
+
+單張模糊、公式不清、圖中文字不確定時：
+
+```text
+標記 [待人工確認]
+→ 保留來源頁碼／檔名
+→ 跳過
+→ 繼續整批
+```
+
+不得讓一個疑難點拖垮整批辨識。
+
+### 23.0.3 STAGING 是正式允許的中間狀態
+
+STAGING 不是失敗，也不是垃圾檔。
+
+它的用途就是：
+
+```text
+高速吸收圖片資料
+保留原始順序
+集中人工校正
+批次去重
+批次答案核對
+批次分類
+批次 promotion
+```
+
+STAGING 可放在 Google Drive 的：
+
+```text
+整理資料/
+教材辨識檔
+題庫辨識文字檔
+題庫原始文字校正版
+staging 題目整理檔
+```
+
+依資料類型選擇，不強迫第一輪就建立正式 GitHub JSON。
+
+### 23.0.4 正式治理只卡在 STAGING → ACTIVE
+
+第 23.1 節的 Definition of Done：
+
+> **只限制題目從 STAGING 升格 ACTIVE，不限制 RAW → STAGING 的快速擷取。**
+
+因此：
+
+```text
+RAW → STAGING
+目標 = 快、完整、可回查
+
+STAGING → ACTIVE
+目標 = 正確、可追溯、可長期維護
+```
+
+兩者不得混成同一步。
+
+### 23.0.5 ChatGPT 接到「先辨識圖片」時的預設行為
+
+若使用者明確說：
+
+```text
+先辨識
+先吃資料
+先轉文字
+先整理圖片內容
+先做 2-3 / 2-4 / 3-1 的辨識文字檔
+```
+
+預設解讀為：
+
+```text
+只做 RAW → STAGING
+```
+
+除非使用者另外要求「正式納入題庫／上線」，否則不要自行展開：
+
+```text
+questionId
+revision
+GitHub bank
+runtime
+deploy
+完整正式 QA
+```
+
+這條規則的目的，是確保大量圖片資料輸入時維持吞吐量。
+
+---
+
 ## 23.1 新正式題目納入硬規則（Definition of Done）
 
 本節是**未來所有正式題庫的共同入口規則**。
@@ -2104,18 +2290,19 @@ append-only 維護
 4. 不要從舊對話印象直接假設 repository 狀態。
 5. 涉及教材時，先查 Drive 對應 canonical。
 6. 涉及正式歷屆題時，遵守第 11～15 節。
-7. 涉及任何新正式固定題建立／匯入／AI 生成／promotion 時，必須遵守第 23.1 節與 question-bank governance spec；未通過 Definition of Done 不得標為 active。
-9. 正式題目遇到模糊／矛盾時立即標記並請使用者協助，不要陷入長時間判讀。
+7. 涉及圖片／PDF 大量輸入時，先依第 23.0 節完成 RAW → STAGING；只有明確要正式納入題庫時，才進第 23.1 節。
+9. 涉及任何新正式固定題建立／匯入／AI 生成／promotion 時，必須遵守第 23.1 節與 question-bank governance spec；未通過 Definition of Done 不得標為 active。
+10. 正式題目遇到模糊／矛盾時立即標記並請使用者協助，不要陷入長時間判讀。
 8. 對單一疑問題可暫停，但其他清楚題目繼續處理。
-10. 文字／JSON／JS／HTML／CSS 預設 GitHub-first。
-11. Binary／PDF／裁圖才回本機，且必須 remote-first。
-12. 本機工作完成後 push 前再 `fetch + rebase`，防止其他工作同時更新 `main`。
-13. Push 後 remote read-back，不能只相信本機。
-14. 網站 UI 問題先確認首頁 deployment 時間戳，排除舊快取。
-15. 完成新 canonical、新章節、新段考批次、新歷屆試卷或重大網站功能後，更新真正負責該狀態的文件；README 只同步大架構與重要里程碑。
-16. Google Drive 修改只能在 `D:\我的雲端硬碟\國中教材參考資料` 及其子路徑。
-17. 遇到「static catalog + runtime patch」衝突時，優先收斂正式 authority，不再新增另一層 patch。
-18. 有日期的 collection MD 視為歷史 snapshot；live status 以正式 catalog、資料檔與專門 authority 文件為準。
+11. 文字／JSON／JS／HTML／CSS 預設 GitHub-first。
+12. Binary／PDF／裁圖才回本機，且必須 remote-first。
+13. 本機工作完成後 push 前再 `fetch + rebase`，防止其他工作同時更新 `main`。
+14. Push 後 remote read-back，不能只相信本機。
+15. 網站 UI 問題先確認首頁 deployment 時間戳，排除舊快取。
+16. 完成新 canonical、新章節、新段考批次、新歷屆試卷或重大網站功能後，更新真正負責該狀態的文件；README 只同步大架構與重要里程碑。
+17. Google Drive 修改只能在 `D:\我的雲端硬碟\國中教材參考資料` 及其子路徑。
+18. 遇到「static catalog + runtime patch」衝突時，優先收斂正式 authority，不再新增另一層 patch。
+19. 有日期的 collection MD 視為歷史 snapshot；live status 以正式 catalog、資料檔與專門 authority 文件為準。
 
 ---
 
