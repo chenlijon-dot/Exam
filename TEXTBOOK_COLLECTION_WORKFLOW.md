@@ -959,31 +959,56 @@ A/B/C/D
 
 ---
 
-# 18. 題庫轉成 GitHub 可作答資料
+# 18. 題庫圖片轉成 GitHub 可作答資料
 
-題庫辨識完成後，先視為 **STAGING**；只有明確要正式上線時，才進入 GitHub 可作答題庫的 promotion 流程。
+題庫翻拍／題庫圖片採與 README 23.0 相同的三階段高速流程。
 
-題庫辨識／校正本身不要求 questionId，也不要求同步完成 runtime / deploy。
-
-正式 promotion 時才套用 README 第 23.1 節的 Definition of Done。
-
-基本原則：
+## 18.1 先辨識並做成題目
 
 ```text
-Google Doc 原始文字校正版
-→ 核對題號與選項
-→ 建立 JSON
-→ 保留原選項順序
-→ 補答案
-→ 補逐題詳解
-→ 題組用 groupId
-→ 網站實測
+題庫圖片
+→ 辨識文字
+→ 寫入題庫辨識文字檔／原始文字校正版
+→ 直接建立題目骨架
 ```
+
+使用者若另外提供已切好的題目附圖，第一階段只記錄題號與預期圖片檔名，不要求 ChatGPT 搬 binary。
+
+## 18.2 使用者用 PS5.1 上傳裁好的題圖
+
+ChatGPT 依當批資料夾提供 PowerShell 5.1 指令。
+
+使用者把圖片直接從本機推到：
+
+```text
+E:\Exam\assets\...
+→ GitHub main
+```
+
+Push 完後由 ChatGPT remote read-back。
+
+## 18.3 圖片到位後再正式收尾
+
+```text
+接 image / optionImage / images
+→ 核對題號與選項
+→ 核對答案
+→ 補逐題詳解
+→ questionId
+→ revision
+→ 正式 JSON
+→ runtime / UI
+→ Pages 實測
+```
+
+此時才套用 README 23.1 的正式題庫 Definition of Done。
 
 不可：
 
 ```text
-OCR 未校正就直接轉 JSON
+辨識第一題後就立即 deploy
+每一張圖片各跑一次 commit / runtime / deploy
+OCR 未校正就直接升格 active
 缺頁時自行補題
 改寫原題讓它「比較漂亮」
 任意打亂原選項順序
