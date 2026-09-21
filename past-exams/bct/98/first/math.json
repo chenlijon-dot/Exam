@@ -18,8 +18,8 @@
     "preserveOptionOrder": true,
     "analysisEligible": false,
     "sourceType": "official-past-exam",
-    "promotionStatus": "staging",
-    "sourceNote": "依 README 23.0/23.1 快速資料層流程整批處理：原卷 8 頁、34 題，已完成 RAW→STAGING 文字層與官方答案抄錄；Google Drive《98年第一次數學科_cropped》共 15 張裁圖，已整批匯入 GitHub assets。Q3、Q32 使用 optionImage；Q12 使用 image + optionImage；其餘圖題使用 image。永久 questionId/revision 已批次核發，尚待逐題詳解／第二輪 QA 與 UI 掛載完成後 promotion 為 active。"
+    "promotionStatus": "active",
+    "sourceNote": "依 README 23.0/23.1 快速資料層流程整批完成 RAW→STAGING→ACTIVE：原卷 8 頁、34 題；文字層、官方答案、15 張原卷裁圖、永久 questionId/revision、34 題逐題詳解與第二輪 QA 均已完成。Q3、Q32 使用 optionImage；Q12 使用 image + optionImage；其餘圖題使用 image。已接入歷屆 UI，可供正式作答與歷史回溯。"
   },
   "questions": [
     {
