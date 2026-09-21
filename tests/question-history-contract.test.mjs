@@ -150,4 +150,13 @@ assert.match(
   'history UI must retry loading when Firestore becomes ready'
 );
 
+
+assert.match(historyUi, /回溯/, 'same-exam recall must expose a recall control');
+assert.match(historyUi, /前一次/, 'same-exam recall must expose older-attempt navigation');
+assert.match(historyUi, /後一次/, 'same-exam recall must expose newer-attempt navigation');
+assert.match(historyUi, /history-wrong/, 'same-exam recall must support red wrong-question highlighting');
+assert.match(historyUi, /loadExamAttempts/, 'same-exam recall must load attempts for the current examKey');
+assert.match(historyUi, /questionHistoryRecallControls/, 'recall navigation must have a removable controls container');
+assert.match(historyUi, /data-history-answer/, 'historical selected answer/result must be rendered separately');
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
