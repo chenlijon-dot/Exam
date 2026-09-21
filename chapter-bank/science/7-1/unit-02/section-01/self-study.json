@@ -16,6 +16,8 @@
   },
   "questions": [
     {
+      "questionId": "260921100331001",
+      "revision": 1,
       "number": 1,
       "q": "有關「細胞學說」的敘述，下列何者錯誤？",
       "o": [
@@ -40,6 +42,8 @@
       "answerSourcePage": 367
     },
     {
+      "questionId": "260921100331002",
+      "revision": 1,
       "number": 2,
       "q": "有關虎克的敘述，下列何者錯誤？",
       "o": [
@@ -64,6 +68,8 @@
       "answerSourcePage": 367
     },
     {
+      "questionId": "260921100331003",
+      "revision": 1,
       "number": 3,
       "q": "虎克觀察軟木栓所看到的細胞是下列何者？",
       "o": [
@@ -88,6 +94,8 @@
       "answerSourcePage": 367
     },
     {
+      "questionId": "260921100331004",
+      "revision": 1,
       "number": 4,
       "q": "下列何者與虎克當年顯微鏡下所看到的軟木栓細胞最類似？",
       "o": [
@@ -114,6 +122,8 @@
       "answerSourcePage": 367
     },
     {
+      "questionId": "260921100331005",
+      "revision": 1,
       "number": 5,
       "q": "虎克在觀察軟木栓薄片時，所看到的蜂窩狀小格子是屬於細胞的哪一部分？",
       "o": [
@@ -138,6 +148,8 @@
       "answerSourcePage": 367
     },
     {
+      "questionId": "260921100331006",
+      "revision": 1,
       "number": 6,
       "q": "有關細胞學說與細胞的敘述，下列何者錯誤？",
       "o": [
@@ -162,6 +174,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331007",
+      "revision": 1,
       "number": 7,
       "q": "虎克在生物學的主要貢獻是什麼？",
       "o": [
@@ -186,6 +200,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331008",
+      "revision": 1,
       "number": 8,
       "q": "有關細胞學說內容的敘述，下列何者錯誤？",
       "o": [
@@ -210,6 +226,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331009",
+      "revision": 1,
       "number": 9,
       "q": "科學史上第一位描述細胞的科學家為下列何者？",
       "o": [
@@ -234,6 +252,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331010",
+      "revision": 1,
       "number": 10,
       "q": "關於英國科學家虎克的貢獻，下列何者正確？",
       "o": [
@@ -258,6 +278,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331011",
+      "revision": 1,
       "number": 11,
       "q": "不同的細胞形狀各異，功能也不一樣，但是為何都稱為「細胞」？",
       "o": [
@@ -282,6 +304,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331012",
+      "revision": 1,
       "number": 12,
       "q": "有關「細胞」觀察的發展敘述，下列何者正確？",
       "o": [
@@ -306,6 +330,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331013",
+      "revision": 1,
       "number": 13,
       "q": "當年虎克利用自製的單筒複式顯微鏡所觀察到的軟木栓蜂窩狀構造是什麼？",
       "o": [
@@ -330,6 +356,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331014",
+      "revision": 1,
       "number": 14,
       "q": "「細胞來自細胞」的概念，無法解釋下列何者？",
       "o": [
@@ -354,6 +382,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331015",
+      "revision": 1,
       "number": 15,
       "q": "如圖裝置，哪些部位取得的水其微生物數量與種類最多？",
       "o": [
@@ -380,6 +410,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331016",
+      "revision": 1,
       "number": 16,
       "q": "甲生認為取自①處的微生物數量最多，其可能的理由為何？",
       "o": [
@@ -406,6 +438,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331017",
+      "revision": 1,
       "number": 17,
       "q": "乙生認為取自④處的微生物數量也很多，其可能的理由為何？",
       "o": [
@@ -432,6 +466,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331018",
+      "revision": 1,
       "number": 18,
       "q": "水中看到草履蟲或鐘形蟲，經高倍放大後看到全身被有細毛，可推測這些細毛的作用可能是什麼？",
       "o": [
@@ -456,6 +492,8 @@
       "answerSourcePage": 368
     },
     {
+      "questionId": "260921100331019",
+      "revision": 1,
       "number": 19,
       "q": "下列何者不可能是由造血幹細胞分化而來？",
       "o": [
@@ -480,6 +518,8 @@
       "answerSourcePage": 369
     },
     {
+      "questionId": "260921100331020",
+      "revision": 1,
       "number": 20,
       "q": "關於新生兒臍帶血內的幹細胞敘述，下列何者錯誤？",
       "o": [
