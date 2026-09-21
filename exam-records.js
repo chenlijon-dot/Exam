@@ -107,10 +107,12 @@
             options: [],
             selectedIndex: null,
             selectedDisplayIndex: null,
+            selectedCanonicalIndex: null,
             selectedLetter: null,
             selectedDisplayLabel: null,
             selectedText: grading.recognizedAnswer || '',
             correctIndex: null,
+            correctCanonicalIndex: null,
             correctLetter: null,
             correctText: source.expectedAnswer || source.manualAnswer || '',
             isCorrect: verdict === 'correct',
@@ -132,6 +134,16 @@
       const correctIndex = correctInput ? Number(correctInput.value) : null;
       const options = $$('.option', card).map(o => o.textContent.trim().replace(/^\([A-D]\)\s*/, ''));
       const isCorrect = selectedIndex !== null && correctIndex !== null && selectedIndex === correctIndex;
+      const canonicalIndices = Array.isArray(source.optionCanonicalIndices) &&
+        source.optionCanonicalIndices.length === options.length
+        ? source.optionCanonicalIndices
+        : options.map((_, optionIndex) => optionIndex);
+      const selectedCanonicalIndex = selectedIndex === null
+        ? null
+        : Number(canonicalIndices[selectedIndex] ?? selectedIndex);
+      const correctCanonicalIndex = correctIndex === null
+        ? null
+        : Number(canonicalIndices[correctIndex] ?? correctIndex);
 
       if (selectedIndex === null) unanswered++;
       else if (isCorrect) correct++;
@@ -148,10 +160,12 @@
         options,
         selectedIndex,
         selectedDisplayIndex: selectedIndex,
+        selectedCanonicalIndex,
         selectedLetter: LETTERS[selectedIndex],
         selectedDisplayLabel: LETTERS[selectedIndex],
         selectedText: options[selectedIndex],
         correctIndex,
+        correctCanonicalIndex,
         correctLetter: LETTERS[correctIndex],
         correctText: options[correctIndex],
         isCorrect,
