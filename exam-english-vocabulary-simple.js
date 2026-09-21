@@ -13,6 +13,10 @@
 
   let firestorePromise = null;
   let activeSession = null;
+  let vocabularyCurrentAttempt = null;
+  let vocabularyRecallAttempts = [];
+  let vocabularyRecallIndex = -1;
+  let vocabularyRecallLoading = false;
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const safeJson = (text, fallback) => { try { return JSON.parse(text); } catch { return fallback; } };
@@ -385,6 +389,228 @@
     });
   }
 
+
+  function formatVocabularyRecallTime(value) {
+    if (!value) return '';
+    try {
+      return new Intl.DateTimeFormat('zh-TW', {
+        year:'numeric',
+        month:'2-digit',
+        day:'2-digit',
+        hour:'2-digit',
+        minute:'2-digit',
+        hour12:false
+      }).format(new Date(value));
+    } catch {
+      return String(value);
+    }
+  }
+
+  function clearVocabularyRecallControls() {
+    document.querySelectorAll('[data-vocab-recall-controls]').forEach(el => el.remove());
+  }
+
+  function clearVocabularyRecallButton() {
+    document.querySelector('#vocabRecallBtn')?.remove();
+  }
+
+  function resetVocabularyRecall({ removeButton = true } = {}) {
+    vocabularyRecallAttempts = [];
+    vocabularyRecallIndex = -1;
+    vocabularyRecallLoading = false;
+    clearVocabularyRecallControls();
+    document.querySelector('#vocabRecallMessage')?.remove();
+    if (removeButton) clearVocabularyRecallButton();
+  }
+
+  function showVocabularyRecallMessage(message) {
+    let el = document.querySelector('#vocabRecallMessage');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'vocabRecallMessage';
+      el.className = 'vocab-recall-message';
+      document.querySelector('#result')?.insertAdjacentElement('afterend', el);
+    }
+    if (!el) return;
+    el.textContent = message;
+    clearTimeout(el._hideTimer);
+    el._hideTimer = setTimeout(() => el.remove(), 3200);
+  }
+
+  function updateVocabularyRecallControls() {
+    if (vocabularyRecallIndex < 0 || vocabularyRecallIndex >= vocabularyRecallAttempts.length) return;
+    const attempt = vocabularyRecallAttempts[vocabularyRecallIndex];
+    const time = formatVocabularyRecallTime(attempt?.submittedAt);
+    const label = `第 ${vocabularyRecallIndex + 1} / ${vocabularyRecallAttempts.length} 次${time ? `｜${time}` : ''}`;
+
+    document.querySelectorAll('[data-vocab-recall-controls]').forEach(controls => {
+      const position = controls.querySelector('[data-vocab-recall-position]');
+      const older = controls.querySelector('[data-vocab-recall-older]');
+      const newer = controls.querySelector('[data-vocab-recall-newer]');
+      if (position) position.textContent = label;
+      if (older) older.disabled = vocabularyRecallIndex >= vocabularyRecallAttempts.length - 1;
+      if (newer) newer.disabled = vocabularyRecallIndex <= 0;
+    });
+  }
+
+  function wireVocabularyRecallControls(controls) {
+    controls.querySelector('[data-vocab-recall-older]')?.addEventListener('click', () => {
+      if (vocabularyRecallIndex >= vocabularyRecallAttempts.length - 1) return;
+      vocabularyRecallIndex += 1;
+      renderVocabularyRecallAttempt();
+    });
+    controls.querySelector('[data-vocab-recall-newer]')?.addEventListener('click', () => {
+      if (vocabularyRecallIndex <= 0) return;
+      vocabularyRecallIndex -= 1;
+      renderVocabularyRecallAttempt();
+    });
+  }
+
+  function createVocabularyRecallControls() {
+    const controls = document.createElement('div');
+    controls.dataset.vocabRecallControls = '1';
+    controls.className = 'vocab-recall-controls';
+    controls.innerHTML = `
+      <button type="button" class="secondary" data-vocab-recall-older>前一次</button>
+      <span class="vocab-recall-position" data-vocab-recall-position></span>
+      <button type="button" class="secondary" data-vocab-recall-newer>後一次</button>
+    `;
+    wireVocabularyRecallControls(controls);
+    return controls;
+  }
+
+  function ensureVocabularyRecallControls() {
+    if (!document.querySelector('#vocabRecallControlsTop')) {
+      const top = createVocabularyRecallControls();
+      top.id = 'vocabRecallControlsTop';
+      document.querySelector('#quiz')?.insertAdjacentElement('beforebegin', top);
+    }
+    if (!document.querySelector('#vocabRecallControlsBottom')) {
+      const bottom = createVocabularyRecallControls();
+      bottom.id = 'vocabRecallControlsBottom';
+      const actions = document.querySelector('#examScreen .actions');
+      if (actions) actions.insertAdjacentElement('beforebegin', bottom);
+    }
+    updateVocabularyRecallControls();
+  }
+
+  function renderVocabularyRecallAttempt() {
+    if (vocabularyRecallIndex < 0 || vocabularyRecallIndex >= vocabularyRecallAttempts.length) return;
+    const attempt = vocabularyRecallAttempts[vocabularyRecallIndex];
+    const items = Array.isArray(attempt?.vocabularyItems) ? attempt.vocabularyItems : [];
+    const quiz = document.querySelector('#quiz');
+    if (!quiz || !items.length) return;
+
+    clearVocabularyHistoryAnnotations();
+
+    quiz.innerHTML = items.map((item, index) => {
+      const selectedIndex = item.selectedIndex === null || item.selectedIndex === undefined
+        ? null
+        : Number(item.selectedIndex);
+      const correctIndex = item.correctIndex === null || item.correctIndex === undefined
+        ? null
+        : Number(item.correctIndex);
+      const result = item.result || 'unanswered';
+      const resultLabel = result === 'correct' ? '正確' : result === 'incorrect' ? '錯誤' : '未作答';
+      const selectedLabel = item.selectedDisplayLabel || (selectedIndex === null ? '' : ['A','B','C','D'][selectedIndex]);
+      const historyLabel = selectedLabel
+        ? `當時：選 ${selectedLabel}｜${resultLabel}`
+        : `當時：${resultLabel}`;
+      const cardClass = result === 'incorrect' ? 'card vocab-recall-wrong' : 'card';
+
+      const options = (item.options || []).map((option, optionIndex) => {
+        const classes = ['option'];
+        if (optionIndex === correctIndex) classes.push('correct');
+        if (optionIndex === selectedIndex && result === 'incorrect') classes.push('wrong');
+        const checked = optionIndex === selectedIndex ? ' checked' : '';
+        return `<label class="${classes.join(' ')}"><input type="radio" disabled${checked}>(${['A','B','C','D'][optionIndex] || '?'}) ${escapeHtml(option)}</label>`;
+      }).join('');
+
+      return `<section class="${cardClass}" data-q="${index}">
+        <div class="qtitle"><span class="num">${item.number || index + 1}</span><span class="question-text">${escapeHtml(item.question || item.chinese || '')}</span></div>
+        <div class="vocab-recall-answer ${result === 'incorrect' ? 'wrong' : result === 'correct' ? 'correct' : 'unanswered'}">${escapeHtml(historyLabel)}</div>
+        ${options}
+        ${item.explanation ? `<div class="explain show"><b>答案：${escapeHtml(item.correctDisplayLabel || '')}</b>　${escapeHtml(item.explanation)}</div>` : ''}
+      </section>`;
+    }).join('');
+
+    const result = document.querySelector('#result');
+    if (result) {
+      result.style.display = 'block';
+      const scoreText = attempt.score == null
+        ? `${Number(attempt.correct || 0)} / ${Number(attempt.total || items.length)} 題`
+        : `${Number(attempt.score || 0)} 分`;
+      result.innerHTML = `<div>字庫記憶歷史紀錄</div><strong>${scoreText}</strong><div>答對 ${Number(attempt.correct || 0)} / ${Number(attempt.total || items.length)} 題</div>`;
+    }
+
+    ensureVocabularyRecallControls();
+    updateVocabularyRecallControls();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  async function enterVocabularyRecall() {
+    if (vocabularyRecallLoading) return;
+    const store = window.ChrisExamHistoryStore;
+    if (!store?.loadVocabularyAttempts) {
+      showVocabularyRecallMessage('字庫歷史紀錄目前無法讀取');
+      return;
+    }
+
+    vocabularyRecallLoading = true;
+    const button = document.querySelector('#vocabRecallBtn');
+    if (button) {
+      button.disabled = true;
+      button.textContent = '載入回溯…';
+    }
+
+    try {
+      const attempts = await store.loadVocabularyAttempts(50);
+      vocabularyRecallAttempts = (attempts || []).filter(attempt => {
+        if (attempt?.historyDomain !== 'vocabulary') return false;
+        if (!Array.isArray(attempt?.vocabularyItems) || !attempt.vocabularyItems.length) return false;
+        if (vocabularyCurrentAttempt?.submittedAt &&
+            String(attempt.submittedAt || '') === String(vocabularyCurrentAttempt.submittedAt || '')) return false;
+        return true;
+      });
+
+      if (!vocabularyRecallAttempts.length) {
+        showVocabularyRecallMessage('沒有可回溯的較早字庫考試；舊版紀錄未保存完整題組');
+        return;
+      }
+
+      vocabularyRecallIndex = 0;
+      renderVocabularyRecallAttempt();
+    } catch (error) {
+      console.warn('[vocab-memory] recall failed', error);
+      showVocabularyRecallMessage('字庫歷史紀錄目前無法讀取');
+    } finally {
+      vocabularyRecallLoading = false;
+      const currentButton = document.querySelector('#vocabRecallBtn');
+      if (currentButton) {
+        currentButton.disabled = false;
+        currentButton.textContent = '回溯';
+      }
+    }
+  }
+
+  function ensureVocabularyRecallButton() {
+    let button = document.querySelector('#vocabRecallBtn');
+    if (button) return button;
+    const actions = document.querySelector('#examScreen .actions');
+    if (!actions) return null;
+    button = document.createElement('button');
+    button.type = 'button';
+    button.id = 'vocabRecallBtn';
+    button.className = 'secondary';
+    button.textContent = '回溯';
+    button.addEventListener('click', enterVocabularyRecall);
+    const restart = actions.querySelector('#restartBtn');
+    if (restart) actions.insertBefore(button, restart);
+    else actions.appendChild(button);
+    return button;
+  }
+
+
   function mergeMarkovAfter(history, delta, continuation) {
     return {
       exposure: addMaps(history?.exposure, delta?.exposure),
@@ -449,6 +675,14 @@
       .vocab-history.active{padding:4px 9px;border-radius:999px;background:#fef2f2;color:#b91c1c;font-weight:800}
       .vocab-history.submitted{padding:7px 10px;border-radius:10px;background:#f8fafc;border:1px solid #e2e8f0;color:#334155}
       .vocab-history-summary{font-weight:800}.vocab-history-last{margin-top:2px;color:#64748b}
+      .vocab-recall-controls{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:12px 0;padding:10px;border:1px solid #e2e8f0;border-radius:12px;background:#fff}
+      .vocab-recall-position{font-weight:800;color:#334155}
+      .vocab-recall-message{margin:10px 0;padding:9px 12px;border-radius:10px;background:#f8fafc;color:#475569;text-align:center;font-size:.9rem}
+      .vocab-recall-answer{margin:7px 0;padding:7px 10px;border-radius:9px;font-size:.84rem;font-weight:800}
+      .vocab-recall-answer.correct{background:#f0fdf4;color:#166534}
+      .vocab-recall-answer.wrong{background:#fee2e2;color:#991b1b}
+      .vocab-recall-answer.unanswered{background:#f8fafc;color:#64748b}
+      .card.vocab-recall-wrong{border:2px solid #dc2626!important;background:#fef2f2!important}
       #quiz .explain{white-space:pre-line}
       @media(max-width:620px){.vocab-setup-panel{padding:17px;border-radius:16px}.vocab-count-btn{flex:1 1 calc(50% - 10px)}}
     `;
@@ -518,6 +752,7 @@
         key,
         examType: 'gept-vocabulary-memory',
         examTypeLabel: '字庫記憶',
+        vocabularySource: SOURCE_KEY,
         subject: 'english',
         subjectLabel: '英文',
         title: '字庫記憶｜全民英檢初級｜中翻英',
@@ -683,6 +918,8 @@
   document.addEventListener('exam:started', event => {
     if (event.detail?.examType !== 'gept-vocabulary-memory') return;
     if (!activeSession || activeSession.key !== event.detail.key) return;
+    vocabularyCurrentAttempt = null;
+    resetVocabularyRecall();
     renderVocabularyHistory(false);
   });
 
@@ -691,6 +928,20 @@
     if (!activeSession || activeSession.key !== event.detail.key) return;
     renderVocabularyHistory(true);
     persistSessionProgress(activeSession);
+  });
+
+  document.addEventListener('exam:attempt-recorded', event => {
+    const attempt = event.detail?.attempt || null;
+    if (attempt?.historyDomain !== 'vocabulary') return;
+    if (window.examContextCurrent?.examType !== 'gept-vocabulary-memory') return;
+    vocabularyCurrentAttempt = attempt;
+    ensureVocabularyRecallButton();
+  });
+
+  document.addEventListener('exam:retry-started', () => {
+    if (window.examContextCurrent?.examType !== 'gept-vocabulary-memory') return;
+    vocabularyCurrentAttempt = null;
+    resetVocabularyRecall();
   });
 
   injectStyles();
