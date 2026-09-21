@@ -68,56 +68,113 @@
     const ctx = currentContext();
     const fallbackDiff = difficultyFromTitle();
     const isAccuracyExam = ctx.scoreMode === 'percent' || ctx.examType === true;
-    let correct = 0, incorrect = 0, unanswered = 0;
+    const handwritingByIndex = new Map(
+      (submissionDetail.handwritingResults || []).map(item => [Number(item.index), item])
+    );
 
-    const answers = cards.map((card, idx) => {
+    let correct = 0;
+    let incorrect = 0;
+    let unanswered = 0;
+    const historyAnswers = [];
+
+    cards.forEach((card, idx) => {
       const sourceIndex = Number(card.dataset.q ?? idx);
       const source = (typeof questions !== 'undefined' && questions[sourceIndex]) ? questions[sourceIndex] : {};
+      const questionType = card.dataset.questionType || 'mcq';
+      const questionId = source.questionId == null ? '' : String(source.questionId);
+      const questionRevision = Number(source.revision || 1);
       const question = $('.question-text', card)?.textContent.trim()
         || $('.qtitle', card)?.textContent.replace(/^\s*\d+\s*/, '').trim()
         || `第${idx+1}題`;
+      const explanation = $('.explain', card)?.textContent.replace(/^答案：\s*[A-D]\s*/,'').trim() || '';
+      const number = Number(card.dataset.questionNumber || source.number || idx + 1);
+
+      if (questionType === 'handwriting') {
+        const grading = handwritingByIndex.get(sourceIndex) || {};
+        const verdict = grading.verdict || 'unanswered';
+
+        if (verdict === 'correct') correct++;
+        else if (verdict === 'incorrect') incorrect++;
+        else unanswered++;
+
+        if (questionId && (verdict === 'correct' || verdict === 'incorrect')) {
+          historyAnswers.push({
+            questionId,
+            questionRevision,
+            questionType,
+            number,
+            question,
+            options: [],
+            selectedIndex: null,
+            selectedDisplayIndex: null,
+            selectedLetter: null,
+            selectedDisplayLabel: null,
+            selectedText: grading.recognizedAnswer || '',
+            correctIndex: null,
+            correctLetter: null,
+            correctText: source.expectedAnswer || source.manualAnswer || '',
+            isCorrect: verdict === 'correct',
+            result: verdict,
+            explanation,
+            intro: source.intro || '',
+            introLabel: source.introLabel || '',
+            image: source.image || '',
+            imageAlt: source.imageAlt || ''
+          });
+        }
+        return;
+      }
+
       const selected = $('input[type=radio]:checked', card);
       const selectedIndex = selected ? Number(selected.value) : null;
       const correctLabel = $('.option.correct', card);
       const correctInput = correctLabel ? $('input[type=radio]', correctLabel) : null;
       const correctIndex = correctInput ? Number(correctInput.value) : null;
-      const explanation = $('.explain', card)?.textContent.replace(/^答案：\s*[A-D]\s*/,'').trim() || '';
       const options = $$('.option', card).map(o => o.textContent.trim().replace(/^\([A-D]\)\s*/, ''));
       const isCorrect = selectedIndex !== null && correctIndex !== null && selectedIndex === correctIndex;
-      const number = Number(card.dataset.questionNumber || source.number || idx + 1);
 
       if (selectedIndex === null) unanswered++;
       else if (isCorrect) correct++;
       else incorrect++;
 
-      return {
+      if (!questionId || selectedIndex === null || correctIndex === null) return;
+
+      historyAnswers.push({
+        questionId,
+        questionRevision,
+        questionType,
         number,
         question,
         options,
         selectedIndex,
-        selectedLetter: selectedIndex === null ? null : LETTERS[selectedIndex],
-        selectedText: selectedIndex === null ? null : options[selectedIndex],
+        selectedDisplayIndex: selectedIndex,
+        selectedLetter: LETTERS[selectedIndex],
+        selectedDisplayLabel: LETTERS[selectedIndex],
+        selectedText: options[selectedIndex],
         correctIndex,
-        correctLetter: correctIndex === null ? null : LETTERS[correctIndex],
-        correctText: correctIndex === null ? null : options[correctIndex],
+        correctLetter: LETTERS[correctIndex],
+        correctText: options[correctIndex],
         isCorrect,
+        result: isCorrect ? 'correct' : 'incorrect',
         explanation,
         intro: source.intro || '',
         introLabel: source.introLabel || '',
         image: source.image || '',
         imageAlt: source.imageAlt || ''
-      };
+      });
     });
 
     const submittedAt = nowIso();
     const durationSeconds = examStartedAt ? Math.max(0, Math.round((Date.now() - examStartedAt) / 1000)) : 0;
-    const total = answers.length;
+    const total = cards.length;
     const accuracyPercent = total ? Number((correct * 100 / total).toFixed(1)) : 0;
     const pointsPerQuestion = Number(ctx.pointsPerQuestion ?? 5);
     const score = isAccuracyExam ? null : correct * pointsPerQuestion;
+    const historyDomain = ctx.examType === 'gept-vocabulary-memory' ? 'vocabulary' : 'question';
 
     return {
-      schemaVersion: 2,
+      schemaVersion: 3,
+      historyDomain,
       recordType: isAccuracyExam ? 'past-exam' : 'practice',
       metricType: isAccuracyExam ? 'accuracy' : 'score',
       examKey: ctx.key || ctx.difficulty || fallbackDiff.key,
@@ -140,8 +197,8 @@
       unanswered,
       total,
       manualStudyCount,
-      answers,
-      wrongAnswers: answers.filter(a => a.selectedIndex !== null && !a.isCorrect)
+      answers: historyAnswers,
+      wrongAnswers: historyAnswers.filter(answer => answer.result === 'incorrect')
     };
   }
 
