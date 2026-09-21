@@ -21,6 +21,8 @@
              },
     "questions":  [
                       {
+                          "questionId":  "260921082708384",
+                          "revision":  1,
                           "number":  1,
                           "q":  "計算 19－（－2）×〔（－12）－7〕之值為何？",
                           "o":  [
@@ -33,6 +35,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708385",
+                          "revision":  1,
                           "number":  2,
                           "q":  "圖(一)為一梯形 ABCD，其中∠C＝∠D＝90°，且 AD＝6，BC＝18，CD＝12。若將 AD 疊合在 BC 上，出現摺線 MN，如圖(二)所示，則 MN 的長度為何？",
                           "o":  [
@@ -47,6 +51,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q02-trapezoid-folding.png"
                       },
                       {
+                          "questionId":  "260921082708386",
+                          "revision":  1,
                           "number":  3,
                           "q":  "有 30 張分別標示 1～30 號的紙牌。先將號碼數為 3 的倍數的紙牌拿掉，然後從剩下的紙牌中，拿掉號碼數為 2 的倍數的紙牌。若將最後剩下的紙牌，依號碼數由小到大排列，則第 5 張紙牌的號碼為何？",
                           "o":  [
@@ -59,6 +65,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708387",
+                          "revision":  1,
                           "number":  4,
                           "q":  "若二元一次聯立方程式 x＋y＝3、3x－2y＝4 的解為 x＝a，y＝b，則 a－b 之值為何？",
                           "o":  [
@@ -71,6 +79,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708388",
+                          "revision":  1,
                           "number":  5,
                           "q":  "解方程式（3x＋2）＋2〔（x－1）－（2x＋1）〕＝6，得 x＝？",
                           "o":  [
@@ -83,6 +93,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708389",
+                          "revision":  1,
                           "number":  6,
                           "q":  "已知 119×21＝2499，求 119×21³－2498×21²＝？",
                           "o":  [
@@ -95,6 +107,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708390",
+                          "revision":  1,
                           "number":  7,
                           "q":  "下列四個數，哪一個不是質數？",
                           "o":  [
@@ -107,6 +121,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708391",
+                          "revision":  1,
                           "number":  8,
                           "q":  "下列何者為一元二次方程式（2x＋3）（x＋1）＝（x＋1）（x＋3）的解？",
                           "o":  [
@@ -119,6 +135,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708392",
+                          "revision":  1,
                           "number":  9,
                           "q":  "如右圖，△ABC 中，∠ABC＝30°，∠ACB＝50°，且 D、E 兩點分別在 BC、AB 上。若 AD 為∠BAC 的平分線，AD＝AE，則∠AED＝？",
                           "o":  [
@@ -133,6 +151,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q09-angle-bisector.png"
                       },
                       {
+                          "questionId":  "260921082708393",
+                          "revision":  1,
                           "number":  10,
                           "q":  "右圖是小方畫的正方形風箏圖案，且他以圖中的對角線為對稱軸，在對角線的下方畫一個三角形，使得新的風箏圖案成為一對稱圖形。若下列有一圖形為此對稱圖形，則此圖為何？",
                           "o":  [
@@ -149,6 +169,8 @@
                           "optionImage":  "past-exams/bct/96/first/assets/math/q10-options.png"
                       },
                       {
+                          "questionId":  "260921082708394",
+                          "revision":  1,
                           "number":  11,
                           "q":  "圖(三)是四邊形紙片 ABCD，其中∠B＝120°，∠D＝50°。若將其右下角向內摺出一△PCR，恰使 CP∥AB，RC∥AD，如圖(四)所示，則∠C＝？",
                           "o":  [
@@ -163,6 +185,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q11-quadrilateral-folding.png"
                       },
                       {
+                          "questionId":  "260921082708395",
+                          "revision":  1,
                           "number":  12,
                           "q":  "右圖是四直線 L₁、L₂、L₃、L₄ 在坐標平面上的位置，其中有一條直線為方程式 y＋4＝0 的圖形，求此方程式圖形為何？",
                           "o":  [
@@ -177,6 +201,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q12-coordinate-lines.png"
                       },
                       {
+                          "questionId":  "260921082708396",
+                          "revision":  1,
                           "number":  13,
                           "q":  "下列哪一個數值最小？",
                           "o":  [
@@ -189,6 +215,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708397",
+                          "revision":  1,
                           "number":  14,
                           "q":  "x＝－1 不是下列哪一個不等式的解？",
                           "o":  [
@@ -201,6 +229,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708398",
+                          "revision":  1,
                           "number":  15,
                           "q":  "圓 O 與直線 L 在同一平面上。若圓 O 半徑為 3 公分，且其圓心到直線 L 的距離為 2 公分，則圓 O 和直線 L 的位置關係為何？",
                           "o":  [
@@ -213,6 +243,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708399",
+                          "revision":  1,
                           "number":  16,
                           "q":  "將 19/27 化成小數，則小數點後第 122 位數為何？",
                           "o":  [
@@ -225,6 +257,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708400",
+                          "revision":  1,
                           "number":  17,
                           "q":  "將一元二次方程式 x²－6x－5＝0 化成（x＋a）²＝b 的型式，則 b＝？",
                           "o":  [
@@ -237,6 +271,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708401",
+                          "revision":  1,
                           "number":  18,
                           "q":  "下表是甲、乙、丙、丁四組數據。判斷哪一組數據的平均數（算術平均數）最小？",
                           "o":  [
@@ -251,6 +287,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q18-data-table.png"
                       },
                       {
+                          "questionId":  "260921082708402",
+                          "revision":  1,
                           "number":  19,
                           "q":  "如右圖，平行四邊形 ABCD 中，BC＝12，M 為 BC 中點，M 到 AD 的距離為 8。若分別以 B、C 為圓心，BM 長為半徑畫弧，交 AB、CD 於 E、F 兩點，則圖中灰色區域面積為何？",
                           "o":  [
@@ -265,6 +303,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q19-parallelogram-arcs.png"
                       },
                       {
+                          "questionId":  "260921082708403",
+                          "revision":  1,
                           "number":  20,
                           "q":  "甲、乙、丙、丁四人一起到冰店買紅豆與桂圓兩種冰棒。四人購買的數量及總價分別如右表所示。若其中一人的總價算錯了，則此人是誰？",
                           "o":  [
@@ -279,6 +319,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q20-ice-pop-table.png"
                       },
                       {
+                          "questionId":  "260921082708404",
+                          "revision":  1,
                           "number":  21,
                           "q":  "一袋子中有 4 顆球，分別標記號碼 1、2、3、4。已知每顆球被取出的機會相同，若第一次從袋中取出一球後放回，第二次從袋中再取出一球，則第二次取出球的號碼比第一次大的機率為何？",
                           "o":  [
@@ -291,6 +333,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708405",
+                          "revision":  1,
                           "number":  22,
                           "q":  "張老闆以每顆 a 元的單價買進水蜜桃 100 顆。現以每顆比單價多兩成的價格賣出 70 顆後，再以每顆比單價低 b 元的價格將剩下的 30 顆賣出。求全部水蜜桃共賣多少元？（用 a、b 表示）",
                           "o":  [
@@ -303,6 +347,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708406",
+                          "revision":  1,
                           "number":  23,
                           "q":  "已知甲、乙、丙三人各有一些錢，其中甲的錢是乙的 2 倍，乙比丙多 1 元，丙比甲少 11 元，求三人的錢共有多少元？",
                           "o":  [
@@ -315,6 +361,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708407",
+                          "revision":  1,
                           "number":  24,
                           "q":  "小華和小明到同一早餐店買饅頭和米漿。已知小華買了 5 個饅頭和 5 杯米漿；小明買了 7 個饅頭和 3 杯米漿，且小華花的錢比小明少 10 元。關於饅頭與米漿的價錢，下列敘述何者正確？",
                           "o":  [
@@ -327,6 +375,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708408",
+                          "revision":  1,
                           "number":  25,
                           "q":  "如右圖，△ABC 中，∠C＝90°，D 在 BC 上，E 為 AB 之中點，AD、CE 相交於 F，且 AD＝DB。若∠B＝20°，則∠DFE＝？",
                           "o":  [
@@ -341,6 +391,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q25-triangle-cevians.png"
                       },
                       {
+                          "questionId":  "260921082708409",
+                          "revision":  1,
                           "number":  26,
                           "q":  "如右圖，△ABC 的內切圓分別切 AB、BC、AC 於 D、E、F 三點，其中 P、Q 兩點分別在弧 DE、弧 DF 上。若∠A＝30°，∠B＝80°，∠C＝70°，則弧 DPE 長與弧 DQF 長的比值為何？",
                           "o":  [
@@ -355,6 +407,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q26-incircle-arcs.png"
                       },
                       {
+                          "questionId":  "260921082708410",
+                          "revision":  1,
                           "number":  27,
                           "q":  "如圖(五)，水平地面上有一面積為 30π 平方公分的灰色扇形 OAB，其中 OA 的長度為 6 公分，且與地面垂直。若在沒有滑動的情況下，將圖(五)的扇形向右滾動至 OB 垂直地面為止，如圖(六)所示，則 O 點移動多少公分？",
                           "o":  [
@@ -369,6 +423,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q27-rolling-sector.png"
                       },
                       {
+                          "questionId":  "260921082708411",
+                          "revision":  1,
                           "number":  28,
                           "q":  "在算式 21－（－50/87 □ 24）² 的 □ 中，填入下列哪一個運算符號，可使計算出來的值是最小的？",
                           "o":  [
@@ -381,6 +437,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708412",
+                          "revision":  1,
                           "number":  29,
                           "q":  "如右圖，將一個大三角形剪成一個小三角形及一個梯形。若梯形上、下底的長分別為 6、14，兩腰長為 12、16，則下列哪一選項中的數據表示此三角形的三邊長？",
                           "o":  [
@@ -397,6 +455,8 @@
                           "optionImage":  "past-exams/bct/96/first/assets/math/q29-options.png"
                       },
                       {
+                          "questionId":  "260921082708413",
+                          "revision":  1,
                           "number":  30,
                           "q":  "已知小娟家的地板全由同一形狀且大小相同的地磚緊密地舖成。若此地磚的形狀是一正多邊形，則下列何者不可能是此地磚的形狀？",
                           "o":  [
@@ -409,6 +469,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708414",
+                          "revision":  1,
                           "number":  31,
                           "q":  "如右圖，不等長的兩對角線 AC、BD 相交於 O 點，且將四邊形 ABCD 分成甲、乙、丙、丁四個三角形。若 OA：OC＝OB：OD＝1：2，則此四個三角形的關係，下列敘述何者正確？",
                           "o":  [
@@ -423,6 +485,8 @@
                           "image":  "past-exams/bct/96/first/assets/math/q31-diagonals-triangles.png"
                       },
                       {
+                          "questionId":  "260921082708415",
+                          "revision":  1,
                           "number":  32,
                           "q":  "以下是甲、乙兩人證明 √15＋√8 ≠ √（15＋8）的過程：\n\n（甲）因為 √15＞√9＝3，√8＞√4＝2，所以 √15＋√8＞3＋2＝5；且 √（15＋8）＝√23＜√25＝5，所以 √15＋√8＞5＞√（15＋8），故 √15＋√8 ≠ √（15＋8）。\n\n（乙）作一個直角三角形，兩股長分別為 √15、√8。利用商高定理（√15）²＋（√8）²＝15＋8，得斜邊長為 √（15＋8）。因為 √（15＋8）、√15、√8 為此三角形的三邊長，所以 √15＋√8＞√（15＋8），故 √15＋√8 ≠ √（15＋8）。\n\n對於兩人的證法，下列哪一個判斷是正確的？",
                           "o":  [
@@ -435,6 +499,8 @@
                           "fixedOptions":  true
                       },
                       {
+                          "questionId":  "260921082708416",
+                          "revision":  1,
                           "number":  33,
                           "q":  "如右圖，在地面上有一個鐘，鐘面的 12 個粗線刻度是整點時時針（短針）所指位置。根據圖中時針與分針（長針）的位置，該鐘面所顯示的時刻在下列哪一範圍內？",
                           "o":  [
