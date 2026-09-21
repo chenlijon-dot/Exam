@@ -189,9 +189,10 @@
       <h2 class="catalog-title">請選擇次別</h2>
       <div class="catalog-grid">
         ${card({id:'bct97FirstBtn',icon:'1️⃣',title:'第一次',badge:'34 題',desc:'97 年度第一次基測；數學科 34 題、官方答案、原卷附圖與逐題詳解已建立。'})}
-        ${card({id:'bct97SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'97 年度第二次基測尚未匯入。',disabled:true})}
+        ${card({id:'bct97SecondBtn',icon:'2️⃣',title:'第二次',badge:'34 題',desc:'97 年度第二次基測；數學科 34 題、官方答案、原卷附圖與逐題詳解已建立。'})}
       </div>`;
     $('#bct97FirstBtn')?.addEventListener('click', showBct97FirstSubjects);
+    $('#bct97SecondBtn')?.addEventListener('click', showBct97SecondSubjects);
   }
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
     const hasMath = Number.isInteger(mathCount);
@@ -478,6 +479,27 @@
     }));
   }
 
+  function showBct97SecondSubjects() {
+    setHeader('97 年度第二次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct97SecondBtn','返回次別',showBct97Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　97 年度　›　第二次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct97SecondChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct97SecondEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct97SecondMathBtn',icon:'📐',title:'數學科',badge:'34 題',desc:'34 題原題、官方答案、17 張原卷裁圖與逐題詳解已建立。'})}
+        ${card({id:'bct97SecondScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct97SecondSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct97SecondMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct97SecondMathBtn',
+      path:'past-exams/bct/97/second/math.json',
+      explanationsPath:'past-exams/bct/97/second/math-explanations.json',
+      onBack:showBct97SecondSubjects
+    }));
+  }
+
   async function loadCompanionExplanations(path, data) {
     if (!path) return;
     try {
@@ -535,6 +557,8 @@
   window.showBct95SecondSubjects = showBct95SecondSubjects;
   window.showBct96FirstSubjects = showBct96FirstSubjects;
   window.showBct96SecondSubjects = showBct96SecondSubjects;
+  window.showBct97FirstSubjects = showBct97FirstSubjects;
+  window.showBct97SecondSubjects = showBct97SecondSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
