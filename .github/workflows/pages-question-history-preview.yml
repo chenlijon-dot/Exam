@@ -23,7 +23,7 @@ concurrency:
 jobs:
   deploy-preview:
     environment:
-      name: github-pages
+      name: question-history-preview
       url: ${{ steps.deployment.outputs.page_url }}preview/question-history-recall/
     runs-on: ubuntu-latest
 
