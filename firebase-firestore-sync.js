@@ -135,50 +135,102 @@
     return Math.max(1, Math.min(Number(limitCount) || 50, 50));
   }
 
-  async function loadRecentQuestionAttempts(limitCount = 50) {
-    if (!activeUser?.uid || !db || !firestore) return [];
-
+  function localAttempts() {
     try {
-      const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
-      const historyQuery = firestore.query(
-        attemptsRef,
-        firestore.where('historyDomain', '==', 'question'),
-        firestore.orderBy('submittedAt', 'desc'),
-        firestore.limit(clampHistoryLimit(limitCount))
-      );
-      const snapshot = await firestore.getDocs(historyQuery);
-      return snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-    } catch (error) {
-      console.warn('[FirestoreSync] recent question history unavailable', error);
+      const records = JSON.parse(localStorage.getItem(RECORDS_KEY) || '[]');
+      return Array.isArray(records) ? records : [];
+    } catch {
       return [];
     }
   }
 
+  function historyAttemptKey(attempt) {
+    return fingerprint(attempt) || [
+      attempt?.examKey || '',
+      attempt?.submittedAt || '',
+      attempt?.historyDomain || ''
+    ].join('|');
+  }
+
+  function mergeHistoryAttempts(...sources) {
+    const map = new Map();
+    for (const source of sources) {
+      for (const attempt of source || []) {
+        if (!attempt) continue;
+        const key = historyAttemptKey(attempt);
+        if (!key || map.has(key)) continue;
+        map.set(key, attempt);
+      }
+    }
+    return [...map.values()].sort((a, b) =>
+      String(b?.submittedAt || '').localeCompare(String(a?.submittedAt || ''))
+    );
+  }
+
+  async function cloudQuestionAttempts() {
+    if (!activeUser?.uid || !db || !firestore) return [];
+
+    const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
+    const historyQuery = firestore.query(
+      attemptsRef,
+      firestore.where('historyDomain', '==', 'question')
+    );
+    const snapshot = await firestore.getDocs(historyQuery);
+    return snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+  }
+
+  async function cloudExamAttempts(examKey) {
+    if (!activeUser?.uid || !db || !firestore) return [];
+
+    const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
+    const historyQuery = firestore.query(
+      attemptsRef,
+      firestore.where('examKey', '==', examKey)
+    );
+    const snapshot = await firestore.getDocs(historyQuery);
+    return snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+  }
+
+  async function loadRecentQuestionAttempts(limitCount = 50) {
+    const limitValue = clampHistoryLimit(limitCount);
+    const local = localAttempts().filter(attempt => attempt?.historyDomain === 'question');
+
+    let cloud = [];
+    try {
+      cloud = await cloudQuestionAttempts();
+    } catch (error) {
+      console.warn('[FirestoreSync] recent question history cloud read unavailable; using local fallback', error);
+    }
+
+    return mergeHistoryAttempts(cloud, local).slice(0, limitValue);
+  }
+
   async function loadExamAttempts(examKey, limitCount = 50) {
     const normalizedExamKey = String(examKey || '').trim();
-    if (!normalizedExamKey || !activeUser?.uid || !db || !firestore) return [];
+    if (!normalizedExamKey) return [];
 
+    const limitValue = clampHistoryLimit(limitCount);
+    const local = localAttempts().filter(attempt =>
+      attempt?.historyDomain === 'question' &&
+      String(attempt?.examKey || '') === normalizedExamKey
+    );
+
+    let cloud = [];
     try {
-      const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
-      const historyQuery = firestore.query(
-        attemptsRef,
-        firestore.where('historyDomain', '==', 'question'),
-        firestore.where('examKey', '==', normalizedExamKey),
-        firestore.orderBy('submittedAt', 'desc'),
-        firestore.limit(clampHistoryLimit(limitCount))
+      cloud = (await cloudExamAttempts(normalizedExamKey)).filter(
+        attempt => attempt?.historyDomain === 'question'
       );
-      const snapshot = await firestore.getDocs(historyQuery);
-      return snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
     } catch (error) {
-      console.warn('[FirestoreSync] same-exam history unavailable', error);
-      return [];
+      console.warn('[FirestoreSync] same-exam history cloud read unavailable; using local fallback', error);
     }
+
+    return mergeHistoryAttempts(cloud, local).slice(0, limitValue);
   }
 
   window.ChrisExamHistoryStore = {
