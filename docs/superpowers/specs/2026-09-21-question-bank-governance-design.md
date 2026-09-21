@@ -440,8 +440,6 @@ answeredCount / correctCount / wrongCount
 
 ### 9.4 GEPT vocabulary memory
 
-### 9.3 GEPT vocabulary memory
-
 Vocabulary memory is a special dynamic system.
 
 Its stable learning-item identity is already:
