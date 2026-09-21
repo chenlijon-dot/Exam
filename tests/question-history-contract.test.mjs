@@ -130,4 +130,11 @@ assert.match(historyUi, /exam:started/, 'history UI must reset/load on exam star
 assert.match(historyUi, /exam:submitted/, 'history UI must expand after submit');
 assert.match(historyUi, /resetForRetry/, 'history UI must expose retry reset');
 
+
+assert.match(
+  historyUi,
+  /exam:submitted[\s\S]*?loadToken\s*\+=\s*1/,
+  'submit must invalidate pending active history load before merging the current attempt'
+);
+
 console.log('question-history lifecycle + schema-v3 contract: PASS');
