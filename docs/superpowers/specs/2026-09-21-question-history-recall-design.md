@@ -290,19 +290,44 @@ Repeated clicks, UI rerenders, or duplicate event handling must not create dupli
 
 ---
 
-## 8. Recall query window
+## 8. Recall query windows
 
-The first release reads at most:
+Release 1 has two related but distinct history reads.
+
+### 8.1 Per-question aggregate window
+
+For the lightweight per-question counters shown on an active or submitted exam, read at most:
 
 ```text
 50 fixed-question attempts
 ```
 
-for per-question aggregation.
+whose history domain is general permanent-question history.
 
-This means 50 attempts whose history domain is general permanent-question history, not simply the latest 50 Firestore documents of every kind.
+These attempts may come from different exam keys because the same permanent `questionId` can be reused across original exams, review sets, and future adaptive practice.
 
 GEPT Vocabulary must not consume these 50 slots.
+
+### 8.2 Same-exam recall window
+
+When the learner presses `回溯` on a submitted exam, load at most:
+
+```text
+50 attempts with the same examKey
+```
+
+ordered newest to oldest.
+
+This is the history browser for that specific exam only.
+
+It answers:
+
+```text
+前一次這份考卷錯哪些？
+再前一次又錯哪些？
+```
+
+It must not mix attempts from another exam key.
 
 Recommended new-attempt discriminator:
 
@@ -310,9 +335,7 @@ Recommended new-attempt discriminator:
 historyDomain: "question"
 ```
 
-The reader queries the newest matching fixed-question attempts by `submittedAt` and limits the result to 50.
-
-If Firestore requires an index for this query, the implementation should add only the minimal required index.
+If Firestore requires indexes for these queries, the implementation should add only the minimal required indexes.
 
 ---
 
@@ -432,13 +455,57 @@ If no valid history exists, display no history block.
 
 The `回溯` button becomes enabled after submission.
 
-Version 1 behavior:
+Pressing it enters a **same-exam historical review mode** for the current `examKey`.
 
-- submission automatically shows the full per-question history annotations
-- `回溯` toggles those annotations open/closed
-- it does not create a second competing history screen
+The review mode loads up to the previous 50 attempts for that same exam and exposes navigation controls such as:
 
-This keeps the UI simple while preserving a dedicated recall control for future expansion.
+```text
+前一次
+後一次
+```
+
+The learner can move backward and forward through the historical attempts without leaving the current exam page.
+
+For each selected historical attempt:
+
+- questions answered incorrectly in that attempt are highlighted with a clearly visible red question-card state
+- correctly answered questions remain in the normal submitted style
+- questions that were not validly answered in that historical attempt remain neutral and are not treated as wrong
+- the historical selected answer and result may be shown for the questions that were validly answered
+- the UI should identify which historical attempt is currently being viewed, for example `第 2 / 7 次` plus its submission time
+
+The most recent submitted state and the per-question aggregate annotations remain distinct concepts:
+
+```text
+作答 3 次｜錯題 2 次
+上次：選 C｜正確
+```
+
+is the cumulative `questionId` view, while the red-card historical review answers:
+
+```text
+這一次當時錯了哪些題？
+```
+
+### 11.5 Reset on `重新做題`
+
+Pressing `重新做題` exits historical review mode completely.
+
+It must clear:
+
+- red historical wrong-question highlights
+- historical selected-answer overlays
+- `前一次 / 後一次` navigation controls
+- current historical-attempt position / timestamp
+- any historical-only explanation state
+
+The exam then returns to a clean active-attempt state.
+
+The normal active-attempt rule still applies:
+
+- if a question has prior `wrongCount > 0`, show only `錯題 N 次`
+- if `wrongCount = 0`, show no history badge
+- do not reveal prior answer choices or correctness before the new submission
 
 ---
 
@@ -626,17 +693,37 @@ Vocabulary history uses `vocabId`, not generated exam keys or manufactured quest
 
 Blank vocabulary items must not increase answered or wrong counts.
 
-### 16.8 Query window
+### 16.8 Query windows
 
-Fixed-question recall reads no more than the newest 50 matching question-history attempts.
+Per-question aggregation reads no more than the newest 50 fixed-question history attempts.
 
-Vocabulary documents or vocabulary exam attempts must not consume that window.
+Same-exam `回溯` reads no more than 50 attempts whose `examKey` matches the current exam.
 
-### 16.9 Duplicate submit
+Vocabulary documents or vocabulary exam attempts must not consume either fixed-question window.
+
+### 16.9 Same-exam historical navigation
+
+Given multiple attempts of one `examKey`:
+
+```text
+attempt 1 → wrong Q2, Q7
+attempt 2 → wrong Q1, Q2, Q9
+attempt 3 → wrong Q4
+```
+
+the recall mode must let the learner move backward and forward through those attempts and highlight exactly the wrong questions belonging to the selected attempt.
+
+A question left blank in that attempt must remain neutral, not red.
+
+### 16.10 Retry reset
+
+After entering recall mode, pressing `重新做題` must remove all historical red highlights and history-navigation state and return to the clean active-attempt UI.
+
+### 16.11 Duplicate submit
 
 One completed exam produces one attempt even if submit is clicked repeatedly or the UI rerenders.
 
-### 16.10 Firebase unavailable
+### 16.12 Firebase unavailable
 
 Exam rendering, answering, grading, and submission remain functional with no history badges.
 
@@ -652,7 +739,7 @@ This release does not build:
 - weakness scoring
 - adaptive question selection
 - spaced repetition for general static questions
-- full historical answer browser
+- a cross-exam or all-subject historical answer browser outside the current exam
 - Firebase bulk migration of schema-v2 attempts
 - handwriting support for currently ungraded Chinese written questions
 
@@ -669,13 +756,17 @@ Release 1 is complete when:
 3. Option shuffling preserves canonical option identity.
 4. Blank, manual-study, and unclear handwriting responses do not pollute question history.
 5. Per-question history aggregates globally by `questionId`.
-6. The history reader uses at most 50 relevant fixed-question attempts.
-7. GEPT Vocabulary remains isolated on `vocabId` / `vocabularyProgress`.
-8. Active-attempt UI shows only `錯題 N 次` when N > 0.
-9. Post-submit UI shows `作答 N 次`, optional `錯題 M 次`, and latest valid answer/result.
-10. `錯題 0 次` is never rendered.
-11. Firebase history failure never prevents exam use.
-12. No second history authority is introduced.
+6. Per-question aggregation uses at most 50 relevant fixed-question attempts.
+7. Same-exam `回溯` can browse up to 50 attempts for the current `examKey`.
+8. Historical review provides forward/backward navigation and clearly highlights the wrong questions of the selected attempt in red.
+9. Blank or otherwise invalid answers in a historical attempt are not highlighted as wrong.
+10. Pressing `重新做題` clears historical-review state and restores the clean active-attempt UI.
+11. GEPT Vocabulary remains isolated on `vocabId` / `vocabularyProgress`.
+12. Active-attempt UI shows only `錯題 N 次` when N > 0.
+13. Post-submit UI shows `作答 N 次`, optional `錯題 M 次`, and latest valid answer/result.
+14. `錯題 0 次` is never rendered.
+15. Firebase history failure never prevents exam use.
+16. No second history authority is introduced.
 
 ---
 
