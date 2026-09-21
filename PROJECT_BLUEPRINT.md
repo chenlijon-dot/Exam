@@ -1,6 +1,6 @@
 # Exam Project Blueprint
 
-> 專案架構治理、技術債整理與未來工作藍圖。
+> 專案目前進度、架構治理與下一階段工作藍圖。
 >
 > 建立日期：2026-09-20
 >
@@ -9,7 +9,7 @@
 >
 > 本文件回答的是：
 >
-> **「目前系統還有哪些地方值得整理？接下來要往什麼方向做？」**
+> **「目前做到哪裡？整體架構怎麼理解？接下來最值得往哪裡做？」**
 
 ---
 
@@ -27,20 +27,82 @@
 `PROJECT_BLUEPRINT.md` 負責：
 
 ```text
-還有哪些技術債
-哪些地方需要收斂
-未來優先工作是什麼
-完成到什麼程度才算穩定
+目前已完成哪些重要地基
+整體系統正在往哪個方向發展
+哪些能力正在形成
+接下來的優先工作
+仍有哪些技術債需要收斂
 ```
 
 因此：
 
 ```text
 README = 現況與總憲法
-BLUEPRINT = 未來方向與整建計畫
-各專門 MD = 個別領域 authority
+BLUEPRINT = 工作進度 + 架構方向 + 下一步建議
+各專門 MD / design spec = 個別領域規格 authority
 實際 JSON / JS / catalog / Drive = 真正資料來源
+成果報告 = 某一批任務的完成證據 / snapshot
 ```
+
+## 1.1 目前重大里程碑
+
+截至 2026-09-21，已完成一個重要資料治理地基：
+
+> **正式固定題庫永久 question identity 已完成全科 migration。**
+
+目前已納入永久 identity 治理的正式固定題目共：
+
+```text
+2,159 題
+```
+
+範圍包含：
+
+```text
+國文章節題庫
+國文已匯入歷屆基測
+數學七上章節題庫
+數學已匯入歷屆基測
+英文七上固定章節題庫
+GEPT Reading
+自然七上
+社會：地理 / 歷史 / 公民
+```
+
+目前治理結果：
+
+```text
+正式靜態題 → 永久 questionId
+既有正式題 → revision: 1
+既有 handwriting legacy questionId → 保留，不重新編號
+GEPT Vocabulary → 繼續使用 vocabId，不硬套 questionId
+number / originalQuestionNumber → 不再作為永久 identity
+正式題庫 → append-only，新增題目不重編既有 identity
+```
+
+完整執行成果另保存在 Google Drive：
+
+```text
+國中教材參考資料/
+└─ 題庫永久questionId全科修整成果報告_2026-09-21.md
+```
+
+這代表未來 Firebase 作答紀錄、錯題統計、回溯、Question Registry 與智慧選題，已經有穩定的題目 identity 可以依附。
+
+目前**尚未因此自動完成**：
+
+```text
+Firebase attempt schema migration
+presentedQuestionIds
+canonical option history
+手寫 grading history 正式保存
+回溯按鈕
+每題累積作答 / 錯誤統計
+deployment validator
+manifest
+```
+
+因此下一階段應把「題目 identity 已穩定」正式轉化成「學生歷程可回溯」。
 
 ---
 
@@ -156,6 +218,8 @@ manifest
 | `TEXTBOOK_COLLECTION_WORKFLOW.md` | 教材收集與 canonical 母 SOP |
 | `ENGLISH_Database.MD` | 英文 GEPT 閱讀與字彙 authority |
 | `LEARNING_HISTORY_FIREBASE.md` | Firebase 學習歷程 authority |
+| `docs/superpowers/specs/2026-09-21-question-bank-governance-design.md` | 正式題庫永久 identity / append-only / revision 設計規格 |
+| Google Drive `題庫永久questionId全科修整成果報告_2026-09-21.md` | 2,159 題 migration 完成成果 snapshot |
 | `Android學生機設計.MD` | Student Exam Android / SM-T220 runbook |
 | `curriculum-catalog/*.md` | 各科實體教材課程樹 authority |
 | 有日期的 collection MD | 歷史 snapshot |
@@ -622,7 +686,8 @@ mastery state
 
 ```json
 {
-  "questionId": "school-114-dawan-science-q08",
+  "questionId": "260921103000001",
+  "revision": 1,
   "sourceType": "school-exam",
   "subject": "science",
   "section": "1-2",
@@ -633,6 +698,8 @@ mastery state
   "hasVisual": false
 }
 ```
+
+Question Registry 不自行重編題目 identity；它引用正式題庫已存在的永久 `questionId`。學校、年度、原題號等資訊屬 provenance，不再編進 questionId 本身。
 
 ## 7.3 Asset Registry
 
@@ -1266,10 +1333,15 @@ past-exam asset 是否存在
 reference path 是否存在
 ```
 
-### 重複
+### Identity / 重複
 
 ```text
-同一 bank 是否有重複 stable key
+正式靜態題是否都有 questionId
+questionId 是否為 string
+questionId 是否全 repo 唯一
+revision 是否為正整數
+既有 grandfathered legacy questionId 是否仍被保留
+同一 bank 是否有重複 stable identity
 school + year + originalQuestionNumber 是否重複
 ```
 
@@ -1297,6 +1369,8 @@ JSON 無法 parse
 必要題目欄位不存在
 引用檔案不存在
 明確重複 stable identity
+questionId collision
+正式題缺 questionId
 ```
 
 ### WARNING
@@ -1410,7 +1484,8 @@ answerVerified
 每題：
 
 ```text
-id
+questionId
+revision
 q
 o
 a
@@ -1420,6 +1495,8 @@ sourceType
 originalQuestionNumber
 preserveOptionOrder
 ```
+
+其中 `questionId` 是既有永久 identity，不因 schema migration 重新產生；`revision` 用來追蹤同一題的非實質修訂。
 
 特殊題型則明確用：
 
@@ -1746,9 +1823,11 @@ Machine-readable curriculum 應由 canonical 衍生，不可反向取代 canonic
 
 # 24. P2：題庫可追溯性
 
-未來每一道正式來源題目，都應能回答：
+未來每一道正式來源題目，都應先能穩定回答：
 
 ```text
+這是哪一道永久題目？ → questionId
+學生當時看到哪一版？ → revision
 這題從哪裡來？
 哪一份考卷？
 原題號？
@@ -1877,6 +1956,19 @@ Exam/
 
 # 28. 建議實施順序
 
+## Phase 0：永久 Question Identity 地基 ✅
+
+```text
+[x] 正式固定題庫全科盤點
+[x] 2,159 題建立永久 question identity
+[x] 既有 handwriting legacy ID 保留
+[x] 正式題建立 revision: 1
+[x] GEPT Vocabulary 維持 vocabId domain identity
+[x] 題庫治理採 append-only
+```
+
+這一階段已完成。後續任何 schema、registry、Firebase history 或 UI 工作，都不得重新編排既有 `questionId`。
+
 ## Phase 1：先讓 repository 不容易壞
 
 ```text
@@ -1933,15 +2025,27 @@ Exam/
 [ ] machine-readable curriculum
 ```
 
-## Phase 7：錯誤紀錄導航
+## Phase 7：作答歷程回溯與錯誤紀錄導航
+
+第一步先把已完成的永久 question identity 接進 Firebase attempt。
 
 ```text
+[ ] 正式以 exam:submitted 完成後建立 attempt
+[ ] answers[] 保存 questionId / questionRevision
+[ ] attempt 保存 presentedQuestionIds[]
+[ ] 選擇題保存 canonical option identity
+[ ] handwriting 保存 correct / incorrect / unclear / unanswered
+[ ] unclear 不計入 learner wrongCount
+[ ] 考卷加入「回溯」功能
+[ ] 每題顯示累積作答次數 / 錯誤次數 / 上次結果
 [ ] chapter / lesson weakness aggregation
 [ ] 最近分數／錯題／作答時間
 [ ] NEEDS_REVIEW / MASTERED 狀態
 [ ] 我的學習歷程加入「建議複習」
 [ ] lifetime average 與 recent trend 分離
 ```
+
+回溯不是獨立附加功能，而是 Learner State 從「整份考卷成績」進化到「永久題目層歷史」的第一步。
 
 ## Phase 8：Knowledge / Question Registry
 
@@ -1971,6 +2075,7 @@ Exam/
 未來可以把「Exam 架構穩定第一階段」定義為：
 
 ```text
+0. 正式題目已有永久 questionId / revision                    ✅ 已完成
 1. 新 bank 有統一 schemaVersion
 2. 所有 deploy 前會自動 validator
 3. manifest 是 readiness 的單一 authority
@@ -1989,43 +2094,101 @@ Exam/
 
 # 30. 目前最推薦的下一步
 
-需要區分「戰略目標」與「工程下一步」。
+目前要區分「已完成地基」、「學習功能主線」與「工程安全網」。
 
-## 戰略目標
+## 30.1 已完成地基
 
-> **建立錯誤紀錄導航，最終進入智慧選題與 adaptive review。**
+```text
+正式固定題庫
+→ 2,159 題 permanent questionId
+→ revision
+→ append-only governance
+```
 
-學生每一次作答都應逐步轉化成下一次複習的依據。
+因此現在不再需要先解決「同一題到底是不是同一題」；這個最重要的 identity 問題已經有正式答案。
 
-## 工程下一步
+## 30.2 學習功能主線：先把 identity 接進 Firebase 回溯
 
-> **先建立 Repo Health Check v1。**
+目前最值得往前推的學習功能是：
+
+> **作答歷程回溯 → 每題歷史 → 錯誤導航 → 智慧複習。**
+
+建議順序：
+
+```text
+exam:submitted
+↓
+attempt answers[] 保存 questionId / revision
+↓
+presentedQuestionIds[]
+↓
+canonical option / handwriting result
+↓
+同一 examKey 的歷次 Firebase attempts
+↓
+回溯前一次作答
+↓
+每題累積：作答幾次 / 錯幾次 / 上次結果
+↓
+chapter / lesson weakness
+↓
+concept-level weakness
+↓
+adaptive review
+```
+
+這條主線不需要等待所有 Concept Registry 或 manifest 都完成才開始。
+
+## 30.3 工程安全網：Repo Health Check v1
+
+與學習功能主線平行，工程面仍應盡快建立：
+
+> **Repo Health Check v1。**
 
 原因：
 
 ```text
-現在資料量已經夠大
-題庫會持續快速增加
+題庫已超過兩千題
+正式 identity 已成為長期資料資產
+題庫仍會快速增加
 多科、多 schema、多 asset、多 module
-未來還要建立 registry 與智慧選題
 ```
 
-此時先建立 validator，等於先裝安全網。
+validator 應優先守住：
 
-完成 validator 後，再逐步進行：
+```text
+questionId uniqueness
+revision
+JSON parse
+answer index
+asset path
+bank path
+正式題必要欄位
+```
+
+接著再逐步進行：
 
 ```text
 manifest
 → schema 收斂
-→ Concept / Question Registry
-→ 錯誤導航
-→ 智慧選題
-→ module cleanup / directory refactor
+→ Concept / Question / Asset Registry
+→ module / workflow cleanup
 ```
 
-如此可以一邊持續擴充教材與題庫，一邊讓系統逐步 AI 化，而不是為了新功能破壞既有資料。
+因此目前不是一條單線 roadmap，而是兩條並行：
+
+```text
+學習功能：
+questionId → Firebase recall → weakness → adaptive review
+
+工程治理：
+validator → manifest → schema / registry → cleanup
+```
+
+兩條線共享同一個已完成地基：**永久 question identity。**
 
 ---
+
 # 31. 長期目標
 
 最終希望 Exam 形成完整閉環：
@@ -2039,11 +2202,17 @@ Concept Registry
         ↓
 Question Layer
 Question Registry / Asset Registry
+永久 questionId / revision
         ↓
 GitHub Exam
 validated structured question banks
         ↓
 學生作答
+        ↓
+Firebase attempts
+questionId-based answer history
+        ↓
+回溯 / 每題歷史統計
         ↓
 Firebase Learner State
         ↓
