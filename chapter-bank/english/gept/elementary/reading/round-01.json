@@ -18,6 +18,8 @@
   },
   "questions": [
     {
+      "questionId": "260921090617001",
+      "revision": 1,
       "number": 1,
       "section": "第一部分：詞彙和結構",
       "q": "The steak tonight made me full, but the _____ still look delicious.",
@@ -28,6 +30,8 @@
       "e": "答案是 (C) desserts，意思是「甜點」。desert 是沙漠；snacks 是點心；sweets 泛指甜食。句意是牛排已讓我吃飽，但甜點看起來仍很可口。"
     },
     {
+      "questionId": "260921090617002",
+      "revision": 1,
       "number": 2,
       "q": "Go straight ahead for 2 blocks. Turn left, and you’ll see it. You can’t _____ it!",
       "o": ["see", "catch", "watch", "miss"],
@@ -37,6 +41,8 @@
       "e": "答案是 (D) miss。You can’t miss it 是常見說法，表示「你一定不會錯過／一定找得到」。前文已給出清楚路線，因此語意最合理。"
     },
     {
+      "questionId": "260921090617003",
+      "revision": 1,
       "number": 3,
       "q": "Vivian was badly hurt in a car accident, so it is _____ for her to go to school today.",
       "o": ["convenient", "illegal", "necessary", "impossible"],
@@ -46,6 +52,8 @@
       "e": "答案是 (D) impossible。Vivian 在車禍中受重傷，因此今天去上學「不可能」。convenient 是方便的；illegal 是違法的；necessary 是必要的。"
     },
     {
+      "questionId": "260921090617004",
+      "revision": 1,
       "number": 4,
       "q": "Mary doesn’t like the dress John bought her because she thinks it’s a bit out of _____.",
       "o": ["attention", "mention", "fashion", "season"],
@@ -55,6 +63,8 @@
       "e": "答案是 (C) fashion。out of fashion 是固定片語，表示「過時、不流行」。"
     },
     {
+      "questionId": "260921090617005",
+      "revision": 1,
       "number": 5,
       "q": "Lily decided not to go shopping and _____ her sick two-year-old.",
       "o": ["looked up", "looked after", "looked out", "looked into"],
@@ -64,6 +74,8 @@
       "e": "答案是 (B) looked after。look after 表示「照顧」。Lily 沒去逛街，而留下來照顧生病的兩歲孩子。"
     },
     {
+      "questionId": "260921090617006",
+      "revision": 1,
       "number": 6,
       "q": "Chinese eat with chopsticks, while Westerners eat with a knife and a _____.",
       "o": ["stick", "fork", "napkin", "florist"],
@@ -73,6 +85,8 @@
       "e": "答案是 (B) fork。西式餐具常見搭配為 a knife and a fork。"
     },
     {
+      "questionId": "260921090617007",
+      "revision": 1,
       "number": 7,
       "q": "The train is going through a long _____. I can’t talk with you on my cellphone now.",
       "o": ["tunnel", "tower", "channel", "vase"],
@@ -82,6 +96,8 @@
       "e": "答案是 (A) tunnel。火車正穿過長隧道，所以手機訊號可能不好。"
     },
     {
+      "questionId": "260921090617008",
+      "revision": 1,
       "number": 8,
       "q": "Kevin _____ one of his old friends on the bus — they talked for a long time and forgot to get off!",
       "o": ["ran through", "got through", "ran into", "broke into"],
@@ -91,6 +107,8 @@
       "e": "答案是 (C) ran into。run into someone 表示「偶然遇見某人」。"
     },
     {
+      "questionId": "260921090617009",
+      "revision": 1,
       "number": 9,
       "q": "_____ English with foreigners more helps improve my oral ability.",
       "o": ["Speak", "Speaking", "Spoke", "Spoken"],
@@ -100,6 +118,8 @@
       "e": "答案是 (B) Speaking。句首需要一個可當主詞的形式，動名詞 Speaking English with foreigners 作整句主詞。"
     },
     {
+      "questionId": "260921090617010",
+      "revision": 1,
       "number": 10,
       "q": "The ground is wet. It _____ last night!",
       "o": ["must rain", "must be raining", "must rained", "must have rained"],
@@ -109,6 +129,8 @@
       "e": "答案是 (D) must have rained。由現在地面濕推測「昨晚一定下過雨」，對過去的肯定推測用 must have + p.p.。"
     },
     {
+      "questionId": "260921090617011",
+      "revision": 1,
       "number": 11,
       "q": "Sue was sitting by the window _____ the novel “Twilight.”",
       "o": ["to read", "reading", "read", "and read"],
@@ -118,6 +140,8 @@
       "e": "答案是 (B) reading。reading the novel 描述 Sue 坐在窗邊時同時進行的動作，可視為分詞片語補充說明。"
     },
     {
+      "questionId": "260921090617012",
+      "revision": 1,
       "number": 12,
       "q": "Dad had a bad cold last week, and _____.",
       "o": ["Mom was, too", "so was Mom", "so had Mom", "so did Mom"],
@@ -127,6 +151,8 @@
       "e": "答案是 (D) so did Mom。前句實義動詞是 had（表示患感冒），過去式附和用 so + did + 主詞。"
     },
     {
+      "questionId": "260921090617013",
+      "revision": 1,
       "number": 13,
       "q": "Mia _____ English since she was three.",
       "o": ["learned", "was learning", "has learned", "would learn"],
@@ -136,6 +162,8 @@
       "e": "答案是 (C) has learned。since she was three 表示從三歲持續到現在，主句用現在完成式。"
     },
     {
+      "questionId": "260921090617014",
+      "revision": 1,
       "number": 14,
       "q": "When the earthquake came, I was the first one to feel the house _____.",
       "o": ["shake", "shaked", "shaken", "shook"],
@@ -145,6 +173,8 @@
       "e": "答案是 (A) shake。感官動詞 feel + 受詞 + 原形動詞，可表示感受到完整動作；shake 的過去式是 shook，不是 shaked。"
     },
     {
+      "questionId": "260921090617015",
+      "revision": 1,
       "number": 15,
       "q": "Alishan, _____ is known for its view of sunrise, is a high mountain in southern Taiwan.",
       "o": ["it", "who", "that", "which"],
@@ -154,6 +184,8 @@
       "e": "答案是 (D) which。逗號後是非限定關係子句，先行詞 Alishan 為事物／地名，使用 which；非限定用法不能用 that。"
     },
     {
+      "questionId": "260921090617016",
+      "revision": 1,
       "number": 16,
       "section": "第二部分：段落填空",
       "groupId": "round01-cloze-16-20",
@@ -167,6 +199,8 @@
       "e": "答案是 (C) got on。搭乘大型交通工具如 plane、bus、train 常用 get on；後文緊接著找座位，表示剛登機。"
     },
     {
+      "questionId": "260921090617017",
+      "revision": 1,
       "number": 17,
       "groupId": "round01-cloze-16-20",
       "q": "Which answer best fits blank 17?",
@@ -177,6 +211,8 @@
       "e": "答案是 (A) seated。be seated 表示「坐著／被安排坐在」。句型 found I was seated next to an old man 語法完整。"
     },
     {
+      "questionId": "260921090617018",
+      "revision": 1,
       "number": 18,
       "groupId": "round01-cloze-16-20",
       "q": "Which answer best fits blank 18?",
@@ -187,6 +223,8 @@
       "e": "答案是 (C) flight attendant。情境在飛機上，協助乘客把隨身行李放入上方行李櫃的人是空服員。"
     },
     {
+      "questionId": "260921090617019",
+      "revision": 1,
       "number": 19,
       "groupId": "round01-cloze-16-20",
       "q": "Which answer best fits blank 19?",
@@ -197,6 +235,8 @@
       "e": "答案是 (B) nervous。文章開頭已說 I was really nervous about the flight，而且老先生接著安慰他 not to worry，是明確上下文線索。"
     },
     {
+      "questionId": "260921090617020",
+      "revision": 1,
       "number": 20,
       "groupId": "round01-cloze-16-20",
       "q": "Which answer best fits blank 20?",
@@ -207,6 +247,8 @@
       "e": "答案是 (B) After。飛機離地之後，作者才覺得 OK，時間先後關係最合理。"
     },
     {
+      "questionId": "260921090617021",
+      "revision": 1,
       "number": 21,
       "groupId": "round01-cloze-21-25",
       "introLabel": "題組｜Questions 21–25",
@@ -219,6 +261,8 @@
       "e": "答案是 (B) actors。下一句直接說 he is one of the highest paid actors in the world，可由上下文判斷。"
     },
     {
+      "questionId": "260921090617022",
+      "revision": 1,
       "number": 22,
       "groupId": "round01-cloze-21-25",
       "q": "Which answer best fits blank 22?",
@@ -229,6 +273,8 @@
       "e": "答案是 (D) another。another + 單數可數名詞，表示「另一個城市」；another city 結構正確。"
     },
     {
+      "questionId": "260921090617023",
+      "revision": 1,
       "number": 23,
       "groupId": "round01-cloze-21-25",
       "q": "Which answer best fits blank 23?",
@@ -239,6 +285,8 @@
       "e": "答案是 (D) factory。後文說 Jim 當清潔工、警衛，並以 worker 身分每天工作八小時，factory 最符合整體情境。"
     },
     {
+      "questionId": "260921090617024",
+      "revision": 1,
       "number": 24,
       "groupId": "round01-cloze-21-25",
       "q": "Which answer best fits blank 24?",
@@ -249,6 +297,8 @@
       "e": "答案是 (A) not only。後面已有 but also went to school at night，形成 not only ... but also ... 的對等結構。"
     },
     {
+      "questionId": "260921090617025",
+      "revision": 1,
       "number": 25,
       "groupId": "round01-cloze-21-25",
       "q": "Which answer best fits blank 25?",
@@ -259,6 +309,8 @@
       "e": "答案是 (C) In the end，表示「最後」。前文描述白天工作、晚上上學的辛苦生活，最後他輟學，語意銜接自然。"
     },
     {
+      "questionId": "260921090617026",
+      "revision": 1,
       "number": 26,
       "section": "第三部分：閱讀理解",
       "groupId": "round01-reading-26-27",
@@ -272,6 +324,8 @@
       "e": "答案是 (B) In a newspaper。內容是徵友分類廣告，並以 Respond to Box 6543 回覆，最符合報紙分類廣告形式。"
     },
     {
+      "questionId": "260921090617027",
+      "revision": 1,
       "number": 27,
       "groupId": "round01-reading-26-27",
       "q": "Who shouldn’t respond to this ad?",
@@ -282,6 +336,8 @@
       "e": "答案是 (C) A person that smokes。廣告最後明確寫 No smokers；其他條件如 27 歲、單身、個性有趣都符合徵友條件。"
     },
     {
+      "questionId": "260921090617028",
+      "revision": 1,
       "number": 28,
       "groupId": "round01-reading-28-29",
       "introLabel": "題組｜Questions 28–29｜Rosie’s Diner",
@@ -294,6 +350,8 @@
       "e": "答案是 (C)。Fish special 包含 fish、rice、salad，且所有餐點另附自選 bread 與 beverage，因此 rice, salad, bread, and tea 符合。"
     },
     {
+      "questionId": "260921090617029",
+      "revision": 1,
       "number": 29,
       "groupId": "round01-reading-28-29",
       "q": "What would be your total if you and a friend ordered two chicken specials?",
@@ -304,6 +362,8 @@
       "e": "答案是 (C) NT$220。Chicken special 每份 NT$100，兩份共 NT$200；加 10% service charge 為 NT$20，因此總額 NT$220。"
     },
     {
+      "questionId": "260921090617030",
+      "revision": 1,
       "number": 30,
       "groupId": "round01-reading-30-32",
       "introLabel": "題組｜Questions 30–32｜Letter",
@@ -316,6 +376,8 @@
       "e": "答案是 (C) What she’s doing at school。信中主要談課業、American history、期末考與讀書夥伴 Helen，主題是 Tara 在學校的近況。"
     },
     {
+      "questionId": "260921090617031",
+      "revision": 1,
       "number": 31,
       "groupId": "round01-reading-30-32",
       "q": "What class does Tara mention in the letter?",
@@ -326,6 +388,8 @@
       "e": "答案是 (B) American History。文中直接寫 The toughest class I have is American history."
     },
     {
+      "questionId": "260921090617032",
+      "revision": 1,
       "number": 32,
       "groupId": "round01-reading-30-32",
       "q": "What is NOT TRUE about Helen?",
@@ -336,6 +400,8 @@
       "e": "答案是 (C)。文章只說 Tara 寫信給自己的 Aunt Susan，沒有任何資訊表示 Susan 也是 Helen 的阿姨；Helen 與 Tara 同住 dorm、是 study partner，並給 Tara 很多幫助。"
     },
     {
+      "questionId": "260921090617033",
+      "revision": 1,
       "number": 33,
       "groupId": "round01-reading-33-35",
       "introLabel": "題組｜Questions 33–35｜Stephen King",
@@ -348,6 +414,8 @@
       "e": "答案是 (B)。文章明確描述 Carrie 成為暢銷書、許多作品賣得很好且被拍成電影，因此說他「作家生涯沒有很多成功」是錯的。"
     },
     {
+      "questionId": "260921090617034",
+      "revision": 1,
       "number": 34,
       "groupId": "round01-reading-33-35",
       "q": "What has happened to many of Stephen King’s books?",
@@ -358,6 +426,8 @@
       "e": "答案是 (B)。文章寫 Many of his novels have been turned into films，表示許多作品被改編成電影。"
     },
     {
+      "questionId": "260921090617035",
+      "revision": 1,
       "number": 35,
       "groupId": "round01-reading-33-35",
       "q": "When did Stephen King begin writing?",
