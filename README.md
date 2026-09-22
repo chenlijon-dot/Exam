@@ -1171,6 +1171,26 @@ Stage 1：34 題文字骨架 + 官方答案 + expectedImages mapping
 
 出版社版本或學年度改變時，要先核對新實體教材目錄，不直接沿用舊 catalog。
 
+截至 2026-09-22，國文第一冊自編題庫已完成並正式納入永久題目 identity 治理：
+
+```text
+第一課〈夏夜〉             簡易／中等／困難
+第二課〈生之歌選〉         簡易／中等／困難
+第三課〈吃冰的滋味〉       簡易／中等／困難
+語文天地一〈標點符號使用法〉 簡易／中等／困難
+第四課〈差不多先生傳〉     簡易／中等／困難，各 20 題
+```
+
+第四課三份正式自編題位於：
+
+```text
+chapter-bank/chinese/7-1/lesson-04/practice-easy.json
+chapter-bank/chinese/7-1/lesson-04/practice-medium.json
+chapter-bank/chinese/7-1/lesson-04/practice-hard.json
+```
+
+第四課題目 authority 為 Google Drive canonical 教材知識庫；60 題均使用 `sourceType: practice-generated`、永久 `questionId`、`revision: 1`、`conceptIds` 與 canonical option identity 相容的可洗牌選項模型。顯示題號 `number` 不作歷史 identity。
+
 ---
 
 # 17. 自然七上 chapter tree
