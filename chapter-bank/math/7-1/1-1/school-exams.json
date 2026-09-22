@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-1-school",
+    "examType": "math-school-exam-section-bank",
+    "examTypeLabel": "數學七上 1-1 各校題庫",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-1",
+    "title": "1-1｜各校題庫",
+    "subtitle": "8 題｜各校真實段考拆題",
+    "difficulty": "math-7-1-1-1-school",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依教材小節拆題；保留學校／年度／段考／原題號 provenance。原選擇題保留原始選項順序；填充、計算、作圖題為網站自動判分需要改編成四選一，並以 adaptedForWeb 標示。答案以原校答案卷核對。"
+  },
+  "questions": [
+    {
+      "questionId": "260922151000001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-01",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "如圖，數線上有 P、Q、R、S 四點，則下列各點座標敘述，何者錯誤？",
+      "o": [
+        "P（-4又2/5）",
+        "Q（-2）",
+        "R（-1/2）",
+        "S（3又1/3）"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。由數線刻度可判讀 Q=-2、R=-1/2、S=3又1/3，而 P 的位置不是 -4又2/5，因此 A 錯誤。",
+      "conceptIds": [
+        "math-7-1-1-1-number-line-reading",
+        "math-7-1-1-1-fraction-number-line"
+      ],
+      "sourcePage": 1,
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 4,
+        "tickStep": 0.5,
+        "showNumberLabels": false,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -4.6,
+            "label": "P",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -2,
+            "label": "Q",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -0.5,
+            "label": "R",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 3.3333333333333335,
+            "label": "S",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      }
+    },
+    {
+      "questionId": "260922151000002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-02",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "為慶祝板橋國中 60 週年校慶，七年級各班均有擺攤販售物品。假設每班的成本均為 3000 元，711 班總營業額為 3600 元，盈餘為 600 元，記為 +3，則 704 班總營業額為 2800 元，應記為？",
+      "o": [
+        "-2",
+        "-1",
+        "-200",
+        "-100"
+      ],
+      "a": 1,
+      "e": "711 班盈餘 600 元記為 +3，表示每 200 元為 1 單位。704 班虧損 200 元，所以記為 -1，選 B。",
+      "conceptIds": [
+        "math-7-1-1-1-signed-context"
+      ],
+      "sourcePage": 1
+    },
+    {
+      "questionId": "260922151000003",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-03",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "數線上有 A、B、C、D 四點，座標分別為 A(-21)、B(-13)、C(-6)、D(2)，則下列線段何者最短？",
+      "o": [
+        "AB",
+        "BC",
+        "CD",
+        "BD"
+      ],
+      "a": 1,
+      "e": "各線段長分別為 8、7、8、15，所以 BC 最短，選 B。",
+      "conceptIds": [
+        "math-7-1-1-1-number-line-distance"
+      ],
+      "sourcePage": 1
+    },
+    {
+      "questionId": "260922151000004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-04",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "數線上有 A、B、C 三點，若 B 點為 A(13)、C(-5) 兩點的中點，則 B 點的座標為？",
+      "o": [
+        "31",
+        "9",
+        "5",
+        "4"
+      ],
+      "a": 3,
+      "e": "中點座標為 (13+(-5))/2=4，選 D。",
+      "conceptIds": [
+        "math-7-1-1-1-midpoint"
+      ],
+      "sourcePage": 1
+    },
+    {
+      "questionId": "260922151000005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "一-05",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "數線上 A、B、C 三點，且 B 點在 C 點左邊 7 個單位長的位置。若 B 點座標為 -13，且 AC=10，則 A 點的座標有可能為下列何者？",
+      "o": [
+        "-10",
+        "-6",
+        "4",
+        "6"
+      ],
+      "a": 2,
+      "e": "B=-13，C=-6。又 AC=10，所以 A 可能為 -16 或 4；選項中只有 4，選 C。",
+      "conceptIds": [
+        "math-7-1-1-1-number-line-distance",
+        "math-7-1-1-1-number-line-shift"
+      ],
+      "sourcePage": 1
+    },
+    {
+      "questionId": "260922151000006",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "二-01",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "計算 -|-8| 的值為何？",
+      "o": [
+        "-8",
+        "8",
+        "0",
+        "-16"
+      ],
+      "a": 0,
+      "e": "|-8|=8，所以 -|-8|=-8，選 A。",
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "sourcePage": 2,
+      "originalQuestionType": "fill-in",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為填充題，網站版改為四選一；核心計算與答案不變。"
+    },
+    {
+      "questionId": "260922151000007",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "三-1(1)",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "下列哪一個數線圖，正確表示 A(3)、B(-1/3)、C(3/4)、D(-2)、E(9/5) 在數線上的位置？",
+      "o": [
+        "圖(A)",
+        "圖(B)",
+        "圖(C)",
+        "圖(D)"
+      ],
+      "a": 0,
+      "e": "由小到大為 -2 < -1/3 < 3/4 < 9/5 < 3，因此數線上由左到右應為 D、B、C、E、A，只有圖(A)正確。",
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-order"
+      ],
+      "sourcePage": "答案卷",
+      "originalQuestionType": "drawing",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題要求在數線上作圖；網站版改為四個 native number-line 選項。",
+      "optionLayout": "grid-2x2",
+      "optionDiagrams": [
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "showArrows": true,
+          "points": [
+            {
+              "x": 3,
+              "label": "A",
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333333333,
+              "label": "B",
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "C",
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "D",
+              "style": "solid"
+            },
+            {
+              "x": 1.8,
+              "label": "E",
+              "style": "solid"
+            }
+          ]
+        },
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "showArrows": true,
+          "points": [
+            {
+              "x": 3,
+              "label": "A",
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "B",
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "C",
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333333333,
+              "label": "D",
+              "style": "solid"
+            },
+            {
+              "x": 1.8,
+              "label": "E",
+              "style": "solid"
+            }
+          ]
+        },
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "showArrows": true,
+          "points": [
+            {
+              "x": 3,
+              "label": "A",
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333333333,
+              "label": "B",
+              "style": "solid"
+            },
+            {
+              "x": 1.8,
+              "label": "C",
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "D",
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "E",
+              "style": "solid"
+            }
+          ]
+        },
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "showArrows": true,
+          "points": [
+            {
+              "x": 1.8,
+              "label": "A",
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333333333,
+              "label": "B",
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "C",
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "D",
+              "style": "solid"
+            },
+            {
+              "x": 3,
+              "label": "E",
+              "style": "solid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "260922151000008",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "三-1(2)",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "將 A(3)、B(-1/3)、C(3/4)、D(-2)、E(9/5) 五點所表示的數由小到大排列，何者正確？",
+      "o": [
+        "-2 < -1/3 < 3/4 < 9/5 < 3",
+        "-2 < 3/4 < -1/3 < 9/5 < 3",
+        "-1/3 < -2 < 3/4 < 3 < 9/5",
+        "3 < 9/5 < 3/4 < -1/3 < -2"
+      ],
+      "a": 0,
+      "e": "正確由小到大為 -2 < -1/3 < 3/4 < 9/5 < 3，選 A。",
+      "conceptIds": [
+        "math-7-1-1-1-number-line-order"
+      ],
+      "sourcePage": "答案卷",
+      "originalQuestionType": "ordering",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為排序作答，網站版改為四選一。"
+    }
+  ]
+}
