@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-1-school",
+    "difficulty": "math-7-1-1-1-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-1 正數與負數｜各校題庫",
+    "title": "1-1 正數與負數｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜土城國中 8 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-1",
+    "unit": "1-1 正數與負數",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-1 正數與負數 拆題；土城國中此卷未附官方答案，因此本批答案由題目內容計算推導，answerVerified=false，待官方答案取得後再核對。"
+  },
+  "source": {
+    "school": "新北市立土城國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": false,
+    "answerNote": "未提供官方答案；答案由題目內容計算推導，待日後取得官方答案後再核對。"
+  },
+  "questions": [
+    {
+      "questionId": "260922195100001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-01",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-signed-numbers"
+      ],
+      "q": "最大的負整數是 -1。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 0,
+      "e": "負整數為 -1、-2、-3、…，其中最大的是 -1，所以敘述正確。"
+    },
+    {
+      "questionId": "260922195100002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-02",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "數線上有 A(a) 和 B(b) 兩點，若 A 點在原點左側，B 點在原點右側，則 a 與 b 一定互為相反數。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 1,
+      "e": "分居原點兩側只代表一負一正，不代表到原點距離相等，因此不一定互為相反數。"
+    },
+    {
+      "questionId": "260922195100003",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-03",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number"
+      ],
+      "q": "如果 a 是一個負數，則 -a 就是一個正數。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 0,
+      "e": "a<0 時，改變符號得到 -a>0，所以敘述正確。"
+    },
+    {
+      "questionId": "260922195100004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-04",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-number-line-order"
+      ],
+      "q": "在數線上的點，若離原點愈遠，則表示這個數愈大。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 1,
+      "e": "離原點愈遠表示絕對值愈大，但負數可能更小，例如 -10 比 -2 離原點更遠，卻有 -10<-2。"
+    },
+    {
+      "questionId": "260922195100005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "一-09",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-number-line-order"
+      ],
+      "q": "若 a、b 均為負數，且 |a|>|b|，則 a<b。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 0,
+      "e": "兩數皆為負數時，絕對值較大的數在數線上更左邊，因此數值更小，所以 a<b。"
+    },
+    {
+      "questionId": "260922195100006",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "一-13",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "如圖，將數線上 -2 和 4 之間五等分，得到 4 個等分點，依次為 a₁、a₂、a₃、a₄，則下列敘述何者正確？ [114 土城國中]",
+      "o": [
+        "a₂=0",
+        "a₂ 在原點左邊",
+        "-2<a₁<-1",
+        "2<a₄<3"
+      ],
+      "a": 3,
+      "e": "區間長 6，五等分後每段為 6/5=1.2，因此 a₁=-0.8、a₂=0.4、a₃=1.6、a₄=2.8，只有 D 正確。",
+      "diagram": {
+        "type": "number-line",
+        "min": -2,
+        "max": 4,
+        "tickStep": 1.2,
+        "showNumberLabels": true,
+        "labelValues": [
+          -2,
+          4
+        ],
+        "showArrows": true,
+        "points": [
+          {
+            "x": -0.8,
+            "label": "a₁",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 0.4,
+            "label": "a₂",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1.6,
+            "label": "a₃",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 2.8,
+            "label": "a₄",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      }
+    },
+    {
+      "questionId": "260922195100007",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "一-14",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-integers"
+      ],
+      "q": "若甲為整數且乙為正整數，若 |甲|≤5、|乙|<11，則滿足甲的所有整數共有 a 個，滿足乙的所有整數共有 b 個。下列哪一個敘述有誤？ [114 土城國中]",
+      "o": [
+        "a=11",
+        "b=21",
+        "滿足甲的所有整數和必為 0",
+        "a-b>0"
+      ],
+      "a": 1,
+      "e": "甲可為 -5 到 5，共 11 個；乙為正整數且小於 11，只能是 1 到 10，共 10 個。因此 b=21 錯誤，其餘皆成立。"
+    },
+    {
+      "questionId": "260922195100008",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "一-17",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "q": "假設甲、乙均為整數，且 2×|甲+1|+|乙-1|=2，則下列哪一個不可能是「甲-乙」的結果？ [114 土城國中]",
+      "o": [
+        "-3",
+        "-1",
+        "0",
+        "1"
+      ],
+      "a": 3,
+      "e": "若 |甲+1|=1，則乙=1，可得甲-乙=-3 或 -1；若 |甲+1|=0，則甲=-1 且 |乙-1|=2，可得甲-乙=-4 或 0。因此 1 不可能。"
+    }
+  ]
+}
