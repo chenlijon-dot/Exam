@@ -1171,7 +1171,7 @@ Stage 1：34 題文字骨架 + 官方答案 + expectedImages mapping
 
 出版社版本或學年度改變時，要先核對新實體教材目錄，不直接沿用舊 catalog。
 
-截至 2026-09-22，國文第一冊自編題庫已完成並正式納入永久題目 identity 治理：
+截至 2026-09-23，國文第一冊自編題庫已完成並正式納入永久題目 identity 治理：
 
 ```text
 第一課〈夏夜〉             簡易／中等／困難
@@ -1180,9 +1180,10 @@ Stage 1：34 題文字骨架 + 官方答案 + expectedImages mapping
 語文天地一〈標點符號使用法〉 簡易／中等／困難
 第四課〈差不多先生傳〉     簡易／中等／困難，各 20 題
 第五課〈論語選〉             簡易／中等／困難，各 20 題
+第六課〈那默默的一群〉     簡易／中等／困難，各 20 題
 ```
 
-第四、五課三份正式自編題分別位於：
+第四～六課三份正式自編題分別位於：
 
 ```text
 chapter-bank/chinese/7-1/lesson-04/practice-easy.json
@@ -1192,9 +1193,13 @@ chapter-bank/chinese/7-1/lesson-04/practice-hard.json
 chapter-bank/chinese/7-1/lesson-05/practice-easy.json
 chapter-bank/chinese/7-1/lesson-05/practice-medium.json
 chapter-bank/chinese/7-1/lesson-05/practice-hard.json
+
+chapter-bank/chinese/7-1/lesson-06/practice-easy.json
+chapter-bank/chinese/7-1/lesson-06/practice-medium.json
+chapter-bank/chinese/7-1/lesson-06/practice-hard.json
 ```
 
-第四、五課題目 authority 均為各課 Google Drive canonical 教材知識庫；正式自編題使用 `sourceType: practice-generated`、永久 `questionId`、`revision: 1`、`conceptIds` 與 canonical option identity 相容的可洗牌選項模型。顯示題號 `number` 不作歷史 identity。第五課另保留既有 school-exam sidecar，與 practice-generated 題庫分離。
+第四～六課題目 authority 均為各課 Google Drive canonical 教材知識庫；正式自編題使用 `sourceType: practice-generated`、永久 `questionId`、`revision: 1`、`conceptIds` 與 canonical option identity 相容的可洗牌選項模型。顯示題號 `number` 不作歷史 identity。第五課另保留既有 school-exam sidecar，與 practice-generated 題庫分離。第六課目前 canonical 尚未完整列出逐條字音字形／注釋，因此本批自編題不自行補造未有教材 evidence 的字詞考點。
 
 ---
 
