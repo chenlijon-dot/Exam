@@ -6,7 +6,7 @@
     "examType": "math-school-section-school-exam",
     "examTypeLabel": "數學七上 1-1 正數與負數｜各校題庫",
     "title": "1-1 正數與負數｜各校題庫",
-    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜板橋國中 8 題",
     "subject": "math",
     "subjectLabel": "數學",
     "semester": "7-1",
@@ -109,9 +109,150 @@
       "e": "官方答案為 A。由原圖可判讀 P 位於 -5 與 -4 之間的五等分位置，P=-4又3/5，因此「P（-4又2/5）」錯誤；Q=-2、R=-1/2、S=3又1/3 均與原圖相符。"
     },
     {
-      "questionId": "260922150900002",
+      "questionId": "260922151500001",
       "revision": 1,
       "number": 2,
+      "originalQuestionNumber": "一-02",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-signed-context"
+      ],
+      "q": "為慶祝板橋國中 60 週年校慶，七年級各班均有擺攤販售物品。假設每班成本均為 3000 元，711 班總營業額為 3600 元，盈餘 600 元記為 +3，則 704 班總營業額為 2800 元，應記為何者？ [114 板橋國中]",
+      "o": [
+        "-2",
+        "-1",
+        "-200",
+        "-100"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。711 班盈餘 600 元記為 +3，表示每 200 元對應 1 單位；704 班虧損 200 元，因此記為 -1。"
+    },
+    {
+      "questionId": "260922151500002",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-03",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-order"
+      ],
+      "q": "數線上 A、B、C、D 四點的座標分別為 A(-21)、B(-13)、C(-6)、D(2)，則下列線段何者最短？ [114 板橋國中]",
+      "o": [
+        "AB",
+        "BC",
+        "CD",
+        "BD"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。各線段長為 AB=8、BC=7、CD=8、BD=15，所以 BC 最短。"
+    },
+    {
+      "questionId": "260922151500003",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-04",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-midpoint"
+      ],
+      "q": "數線上有 A、B、C 三點，若 B 點為 A(13)、C(-5) 兩點的中點，則 B 點的座標為何？ [114 板橋國中]",
+      "o": [
+        "31",
+        "9",
+        "5",
+        "4"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。中點座標為 (13+(-5))/2=4。"
+    },
+    {
+      "questionId": "260922151500004",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "一-05",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-shift"
+      ],
+      "q": "數線上 A、B、C 三點，且 B 點在 C 點左邊 7 個單位長的位置。若 B 點座標為 -13，且 AC=10，則 A 點的座標有可能為下列何者？ [114 板橋國中]",
+      "o": [
+        "-10",
+        "-6",
+        "4",
+        "6"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。B=-13，且 B 在 C 左邊 7 單位，所以 C=-6。與 C 距離 10 的點為 4 或 -16，選項中只有 4。"
+    },
+    {
+      "questionId": "260922151500005",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "二-01",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "q": "計算 -|-8| 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "-8",
+        "8",
+        "0",
+        "16"
+      ],
+      "a": 0,
+      "e": "官方答案為 -8。|-8|=8，所以 -|-8|=-8。"
+    },
+    {
+      "questionId": "260922150900002",
+      "revision": 1,
+      "number": 7,
       "originalQuestionNumber": "三-1(1)",
       "school": "新北市立板橋國中",
       "year": "114",
@@ -316,6 +457,36 @@
       ],
       "a": 0,
       "e": "官方原題答案要求五點正確標在數線上。比較數值可得 -2 < -1/3 < 3/4 < 9/5 < 3，所以由左到右應為 D、B、C、E、A；符合選項 A。"
+    },
+    {
+      "questionId": "260922151500006",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "三-1(2)",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": "答案卷",
+      "type": "mcq",
+      "originalQuestionType": "排序題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-order",
+        "math-7-1-1-1-fraction-number-line"
+      ],
+      "q": "將 -2、-1/3、3/4、9/5、3 由小到大排列，何者正確？ [114 板橋國中｜原排序題改編]",
+      "o": [
+        "-2 < -1/3 < 3/4 < 9/5 < 3",
+        "-1/3 < -2 < 3/4 < 9/5 < 3",
+        "-2 < -1/3 < 9/5 < 3/4 < 3",
+        "-2 < -1/3 < 3/4 < 3 < 9/5"
+      ],
+      "a": 0,
+      "e": "官方答案為 -2 < -1/3 < 3/4 < 9/5 < 3，所以選 A。"
     }
   ]
 }
