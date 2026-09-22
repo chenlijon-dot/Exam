@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-11",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第十一回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第十一回",
+    "difficulty": "english-gept-elementary-reading-round-11",
+    "difficultyLabel": "第十一回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceBook": "萬事通 智能碼書《國中英文 全民英檢攻略 全》",
+    "sourcePages": "p.85–92",
+    "sourceDocId": "1w_aOg0JbN6ALZajEiOUn0Evv59hhnTdbd5W3zwnkH1o",
+    "answerVerified": true,
+    "answerSource": "原書解答頁（第十一回）",
+    "sourceNote": "題目文字依 Google Drive 人工校正完成之《國中英文 全民英檢攻略 全》第十一回原始文字校正版建立，原書 p.85–92，共 35 題。全部答案已依原書解答頁逐題核對，answerVerified=true。Q27 依原頁樓層平面圖作答，文字 authority 僅保存附圖註記與方向資訊，不另行重畫版面。題目與 A/B/C/D 原始順序完整保留；題組內容只存一次並由 groupId 共用。"
+  },
+  "questions": [
+    {
+      "questionId": "260922144300001",
+      "revision": 1,
+      "number": 1,
+      "q": "Be careful with the boiling water and the _____. You might get burned.",
+      "o": [
+        "flavor",
+        "stream",
+        "failure",
+        "steam"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 1,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (D) steam。沸水產生的蒸氣可能造成燙傷。"
+    },
+    {
+      "questionId": "260922144300002",
+      "revision": 1,
+      "number": 2,
+      "q": "Andrew was _____ today for he had a bad cold.",
+      "o": [
+        "absent",
+        "ahead",
+        "abroad",
+        "awake"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 2,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) absent。因重感冒而缺席。"
+    },
+    {
+      "questionId": "260922144300003",
+      "revision": 1,
+      "number": 3,
+      "q": "Ms. Principal is open and is willing to listen to our _____ anytime.",
+      "o": [
+        "opinions",
+        "suggests",
+        "onions",
+        "complains"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 3,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) opinions。listen to our opinions 表示聽取我們的意見。"
+    },
+    {
+      "questionId": "260922144300004",
+      "revision": 1,
+      "number": 4,
+      "q": "Don’t be too _____. Try to calm down and drink some water, OK?",
+      "o": [
+        "proud",
+        "amazed",
+        "mad",
+        "excited"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 4,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (C) mad。後句要對方 calm down，表示前面情緒太生氣。"
+    },
+    {
+      "questionId": "260922144300005",
+      "revision": 1,
+      "number": 5,
+      "q": "The new coach _____ our mistakes and asked us to make adjustments.",
+      "o": [
+        "pointed out",
+        "passed out",
+        "turned out",
+        "looked out"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 5,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "正式答案 (A) pointed out。point out mistakes 表示指出錯誤。"
+    },
+    {
+      "questionId": "260922144300006",
+      "revision": 1,
+      "number": 6,
+      "q": "There are eight main _____ in the solar system, Pluto not included.",
+      "o": [
+        "planets",
+        "priests",
+        "plants",
+        "principles"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 6,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) planets。太陽系主要有八大行星。"
+    },
+    {
+      "questionId": "260922144300007",
+      "revision": 1,
+      "number": 7,
+      "q": "Aaron lived in the States for 10 years. No wonder he speaks English so _____.",
+      "o": [
+        "fluently",
+        "politely",
+        "honestly",
+        "basically"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 7,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-adverb-context"
+      ],
+      "e": "正式答案 (A) fluently。住美國十年，英文說得流利最符合語意。"
+    },
+    {
+      "questionId": "260922144300008",
+      "revision": 1,
+      "number": 8,
+      "q": "The engineers were trying to _____ the reason the train suddenly stopped.",
+      "o": [
+        "figure out",
+        "put out",
+        "make fun of",
+        "look forward to"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 8,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "正式答案 (A) figure out。figure out the reason 表示找出原因。"
+    },
+    {
+      "questionId": "260922144300009",
+      "revision": 1,
+      "number": 9,
+      "q": "Get home earlier, sweet. Today’s Grandma’s _____ birthday party. We’ll all celebrate it for her!",
+      "o": [
+        "seventy",
+        "seventy’s",
+        "seventieth",
+        "seventies"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 9,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-ordinal-number"
+      ],
+      "e": "正式答案 (C) seventieth。第七十歲生日需用序數。"
+    },
+    {
+      "questionId": "260922144300010",
+      "revision": 1,
+      "number": 10,
+      "q": "To keep quiet, we should turn off our cellphones _____ the meeting.",
+      "o": [
+        "by",
+        "during",
+        "with",
+        "below"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 10,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-preposition"
+      ],
+      "e": "正式答案 (B) during。during the meeting 表示會議期間。"
+    },
+    {
+      "questionId": "260922144300011",
+      "revision": 1,
+      "number": 11,
+      "q": "There _____ a big book fair at TWTC next week.",
+      "o": [
+        "be",
+        "will have",
+        "will being",
+        "is going to be"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 11,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-there-be-future"
+      ],
+      "e": "正式答案 (D) is going to be。there be 的未來式可用 there is going to be。"
+    },
+    {
+      "questionId": "260922144300012",
+      "revision": 1,
+      "number": 12,
+      "q": "Alice is _____ that everyone likes her!",
+      "o": [
+        "such cute",
+        "so a girl",
+        "such a cute girl",
+        "so a cute girl"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 12,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-such-that"
+      ],
+      "e": "正式答案 (C) such a cute girl。such + a + adjective + singular noun + that。"
+    },
+    {
+      "questionId": "260922144300013",
+      "revision": 1,
+      "number": 13,
+      "q": "Today isn’t my day — I have _____ homework than my neighbor does.",
+      "o": [
+        "much more",
+        "much",
+        "less fewer",
+        "very little"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 13,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-comparative"
+      ],
+      "e": "正式答案 (A) much more。homework 是不可數名詞，more 前可用 much 加強比較。"
+    },
+    {
+      "questionId": "260922144300014",
+      "revision": 1,
+      "number": 14,
+      "q": "I _____ a board game when I suddenly saw your message.",
+      "o": [
+        "have played",
+        "played",
+        "had played",
+        "was playing"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 14,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-past-progressive"
+      ],
+      "e": "正式答案 (D) was playing。表示當訊息突然出現時，正在玩桌遊。"
+    },
+    {
+      "questionId": "260922144300015",
+      "revision": 1,
+      "number": 15,
+      "q": "Anything _____ needs to be changed will be at my command.",
+      "o": [
+        "which",
+        "that",
+        "where",
+        "what"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 15,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-relative-pronoun"
+      ],
+      "e": "正式答案 (B) that。先行詞 Anything 常用 that 引導限制性關係子句。"
+    },
+    {
+      "questionId": "260922144300016",
+      "revision": 1,
+      "number": 16,
+      "q": "第 16 空應填入哪一個選項？",
+      "o": [
+        "are",
+        "have",
+        "is",
+        "would"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 16,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-chinese-learning",
+        "english-gept-elementary-reading-present-progressive"
+      ],
+      "e": "正式答案 (A) are。more than 30 million people are learning Chinese 為現在進行式。",
+      "section": "第二部分：段落填空",
+      "groupId": "round11-cloze-16-20",
+      "introLabel": "Questions 16–20｜Learning Chinese",
+      "intro": "Twenty years ago, everyone wanted to learn Japanese. Today more than 30 million people in the world __16__ learning Chinese. Children in America, Japan, Europe, and Korea start taking Chinese __17__. Parents want their children to begin at a young age. Some kids even start when they are only five.\n\nSome people learn Chinese because they are interested in Chinese culture. __18__ think mastering Chinese will make them more money. Some businessmen find it difficult to talk to their __19__ in Chinese when they go to China or Taiwan, which makes them lose their chances of business. Usually they decide to learn Chinese on the flight back.\n\nAlthough many people think Chinese is a difficult language, they still want to __20__. Whether it is for fun or for work, people just want to stick to the trend."
+    },
+    {
+      "questionId": "260922144300017",
+      "revision": 1,
+      "number": 17,
+      "q": "第 17 空應填入哪一個選項？",
+      "o": [
+        "lessons",
+        "dishes",
+        "exercise",
+        "buses"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 17,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-chinese-learning",
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "正式答案 (A) lessons。take Chinese lessons 表示上中文課。",
+      "groupId": "round11-cloze-16-20"
+    },
+    {
+      "questionId": "260922144300018",
+      "revision": 1,
+      "number": 18,
+      "q": "第 18 空應填入哪一個選項？",
+      "o": [
+        "Another",
+        "Others",
+        "The other",
+        "The others"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 18,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-chinese-learning",
+        "english-gept-elementary-reading-pronoun"
+      ],
+      "e": "正式答案 (B) Others。前句 Some people...，後句用 Others... 表示其他一些人。",
+      "groupId": "round11-cloze-16-20"
+    },
+    {
+      "questionId": "260922144300019",
+      "revision": 1,
+      "number": 19,
+      "q": "第 19 空應填入哪一個選項？",
+      "o": [
+        "employees",
+        "customers",
+        "supervisors",
+        "owners"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 19,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-chinese-learning",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "正式答案 (B) customers。商人與中國或台灣的顧客溝通不良，會失去商機。",
+      "groupId": "round11-cloze-16-20"
+    },
+    {
+      "questionId": "260922144300020",
+      "revision": 1,
+      "number": 20,
+      "q": "第 20 空應填入哪一個選項？",
+      "o": [
+        "give it a try",
+        "fill out a form",
+        "pay it back",
+        "keep an eye on it"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 20,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-chinese-learning",
+        "english-gept-elementary-reading-idiom"
+      ],
+      "e": "正式答案 (A) give it a try。即使中文很難，仍想試試看。",
+      "groupId": "round11-cloze-16-20"
+    },
+    {
+      "questionId": "260922144300021",
+      "revision": 1,
+      "number": 21,
+      "q": "第 21 空應填入哪一個選項？",
+      "o": [
+        "hear of",
+        "hang up",
+        "hear from",
+        "hang out"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 21,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-letter",
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "正式答案 (C) hear from。Glad to hear from you 表示很高興收到你的消息。",
+      "section": "第二部分：段落填空",
+      "groupId": "round11-cloze-21-25",
+      "introLabel": "Questions 21–25｜Susie’s Letter",
+      "intro": "Hi Jack,\n\nGlad to __21__ you!\n\nThese days I __22__ for the monthly exam. Math is my worst subject of all and I spend lots of time on it. If you live closer, you can help me with my math homework.\n\nI am thinking to visit you, but the price of the ticket is too high. Maybe we should __23__ some money first. Then we can meet each other when we have enough money. What do you say?\n\nThe weather is getting colder and colder here, but it won’t be really cold until November. In November, the ground will __24__ with white snow — a very beautiful sight. I hope you can come and enjoy the __25__ with us. My mom will be happy that you stay with us.\n\nIt’s late, and I have to go now. We’re asked us to hand in the math homework by tomorrow. I may stay up late to deal with some huge problems. Good luck to me.\n\nBest regards,\nSusie"
+    },
+    {
+      "questionId": "260922144300022",
+      "revision": 1,
+      "number": 22,
+      "q": "第 22 空應填入哪一個選項？",
+      "o": [
+        "have read",
+        "have been preparing",
+        "have tested",
+        "had prepared"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 22,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-letter",
+        "english-gept-elementary-reading-grammar-present-perfect-progressive"
+      ],
+      "e": "正式答案 (B) have been preparing。These days 表示最近持續準備月考。",
+      "groupId": "round11-cloze-21-25"
+    },
+    {
+      "questionId": "260922144300023",
+      "revision": 1,
+      "number": 23,
+      "q": "第 23 空應填入哪一個選項？",
+      "o": [
+        "drop",
+        "save",
+        "cure",
+        "separate"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 23,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-letter",
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "正式答案 (B) save。票價太高，所以先存錢。",
+      "groupId": "round11-cloze-21-25"
+    },
+    {
+      "questionId": "260922144300024",
+      "revision": 1,
+      "number": 24,
+      "q": "第 24 空應填入哪一個選項？",
+      "o": [
+        "cover",
+        "be covering",
+        "have covered",
+        "be covered"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 24,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-letter",
+        "english-gept-elementary-reading-passive"
+      ],
+      "e": "正式答案 (D) be covered。the ground will be covered with snow 為未來被動。",
+      "groupId": "round11-cloze-21-25"
+    },
+    {
+      "questionId": "260922144300025",
+      "revision": 1,
+      "number": 25,
+      "q": "第 25 空應填入哪一個選項？",
+      "o": [
+        "scenery",
+        "climate",
+        "screen",
+        "curtain"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 25,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-letter",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "正式答案 (A) scenery。白雪覆地形成美麗景色，因此邀對方來欣賞 scenery。",
+      "groupId": "round11-cloze-21-25"
+    },
+    {
+      "questionId": "260922144300026",
+      "revision": 1,
+      "number": 26,
+      "q": "When does Audrey have an appointment with Mr. Campbell?",
+      "o": [
+        "At 8:45.",
+        "At 9:15.",
+        "In the afternoon.",
+        "Tomorrow morning."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 26,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-floor-plan",
+        "english-gept-elementary-reading-time-detail"
+      ],
+      "e": "正式答案 (B) At 9:15。a quarter past nine 即 9:15。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round11-reading-26-27",
+      "introLabel": "Questions 26–27｜Office Appointment and Floor Plan",
+      "intro": "Woman: Good morning. What can I do for you?\nAudrey: Yes. I have an appointment with Mr. Campbell.\nWoman: OK. What time is your appointment?\nAudrey: At a quarter past nine.\nWoman: Let me check. So... you’re Ms. Audrey Heavens, right?\nAudrey: Yes, I am.\nWoman: Please take the elevator to the 32nd floor. Go down the hall to the left. Mr. Campbell’s office is the second door on the right. The elevators are right behind you.\nAudrey: Thank you.\nWoman: You’re welcome.\n\n[原頁附樓層平面圖，辦公室位置選項標示 A、B、C、D。]"
+    },
+    {
+      "questionId": "260922144300027",
+      "revision": 1,
+      "number": 27,
+      "q": "Where is Mr. Campbell’s office?",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 27,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-floor-plan",
+        "english-gept-elementary-reading-spatial-layout"
+      ],
+      "e": "正式答案 (B) B。原書解答頁已核對為 B；本題依原頁樓層平面圖判讀。文字校正版保留了「電梯後方、往左走、右手邊第二間」的指示與原頁附圖註記。",
+      "groupId": "round11-reading-26-27"
+    },
+    {
+      "questionId": "260922144300028",
+      "revision": 1,
+      "number": 28,
+      "q": "Sandy needs some nail polish remover this month. If she buys six bottles of 300ml Pink Rose, how much should she pay?",
+      "o": [
+        "NT$2094",
+        "NT$2994",
+        "NT$1745",
+        "NT$2495"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 28,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-sale-calculation",
+        "english-gept-elementary-reading-quantitative"
+      ],
+      "e": "正式答案 (C) NT$1745。300ml 特價 NT$349，買五送一，所以六瓶只付五瓶：349 × 5 = 1745。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round11-reading-28-29",
+      "introLabel": "Questions 28–29｜Pink Rose Sale",
+      "intro": "Pink Rose\nSweet Rose Smell & Lovely Color of Pink\n#1 Nail Polish Remover from UK\n\nThe best for your hands\nOnly organic ingredients\nNo harm to your nails\nOnly use it twice a week.\nOnly keep it in cool places.\n\nBig Sale This Month\nS 120ml  NT$299 → $199\nM 200ml  NT$399 → $279\nL 300ml  NT$499 → $349\nBuy five and get one free."
+    },
+    {
+      "questionId": "260922144300029",
+      "revision": 1,
+      "number": 29,
+      "q": "Which is TRUE about Pink Rose?",
+      "o": [
+        "It is a flower shop.",
+        "It is popular in America.",
+        "It does not hurt your nails.",
+        "You save most if you buy the Small-size ones at the sale."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 29,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-advertisement",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (C)。廣告明確寫 No harm to your nails。",
+      "groupId": "round11-reading-28-29"
+    },
+    {
+      "questionId": "260922144300030",
+      "revision": 1,
+      "number": 30,
+      "q": "This passage is mainly about _____.",
+      "o": [
+        "how to learn to play the piano",
+        "how to raise money for the sick",
+        "how to make your own ad",
+        "how to lead a hard but your own life"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 30,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-biography",
+        "english-gept-elementary-reading-main-idea"
+      ],
+      "e": "正式答案 (D)。文章從失明、學琴、工作到公益行動，主軸是黃裕翔如何走出艱難但屬於自己的人生。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round11-reading-30-32",
+      "introLabel": "Questions 30–32｜Huang Yu-hsiang",
+      "intro": "Have you ever seen a blind person playing the piano? Huang Yu-hsiang, a Taiwanese blind piano player, amazed all the people with his warm and beautiful melody.\n\nHuang was born blind, but soon at the age of two, he showed great interests and gifts in music. He could play exactly the same tune on the piano after listening to his cousin play a song. His first teacher led him to play each note on the piano by placing his fingers on it. However, learning to play the piano is difficult for him. He had to spend a lot more time getting to know the place of each note.\n\nHuang got several prizes in the piano contest, but what really makes him feel proud is that he can make his living by making advertising music. Without eyes, he made pictures in his mind by listening to others’ talk about the ad.\n\nHe also shows great concerns on the needed. While studying in high school, he played the piano at a hospital for the sick. In 2011, he raised money by having a piano show in Japan, and gave the money to those who lost their homes during the tsunami. His smile, music, and care about the poor made all the people so touched."
+    },
+    {
+      "questionId": "260922144300031",
+      "revision": 1,
+      "number": 31,
+      "q": "How did Huang Yu-hsiang learn to play the piano?",
+      "o": [
+        "He learned from his mom, who was a piano teacher.",
+        "He learned from a sick person in Japan.",
+        "His piano teacher helped him get to know the places of each note.",
+        "He listened to his cousin playing it and learned by himself."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 31,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-biography",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (C)。文章說第一位老師把他的手指放在琴鍵上，幫助他認識各個音的位置。",
+      "groupId": "round11-reading-30-32"
+    },
+    {
+      "questionId": "260922144300032",
+      "revision": 1,
+      "number": 32,
+      "q": "Which is true?",
+      "o": [
+        "Huang feels proud of himself because he can play beautiful music.",
+        "Huang played the piano to help those who lost their homes in Japan.",
+        "Huang is a born piano player. Playing the piano is a piece of cake to him.",
+        "Huang started to care about sick or poor people after he became famous in 2011."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 32,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-biography",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (B)。2011 年他在日本舉辦鋼琴演出募款，並把錢捐給海嘯中失去家園的人。",
+      "groupId": "round11-reading-30-32"
+    },
+    {
+      "questionId": "260922144300033",
+      "revision": 1,
+      "number": 33,
+      "q": "What does “prominent” mean in the reading?",
+      "o": [
+        "Active.",
+        "Famous.",
+        "Interesting.",
+        "Hard-working."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 33,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-context-vocabulary",
+        "english-gept-elementary-reading-cultural-history"
+      ],
+      "e": "正式答案 (B) Famous。文中說 Vaudevillians became the most prominent stars，語意為當時最著名的明星。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round11-reading-33-35",
+      "introLabel": "Questions 33–35｜Vaudeville",
+      "intro": "In the 19th century, when people didn’t have radio, televisions, or movies in their lives, they still had something for fun. Vaudeville was very popular in America then — being famous for its songs, tricks, and dance.\n\nOn vaudeville theaters, people could see many dancers dancing, magic shows and animals playing tricks. Each performer gave his best show, and then came the next performer at once. The show was always carefully planned and brought different things each time. People felt very excited about it and called it “variety house.”\n\nSince people in the US were crazy about it, soon there were vaudeville theaters in almost all cities, even in small towns. The Vaudevillians, who were the performers in the theaters, became the most prominent stars of the day. Later on people began to look for other more interesting things. Movies, Radio, and TVs were thus created. Different from vaudeville, movies being much more different kinds of things to people, and people could easily either watch TV or listen to radio at home. That’s why vaudeville is no longer popular with a large number of people."
+    },
+    {
+      "questionId": "260922144300034",
+      "revision": 1,
+      "number": 34,
+      "q": "What CAN’T we see in vaudeville theaters?",
+      "o": [
+        "animal trick",
+        "cooking show",
+        "magic show",
+        "dancers"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 34,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cultural-history",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "正式答案 (B) cooking show。文中列出舞蹈、魔術與動物表演，沒有烹飪秀。",
+      "groupId": "round11-reading-33-35"
+    },
+    {
+      "questionId": "260922144300035",
+      "revision": 1,
+      "number": 35,
+      "q": "What can we learn from the reading?",
+      "o": [
+        "Movies were created much earlier than vaudeville.",
+        "People could spend less on movies than on vaudeville.",
+        "Vaudeville theaters are not popular anymore these days.",
+        "Vaudevillians always did the same things in their shows."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 11,
+      "originalQuestionNumber": 35,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cultural-history",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "正式答案 (C)。文章最後明確說 vaudeville is no longer popular with a large number of people。",
+      "groupId": "round11-reading-33-35"
+    }
+  ]
+}
