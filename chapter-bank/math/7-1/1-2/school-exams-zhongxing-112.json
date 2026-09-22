@@ -101,13 +101,13 @@
         "points": [
           {
             "x": 3,
-            "label": "A\\na",
+            "label": "A(a)",
             "showValue": false,
             "style": "solid"
           },
           {
             "x": 7,
-            "label": "B\\nb",
+            "label": "B(b)",
             "showValue": false,
             "style": "solid"
           }
