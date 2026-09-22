@@ -135,8 +135,8 @@
     },
     {
       key: 'chinese-7-1-lesson-06', code: '第六課', title: '那默默的一群', author: '張騰蛟', page: 80,
-      type: 'lesson', referenceReady: false, bankMenuReady: false,
-      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+      type: 'lesson', referenceReady: true, bankMenuReady: true,
+      desc: 'p.80～93 教材已收錄；canonical 教材知識庫與簡易／中等／困難各 20 題自編題已建立。'
     },
     {
       key: 'chinese-7-1-language-02', code: '語文天地二', title: '閱讀策略與資料檢索', author: '', page: 94,
