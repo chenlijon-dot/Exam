@@ -1,0 +1,568 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-05",
+    "unit": "第五課 論語選",
+    "scoreMode": "fixed",
+    "pointsPerQuestion": 5,
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive 第五課〈論語選〉canonical 教材知識庫自編；正式選文限〈學而〉、〈述而〉、〈衛靈公〉三則，另僅使用教材明列之孔子、《論語》基本常識與課內補充，不引入教材外章句。",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+      "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+      "lesson": "第五課〈論語選〉"
+    },
+    "difficulty": "chinese-7-1-l05-medium",
+    "title": "第五課〈論語選〉｜中等",
+    "subtitle": "國文第一冊｜自編題｜中等 20 題",
+    "difficultyLabel": "中等"
+  },
+  "questions": [
+    {
+      "questionId": "260922234500021",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "小安學完新成語後，每隔幾天就重新整理例句並練習使用。這最符合本課哪一觀念？",
+      "o": [
+        "學而時習之",
+        "人不知而不慍",
+        "擇其善者而從之",
+        "己所不欲，勿施於人"
+      ],
+      "a": 0,
+      "e": "學過之後持續溫習、練習，正是「學而時習之」的具體實踐。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-review-learning",
+        "chinese-7-1-l05-context-application"
+      ]
+    },
+    {
+      "questionId": "260922234500022",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "小組報告時，同學沒有採用小文的提議；小文仍平靜聽完理由並修改內容。這最接近哪句精神？",
+      "o": [
+        "人不知而不慍",
+        "有朋自遠方來",
+        "三人行，必有我師焉",
+        "己所不欲，勿施於人"
+      ],
+      "a": 0,
+      "e": "未被理解或採納時仍不怨怒，最能表現「人不知而不慍」的涵養。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-composure",
+        "chinese-7-1-l05-context-application"
+      ]
+    },
+    {
+      "questionId": "260922234500023",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "下列對第一則的理解，何者最完整？",
+      "o": [
+        "學習既有反覆實踐的樂趣，也包含與人切磋和自我涵養",
+        "學習只有考試成績提高才值得高興",
+        "朋友愈多就代表學問愈高",
+        "君子就是不必在意任何人的意見"
+      ],
+      "a": 0,
+      "e": "第一則依序談溫習之樂、朋友切磋之樂，以及不被了解時仍保持涵養。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-theme"
+      ]
+    },
+    {
+      "questionId": "260922234500024",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「有朋自遠方來」中的「朋」依教材脈絡，最適合理解為哪一類人？",
+      "o": [
+        "志同道合、可相互切磋的人",
+        "所有住在遠方的人",
+        "只指親戚",
+        "只指老師"
+      ],
+      "a": 0,
+      "e": "教材賞析將此句理解為志同道合的朋友相聚切磋。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-friends-learning"
+      ]
+    },
+    {
+      "questionId": "260922234500025",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "下列何者最容易誤解「人不知而不慍」？",
+      "o": [
+        "認為它要求人被誤解時完全不溝通，只能沉默",
+        "認為它重視情緒與品德涵養",
+        "認為它與君子修養有關",
+        "認為外界不認同時仍可充實自己"
+      ],
+      "a": 0,
+      "e": "教材常見迷思指出，此句不是消極地不與人溝通，而是強調不因未被理解而怨怒。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-composure",
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "260922234500026",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "小華看到同學整理筆記的方法很有效，便學習其做法；看到另一位同學常拖延，也提醒自己不要犯同樣錯誤。這最符合哪一則？",
+      "o": [
+        "第二則〈述而〉",
+        "第一則〈學而〉",
+        "第三則〈衛靈公〉",
+        "都與本課無關"
+      ],
+      "a": 0,
+      "e": "同時從別人的優點學習、從缺點反省自己，正是第二則的核心。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-learning-from-others",
+        "chinese-7-1-l05-context-application"
+      ]
+    },
+    {
+      "questionId": "260922234500027",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「三人行，必有我師焉」最合理的理解是什麼？",
+      "o": [
+        "與他人相處時，常能找到值得學習或警惕之處",
+        "三個人同行時一定有一位正式老師",
+        "只有品德完美的人才值得接近",
+        "人數達到三人才能開始學習"
+      ],
+      "a": 0,
+      "e": "教材指出「三人行」不宜死解為固定三人；重點是與人相處時皆可有所學。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-sanren",
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "260922234500028",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「擇其善者而從之」中的「從」在句意上最接近什麼？",
+      "o": [
+        "學習、效法",
+        "跟蹤",
+        "服從命令",
+        "陪同旅行"
+      ],
+      "a": 0,
+      "e": "依第二則文意，「從之」是選擇別人的優點加以學習、效法。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-follow-good",
+        "chinese-7-1-l05-wenyan-meaning"
+      ]
+    },
+    {
+      "questionId": "260922234500029",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "看到朋友說話太急而得罪人，小杰沒有先責怪朋友，反而想想自己是否也常如此。這最能實踐哪個觀念？",
+      "o": [
+        "其不善者而改之",
+        "有朋自遠方來",
+        "學而時習之",
+        "己所不欲，勿施於人"
+      ],
+      "a": 0,
+      "e": "看見他人不足後回頭檢視自己，就是「其不善者而改之」的自省精神。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-self-reflection",
+        "chinese-7-1-l05-context-application"
+      ]
+    },
+    {
+      "questionId": "260922234500030",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "下列哪一說法最不符合第二則的教材解讀？",
+      "o": [
+        "只要看到別人有缺點，就應直接批評對方",
+        "別人的優點可以成為學習對象",
+        "別人的缺點也能提醒自己",
+        "與人互動本身可以成為學習機會"
+      ],
+      "a": 0,
+      "e": "第二則重點在學習與自省，不是把焦點放在批評他人。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-self-reflection",
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "260922234500031",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "同學不喜歡被人在群組公開嘲笑，因此也不把別人的失誤截圖公開。這最符合哪一觀念？",
+      "o": [
+        "己所不欲，勿施於人",
+        "學而時習之",
+        "有朋自遠方來",
+        "三人行，必有我師焉"
+      ],
+      "a": 0,
+      "e": "自己不願被公開羞辱，便不把同樣的事施加在別人身上，正符合恕道。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-do-not-impose",
+        "chinese-7-1-l05-context-application"
+      ]
+    },
+    {
+      "questionId": "260922234500032",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "下列哪個行為最能表現本課「恕」的精神？",
+      "o": [
+        "做決定前先設身處地想想對方能否接受",
+        "只要自己喜歡就替別人安排",
+        "為了避免衝突而什麼都不說",
+        "要求別人完全照自己的標準做"
+      ],
+      "a": 0,
+      "e": "「恕」的核心是推己及人、設身處地與尊重他人。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-shu",
+        "chinese-7-1-l05-context-application"
+      ]
+    },
+    {
+      "questionId": "260922234500033",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "若有人把「己所不欲，勿施於人」解釋成「我喜歡的東西，別人一定也會喜歡」，問題在哪裡？",
+      "o": [
+        "把尊重他人變成以自己的喜好替他人作主",
+        "忽略了學習需要複習",
+        "誤解了朋友來訪的樂趣",
+        "把「慍」解成喜悅"
+      ],
+      "a": 0,
+      "e": "教材明確提醒，這句不是把自己喜歡的事強加給別人，而是尊重差異、避免施加自己也不願承受的事。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-do-not-impose",
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "260922234500034",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "第三則先由子貢發問，再由孔子回答「恕」，這種內容安排最能表現《論語》的哪一特色？",
+      "o": [
+        "以記言與對答保存思想",
+        "以長篇敘事塑造人物",
+        "以韻文描寫景色",
+        "以章回形式鋪陳情節"
+      ],
+      "a": 0,
+      "e": "《論語》是語錄體，常以簡短言論和師生問答呈現思想。",
+      "conceptIds": [
+        "chinese-7-1-l05-lunyu-genre",
+        "chinese-7-1-l05-third-zigong"
+      ]
+    },
+    {
+      "questionId": "260922234500035",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "本課三則依序最適合對應哪三個重點？",
+      "o": [
+        "學習與涵養／向人學習與自省／恕道與待人",
+        "政治制度／軍事策略／經商方法",
+        "自然觀察／歷史考證／文學創作",
+        "旅行見聞／家庭倫理／官場生活"
+      ],
+      "a": 0,
+      "e": "教材將三則核心分別整理為學習與修養、見賢思齊與自省、恕道與待人處世。",
+      "conceptIds": [
+        "chinese-7-1-l05-three-passages-integration"
+      ]
+    },
+    {
+      "questionId": "260922234500036",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "同樣談「學習」，第一則與第二則的重點有何不同？",
+      "o": [
+        "第一則偏重溫習與學習樂趣；第二則偏重從他人優缺點反省學習",
+        "第一則只談朋友；第二則只談考試",
+        "第一則批評他人；第二則要求獨學",
+        "兩則內容完全相同"
+      ],
+      "a": 0,
+      "e": "第一則重視時常溫習、共同切磋與君子涵養；第二則則凸顯從他人身上學習與自省。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-theme",
+        "chinese-7-1-l05-second-learning-from-others",
+        "chinese-7-1-l05-compare-passages"
+      ]
+    },
+    {
+      "questionId": "260922234500037",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "孔子提出「恕」作為可終身奉行的準則，最能說明他重視哪一種能力？",
+      "o": [
+        "把自己的感受推想到他人並尊重對方",
+        "凡事要求別人先服從",
+        "只重視個人成就",
+        "避免與任何人往來"
+      ],
+      "a": 0,
+      "e": "「恕」就是推己及人，核心是同理、尊重與設身處地。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-shu",
+        "chinese-7-1-l05-main-idea"
+      ]
+    },
+    {
+      "questionId": "260922234500038",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "同學甲說：「只要跟優秀的人在一起就好，不需要理會有缺點的人。」依第二則，最佳判斷是什麼？",
+      "o": [
+        "不完整；有缺點的人也能成為自我反省的借鏡",
+        "正確；只有善者才是老師",
+        "正確；孔子主張遠離所有不善者",
+        "不完整；因為第二則只談朋友相聚"
+      ],
+      "a": 0,
+      "e": "第二則明確指出「不善者」也有學習價值，因為可以用來反省自己。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-learning-from-others",
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "260922234500039",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "依教材，下列何者最能說明孔子教育上的特色？",
+      "o": [
+        "開創私人講學風氣，重視因材施教與有教無類",
+        "只教授貴族子弟",
+        "主張學生只需背誦經典",
+        "反對師生問答"
+      ],
+      "a": 0,
+      "e": "教材介紹孔子開創私人講學風氣，因材施教、有教無類。",
+      "conceptIds": [
+        "chinese-7-1-l05-confucius-profile"
+      ]
+    },
+    {
+      "questionId": "260922234500040",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l05-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "如果要把本課三則共同整理成一條成長路徑，下列何者最合理？",
+      "o": [
+        "持續學習自己，也向他人反省學習，並以同理心待人",
+        "先追求名聲，再選擇朋友，最後避免犯錯",
+        "只要多讀書，就自然能處理所有人際問題",
+        "先要求別人改變，再決定自己要不要學習"
+      ],
+      "a": 0,
+      "e": "三則從學習與涵養、觀察他人而自省，到推己及人的待人原則，形成由自我學習到人際實踐的連貫脈絡。",
+      "conceptIds": [
+        "chinese-7-1-l05-three-passages-integration",
+        "chinese-7-1-l05-main-idea"
+      ]
+    }
+  ]
+}
