@@ -8,7 +8,7 @@
 >
 > 科目專屬文件可以存在，例如國文的舊有補充文件；但若與本文件衝突，以本文件的共同資料治理原則為準。
 >
-> 最後更新：2026-09-15
+> 最後更新：2026-09-22
 
 ---
 
@@ -180,20 +180,37 @@ Pages deploy
 
 模糊題直接標 `[待人工確認]`，繼續下一題。
 
-## 3.2 第二步：PS5.1 上傳使用者已切好的題目圖片
+## 3.2 第二步：PS5.1 裁圖上傳 + production 圖資最佳化
 
 ChatGPT 根據本批實際資料夾與 GitHub assets 路徑，提供 PowerShell 5.1 指令。
 
-使用者執行：
+原始裁圖可先以 PNG 保存，作為本機／staging 的高保真工作檔；正式網站 production asset 在接線前，固定先做圖資最佳化。
+
+標準流程：
 
 ```text
-本機裁圖資料夾
-→ Copy-Item 到 E:\Exam\assets\...
+本機裁圖 PNG
+→ Copy-Item 到 E:\Exam\...\staging\assets
+→ remote read-back 確認題號／圖片對應
+→ 必要時依實際畫面縮小像素尺寸
+→ ImageMagick 轉 WebP
+→ strip metadata
+→ production assets
 → git add
 → commit
 → fetch + rebase
 → push main
 ```
+
+目前 production 建議預設：
+
+```text
+WebP quality = 82
+webp:method = 6
+-strip
+```
+
+若原始裁圖解析度遠高於網頁實際需求，可先縮小尺寸再轉 WebP。縮圖比例不硬編碼為 50%；應依文字可讀性、圖表細節與手機顯示結果決定。
 
 圖片上傳完成後，ChatGPT 必須做 remote read-back：
 
@@ -201,9 +218,13 @@ ChatGPT 根據本批實際資料夾與 GitHub assets 路徑，提供 PowerShell 
 確認檔案存在
 確認檔名
 確認題號與圖片對應
+確認 production WebP 存在
+確認檔案大小合理
 ```
 
 binary 不經 ChatGPT connector 反覆搬運。
+
+正式 production assets 原則上只保留網站實際引用的 WebP；原始 PNG 留在 Drive、本機 source 或 staging 作 evidence，不必與 production 重複長期保存。
 
 ## 3.3 第三步：接圖 → 詳解 → 正式題庫 → 上線
 
@@ -212,9 +233,11 @@ binary 不經 ChatGPT connector 反覆搬運。
 ```text
 題目骨架
 +
-GitHub 題圖
+GitHub production WebP 題圖
 ↓
-image / optionImage / images 接線
+image / optionImage / images 接線（正式 JSON 指向 WebP）
+↓
+驗證無 missing asset／無 production PNG reference
 ↓
 答案核對
 ↓
@@ -894,36 +917,88 @@ AB / AC / BD / ABC
 社會：地圖、歷史圖片、統計圖、區域分布
 ```
 
-## 14.2 檔案格式
+## 14.2 檔案格式：PNG 是 source，WebP 是 production
 
-優先：
+原始裁圖／辨識工作階段優先使用：
 
 ```text
 原卷裁切 → PNG
 ```
 
+原因：
+
+```text
+保留來源畫質
+方便人工 QA
+方便再次裁切／校正
+適合作為 staging / evidence
+```
+
+正式網站題庫 production asset 預設使用：
+
+```text
+PNG source
+→ 必要時縮小像素尺寸
+→ WebP
+→ GitHub production assets
+```
+
+目前建議預設：
+
+```text
+ImageMagick
+-strip
+-define webp:method=6
+-quality 82
+```
+
+不應為了省空間而犧牲會影響作答的：
+
+```text
+文字可讀性
+座標刻度
+細線
+幾何角度
+表格數值
+顯微結構
+地圖標示
+選項差異
+```
+
+若 WebP 壓縮後造成上述資訊失真，可提高 quality、保留較大尺寸，必要時才允許 production PNG。
+
 真正適合向量化且資訊不會改變才用 SVG。
 
 ## 14.3 JSON
 
+正式 active 題庫預設引用 production WebP：
+
 ```json
-"image": ".../q05-figure.png",
+"image": ".../q05-figure.webp",
 "imageAlt": "第5題附圖"
 ```
 
 選項圖：
 
 ```json
-"optionImage": ".../q08-options.png",
+"optionImage": ".../q08-options.webp",
 "optionImageAlt": "第8題選項圖"
 ```
 
+共用題組圖可由多題共同引用同一個 WebP，不必複製檔案。
+
 ## 14.4 asset 命名
 
+staging/source 可保留原始裁圖名；正式 production 建議使用語意化名稱，副檔名預設 .webp：
+
 ```text
-<school>-<year>-q<question>-figure.png
-<school>-<year>-q<question>-options.png
+<school>-<year>-q<question>-figure.webp
+<school>-<year>-q<question>-options.webp
+p103-q2-low-power.webp
+p105-q4-q6-water-microorganisms.webp
 ```
+
+同一張共用圖只保留一份 production asset。
 
 ## 14.5 圖片一律使用實體檔案，禁止 Base64
 
@@ -971,6 +1046,43 @@ Git diff 幾乎不可讀
 例外只限非常小、純 UI 裝飾用途的 icon／SVG；任何會影響題意或作答的圖片都不得 Base64 內嵌。
 
 原始完整 evidence 留在 Google Drive；GitHub 只放網站真正需要的裁切 asset。
+
+## 14.6 production 圖資最佳化與 migration QA
+
+正式上線前，圖片題固定檢查：
+
+```text
+1. source / staging PNG 已完成視覺 QA
+2. production WebP 已建立
+3. JSON 的 image / optionImage / images 已改指向 WebP
+4. 每一個 JSON 圖片路徑在 GitHub 上都實際存在
+5. production 題庫沒有殘留不必要的 .png reference
+6. 沒有 missing asset
+7. WebP 文字、刻度、細線與選項差異仍清楚可辨
+8. 網頁實測載入速度與手機顯示正常
+9. 確認 migration 後才刪除 production 中被取代的舊 PNG
+```
+
+禁止先刪 PNG 再改 JSON。正確順序：
+
+```text
+先新增 WebP
+→ remote read-back
+→ JSON 切換到 WebP
+→ 再 remote read-back
+→ 確認 0 個 missing / 0 個舊 PNG reference
+→ 最後刪除 production PNG
+```
+
+注意：
+
+```text
+圖片像素縮小 50%
+≠
+網頁顯示寬度縮小 50%
+```
+
+檔案下載速度由實際 binary 大小決定；畫面顯示尺寸則由 CSS / runtime 決定，兩者分開處理。
 
 ---
 
