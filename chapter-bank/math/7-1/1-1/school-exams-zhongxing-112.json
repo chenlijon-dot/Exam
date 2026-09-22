@@ -76,8 +76,14 @@
         ],
         "showArrows": true,
         "minorTicks": [
-          0.5,
-          1.5,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.2,
+          1.4,
+          1.6,
+          1.8,
           2.1,
           2.2,
           2.3,
@@ -90,13 +96,13 @@
         ],
         "points": [
           {
-            "x": 0.5,
+            "x": 0.6,
             "label": "A",
             "showValue": false,
             "style": "solid"
           },
           {
-            "x": 1.5,
+            "x": 1.6,
             "label": "B",
             "showValue": false,
             "style": "solid"
@@ -335,13 +341,13 @@
         "points": [
           {
             "x": -4,
-            "label": "C\\nc",
+            "label": "C(c)",
             "showValue": false,
             "style": "solid"
           },
           {
             "x": -2.4,
-            "label": "D\\nd",
+            "label": "D(d)",
             "showValue": false,
             "style": "solid"
           },
@@ -353,13 +359,13 @@
           },
           {
             "x": 0.7,
-            "label": "A\\na",
+            "label": "A(a)",
             "showValue": false,
             "style": "solid"
           },
           {
             "x": 3,
-            "label": "B\\nb",
+            "label": "B(b)",
             "showValue": false,
             "style": "solid"
           }
