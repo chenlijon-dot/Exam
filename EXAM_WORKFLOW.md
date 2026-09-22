@@ -1086,6 +1086,95 @@ Git diff 幾乎不可讀
 
 ---
 
+## 14.7 圖題 production 決策：Native Drawing vs Source Image
+
+所有圖題先保留原始裁圖，再判斷是否適合結構化重建。
+
+正式決策流程：
+
+```text
+圖題
+↓
+先保留原 crop
+↓
+判斷是否可結構化
+↓
+├─ YES
+│   → native drawing
+│   → 對照 crop QA
+│   → 網站使用 drawing
+│
+└─ NO
+    → PNG source
+    → WebP production
+    → 網站使用 image
+```
+
+### 可結構化 → Native Drawing
+
+適合 native drawing 的例子：
+
+```text
+數線
+座標軸
+規則幾何圖
+同心圓
+簡單統計圖
+可由明確數值／位置／比例描述的結構圖
+```
+
+原則：
+
+- 原 crop 仍是 evidence，不因改用 drawing 就刪除。
+- drawing 必須由可驗證的結構／數值建立，不做「看起來差不多」的生成圖。
+- 完成 drawing 後，必須與原 crop 做視覺 QA。
+- QA 至少檢查：位置、比例、標籤、方向、刻度、數值、線段／圓／角關係。
+- 網站 production 優先使用 native drawing；原 crop 留作 provenance 與後續驗證。
+
+### 不可可靠結構化 → Source Image
+
+若圖片包含：
+
+```text
+照片
+複雜資訊圖
+手繪／漫畫
+書法
+地圖
+顯微影像
+複雜實驗圖
+排版本身影響題意
+無法可靠用結構化資料重建的圖
+```
+
+則不要硬做 native drawing。
+
+標準流程：
+
+```text
+原 crop PNG
+→ 保留 source / staging
+→ 產生 WebP production
+→ QA 清晰度
+→ 網站使用 image / optionImage / images
+```
+
+### 核心原則
+
+```text
+原 crop = evidence / QA authority
+native drawing = 可結構化圖題的 production presentation
+WebP image = 不適合結構化圖題的 production presentation
+```
+
+是否使用 native drawing 的判準不是「能不能畫」，而是：
+
+> **能否以明確、可驗證、可重現的結構資料忠實重建原圖。**
+
+若不能可靠回答，預設走 source image 路線。
+
+---
+
 # 15. 各章節「各校題庫」功能建置方式
 
 這一節是近期實作後正式確立的共同規則。
