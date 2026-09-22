@@ -31,8 +31,10 @@
           banks: {
             easy: 'chapter-bank/math/7-1/1-2/easy.json',
             medium: 'chapter-bank/math/7-1/1-2/medium.json',
-            hard: 'chapter-bank/math/7-1/1-2/hard.json'
-          }
+            hard: 'chapter-bank/math/7-1/1-2/hard.json',
+            school: 'chapter-bank/math/7-1/1-2/school-exams-banqiao-114.json'
+          },
+          schoolCount: 1
         },
         {
           code: '1-3', title: '正負數的乘除', page: 46,
@@ -40,8 +42,10 @@
           banks: {
             easy: 'chapter-bank/math/7-1/1-3/easy.json',
             medium: 'chapter-bank/math/7-1/1-3/medium.json',
-            hard: 'chapter-bank/math/7-1/1-3/hard.json'
-          }
+            hard: 'chapter-bank/math/7-1/1-3/hard.json',
+            school: 'chapter-bank/math/7-1/1-3/school-exams-banqiao-114.json'
+          },
+          schoolCount: 1
         },
         {
           code: '1-4', title: '指數記法與科學記號', page: 63,
@@ -49,8 +53,10 @@
           banks: {
             easy: 'chapter-bank/math/7-1/1-4/easy.json',
             medium: 'chapter-bank/math/7-1/1-4/medium.json',
-            hard: 'chapter-bank/math/7-1/1-4/hard.json'
-          }
+            hard: 'chapter-bank/math/7-1/1-4/hard.json',
+            school: 'chapter-bank/math/7-1/1-4/school-exams-banqiao-114.json'
+          },
+          schoolCount: 1
         }
       ]
     },
