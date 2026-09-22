@@ -93,6 +93,8 @@
       .option-choice-media{display:flex;align-items:center;justify-content:center;min-height:80px;border:1px solid #e2e8f0;background:#f8fafc;border-radius:10px;padding:8px}
       .option-choice-media img{display:block;max-width:100%;max-height:300px;width:auto;height:auto;object-fit:contain;border-radius:7px}
       .option-choice-media.image-load-failed{display:none}
+      .option-choice-diagram{display:block;width:100%;min-height:92px}
+      .option-choice-diagram .number-line-diagram{margin:0 auto}
       .katex-display{overflow-x:auto;overflow-y:hidden;padding:2px 0}
       .passage-box{margin:0 0 16px;border:1px solid #cbd5e1;background:#f8fafc;border-radius:14px;padding:14px 15px;font-weight:400;white-space:pre-wrap;line-height:1.8;color:#263244}
       .passage-label{font-size:.82rem;font-weight:800;color:#1d4ed8;margin-bottom:6px;letter-spacing:.02em}
@@ -176,17 +178,22 @@
     const options = Array.isArray(question?.o) ? question.o : [];
     const images = Array.isArray(question?.optionImages) ? question.optionImages : [];
     const alts = Array.isArray(question?.optionImageAlts) ? question.optionImageAlts : [];
-    const hasImages = images.some(Boolean);
-    const layoutClass = hasImages && question?.optionLayout === 'grid-2x2' ? ' option-layout-grid-2x2' : '';
+    const diagrams = Array.isArray(question?.optionDiagrams) ? question.optionDiagrams : [];
+    const hasMedia = images.some(Boolean) || diagrams.some(Boolean);
+    const layoutClass = hasMedia && question?.optionLayout === 'grid-2x2' ? ' option-layout-grid-2x2' : '';
 
     const labels = options.map((value, optionIndex) => {
       const src = images[optionIndex] || '';
+      const diagram = diagrams[optionIndex] || null;
       const alt = alts[optionIndex] || value || `第${question.number || questionIndex + 1}題選項${letters[optionIndex]}`;
-      const media = src
+      const imageMedia = src
         ? `<span class="option-choice-media"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy"></span>`
         : '';
-      const imageClass = src ? ' option-has-image' : '';
-      return `<label class="option${imageClass}" data-opt="${optionIndex}"><input type="radio" name="q${questionIndex}" value="${optionIndex}"><span class="option-choice"><span class="option-choice-text">(${letters[optionIndex]}) ${escapeHtml(value)}</span>${media}</span></label>`;
+      const diagramMedia = diagram
+        ? `<span class="option-choice-media"><span class="option-choice-diagram" data-option-diagram-question="${questionIndex}" data-option-diagram-index="${optionIndex}"></span></span>`
+        : '';
+      const mediaClass = (src || diagram) ? ' option-has-image' : '';
+      return `<label class="option${mediaClass}" data-opt="${optionIndex}"><input type="radio" name="q${questionIndex}" value="${optionIndex}"><span class="option-choice"><span class="option-choice-text">(${letters[optionIndex]}) ${escapeHtml(value)}</span>${imageMedia}${diagramMedia}</span></label>`;
     }).join('');
 
     return `<div class="option-list${layoutClass}">${labels}</div>`;
@@ -231,6 +238,33 @@
         console.warn('[ExamRuntime] diagram render failed', error, question.diagram);
         host.innerHTML = '<div class="diagram-fallback">圖形資料格式錯誤</div>';
       }
+    });
+  }
+
+  function renderOptionDiagrams(root = quiz) {
+    if (!root) return;
+
+    questions.forEach((question, questionIndex) => {
+      const diagrams = Array.isArray(question?.optionDiagrams) ? question.optionDiagrams : [];
+      diagrams.forEach((diagram, optionIndex) => {
+        if (!diagram) return;
+        const host = root.querySelector(
+          `[data-option-diagram-question="${questionIndex}"][data-option-diagram-index="${optionIndex}"]`
+        );
+        if (!host) return;
+
+        if (typeof window.renderDiagram !== 'function') {
+          host.innerHTML = '<div class="diagram-fallback">圖形載入失敗</div>';
+          return;
+        }
+
+        try {
+          window.renderDiagram(host, diagram);
+        } catch (error) {
+          console.warn('[ExamRuntime] option diagram render failed', error, diagram);
+          host.innerHTML = '<div class="diagram-fallback">圖形資料格式錯誤</div>';
+        }
+      });
     });
   }
 
@@ -406,6 +440,7 @@
     }).join('');
     bindOptionImageFallbacks(quiz);
     renderQuestionDiagrams(quiz);
+    renderOptionDiagrams(quiz);
     bindHandwritingButtons(quiz);
     renderMath(quiz);
     document.querySelectorAll('input[type=radio]').forEach(el=>el.addEventListener('change',updateProgress));
