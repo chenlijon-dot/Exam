@@ -216,7 +216,7 @@
         { key: 'science-7-1-2-3', code: '2-3', title: '有關生命的物質', enabled: true, desc: '擴散、滲透、選擇性通透與物質進出細胞' },
         { key: 'science-7-1-2-4', code: '2-4', title: '從細胞到生物體', enabled: true, desc: '細胞、組織、器官、器官系統與生物體組成層次' },
         { key: 'science-7-1-assessment-u01-u02', code: '學力測驗', title: '單元一～單元二', enabled: true, type: 'assessment', desc: '第1次學力診斷評量｜單元 1～2 綜合測驗，共25題，含原題附圖與逐題詳解。' },
-        { key: 'science-7-1-core-2', code: '核心素養', title: '生命的起源', enabled: false, type: 'literacy' }
+        { key: 'science-7-1-cross-topic-u02', code: '跨科主題', title: '微觀與巨觀～尺度建構的世界', enabled: true, type: 'cross', desc: '尺度、單位、比例尺、顯微觀察、仿生科技與奈米科學；教材參考資料與22題章節題庫已完成。' }
       ]
     },
     {
@@ -258,12 +258,6 @@
         { key: 'science-7-1-core-6', code: '核心素養', title: '糖尿病', enabled: false, type: 'literacy' }
       ]
     },
-    {
-      key: 'cross-topic', number: '跨科主題', title: '尺度的認識與應用',
-      sections: [
-        { key: 'science-7-1-cross-scale', code: '跨科主題', title: '尺度的認識與應用', enabled: false, type: 'cross' }
-      ]
-    }
   ];
 
 
