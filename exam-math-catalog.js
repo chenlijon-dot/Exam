@@ -23,10 +23,13 @@
             hard: 'chapter-bank/math/7-1/1-1/hard.json',
             school: {
               bankPath: 'chapter-bank/math/7-1/1-1/school-exams-banqiao-114.json',
-              extraPaths: ['chapter-bank/math/7-1/1-1/school-exams-tucheng-114.json']
+              extraPaths: [
+                'chapter-bank/math/7-1/1-1/school-exams-tucheng-114.json',
+                'chapter-bank/math/7-1/1-1/school-exams-chiayi-113.json'
+              ]
             }
           },
-          schoolCount: 2
+          schoolCount: 3
         },
         {
           code: '1-2', title: '正負數的加減', page: 23,
@@ -37,10 +40,13 @@
             hard: 'chapter-bank/math/7-1/1-2/hard.json',
             school: {
               bankPath: 'chapter-bank/math/7-1/1-2/school-exams-banqiao-114.json',
-              extraPaths: ['chapter-bank/math/7-1/1-2/school-exams-tucheng-114.json']
+              extraPaths: [
+                'chapter-bank/math/7-1/1-2/school-exams-tucheng-114.json',
+                'chapter-bank/math/7-1/1-2/school-exams-chiayi-113.json'
+              ]
             }
           },
-          schoolCount: 2
+          schoolCount: 3
         },
         {
           code: '1-3', title: '正負數的乘除', page: 46,
@@ -51,10 +57,13 @@
             hard: 'chapter-bank/math/7-1/1-3/hard.json',
             school: {
               bankPath: 'chapter-bank/math/7-1/1-3/school-exams-banqiao-114.json',
-              extraPaths: ['chapter-bank/math/7-1/1-3/school-exams-tucheng-114.json']
+              extraPaths: [
+                'chapter-bank/math/7-1/1-3/school-exams-tucheng-114.json',
+                'chapter-bank/math/7-1/1-3/school-exams-chiayi-113.json'
+              ]
             }
           },
-          schoolCount: 2
+          schoolCount: 3
         },
         {
           code: '1-4', title: '指數記法與科學記號', page: 63,
@@ -65,10 +74,13 @@
             hard: 'chapter-bank/math/7-1/1-4/hard.json',
             school: {
               bankPath: 'chapter-bank/math/7-1/1-4/school-exams-banqiao-114.json',
-              extraPaths: ['chapter-bank/math/7-1/1-4/school-exams-tucheng-114.json']
+              extraPaths: [
+                'chapter-bank/math/7-1/1-4/school-exams-tucheng-114.json',
+                'chapter-bank/math/7-1/1-4/school-exams-chiayi-113.json'
+              ]
             }
           },
-          schoolCount: 2
+          schoolCount: 3
         }
       ]
     },
