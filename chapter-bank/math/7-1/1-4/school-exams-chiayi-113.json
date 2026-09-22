@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-4-school",
+    "difficulty": "math-7-1-1-4-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-4 指數記法與科學記號｜各校題庫",
+    "title": "1-4 指數記法與科學記號｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜嘉義國中 9 題＋1 題待核",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-4",
+    "unit": "1-4 指數記法與科學記號",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-4 指數記法與科學記號 拆題；保留原始題號、學校／年度／段考 provenance。非選擇題為網站作答改編時明確標示 adaptedForWeb；圖題優先使用 Exam native drawing renderer。"
+  },
+  "source": {
+    "school": "嘉義市立嘉義國中",
+    "year": "113",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": true,
+    "answerNote": "官方答案卷已核對。二-04 題幹計算與答案卷記載 13 不一致，該題暫列 pendingQuestions，不進自動評量。"
+  },
+  "questions": [
+    {
+      "questionId": "260922213000004",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-04",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "科學記號的表示法 a×10^n 中，a 不可能為下列何者？ [113 嘉義國中]",
+      "o": [
+        "7.3",
+        "6.7",
+        "3",
+        "0.58"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。科學記號係數需滿足 1≤a<10，因此 0.58 不符合。"
+    },
+    {
+      "questionId": "260922213000008",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-08",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-negative-base",
+        "math-7-1-1-4-power-evaluation"
+      ],
+      "q": "若 a=(-2)^5，b=-3^4，c=(-2)^2×(-3^2)，則 a、b、c 三數的大小關係為何？ [113 嘉義國中]",
+      "o": [
+        "a>c>b",
+        "b>a>c",
+        "c>a>b",
+        "a>b>c"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。a=-32，b=-81，c=4×(-9)=-36，因此 a>c>b。"
+    },
+    {
+      "questionId": "260922213000012",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-12",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "下列將科學記號改成整數或小數的敘述，正確的有哪些？（甲）7×10^4=7000；（乙）5×10^-5=0.00005；（丙）6.14×10^6=614000000；（丁）3.28×10^-4=0.0328。 [113 嘉義國中]",
+      "o": [
+        "僅乙",
+        "乙丙丁",
+        "乙丁",
+        "甲丙"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。甲應為 70000；乙正確；丙應為 6140000；丁應為 0.000328，所以僅乙正確。"
+    },
+    {
+      "questionId": "260922213000021",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "二-09",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-to-scientific"
+      ],
+      "q": "X 射線每秒鐘大約震動 1670000000000000 次，以科學記號表示為何？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "1.67×10^13",
+        "1.67×10^14",
+        "1.67×10^15",
+        "16.7×10^14"
+      ],
+      "a": 2,
+      "e": "官方答案為 1.67×10^15。"
+    },
+    {
+      "questionId": "260922213000024",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "二-12",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation",
+        "math-7-1-1-4-context"
+      ],
+      "q": "聲音在常溫下的速度約每秒 334.5 公尺。看到雷擊後 10 分鐘才聽到雷聲，距離以科學記號表示為何？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "2.007×10^4 公尺",
+        "2.007×10^5 公尺",
+        "3.345×10^5 公尺",
+        "2.007×10^6 公尺"
+      ],
+      "a": 1,
+      "e": "官方答案為 2.007×10^5 公尺。10 分鐘=600 秒，334.5×600=200700=2.007×10^5。"
+    },
+    {
+      "questionId": "260922213000025",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "二-13",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-evaluation",
+        "math-7-1-1-4-mixed-powers"
+      ],
+      "q": "計算 2×|2^2-3^2|+25÷[2^3+(-3)^3+14×(-1)^10] 的值為何？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "-5",
+        "0",
+        "5",
+        "15"
+      ],
+      "a": 2,
+      "e": "官方答案為 5。前半為 2×5=10；中括號為 8-27+14=-5，25÷(-5)=-5，總和為 5。"
+    },
+    {
+      "questionId": "260922213000029",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "三-2(1)-非洲豬瘟",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation",
+        "math-7-1-1-4-unit-conversion"
+      ],
+      "q": "非洲豬瘟病毒顆粒直徑約 0.2 微米，換算成公尺並以科學記號表示，何者正確？ [113 嘉義國中｜原計算題改編]",
+      "o": [
+        "2×10^-5 公尺",
+        "2×10^-6 公尺",
+        "2×10^-7 公尺",
+        "2×10^-8 公尺"
+      ],
+      "a": 2,
+      "e": "官方答案為 2×10^-7 公尺。0.2 微米=0.2×10^-6=2×10^-7 公尺。"
+    },
+    {
+      "questionId": "260922213000030",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "三-2(1)-諾羅病毒",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation",
+        "math-7-1-1-4-unit-conversion"
+      ],
+      "q": "諾羅病毒顆粒直徑約 0.000027 毫米，換算成公尺並以科學記號表示，何者正確？ [113 嘉義國中｜原計算題改編]",
+      "o": [
+        "2.7×10^-6 公尺",
+        "2.7×10^-7 公尺",
+        "2.7×10^-8 公尺",
+        "2.7×10^-9 公尺"
+      ],
+      "a": 2,
+      "e": "官方答案為 2.7×10^-8 公尺。0.000027 毫米=2.7×10^-5×10^-3=2.7×10^-8 公尺。"
+    },
+    {
+      "questionId": "260922213000031",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "三-2(2)",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare",
+        "math-7-1-1-4-unit-conversion"
+      ],
+      "q": "非洲豬瘟病毒直徑約 0.2 微米、伊波拉病毒約 80 奈米、諾羅病毒約 0.000027 毫米。三者何者直徑最大？ [113 嘉義國中｜原計算題改編]",
+      "o": [
+        "非洲豬瘟病毒",
+        "伊波拉病毒",
+        "諾羅病毒",
+        "三者相同"
+      ],
+      "a": 0,
+      "e": "官方答案為非洲豬瘟病毒。換算為公尺後分別為 2×10^-7、8×10^-8、2.7×10^-8。"
+    }
+  ],
+  "pendingQuestions": [
+    {
+      "questionId": "260922213000016",
+      "revision": 1,
+      "originalQuestionNumber": "二-04",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "originalQuestionType": "填充題",
+      "status": "pending-answer-key-conflict",
+      "answerVerified": false,
+      "officialAnswer": "13",
+      "derivedFromPrintedQuestion": "18",
+      "conceptIds": [
+        "math-7-1-1-4-place-value",
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "將 7.2315×10^10 乘開後有 m 位數；將 9.8675×10^-7 乘開後，小數點後第 n 位數開始不為 0，則 m+n=____。 [113 嘉義國中]",
+      "note": "原卷清楚印為 7.2315×10^10 與 9.8675×10^-7；依題幹 m=11、n=7，m+n=18，但官方答案卷列 13。為避免污染自動評量，暫不升格 active。"
+    }
+  ]
+}
