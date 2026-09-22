@@ -1,0 +1,571 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "scoreMode": "fixed",
+    "pointsPerQuestion": 5,
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive 第四課〈差不多先生傳〉canonical 教材知識庫自編；以課文、注釋、作者、鑑賞分析、語文知識與延伸探索〈母親的教誨〉為 authority，不直接複製課本應用練習。",
+    "difficulty": "chinese-7-1-l04-hard",
+    "title": "第四課〈差不多先生傳〉｜困難",
+    "subtitle": "國文第一冊｜自編題｜困難 20 題",
+    "difficultyLabel": "困難",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+      "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+      "lesson": "第四課〈差不多先生傳〉"
+    }
+  },
+  "questions": [
+    {
+      "questionId": "260922232000041",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "從「買錯糖」一路寫到「誤診死亡」，作者最想讓讀者看見哪一種因果鏈？",
+      "o": [
+        "把小差異長期視為無關緊要，會養成習慣並在關鍵時刻付出重大代價",
+        "生活中的每一個小錯都一定會導致死亡",
+        "只要記憶力不好就不適合工作",
+        "醫療錯誤比其他錯誤更值得批評"
+      ],
+      "a": 0,
+      "e": "文章把同一種敷衍心態放進不同情境，後果逐步升高，呈現習慣性不精確可能在關鍵處造成大錯。",
+      "conceptIds": [
+        "chinese-7-1-l04-escalation-consequences",
+        "chinese-7-1-l04-main-idea"
+      ]
+    },
+    {
+      "questionId": "260922232000042",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "若刪除「各省各縣各村人氏」與「中國全國人的代表」等語句，全文最可能削弱哪一層意義？",
+      "o": [
+        "差不多先生作為普遍社會心態象徵的功能",
+        "紅糖與白糖的情節因果",
+        "火車遲到的時間順序",
+        "胡適的作者身分"
+      ],
+      "a": 0,
+      "e": "這些語句把虛構人物從個案提升為普遍象徵，是社會諷刺的重要線索。",
+      "conceptIds": [
+        "chinese-7-1-l04-social-satire",
+        "chinese-7-1-l04-character-profile"
+      ]
+    },
+    {
+      "questionId": "260922232000043",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "下列哪項最能同時解釋本文「傳記外形」與「寓言目的」的關係？",
+      "o": [
+        "借人物一生的事蹟製造真實感與連貫性，再以虛構人物承載普遍警示",
+        "因為作者找不到真實人物，只好隨意編故事",
+        "只要文章寫到出生與死亡，就一定是正式史料",
+        "寓言不能有人物，因此本文其實不是寓言"
+      ],
+      "a": 0,
+      "e": "作者用「傳」的形式串起人物一生，但人物本身是象徵性的虛構，目的在批判與警醒。",
+      "conceptIds": [
+        "chinese-7-1-l04-genre-allegorical-biography",
+        "chinese-7-1-l04-structure"
+      ]
+    },
+    {
+      "questionId": "260922232000044",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "「圓通大師」若只按字面理解為「智慧圓融、通達事理的高僧」，會造成哪個閱讀錯誤？",
+      "o": [
+        "忽略稱號與人物實際行為的反差，錯失倒反諷刺",
+        "把文章錯認為山水遊記",
+        "誤認胡適不是本文作者",
+        "無法判斷事件先後順序"
+      ],
+      "a": 0,
+      "e": "教材明確指出「圓通大師」的正面字面義正是反諷材料；真正意思與表面稱讚相反。",
+      "conceptIds": [
+        "chinese-7-1-l04-dao-fan-irony",
+        "chinese-7-1-l04-common-misconception"
+      ]
+    },
+    {
+      "questionId": "260922232000045",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "哪一組情節最能共同證明「小差異是否重要，取決於情境與責任，而不能一概說差不多」？",
+      "o": [
+        "十與千的帳目、汪大夫與王大夫的醫療",
+        "紅糖與白糖、外貌與一般人相似",
+        "籍貫不詳、口頭禪反覆出現",
+        "法號圓通、眾人仿效"
+      ],
+      "a": 0,
+      "e": "帳目數值與醫師身分都是必須精確的情境；看似細小的差異會直接改變結果。",
+      "conceptIds": [
+        "chinese-7-1-l04-precision-responsibility",
+        "chinese-7-1-l04-event-doctor",
+        "chinese-7-1-l04-event-ten-thousand"
+      ]
+    },
+    {
+      "questionId": "260922232000046",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "假設一位同學說：「本文既然批評『差不多』，所以所有近似估計都是錯的。」依教材，最佳判斷為何？",
+      "o": [
+        "過度延伸；本文批判的是需要精確與負責時仍敷衍，不是否定所有估計",
+        "正確；任何場合都不得使用近似值",
+        "正確；作者主張每件事都必須精確到最小單位",
+        "錯誤；因為本文其實是在讚美隨和"
+      ],
+      "a": 0,
+      "e": "教材常見迷思指出，日常語言中的「差不多」不必然錯，問題在不該含糊的情境仍敷衍。",
+      "conceptIds": [
+        "chinese-7-1-l04-precision-responsibility",
+        "chinese-7-1-l04-common-misconception"
+      ]
+    },
+    {
+      "questionId": "260922232000047",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "作者把差不多先生死後受到讚美、甚至被仿效，安排在死亡事件之後，最主要增加哪一層諷刺？",
+      "o": [
+        "錯誤態度不但害己，還可能被合理化並擴散成群體風氣",
+        "死亡之後人人都會得到尊敬",
+        "社會大眾比差不多先生更精明",
+        "只有宗教稱號會造成社會問題"
+      ],
+      "a": 0,
+      "e": "結尾把個人後果擴大成社會效應，顯示錯誤價值若被美化與模仿，危害更深。",
+      "conceptIds": [
+        "chinese-7-1-l04-social-satire",
+        "chinese-7-1-l04-escalation-consequences"
+      ]
+    },
+    {
+      "questionId": "260922232000048",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "若要找一個最能代表全文「失之毫釐，差之千里」深意的事例，哪一項最有說服力？",
+      "o": [
+        "把汪大夫與王大夫視為差不多，最後因誤診而死",
+        "外貌與普通人差不多",
+        "他有一句固定口頭禪",
+        "死後得到一個法號"
+      ],
+      "a": 0,
+      "e": "醫師姓名看似只差一字，卻牽涉不同專業與生命結果，最強烈呈現小差異可能造成巨大後果。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-doctor",
+        "chinese-7-1-l04-precision-responsibility"
+      ]
+    },
+    {
+      "questionId": "260922232000049",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "本文的幽默感與警醒效果能同時成立，最主要靠什麼？",
+      "o": [
+        "用誇張荒謬的事例令人發笑，再讓後果逐步嚴重而產生反思",
+        "全文只使用艱深抽象議論",
+        "把所有人物都寫成英雄",
+        "完全避免任何誇張或反差"
+      ],
+      "a": 0,
+      "e": "前段事例帶有荒謬喜感，後段卻推向死亡與社會問題，使笑意轉成警醒。",
+      "conceptIds": [
+        "chinese-7-1-l04-escalation-consequences",
+        "chinese-7-1-l04-dao-fan-irony"
+      ]
+    },
+    {
+      "questionId": "260922232000050",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "如果把第二部分五個事例的順序完全打亂，最可能削弱哪一種閱讀效果？",
+      "o": [
+        "從日常小錯到重大後果逐層升高的結構感",
+        "胡適的生平資料",
+        "每個詞語的注釋",
+        "「錢鋪」的字義"
+      ],
+      "a": 0,
+      "e": "原有安排使錯誤後果逐步加重，打亂後仍可看懂各事例，但會減弱層層加深的警示。",
+      "conceptIds": [
+        "chinese-7-1-l04-structure",
+        "chinese-7-1-l04-escalation-consequences"
+      ]
+    },
+    {
+      "questionId": "260922232000051",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "下列哪句評論最符合作者對差不多先生的真正態度？",
+      "o": [
+        "看似「想得通」，其實是用隨便與不負責逃避應有的分辨",
+        "雖不精確，但處處展現高明智慧",
+        "他的最大優點是能把複雜事情化繁為簡",
+        "他只是不幸遇上幾次意外，本質十分可靠"
+      ],
+      "a": 0,
+      "e": "作者藉倒反揭露：所謂「看得破、想得通」其實是把敷衍合理化。",
+      "conceptIds": [
+        "chinese-7-1-l04-dao-fan-irony",
+        "chinese-7-1-l04-main-idea"
+      ]
+    },
+    {
+      "questionId": "260922232000052",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "某學生把兩份資料中的 10% 與 100% 看成「只差一個零，差不多」，這個情境最接近課文哪一事例的邏輯？",
+      "o": [
+        "把十與千看成只差一小撇",
+        "把紅糖買成白糖",
+        "錯過火車兩分鐘",
+        "把山西說成陝西"
+      ],
+      "a": 0,
+      "e": "兩者都把書寫形式上的小差異誤當成意義上的小差異，忽略數值可能差距巨大。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-ten-thousand",
+        "chinese-7-1-l04-precision-responsibility"
+      ]
+    },
+    {
+      "questionId": "260922232000053",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "某人說：「大家都這樣做，所以應該沒有問題。」這句話與本文結尾最值得共同警惕的是什麼？",
+      "o": [
+        "錯誤行為被多數人模仿，不會因此變成正確",
+        "只要人數夠多就能避免錯誤",
+        "社會習慣一定比個人判斷可靠",
+        "被稱讚的行為必然值得學習"
+      ],
+      "a": 0,
+      "e": "結尾人人仿效差不多先生，反而使「懶人國」形成，正是在提醒群體流行不能取代是非與責任判斷。",
+      "conceptIds": [
+        "chinese-7-1-l04-social-satire",
+        "chinese-7-1-l04-main-idea"
+      ]
+    },
+    {
+      "questionId": "260922232000054",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "若要把本文主旨轉成一句最具體的行動原則，下列何者最合適？",
+      "o": [
+        "在會影響他人、金錢、時間或安全的事情上，先核對關鍵差異再行動",
+        "所有小事都必須反覆檢查到完全不出錯",
+        "遇到不確定時一律不要做任何決定",
+        "只要結果沒有出事，過程是否精確並不重要"
+      ],
+      "a": 0,
+      "e": "本文要求的是在重要情境負起辨明與核對的責任，而不是追求不切實際的零失誤。",
+      "conceptIds": [
+        "chinese-7-1-l04-precision-responsibility",
+        "chinese-7-1-l04-main-idea"
+      ]
+    },
+    {
+      "questionId": "260922232000055",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "〈母親的教誨〉中母親要求胡適反省錯誤，與主文形成對照。這種安排對本課學習最有何幫助？",
+      "o": [
+        "把「不要敷衍」從負面警示轉成可實踐的自律與自我要求",
+        "證明兩篇文章的主角其實是同一人",
+        "說明嚴厲處罰一定能解決所有問題",
+        "把主文的諷刺完全改成母愛主題"
+      ],
+      "a": 0,
+      "e": "主文指出敷衍的危害，延伸閱讀則提供自律、認錯與自我要求的正向對照。",
+      "conceptIds": [
+        "chinese-7-1-l04-extension-contrast",
+        "chinese-7-1-l04-precision-responsibility"
+      ]
+    },
+    {
+      "questionId": "260922232000056",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "從胡適母親「嚴格責罰不敬父親的話」與「眼病時細心照料」兩件事合看，最適合概括她的教養方式為何？",
+      "o": [
+        "原則嚴格，但關懷並未因此減少",
+        "只重責罰，不重情感",
+        "凡事順從孩子，避免衝突",
+        "只關心身體，不要求品行"
+      ],
+      "a": 0,
+      "e": "兩件事分別呈現原則上的嚴格與生活中的慈愛，合起來才是教材所整理的完整形象。",
+      "conceptIds": [
+        "chinese-7-1-l04-extension-mother-teaching"
+      ]
+    },
+    {
+      "questionId": "260922232000057",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "若一篇文章表面寫「某人真是精明，連帳目十元和千元都能一視同仁」，實際上是在批評他，最接近本課哪種手法？",
+      "o": [
+        "倒反／反諷",
+        "順敘",
+        "排比",
+        "借代"
+      ],
+      "a": 0,
+      "e": "表面稱讚「精明」，實際批評不辨差異，正是表意相反的倒反。",
+      "conceptIds": [
+        "chinese-7-1-l04-dao-fan-irony"
+      ]
+    },
+    {
+      "questionId": "260922232000058",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "要判斷一句話是否屬於本文式的「倒反」，最關鍵的閱讀步驟是什麼？",
+      "o": [
+        "比較表面稱讚與上下文事實是否形成反差",
+        "只看句子裡有沒有褒義詞",
+        "只看句末是否有驚嘆號",
+        "先判斷句子長短"
+      ],
+      "a": 0,
+      "e": "倒反不能只看單句字面，要結合上下文，確認表面意思與作者真正立場相反。",
+      "conceptIds": [
+        "chinese-7-1-l04-dao-fan-irony",
+        "chinese-7-1-l04-reading-context"
+      ]
+    },
+    {
+      "questionId": "260922232000059",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "全文從個人日常寫到「中國從此就成了一個懶人國」，這種結尾最主要完成哪一項轉換？",
+      "o": [
+        "由人物故事提升為對群體文化的警告",
+        "由諷刺散文轉為地理說明",
+        "由虛構人物轉為胡適自傳",
+        "由白話文轉為文言文"
+      ],
+      "a": 0,
+      "e": "最後一句把個人性格的問題擴大到社會層次，完成寓言的普遍警示。",
+      "conceptIds": [
+        "chinese-7-1-l04-social-satire",
+        "chinese-7-1-l04-genre-allegorical-biography"
+      ]
+    },
+    {
+      "questionId": "260922232000060",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l04-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "綜合本文與延伸閱讀，下列哪一項最能概括本課希望培養的態度？",
+      "o": [
+        "該辨明時認真辨明，犯錯能反省，對自己與他人負責",
+        "凡事要求別人做到完美，自己保持彈性",
+        "只要心地善良，細節是否正確並不重要",
+        "避免承認錯誤，以免影響自信"
+      ],
+      "a": 0,
+      "e": "主文批判敷衍不精確，延伸閱讀呈現反省、自律與待人和氣；共同指向負責且能自我修正的態度。",
+      "conceptIds": [
+        "chinese-7-1-l04-main-idea",
+        "chinese-7-1-l04-extension-contrast",
+        "chinese-7-1-l04-precision-responsibility"
+      ]
+    }
+  ]
+}
