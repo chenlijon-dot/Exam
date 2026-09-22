@@ -21,9 +21,12 @@
             easy: 'chapter-bank/math/7-1/1-1/easy.json',
             medium: 'chapter-bank/math/7-1/1-1/medium.json',
             hard: 'chapter-bank/math/7-1/1-1/hard.json',
-            school: 'chapter-bank/math/7-1/1-1/school-exams-banqiao-114.json'
+            school: {
+              bankPath: 'chapter-bank/math/7-1/1-1/school-exams-banqiao-114.json',
+              extraPaths: ['chapter-bank/math/7-1/1-1/school-exams-tucheng-114.json']
+            }
           },
-          schoolCount: 1
+          schoolCount: 2
         },
         {
           code: '1-2', title: '正負數的加減', page: 23,
@@ -32,9 +35,12 @@
             easy: 'chapter-bank/math/7-1/1-2/easy.json',
             medium: 'chapter-bank/math/7-1/1-2/medium.json',
             hard: 'chapter-bank/math/7-1/1-2/hard.json',
-            school: 'chapter-bank/math/7-1/1-2/school-exams-banqiao-114.json'
+            school: {
+              bankPath: 'chapter-bank/math/7-1/1-2/school-exams-banqiao-114.json',
+              extraPaths: ['chapter-bank/math/7-1/1-2/school-exams-tucheng-114.json']
+            }
           },
-          schoolCount: 1
+          schoolCount: 2
         },
         {
           code: '1-3', title: '正負數的乘除', page: 46,
@@ -43,9 +49,12 @@
             easy: 'chapter-bank/math/7-1/1-3/easy.json',
             medium: 'chapter-bank/math/7-1/1-3/medium.json',
             hard: 'chapter-bank/math/7-1/1-3/hard.json',
-            school: 'chapter-bank/math/7-1/1-3/school-exams-banqiao-114.json'
+            school: {
+              bankPath: 'chapter-bank/math/7-1/1-3/school-exams-banqiao-114.json',
+              extraPaths: ['chapter-bank/math/7-1/1-3/school-exams-tucheng-114.json']
+            }
           },
-          schoolCount: 1
+          schoolCount: 2
         },
         {
           code: '1-4', title: '指數記法與科學記號', page: 63,
@@ -54,9 +63,12 @@
             easy: 'chapter-bank/math/7-1/1-4/easy.json',
             medium: 'chapter-bank/math/7-1/1-4/medium.json',
             hard: 'chapter-bank/math/7-1/1-4/hard.json',
-            school: 'chapter-bank/math/7-1/1-4/school-exams-banqiao-114.json'
+            school: {
+              bankPath: 'chapter-bank/math/7-1/1-4/school-exams-banqiao-114.json',
+              extraPaths: ['chapter-bank/math/7-1/1-4/school-exams-tucheng-114.json']
+            }
           },
-          schoolCount: 1
+          schoolCount: 2
         }
       ]
     },
@@ -1518,18 +1530,39 @@
   async function openMath71SectionBank(unitKey, sectionCode, difficultyKey, button) {
     const unit = MATH_7_1_UNITS.find(item => item.key === unitKey);
     const section = unit?.sections?.find(item => item.code === sectionCode);
-    const path = section?.banks?.[difficultyKey];
-    if (!unit || !section || !path || !button) return;
+    const bankConfig = section?.banks?.[difficultyKey];
+    if (!unit || !section || !bankConfig || !button) return;
 
     const oldHtml = button.innerHTML;
     button.disabled = true;
     button.innerHTML = '<span class="top"><span class="icon">⏳</span><strong>準備題目…</strong></span><span class="desc">正在載入題目與詳解</span>';
 
     try {
-      const response = await fetch(path, { cache:'no-store' });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
-      const questions = Array.isArray(data.questions) ? data.questions : [];
+      const loadJson = async path => {
+        const response = await fetch(path, { cache:'no-store' });
+        if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+        return response.json();
+      };
+
+      let data;
+      let questions;
+
+      if (typeof bankConfig === 'string') {
+        data = await loadJson(bankConfig);
+        questions = Array.isArray(data.questions) ? [...data.questions] : [];
+      } else {
+        data = await loadJson(bankConfig.bankPath);
+        questions = Array.isArray(data.questions) ? [...data.questions] : [];
+
+        for (const extraPath of bankConfig.extraPaths || []) {
+          const extra = await loadJson(extraPath);
+          if (Array.isArray(extra.questions)) questions.push(...extra.questions);
+        }
+
+        questions.forEach((question, index) => {
+          question.number = index + 1;
+        });
+      }
       const expected = difficultyKey === 'easy'
         ? 20
         : difficultyKey === 'hard'
