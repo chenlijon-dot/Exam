@@ -381,6 +381,8 @@
     const normalized = rings.map((ring, index) => ({
       radius:finiteNumber(ring?.radius),
       label:ring?.label === undefined ? '' : String(ring.label),
+      labelAngle:finiteNumber(ring?.labelAngle ?? 0),
+      labelRadius:finiteNumber(ring?.labelRadius),
       index
     }));
 
@@ -901,14 +903,15 @@
       }));
 
       if (ring.label) {
-        const previous = index > 0 ? spec.rings[index - 1].radius * scale : radiusPx + 26;
-        const next = index < spec.rings.length - 1 ? spec.rings[index + 1].radius * scale : 0;
-        const labelRadius = index === 0
-          ? radiusPx - Math.max(18, (radiusPx - next) / 2)
-          : next + (radiusPx - next) / 2;
+        const nextRadius = index < spec.rings.length - 1
+          ? spec.rings[index + 1].radius
+          : 0;
+        const autoRadius = nextRadius + (ring.radius - nextRadius) / 2;
+        const labelRadius = (ring.labelRadius === null ? autoRadius : ring.labelRadius) * scale;
+        const angle = degreesToRadians(ring.labelAngle === null ? 0 : ring.labelAngle);
         svg.appendChild(svgEl('text', {
-          x:cx + labelRadius,
-          y:cy + 6,
+          x:cx + Math.cos(angle) * labelRadius,
+          y:cy + Math.sin(angle) * labelRadius + 6,
           class:'bullseye-label'
         }, ring.label));
       }
