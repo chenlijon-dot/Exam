@@ -403,6 +403,64 @@
     };
   }
 
+
+  function validateNodeNetwork(spec) {
+    const sourceNodes = Array.isArray(spec.nodes) ? spec.nodes : [];
+    const sourceEdges = Array.isArray(spec.edges) ? spec.edges : [];
+
+    if (sourceNodes.length < 2) {
+      return { ok:false, reason:'node-network 至少需要 2 個 nodes' };
+    }
+
+    const ids = new Set();
+    const nodes = [];
+
+    for (const raw of sourceNodes) {
+      const id = raw?.id === undefined ? '' : String(raw.id);
+      const x = finiteNumber(raw?.x);
+      const y = finiteNumber(raw?.y);
+      if (!id || ids.has(id) || x === null || y === null) {
+        return { ok:false, reason:'node-network node 需要唯一 id 與有限 x/y' };
+      }
+      ids.add(id);
+      nodes.push({
+        id,
+        x,
+        y,
+        label:raw?.label === undefined ? '' : String(raw.label),
+        radius:finiteNumber(raw?.radius ?? spec.nodeRadius ?? 0.24)
+      });
+    }
+
+    const edges = [];
+    for (const edge of sourceEdges) {
+      if (!Array.isArray(edge) || edge.length !== 2) {
+        return { ok:false, reason:'node-network edge 必須是 [from, to]' };
+      }
+      const from = String(edge[0]);
+      const to = String(edge[1]);
+      if (!ids.has(from) || !ids.has(to) || from === to) {
+        return { ok:false, reason:`node-network edge 無效: ${from}-${to}` };
+      }
+      edges.push([from, to]);
+    }
+
+    if (!edges.length) {
+      return { ok:false, reason:'node-network 至少需要 1 條 edge' };
+    }
+
+    return {
+      ok:true,
+      value:{
+        ...spec,
+        type:'node-network',
+        nodes,
+        edges,
+        nodeRadius:finiteNumber(spec.nodeRadius ?? 0.24) ?? 0.24
+      }
+    };
+  }
+
   function validateDiagramSpec(spec) {
     if (!spec || typeof spec !== 'object') {
       return { ok:false, reason:'diagram spec 必須是物件' };
@@ -414,6 +472,7 @@
       case 'square': return validateSquare(spec);
       case 'circle': return validateCircle(spec);
       case 'bullseye': return validateBullseye(spec);
+      case 'node-network': return validateNodeNetwork(spec);
       case 'coordinate-plane':
       case 'xy-plane':
         return validateCoordinatePlane({ ...spec, type:'coordinate-plane' });
@@ -481,7 +540,8 @@
       .geometry-diagram,
       .coordinate-plane-diagram,
       .solid-projection-diagram,
-      .bullseye-diagram{
+      .bullseye-diagram,
+      .node-network-diagram{
         width:100%;
         max-width:760px;
         margin:12px auto 14px;
@@ -490,7 +550,8 @@
       .geometry-diagram svg,
       .coordinate-plane-diagram svg,
       .solid-projection-diagram svg,
-      .bullseye-diagram svg{
+      .bullseye-diagram svg,
+      .node-network-diagram svg{
         display:block;
         width:100%;
         height:auto;
@@ -517,7 +578,7 @@
         font:600 17px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
         text-anchor:middle;
       }
-      .nl-point-label,.geo-label,.cp-label,.bullseye-label{
+      .nl-point-label,.geo-label,.cp-label,.bullseye-label,.network-label{
         fill:#0f172a;
         font:800 18px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
         text-anchor:middle;
@@ -920,6 +981,65 @@
     if (spec.showCenter) {
       svg.appendChild(svgEl('circle', { cx, cy, r:4.5, fill:'#0f172a' }));
     }
+
+    container.appendChild(svg);
+    return svg;
+  }
+
+
+  function renderNodeNetwork(container, rawSpec) {
+    ensureStyles();
+    const checked = validateNodeNetwork(rawSpec);
+    if (!checked.ok) {
+      console.warn('[DiagramRenderer]', checked.reason, rawSpec);
+      return safeFallback(container);
+    }
+
+    const spec = checked.value;
+    container.innerHTML = '';
+    container.classList.add('node-network-diagram');
+
+    const bounds = geometryBounds(spec.nodes, 1.3);
+    const map = geometryMapper(bounds);
+    const mapped = Object.fromEntries(
+      spec.nodes.map(node => [node.id, { ...node, ...map(node) }])
+    );
+
+    const svg = createSvg(
+      GEO_VIEW_H,
+      spec.ariaLabel || `節點連線圖，共 ${spec.nodes.length} 個節點`
+    );
+
+    spec.edges.forEach(([from, to]) => {
+      const a = mapped[from];
+      const b = mapped[to];
+      svg.appendChild(svgEl('line', {
+        x1:a.x, y1:a.y, x2:b.x, y2:b.y,
+        stroke:'#0f172a',
+        'stroke-width':2.6,
+        'vector-effect':'non-scaling-stroke'
+      }));
+    });
+
+    spec.nodes.forEach(node => {
+      const point = mapped[node.id];
+      const radius = Math.max(18, Math.min(31, (node.radius || spec.nodeRadius) * 92));
+      svg.appendChild(svgEl('circle', {
+        cx:point.x, cy:point.y, r:radius,
+        fill:'#ffffff',
+        stroke:'#0f172a',
+        'stroke-width':2.5,
+        'vector-effect':'non-scaling-stroke'
+      }));
+
+      if (node.label) {
+        svg.appendChild(svgEl('text', {
+          x:point.x,
+          y:point.y + 6,
+          class:'network-label'
+        }, node.label));
+      }
+    });
 
     container.appendChild(svg);
     return svg;
@@ -1451,6 +1571,7 @@
       case 'square': return renderSquare(container, checked.value);
       case 'circle': return renderCircle(container, checked.value);
       case 'bullseye': return renderBullseye(container, checked.value);
+      case 'node-network': return renderNodeNetwork(container, checked.value);
       case 'coordinate-plane': return renderCoordinatePlane(container, checked.value);
       case 'solid-projection': return renderSolidProjection(container, checked.value);
       default: return safeFallback(container);
@@ -1463,6 +1584,7 @@
   window.renderSquare = renderSquare;
   window.renderCircle = renderCircle;
   window.renderBullseye = renderBullseye;
+  window.renderNodeNetwork = renderNodeNetwork;
   window.renderCoordinatePlane = renderCoordinatePlane;
   window.renderSolidProjection = renderSolidProjection;
   window.renderDiagram = renderDiagram;
