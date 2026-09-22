@@ -1,0 +1,551 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-05",
+    "unit": "第五課 論語選",
+    "scoreMode": "fixed",
+    "pointsPerQuestion": 5,
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive 第五課〈論語選〉canonical 教材知識庫自編；正式選文限〈學而〉、〈述而〉、〈衛靈公〉三則，另僅使用教材明列之孔子、《論語》基本常識與課內補充，不引入教材外章句。",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+      "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+      "lesson": "第五課〈論語選〉"
+    },
+    "difficulty": "chinese-7-1-l05-easy",
+    "title": "第五課〈論語選〉｜簡易",
+    "subtitle": "國文第一冊｜自編題｜簡易 20 題",
+    "difficultyLabel": "簡易"
+  },
+  "questions": [
+    {
+      "questionId": "260922234500001",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "〈論語選〉的來源是哪一部典籍？",
+      "o": [
+        "《論語》",
+        "《孟子》",
+        "《史記》",
+        "《左傳》"
+      ],
+      "a": 0,
+      "e": "本課三則選文都出自《論語》。",
+      "conceptIds": [
+        "chinese-7-1-l05-lunyu-basic"
+      ]
+    },
+    {
+      "questionId": "260922234500002",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "依教材，《論語》的體裁是什麼？",
+      "o": [
+        "語錄體",
+        "傳記體",
+        "章回體",
+        "韻文"
+      ],
+      "a": 0,
+      "e": "教材明列《論語》為語錄體，以記錄言論與對答為主。",
+      "conceptIds": [
+        "chinese-7-1-l05-lunyu-genre"
+      ]
+    },
+    {
+      "questionId": "260922234500003",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "依教材，《論語》全書共有多少篇？",
+      "o": [
+        "二十篇",
+        "十篇",
+        "十二篇",
+        "三十篇"
+      ],
+      "a": 0,
+      "e": "教材補給站指出《論語》全書共二十篇。",
+      "conceptIds": [
+        "chinese-7-1-l05-lunyu-basic"
+      ]
+    },
+    {
+      "questionId": "260922234500004",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "孔子的名與字，何者正確？",
+      "o": [
+        "名丘，字仲尼",
+        "名尼，字仲丘",
+        "名軻，字子輿",
+        "名回，字子淵"
+      ],
+      "a": 0,
+      "e": "教材介紹孔子名丘，字仲尼。",
+      "conceptIds": [
+        "chinese-7-1-l05-confucius-profile"
+      ]
+    },
+    {
+      "questionId": "260922234500005",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「學而時習之」中的「時習」是什麼意思？",
+      "o": [
+        "時常溫習",
+        "按時休息",
+        "偶爾學習",
+        "及時考試"
+      ],
+      "a": 0,
+      "e": "教材注釋：「時習」指時常溫習。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-review-learning"
+      ]
+    },
+    {
+      "questionId": "260922234500006",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「不亦說乎」中的「說」應如何理解？",
+      "o": [
+        "通「悅」，喜悅",
+        "說話",
+        "解說",
+        "勸說"
+      ],
+      "a": 0,
+      "e": "「說」為通假字，通「悅」，意思是喜悅。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-shuo"
+      ]
+    },
+    {
+      "questionId": "260922234500007",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「人不知而不慍」中的「慍」意思是什麼？",
+      "o": [
+        "怨恨、生氣",
+        "害怕",
+        "慚愧",
+        "疑惑"
+      ],
+      "a": 0,
+      "e": "教材注釋：「慍」指怨恨、生氣。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-yun"
+      ]
+    },
+    {
+      "questionId": "260922234500008",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "本課第一則中的「君子」指什麼樣的人？",
+      "o": [
+        "有道德修養的人",
+        "有官位的人",
+        "家境富裕的人",
+        "年長的人"
+      ],
+      "a": 0,
+      "e": "教材注釋明確指出，此處「君子」指有道德修養的人。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-junzi"
+      ]
+    },
+    {
+      "questionId": "260922234500009",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「有朋自遠方來，不亦樂乎」主要表達哪一種樂趣？",
+      "o": [
+        "志同道合的朋友相聚切磋",
+        "獨自旅行遠方",
+        "得到別人的稱讚",
+        "贏得比賽"
+      ],
+      "a": 0,
+      "e": "教材將此句解為志同道合的朋友相聚、共同學習與切磋的樂趣。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-friends-learning"
+      ]
+    },
+    {
+      "questionId": "260922234500010",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「人不知而不慍，不亦君子乎」最直接強調哪一種修養？",
+      "o": [
+        "未被了解時仍不怨怒",
+        "遇到問題立刻反駁",
+        "凡事避免與人往來",
+        "只和欣賞自己的人交朋友"
+      ],
+      "a": 0,
+      "e": "此句強調即使不被理解或賞識，也能保持涵養、不怨怒。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-composure"
+      ]
+    },
+    {
+      "questionId": "260922234500011",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「三人行，必有我師焉」中的「師」在本課指什麼？",
+      "o": [
+        "可效法或作為警惕的對象",
+        "專門授課的老師",
+        "軍隊統帥",
+        "官府長官"
+      ],
+      "a": 0,
+      "e": "教材注釋：「師」指可以效法或作為警惕的對象。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-shi"
+      ]
+    },
+    {
+      "questionId": "260922234500012",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「焉」在「必有我師焉」中的作用為何？",
+      "o": [
+        "句末助詞，無義",
+        "代名詞，指他",
+        "介詞，在",
+        "疑問詞，哪裡"
+      ],
+      "a": 0,
+      "e": "教材注釋指出，此處「焉」為句末助詞，無義。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-yan"
+      ]
+    },
+    {
+      "questionId": "260922234500013",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「擇其善者而從之」最直接的意思是什麼？",
+      "o": [
+        "選取別人的優點來學習",
+        "只和品行好的人來往",
+        "要求別人改正缺點",
+        "避免與任何人比較"
+      ],
+      "a": 0,
+      "e": "第二則強調從別人的優點中學習，而不是只選擇與好人交往。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-follow-good"
+      ]
+    },
+    {
+      "questionId": "260922234500014",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「其不善者而改之」的重點是什麼？",
+      "o": [
+        "看到別人的缺點時反省自己並改正",
+        "立刻指出對方的錯誤",
+        "遠離所有有缺點的人",
+        "要求別人向自己道歉"
+      ],
+      "a": 0,
+      "e": "教材明確指出重點是反觀自身，有則改之，無則警惕。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-self-reflection"
+      ]
+    },
+    {
+      "questionId": "260922234500015",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "第三則中，向孔子提問「有一言而可以終身行之者乎」的人是誰？",
+      "o": [
+        "子貢",
+        "顏淵",
+        "子路",
+        "子夏"
+      ],
+      "a": 0,
+      "e": "第三則由子貢向孔子提問。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-zigong"
+      ]
+    },
+    {
+      "questionId": "260922234500016",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「一言而可以終身行之者乎」中的「一言」，教材注釋為什麼？",
+      "o": [
+        "一字",
+        "一句話",
+        "一篇文章",
+        "一種聲音"
+      ],
+      "a": 0,
+      "e": "教材注釋：「一言」在此指一字。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-yiyan"
+      ]
+    },
+    {
+      "questionId": "260922234500017",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「其恕乎」中的「其」表示什麼語氣？",
+      "o": [
+        "推測語氣",
+        "命令語氣",
+        "反問語氣",
+        "否定語氣"
+      ],
+      "a": 0,
+      "e": "教材注釋指出，此處「其」為語助詞，表推測，相當於「可能、大概」。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-qi"
+      ]
+    },
+    {
+      "questionId": "260922234500018",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "本課所說的「恕」最接近下列哪個意思？",
+      "o": [
+        "推己及人，以同理心對待他人",
+        "凡事原諒自己",
+        "不分是非地答應別人",
+        "避免與人接觸"
+      ],
+      "a": 0,
+      "e": "教材將「恕」解為推己及人，也就是設身處地、以同理心對待他人。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-shu"
+      ]
+    },
+    {
+      "questionId": "260922234500019",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「己所不欲，勿施於人」的意思是什麼？",
+      "o": [
+        "自己不願承受的事，不要加在別人身上",
+        "自己喜歡的事一定要分享給別人",
+        "別人不喜歡的事自己也不能做",
+        "只要出於好意就可以替別人決定"
+      ],
+      "a": 0,
+      "e": "此句強調尊重與推己及人：自己不願承受的事情，不要施加給別人。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-do-not-impose"
+      ]
+    },
+    {
+      "questionId": "260922234500020",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "依教材，孔子被後世尊稱為什麼？",
+      "o": [
+        "至聖先師",
+        "詩聖",
+        "亞聖",
+        "文忠公"
+      ],
+      "a": 0,
+      "e": "教材孔子介紹指出，孔子被後世尊為「至聖先師」。",
+      "conceptIds": [
+        "chinese-7-1-l05-confucius-profile"
+      ]
+    }
+  ]
+}
