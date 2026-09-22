@@ -1562,6 +1562,11 @@
         questions.forEach((question, index) => {
           question.number = index + 1;
         });
+
+        data.exam = data.exam || {};
+        const manualCount = questions.filter(question => question?.type === 'manual-study').length;
+        const autoCount = questions.length - manualCount;
+        data.exam.subtitle = `數學七上｜${section.code} ${section.title}｜各校段考題｜${section.schoolCount || 1} 校｜${autoCount} 題自動評量${manualCount ? `＋${manualCount} 題紙筆練習` : ''}`;
       }
       const expected = difficultyKey === 'easy'
         ? 20
