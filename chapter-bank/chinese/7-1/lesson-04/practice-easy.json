@@ -1,0 +1,553 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "scoreMode": "fixed",
+    "pointsPerQuestion": 5,
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive 第四課〈差不多先生傳〉canonical 教材知識庫自編；以課文、注釋、作者、鑑賞分析、語文知識與延伸探索〈母親的教誨〉為 authority，不直接複製課本應用練習。",
+    "difficulty": "chinese-7-1-l04-easy",
+    "title": "第四課〈差不多先生傳〉｜簡易",
+    "subtitle": "國文第一冊｜自編題｜簡易 20 題",
+    "difficultyLabel": "簡易",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+      "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+      "lesson": "第四課〈差不多先生傳〉"
+    }
+  },
+  "questions": [
+    {
+      "questionId": "260922232000001",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "〈差不多先生傳〉的作者是誰？",
+      "o": [
+        "胡適",
+        "楊喚",
+        "杏林子",
+        "古蒙仁"
+      ],
+      "a": 0,
+      "e": "〈差不多先生傳〉作者為胡適。",
+      "conceptIds": [
+        "chinese-7-1-l04-author-hu-shih"
+      ]
+    },
+    {
+      "questionId": "260922232000002",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "依教材，〈差不多先生傳〉最適合歸為哪一類文章？",
+      "o": [
+        "寓言式人物傳記／諷刺散文",
+        "山水遊記",
+        "科學說明文",
+        "抒情新詩"
+      ],
+      "a": 0,
+      "e": "教材將本文定位為寓言式人物傳記／諷刺散文。",
+      "conceptIds": [
+        "chinese-7-1-l04-genre-allegorical-biography"
+      ]
+    },
+    {
+      "questionId": "260922232000003",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "胡適的字是什麼？",
+      "o": [
+        "適之",
+        "子瞻",
+        "摩詰",
+        "介甫"
+      ],
+      "a": 0,
+      "e": "教材作者介紹指出胡適字適之。",
+      "conceptIds": [
+        "chinese-7-1-l04-author-hu-shih"
+      ]
+    },
+    {
+      "questionId": "260922232000004",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "差不多先生最常表現出的處事態度是什麼？",
+      "o": [
+        "敷衍馬虎，凡事不求精確",
+        "謹慎求證，反覆核對",
+        "勇於冒險，不怕失敗",
+        "勤勞節儉，重視效率"
+      ],
+      "a": 0,
+      "e": "差不多先生的核心缺點是敷衍、馬虎，缺乏精確與責任感。",
+      "conceptIds": [
+        "chinese-7-1-l04-character-profile"
+      ]
+    },
+    {
+      "questionId": "260922232000005",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "差不多先生的口頭禪最接近下列何者？",
+      "o": [
+        "凡事只要差不多就好了，何必太精明",
+        "今日事今日畢，絕不拖延",
+        "不懂就問，務必查明",
+        "做事之前先列出完整步驟"
+      ],
+      "a": 0,
+      "e": "教材整理的口頭禪是「凡事只要差不多就好了，何必太精明」。",
+      "conceptIds": [
+        "chinese-7-1-l04-catchphrase"
+      ]
+    },
+    {
+      "questionId": "260922232000006",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "媽媽叫差不多先生買紅糖，他最後買成了什麼？",
+      "o": [
+        "白糖",
+        "冰糖",
+        "黑糖",
+        "砂糖"
+      ],
+      "a": 0,
+      "e": "課文第一個生活事例是把紅糖買成白糖。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-red-white-sugar"
+      ]
+    },
+    {
+      "questionId": "260922232000007",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "老師問直隸省西邊是哪一省時，差不多先生把哪兩個省混為一談？",
+      "o": [
+        "山西與陝西",
+        "河南與河北",
+        "湖南與湖北",
+        "江西與江蘇"
+      ],
+      "a": 0,
+      "e": "他答成陝西，老師糾正為山西，他仍認為兩者差不多。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-shanxi-shaanxi"
+      ]
+    },
+    {
+      "questionId": "260922232000008",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "差不多先生在錢鋪做夥計時，最常把哪兩個數字寫混？",
+      "o": [
+        "十與千",
+        "一與七",
+        "百與萬",
+        "三與八"
+      ],
+      "a": 0,
+      "e": "課文寫他把帳目中的「十」與「千」弄錯，卻認為只差一小撇。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-ten-thousand"
+      ]
+    },
+    {
+      "questionId": "260922232000009",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "差不多先生趕火車失敗，主要是因為什麼？",
+      "o": [
+        "遲到兩分鐘",
+        "忘了帶車票",
+        "走錯月臺",
+        "搭錯方向"
+      ],
+      "a": 0,
+      "e": "課文寫他因做事不精準，遲到兩分鐘而沒趕上火車。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-train"
+      ]
+    },
+    {
+      "questionId": "260922232000010",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "差不多先生病急時，原本要找哪位大夫？",
+      "o": [
+        "東街汪大夫",
+        "西街王大夫",
+        "南街張大夫",
+        "北街李大夫"
+      ],
+      "a": 0,
+      "e": "課文中原本要找的是東街汪大夫，後來卻請西街王大夫來看病。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-doctor"
+      ]
+    },
+    {
+      "questionId": "260922232000011",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "差不多先生最後死亡，最直接相關的事件是哪一項？",
+      "o": [
+        "把汪大夫與王大夫當成差不多而誤診",
+        "買錯紅糖與白糖",
+        "把山西說成陝西",
+        "沒趕上火車"
+      ],
+      "a": 0,
+      "e": "病急時把不同醫師視為「差不多」，造成誤診並導致死亡，是情節最嚴重的後果。",
+      "conceptIds": [
+        "chinese-7-1-l04-event-doctor",
+        "chinese-7-1-l04-escalation-consequences"
+      ]
+    },
+    {
+      "questionId": "260922232000012",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "差不多先生死後，人們給他的法號是什麼？",
+      "o": [
+        "圓通大師",
+        "精明大師",
+        "慎思大師",
+        "明辨大師"
+      ],
+      "a": 0,
+      "e": "課文寫眾人稱他為「圓通大師」，這個稱號具有反諷意味。",
+      "conceptIds": [
+        "chinese-7-1-l04-dao-fan-irony"
+      ]
+    },
+    {
+      "questionId": "260922232000013",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "教材所說的「倒反」是指什麼？",
+      "o": [
+        "表面意思與作者真正意思相反",
+        "把事情依時間倒著敘述",
+        "把兩句話顛倒排列",
+        "重複同一個詞語"
+      ],
+      "a": 0,
+      "e": "倒反是言詞表面意思與作者真正意思相反的表達方式。",
+      "conceptIds": [
+        "chinese-7-1-l04-dao-fan-irony"
+      ]
+    },
+    {
+      "questionId": "260922232000014",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "「圓通大師」在本文中主要具有什麼作用？",
+      "o": [
+        "表面稱讚，實際諷刺",
+        "真心讚美他的智慧",
+        "說明他正式出家",
+        "介紹佛教儀式"
+      ],
+      "a": 0,
+      "e": "「圓通大師」是明褒暗貶的倒反，並非真心讚美。",
+      "conceptIds": [
+        "chinese-7-1-l04-dao-fan-irony"
+      ]
+    },
+    {
+      "questionId": "260922232000015",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "「錢鋪」在課文中的意思是什麼？",
+      "o": [
+        "舊式銀行或錢莊",
+        "販賣紙鈔的商店",
+        "專門鑄幣的工廠",
+        "當鋪的別稱"
+      ],
+      "a": 0,
+      "e": "教材注釋：錢鋪是舊式銀行，也稱錢莊。",
+      "conceptIds": [
+        "chinese-7-1-l04-vocabulary"
+      ]
+    },
+    {
+      "questionId": "260922232000016",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "「賠小心」最接近下列哪個意思？",
+      "o": [
+        "低聲下氣地道歉",
+        "小心保管財物",
+        "賠償對方金錢",
+        "謹慎計算帳目"
+      ],
+      "a": 0,
+      "e": "教材注釋：「賠小心」指低聲下氣地道歉。",
+      "conceptIds": [
+        "chinese-7-1-l04-vocabulary"
+      ]
+    },
+    {
+      "questionId": "260922232000017",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "「一命嗚呼」在課文中的意思是什麼？",
+      "o": [
+        "死亡",
+        "大聲呼喊",
+        "昏睡不醒",
+        "逃離現場"
+      ],
+      "a": 0,
+      "e": "「一命嗚呼」意指死亡。",
+      "conceptIds": [
+        "chinese-7-1-l04-vocabulary"
+      ]
+    },
+    {
+      "questionId": "260922232000018",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "本文共十一段，教材將全文分成幾個主要部分？",
+      "o": [
+        "三部分",
+        "二部分",
+        "四部分",
+        "五部分"
+      ],
+      "a": 0,
+      "e": "教材將十一段分成三部分：人物概括、生活事例、死後影響。",
+      "conceptIds": [
+        "chinese-7-1-l04-structure"
+      ]
+    },
+    {
+      "questionId": "260922232000019",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "本文主旨最接近下列何者？",
+      "o": [
+        "批判凡事敷衍、不求精確的處世態度",
+        "讚美隨遇而安、不拘小節的人生",
+        "介紹舊時錢鋪與醫療制度",
+        "勸人遇事不要太過認真"
+      ],
+      "a": 0,
+      "e": "作者藉虛構人物與諷刺手法，提醒人做事應認真、精確、負責。",
+      "conceptIds": [
+        "chinese-7-1-l04-main-idea",
+        "chinese-7-1-l04-precision-responsibility"
+      ]
+    },
+    {
+      "questionId": "260922232000020",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l04-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第四課_差不多先生傳_教材知識庫",
+        "driveDocumentId": "1qHl7lXzY5u4bwde1DlrWi6pcO6yqhuXmzoQdOWpnW1w",
+        "lesson": "第四課〈差不多先生傳〉"
+      },
+      "q": "延伸閱讀〈母親的教誨〉中，胡適的母親給人的主要形象是什麼？",
+      "o": [
+        "嚴格而慈愛，重視自律與認錯",
+        "凡事隨便，不拘細節",
+        "只重成績，不關心生活",
+        "鼓勵孩子遇錯就推給別人"
+      ],
+      "a": 0,
+      "e": "延伸閱讀寫母親督促讀書、反省錯誤，既嚴格又慈愛。",
+      "conceptIds": [
+        "chinese-7-1-l04-extension-mother-teaching"
+      ]
+    }
+  ]
+}
