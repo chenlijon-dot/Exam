@@ -13,8 +13,8 @@ const active = banks.flatMap(bank => bank.questions || []);
 const pending = banks.flatMap(bank => bank.pendingQuestions || []);
 const all = [...active, ...pending];
 
-assert.equal(active.length, 30, 'Chiayi should expose 30 active auto-gradable items');
-assert.equal(pending.length, 1, 'Chiayi should keep exactly one answer-key conflict pending');
+assert.equal(active.length, 31, 'Chiayi should expose 31 active auto-gradable items');
+assert.equal(pending.length, 0, 'Chiayi should have no pending items after the verified answer-key correction');
 assert.equal(all.length, 31, 'Chiayi source exam has 31 independently indexed answer items');
 
 const ids = all.map(question => question.questionId);
@@ -22,10 +22,16 @@ assert.equal(new Set(ids).size, ids.length, 'Chiayi questionId values must be un
 assert.ok(all.every(question => /^260922213000\d{3}$/.test(question.questionId)), 'questionId block must match allocated Chiayi prefix');
 assert.ok(all.every(question => Number(question.revision) === 1), 'new Chiayi questions must start at revision 1');
 
-assert.ok(active.every(question => question.answerVerified === true), 'every active Chiayi item must be backed by the official answer sheet');
-assert.equal(pending[0].originalQuestionNumber, '二-04');
-assert.equal(pending[0].status, 'pending-answer-key-conflict');
-assert.equal(pending[0].answerVerified, false);
+assert.ok(active.every(question => question.answerVerified === true), 'every active Chiayi item must be verified for production use');
+
+const corrected = active.find(question => question.originalQuestionNumber === '二-04');
+assert.ok(corrected, '二-04 must be promoted to active');
+assert.equal(corrected.answerVerified, true);
+assert.equal(corrected.officialAnswer, '13');
+assert.equal(corrected.verifiedAnswer, '18');
+assert.equal(corrected.a, 3, '18 must be the correct option');
+assert.match(corrected.answerNote, /官方答案卷.*13/);
+assert.match(corrected.answerNote, /題幹.*18/);
 
 const networkQuestion = active.find(question => question.originalQuestionNumber === '一-10');
 assert.equal(networkQuestion?.diagram?.type, 'node-network', 'Q10 must use native node-network drawing');
