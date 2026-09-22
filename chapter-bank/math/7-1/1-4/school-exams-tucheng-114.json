@@ -159,8 +159,14 @@
           0,
           1000000
         ],
-        "showArrows": true,
+        "showArrows": false,
         "points": [
+          {
+            "x": 0,
+            "label": "O",
+            "showValue": false,
+            "style": "solid"
+          },
           {
             "x": 50000,
             "label": "A",
