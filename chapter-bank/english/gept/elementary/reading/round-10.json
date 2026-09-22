@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-10",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第十回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第十回",
+    "difficulty": "english-gept-elementary-reading-round-10",
+    "difficultyLabel": "第十回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceBook": "萬事通 智能碼書《國中英文 全民英檢攻略 全》",
+    "sourcePages": "p.77–84",
+    "sourceDocId": "1DB9kv8GbC5ey7tMCjQB4dGHpG57wSp9v8uDDOtvC03k",
+    "answerVerified": true,
+    "answerSource": "書末解答頁 P77 第十回",
+    "sourceNote": "題目文字依 Google Drive 人工校正完成之《國中英文 全民英檢攻略 全》第十回原始文字校正版建立，原書 p.77–84，共 35 題。全部答案已依書末解答頁 P77「第十回」逐題核對，answerVerified=true。題目與 A/B/C/D 原始順序完整保留；題組文章只存一次並由 groupId 共用。"
+  },
+  "questions": [
+    {
+      "questionId": "260922154300001",
+      "revision": 1,
+      "number": 1,
+      "q": "Dad _____ some cake and cookies for snacks.",
+      "o": [
+        "baked",
+        "calmed",
+        "burned",
+        "cashed"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 1,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) baked。bake cake/cookies 表示烘烤蛋糕與餅乾。"
+    },
+    {
+      "questionId": "260922154300002",
+      "revision": 1,
+      "number": 2,
+      "q": "You’ll need to get to the _____ to pay your bills.",
+      "o": [
+        "counter",
+        "scooter",
+        "river bank",
+        "staff office"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 2,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) counter。到櫃檯（counter）繳帳單最符合情境。"
+    },
+    {
+      "questionId": "260922154300003",
+      "revision": 1,
+      "number": 3,
+      "q": "Wayne loves cooking. He says he’ll probably be a _____ in the future.",
+      "o": [
+        "cooker",
+        "chef",
+        "pilot",
+        "soldier"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 3,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (B) chef。喜歡做菜且談未來職業，chef 是廚師。"
+    },
+    {
+      "questionId": "260922154300004",
+      "revision": 1,
+      "number": 4,
+      "q": "Though Dad disliked my new hairstyle, Mom thought it was _____.",
+      "o": [
+        "horrible",
+        "acceptable",
+        "terrible",
+        "available"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 4,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (B) acceptable。though 表轉折，爸爸不喜歡、媽媽則認為可以接受。"
+    },
+    {
+      "questionId": "260922154300005",
+      "revision": 1,
+      "number": 5,
+      "q": "See? The rabbit was _____ a bird!",
+      "o": [
+        "picked up",
+        "got into",
+        "tried on",
+        "turned into"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 5,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "正式答案 (D) turned into。turn into 表示「變成」。"
+    },
+    {
+      "questionId": "260922154300006",
+      "revision": 1,
+      "number": 6,
+      "q": "It was Vincent’s first time to New York — he was so excited that he lost his _____.",
+      "o": [
+        "education",
+        "presence",
+        "direction",
+        "advantage"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 6,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (C) direction。第一次到紐約太興奮而迷失方向。"
+    },
+    {
+      "questionId": "260922154300007",
+      "revision": 1,
+      "number": 7,
+      "q": "It was dark after the sudden blackout, so I lit up the _____ right away.",
+      "o": [
+        "candies",
+        "captains",
+        "cameras",
+        "candles"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 7,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (D) candles。停電後點蠟燭最符合情境。"
+    },
+    {
+      "questionId": "260922154300008",
+      "revision": 1,
+      "number": 8,
+      "q": "I can help you this time, but don’t _____.",
+      "o": [
+        "take a nap",
+        "take it for granted",
+        "take it easy",
+        "take your time"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 8,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-idiom-take-for-granted"
+      ],
+      "e": "正式答案 (B) take it for granted。意為「視為理所當然」。"
+    },
+    {
+      "questionId": "260922154300009",
+      "revision": 1,
+      "number": 9,
+      "q": "My boss called me at late night and said she needed _____ her thirty copies of my latest book.",
+      "o": [
+        "to get",
+        "getting",
+        "me to get her",
+        "me got"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 9,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-need-object-infinitive"
+      ],
+      "e": "正式答案 (C) me to get her。need + 人 + to V：需要某人去做某事。"
+    },
+    {
+      "questionId": "260922154300010",
+      "revision": 1,
+      "number": 10,
+      "q": "A: Uncle Sam bought a new car.\nB: _____",
+      "o": [
+        "What nice a car!",
+        "How a nice car!",
+        "What cool it is!",
+        "How cool it is!"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 10,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-exclamation-how"
+      ],
+      "e": "正式答案 (D) How cool it is!。How + adj. + S + V 為正確感嘆句。"
+    },
+    {
+      "questionId": "260922154300011",
+      "revision": 1,
+      "number": 11,
+      "q": "It’s a mess! What _____ before we got back to the office?",
+      "o": [
+        "has happened",
+        "were happenend",
+        "had happened",
+        "had been happened"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 11,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-past-perfect"
+      ],
+      "e": "正式答案 (C) had happened。事件發生在 got back 之前，用過去完成式。"
+    },
+    {
+      "questionId": "260922154300012",
+      "revision": 1,
+      "number": 12,
+      "q": "Kendrick has three sisters. _____ of them study graduate school now, and the other is only 9.",
+      "o": [
+        "Both",
+        "One",
+        "All",
+        "Two"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 12,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-quantifier"
+      ],
+      "e": "正式答案 (D) Two。三姊妹中兩位念研究所，the other 指剩下那一位。"
+    },
+    {
+      "questionId": "260922154300013",
+      "revision": 1,
+      "number": 13,
+      "q": "We all wonder if Candice _____ tomorrow.",
+      "o": [
+        "comes",
+        "came",
+        "will come",
+        "has come"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 13,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-wonder-if-future"
+      ],
+      "e": "正式答案 (C) will come。wonder if 的 if 是「是否」名詞子句，可使用未來式。"
+    },
+    {
+      "questionId": "260922154300014",
+      "revision": 1,
+      "number": 14,
+      "q": "We all would be glad if Candice _____ tomorrow.",
+      "o": [
+        "comes",
+        "came",
+        "will come",
+        "has come"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 14,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-conditional"
+      ],
+      "e": "正式答案 (A) comes。教材答案以真實條件語境處理，if 子句用現在式表未來。"
+    },
+    {
+      "questionId": "260922154300015",
+      "revision": 1,
+      "number": 15,
+      "q": "These are the chairs _____ the passengers sat.",
+      "o": [
+        "which",
+        "in which",
+        "how",
+        "on which"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 15,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-preposition-relative-pronoun"
+      ],
+      "e": "正式答案 (D) on which。passengers sat on the chairs，因此用 on which。"
+    },
+    {
+      "questionId": "260922154300016",
+      "revision": 1,
+      "number": 16,
+      "q": "第 16 空應填入哪一個選項？",
+      "o": [
+        "graduate",
+        "has graduated",
+        "graduates",
+        "graduated"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 16,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-seattle",
+        "english-gept-elementary-reading-present-perfect"
+      ],
+      "e": "正式答案 (D) graduated。since 後接過去時間點事件，主句使用現在完成式。",
+      "section": "第二部分：段落填空",
+      "groupId": "round10-cloze-16-20",
+      "introLabel": "Questions 16–20｜Peter in Seattle",
+      "intro": "Peter and his family have lived in Seattle since Peter __16__ from junior high school. Now Peter is twenty-one and __17__ computer science at college. He misses his friends and classmates in Taiwan though he has kept __18__ with them. This year he planned to get back to Taiwan during the Christmas and New Year break. So he __19__ flight tickets online as soon as he could. __20__, there were many people doing the same thing, so the price has doubled. Peter had no choice but to put off going back to Taiwan."
+    },
+    {
+      "questionId": "260922154300017",
+      "revision": 1,
+      "number": 17,
+      "q": "第 17 空應填入哪一個選項？",
+      "o": [
+        "feels down",
+        "majors in",
+        "falls behind",
+        "believes in"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 17,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-seattle",
+        "english-gept-elementary-reading-collocation-major-in"
+      ],
+      "e": "正式答案 (B) majors in。major in computer science 表示主修電腦科學。",
+      "groupId": "round10-cloze-16-20"
+    },
+    {
+      "questionId": "260922154300018",
+      "revision": 1,
+      "number": 18,
+      "q": "第 18 空應填入哪一個選項？",
+      "o": [
+        "contacted",
+        "contacting",
+        "would contact",
+        "to contact"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 18,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-seattle",
+        "english-gept-elementary-reading-collocation-keep-gerund"
+      ],
+      "e": "正式答案 (B) contacting。keep + V-ing 表示持續做某事。",
+      "groupId": "round10-cloze-16-20"
+    },
+    {
+      "questionId": "260922154300019",
+      "revision": 1,
+      "number": 19,
+      "q": "第 19 空應填入哪一個選項？",
+      "o": [
+        "booked",
+        "sold",
+        "dropped",
+        "quit"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 19,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-seattle",
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) booked。book flight tickets 表示預訂機票。",
+      "groupId": "round10-cloze-16-20"
+    },
+    {
+      "questionId": "260922154300020",
+      "revision": 1,
+      "number": 20,
+      "q": "第 20 空應填入哪一個選項？",
+      "o": [
+        "However",
+        "For the first time",
+        "After all",
+        "From now on"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 20,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-seattle",
+        "english-gept-elementary-reading-transition"
+      ],
+      "e": "正式答案 (A) However。前面想訂票回台，後面卻因很多人搶票而票價翻倍，為轉折關係。",
+      "groupId": "round10-cloze-16-20"
+    },
+    {
+      "questionId": "260922154300021",
+      "revision": 1,
+      "number": 21,
+      "q": "第 21 空應填入哪一個選項？",
+      "o": [
+        "are going to",
+        "will",
+        "were going to",
+        "were"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 21,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-baby",
+        "english-gept-elementary-reading-future-in-past"
+      ],
+      "e": "正式答案 (C) were going to。從 Last November 的過去視角表達「將要有小孩」。",
+      "section": "第二部分：段落填空",
+      "groupId": "round10-cloze-21-25",
+      "introLabel": "Questions 21–25｜Mr. and Mrs. Tsai’s Baby",
+      "intro": "Last November, Mr. and Mrs. Tsai were told they __21__ have a baby. They were both excited because they had always wanted to have __22__. They had talked about the baby’s name several times. At first, they had trouble choosing a name they both liked. But in the end, they decided they would name the child __23__ Mr. Tsai’s grandma.\n\nOn the late morning of July 28, Mr. Tsai got a call — Mrs. Tsai was already in the hospital — ready to give birth. Mr. Tsai hurried out and got in a taxi. It took a long time to get there, but with the hospital __24__, he jumped out of the taxi and ran into the hospital. When he got there, the baby had been born — a cute little girl! Mr. Tsai looked at his wife and daughter, and his heart __25__ happiness."
+    },
+    {
+      "questionId": "260922154300022",
+      "revision": 1,
+      "number": 22,
+      "q": "第 22 空應填入哪一個選項？",
+      "o": [
+        "it",
+        "all",
+        "one",
+        "each"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 22,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-baby",
+        "english-gept-elementary-reading-pronoun"
+      ],
+      "e": "正式答案 (C) one。have one 指「有一個孩子」。",
+      "groupId": "round10-cloze-21-25"
+    },
+    {
+      "questionId": "260922154300023",
+      "revision": 1,
+      "number": 23,
+      "q": "第 23 空應填入哪一個選項？",
+      "o": [
+        "by",
+        "with",
+        "after",
+        "to"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 23,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-baby",
+        "english-gept-elementary-reading-collocation-name-after"
+      ],
+      "e": "正式答案 (C) after。name A after B 表示以 B 的名字替 A 命名。",
+      "groupId": "round10-cloze-21-25"
+    },
+    {
+      "questionId": "260922154300024",
+      "revision": 1,
+      "number": 24,
+      "q": "第 24 空應填入哪一個選項？",
+      "o": [
+        "in time",
+        "in sight",
+        "in person",
+        "in need"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 24,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-baby",
+        "english-gept-elementary-reading-collocation-in-sight"
+      ],
+      "e": "正式答案 (B) in sight。with the hospital in sight 表示已看得到醫院。",
+      "groupId": "round10-cloze-21-25"
+    },
+    {
+      "questionId": "260922154300025",
+      "revision": 1,
+      "number": 25,
+      "q": "第 25 空應填入哪一個選項？",
+      "o": [
+        "full of",
+        "was full with",
+        "fill of",
+        "was filled with"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 25,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-baby",
+        "english-gept-elementary-reading-collocation-be-filled-with"
+      ],
+      "e": "正式答案 (D) was filled with。be filled with happiness 表示充滿幸福。",
+      "groupId": "round10-cloze-21-25"
+    },
+    {
+      "questionId": "260922154300026",
+      "revision": 1,
+      "number": 26,
+      "q": "Who is Caitlyn White?",
+      "o": [
+        "Natalie’s boss.",
+        "Natalie’s mom.",
+        "Natalie’s cousin.",
+        "A clerk in a cellphone shop."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 26,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-answering-machine",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "正式答案 (D)。她通知手機已檢查完畢並可領回，最符合手機店店員身分。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round10-reading-26-27",
+      "introLabel": "Questions 26–27｜Natalie’s Answering Machine",
+      "intro": "Read Natalie’s messages in her answering machine and answer the question.\n\nMiss Dole,\nYour cellphone has been checked OK. You can come get it before 10:30 p.m.\nMessage Time: 18/06/2016  11:20 a.m.\nCaitlyn White\n\nNatalie,\nSlow Walk is playing at the Queen Theater. Would you like to see it with me?\nMessage Time: 18/06/2016  2:48 p.m.\nPeter\n\nMy dear,\nYour aunt and I will go to China next week. Can you ride us to the airport?\nMessage Time: 18/06/2016  9:26 p.m.\nMom"
+    },
+    {
+      "questionId": "260922154300027",
+      "revision": 1,
+      "number": 27,
+      "q": "Which is NOT true?",
+      "o": [
+        "Natalie’s family name is Dole.",
+        "Natalie’s mom is going to China.",
+        "Peter asks Natalie out for a walk.",
+        "Natalie’s cellphone has no problem now, and she can get it back."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 27,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-answering-machine",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "正式答案 (C)。Peter 是約 Natalie 去 Queen Theater 看 Slow Walk，不是邀她去散步。",
+      "groupId": "round10-reading-26-27"
+    },
+    {
+      "questionId": "260922154300028",
+      "revision": 1,
+      "number": 28,
+      "q": "What is the notice for?",
+      "o": [
+        "To sell vegetarian dishes.",
+        "To invite people to visit a hotel.",
+        "To advise people to eat more vegetables.",
+        "To tell people how to raise cows."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 28,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-poster-purpose",
+        "english-gept-elementary-reading-main-idea"
+      ],
+      "e": "正式答案 (C)。海報鼓勵從每天一餐素食開始，主旨是勸人多吃蔬食。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round10-reading-28-29",
+      "introLabel": "Questions 28–29｜Be a Veggie & Save the Planet",
+      "intro": "Be a Veggie & Save the Planet!\n\nDo you know more than half of the greenhouse gas comes from raising cows and other farm animals? Simply by becoming a vegetarian, you not only save our planet but also make yourself healthier. You can start from one vegetarian meal a day.\n\nJoin us!!\n★ Famous chef from 5-star hotel tells you about nutrients in each vegetable and shows you how to make delicious but simple vegetarian dishes.\nTime: 2:00 p.m., Sunday, October 25, 2015\nPlace: The Great Liz Hotel\n★ For free tickets, call at 1-800-SAVE-US"
+    },
+    {
+      "questionId": "260922154300029",
+      "revision": 1,
+      "number": 29,
+      "q": "What can we know from the poster?",
+      "o": [
+        "You have to pay for the ticket.",
+        "Being a vegetarian has more than one advantage.",
+        "People should eat more beef to become stronger.",
+        "What a famous cook says is more important than being a veggie."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 29,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-poster-purpose",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "正式答案 (B)。海報同時提到保護地球與讓自己更健康，表示素食有多項好處。",
+      "groupId": "round10-reading-28-29"
+    },
+    {
+      "questionId": "260922154300030",
+      "revision": 1,
+      "number": 30,
+      "q": "What does “the two” mean?",
+      "o": [
+        "Adam and his watch.",
+        "Eva and her husband.",
+        "Eva and the shopkeeper.",
+        "The watch chain and the combs."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 30,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-story-sacrifice",
+        "english-gept-elementary-reading-reference-word"
+      ],
+      "e": "正式答案 (B)。the two 指前文的 Eva 與 Adam。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round10-reading-30-32",
+      "introLabel": "Questions 30–32｜Christmas Gifts",
+      "intro": "It was Christmas Eve. Eva, a young married woman with long beautiful hair, was worried about what to buy for her husband with fewer than $2 in hand. Later, she went to a salon and sold her hair to the keeper. She used the money to buy her husband a watch chain. “The chain will make a perfect gift for Adam’s golden watch,” thought Eva. She went home happily and began to prepare their Christmas Eve dinner.\n\nWhen Adam came home with roses and gifts for Eva, he saw her with short hair. After being asked for a couple of times, Eva couldn’t help but tell Adam the truth. Adam was in tears because he also sold his watch to buy Eva several fine, crystal combs. Now all the gifts were useless, and both of them were speechless for minutes, but the two soon felt like the happiest people in the world. They hugged each other with a big smile."
+    },
+    {
+      "questionId": "260922154300031",
+      "revision": 1,
+      "number": 31,
+      "q": "Why did the couple hug with a big smile?",
+      "o": [
+        "They were too sad to cry.",
+        "They loved each other’s gifts.",
+        "They both got a bargain.",
+        "They got poorer, but loved each other more."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 31,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-story-sacrifice",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "正式答案 (D)。兩人都犧牲珍貴物品為對方買禮物，雖然物質上變少，卻更體會彼此的愛。",
+      "groupId": "round10-reading-30-32"
+    },
+    {
+      "questionId": "260922154300032",
+      "revision": 1,
+      "number": 32,
+      "q": "Which is true?",
+      "o": [
+        "Adam doesn’t like women with short hair.",
+        "Adam bought some flowers, and so did Eva.",
+        "Adam felt sad about Eva’s hair, and so did Eva.",
+        "Adam sold something to buy a gift, and so did Eva."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 32,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-story-sacrifice",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (D)。Adam 賣掉手錶買梳子，Eva 賣掉頭髮買錶鏈。",
+      "groupId": "round10-reading-30-32"
+    },
+    {
+      "questionId": "260922154300033",
+      "revision": 1,
+      "number": 33,
+      "q": "What happened to the WTC in 2001?",
+      "o": [
+        "It was closed.",
+        "It was hit by two planes.",
+        "It was sold at a high price.",
+        "It collapsed because of an earthquake."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 33,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-historical-event",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (B)。文章明確說 WTC was attacked by two jets。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round10-reading-33-35",
+      "introLabel": "Questions 33–35｜WTC Survivor",
+      "intro": "On September 11, 2001, the WTC (World Trade Center) in New York City was attacked by two jets. The two towers collapsed soon after being hit. The sight in front of the citizens was terrible. Thousands of people working inside the buildings were killed, many of whom tried to leap but fell to die. Genelle Guzman-McMillan was on the 64th floor when the attack took place. She was the last survivor in the collapse of the WTC. She felt very grateful for getting a second chance at life. Since then, she goes to church more often because she believes that God saved her life. Every September 11, she takes a day off from work and stays at home or at church. To her, it’s a time to remember that day and to celebrate her reborn life."
+    },
+    {
+      "questionId": "260922154300034",
+      "revision": 1,
+      "number": 34,
+      "q": "Which is true about Genelle Guzman-McMillan?",
+      "o": [
+        "She saved a lot of people.",
+        "She was the only survivor.",
+        "She lost her life on September 11, 2001.",
+        "She was inside one of the towers when it was hit by the jet."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 34,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-historical-event",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (D)。攻擊發生時她人在 WTC 64 樓。",
+      "groupId": "round10-reading-33-35"
+    },
+    {
+      "questionId": "260922154300035",
+      "revision": 1,
+      "number": 35,
+      "q": "What does Guzman-McMillan do every September 11?",
+      "o": [
+        "She goes to church.",
+        "She helps save lives.",
+        "She spends time with other survivors.",
+        "She has dinner with her family after work."
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 10,
+      "originalQuestionNumber": 35,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-historical-event",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (A)。文章說每年 9 月 11 日她會請假，待在家或教堂，且平時也更常去教堂。",
+      "groupId": "round10-reading-33-35"
+    }
+  ]
+}
