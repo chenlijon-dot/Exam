@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-07",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第七回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第七回",
+    "difficulty": "english-gept-elementary-reading-round-07",
+    "difficultyLabel": "第七回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceBook": "萬事通 智能碼書《國中英文 全民英檢攻略 全》",
+    "sourcePages": "p.53–60",
+    "sourceDocId": "1UvsuIMfvjYFER5lVS4MhZYYkmUsVV7htgcfzYygSGqY",
+    "answerVerified": false,
+    "sourceNote": "題目文字依 Google Drive 人工校正完成之《國中英文 全民英檢攻略 全》第七回原始文字校正版建立，原書 p.53–60，共 35 題。現有 Drive 未找到第七回正式解答頁；目前答案與詳解依文法、語意與文章內容判讀，均 answerVerified=false，Q18 另標 answerPending=true 等待正式答案 authority。題目與 A/B/C/D 原始順序完整保留；題組文章只存一次並由 groupId 共用。"
+  },
+  "questions": [
+    {
+      "questionId": "260922140000001",
+      "revision": 1,
+      "number": 1,
+      "q": "Jessie told Dr. Kim that she had _____ all day, so he gave her another kind of medicine.",
+      "o": [
+        "clapped",
+        "coughed",
+        "cured",
+        "counted"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 1,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (B) coughed。看醫師、換藥的語境中，cough all day 表示「咳了一整天」。"
+    },
+    {
+      "questionId": "260922140000002",
+      "revision": 1,
+      "number": 2,
+      "q": "Ms. Wilson, our English teacher, is quite _____ and often fails half of the class.",
+      "o": [
+        "friendly",
+        "strict",
+        "fancy",
+        "stingy"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 2,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (B) strict。常讓班上一半學生不及格，最符合「嚴格的」老師。"
+    },
+    {
+      "questionId": "260922140000003",
+      "revision": 1,
+      "number": 3,
+      "q": "Maggie described the car crash to the policeman, who _____ at the accident scene in no time.",
+      "o": [
+        "visited",
+        "reached",
+        "arrived",
+        "viewed"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 3,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "答案暫判為 (C) arrived。arrive at + 地點是固定搭配；reach 後面通常不加 at。"
+    },
+    {
+      "questionId": "260922140000004",
+      "revision": 1,
+      "number": 4,
+      "q": "Melody’s stayed in Taipei for about three years. She is quite _____ with the MRT system and can’t live without it.",
+      "o": [
+        "similar",
+        "familiar",
+        "wild",
+        "unique"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 4,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "答案暫判為 (B) familiar。be familiar with ... 表示「熟悉……」。"
+    },
+    {
+      "questionId": "260922140000005",
+      "revision": 1,
+      "number": 5,
+      "q": "If you really want to go to the concert, we’d better book the tickets _____.",
+      "o": [
+        "later on",
+        "on time",
+        "in advance",
+        "in time"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 5,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "答案暫判為 (C) in advance。熱門演唱會門票應「事先、提前」預訂。"
+    },
+    {
+      "questionId": "260922140000006",
+      "revision": 1,
+      "number": 6,
+      "q": "I haven’t decided which project to do; perhaps we can have more _____ in the meeting.",
+      "o": [
+        "discussion",
+        "dressings",
+        "division",
+        "democracy"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 6,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (A) discussion。還沒決定專案，所以會議中需要更多「討論」。"
+    },
+    {
+      "questionId": "260922140000007",
+      "revision": 1,
+      "number": 7,
+      "q": "Mason is such an excellent computer _____ that you can always ask him for help if you have any problems with your PC.",
+      "o": [
+        "hardware",
+        "beginner",
+        "photographer",
+        "expert"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 7,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (D) expert。computer expert 指電腦專家，與「有 PC 問題可以找他幫忙」一致。"
+    },
+    {
+      "questionId": "260922140000008",
+      "revision": 1,
+      "number": 8,
+      "q": "Jason has a new mother, but he obviously can’t _____ with her.",
+      "o": [
+        "get along",
+        "stays up",
+        "catch up",
+        "opens up"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 8,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "答案暫判為 (A) get along。get along with someone 表示「和某人相處融洽」。"
+    },
+    {
+      "questionId": "260922140000009",
+      "revision": 1,
+      "number": 9,
+      "q": "I remember _____ that girl somewhere before, but she didn’t recognize me.",
+      "o": [
+        "see",
+        "to see",
+        "saw",
+        "seeing"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 9,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-gerund"
+      ],
+      "e": "答案暫判為 (D) seeing。remember + V-ing 表示記得曾經做過某事。"
+    },
+    {
+      "questionId": "260922140000010",
+      "revision": 1,
+      "number": 10,
+      "q": "The report is so much _____.",
+      "o": [
+        "we can’t complete",
+        "that we can’t complete",
+        "to complete",
+        "that we can’t complete it"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 10,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-so-that"
+      ],
+      "e": "答案暫判為 (D) that we can’t complete it。so much that ... 表結果，且 complete 在此需要受詞 it 指 the report。"
+    },
+    {
+      "questionId": "260922140000011",
+      "revision": 1,
+      "number": 11,
+      "q": "Do you know _____ Ms. Gibson is on a sick leave today?",
+      "o": [
+        "what",
+        "it",
+        "that",
+        "who"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 11,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-noun-clause"
+      ],
+      "e": "答案暫判為 (C) that。know that + 子句表示「知道……這件事」。"
+    },
+    {
+      "questionId": "260922140000012",
+      "revision": 1,
+      "number": 12,
+      "q": "The Green brothers still went fishing _____ the cyclone wind blew really hard.",
+      "o": [
+        "although",
+        "but",
+        "because",
+        "so"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 12,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-conjunction"
+      ],
+      "e": "答案暫判為 (A) although。前後是讓步關係：雖然強風吹得很厲害，他們仍然去釣魚。"
+    },
+    {
+      "questionId": "260922140000013",
+      "revision": 1,
+      "number": 13,
+      "q": "The first modern Olympic Games _____ in Athens, Greece in the year 1896.",
+      "o": [
+        "was held",
+        "were happened",
+        "have been held",
+        "took place"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 13,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-past-tense"
+      ],
+      "e": "答案暫判為 (D) took place。1896 是明確過去時間，take place 表「舉行、發生」；(A) was held 與複數主詞 Games 不一致。"
+    },
+    {
+      "questionId": "260922140000014",
+      "revision": 1,
+      "number": 14,
+      "q": "We’ll wait for Tom until he _____ right in front of us.",
+      "o": [
+        "show up",
+        "will show up",
+        "shows up",
+        "showed up"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 14,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-time-clause"
+      ],
+      "e": "答案暫判為 (C) shows up。表示未來時間的 until 子句用現在式代替 will，Tom 為第三人稱單數。"
+    },
+    {
+      "questionId": "260922140000015",
+      "revision": 1,
+      "number": 15,
+      "q": "Christmas is a day _____ people get together and show concerns to one another.",
+      "o": [
+        "which",
+        "that",
+        "when",
+        "in which"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 15,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-relative-adverb-when"
+      ],
+      "e": "答案暫判為 (C) when。先行詞是表示時間的 a day，關係副詞 when 引導時間關係子句。"
+    },
+    {
+      "questionId": "260922140000016",
+      "revision": 1,
+      "number": 16,
+      "q": "第 16 空應填入哪一個選項？",
+      "o": [
+        "who is",
+        "that is",
+        "who has",
+        "that being"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 16,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-relative-pronoun"
+      ],
+      "e": "答案暫判為 (A) who is。Nobita 是人，非限定關係子句用 who is，補充說明他是五年級學生。",
+      "section": "第二部分：段落填空",
+      "groupId": "round07-cloze-16-20",
+      "introLabel": "Questions 16–20｜Doraemon",
+      "intro": "Doraemon is a robot cat from the future. He lives with Nobita, __16__ a fifth grader. Doraemon __17__ Nobita tools when Nobita is in need or trouble. He gets them out of his magic pocket. Now thanks to __18__, some of the tools in the comics have become real. For example, Doraemon has a wireless telephone that looks much like our cellphones today. Also Doraemon once showed Nobita a TV set that __19__ on a window, and now we have LCD TVs nearly in every household. So, __20__ is impossible today may be possible tomorrow."
+    },
+    {
+      "questionId": "260922140000017",
+      "revision": 1,
+      "number": 17,
+      "q": "第 17 空應填入哪一個選項？",
+      "o": [
+        "borrows",
+        "creates",
+        "pastes",
+        "lends"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 17,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (D) lends。Doraemon 把工具「借給」Nobita，lend someone something 符合句型。",
+      "groupId": "round07-cloze-16-20"
+    },
+    {
+      "questionId": "260922140000018",
+      "revision": 1,
+      "number": 18,
+      "q": "第 18 空應填入哪一個選項？",
+      "o": [
+        "scientists",
+        "fire fighters",
+        "pilots",
+        "engineers"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 18,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "目前暫判為 (A) scientists。文意是因科技發展，漫畫中的部分工具已成真；scientists 最符合教材常見用語。但 engineers 在一般語意上也有一定合理性，因此等待正式解答頁核對。",
+      "groupId": "round07-cloze-16-20",
+      "answerPending": true
+    },
+    {
+      "questionId": "260922140000019",
+      "revision": 1,
+      "number": 19,
+      "q": "第 19 空應填入哪一個選項？",
+      "o": [
+        "can hang",
+        "could hang",
+        "can be hung",
+        "could be hung"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 19,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-grammar-passive-modal"
+      ],
+      "e": "答案暫判為 (D) could be hung。TV set 是被掛在窗戶上，且前文 showed 是過去敘事，因此用 could be hung。",
+      "groupId": "round07-cloze-16-20"
+    },
+    {
+      "questionId": "260922140000020",
+      "revision": 1,
+      "number": 20,
+      "q": "第 20 空應填入哪一個選項？",
+      "o": [
+        "that",
+        "why",
+        "what",
+        "which"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 20,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-grammar-noun-clause-what"
+      ],
+      "e": "答案暫判為 (C) what。what is impossible today 作整句主詞，意為「今天不可能的事」。",
+      "groupId": "round07-cloze-16-20"
+    },
+    {
+      "questionId": "260922140000021",
+      "revision": 1,
+      "number": 21,
+      "q": "第 21 空應填入哪一個選項？",
+      "o": [
+        "knowledge",
+        "technology",
+        "biology",
+        "astrology"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 21,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (A) knowledge。get more knowledge about outer space 表示「對太空有更多知識」。",
+      "section": "第二部分：段落填空",
+      "groupId": "round07-cloze-21-25",
+      "introLabel": "Questions 21–25｜Living in Space",
+      "intro": "Around fifty years ago, people knew little about outer space. After the first human was sent into space, however, people got to get more __21__ about it. Yet do you have any idea __22__ to live in space?\n\nThe place __23__ astronauts work is called a space station. Living on a space station is not easy, though. For instance, when astronauts are sleeping, their sleeping bags need __24__ to the walls so that they may not float around. As to the food they eat, they have three meals a day, just as what they do on earth.\n\nSome countries have offered chances for people to visit outer space. So, if you are rich enough, you can go and __25__ the magic of space."
+    },
+    {
+      "questionId": "260922140000022",
+      "revision": 1,
+      "number": 22,
+      "q": "第 22 空應填入哪一個選項？",
+      "o": [
+        "how is it",
+        "what is it",
+        "how are you doing",
+        "what it is like"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 22,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-grammar-indirect-question"
+      ],
+      "e": "答案暫判為 (D) what it is like。have any idea 後接間接問句，用直述語序；what it is like 表「是什麼樣子」。",
+      "groupId": "round07-cloze-21-25"
+    },
+    {
+      "questionId": "260922140000023",
+      "revision": 1,
+      "number": 23,
+      "q": "第 23 空應填入哪一個選項？",
+      "o": [
+        "that",
+        "where",
+        "which",
+        "what"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 23,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-grammar-relative-adverb-where"
+      ],
+      "e": "答案暫判為 (B) where。the place where astronauts work 表「太空人工作的地方」。",
+      "groupId": "round07-cloze-21-25"
+    },
+    {
+      "questionId": "260922140000024",
+      "revision": 1,
+      "number": 24,
+      "q": "第 24 空應填入哪一個選項？",
+      "o": [
+        "to tie",
+        "being tied",
+        "tying",
+        "tie"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 24,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-grammar-gerund-passive"
+      ],
+      "e": "答案暫判為 (C) tying。need + V-ing 可帶被動意義，sleeping bags need tying to the walls = sleeping bags need to be tied to the walls。",
+      "groupId": "round07-cloze-21-25"
+    },
+    {
+      "questionId": "260922140000025",
+      "revision": 1,
+      "number": 25,
+      "q": "第 25 空應填入哪一個選項？",
+      "o": [
+        "explain",
+        "express",
+        "examine",
+        "experience"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 25,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-context",
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (D) experience。go and experience the magic of space 表示「親身體驗太空的神奇」。",
+      "groupId": "round07-cloze-21-25"
+    },
+    {
+      "questionId": "260922140000026",
+      "revision": 1,
+      "number": 26,
+      "q": "What time do they have lunch and a nap?",
+      "o": [
+        "From 10:30 a.m. to 10:50 a.m.",
+        "From 12:00 a.m. to 2:00 p.m.",
+        "From 4:00 p.m. to 4:20 p.m.",
+        "From 12:00 p.m. to 2:00 p.m."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 26,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-timetable",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D)。時程表直接列出 12:00–14:00 為 Lunch and nap，也就是中午 12 點到下午 2 點。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round07-reading-26-27",
+      "introLabel": "Questions 26–27｜Children’s Home Schedule",
+      "intro": "Eva and her friends visit a children's home every fourth Sunday. They play games, sing, and dance with the children there. The following is their schedule:\n\n10:00–10:30  Play fun games\n10:30–10:50  Sing and dance\n10:50–11:00  Break time\n11:00–12:00  Cook time\n12:00–14:00  Lunch and nap\n14:00–14:20  Play fun games\n14:20–15:20  Show time\n15:20–15:30  Hugs and kisses"
+    },
+    {
+      "questionId": "260922140000027",
+      "revision": 1,
+      "number": 27,
+      "q": "Which is NOT true?",
+      "o": [
+        "The kids watch a show in the afternoon.",
+        "Eva visits the kids once a month.",
+        "Eva hugs and kisses the kids before leaving the children's home.",
+        "The kids can eat lunch from 11 a.m. to 12 a.m."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 27,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-timetable",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "答案暫判為 (D)。11:00–12:00 是 Cook time，Lunch and nap 是 12:00–14:00，因此 (D) 不符合時程表。",
+      "groupId": "round07-reading-26-27"
+    },
+    {
+      "questionId": "260922140000028",
+      "revision": 1,
+      "number": 28,
+      "q": "Where did the dog live?",
+      "o": [
+        "With Joy.",
+        "With his parents.",
+        "In a large brown building.",
+        "In a house on Brown Avenue."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 28,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-notice",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D)。公告寫 Missing ... from Brown Ave. home，表示狗原本住在 Brown Avenue 的家中。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round07-reading-28-29",
+      "introLabel": "Questions 28–29｜Dog Missing",
+      "intro": "Dog Missing\n\nWhite Maltese, about 8 months old\nAnswers to the name of Joy\nMissing since September 22nd from Brown Ave. home\n\nIf you see him or know anything about him, please phone me as soon as possible. My kids are very sad and want to have their Joy back.\n\nCall Judy at 5433-6543"
+    },
+    {
+      "questionId": "260922140000029",
+      "revision": 1,
+      "number": 29,
+      "q": "Who wrote this notice?",
+      "o": [
+        "The children of Judy.",
+        "The owner of the puppy.",
+        "The parents of Joy.",
+        "Mrs. Brown."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 29,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-notice",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "答案暫判為 (B)。公告留下 Judy 的電話，並說 my kids 很傷心、想把 Joy 找回來，可知寫公告的是狗的飼主 Judy。",
+      "groupId": "round07-reading-28-29"
+    },
+    {
+      "questionId": "260922140000030",
+      "revision": 1,
+      "number": 30,
+      "q": "At the time Van Gogh lived, what did people think of him?",
+      "o": [
+        "People knew he was a great artist.",
+        "People proved his works valuable.",
+        "He was very popular in their minds.",
+        "Some people thought he was crazy."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 30,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-biography",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D)。文章直接說 Some people in his times even thought Van Gogh was mad。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round07-reading-30-32",
+      "introLabel": "Questions 30–32｜Vincent Van Gogh",
+      "intro": "Vincent Van Gogh was a worldly well-known painter, who was born in Holland in 1853. When he was young, he led a very hard life. Not only his friends but the people in his hometown often laughed at him. Luckily, with his brother's help, he kept painting.\n\nVan Gogh was quite interested in painting. However, few people would pay enough for his paintings, so Van Gogh could hardly afford his own living. Some people in his times even thought Van Gogh was mad.\n\nAfter Van Gogh passed away, he left many of his great works behind. The paintings few were interested in when Van Gogh lived have become priceless nowadays. Influential collectors have proved Van Gogh's art works very valuable. He is one of the very important artists in history."
+    },
+    {
+      "questionId": "260922140000031",
+      "revision": 1,
+      "number": 31,
+      "q": "The term passed away in line 7 most likely means _____.",
+      "o": [
+        "died",
+        "gave away",
+        "passed by",
+        "left home"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 31,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "答案暫判為 (A) died。passed away 是委婉說法，表示「過世」。",
+      "groupId": "round07-reading-30-32"
+    },
+    {
+      "questionId": "260922140000032",
+      "revision": 1,
+      "number": 32,
+      "q": "Which of the following statements is true?",
+      "o": [
+        "Van Gogh was born in Scotland in 1853.",
+        "Van Gogh had a rich father, but people hated their family.",
+        "Van Gogh had been poor, but later in his life he sold his paintings at good prices.",
+        "Van Gogh didn't become really famous until he passed away."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 32,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-biography",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D)。生前作品少有人願意出高價，死後才變得極有價值，因此真正成名是在過世之後。",
+      "groupId": "round07-reading-30-32"
+    },
+    {
+      "questionId": "260922140000033",
+      "revision": 1,
+      "number": 33,
+      "q": "Which is true?",
+      "o": [
+        "Only younger people use cellphones.",
+        "Only older people use cellphones.",
+        "Only businessmen use cellphones.",
+        "People of all ages use cellphones."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 33,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-detail",
+        "english-gept-elementary-reading-cellphone-etiquette"
+      ],
+      "e": "答案暫判為 (D)。文章明確寫 In fact, people of all ages use cellphones。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round07-reading-33-35",
+      "introLabel": "Questions 33–35｜Cellphone Etiquette",
+      "intro": "Cellphones are so common that you can see people talking on them anytime and anywhere. It seems that young people enjoy showing off their cellphones to their friends, and they tend to stick to their cellphones more often than older people do. In fact, people of all ages use cellphones. They use cellphones to do many things, such as chatting with friends, making dates, surfing the Net, looking for useful information they need, and so on. People can almost do everything the computer does with their cellphones.\n\nHowever, cellphone users should know that there are some things they must be careful about, such as the phone's ring volume control. Have you ever had any unpleasant experiences of being bothered by the loud phone ring? When you are taking the train to a farther place and just beginning to enjoy your quiet sleep, suddenly, you are woken up by a sharp and loud phone ringtone. It should be a very terrible experience. So, always remember to turn down your ring volume in public."
+    },
+    {
+      "questionId": "260922140000034",
+      "revision": 1,
+      "number": 34,
+      "q": "What unhappy experience may be brought to people when others use cellphones around them?",
+      "o": [
+        "Falling asleep on the train to a farther place.",
+        "Seeing people show off their latest cellphones.",
+        "Being woken up by the loud phone ring.",
+        "Hearing people talk on cellphones quietly in public."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 34,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-detail",
+        "english-gept-elementary-reading-cellphone-etiquette"
+      ],
+      "e": "答案暫判為 (C)。文章舉例人在火車上睡覺時，被尖銳又大聲的手機鈴聲吵醒。",
+      "groupId": "round07-reading-33-35"
+    },
+    {
+      "questionId": "260922140000035",
+      "revision": 1,
+      "number": 35,
+      "q": "What may be the best title for the passage?",
+      "o": [
+        "What Cellphones Can Do Now",
+        "Never Sleep on the Train When Traveling",
+        "Don't Show Off Your Cellphones",
+        "What Cellphone Users Should Know"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 7,
+      "originalQuestionNumber": 35,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-best-title",
+        "english-gept-elementary-reading-cellphone-etiquette"
+      ],
+      "e": "答案暫判為 (D)。文章先談手機用途，重點轉到使用者應注意公共場所鈴聲音量，因此標題以「手機使用者應知道的事」最完整。",
+      "groupId": "round07-reading-33-35"
+    }
+  ]
+}
