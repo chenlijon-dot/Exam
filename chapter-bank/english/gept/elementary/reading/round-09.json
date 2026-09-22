@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-09",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第九回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第九回",
+    "difficulty": "english-gept-elementary-reading-round-09",
+    "difficultyLabel": "第九回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceBook": "萬事通 智能碼書《國中英文 全民英檢攻略 全》",
+    "sourcePages": "p.69–76",
+    "sourceDocId": "1SctPo9LiqyvcJp8TYOhAnEpjIhWTDJUXcno-EaF9jH8",
+    "answerVerified": false,
+    "sourceNote": "題目文字依 Google Drive 人工校正完成之《國中英文 全民英檢攻略 全》第九回原始文字校正版建立，原書 p.69–76，共 35 題。現有 Drive 答案資料庫僅有第十至十二回正式答案，未找到第九回正式解答頁；目前答案與詳解依文法、語意與文章內容判讀，均 answerVerified=false。Q27 因書店分區相對位置的二維版面無法由文字校正版完全確認，另標 answerPending=true。題目與 A/B/C/D 原始順序完整保留；題組文章只存一次並由 groupId 共用。"
+  },
+  "questions": [
+    {
+      "questionId": "260922151500001",
+      "revision": 1,
+      "number": 1,
+      "q": "Carol's dad is trying to lose some weight and goes to the _____ quite often.",
+      "o": [
+        "garage",
+        "ballroom",
+        "gym",
+        "basement"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 1,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (C) gym。想減重而且常去的地方最合理是健身房。"
+    },
+    {
+      "questionId": "260922151500002",
+      "revision": 1,
+      "number": 2,
+      "q": "The train is going into a _____. We'll see the sun and beautiful scenery later.",
+      "o": [
+        "chapel",
+        "channel",
+        "temple",
+        "tunnel"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 2,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (D) tunnel。火車進入隧道後暫時看不到陽光與景色。"
+    },
+    {
+      "questionId": "260922151500003",
+      "revision": 1,
+      "number": 3,
+      "q": "The shepherd _____ fought with the wolves so that they couldn't get any closer.",
+      "o": [
+        "bravely",
+        "rarely",
+        "briefly",
+        "generally"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 3,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-adverb-context"
+      ],
+      "e": "答案暫判為 (A) bravely。牧羊人為阻止狼群靠近而勇敢戰鬥。"
+    },
+    {
+      "questionId": "260922151500004",
+      "revision": 1,
+      "number": 4,
+      "q": "The general manager has _____ the project, so we all will have to work overtime for the new proposal.",
+      "o": [
+        "received",
+        "recorded",
+        "rejected",
+        "recovered"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 4,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (C) rejected。原專案被否決，所以必須為新提案加班。"
+    },
+    {
+      "questionId": "260922151500005",
+      "revision": 1,
+      "number": 5,
+      "q": "_____ home, Jane saw two rainbows hanging in the sky.",
+      "o": [
+        "Far from",
+        "Along with",
+        "On the way",
+        "Together with"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 5,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "答案暫判為 (C) On the way。on the way home 表示「在回家的路上」。"
+    },
+    {
+      "questionId": "260922151500006",
+      "revision": 1,
+      "number": 6,
+      "q": "Angela is a “perfect” girl — she wants everything to be perfect and _____ — nothing wrong at all.",
+      "o": [
+        "exact",
+        "simple",
+        "military",
+        "sharp"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 6,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (A) exact。後面的 nothing wrong at all 表示她要求一切精確無誤。"
+    },
+    {
+      "questionId": "260922151500007",
+      "revision": 1,
+      "number": 7,
+      "q": "A: Wendy looked sad. What happened to her?\nB: She _____ the exam again — her second time.",
+      "o": [
+        "felt",
+        "failed",
+        "fell",
+        "fainted"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 7,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (B) failed。fail the exam 表示考試不及格。"
+    },
+    {
+      "questionId": "260922151500008",
+      "revision": 1,
+      "number": 8,
+      "q": "Always remember to stay calm when _____ in a big city. Try to get help from others or policemen.",
+      "o": [
+        "getting lost",
+        "putting off",
+        "fooling around",
+        "breaking up"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 8,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "答案暫判為 (A) getting lost。迷路時應保持冷靜並向他人或警察求助。"
+    },
+    {
+      "questionId": "260922151500009",
+      "revision": 1,
+      "number": 9,
+      "q": "Doctors say washing hands _____ diseases away.",
+      "o": [
+        "keeping",
+        "keep",
+        "to keep",
+        "keeps"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 9,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-gerund-subject"
+      ],
+      "e": "答案暫判為 (D) keeps。washing hands 是動名詞片語作單數主詞，因此動詞用 keeps。"
+    },
+    {
+      "questionId": "260922151500010",
+      "revision": 1,
+      "number": 10,
+      "q": "Andy has to get home by 10, and _____.",
+      "o": [
+        "Jane has, too",
+        "so has Jane",
+        "so does Jane",
+        "neither has Jane"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 10,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-agreement-so"
+      ],
+      "e": "答案暫判為 (C) so does Jane。has to 的附和句使用助動詞 does。"
+    },
+    {
+      "questionId": "260922151500011",
+      "revision": 1,
+      "number": 11,
+      "q": "I don't like these scarves. Can you show me some _____?",
+      "o": [
+        "other",
+        "others",
+        "another",
+        "the others"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 11,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-pronoun"
+      ],
+      "e": "答案暫判為 (B) others。some others 表示「另外一些」。"
+    },
+    {
+      "questionId": "260922151500012",
+      "revision": 1,
+      "number": 12,
+      "q": "A: Does anyone know John?\nB: Me. I'm a friend of _____.",
+      "o": [
+        "him",
+        "hers",
+        "his",
+        "them"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 12,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-double-possessive"
+      ],
+      "e": "答案暫判為 (C) his。a friend of his 是雙重所有格，表示「他的一位朋友」。"
+    },
+    {
+      "questionId": "260922151500013",
+      "revision": 1,
+      "number": 13,
+      "q": "We didn't go to bed _____ the sun rose. Everybody was exhausted.",
+      "o": [
+        "that",
+        "while",
+        "until",
+        "since"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 13,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-until"
+      ],
+      "e": "答案暫判為 (C) until。not ... until ... 表示「直到……才……」。"
+    },
+    {
+      "questionId": "260922151500014",
+      "revision": 1,
+      "number": 14,
+      "q": "Dinner _____ in ten minutes, my Lord.",
+      "o": [
+        "serves",
+        "will serve",
+        "has been serving",
+        "will be served"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 14,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-future-passive"
+      ],
+      "e": "答案暫判為 (D) will be served。晚餐是被端上的，且 in ten minutes 表未來時間。"
+    },
+    {
+      "questionId": "260922151500015",
+      "revision": 1,
+      "number": 15,
+      "q": "Can you tell us the way _____ you learn English?",
+      "o": [
+        "which",
+        "when",
+        "where",
+        "×"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 15,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-omitted-relative"
+      ],
+      "e": "答案暫判為 (D) ×。the way 後可省略 that/in which，原題以 × 表示不填關係詞。"
+    },
+    {
+      "questionId": "260922151500016",
+      "revision": 1,
+      "number": 16,
+      "q": "第 16 空應填入哪一個選項？",
+      "o": [
+        "are",
+        "have been",
+        "is",
+        "had been"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 16,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-school-letter",
+        "english-gept-elementary-reading-subject-verb-agreement"
+      ],
+      "e": "答案暫判為 (C) is。Hope all is well 是固定常用句，all 在此指「一切」。",
+      "section": "第二部分：段落填空",
+      "groupId": "round09-cloze-16-20",
+      "introLabel": "Questions 16–20｜Jessica’s Letter",
+      "intro": "Dear Lucy,\n\nHow's everything going? Like your new school? Hope all __16__ well.\n\nThings here are pretty much the same. Mr. Chen still __17__ us math. Roy is still the funniest guy. Ian still __18__ in class very often. And I am still busy __19__ classes, reading comic books in the library. But now I feel lonely easily because sometimes I find __20__ one to talk to. Anyway, it's good we can keep in touch by Facebook and Cline. Right?\n\nBy the way, I will visit the zoo with some of our classmates next Saturday. Come if you have time. Write me and tell me more about your new school.\n\nYours, Jessica"
+    },
+    {
+      "questionId": "260922151500017",
+      "revision": 1,
+      "number": 17,
+      "q": "第 17 空應填入哪一個選項？",
+      "o": [
+        "has taught",
+        "teaches",
+        "taught",
+        "is teaching"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 17,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-school-letter",
+        "english-gept-elementary-reading-simple-present"
+      ],
+      "e": "答案暫判為 (B) teaches。still 與 Things here are pretty much the same 表示持續的日常狀況。",
+      "groupId": "round09-cloze-16-20"
+    },
+    {
+      "questionId": "260922151500018",
+      "revision": 1,
+      "number": 18,
+      "q": "第 18 空應填入哪一個選項？",
+      "o": [
+        "nods off",
+        "falls in love",
+        "gets off",
+        "feels asleep"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 18,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-school-letter",
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "答案暫判為 (A) nods off。nod off 表示打瞌睡，符合 in class very often。",
+      "groupId": "round09-cloze-16-20"
+    },
+    {
+      "questionId": "260922151500019",
+      "revision": 1,
+      "number": 19,
+      "q": "第 19 空應填入哪一個選項？",
+      "o": [
+        "during",
+        "without",
+        "along",
+        "between"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 19,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-school-letter",
+        "english-gept-elementary-reading-preposition"
+      ],
+      "e": "答案暫判為 (D) between。between classes 表示「兩堂課之間」。",
+      "groupId": "round09-cloze-16-20"
+    },
+    {
+      "questionId": "260922151500020",
+      "revision": 1,
+      "number": 20,
+      "q": "第 20 空應填入哪一個選項？",
+      "o": [
+        "any",
+        "every",
+        "no",
+        "each"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 20,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-school-letter",
+        "english-gept-elementary-reading-pronoun"
+      ],
+      "e": "答案暫判為 (C) no。find no one to talk to 表示找不到可以說話的人。",
+      "groupId": "round09-cloze-16-20"
+    },
+    {
+      "questionId": "260922151500021",
+      "revision": 1,
+      "number": 21,
+      "q": "第 21 空應填入哪一個選項？",
+      "o": [
+        "have changed",
+        "change",
+        "changed",
+        "changes"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 21,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-tv-roles",
+        "english-gept-elementary-reading-simple-present"
+      ],
+      "e": "答案暫判為 (D) changes。主詞 The style 為單數，changes with times 表示風格隨時代改變。",
+      "section": "第二部分：段落填空",
+      "groupId": "round09-cloze-21-25",
+      "introLabel": "Questions 21–25｜TV Programs and Women’s Roles",
+      "intro": "The style of TV programs __21__ with times. Some programs even show the changes of women's __22__ in a family. In the past, many programs were about families who had problems and then worked them out together, or about women staying home and __23__ their family. These days __24__ successful women with their own jobs on television shows. Men help take care of kids and do housework, but women can work outside.\n\nOver the years more and more violence shows up in TV programs. But now interestingly, some older programs come back again. It may mean some people like the days __25__ because the life was easier and people got along well. So that's why these shows become popular with people of all ages again."
+    },
+    {
+      "questionId": "260922151500022",
+      "revision": 1,
+      "number": 22,
+      "q": "第 22 空應填入哪一個選項？",
+      "o": [
+        "roles",
+        "appearances",
+        "soul",
+        "worries"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 22,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-tv-roles",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "答案暫判為 (A) roles。文章談電視節目如何呈現女性在家庭中的角色變化。",
+      "groupId": "round09-cloze-21-25"
+    },
+    {
+      "questionId": "260922151500023",
+      "revision": 1,
+      "number": 23,
+      "q": "第 23 空應填入哪一個選項？",
+      "o": [
+        "looking after",
+        "taking care",
+        "looking up",
+        "fighting with"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 23,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-tv-roles",
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "答案暫判為 (A) looking after。look after the family 表示照顧家庭；take care 需接 of。",
+      "groupId": "round09-cloze-21-25"
+    },
+    {
+      "questionId": "260922151500024",
+      "revision": 1,
+      "number": 24,
+      "q": "第 24 空應填入哪一個選項？",
+      "o": [
+        "there have",
+        "there has",
+        "there have been",
+        "there is"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 24,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-tv-roles",
+        "english-gept-elementary-reading-there-have-been"
+      ],
+      "e": "答案暫判為 (C) there have been。後接複數 successful women，且語意為「這些年來已有……」。",
+      "groupId": "round09-cloze-21-25"
+    },
+    {
+      "questionId": "260922151500025",
+      "revision": 1,
+      "number": 25,
+      "q": "第 25 空應填入哪一個選項？",
+      "o": [
+        "until",
+        "before",
+        "used to be",
+        "when"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 25,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-tv-roles",
+        "english-gept-elementary-reading-relative-adverb-when"
+      ],
+      "e": "答案暫判為 (D) when。the days when ... 表示「那個……的年代」。",
+      "groupId": "round09-cloze-21-25"
+    },
+    {
+      "questionId": "260922151500026",
+      "revision": 1,
+      "number": 26,
+      "q": "Look at these numbers. Interesting?\n1×9+2 = 11\n12×9+3 = 111\n123×9+4 = 1111\n1234×9+5 = 11111\nFrom where can Sarah find these words?",
+      "o": [
+        "History books.",
+        "Picture books.",
+        "Language books.",
+        "Science books."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 26,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-bookstore",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D) Science books。書店 Science 區列有 Magic Numbers，最符合數字規律內容。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round09-reading-26-27",
+      "introLabel": "Questions 26–27｜Bookstore Sections",
+      "intro": "Sarah is looking for some books in a bookstore. Look at the sections and answer the questions.\n\nCookbooks\n* How to prepare dinner in 20 minutes\n* Linda's Happy Kitchen\n\nScience\n* An Octopus' Life\n* Magic Numbers\n\nHistory\n* History of Taiwan\n* What was Tainan like 150 years ago\n\nTravel books\n* Walk in Downtown New York\n* Hot springs around Tokyo\n\nLanguage\n* 600 English Words You Need to Know\n* Word Power\n\nDictionaries\n* Chinese Dictionaries\n* English Dictionaries for high school students\n\nPicture books\n* Leo's Towel\n* Three Little Cubs\n\nStory books\n* Snow White\n* Little Women\n\nComic books\n* Rocket Man\n* Spider Boy"
+    },
+    {
+      "questionId": "260922151500027",
+      "revision": 1,
+      "number": 27,
+      "q": "Sarah wants to buy “Spider Boy” for her brother. Where can she find it?",
+      "o": [
+        "It is in the section of science, next to the cook books.",
+        "It is in the section of comic books, between the picture books and story ones.",
+        "It is in the section of picture books, under the travel books.",
+        "It is in the section of comic books, under the dictionaries."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 27,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-bookstore",
+        "english-gept-elementary-reading-spatial-layout"
+      ],
+      "e": "Spider Boy 明確屬於 Comic books；但此題還要求判斷書店分區的相對位置，而目前人工校正版只保留區塊文字順序，未能百分之百還原原始二維版面。暫判 (D)，並等待正式解答頁或原始版面再核對。",
+      "groupId": "round09-reading-26-27",
+      "answerPending": true
+    },
+    {
+      "questionId": "260922151500028",
+      "revision": 1,
+      "number": 28,
+      "q": "Who not only ran the most slowly but also jumped the lowest?",
+      "o": [
+        "Ben.",
+        "Jay.",
+        "Hank.",
+        "Paul."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 28,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-sports-table",
+        "english-gept-elementary-reading-table-comparison"
+      ],
+      "e": "答案暫判為 (D) Paul。Paul 的 400 公尺時間 55.42 秒最慢，高跳 1.76 m 也是最低。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round09-reading-28-29",
+      "introLabel": "Questions 28–29｜Sports Day Records",
+      "intro": "Look at the records the four students made on sports day, and answer the questions.\n\nName | 400-meter run | High jump | Long jump\nBen | 49.50 seconds | 2.02 m | 2.01 m\nJay | 55.24 seconds | 1.88 m | 2.06 m\nHank | 52.36 seconds | 1.79 m | 1.70 m\nPaul | 55.42 seconds | 1.76 m | 2.12 m"
+    },
+    {
+      "questionId": "260922151500029",
+      "revision": 1,
+      "number": 29,
+      "q": "Who ran faster but jumped less high and less far than Jay?",
+      "o": [
+        "Ben.",
+        "Jay.",
+        "Hank.",
+        "Paul."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 29,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-sports-table",
+        "english-gept-elementary-reading-table-comparison"
+      ],
+      "e": "答案暫判為 (C) Hank。Hank 跑 52.36 秒比 Jay 的 55.24 秒快，但高跳 1.79 m、跳遠 1.70 m 都低於 Jay。",
+      "groupId": "round09-reading-28-29"
+    },
+    {
+      "questionId": "260922151500030",
+      "revision": 1,
+      "number": 30,
+      "q": "Why DIDN'T the old man's children tell their father the good news right away?",
+      "o": [
+        "They did not want him to know about it.",
+        "They kept waiting to make sure the news was correct.",
+        "They were afraid the good news might cause his heart attack.",
+        "They did not know how he could use the money well."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 30,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-story-cause-effect",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (C)。老人有心臟病，孩子擔心突然得知中獎消息會讓他受不了。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round09-reading-30-32",
+      "introLabel": "Questions 30–32｜The Lottery and Doctor Nelson",
+      "intro": "An old man won a million dollars in a lottery. His children got the news from TV, but they didn't know how to tell their dad. The old man had a heart attack, so they were worried the good news might kill him. So they asked for Doctor Nelson's help. The doctor agreed that he would find a proper way to tell it to the old man. A few days later, Doctor Nelson called on the old man and sat by his bedside. He then took the old man's hand in his. “Let's play a game, my pal,” he said. “A ‘Let's Pretend’ game.” “Oh, yes,” the old man said. “I love ‘Let's Pretend’ games.” Doctor Nelson said, “Tell me what you would do if you won a million dollars in the lottery.” “Oh, that's simple,” the old man said. “I'd give most of it to you, doc, because you have been so nice to me all these years!” Doctor Nelson suddenly lay on the floor — he had just died of shock."
+    },
+    {
+      "questionId": "260922151500031",
+      "revision": 1,
+      "number": 31,
+      "q": "Why did Doctor Nelson visit the old man?",
+      "o": [
+        "To play a game with him.",
+        "To check him and help him get better.",
+        "To kill the time.",
+        "To tell him the good news in a way that would not shock him too much."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 31,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-story-cause-effect",
+        "english-gept-elementary-reading-purpose"
+      ],
+      "e": "答案暫判為 (D)。孩子請醫師幫忙，是希望用不會過度刺激老人的方式告訴他好消息。",
+      "groupId": "round09-reading-30-32"
+    },
+    {
+      "questionId": "260922151500032",
+      "revision": 1,
+      "number": 32,
+      "q": "Why did the doctor finally lie on the floor?",
+      "o": [
+        "It was part of the “Let's Pretend” game.",
+        "He died of shock.",
+        "He was so tired that he fell asleep.",
+        "He lay on the floor to look for something."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 32,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-story-cause-effect",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (B)。文章最後直接說 he had just died of shock。",
+      "groupId": "round09-reading-30-32"
+    },
+    {
+      "questionId": "260922151500033",
+      "revision": 1,
+      "number": 33,
+      "q": "What does antic in line 9 probably mean?",
+      "o": [
+        "A player.",
+        "A point.",
+        "A trick.",
+        "A basket."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 33,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-context-vocabulary",
+        "english-gept-elementary-reading-basketball-story"
+      ],
+      "e": "答案暫判為 (C) A trick。前文連續描述球員做各種 tricks，後文用 antic 指同類逗趣動作。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round09-reading-33-35",
+      "introLabel": "Questions 33–35｜Boston Rutgers",
+      "intro": "Many people in America love watching basketball live. They feel not only excited about the results of the game but surprised at the players' skills. About 70 years ago, a team from Boston went to a small town to play with a team of Lumberjacks.\n\nThe Boston team played so well that they soon got far more points than the other. The score finally turned out to be 112-10. The home team crowd started to feel down at such a result. To make them interested, the Boston team decided to show something special to the crowd. The players in the Boston team started to do tricks. They moved the ball behind their backs, or passed it between their legs. They even moved it up and down off their heads. The crowd felt excited and laughed with every new antic. From then on, the team became more than just good basketball players; they also became the best sideshow during a basketball game. They are called Boston Rutgers."
+    },
+    {
+      "questionId": "260922151500034",
+      "revision": 1,
+      "number": 34,
+      "q": "Which is true about Boston Rutgers?",
+      "o": [
+        "They began 112 years ago.",
+        "They were from Lumberjacks.",
+        "They don't like the home team crowd.",
+        "They love to bring people fun."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 34,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-basketball-story",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D)。他們為了讓主場觀眾重新有興趣而表演花式動作，之後也成為籃球賽中的精彩表演。",
+      "groupId": "round09-reading-33-35"
+    },
+    {
+      "questionId": "260922151500035",
+      "revision": 1,
+      "number": 35,
+      "q": "What is the best title for the reading?",
+      "o": [
+        "Lumberjacks in Boston.",
+        "The Tricks of Basketball.",
+        "The Team That Never Gives up.",
+        "The Beginning of Boston Rutgers."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 9,
+      "originalQuestionNumber": 35,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-basketball-story",
+        "english-gept-elementary-reading-best-title"
+      ],
+      "e": "答案暫判為 (D)。文章重點是 Boston 球隊如何因一次比賽開始加入花式表演，形成 Boston Rutgers 的特色與起源。",
+      "groupId": "round09-reading-33-35"
+    }
+  ]
+}
