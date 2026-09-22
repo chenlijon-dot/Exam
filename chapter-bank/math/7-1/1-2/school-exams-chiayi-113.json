@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-school",
+    "difficulty": "math-7-1-1-2-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-2 正負數的加減｜各校題庫",
+    "title": "1-2 正負數的加減｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜嘉義國中 2 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "unit": "1-2 正負數的加減",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-2 正負數的加減 拆題；保留原始題號、學校／年度／段考 provenance。非選擇題為網站作答改編時明確標示 adaptedForWeb；圖題優先使用 Exam native drawing renderer。"
+  },
+  "source": {
+    "school": "嘉義市立嘉義國中",
+    "year": "113",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": true,
+    "answerNote": "官方答案卷已核對。二-04 題幹計算與答案卷記載 13 不一致，該題暫列 pendingQuestions，不進自動評量。"
+  },
+  "questions": [
+    {
+      "questionId": "260922213000002",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-02",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-integer-addition"
+      ],
+      "q": "下列何者錯誤？ [113 嘉義國中]",
+      "o": [
+        "84+(-100)=-16",
+        "(-8)+15=15-8",
+        "(-58)+40=-(40-58)",
+        "(-13)+4=-(13-4)"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。(-58)+40=-18，而 -(40-58)=18，兩者不相等。"
+    },
+    {
+      "questionId": "260922213000010",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-10",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-integer-addition",
+        "math-7-1-1-2-reasoning"
+      ],
+      "q": "如圖，小紀將 -9、-7、-5、-3、-1、1、3 等七個數字不重複地填入空格中，使得圖中每一條直線上的三個數字和都相等，請問 a-b-c 的值為何？ [113 嘉義國中]",
+      "o": [
+        "-3",
+        "3",
+        "-11",
+        "11"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。三條直線和相等，可得 a=-1、b=3、c=-7，因此 a-b-c=-1-3-(-7)=3。",
+      "diagram": {
+        "type": "node-network",
+        "ariaLabel": "六條射線形成三條通過中心的直線；中心為 -3，左上 -9，右 -5，左下 1，其餘為 a、b、c。",
+        "nodeRadius": 0.24,
+        "nodes": [
+          {
+            "id": "ul",
+            "x": -1,
+            "y": 1,
+            "label": "-9"
+          },
+          {
+            "id": "ur",
+            "x": 1,
+            "y": 1,
+            "label": "c"
+          },
+          {
+            "id": "l",
+            "x": -2,
+            "y": 0,
+            "label": "a"
+          },
+          {
+            "id": "center",
+            "x": 0,
+            "y": 0,
+            "label": "-3"
+          },
+          {
+            "id": "r",
+            "x": 2,
+            "y": 0,
+            "label": "-5"
+          },
+          {
+            "id": "ll",
+            "x": -1,
+            "y": -1,
+            "label": "1"
+          },
+          {
+            "id": "lr",
+            "x": 1,
+            "y": -1,
+            "label": "b"
+          }
+        ],
+        "edges": [
+          [
+            "ul",
+            "center"
+          ],
+          [
+            "center",
+            "lr"
+          ],
+          [
+            "ur",
+            "center"
+          ],
+          [
+            "center",
+            "ll"
+          ],
+          [
+            "l",
+            "center"
+          ],
+          [
+            "center",
+            "r"
+          ]
+        ]
+      }
+    }
+  ]
+}
