@@ -1,0 +1,576 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "bct-99-second-math",
+    "examType": "basic-competence-test",
+    "examTypeLabel": "國中基本學力測驗（基測）",
+    "examYear": 99,
+    "examSession": "second",
+    "examSessionLabel": "第二次",
+    "subject": "math",
+    "subjectLabel": "數學科",
+    "title": "99 年第二次基測｜數學科",
+    "subtitle": "34 題｜歷屆試題",
+    "unit": "99年度第二次基測數學科",
+    "difficulty": "past-bct-99-2-math",
+    "difficultyLabel": "99年第二次基測",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": false,
+    "sourceType": "official-past-exam",
+    "promotionStatus": "active",
+    "sourceNote": "依 README 23.0 圖片考題高速三階段流程完成：Stage 1 建立 34 題 STAGING 骨架與官方答案；Stage 2 由使用者以 PowerShell 5.1 上傳 20 張原卷裁圖；Stage 3 完成 remote read-back、18 個圖題接圖、Q27 原卷格式回查、第二輪 QA、逐題詳解、永久 questionId/revision、回溯相容與 UI 掛載。Q13、Q29 各使用 image + optionImage；Q11、Q30 使用 optionImage；其餘圖題使用 image。原卷選項順序與官方答案均保留。"
+  },
+  "questions": [
+    {
+      "number": 1,
+      "originalQuestionNumber": 1,
+      "q": "將右圖數線上－2 和－1 之間的長度以小隔線分成八等分，A 點在其中一隔線上，則數線上 A 點表示的數為何？",
+      "o": [
+        "－1又1/4",
+        "－1又3/4",
+        "－2又1/4",
+        "－2又3/4"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900001",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q01-number-line-eighths.png",
+      "imageAlt": "Q1 -2 到 -1 八等分數線與 A 點"
+    },
+    {
+      "number": 2,
+      "originalQuestionNumber": 2,
+      "q": "下列選項中表示的數，哪一個是質數？",
+      "o": [
+        "2×13",
+        "1×12",
+        "1×79",
+        "7×13"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900002",
+      "revision": 1
+    },
+    {
+      "number": 3,
+      "originalQuestionNumber": 3,
+      "q": "計算 4又3/8 ÷ 2又1/4 ÷ 2 之值為何？",
+      "o": [
+        "5/2",
+        "7/4",
+        "35/9",
+        "35/36"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900003",
+      "revision": 1
+    },
+    {
+      "number": 4,
+      "originalQuestionNumber": 4,
+      "q": "右圖是 D、E、F、G 四點在△ABC 邊上的位置圖。根據圖中的符號和數據，求 x＋y 之值為何？",
+      "o": [
+        "110",
+        "120",
+        "160",
+        "165"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900004",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q04-triangle-angle-configuration.png",
+      "imageAlt": "Q4 △ABC 與 D、E、F、G 角度圖"
+    },
+    {
+      "number": 5,
+      "originalQuestionNumber": 5,
+      "q": "解一元一次不等式－(x＋4)＋15 ≥ 3x－9，得其解的範圍為何？",
+      "o": [
+        "x ≥ 5",
+        "x ≤ 5",
+        "x ≥ 7",
+        "x ≤ 7"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900005",
+      "revision": 1
+    },
+    {
+      "number": 6,
+      "originalQuestionNumber": 6,
+      "q": "若 a：b＝5：3，則下列 a 與 b 關係的敘述，哪一個是正確的？",
+      "o": [
+        "a 為 b 的 5/3 倍",
+        "a 為 b 的 3/5 倍",
+        "a 為 b 的 5/8 倍",
+        "a 為 b 的 8/5 倍"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900006",
+      "revision": 1
+    },
+    {
+      "number": 7,
+      "originalQuestionNumber": 7,
+      "q": "化簡 (x－1)/3－(3x＋1)/2＋1，可得下列哪一個結果？",
+      "o": [
+        "－7x＋7",
+        "－7x＋11",
+        "(－7x＋7)/6",
+        "(－7x＋1)/6"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900007",
+      "revision": 1
+    },
+    {
+      "number": 8,
+      "originalQuestionNumber": 8,
+      "q": "計算 (－1)³×(－2)⁴÷(－3)³ 之值為何？",
+      "o": [
+        "－8/3",
+        "－16/27",
+        "16/81",
+        "16/27"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900008",
+      "revision": 1
+    },
+    {
+      "number": 9,
+      "originalQuestionNumber": 9,
+      "q": "因式分解 (6x²－3x)－2(7x－5)，可得下列哪一個結果？",
+      "o": [
+        "(6x－5)(x－2)",
+        "(6x＋5)(x＋2)",
+        "(3x＋1)(2x＋5)",
+        "(3x－1)(2x－5)"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900009",
+      "revision": 1
+    },
+    {
+      "number": 10,
+      "originalQuestionNumber": 10,
+      "q": "右圖數線上的 A、B、C、D 四點所表示的數分別為 a、b、20、d。若 a、b、20、d 為等差數列，且 |a－d|＝12，則 a 值為何？",
+      "o": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900010",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q10-number-line-arithmetic-sequence.png",
+      "imageAlt": "Q10 數線上 A、B、C、D 與等差數列"
+    },
+    {
+      "number": 11,
+      "originalQuestionNumber": 11,
+      "q": "圖（一）有四直線 L₁、L₂、L₃、L₄，其中有一直線為方程式 13x－25y＝62 的圖形，則此方程式圖形為何？",
+      "o": [
+        "L₁",
+        "L₂",
+        "L₃",
+        "L₄"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900011",
+      "revision": 1,
+      "optionImage": "past-exams/bct/99/second/assets/math/q11-options-four-lines.png",
+      "optionImageAlt": "Q11 四個直線圖形 L1 至 L4"
+    },
+    {
+      "number": 12,
+      "originalQuestionNumber": 12,
+      "q": "若 4x²＋3x－16 除以一多項式，得商式為 x＋2，餘式為－6，則此多項式為何？",
+      "o": [
+        "4x－5",
+        "4x－11",
+        "4x³＋11x²－10x－26",
+        "4x³＋11x²－10x－38"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900012",
+      "revision": 1
+    },
+    {
+      "number": 13,
+      "originalQuestionNumber": 13,
+      "q": "右圖為小惠調查班上 40 人的家庭人數後所製成的盒狀圖。若下列有一選項為此調查結果的長條圖，則此圖為何？",
+      "o": [
+        "圖(A)",
+        "圖(B)",
+        "圖(C)",
+        "圖(D)"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900013",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q13-boxplot.png",
+      "imageAlt": "Q13 家庭人數盒狀圖",
+      "optionImage": "past-exams/bct/99/second/assets/math/q13-options-bar-charts.png",
+      "optionImageAlt": "Q13 A 至 D 長條圖選項"
+    },
+    {
+      "number": 14,
+      "originalQuestionNumber": 14,
+      "q": "如右圖，一正方形木板上剛好可畫分成 36 個邊長均為 2 公分的正方形。若重新將此木板畫分成數個大小相同的長方形，則此長方形的長與寬不可能為下列哪一組？",
+      "o": [
+        "長3公分、寬2公分",
+        "長6公分、寬4公分",
+        "長9公分、寬6公分",
+        "長12公分、寬4公分"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900014",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q14-square-grid-board.png",
+      "imageAlt": "Q14 36 個 2 公分正方形組成的木板"
+    },
+    {
+      "number": 15,
+      "originalQuestionNumber": 15,
+      "q": "座標平面上有兩圓 O₁、O₂，其圓心座標均為（3，－7）。若圓 O₁ 與 x 軸相切，圓 O₂ 與 y 軸相切，則圓 O₁ 與圓 O₂ 的周長比為何？",
+      "o": [
+        "3：7",
+        "7：3",
+        "9：49",
+        "49：9"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900015",
+      "revision": 1
+    },
+    {
+      "number": 16,
+      "originalQuestionNumber": 16,
+      "q": "圖（二）為三角形紙片 ABC，AB 上有一點 P。已知將 A、B、C 往內摺至 P 時，出現摺線 SR、TQ、QR，其中 Q、R、S、T 四點會分別在 BC、AC、AP、BP 上，如圖（三）所示。若△ABC、四邊形 PTQR 的面積分別為16、5，則△PRS面積為何？",
+      "o": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900016",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q16-folded-triangle.png",
+      "imageAlt": "Q16 三角形紙片摺線圖（二）（三）"
+    },
+    {
+      "number": 17,
+      "originalQuestionNumber": 17,
+      "q": "下列哪一個二次函數，其圖形與 x 軸有兩個交點？",
+      "o": [
+        "y＝－x²＋2x－5",
+        "y＝－2x²－8x－11",
+        "y＝3x²－6x＋1",
+        "y＝4x²＋24"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900017",
+      "revision": 1
+    },
+    {
+      "number": 18,
+      "originalQuestionNumber": 18,
+      "q": "右圖是 E、F、G、H、I、J 六點在菱形 ABCD 四邊上的位置圖，其中 EF、GI、HJ 將菱形分成甲、乙、丙、丁、戊、己六個平行四邊形。若 AG：GH：HD＝5：10：9，AE：EB＝3：5，則下列哪一圖形與菱形 ABCD 相似？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900018",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q18-rhombus-six-parallelograms.png",
+      "imageAlt": "Q18 菱形分成六個平行四邊形"
+    },
+    {
+      "number": 19,
+      "originalQuestionNumber": 19,
+      "q": "如右圖，直線 L 表示地圖上的一條直線型公路，其中 A、B 兩點分別表示公路上第140公里處及第157公里處。若將直尺放在此地圖上，使得刻度15、18的位置分別對準 A、B 兩點，則此時刻度0的位置對準地圖上公路的第幾公里處？",
+      "o": [
+        "17",
+        "55",
+        "72",
+        "85"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900019",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q19-road-map-ruler.png",
+      "imageAlt": "Q19 公路里程與直尺刻度示意"
+    },
+    {
+      "number": 20,
+      "originalQuestionNumber": 20,
+      "q": "一袋子中有4個圓球，球上分別標記號碼1、2、3、4。已知每一個球被取到的機會相等，若自袋中任取兩次球（一次一球，取後放回），則取出的兩球號碼是3、4或4、3的機率為何？",
+      "o": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900020",
+      "revision": 1
+    },
+    {
+      "number": 21,
+      "originalQuestionNumber": 21,
+      "q": "右圖為扇形 DOF 與直角△ABC 的重疊情形，其中 O、D、F 分別在 AB、OB、AC 上，且弧 DF 與 BC 相切於 E 點。若 OF＝3，∠DOF＝∠ACB＝90°，且弧 DE：弧 EF＝2：1，則 AB 的長度為何？",
+      "o": [
+        "6",
+        "3√3",
+        "6＋√3",
+        "3＋2√3"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900021",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q21-sector-right-triangle.png",
+      "imageAlt": "Q21 扇形 DOF 與直角三角形 ABC"
+    },
+    {
+      "number": 22,
+      "originalQuestionNumber": 22,
+      "q": "珠珠家共有九人，已知今年這九人歲數的眾數、平均數、中位數、四分位距均為20，則關於3年後這九人歲數的統計量，下列敘述何者錯誤？",
+      "o": [
+        "眾數是23",
+        "平均數是23",
+        "中位數是23",
+        "四分位距是23"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900022",
+      "revision": 1
+    },
+    {
+      "number": 23,
+      "originalQuestionNumber": 23,
+      "q": "如右圖，圓上有 B、C 兩點，PB、PC 為圓的兩切線。若 BC 將圓分成兩弧，且其中一弧的長為圓周長的1/10，則∠BPC的度數為何？",
+      "o": [
+        "108°",
+        "120°",
+        "144°",
+        "162°"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900023",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q23-two-tangents-circle.png",
+      "imageAlt": "Q23 圓與兩切線 PB、PC"
+    },
+    {
+      "number": 24,
+      "originalQuestionNumber": 24,
+      "q": "若 a 滿足 (383－83)²＝383²－83×a，則 a 值為何？",
+      "o": [
+        "83",
+        "383",
+        "683",
+        "766"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900024",
+      "revision": 1
+    },
+    {
+      "number": 25,
+      "originalQuestionNumber": 25,
+      "q": "如右圖，將正五邊形 ABCDE 的 C 點固定，並依順時針方向旋轉，則旋轉幾度，可使得新五邊形 A′B′CD′E′ 的頂點 D′ 落在直線 BC 上？",
+      "o": [
+        "108°",
+        "72°",
+        "54°",
+        "36°"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900025",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q25-pentagon-rotation.png",
+      "imageAlt": "Q25 正五邊形繞 C 點旋轉"
+    },
+    {
+      "number": 26,
+      "originalQuestionNumber": 26,
+      "q": "座標平面上，二次函數 y＝(1/2)x² 的圖形過 A、B 兩點，其中 A、B 兩點的 x 座標分別為2、4。若自 A 作 y 軸的平行線，自 B 作 x 軸的平行線，且兩線交於 C 點，則 C 點座標為何？",
+      "o": [
+        "（2，8）",
+        "（2，2√2）",
+        "（4，2）",
+        "（4，2√2）"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900026",
+      "revision": 1
+    },
+    {
+      "number": 27,
+      "originalQuestionNumber": 27,
+      "q": "下列選項中表示的數，哪一個不是整數？",
+      "o": [
+        "√98＋√2",
+        "√98×√2",
+        "√196－√4",
+        "√196÷√4"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900027",
+      "revision": 1
+    },
+    {
+      "number": 28,
+      "originalQuestionNumber": 28,
+      "q": "圖（四）表示甲、乙、丙三個三角形，每個三角形的內角均為55°、60°、65°。若 AB＝DE＝GH，則甲、乙、丙周長的關係為何？",
+      "o": [
+        "甲＝乙＝丙",
+        "甲＜乙＜丙",
+        "甲＜丙＜乙",
+        "丙＜乙＜甲"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "questionId": "260922084900028",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q28-three-triangles.png",
+      "imageAlt": "Q28 甲乙丙三個 55°、60°、65° 三角形"
+    },
+    {
+      "number": 29,
+      "originalQuestionNumber": 29,
+      "q": "將右圖正方體的相鄰兩面上各畫分成九個全等的小正方形，並分別標上○、×兩符號。若下列有一圖形為此正方體的展開圖，則此圖為何？",
+      "o": [
+        "圖(A)",
+        "圖(B)",
+        "圖(C)",
+        "圖(D)"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "questionId": "260922084900029",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q29-cube-symbol-faces.png",
+      "imageAlt": "Q29 正方體相鄰兩面符號配置",
+      "optionImage": "past-exams/bct/99/second/assets/math/q29-options-cube-nets.png",
+      "optionImageAlt": "Q29 A 至 D 正方體展開圖選項"
+    },
+    {
+      "number": 30,
+      "originalQuestionNumber": 30,
+      "q": "將裝有牛奶250毫升的玻璃杯放在已歸零的磅秤上，測得重量為500公克。若喝掉一些牛奶後，以 x 毫升表示杯中牛奶的體積，y 公克表示磅秤測得的重量，則下列哪一個圖形可以表示 x、y 的關係？",
+      "o": [
+        "圖(A)",
+        "圖(B)",
+        "圖(C)",
+        "圖(D)"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900030",
+      "revision": 1,
+      "optionImage": "past-exams/bct/99/second/assets/math/q30-options-milk-weight-graphs.png",
+      "optionImageAlt": "Q30 x-y 關係四個圖形選項"
+    },
+    {
+      "number": 31,
+      "originalQuestionNumber": 31,
+      "q": "右圖中甲、乙為兩張大小不同的8×8方格紙，其中兩正方形 PQRS、P′Q′R′S′ 分別在兩方格紙上，且各頂點均在格線的交點上。設兩正方形的面積相等，根據圖中兩正方形的位置，求甲、乙兩方格紙的面積比為何？",
+      "o": [
+        "4：5",
+        "9：10",
+        "15：16",
+        "16：17"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900031",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q31-two-grid-squares.png",
+      "imageAlt": "Q31 兩張 8×8 方格紙與正方形 PQRS"
+    },
+    {
+      "number": 32,
+      "originalQuestionNumber": 32,
+      "q": "有甲、乙兩個大小不同的水桶，容量分別為 x、y 公升，且已各裝一些水。若將甲中的水全倒入乙後，乙只可再裝20公升的水；若將乙中的水倒入甲，裝滿甲水桶後，乙還剩10公升的水，則 x、y 的關係為何？",
+      "o": [
+        "y＝20－x",
+        "y＝x＋10",
+        "y＝x＋20",
+        "y＝x＋30"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900032",
+      "revision": 1
+    },
+    {
+      "number": 33,
+      "originalQuestionNumber": 33,
+      "q": "如圖（五），平行四邊形紙片 ABCD 的面積為120，AD＝20，AB＝18。今沿兩對角線將四邊形 ABCD 剪成甲、乙、丙、丁四個三角形紙片。若將甲、丙合併（AD、CB重合）形成一線對稱圖形戊，如圖（六）所示，則圖形戊的兩對角線長度和為何？",
+      "o": [
+        "26",
+        "29",
+        "24又2/3",
+        "25又1/3"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "questionId": "260922084900033",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q33-parallelogram-cut-reassemble.png",
+      "imageAlt": "Q33 平行四邊形剪開與重組圖（五）（六）"
+    },
+    {
+      "number": 34,
+      "originalQuestionNumber": 34,
+      "q": "如右圖，△ABC 中，∠B＝90°，AB＝21，BC＝20。若有一半徑為10的圓分別與 AB、BC 相切，則下列何種方法可找到此圓的圓心？",
+      "o": [
+        "∠B 的角平分線與 AC 的交點",
+        "AB 的中垂線與 BC 中垂線的交點",
+        "∠B 的角平分線與 AB 中垂線的交點",
+        "∠B 的角平分線與 BC 中垂線的交點"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "questionId": "260922084900034",
+      "revision": 1,
+      "image": "past-exams/bct/99/second/assets/math/q34-right-triangle-tangent-circle.png",
+      "imageAlt": "Q34 直角三角形與半徑 10 的相切圓條件"
+    }
+  ]
+}
