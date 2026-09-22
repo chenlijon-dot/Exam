@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-1-school",
+    "difficulty": "math-7-1-1-1-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-1 正數與負數｜各校題庫",
+    "title": "1-1 正數與負數｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜中興國中 10 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-1",
+    "unit": "1-1 正數與負數",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-1 正數與負數 拆題；保留原始題號、學校／年度／段考 provenance。非選擇題改編為網站四選一時明確標示 adaptedForWeb；圖題使用 Exam native drawing renderer。"
+  },
+  "source": {
+    "school": "桃園市立中興國民中學",
+    "year": "112",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "112-桃園市中興國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "112-桃園市中興國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": false,
+    "answerNote": "選擇題 1-25 與計算題二-2 有官方解答；計算題二-1 的兩個答案格在官方解答檔中留白，因此二-1(1)、二-1(2) 依原題計算推導，answerVerified=false。"
+  },
+  "questions": [
+    {
+      "questionId": "260922234200003",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-03",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-reading",
+        "math-7-1-1-1-number-line-scale"
+      ],
+      "q": "如圖，數線上有 A、B、C、D 四點，B 點坐標為何？ [112 中興國中]",
+      "o": [
+        "1.3",
+        "1.5",
+        "1又3/5",
+        "1又2/4"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。1 到 2 間分為 5 等分，B 位於第 3 個小刻度，因此坐標為 1又3/5。",
+      "diagram": {
+        "type": "number-line",
+        "min": 0,
+        "max": 3,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "labelValues": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "showArrows": true,
+        "minorTicks": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.2,
+          1.4,
+          1.6,
+          1.8,
+          2.1,
+          2.2,
+          2.3,
+          2.4,
+          2.5,
+          2.6,
+          2.7,
+          2.8,
+          2.9
+        ],
+        "points": [
+          {
+            "x": 0.6,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1.6,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 2.1,
+            "label": "C",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 2.8,
+            "label": "D",
+            "showValue": false,
+            "style": "solid"
+          }
+        ],
+        "ariaLabel": "數線標示 0、1、2、3，A 在 0.6、B 在 1.6、C 在 2.1、D 在 2.8。"
+      }
+    },
+    {
+      "questionId": "260922234200006",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-06",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-signed-numbers"
+      ],
+      "q": "下列敘述何者正確？ [112 中興國中]",
+      "o": [
+        "以正午十二點為準，下午三點用「+3」表示，則上午五點可用「-5」表示",
+        "一數的絕對值代表此數在數線上與原點的距離",
+        "絕對值越大的數，在數線上所對應的點離原點越遠且其值越大",
+        "10^-3 是一個負數"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。絕對值表示該數在數線上與原點的距離。"
+    },
+    {
+      "questionId": "260922234200008",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-08",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value"
+      ],
+      "q": "假設 |甲-3|+|乙+1|=0，則甲-乙為何？ [112 中興國中]",
+      "o": [
+        "-2",
+        "2",
+        "3",
+        "4"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。兩個絕對值皆須為 0，所以甲=3、乙=-1，甲-乙=4。"
+    },
+    {
+      "questionId": "260922234200012",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-12",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-distance",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "已知數線上 A(4)、B(-3)、C(5)、D(-5) 四點，則 |(-3)-(5)| 表示下列哪一個線段的長度？ [112 中興國中]",
+      "o": [
+        "BD",
+        "AD",
+        "BC",
+        "CD"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。|(-3)-5|=8，正是 B(-3) 與 C(5) 的距離。"
+    },
+    {
+      "questionId": "260922234200015",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "一-15",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-integers"
+      ],
+      "q": "已知甲為整數，且 -4又2/5 < |甲| < 8又3/4，則符合條件的甲共有多少個？ [112 中興國中]",
+      "o": [
+        "12",
+        "13",
+        "17",
+        "18"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。|甲|<8又3/4，所以甲可為 -8 到 8，共 17 個整數。"
+    },
+    {
+      "questionId": "260922234200016",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "一-16",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number",
+        "math-7-1-1-1-absolute-value"
+      ],
+      "q": "若 (-2)-|-7|=甲，則甲的相反數為何？ [112 中興國中]",
+      "o": [
+        "-9",
+        "-5",
+        "5",
+        "9"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。甲=-2-7=-9，其相反數為 9。"
+    },
+    {
+      "questionId": "260922234200018",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "一-18",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-signed-numbers"
+      ],
+      "q": "若 |a|=2，|b|=7，則 a-b 的最小值為何？ [112 中興國中]",
+      "o": [
+        "-9",
+        "-10",
+        "5",
+        "10"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。要使 a-b 最小，取 a=-2、b=7，得到 -9。"
+    },
+    {
+      "questionId": "260922234200022",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "一-22",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "如圖，數線上 A、B、C、D 四點所表示的數分別為 a、b、c、d，且 O 為原點。根據各點位置判斷，下列何者的值最小？ [112 中興國中]",
+      "o": [
+        "|a|",
+        "|b|",
+        "|c|",
+        "|d|"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。絕對值代表到原點 O 的距離，圖中 A 最靠近 O，因此 |a| 最小。",
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 4,
+        "tickStep": 1,
+        "showNumberLabels": false,
+        "showArrows": true,
+        "points": [
+          {
+            "x": -4,
+            "label": "C(c)",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -2.4,
+            "label": "D(d)",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 0,
+            "label": "O",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 0.7,
+            "label": "A(a)",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 3,
+            "label": "B(b)",
+            "showValue": false,
+            "style": "solid"
+          }
+        ],
+        "ariaLabel": "數線由左到右為 C、D、O、A、B，O 為原點；A 最靠近原點。"
+      }
+    },
+    {
+      "questionId": "260922234200026",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "二-1(1)",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-distance"
+      ],
+      "q": "數線上有 A(-11)、B(-9)、C(2)、D(15) 四點，線段 AC 的長度為何？ [112 中興國中｜原計算題改編]",
+      "o": [
+        "11",
+        "13",
+        "15",
+        "26"
+      ],
+      "a": 1,
+      "e": "官方解答檔此答案格留白；依原題計算，AC=|2-(-11)|=13。"
+    },
+    {
+      "questionId": "260922234200027",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "二-1(2)",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-midpoint"
+      ],
+      "q": "數線上有 A(-11)、B(-9)、C(2)、D(15) 四點，線段 BD 的中點坐標為何？ [112 中興國中｜原計算題改編]",
+      "o": [
+        "-3",
+        "0",
+        "3",
+        "6"
+      ],
+      "a": 2,
+      "e": "官方解答檔此答案格留白；依原題計算，BD 中點=(-9+15)/2=3。"
+    }
+  ]
+}
