@@ -14,7 +14,8 @@
     { key: '07', title: '第七回', pages: 'p.53–60', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-07.json' },
     { key: '08', title: '第八回', pages: 'p.61–68', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-08.json' },
     { key: '09', title: '第九回', pages: 'p.69–76', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-09.json' },
-    { key: '10', title: '第十回', pages: 'p.77–84', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-10.json' }
+    { key: '10', title: '第十回', pages: 'p.77–84', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-10.json' },
+    { key: '11', title: '第十一回', pages: 'p.85–92', ready: true, total: 35, path: 'chapter-bank/english/gept/elementary/reading/round-11.json' }
   ];
 
   function setHeader(title, sub) {
@@ -45,7 +46,7 @@
       badge.textContent = '初級已收錄';
       badge.classList.add('reference');
     }
-    if (desc) desc.textContent = '國中階段先以全民英檢初級為主；目前已整理閱讀能力測驗第一回至第十回。';
+    if (desc) desc.textContent = '國中階段先以全民英檢初級為主；目前已整理閱讀能力測驗第一回至第十一回。';
   }
 
   function renderGeptLanding() {
@@ -60,10 +61,10 @@
     root.insertAdjacentHTML('beforeend', `
       <div class="catalog-path">英文　›　全民英檢（GEPT）</div>
       <h2 class="catalog-title">全民英檢（GEPT）</h2>
-      <p class="catalog-sub">國中階段先建置初級。目前已整理閱讀能力測驗第一回至第十回，後續再逐步擴充其他能力面向。</p>
+      <p class="catalog-sub">國中階段先建置初級。目前已整理閱讀能力測驗第一回至第十一回，後續再逐步擴充其他能力面向。</p>
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" id="geptElementaryBtn">
-          <span class="top"><span class="icon">🌱</span><strong>初級</strong><span class="catalog-badge reference">10 回資料已收錄</span></span>
+          <span class="top"><span class="icon">🌱</span><strong>初級</strong><span class="catalog-badge reference">11 回資料已收錄</span></span>
           <span class="desc">進入全民英檢初級題庫架構。</span>
         </button>
       </div>`);
@@ -84,10 +85,10 @@
       <button class="catalog-back" id="backGeptLandingBtn">← 返回全民英檢</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級</div>
       <h2 class="catalog-title">全民英檢初級</h2>
-      <p class="catalog-sub">目前先建立閱讀能力的知識庫試題入口；十回原始模擬考與 canonical 教材知識庫均已整理。</p>
+      <p class="catalog-sub">目前先建立閱讀能力的知識庫試題入口；十一回原始模擬考與 canonical 教材知識庫均已整理。</p>
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" id="geptElementaryKnowledgeBtn">
-          <span class="top"><span class="icon">📚</span><strong>知識庫試題</strong><span class="catalog-badge reference">第一回～第十回</span></span>
+          <span class="top"><span class="icon">📚</span><strong>知識庫試題</strong><span class="catalog-badge reference">第一回～第十一回</span></span>
           <span class="desc">依全民英檢初級閱讀教材知識庫建立線上測驗。</span>
         </button>
       </div>`);
@@ -126,7 +127,7 @@
       <button class="catalog-back" id="backGeptElementaryBtn">← 返回初級</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級　›　知識庫試題</div>
       <h2 class="catalog-title">請選擇回次</h2>
-      <p class="catalog-sub">第一回至第十回完整 35 題均已上線。</p>
+      <p class="catalog-sub">第一回至第十一回完整 35 題均已上線。</p>
       <div class="catalog-grid">
         ${GEPT_ELEMENTARY_ROUNDS.map(roundCard).join('')}
       </div>`);
@@ -175,7 +176,7 @@
         difficulty: key,
         examType: exam.examType || 'gept-elementary-reading',
         preserveOptionOrder: true,
-        backLabel: '返回初級十回選單',
+        backLabel: '返回初級十一回選單',
         onBack: renderElementaryRounds
       };
 
