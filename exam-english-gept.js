@@ -81,7 +81,7 @@
       <button class="catalog-back" id="backGeptLandingBtn">← 返回全民英檢</button>
       <div class="catalog-path">英文　›　全民英檢（GEPT）　›　初級</div>
       <h2 class="catalog-title">全民英檢初級</h2>
-      <p class="catalog-sub">目前先建立閱讀能力的知識庫試題入口；六回原始模擬考與 canonical 教材知識庫均已整理。</p>
+      <p class="catalog-sub">目前先建立閱讀能力的知識庫試題入口；七回原始模擬考與 canonical 教材知識庫均已整理。</p>
       <div class="catalog-grid">
         <button class="catalog-card chapter-card" id="geptElementaryKnowledgeBtn">
           <span class="top"><span class="icon">📚</span><strong>知識庫試題</strong><span class="catalog-badge reference">第一回～第七回</span></span>
