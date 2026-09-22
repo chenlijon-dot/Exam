@@ -189,19 +189,27 @@
         "rings": [
           {
             "radius": 4,
-            "label": "-3"
+            "label": "-3",
+            "labelAngle": -90,
+            "labelRadius": 3.45
           },
           {
             "radius": 3,
-            "label": "+7"
+            "label": "+7",
+            "labelAngle": -90,
+            "labelRadius": 2.45
           },
           {
             "radius": 2,
-            "label": "-9"
+            "label": "-9",
+            "labelAngle": -90,
+            "labelRadius": 1.45
           },
           {
             "radius": 1,
-            "label": "+14"
+            "label": "+14",
+            "labelAngle": 0,
+            "labelRadius": 0
           }
         ],
         "showCenter": false,
@@ -243,19 +251,27 @@
         "rings": [
           {
             "radius": 4,
-            "label": "-3"
+            "label": "-3",
+            "labelAngle": -90,
+            "labelRadius": 3.45
           },
           {
             "radius": 3,
-            "label": "+7"
+            "label": "+7",
+            "labelAngle": -90,
+            "labelRadius": 2.45
           },
           {
             "radius": 2,
-            "label": "-9"
+            "label": "-9",
+            "labelAngle": -90,
+            "labelRadius": 1.45
           },
           {
             "radius": 1,
-            "label": "+14"
+            "label": "+14",
+            "labelAngle": 0,
+            "labelRadius": 0
           }
         ],
         "showCenter": false,
