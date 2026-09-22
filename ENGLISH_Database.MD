@@ -248,20 +248,19 @@ word_norm 是 lookup key，不應設定 UNIQUE
 | 第九回 | p.69–76 | Q1–35 完整 | 已在 `閱讀/原始資料` | 已有 `round-09.json` |
 | 第十回 | p.77–84 | Q1–35 完整 | 已在 `閱讀/原始資料` | 已有 `round-10.json`，正式答案已核對 |
 | 第十一回 | p.85–92 | Q1–35 完整 | **目前仍在 Drive 上層／根目錄** | 已有 `round-11.json`，正式答案已核對 |
-| 第十二回 | p.93–101 | Q1–35 完整 | **目前仍在 Drive 上層／根目錄** | 尚未建置 |
+| 第十二回 | p.93–101 | Q1–35 完整 | **目前仍在 Drive 上層／根目錄** | 已有 `round-12.json`，正式答案已核對 |
 
 因此「資料已辨識」與「網站已上線」必須分開看：
 
 ```text
 Google Drive source coverage = 第一～十二回完整
-GitHub online JSON coverage    = 第一～十一回完整
+GitHub online JSON coverage    = 第一～十二回完整
 ```
 
 目前 `exam-english-gept.js` registry 僅列出第一～第六回：
 
 ```text
-第一～十一回：ready=true
-第十二回：尚未註冊
+第一～十二回：ready=true
 ```
 
 所以前端狀態落後於 Drive authority。
@@ -375,6 +374,7 @@ round-08.json
 round-09.json
 round-10.json
 round-11.json
+round-12.json
 ```
 
 前端入口：
@@ -608,7 +608,7 @@ chapter-bank/english/gept/elementary/reading/
 2. 將舊第十回同名副本標記／移除，避免誤抓。
 3. 建立 `初級/字彙/原始資料` 與 `整理資料`，將 PDF、XLSX、SQL 歸位。
 4. 確認根目錄舊 vocabulary XLSX 後再移除重複副本。
-5. 將第十二回依校正版轉為 GitHub JSON。
+5. 第一～十二回皆已轉為 GitHub JSON；後續重點轉為 QA、答案 authority 補齊與資料治理。
 6. 更新 `exam-english-gept.js`，讓前端由「第一～六回」同步到實際可用回次。
 7. 每次新增英文資料後，同步更新本 `ENGLISH_Database.MD` 的 coverage 與 known drift。
 
@@ -659,7 +659,7 @@ GEPT 初級閱讀第一～十二回完整辨識資料
 +
 單一 canonical 閱讀教材知識庫
 +
-GitHub 第一～十一回可作答 JSON
+GitHub 第一～十二回可作答 JSON
 ```
 
-後續工作的重點已不是重新辨識舊資料，而是：**整理 Drive authority、消除重複檔、把第十二回穩定轉成 GitHub 題庫。**
+後續工作的重點已不是重新辨識舊資料，而是：**整理 Drive authority、消除重複檔、完成第一～十二回題庫後，重點轉為 QA、回溯與 authority 維護。**
