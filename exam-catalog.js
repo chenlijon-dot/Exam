@@ -125,8 +125,8 @@
     },
     {
       key: 'chinese-7-1-lesson-04', code: '第四課', title: '差不多先生傳', author: '胡適', page: 58,
-      type: 'lesson', referenceReady: false, bankMenuReady: false,
-      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+      type: 'lesson', referenceReady: true, bankMenuReady: true,
+      desc: 'p.58～69 教材已收錄；canonical 教材知識庫與簡易／中等／困難各 20 題自編題已建立。'
     },
     {
       key: 'chinese-7-1-lesson-05', code: '第五課', title: '論語選', author: '孔子弟子及再傳弟子', page: 70,
