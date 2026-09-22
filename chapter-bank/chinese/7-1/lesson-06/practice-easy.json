@@ -1,0 +1,551 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-06",
+    "unit": "第六課 那默默的一群",
+    "scoreMode": "fixed",
+    "pointsPerQuestion": 5,
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive 第六課〈那默默的一群〉canonical 教材知識庫自編；目前 canonical 已確認作者、課文核心、閱讀重點、寫作手法、主旨與延伸探索〈動人的身影〉，未完整列出逐條字音字形與注釋，因此正式題庫不自行補造未有教材 evidence 的字詞考點。",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+      "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+      "lesson": "第六課〈那默默的一群〉"
+    },
+    "difficulty": "chinese-7-1-l06-easy",
+    "title": "第六課〈那默默的一群〉｜簡易",
+    "subtitle": "國文第一冊｜自編題｜簡易 20 題",
+    "difficultyLabel": "簡易"
+  },
+  "questions": [
+    {
+      "questionId": "260923010500001",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "〈那默默的一群〉的作者是誰？",
+      "o": [
+        "張騰蛟",
+        "胡適",
+        "古蒙仁",
+        "楊喚"
+      ],
+      "a": 0,
+      "e": "第六課 canonical 的基本資料明列作者為張騰蛟。",
+      "conceptIds": [
+        "chinese-7-1-l06-author-zhang-tengjiao"
+      ]
+    },
+    {
+      "questionId": "260923010500002",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "依第六課教材，本文主要描寫哪一類人物？",
+      "o": [
+        "日常生活中不張揚、常被忽略卻持續付出的人",
+        "歷史上著名的帝王將相",
+        "以成名為目標的明星人物",
+        "只在重大事件中出現的英雄"
+      ],
+      "a": 0,
+      "e": "canonical 的課文核心指出，本文描寫日常生活中不張揚、常被忽略，卻默默工作、付出與承擔的一群人。",
+      "conceptIds": [
+        "chinese-7-1-l06-core-people"
+      ]
+    },
+    {
+      "questionId": "260923010500003",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "題目中的「默默」，依教材最適合怎麼理解？",
+      "o": [
+        "不求注目而持續付出",
+        "完全不說話",
+        "做事速度很慢",
+        "刻意躲避所有人"
+      ],
+      "a": 0,
+      "e": "閱讀重點指出，「默默」不只是安靜，更包含不求注目、持續付出的意涵。",
+      "conceptIds": [
+        "chinese-7-1-l06-title-meaning"
+      ]
+    },
+    {
+      "questionId": "260923010500004",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "本文主旨最接近下列何者？",
+      "o": [
+        "肯定平凡工作者默默付出的價值",
+        "批評所有工作都太辛苦",
+        "介紹某一種職業的工作流程",
+        "主張只有成名者值得被記住"
+      ],
+      "a": 0,
+      "e": "canonical 明確指出，文章主旨不在單一職業，而在肯定各種平凡而重要的付出。",
+      "conceptIds": [
+        "chinese-7-1-l06-main-idea"
+      ]
+    },
+    {
+      "questionId": "260923010500005",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "依教材，閱讀本文時應特別注意人物的哪些細節？",
+      "o": [
+        "身分、工作情境、動作與行為",
+        "出生年月日與星座",
+        "財產多寡與住址",
+        "社群追蹤人數"
+      ],
+      "a": 0,
+      "e": "閱讀重點明列要找出人物身分、工作情境、動作與行為細節，以判斷人物特質。",
+      "conceptIds": [
+        "chinese-7-1-l06-character-details"
+      ]
+    },
+    {
+      "questionId": "260923010500006",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "下列何者是教材明列的人物描寫方式？",
+      "o": [
+        "動作描寫",
+        "只列統計數字",
+        "只寫抽象議論",
+        "完全不描寫人物"
+      ],
+      "a": 0,
+      "e": "寫作與表現手法中明列可藉動作、神態、語言與事件呈現人物形象。",
+      "conceptIds": [
+        "chinese-7-1-l06-action-description"
+      ]
+    },
+    {
+      "questionId": "260923010500007",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "除了動作，教材還指出可透過哪一項呈現人物形象？",
+      "o": [
+        "神態",
+        "氣溫",
+        "日期",
+        "頁碼"
+      ],
+      "a": 0,
+      "e": "canonical 指出可透過動作、神態、語言與事件描寫人物。",
+      "conceptIds": [
+        "chinese-7-1-l06-character-description"
+      ]
+    },
+    {
+      "questionId": "260923010500008",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "作者對文中人物的基本態度最接近哪一項？",
+      "o": [
+        "理解、肯定並感謝其付出",
+        "嘲笑其平凡",
+        "懷疑其工作價值",
+        "完全冷漠"
+      ],
+      "a": 0,
+      "e": "課文核心與學習方向都指出文章引導讀者尊重、感謝並珍惜這些默默付出的人。",
+      "conceptIds": [
+        "chinese-7-1-l06-author-attitude"
+      ]
+    },
+    {
+      "questionId": "260923010500009",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "本文的描寫重點是否只限於某一種職業？",
+      "o": [
+        "不是，重點是一群平凡而重要的付出者",
+        "是，只寫一種固定職業",
+        "是，只寫作者自己的職業",
+        "是，只寫學校裡的人"
+      ],
+      "a": 0,
+      "e": "閱讀重點明確說明主旨不在單一職業，而是肯定生活中各種平凡而重要的付出。",
+      "conceptIds": [
+        "chinese-7-1-l06-main-idea"
+      ]
+    },
+    {
+      "questionId": "260923010500010",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "教材指出本文常以什麼方式帶出人物？",
+      "o": [
+        "具體生活場景",
+        "抽象定義開頭",
+        "大量專業數據",
+        "神話故事"
+      ],
+      "a": 0,
+      "e": "寫作與表現手法第一點就是「以具體生活場景帶出人物」。",
+      "conceptIds": [
+        "chinese-7-1-l06-life-scene"
+      ]
+    },
+    {
+      "questionId": "260923010500011",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "本文的寫作特色之一，是將哪兩種表達方式交織使用？",
+      "o": [
+        "敘事與抒情",
+        "說明與議論",
+        "韻文與駢文",
+        "書信與日記"
+      ],
+      "a": 0,
+      "e": "canonical 明列「透過敘事與抒情交織，使生活素材具有情感與價值意義」。",
+      "conceptIds": [
+        "chinese-7-1-l06-narrative-lyric"
+      ]
+    },
+    {
+      "questionId": "260923010500012",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "作者由個別觀察進一步推展到什麼？",
+      "o": [
+        "對一群人的理解與肯定",
+        "對某一城市的介紹",
+        "對歷史年代的考證",
+        "對自然景觀的分類"
+      ],
+      "a": 0,
+      "e": "教材寫作重點指出，本文由個別觀察推展至對一群人的理解與肯定。",
+      "conceptIds": [
+        "chinese-7-1-l06-individual-to-group"
+      ]
+    },
+    {
+      "questionId": "260923010500013",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "本文希望培養讀者哪一種態度？",
+      "o": [
+        "尊重、感恩與同理",
+        "競爭與炫耀",
+        "懷疑與疏離",
+        "只重視名人"
+      ],
+      "a": 0,
+      "e": "學習方向指出，要反思生活中常被忽略的人與工作，培養尊重、感恩與同理心。",
+      "conceptIds": [
+        "chinese-7-1-l06-values"
+      ]
+    },
+    {
+      "questionId": "260923010500014",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "閱讀本文時，教材提醒要區分哪兩種內容？",
+      "o": [
+        "客觀描寫與主觀感受",
+        "現在式與未來式",
+        "中文與外文",
+        "標題與頁碼"
+      ],
+      "a": 0,
+      "e": "閱讀重點第三點要求注意作者敘述中的觀察角度與情感變化，並區分客觀描寫與主觀感受。",
+      "conceptIds": [
+        "chinese-7-1-l06-objective-subjective"
+      ]
+    },
+    {
+      "questionId": "260923010500015",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "本文最重視人物的哪一面？",
+      "o": [
+        "實際行動與持續付出",
+        "外表是否華麗",
+        "是否具有高知名度",
+        "是否擁有特殊身分"
+      ],
+      "a": 0,
+      "e": "教材強調從具體事件、動作、語言和工作情境看見人物的付出與承擔。",
+      "conceptIds": [
+        "chinese-7-1-l06-character-image"
+      ]
+    },
+    {
+      "questionId": "260923010500016",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "教材 p.92～93 的延伸探索主題是什麼？",
+      "o": [
+        "〈動人的身影〉",
+        "〈母親的教誨〉",
+        "〈一枝冰棒的誠信〉",
+        "〈孔門四科十哲〉"
+      ],
+      "a": 0,
+      "e": "第六課 canonical 明列 p.92～93 的延伸探索為〈動人的身影〉。",
+      "conceptIds": [
+        "chinese-7-1-l06-extension-moving-figures"
+      ]
+    },
+    {
+      "questionId": "260923010500017",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "〈動人的身影〉與正文最主要的共同學習方向是什麼？",
+      "o": [
+        "從生活人物的行動與處境理解其可敬之處",
+        "背誦大量人物生平年代",
+        "分析古代典籍版本",
+        "學習自然科實驗方法"
+      ],
+      "a": 0,
+      "e": "延伸探索延續正文的人物觀察，訓練讀者由行動與處境理解人物可敬、可感之處。",
+      "conceptIds": [
+        "chinese-7-1-l06-extension-moving-figures"
+      ]
+    },
+    {
+      "questionId": "260923010500018",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "下列哪一項最符合本文對「平凡」的看法？",
+      "o": [
+        "平凡不等於不重要",
+        "平凡就是沒有價值",
+        "平凡的人不值得描寫",
+        "平凡工作可以忽略"
+      ],
+      "a": 0,
+      "e": "本文正是要讓讀者注意看似平凡、實際上維繫社會運作的重要人物。",
+      "conceptIds": [
+        "chinese-7-1-l06-main-idea"
+      ]
+    },
+    {
+      "questionId": "260923010500019",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "教材認為人物形象可以從什麼推知？",
+      "o": [
+        "人物的具體行為與細節",
+        "作者姓名的筆畫",
+        "文章頁數",
+        "標點數量"
+      ],
+      "a": 0,
+      "e": "閱讀重點要求從人物身分、情境、動作與行為細節判斷人物特質。",
+      "conceptIds": [
+        "chinese-7-1-l06-character-inference"
+      ]
+    },
+    {
+      "questionId": "260923010500020",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l06-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第六課_那默默的一群_教材知識庫",
+        "driveDocumentId": "1kf6Zt0AZ3kvI_WntxioFwJ-ptrrQ-uGuguSdx6BbV6U",
+        "lesson": "第六課〈那默默的一群〉"
+      },
+      "q": "第六課教材影像收錄的頁次範圍為何？",
+      "o": [
+        "p.80～93",
+        "p.70～79",
+        "p.58～69",
+        "p.94～109"
+      ],
+      "a": 0,
+      "e": "canonical 基本資料指出本課為 p.80～93，共 14 面。",
+      "conceptIds": [
+        "chinese-7-1-l06-material-scope"
+      ]
+    }
+  ]
+}
