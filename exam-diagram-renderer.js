@@ -258,6 +258,12 @@
         tickStep,
         showNumberLabels:spec.showNumberLabels !== false,
         showArrows:spec.showArrows !== false,
+        labelValues:Array.isArray(spec.labelValues)
+          ? spec.labelValues.map(finiteNumber).filter(value => value !== null)
+          : null,
+        minorTicks:Array.isArray(spec.minorTicks)
+          ? spec.minorTicks.map(finiteNumber).filter(value => value !== null)
+          : [],
         points:Array.isArray(spec.points) ? spec.points : []
       }
     };
@@ -465,6 +471,11 @@
         stroke-width:2;
         vector-effect:non-scaling-stroke;
       }
+      .nl-minor-tick{
+        stroke:#64748b;
+        stroke-width:1.4;
+        vector-effect:non-scaling-stroke;
+      }
       .nl-zero{stroke:#0f172a;stroke-width:3}
       .nl-number,.cp-number{
         fill:#334155;
@@ -585,6 +596,16 @@
 
     const ticks = enumerateTicks(spec.min, spec.max, spec.tickStep);
     const labelEvery = ticks.length > 25 ? Math.ceil(ticks.length / 21) : 1;
+    const customLabelValues = Array.isArray(spec.labelValues) && spec.labelValues.length
+      ? spec.labelValues
+      : null;
+    const shouldLabel = (value, index, isZero) => {
+      if (!spec.showNumberLabels) return false;
+      if (customLabelValues) {
+        return customLabelValues.some(labelValue => Math.abs(labelValue - value) < 1e-8);
+      }
+      return index % labelEvery === 0 || index === ticks.length - 1 || isZero;
+    };
 
     ticks.forEach((value, index) => {
       const x = xFor(value);
@@ -594,9 +615,18 @@
         class:isZero ? 'nl-tick nl-zero' : 'nl-tick'
       }));
 
-      if (spec.showNumberLabels && (index % labelEvery === 0 || index === ticks.length - 1 || isZero)) {
+      if (shouldLabel(value, index, isZero)) {
         svg.appendChild(svgEl('text', { x, y:AXIS_Y + 31, class:'nl-number' }, formatNumber(value)));
       }
+    });
+
+    spec.minorTicks.forEach(value => {
+      if (value < spec.min || value > spec.max) return;
+      if (ticks.some(tick => Math.abs(tick - value) < 1e-8)) return;
+      const x = xFor(value);
+      svg.appendChild(svgEl('line', {
+        x1:x, y1:AXIS_Y - 6, x2:x, y2:AXIS_Y + 6, class:'nl-minor-tick'
+      }));
     });
 
     spec.points.forEach((point, pointIndex) => {
