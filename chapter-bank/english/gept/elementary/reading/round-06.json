@@ -1,0 +1,1030 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-06",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第六回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第六回",
+    "difficulty": "english-gept-elementary-reading-round-06",
+    "difficultyLabel": "第六回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceBook": "萬事通 智能碼書《國中英文 全民英檢攻略 全》",
+    "sourcePages": "p.43–51",
+    "sourceDocId": "1zplJqFqaI3Mk8Br-9pqfr0SDyFykNLzy9EQ7UIyB0PI",
+    "answerVerified": false,
+    "sourceNote": "題目文字依 Google Drive 人工校正完成之《國中英文 全民英檢攻略 全》第六回原始文字校正版建立，原書 p.43–51，共 35 題。未在現有 Drive 答案資料庫找到第六回正式解答頁；目前答案與詳解依文法、語意與文章內容判讀，均 answerVerified=false，Q14、Q31 另標 answerPending=true 等待正式答案 authority。題目與 A/B/C/D 原始順序完整保留；題組文章只存一次並由 groupId 共用。"
+  },
+  "questions": [
+    {
+      "questionId": "260922134100001",
+      "revision": 1,
+      "number": 1,
+      "q": "Why not pick a green skirt? It will _____ your new red shoes.",
+      "o": [
+        "match",
+        "go",
+        "fit",
+        "wear"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 1,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-match"
+      ],
+      "e": "答案暫判為 (A) match。match 可表示衣服或顏色「相配」；句意是綠色裙子會和新紅鞋搭配。"
+    },
+    {
+      "questionId": "260922134100002",
+      "revision": 1,
+      "number": 2,
+      "q": "The reporters kept asking the same question, and the movie star finally _____ she had just been pregnant.",
+      "o": [
+        "boiled",
+        "adopted",
+        "blocked",
+        "admitted"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 2,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-admit"
+      ],
+      "e": "答案暫判為 (D) admitted。admit 表示「承認」，符合記者不斷追問後，影星終於承認某件事的語境。"
+    },
+    {
+      "questionId": "260922134100003",
+      "revision": 1,
+      "number": 3,
+      "q": "Never _____ your time having John change his mind. He just won’t listen!",
+      "o": [
+        "object",
+        "waste",
+        "omit",
+        "wander"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 3,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation-waste-time"
+      ],
+      "e": "答案暫判為 (B) waste。waste one’s time doing something 表示「浪費時間做某事」；後句說 John 根本不會聽。"
+    },
+    {
+      "questionId": "260922134100004",
+      "revision": 1,
+      "number": 4,
+      "q": "People _____ go swimming during winter for it’s freezing outside.",
+      "o": [
+        "always",
+        "repeatedly",
+        "rarely",
+        "frequently"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 4,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-frequency-adverb"
+      ],
+      "e": "答案暫判為 (C) rarely。冬天天氣冰冷，因此人們「很少」去游泳。"
+    },
+    {
+      "questionId": "260922134100005",
+      "revision": 1,
+      "number": 5,
+      "q": "Vicky’s been on a diet. She says she needs to _____ so that she’ll look thinner in her new dress.",
+      "o": [
+        "lose weight",
+        "lose herself",
+        "lose her face",
+        "lose her temper"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 5,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation-lose-weight"
+      ],
+      "e": "答案暫判為 (A) lose weight。be on a diet 與 look thinner 都指向「減重」。"
+    },
+    {
+      "questionId": "260922134100006",
+      "revision": 1,
+      "number": 6,
+      "q": "Mt. Everest is the highest mountain as we know. Geographers usually call it the _____ of the world.",
+      "o": [
+        "roof",
+        "gate",
+        "basement",
+        "yard"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 6,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "答案暫判為 (A) roof。the roof of the world 是「世界屋脊」的常見說法，符合珠穆朗瑪峰的語境。"
+    },
+    {
+      "questionId": "260922134100007",
+      "revision": 1,
+      "number": 7,
+      "q": "In the U.S., a police officer will give you a ticket without hesitation if you _____ the traffic rules anywhere and anytime.",
+      "o": [
+        "obey",
+        "protect",
+        "violate",
+        "transfer"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 7,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (C) violate。violate traffic rules 表示「違反交通規則」，因此會被警察開罰單。"
+    },
+    {
+      "questionId": "260922134100008",
+      "revision": 1,
+      "number": 8,
+      "q": "Before you hand in your answer sheet, _____ all the blanks are filled and your name has been written.",
+      "o": [
+        "think of",
+        "make sure",
+        "look into",
+        "figure out"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 8,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "答案暫判為 (B) make sure。make sure 表示「確認、確定」，此處是交卷前確認所有空格與姓名都已填寫。"
+    },
+    {
+      "questionId": "260922134100009",
+      "revision": 1,
+      "number": 9,
+      "q": "Could you stop _____ the elevator? I’m a bit scared.",
+      "o": [
+        "shake",
+        "to shake",
+        "shook",
+        "shaking"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 9,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-stop-gerund"
+      ],
+      "e": "答案暫判為 (D) shaking。stop + V-ing 表示「停止正在做的事」，即停止搖晃電梯。"
+    },
+    {
+      "questionId": "260922134100010",
+      "revision": 1,
+      "number": 10,
+      "q": "The box is too heavy _____.",
+      "o": [
+        "can’t carry",
+        "to carry",
+        "that I can’t carry",
+        "for carry"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 10,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-too-to"
+      ],
+      "e": "答案暫判為 (B) to carry。too + adjective + to V 是固定結構：too heavy to carry。"
+    },
+    {
+      "questionId": "260922134100011",
+      "revision": 1,
+      "number": 11,
+      "q": "Jenny is only six, but she can’t see clearly _____.",
+      "o": [
+        "have no glasses",
+        "if she not wear glasses",
+        "without wearing glasses",
+        "with no glass"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 11,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-without-gerund"
+      ],
+      "e": "答案暫判為 (C) without wearing glasses。介系詞 without 後接 V-ing，表示「沒有戴眼鏡就看不清楚」。"
+    },
+    {
+      "questionId": "260922134100012",
+      "revision": 1,
+      "number": 12,
+      "q": "We’re still not sure _____ the principal is coming or not.",
+      "o": [
+        "whether",
+        "that",
+        "weather",
+        "what"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 12,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-whether-or-not"
+      ],
+      "e": "答案暫判為 (A) whether。whether ... or not 表示「是否……」。"
+    },
+    {
+      "questionId": "260922134100013",
+      "revision": 1,
+      "number": 13,
+      "q": "Those keys _____ the front doors of our office. Keep them in a safe place.",
+      "o": [
+        "used to open",
+        "are used to opening",
+        "could use to open",
+        "are used to open"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 13,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-passive-purpose"
+      ],
+      "e": "答案暫判為 (D) are used to open。be used to + 原形動詞可表示「被用來做……」，這些鑰匙被用來開辦公室前門。"
+    },
+    {
+      "questionId": "260922134100014",
+      "revision": 1,
+      "number": 14,
+      "q": "As soon as they got to the station, the train _____.",
+      "o": [
+        "had left",
+        "would leave",
+        "left",
+        "has been leaving"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 14,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-past-perfect"
+      ],
+      "e": "目前暫依既有第六回 canonical 的過去完成式整理判為 (A) had left，表示到站時火車已經離開；但原句使用 as soon as 時也可能讓一般過去式 left 產生語意競爭，因此本題等待正式解答頁核對。",
+      "answerPending": true
+    },
+    {
+      "questionId": "260922134100015",
+      "revision": 1,
+      "number": 15,
+      "q": "This is the house _____ Grandma lived for 60 years.",
+      "o": [
+        "which",
+        "that",
+        "in which",
+        "of which"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 15,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-relative-preposition"
+      ],
+      "e": "答案暫判為 (C) in which。Grandma lived in the house，因此關係結構為 the house in which Grandma lived。"
+    },
+    {
+      "questionId": "260922134100016",
+      "revision": 1,
+      "number": 16,
+      "q": "第 16 空應填入哪一個選項？",
+      "o": [
+        "prepared",
+        "to prepare",
+        "preparing",
+        "prepare"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 16,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-sports",
+        "english-gept-elementary-reading-gerund"
+      ],
+      "e": "答案暫判為 (C) preparing。spend time + V-ing 表示「花時間做某事」。",
+      "section": "第二部分：段落填空",
+      "groupId": "round06-cloze-16-20",
+      "introLabel": "Questions 16–20｜接力賽",
+      "intro": "Our class spend much time __16__ for the relay race every year, but we’ve never won a __17__. This September, Roy came to our class. Because nobody wanted to take the baton last, we gave the job to him. Before the day came, we __18__ very nervous, but all we could do was wait.\n\nOn sports day, when the race started, everyone in our class tried our best to run __19__ the others. Guess what? It was Roy that got to the finish line first. How amazing — our class won for the first time! I’d never forget the wonderful __20__ in my life."
+    },
+    {
+      "questionId": "260922134100017",
+      "revision": 1,
+      "number": 17,
+      "q": "第 17 空應填入哪一個選項？",
+      "o": [
+        "first",
+        "price",
+        "challenge",
+        "title"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 17,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-sports",
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "答案暫判為 (D) title。win a title 可表示「贏得冠軍／頭銜」；後文也說班級第一次獲勝。",
+      "groupId": "round06-cloze-16-20"
+    },
+    {
+      "questionId": "260922134100018",
+      "revision": 1,
+      "number": 18,
+      "q": "第 18 空應填入哪一個選項？",
+      "o": [
+        "have been",
+        "was",
+        "had been",
+        "would be"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 18,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-sports",
+        "english-gept-elementary-reading-grammar-past-perfect"
+      ],
+      "e": "答案暫判為 (C) had been。敘事基準在 sports day 之前，緊張狀態發生於更早的過去，用過去完成式較合適。",
+      "groupId": "round06-cloze-16-20"
+    },
+    {
+      "questionId": "260922134100019",
+      "revision": 1,
+      "number": 19,
+      "q": "第 19 空應填入哪一個選項？",
+      "o": [
+        "front of",
+        "ahead of",
+        "back of",
+        "behind"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 19,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-sports",
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "答案暫判為 (B) ahead of。run ahead of the others 表示「跑在其他人前面」。",
+      "groupId": "round06-cloze-16-20"
+    },
+    {
+      "questionId": "260922134100020",
+      "revision": 1,
+      "number": 20,
+      "q": "第 20 空應填入哪一個選項？",
+      "o": [
+        "scenery",
+        "experience",
+        "contest",
+        "experiment"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 20,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-sports",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "答案暫判為 (B) experience。第一次贏得接力賽是人生中難忘的「經驗」。",
+      "groupId": "round06-cloze-16-20"
+    },
+    {
+      "questionId": "260922134100021",
+      "revision": 1,
+      "number": 21,
+      "q": "第 21 空應填入哪一個選項？",
+      "o": [
+        "art",
+        "languages",
+        "tools",
+        "sports"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 21,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-cross-cultural",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "答案暫判為 (B) languages。後文主要描述 Wen-yu 母親學中文、家人學越南語，因此主題線索指向語言。",
+      "section": "第二部分：段落填空",
+      "groupId": "round06-cloze-21-25",
+      "introLabel": "Questions 21–25｜Wen-yu 的家庭與語言學習",
+      "intro": "Wen-yu is new in my class. She is doing well in school and good at __21__. I think Wen-yu is as lucky as her mother, a pretty woman __22__ comes from a small fishing town by the sea in Vietnam.\n\nWhen Wen-yu’s mother __23__ to Taiwan fourteen years ago, she didn’t know any Chinese or Taiwanese. Luckily, Wen-yu’s grandparents were really nice to her, and taught her many things about Taiwan. Wen-yu’s father took her to a Chinese class where she had fun learning the new language. At the same time, Wen-yu’s mother taught her family some simple Vietnamese so they could understand __24__ better.\n\nThis summer, they __25__ a trip to Europe. I believe it will be a wonderful experience for both Wen-yu and her mother."
+    },
+    {
+      "questionId": "260922134100022",
+      "revision": 1,
+      "number": 22,
+      "q": "第 22 空應填入哪一個選項？",
+      "o": [
+        "who",
+        "which",
+        "where",
+        "in which"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 22,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-cross-cultural",
+        "english-gept-elementary-reading-relative-pronoun"
+      ],
+      "e": "答案暫判為 (A) who。先行詞 a pretty woman 是人，關係代名詞 who 在子句中作主詞。",
+      "groupId": "round06-cloze-21-25"
+    },
+    {
+      "questionId": "260922134100023",
+      "revision": 1,
+      "number": 23,
+      "q": "第 23 空應填入哪一個選項？",
+      "o": [
+        "came",
+        "has come",
+        "was coming",
+        "would come"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 23,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-cross-cultural",
+        "english-gept-elementary-reading-past-tense"
+      ],
+      "e": "答案暫判為 (A) came。fourteen years ago 是明確過去時間，使用一般過去式。",
+      "groupId": "round06-cloze-21-25"
+    },
+    {
+      "questionId": "260922134100024",
+      "revision": 1,
+      "number": 24,
+      "q": "第 24 空應填入哪一個選項？",
+      "o": [
+        "in person",
+        "all together",
+        "each other",
+        "together with"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 24,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-cross-cultural",
+        "english-gept-elementary-reading-pronoun"
+      ],
+      "e": "答案暫判為 (C) each other。家人彼此學習中文與越南語，因此是「更了解彼此」。",
+      "groupId": "round06-cloze-21-25"
+    },
+    {
+      "questionId": "260922134100025",
+      "revision": 1,
+      "number": 25,
+      "q": "第 25 空應填入哪一個選項？",
+      "o": [
+        "take",
+        "took",
+        "will take",
+        "would take"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 25,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-cross-cultural",
+        "english-gept-elementary-reading-future"
+      ],
+      "e": "答案暫判為 (C) will take。This summer 配合後句 it will be，表示未來計畫。",
+      "groupId": "round06-cloze-21-25"
+    },
+    {
+      "questionId": "260922134100026",
+      "revision": 1,
+      "number": 26,
+      "q": "Miss Chen, a PE teacher, took her students to the club. There they watched early badminton games and learned about the history of the sport. When did they most likely visit the club?",
+      "o": [
+        "May 6.",
+        "May 13.",
+        "May 20.",
+        "May 27."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 26,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-poster-schedule",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (C) May 20。當天活動是影片 Great Moments in Badminton，最符合觀看早期羽球比賽並了解歷史。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round06-reading-26-27",
+      "introLabel": "Questions 26–27｜Everyday Sports Club",
+      "intro": "Here is a poster of the Everyday Sports Club. Read it and answer the questions.\n\nEveryday Sports Club\nSports of the Month: Badminton\n\nDate — Event\nMay 6 — Play badminton with professional players\nMay 13 — Play a badminton game on the Internet\nMay 20 — Video program: Great Moments in Badminton\nMay 27 — Movie: Badminton Girl from the Moon\n\n10:00 a.m. – 6:00 p.m. (Mon. thru Sat.)\nTicket price for each event:\n* NT$100 a person\n* NT$50 a person for groups with over 20 persons"
+    },
+    {
+      "questionId": "260922134100027",
+      "revision": 1,
+      "number": 27,
+      "q": "Miss Chen paid NT$1,300 for the tickets. How many students did she take with her?",
+      "o": [
+        "15.",
+        "20.",
+        "25.",
+        "30."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 27,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-ticket-calculation",
+        "english-gept-elementary-reading-quantitative"
+      ],
+      "e": "答案暫判為 (C) 25。超過 20 人的團體每人 NT$50；NT$1,300 ÷ 50 = 26 人，包含 Miss Chen 本人，因此學生為 25 人。",
+      "groupId": "round06-reading-26-27"
+    },
+    {
+      "questionId": "260922134100028",
+      "revision": 1,
+      "number": 28,
+      "q": "What did Namie do right after she got to Japan?",
+      "o": [
+        "She ate something for breakfast at the hotel.",
+        "She took some exercise.",
+        "She took a rest.",
+        "She visited an old friend of hers."
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 28,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-diary",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (A)。日記寫她抵達後先在飯店吃早餐，之後才去 Tokyo Tower。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round06-reading-28-29",
+      "introLabel": "Questions 28–29｜Namie’s Diary",
+      "intro": "Namie’s Diary — October 12, 2015\n\nToday was my first day in Japan. I arrived at seven. After having breakfast at the hotel, I decided to visit Tokyo Tower. It took me half an hour to get there. What a beautiful view from up there! I wished for the appearance of my Mr. Right, just like what we had watched on soap operas. In the afternoon, I went to some famous temples and prayed for good luck. Above all, I also made a wish — to get married as soon as possible."
+    },
+    {
+      "questionId": "260922134100029",
+      "revision": 1,
+      "number": 29,
+      "q": "What is the only thing on Namie’s mind?",
+      "o": [
+        "Getting married to a nice man.",
+        "Enjoying the beautiful view from Tokyo Tower.",
+        "Visiting famous temples in Japan.",
+        "Having the breakfast again."
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 29,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-diary",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "答案暫判為 (A)。她在東京鐵塔希望 Mr. Right 出現，到寺廟又祈求儘快結婚，反覆指向找好對象結婚。",
+      "groupId": "round06-reading-28-29"
+    },
+    {
+      "questionId": "260922134100030",
+      "revision": 1,
+      "number": 30,
+      "q": "Why do children carry lanterns on the Lantern Festival?",
+      "o": [
+        "They want to enter a senior high school near the temple.",
+        "It’s their homework.",
+        "They have fun carrying them.",
+        "They want to gain more experience of making lanterns."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 30,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cultural-festival",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (C)。文章直接說 Lanterns are often carried by children for fun or for a bright future。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round06-reading-30-32",
+      "introLabel": "Questions 30–32｜Lantern Festival",
+      "intro": "The Lantern Festival marks the end of the Chinese New Year celebrations. On the night of the festival, beautiful lanterns of different shapes and sizes can be seen at temples. Lanterns are often carried by children for fun or for a bright future.\n\nEating rice dumplings is another custom for the Lantern Festival. The markets, supermarkets, or many convenience stores sell rice dumplings on this day. In the early spring, the weather is still cold. People enjoy eating hot rice dumplings with their family to celebrate the Lantern Festival.\n\nRiddles are sometimes written on the lanterns for people to guess during the festival. Some of the riddles are called “lantern tigers” because they are difficult to answer."
+    },
+    {
+      "questionId": "260922134100031",
+      "revision": 1,
+      "number": 31,
+      "q": "What do people NOT do on the Lantern Festival?",
+      "o": [
+        "Eat hot rice dumplings with their family.",
+        "Go to a lantern riddle party.",
+        "Watch beautiful lanterns at temples.",
+        "Sell rice dumplings at the 7-ELEVEN."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 31,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cultural-festival",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "目前暫判為 (D)。文章把吃湯圓、賞燈、猜燈謎描述為節慶活動；便利商店「販售湯圓」是店家供應資訊，不是一般民眾的節慶活動。不過 (B) 的 riddle party 並非逐字出現，故本題等待正式解答頁核對。",
+      "groupId": "round06-reading-30-32",
+      "answerPending": true
+    },
+    {
+      "questionId": "260922134100032",
+      "revision": 1,
+      "number": 32,
+      "q": "Why are some of the riddles called “lantern tigers”?",
+      "o": [
+        "Because the riddles are about the animal sign “Tiger.”",
+        "Because they are not easy to guess.",
+        "Because the lanterns look like tigers.",
+        "Because lanterns are in the shapes of tigers."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 32,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cultural-festival",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (B)。文章直接說 some riddles are called “lantern tigers” because they are difficult to answer。",
+      "groupId": "round06-reading-30-32"
+    },
+    {
+      "questionId": "260922134100033",
+      "revision": 1,
+      "number": 33,
+      "q": "What does the reading mainly talk about?",
+      "o": [
+        "What is the MPS?",
+        "How Lawrence got the MPS.",
+        "The story of Lawrence Huang.",
+        "How MPS patients live a daily life."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 33,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-biographical-resilience",
+        "english-gept-elementary-reading-main-idea"
+      ],
+      "e": "答案暫判為 (C)。全文從 Lawrence 的疾病、求學、興趣、態度到離世，主軸是他的人生故事。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round06-reading-33-35",
+      "introLabel": "Questions 33–35｜Lawrence Huang",
+      "intro": "Lawrence Huang, an MPS patient, lived a short but special life. There wasn’t any difference between him and the other new babies when he was born. About 13 months old, however, he was told to have the MPS because his body did not have an important kind of enzyme, which made him stay as short as about 90 cm tall all his life. He stopped growing any taller after he was two.\n\nLawrence went to school at seven. At school he wanted to run and play as the other healthy kids, but he couldn’t. He had a hard time walking, so his mom had to carry him anywhere in a stroller. Such illness did not knock him down. He chose to look at things on the bright side. When strangers were looking, he thought those people were showing their care. He liked baseball even though he had to sit on the chair playing it. He painted often even though it was not easy for him to hold the brush. He was kind, helpful, and brave to face all the difficulties around him.\n\nA few months before he died, he asked his mother to take him onto the MRT to look around the city because he wanted to see more of the lovely world. At the age of ten, he left the world because of a flu complication. All his family and friends cried, but they believed though he died, his stories would go on and cheer people up. He looked short, but a giant he is in people’s minds."
+    },
+    {
+      "questionId": "260922134100034",
+      "revision": 1,
+      "number": 34,
+      "q": "What did Lawrence like to do when he was at school?",
+      "o": [
+        "Hold the brush to paint.",
+        "Play basketball in the stroller.",
+        "Take the MRT to look around the city.",
+        "Run and play like the other healthy boys."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 34,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-biographical-resilience",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D)。文章寫 At school he wanted to run and play as the other healthy kids, but he couldn’t。",
+      "groupId": "round06-reading-33-35"
+    },
+    {
+      "questionId": "260922134100035",
+      "revision": 1,
+      "number": 35,
+      "q": "Which is true about Lawrence Huang?",
+      "o": [
+        "The way he looked at things cheers up people.",
+        "He got the MPS because of a flu complication.",
+        "When he died at ten, he looked like a giant.",
+        "He felt very sad when strangers kept looking at him."
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 6,
+      "originalQuestionNumber": 35,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-biographical-resilience",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "答案暫判為 (A)。Lawrence 選擇往好處看事情，家人朋友相信他的故事會繼續鼓舞人；其餘選項與文章細節不符。",
+      "groupId": "round06-reading-33-35"
+    }
+  ]
+}
