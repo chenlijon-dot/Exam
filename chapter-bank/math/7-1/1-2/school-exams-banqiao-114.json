@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-school",
+    "difficulty": "math-7-1-1-2-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-2 正負數的加減｜各校題庫",
+    "title": "1-2 正負數的加減｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜板橋國中 4 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "unit": "1-2 正負數的加減",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-2 正負數的加減 拆題；保留原始題號、學校／年度／段考 provenance。原本非選擇題若為網站作答改編，會明確標示 adaptedForWeb。"
+  },
+  "source": {
+    "school": "新北市立板橋國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260922151500007",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-07",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-number-line-shift",
+        "math-7-1-1-2-context"
+      ],
+      "q": "漢叡設計一個在數線上行走的機器人：按 A 往正向走 2 個單位，按 B 往負向走 3 個單位。機器人從 P 點出發，先按 14 次 A，再按 7 次 B，最後到達座標 5 的 Q 點。P 點座標為何？ [114 板橋國中]",
+      "o": [
+        "-2",
+        "5",
+        "7",
+        "12"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。總位移為 14×2-7×3=7，因此 P+7=5，P=-2。"
+    },
+    {
+      "questionId": "260922151500008",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "二-02",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "q": "計算 25-(-12) 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "13",
+        "37",
+        "-37",
+        "-13"
+      ],
+      "a": 1,
+      "e": "官方答案為 37。減去負數等於加上正數，所以 25-(-12)=25+12=37。"
+    },
+    {
+      "questionId": "260922151500009",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "二-10",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-mixed-add-sub",
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "q": "計算 8765+(-13579)-(-3579)+235 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "-1000",
+        "1000",
+        "-2000",
+        "0"
+      ],
+      "a": 0,
+      "e": "官方答案為 -1000。8765-13579+3579+235=-1000。"
+    },
+    {
+      "questionId": "260922151500010",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "二-14",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-mixed-add-sub",
+        "math-7-1-1-2-absolute-value"
+      ],
+      "q": "計算 (-9876+1234)-(1233-567)+|566-9875| 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "1",
+        "-1",
+        "9309",
+        "-9308"
+      ],
+      "a": 0,
+      "e": "官方答案為 1。(-9876+1234)=-8642，(1233-567)=666，|566-9875|=9309，所以 -8642-666+9309=1。"
+    }
+  ]
+}
