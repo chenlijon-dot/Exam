@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-school",
+    "examType": "math-school-exam-section-bank",
+    "examTypeLabel": "數學七上 1-2 各校題庫",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "title": "1-2｜各校題庫",
+    "subtitle": "4 題｜各校真實段考拆題",
+    "difficulty": "math-7-1-1-2-school",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依教材小節拆題；保留學校／年度／段考／原題號 provenance。原選擇題保留原始選項順序；填充、計算、作圖題為網站自動判分需要改編成四選一，並以 adaptedForWeb 標示。答案以原校答案卷核對。"
+  },
+  "questions": [
+    {
+      "questionId": "260922151000009",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-07",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "漢叡設計一個在數線上行走的機器人，按 A 往正向走 2 單位，按 B 往負向走 3 單位。機器人從 P 點出發，先按 14 次 A，再按 7 次 B，最後到 Q 點且 Q=5。P 點座標為何？",
+      "o": [
+        "-2",
+        "5",
+        "7",
+        "12"
+      ],
+      "a": 0,
+      "e": "總位移=14×2-7×3=7，所以 P=5-7=-2，選 A。",
+      "conceptIds": [
+        "math-7-1-1-2-signed-add-sub",
+        "math-7-1-1-2-number-line-shift"
+      ],
+      "sourcePage": 1
+    },
+    {
+      "questionId": "260922151000010",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "二-02",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "計算 25-(-12) 的值為何？",
+      "o": [
+        "13",
+        "37",
+        "-37",
+        "-13"
+      ],
+      "a": 1,
+      "e": "25-(-12)=25+12=37，選 B。",
+      "conceptIds": [
+        "math-7-1-1-2-subtract-negative"
+      ],
+      "sourcePage": 2,
+      "originalQuestionType": "fill-in",
+      "adaptedForWeb": true
+    },
+    {
+      "questionId": "260922151000011",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "二-10",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "計算 8765+(-13579)-(-3579)+235 的值為何？",
+      "o": [
+        "-1000",
+        "1000",
+        "-2000",
+        "0"
+      ],
+      "a": 0,
+      "e": "8765-13579+3579+235=-1000，選 A。",
+      "conceptIds": [
+        "math-7-1-1-2-signed-add-sub"
+      ],
+      "sourcePage": 2,
+      "originalQuestionType": "fill-in",
+      "adaptedForWeb": true
+    },
+    {
+      "questionId": "260922151000012",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "二-14",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "schoolYear": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "exam": "第一學期七年級第一次段考",
+      "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+      "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "type": "mcq",
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "q": "計算 (-9876+1234)-(1233-567)+|566-9875| 的值為何？",
+      "o": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "a": 2,
+      "e": "依序化簡可得 1，選 C。",
+      "conceptIds": [
+        "math-7-1-1-2-signed-add-sub",
+        "math-7-1-1-1-absolute-value"
+      ],
+      "sourcePage": 2,
+      "originalQuestionType": "fill-in",
+      "adaptedForWeb": true
+    }
+  ]
+}
