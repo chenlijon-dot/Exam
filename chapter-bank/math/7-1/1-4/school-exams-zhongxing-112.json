@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-4-school",
+    "difficulty": "math-7-1-1-4-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-4 指數記法與科學記號｜各校題庫",
+    "title": "1-4 指數記法與科學記號｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜中興國中 11 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-4",
+    "unit": "1-4 指數記法與科學記號",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-4 指數記法與科學記號 拆題；保留原始題號、學校／年度／段考 provenance。非選擇題改編為網站四選一時明確標示 adaptedForWeb；圖題使用 Exam native drawing renderer。"
+  },
+  "source": {
+    "school": "桃園市立中興國民中學",
+    "year": "112",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "112-桃園市中興國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "112-桃園市中興國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": false,
+    "answerNote": "選擇題 1-25 與計算題二-2 有官方解答；計算題二-1 的兩個答案格在官方解答檔中留白，因此二-1(1)、二-1(2) 依原題計算推導，answerVerified=false。"
+  },
+  "questions": [
+    {
+      "questionId": "260922234200001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-01",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-evaluation",
+        "math-7-1-1-4-zero-exponent"
+      ],
+      "q": "下列敘述何者正確？ [112 中興國中]",
+      "o": [
+        "(-1)^8=-1",
+        "1^8=8",
+        "(-2)^0=1",
+        "(-1)×7=7"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。任何非零數的 0 次方為 1，所以 (-2)^0=1。"
+    },
+    {
+      "questionId": "260922234200002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-02",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "若 a×10^n 代表某數的科學記號，則關於 a 的條件何者正確？ [112 中興國中]",
+      "o": [
+        "1≤a≤10",
+        "1≤a<10",
+        "1<a≤10",
+        "1<a<10"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。科學記號係數需滿足 1≤a<10。"
+    },
+    {
+      "questionId": "260922234200005",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-05",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation",
+        "math-7-1-1-4-magnitude"
+      ],
+      "q": "已知 p=1.32×10^-5，下列關於 p 值的敘述何者正確？ [112 中興國中]",
+      "o": [
+        "小於 0",
+        "介於 0 與 1 之間，且比較接近 0",
+        "大於 1",
+        "介於 0 與 1 之間，且比較接近 1"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。1.32×10^-5=0.0000132，介於 0 與 1 之間且非常接近 0。"
+    },
+    {
+      "questionId": "260922234200007",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-07",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-of-ten",
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "若 0.0000002=2×10^□，則 □ 為何？ [112 中興國中]",
+      "o": [
+        "8",
+        "-7",
+        "-8",
+        "-9"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。0.0000002=2×10^-7。"
+    },
+    {
+      "questionId": "260922234200009",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "一-09",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "下列何者是 0.0000168 的科學記號？ [112 中興國中]",
+      "o": [
+        "1.68×10^-3",
+        "1.68×10^-4",
+        "1.68×10^-5",
+        "16.8×10^-5"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。0.0000168=1.68×10^-5。"
+    },
+    {
+      "questionId": "260922234200010",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "一-10",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation",
+        "math-7-1-1-4-context"
+      ],
+      "q": "樂透彩頭彩中獎機率約為五百萬分之一，將此機率表示成科學記號為何？ [112 中興國中]",
+      "o": [
+        "2×10^-7",
+        "2×10^-8",
+        "5×10^7",
+        "2×10^8"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。1/5,000,000=0.0000002=2×10^-7。"
+    },
+    {
+      "questionId": "260922234200011",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "一-11",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-place-value",
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "2.03×10^-3 小數點後第幾位開始不為 0？ [112 中興國中]",
+      "o": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。2.03×10^-3=0.00203，小數點後第 3 位開始不為 0。"
+    },
+    {
+      "questionId": "260922234200013",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "一-13",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-evaluation",
+        "math-7-1-1-4-mixed-powers"
+      ],
+      "q": "計算 18÷(-3^2)-|20+(-2)^3×3| 的值為何？ [112 中興國中]",
+      "o": [
+        "-3",
+        "-4",
+        "-5",
+        "-6"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。-3^2=-9，18÷(-9)=-2；(-2)^3×3=-24，|20-24|=4，所以結果為 -2-4=-6。"
+    },
+    {
+      "questionId": "260922234200019",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "一-19",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-context",
+        "math-7-1-1-4-exponent"
+      ],
+      "q": "培養皿原有 1 個細菌，每經過 1 分鐘細菌數量變為原來的 2 倍，經過 1 小時後有幾個細菌？ [112 中興國中]",
+      "o": [
+        "120",
+        "180",
+        "2^60",
+        "3^60"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。1 小時為 60 分鐘，每分鐘倍增一次，因此數量為 2^60。"
+    },
+    {
+      "questionId": "260922234200020",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "一-20",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-compare",
+        "math-7-1-1-4-exponent"
+      ],
+      "q": "設 a=(1.1)^100，b=(1.1)^101，c=(0.9)^100，d=(0.9)^101，比較 a、b、c、d 的大小何者正確？ [112 中興國中]",
+      "o": [
+        "c<d<a<b",
+        "d<c<a<b",
+        "d<c<b<a",
+        "d<c<b<a"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。因 1.1>1，所以 b>a>1；0<0.9<1，所以 0<d<c<1，因此 d<c<a<b。"
+    },
+    {
+      "questionId": "260922234200023",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "一-23",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-compare",
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "下列四種細菌長度何者最小？ [112 中興國中]",
+      "o": [
+        "3.1×10^-5 mm",
+        "2.8×10^-5 mm",
+        "3.1×10^-4 mm",
+        "2.8×10^-4 mm"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。10^-5 比 10^-4 小；同為 10^-5 時，2.8<3.1，所以 2.8×10^-5 mm 最小。"
+    }
+  ]
+}
