@@ -6,7 +6,7 @@
     "examType": "math-school-section-school-exam",
     "examTypeLabel": "數學七上 1-4 指數記法與科學記號｜各校題庫",
     "title": "1-4 指數記法與科學記號｜各校題庫",
-    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜嘉義國中 9 題＋1 題待核",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜嘉義國中 10 題",
     "subject": "math",
     "subjectLabel": "數學",
     "semester": "7-1",
@@ -30,7 +30,7 @@
     "sourceFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題.pdf",
     "answerFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
     "answerVerified": true,
-    "answerNote": "官方答案卷已核對。二-04 題幹計算與答案卷記載 13 不一致，該題暫列 pendingQuestions，不進自動評量。"
+    "answerNote": "官方答案卷已核對；二-04 官方答案卷記載 13，但原卷題幹清楚可驗算得 m=11、n=7，因此 m+n=18。該題以題幹驗算結果 18 為正式答案，並保留官方答案誤植紀錄。"
   },
   "questions": [
     {
@@ -119,9 +119,43 @@
       "e": "官方答案為 A。甲應為 70000；乙正確；丙應為 6140000；丁應為 0.000328，所以僅乙正確。"
     },
     {
-      "questionId": "260922213000021",
+      "questionId": "260922213000016",
       "revision": 1,
       "number": 4,
+      "originalQuestionNumber": "二-04",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為填充題；為網站自動評量改編為四選一。原卷題幹可直接驗算，官方答案卷此題誤植為 13，正式答案採題幹驗算結果 18。",
+      "answerVerified": true,
+      "answerBasis": "verified-from-printed-question",
+      "officialAnswer": "13",
+      "verifiedAnswer": "18",
+      "answerNote": "官方答案卷列 13；依原卷題幹：7.2315×10^10=72,315,000,000，共 11 位數，所以 m=11；9.8675×10^-7=0.00000098675，小數點後第 7 位開始不為 0，所以 n=7；故 m+n=18。已人工複核。",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-place-value",
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "將 7.2315×10^10 乘開後有 m 位數；將 9.8675×10^-7 乘開後，小數點後第 n 位數開始不為 0，則 m+n 為何？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "7",
+        "11",
+        "13",
+        "18"
+      ],
+      "a": 3,
+      "e": "依原卷題幹，7.2315×10^10=72,315,000,000，共 11 位數，所以 m=11；9.8675×10^-7=0.00000098675，第 7 位小數開始不為 0，所以 n=7；因此 m+n=18。原校答案卷此題列 13，屬答案誤植。"
+    },
+    {
+      "questionId": "260922213000021",
+      "revision": 1,
+      "number": 5,
       "originalQuestionNumber": "二-09",
       "school": "嘉義市立嘉義國中",
       "year": "113",
@@ -150,7 +184,7 @@
     {
       "questionId": "260922213000024",
       "revision": 1,
-      "number": 5,
+      "number": 6,
       "originalQuestionNumber": "二-12",
       "school": "嘉義市立嘉義國中",
       "year": "113",
@@ -180,7 +214,7 @@
     {
       "questionId": "260922213000025",
       "revision": 1,
-      "number": 6,
+      "number": 7,
       "originalQuestionNumber": "二-13",
       "school": "嘉義市立嘉義國中",
       "year": "113",
@@ -210,7 +244,7 @@
     {
       "questionId": "260922213000029",
       "revision": 1,
-      "number": 7,
+      "number": 8,
       "originalQuestionNumber": "三-2(1)-非洲豬瘟",
       "school": "嘉義市立嘉義國中",
       "year": "113",
@@ -240,7 +274,7 @@
     {
       "questionId": "260922213000030",
       "revision": 1,
-      "number": 8,
+      "number": 9,
       "originalQuestionNumber": "三-2(1)-諾羅病毒",
       "school": "嘉義市立嘉義國中",
       "year": "113",
@@ -270,7 +304,7 @@
     {
       "questionId": "260922213000031",
       "revision": 1,
-      "number": 9,
+      "number": 10,
       "originalQuestionNumber": "三-2(2)",
       "school": "嘉義市立嘉義國中",
       "year": "113",
@@ -296,28 +330,6 @@
       ],
       "a": 0,
       "e": "官方答案為非洲豬瘟病毒。換算為公尺後分別為 2×10^-7、8×10^-8、2.7×10^-8。"
-    }
-  ],
-  "pendingQuestions": [
-    {
-      "questionId": "260922213000016",
-      "revision": 1,
-      "originalQuestionNumber": "二-04",
-      "school": "嘉義市立嘉義國中",
-      "year": "113",
-      "exam": "第一學期七年級第一次段考",
-      "sourcePage": 2,
-      "originalQuestionType": "填充題",
-      "status": "pending-answer-key-conflict",
-      "answerVerified": false,
-      "officialAnswer": "13",
-      "derivedFromPrintedQuestion": "18",
-      "conceptIds": [
-        "math-7-1-1-4-place-value",
-        "math-7-1-1-4-scientific-notation"
-      ],
-      "q": "將 7.2315×10^10 乘開後有 m 位數；將 9.8675×10^-7 乘開後，小數點後第 n 位數開始不為 0，則 m+n=____。 [113 嘉義國中]",
-      "note": "原卷清楚印為 7.2315×10^10 與 9.8675×10^-7；依題幹 m=11、n=7，m+n=18，但官方答案卷列 13。為避免污染自動評量，暫不升格 active。"
     }
   ]
 }
