@@ -371,6 +371,36 @@
     };
   }
 
+
+  function validateBullseye(spec) {
+    const rings = Array.isArray(spec.rings) ? spec.rings : [];
+    if (!rings.length) {
+      return { ok:false, reason:'bullseye 需要 rings' };
+    }
+
+    const normalized = rings.map((ring, index) => ({
+      radius:finiteNumber(ring?.radius),
+      label:ring?.label === undefined ? '' : String(ring.label),
+      index
+    }));
+
+    if (normalized.some(ring => ring.radius === null || ring.radius <= 0)) {
+      return { ok:false, reason:'bullseye ring radius 必須是正數' };
+    }
+
+    normalized.sort((a, b) => b.radius - a.radius);
+
+    return {
+      ok:true,
+      value:{
+        ...spec,
+        type:'bullseye',
+        rings:normalized,
+        showCenter:spec.showCenter === true
+      }
+    };
+  }
+
   function validateDiagramSpec(spec) {
     if (!spec || typeof spec !== 'object') {
       return { ok:false, reason:'diagram spec 必須是物件' };
@@ -381,6 +411,7 @@
       case 'triangle': return validateTriangle(spec);
       case 'square': return validateSquare(spec);
       case 'circle': return validateCircle(spec);
+      case 'bullseye': return validateBullseye(spec);
       case 'coordinate-plane':
       case 'xy-plane':
         return validateCoordinatePlane({ ...spec, type:'coordinate-plane' });
@@ -447,7 +478,8 @@
       .number-line-diagram,
       .geometry-diagram,
       .coordinate-plane-diagram,
-      .solid-projection-diagram{
+      .solid-projection-diagram,
+      .bullseye-diagram{
         width:100%;
         max-width:760px;
         margin:12px auto 14px;
@@ -455,7 +487,8 @@
       .number-line-diagram svg,
       .geometry-diagram svg,
       .coordinate-plane-diagram svg,
-      .solid-projection-diagram svg{
+      .solid-projection-diagram svg,
+      .bullseye-diagram svg{
         display:block;
         width:100%;
         height:auto;
@@ -482,7 +515,7 @@
         font:600 17px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
         text-anchor:middle;
       }
-      .nl-point-label,.geo-label,.cp-label{
+      .nl-point-label,.geo-label,.cp-label,.bullseye-label{
         fill:#0f172a;
         font:800 18px/1 system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
         text-anchor:middle;
@@ -833,6 +866,57 @@
         }, point.label));
       }
     });
+
+    container.appendChild(svg);
+    return svg;
+  }
+
+
+  function renderBullseye(container, rawSpec) {
+    ensureStyles();
+    const checked = validateBullseye(rawSpec);
+    if (!checked.ok) {
+      console.warn('[DiagramRenderer]', checked.reason, rawSpec);
+      return safeFallback(container);
+    }
+
+    const spec = checked.value;
+    container.innerHTML = '';
+    container.classList.add('bullseye-diagram');
+
+    const svg = createSvg(GEO_VIEW_H, spec.ariaLabel || '同心圓飛鏢靶');
+    const cx = VIEW_W / 2;
+    const cy = GEO_VIEW_H / 2;
+    const maxRadius = Math.max(...spec.rings.map(ring => ring.radius));
+    const scale = 145 / maxRadius;
+
+    spec.rings.forEach((ring, index) => {
+      const radiusPx = ring.radius * scale;
+      svg.appendChild(svgEl('circle', {
+        cx, cy, r:radiusPx,
+        fill:index % 2 === 0 ? '#ffffff' : '#f8fafc',
+        stroke:'#0f172a',
+        'stroke-width':3,
+        'vector-effect':'non-scaling-stroke'
+      }));
+
+      if (ring.label) {
+        const previous = index > 0 ? spec.rings[index - 1].radius * scale : radiusPx + 26;
+        const next = index < spec.rings.length - 1 ? spec.rings[index + 1].radius * scale : 0;
+        const labelRadius = index === 0
+          ? radiusPx - Math.max(18, (radiusPx - next) / 2)
+          : next + (radiusPx - next) / 2;
+        svg.appendChild(svgEl('text', {
+          x:cx + labelRadius,
+          y:cy + 6,
+          class:'bullseye-label'
+        }, ring.label));
+      }
+    });
+
+    if (spec.showCenter) {
+      svg.appendChild(svgEl('circle', { cx, cy, r:4.5, fill:'#0f172a' }));
+    }
 
     container.appendChild(svg);
     return svg;
@@ -1363,6 +1447,7 @@
       case 'triangle': return renderTriangle(container, checked.value);
       case 'square': return renderSquare(container, checked.value);
       case 'circle': return renderCircle(container, checked.value);
+      case 'bullseye': return renderBullseye(container, checked.value);
       case 'coordinate-plane': return renderCoordinatePlane(container, checked.value);
       case 'solid-projection': return renderSolidProjection(container, checked.value);
       default: return safeFallback(container);
@@ -1374,6 +1459,7 @@
   window.renderTriangle = renderTriangle;
   window.renderSquare = renderSquare;
   window.renderCircle = renderCircle;
+  window.renderBullseye = renderBullseye;
   window.renderCoordinatePlane = renderCoordinatePlane;
   window.renderSolidProjection = renderSolidProjection;
   window.renderDiagram = renderDiagram;
