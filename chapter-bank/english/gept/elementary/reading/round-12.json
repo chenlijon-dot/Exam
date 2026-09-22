@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-12",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第十二回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第十二回",
+    "difficulty": "english-gept-elementary-reading-round-12",
+    "difficultyLabel": "第十二回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceBook": "萬事通 智能碼書《國中英文 全民英檢攻略 全》",
+    "sourcePages": "p.93–101",
+    "sourceDocId": "1uXIpqgatIzWj8l7IyJMI6uBw_jsDDwyiiLeERoIg4LI",
+    "answerVerified": true,
+    "answerSource": "原書解答頁（第十二回）",
+    "sourceNote": "題目文字依 Google Drive 人工校正完成之《國中英文 全民英檢攻略 全》第十二回原始文字校正版建立，原書 p.93–101，共 35 題。全部答案已依原書解答頁逐題核對，answerVerified=true。Q28–29 保留 THSR 時刻表結構；Q33 依人工校正版保存之選項文字描述，不另行重畫或改寫原始選項語意。題目與 A/B/C/D 原始順序完整保留；題組內容只存一次並由 groupId 共用。"
+  },
+  "questions": [
+    {
+      "questionId": "260922144500001",
+      "revision": 1,
+      "number": 1,
+      "q": "A _____ is being designed now. It can copy or scan papers, make coffee or ice cream, vacuum the floors and does nearly everything a secretary can do.",
+      "o": [
+        "robot",
+        "robber",
+        "rocket",
+        "rope"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 1,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) robot。題幹描述能執行多種秘書工作的機器。"
+    },
+    {
+      "questionId": "260922144500002",
+      "revision": 1,
+      "number": 2,
+      "q": "High school students in Taiwan are now trying to _____ their second foreign language.",
+      "o": [
+        "imagine",
+        "improve",
+        "invent",
+        "indicate"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 2,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (B) improve。improve a language 表示提升語言能力。"
+    },
+    {
+      "questionId": "260922144500003",
+      "revision": 1,
+      "number": 3,
+      "q": "After retiring, Grandpa led a(n) _____ life far from Taipei.",
+      "o": [
+        "official",
+        "selfish",
+        "ordinary",
+        "similar"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 3,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (C) ordinary。退休後過著平凡生活。"
+    },
+    {
+      "questionId": "260922144500004",
+      "revision": 1,
+      "number": 4,
+      "q": "There are two _____ for this test. One is listening, and the other is reading.",
+      "o": [
+        "professions",
+        "functions",
+        "traditions",
+        "sections"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 4,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (D) sections。聽力與閱讀是測驗的兩個部分。"
+    },
+    {
+      "questionId": "260922144500005",
+      "revision": 1,
+      "number": 5,
+      "q": "John helped Anne with the presentation last week, so she treated him lunch today _____.",
+      "o": [
+        "in return",
+        "in time",
+        "in person",
+        "in vain"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 5,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "正式答案 (A) in return。John 先幫忙，Anne 請吃飯作為回報。"
+    },
+    {
+      "questionId": "260922144500006",
+      "revision": 1,
+      "number": 6,
+      "q": "Our team has won the semifinal, and now we can _____ to the final.",
+      "o": [
+        "advance",
+        "adopt",
+        "advertise",
+        "admire"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 6,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (A) advance。advance to the final 表示晉級決賽。"
+    },
+    {
+      "questionId": "260922144500007",
+      "revision": 1,
+      "number": 7,
+      "q": "Michael is born to be a baseball player. He’s just so _____ that we can’t catch up with him.",
+      "o": [
+        "talkative",
+        "thick",
+        "talented",
+        "tricky"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 7,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "正式答案 (C) talented。天分高，別人追不上。"
+    },
+    {
+      "questionId": "260922144500008",
+      "revision": 1,
+      "number": 8,
+      "q": "In the middle of the night, everyone got up tired and _____ to see the famous sunrise at Alishan.",
+      "o": [
+        "pulled out",
+        "set out",
+        "knocked out",
+        "pointed out"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 8,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "正式答案 (B) set out。set out 表示出發。"
+    },
+    {
+      "questionId": "260922144500009",
+      "revision": 1,
+      "number": 9,
+      "q": "Adam cheated on the math test again because he forgot _____ last time.",
+      "o": [
+        "caught",
+        "he caught",
+        "to be caught",
+        "being caught"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 9,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-forget-gerund"
+      ],
+      "e": "正式答案 (D) being caught。forget + V-ing 表示忘記曾經發生過的事。"
+    },
+    {
+      "questionId": "260922144500010",
+      "revision": 1,
+      "number": 10,
+      "q": "Uncle Pete _____ for a long time. He quit it 5 years ago!",
+      "o": [
+        "hasn’t smoked",
+        "didn’t smoke",
+        "has smoked",
+        "hadn’t smoked"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 10,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-present-perfect"
+      ],
+      "e": "正式答案依原書解答為 (A) hasn’t smoked。此題以教材答案 authority 為準。"
+    },
+    {
+      "questionId": "260922144500011",
+      "revision": 1,
+      "number": 11,
+      "q": "Do you like the grilled salmon tonight? I ate _____ of it with salt.",
+      "o": [
+        "few",
+        "many",
+        "a few",
+        "much"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 11,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-quantifier"
+      ],
+      "e": "正式答案 (D) much。salmon 在此視為不可數食物名詞。"
+    },
+    {
+      "questionId": "260922144500012",
+      "revision": 1,
+      "number": 12,
+      "q": "Alex sits at the last row because he’s taller than _____ in class.",
+      "o": [
+        "any one",
+        "all the ones",
+        "any other one",
+        "all the other one"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 12,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-comparative-any-other"
+      ],
+      "e": "正式答案 (C) any other one。比較級 + any other one 表示比班上其他任何一人都高。"
+    },
+    {
+      "questionId": "260922144500013",
+      "revision": 1,
+      "number": 13,
+      "q": "Both Uncle Jack and Dad _____ nearly late for the movie.",
+      "o": [
+        "was",
+        "has",
+        "were",
+        "had"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 13,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-subject-verb-agreement"
+      ],
+      "e": "正式答案 (C) were。both A and B 作複數主詞。"
+    },
+    {
+      "questionId": "260922144500014",
+      "revision": 1,
+      "number": 14,
+      "q": "We all love the cake, some of _____ was made by the kids at the children’s home.",
+      "o": [
+        "it",
+        "them",
+        "that",
+        "which"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 14,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-some-of-which"
+      ],
+      "e": "正式答案 (D) which。some of which 為量詞 + 介系詞 + 關係代名詞結構。"
+    },
+    {
+      "questionId": "260922144500015",
+      "revision": 1,
+      "number": 15,
+      "q": "The car you last saw _____ from Cousin Andy.",
+      "o": [
+        "which borrow",
+        "is borrowed",
+        "which borrows",
+        "borrows"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 15,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-passive"
+      ],
+      "e": "正式答案 (B) is borrowed。The car 是被借來的，因此用被動語態。"
+    },
+    {
+      "questionId": "260922144500016",
+      "revision": 1,
+      "number": 16,
+      "q": "第 16 空應填入哪一個選項？",
+      "o": [
+        "is",
+        "will be",
+        "has been",
+        "could be"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 16,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-fashion",
+        "english-gept-elementary-reading-future-in-past"
+      ],
+      "e": "正式答案 (D) could be。Lydia 在過去思考未來可能成為歌手。",
+      "section": "第二部分：段落填空",
+      "groupId": "round12-cloze-16-20",
+      "introLabel": "Questions 16–20｜Lydia’s Future",
+      "intro": "When Lydia was an 8th grader, she often thought about her future. She sometimes wondered if she __16__ a singer when she grew up because she liked singing, and she also had a good __17__.\n\nOne day, on her way to school, Lydia found a newly-opened boutique. From the windows of it, Lydia saw all kinds of dolls that __18__ her eye. She was quite interested in the beautiful dresses that the dolls wore. While Lydia __19__ to see the beautiful dolls, she changed her mind to be a singer but to be a fashion designer.\n\nFrom that day on, Lydia followed her plan. Now, she studies in a fashion design college in Tokyo. She enjoys __20__ she is learning at school, and she is confident she will become one of the top designers in Taiwan."
+    },
+    {
+      "questionId": "260922144500017",
+      "revision": 1,
+      "number": 17,
+      "q": "第 17 空應填入哪一個選項？",
+      "o": [
+        "voice",
+        "vocabulary",
+        "vinegar",
+        "vendor"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 17,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-fashion",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "正式答案 (A) voice。喜歡唱歌且有好嗓音。",
+      "groupId": "round12-cloze-16-20"
+    },
+    {
+      "questionId": "260922144500018",
+      "revision": 1,
+      "number": 18,
+      "q": "第 18 空應填入哪一個選項？",
+      "o": [
+        "caught",
+        "hurt",
+        "drew",
+        "shaded"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 18,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-fashion",
+        "english-gept-elementary-reading-collocation"
+      ],
+      "e": "正式答案 (A) caught。catch one’s eye 表示吸引某人的目光。",
+      "groupId": "round12-cloze-16-20"
+    },
+    {
+      "questionId": "260922144500019",
+      "revision": 1,
+      "number": 19,
+      "q": "第 19 空應填入哪一個選項？",
+      "o": [
+        "surprised",
+        "was surprising",
+        "surprising",
+        "was surprised"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 19,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-fashion",
+        "english-gept-elementary-reading-passive"
+      ],
+      "e": "正式答案 (D) was surprised。Lydia 是感到驚喜的人。",
+      "groupId": "round12-cloze-16-20"
+    },
+    {
+      "questionId": "260922144500020",
+      "revision": 1,
+      "number": 20,
+      "q": "第 20 空應填入哪一個選項？",
+      "o": [
+        "what",
+        "learning",
+        "that",
+        "which"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 20,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-fashion",
+        "english-gept-elementary-reading-grammar-noun-clause-what"
+      ],
+      "e": "正式答案 (A) what。enjoys what she is learning，what 引導名詞子句作受詞。",
+      "groupId": "round12-cloze-16-20"
+    },
+    {
+      "questionId": "260922144500021",
+      "revision": 1,
+      "number": 21,
+      "q": "第 21 空應填入哪一個選項？",
+      "o": [
+        "Because",
+        "Though",
+        "Because of",
+        "Besides"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 21,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-global-warming",
+        "english-gept-elementary-reading-because-of"
+      ],
+      "e": "正式答案 (C) Because of。global warming 是名詞片語，前面用 because of。",
+      "section": "第二部分：段落填空",
+      "groupId": "round12-cloze-21-25",
+      "introLabel": "Questions 21–25｜Global Warming and 3R",
+      "intro": "__21__ global warming, the weather really changes a lot. It is getting hotter, and it sometimes rains too much or too __22__. Therefore, people are trying everything to save the world. It can be very easy. __23__, bring our own chopsticks when we eat in restaurants, and ride a bike to and from the office instead of driving your own car.\n\nIf you really don’t know __24__, you can follow the 3R rules. First — reduce — you can buy less and use less. Second — reuse — use things as many times as possible. Third — __25__ — give the things you don’t need to someone who needs them."
+    },
+    {
+      "questionId": "260922144500022",
+      "revision": 1,
+      "number": 22,
+      "q": "第 22 空應填入哪一個選項？",
+      "o": [
+        "little",
+        "many",
+        "few",
+        "heavy"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 22,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-global-warming",
+        "english-gept-elementary-reading-quantifier"
+      ],
+      "e": "正式答案 (A) little。rain 為不可數名詞，too little rain 表雨量太少。",
+      "groupId": "round12-cloze-21-25"
+    },
+    {
+      "questionId": "260922144500023",
+      "revision": 1,
+      "number": 23,
+      "q": "第 23 空應填入哪一個選項？",
+      "o": [
+        "In fact",
+        "For one thing",
+        "After all",
+        "For instance"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 23,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-global-warming",
+        "english-gept-elementary-reading-transition"
+      ],
+      "e": "正式答案 (D) For instance。後面列舉自備筷子與騎自行車等例子。",
+      "groupId": "round12-cloze-21-25"
+    },
+    {
+      "questionId": "260922144500024",
+      "revision": 1,
+      "number": 24,
+      "q": "第 24 空應填入哪一個選項？",
+      "o": [
+        "what to do",
+        "what to do it",
+        "how to do",
+        "why to do"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 24,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-global-warming",
+        "english-gept-elementary-reading-indirect-wh-clause"
+      ],
+      "e": "正式答案 (A) what to do。表示「不知道該做什麼」。",
+      "groupId": "round12-cloze-21-25"
+    },
+    {
+      "questionId": "260922144500025",
+      "revision": 1,
+      "number": 25,
+      "q": "第 25 空應填入哪一個選項？",
+      "o": [
+        "receive",
+        "recycle",
+        "refuse",
+        "recover"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 25,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-global-warming",
+        "english-gept-elementary-reading-recycle"
+      ],
+      "e": "正式答案 (B) recycle。3R 為 reduce、reuse、recycle。",
+      "groupId": "round12-cloze-21-25"
+    },
+    {
+      "questionId": "260922144500026",
+      "revision": 1,
+      "number": 26,
+      "q": "What is the reading mainly about?",
+      "o": [
+        "Selling a drink.",
+        "Making a drink.",
+        "Showing how to use a freezer.",
+        "Showing how to concentrate in class."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 26,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-recipe",
+        "english-gept-elementary-reading-main-idea"
+      ],
+      "e": "正式答案 (B) Making a drink。文章列出材料與製作步驟。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round12-reading-26-27",
+      "introLabel": "Questions 26–27｜Mango Cream",
+      "intro": "Mango Cream\n\nMilk and mango concentrate make this pop cool drink on a hot summer day!!!\n\nWhat you need:\n8 thin mango slices\n1/2 cup of milk\n1/3 cup of mango concentrate\n\nHow you make it:\nLine mango slices inside the glasses.\nMix milk and mango concentrate together.\nThen pour it into the glasses. Blend and freeze until firm."
+    },
+    {
+      "questionId": "260922144500027",
+      "revision": 1,
+      "number": 27,
+      "q": "What is TRUE about the reading?",
+      "o": [
+        "Mango Cream must cost a lot.",
+        "Mango Cream is a nice choice for summer days.",
+        "To make Mango Cream, a freezer isn’t needed.",
+        "To make Mango Cream, mangoes aren’t needed."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 27,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-recipe",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "正式答案 (B)。開頭直接說是 hot summer day 的清涼飲品。",
+      "groupId": "round12-reading-26-27"
+    },
+    {
+      "questionId": "260922144500028",
+      "revision": 1,
+      "number": 28,
+      "q": "Mr. Baldwin, the CEO of Aber Tech., is about to have an important meeting in Xinchu. Which train can’t he ride on?",
+      "o": [
+        "T900",
+        "T1100",
+        "T1400",
+        "R1130"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 28,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-train-timetable",
+        "english-gept-elementary-reading-condition-filtering"
+      ],
+      "e": "正式答案 (D) R1130。時刻表中 R1130 在 Xinchu 標示 ---，表示不停靠。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round12-reading-28-29",
+      "introLabel": "Questions 28–29｜THSR Timetable",
+      "intro": "Look at the timetable of the THSR trains going southbound, and answer the following questions.\n\nTrain No. | Taipei | Xinchu | Taizhong | Tainan | Zuoying\nE700 | 7:00 | --- | --- | --- | 8:21\nT900 | 9:00 | 9:23 | 9:50 | 10:30 | 10:45\nT1100 | 11:00 | 11:23 | 11:50 | 12:30 | 12:45\nR1130 | 11:30 | --- | 12:12 | --- | 12:59\nT1400 | 14:00 | 14:23 | 14:50 | 15:30 | 15:45\nT1830 | 18:30 | 18:53 | 19:20 | 20:00 | 20:15\nT2000 | 20:00 | 20:23 | 20:50 | 21:30 | 21:45\nR2130 | 21:30 | --- | 22:12 | --- | 22:59\n\n--- non-stop; E = EXPRESS train; R = RAPID train; T1100 runs only on weekends."
+    },
+    {
+      "questionId": "260922144500029",
+      "revision": 1,
+      "number": 29,
+      "q": "Cindy is meeting her college classmates in Taizhong for lunch this weekend. Which train can’t she take?",
+      "o": [
+        "E700",
+        "T900",
+        "T1100",
+        "R1130"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 29,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-train-timetable",
+        "english-gept-elementary-reading-condition-filtering"
+      ],
+      "e": "正式答案 (A) E700。E700 在 Taizhong 標示 ---，不停靠；T1100 只在週末行駛，而題目正是週末。",
+      "groupId": "round12-reading-28-29"
+    },
+    {
+      "questionId": "260922144500030",
+      "revision": 1,
+      "number": 30,
+      "q": "What is NOT the reason that most teenagers don’t get enough sleep?",
+      "o": [
+        "They stay up to study.",
+        "Their body clock starts later.",
+        "They forget to set their body clock.",
+        "They spend too much time on TV or the computer before bed."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 30,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-health-advice",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "正式答案 (C)。文章沒有說青少年忘了設定生理時鐘。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round12-reading-30-32",
+      "introLabel": "Questions 30–32｜Teenagers and Sleep",
+      "intro": "Do you sleep eight hours every night? Studies show that teenagers need at least eight hours of sleep each night. However, it is found worldwide that most teenagers don’t get enough sleep time and go to school tired. Some people believe it’s because the body clock starts later; others think that teenagers stay up late because they have too many things to pay attention to.\n\nNot sleeping enough does harm to many things. For one thing, teenagers are not able to concentrate in class or on studies. A study in 2012 pointed that over a quarter of high school students fall asleep in class. Lack of sleep also leads to poorer grades and sports performance. Some teenagers may even feel sad or have the idea of hurting themselves because of few sleeping hours. So if you find it difficult to get up in the morning, easy to fall asleep during class, or you feel you cannot pay attention or feel down more and more often, these all are signs that you don’t have enough sleep.\n\nTo help you sleep better, the following are some ways. Firstly, try to go to bed and get up at the same time. Next, keep away from scary or action movies before bedtime. It’s also important to stay away from PCs, TVs, cellphones or tablet computers one hour before sleep because light tells your body to stay awake. Thirdly, don’t wait until the night before a big test to study. Your body may not work well. Besides, studies show that people sleep best in a dark room on the cool side. Still feel sleepy all the time? Try the above ways we mention!"
+    },
+    {
+      "questionId": "260922144500031",
+      "revision": 1,
+      "number": 31,
+      "q": "What may happen if teenagers don’t sleep enough?",
+      "o": [
+        "They may want to hurt other people.",
+        "It may be easy for them to get up early.",
+        "They are able to do well on the big test.",
+        "They may have bad feelings about themselves."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 31,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-health-advice",
+        "english-gept-elementary-reading-inference"
+      ],
+      "e": "正式答案 (D)。文章說有些青少年可能感到悲傷，甚至有傷害自己的想法。",
+      "groupId": "round12-reading-30-32"
+    },
+    {
+      "questionId": "260922144500032",
+      "revision": 1,
+      "number": 32,
+      "q": "Which is NOT a good way to help teenagers sleep well?",
+      "o": [
+        "To go to bed at the same time each night.",
+        "To turn off the lights to keep the room dark.",
+        "To stay away from horror movies before bed.",
+        "To talk with their classmates on the cellphone before sleeping."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 32,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-health-advice",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "正式答案 (D)。文章建議睡前一小時遠離手機等發光裝置。",
+      "groupId": "round12-reading-30-32"
+    },
+    {
+      "questionId": "260922144500033",
+      "revision": 1,
+      "number": 33,
+      "q": "According to the reading, what does the Venus flytrap look like?",
+      "o": [
+        "roses",
+        "a fern",
+        "a Venus flytrap with toothed leaves",
+        "a sprout"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 33,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-science-carnivorous-plant",
+        "english-gept-elementary-reading-image-option"
+      ],
+      "e": "正式答案 (C)。依原書解答頁為 C；原始文字校正版將原選項內容保存為文字描述。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round12-reading-33-35",
+      "introLabel": "Questions 33–35｜Venus Flytrap",
+      "intro": "Do you know plants can eat animals? The Venus flytrap, one of the most beautiful plants in the world, is a small carnivorous plant that traps and eats insects. When it opens its leaves, it looks like an animal opening its mouth. On the leaves are short and hard hairs that are easily made to hold the insects.\n\nThe plant catches its food in a special way. First, it bends its leaves back, so each leaf is in the shape of a cup. Usually, a smell like food comes from the leaves to draw insects’ attention. Then, the leaf quickly closes with the insect inside as soon as an insect jumps onto the leaf. The leaves close in less than a second. In fact, they don’t close all the way at first. It is thought that it stays open for a few seconds in order to let very small insects get out because they wouldn’t give enough food. If what is caught isn’t food, like a stone, its leaves reopen in about twelve hours and keep it away.\n\nIf you grow the plant outdoors, it will get enough insects to eat. However, if you grow it indoors, you will need to feed it yourself. Several flies or small bugs a month is enough during the growing season. Remember: DO NOT feed it bread or hamburgers! Your flytrap will die."
+    },
+    {
+      "questionId": "260922144500034",
+      "revision": 1,
+      "number": 34,
+      "q": "What does carnivorous mean?",
+      "o": [
+        "Eating meat.",
+        "Eating vegetables.",
+        "Eating hamburgers.",
+        "Eating flowers."
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 34,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-science-carnivorous-plant",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "正式答案 (A) Eating meat。本文說 Venus flytrap 會捕食昆蟲。",
+      "groupId": "round12-reading-33-35"
+    },
+    {
+      "questionId": "260922144500035",
+      "revision": 1,
+      "number": 35,
+      "q": "Which is NOT true about the Venus flytrap?",
+      "o": [
+        "Insects may be drawn close to the plant because of its special smell.",
+        "When the plant catches an insect, its leaves close in more than five seconds.",
+        "If you grow the plant inside the house, you have to feed it insects.",
+        "Some small bugs may get out of the plant because they are not a big meal."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 12,
+      "originalQuestionNumber": 35,
+      "answerVerified": true,
+      "conceptIds": [
+        "english-gept-elementary-reading-science-carnivorous-plant",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "正式答案 (B)。文章說葉片在 less than a second 內閉合，不是超過五秒。",
+      "groupId": "round12-reading-33-35"
+    }
+  ]
+}
