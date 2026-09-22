@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-gept-elementary-reading-round-08",
+    "examType": "gept-elementary-reading",
+    "examTypeLabel": "全民英檢初級｜閱讀能力測驗",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "全民英檢初級｜閱讀能力測驗｜第八回",
+    "subtitle": "35 題｜含逐題詳解",
+    "unit": "GEPT 初級閱讀能力｜第八回",
+    "difficulty": "english-gept-elementary-reading-round-08",
+    "difficultyLabel": "第八回",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceBook": "萬事通 智能碼書《國中英文 全民英檢攻略 全》",
+    "sourcePages": "p.61–68",
+    "sourceDocId": "1jGzYEIIw8Gc-L609S6joY098SMvbj2DzJ33C7Gmhg3g",
+    "answerVerified": false,
+    "sourceNote": "題目文字依 Google Drive 人工校正完成之《國中英文 全民英檢攻略 全》第八回原始文字校正版建立，原書 p.61–68，共 35 題。現有 Drive 未找到第八回正式解答頁；目前答案與詳解依文法、語意與文章內容判讀，均 answerVerified=false。Q6、Q15、Q28 另標 answerPending=true，其中 Q28 的文字化 TV Schedule 與選項存在數量不一致，等待正式解答頁或原始版面再次核對。題目與 A/B/C/D 原始順序完整保留；題組文章只存一次並由 groupId 共用。"
+  },
+  "questions": [
+    {
+      "questionId": "260922143000001",
+      "revision": 1,
+      "number": 1,
+      "q": "Your _____ will hurt if you keep drinking coffee and not eating anything.",
+      "o": [
+        "tiptoe",
+        "nail",
+        "tongue",
+        "stomach"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 1,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-body"
+      ],
+      "e": "答案暫判為 (D) stomach。空腹一直喝咖啡最可能造成胃不舒服。"
+    },
+    {
+      "questionId": "260922143000002",
+      "revision": 1,
+      "number": 2,
+      "q": "Aunt Maggie is such a _____ entrepreneur; she runs her own business and lives in a mansion in Yangmingshan.",
+      "o": [
+        "possible",
+        "successful",
+        "horrible",
+        "meaningful"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 2,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (B) successful。經營自己的事業並住在豪宅，最符合「成功的企業家」。"
+    },
+    {
+      "questionId": "260922143000003",
+      "revision": 1,
+      "number": 3,
+      "q": "It was kind of you to _____ your seat to the old lady on the crowded rush-hour bus.",
+      "o": [
+        "exist",
+        "realize",
+        "offer",
+        "punish"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 3,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (C) offer。offer your seat to someone 表示「讓座給某人」。"
+    },
+    {
+      "questionId": "260922143000004",
+      "revision": 1,
+      "number": 4,
+      "q": "Luis is always _____ about his life; therefore, he feels down all the time.",
+      "o": [
+        "positive",
+        "negative",
+        "traditional",
+        "impolite"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 4,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "答案暫判為 (B) negative。後句說他一直情緒低落，前面應是對生活抱持負面態度。"
+    },
+    {
+      "questionId": "260922143000005",
+      "revision": 1,
+      "number": 5,
+      "q": "Jack will have a history final tomorrow. That's why Howard's helping him _____ all the chapters.",
+      "o": [
+        "go over",
+        "break through",
+        "take over",
+        "back up"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 5,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-phrasal-verb"
+      ],
+      "e": "答案暫判為 (A) go over。go over the chapters 表示「複習各章內容」。"
+    },
+    {
+      "questionId": "260922143000006",
+      "revision": 1,
+      "number": 6,
+      "q": "If you keep asking these _____ questions, I'll refuse to answer and ask you out.",
+      "o": [
+        "individual",
+        "terrific",
+        "intelligent",
+        "tidy"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 6,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-context"
+      ],
+      "e": "目前暫判為 (A) individual。四個選項中僅 individual 可勉強修飾 questions；原句搭配不自然，等待正式解答頁核對。",
+      "answerPending": true
+    },
+    {
+      "questionId": "260922143000007",
+      "revision": 1,
+      "number": 7,
+      "q": "Watch out the cars! Let's walk on the _____.",
+      "o": [
+        "sidewalk",
+        "saucer",
+        "semester",
+        "shelf"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 7,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-vocab-place"
+      ],
+      "e": "答案暫判為 (A) sidewalk。注意車輛時應走在人行道上。"
+    },
+    {
+      "questionId": "260922143000008",
+      "revision": 1,
+      "number": 8,
+      "q": "John will surely _____ he won't forget it.",
+      "o": [
+        "never mind",
+        "keep that in mind",
+        "read minds",
+        "make up his mind"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 8,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-idiom"
+      ],
+      "e": "答案暫判為 (B) keep that in mind。keep ... in mind 表示「記住」，與 he won't forget it 相符。"
+    },
+    {
+      "questionId": "260922143000009",
+      "revision": 1,
+      "number": 9,
+      "q": "Grandma forgot _____ the flowers, and she did it again.",
+      "o": [
+        "watering",
+        "she water",
+        "to water",
+        "she had watering"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 9,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-infinitive"
+      ],
+      "e": "答案暫判為 (C) to water。forget to V 表示「忘記要做某事」。"
+    },
+    {
+      "questionId": "260922143000010",
+      "revision": 1,
+      "number": 10,
+      "q": "Be sure not to drive when there's heavy traffic, _____?",
+      "o": [
+        "isn't there",
+        "won't you",
+        "is there",
+        "will you"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 10,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-tag-question-imperative"
+      ],
+      "e": "答案暫判為 (D) will you。祈使句的附加問句常用 will you。"
+    },
+    {
+      "questionId": "260922143000011",
+      "revision": 1,
+      "number": 11,
+      "q": "The plane _____ right before we arrived at the terminal.",
+      "o": [
+        "has departed",
+        "was departing",
+        "had departed",
+        "would depart"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 11,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-grammar-past-perfect"
+      ],
+      "e": "答案暫判為 (C) had departed。飛機離開發生在我們抵達航廈之前，用過去完成式。"
+    },
+    {
+      "questionId": "260922143000012",
+      "revision": 1,
+      "number": 12,
+      "q": "I'm just wondering _____ the gift.",
+      "o": [
+        "that did Tina get",
+        "that Tina has got",
+        "when Tina get",
+        "if Tina has got"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 12,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-indirect-question"
+      ],
+      "e": "答案暫判為 (D) if Tina has got。wondering 後接間接問句並使用直述語序。"
+    },
+    {
+      "questionId": "260922143000013",
+      "revision": 1,
+      "number": 13,
+      "q": "Pam has taken care of the kitten _____ she found her at her door half a year ago.",
+      "o": [
+        "though",
+        "while",
+        "until",
+        "since"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 13,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-present-perfect-since"
+      ],
+      "e": "答案暫判為 (D) since。現在完成式搭配 since + 過去事件。"
+    },
+    {
+      "questionId": "260922143000014",
+      "revision": 1,
+      "number": 14,
+      "q": "Plans _____ before we take actions.",
+      "o": [
+        "has been made",
+        "we made",
+        "should made",
+        "should be made"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 14,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-passive-modal"
+      ],
+      "e": "答案暫判為 (D) should be made。使用 should + be + p.p.。"
+    },
+    {
+      "questionId": "260922143000015",
+      "revision": 1,
+      "number": 15,
+      "q": "Volleyball is the sports _____.",
+      "o": [
+        "Wayne really love",
+        "which Wayne interests",
+        "Wayne has interests in",
+        "that Wayne's been interesting in"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 15,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-relative-clause"
+      ],
+      "e": "目前暫判為 (C) Wayne has interests in。此項最接近關係子句結構，但原題 sports 與選項搭配不自然，等待正式解答頁核對。",
+      "answerPending": true
+    },
+    {
+      "questionId": "260922143000016",
+      "revision": 1,
+      "number": 16,
+      "q": "第 16 空應填入哪一個選項？",
+      "o": [
+        "bright",
+        "light",
+        "tight",
+        "sight"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 16,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-smile",
+        "english-gept-elementary-reading-context-vocabulary"
+      ],
+      "e": "答案暫判為 (C) tight。微笑時眼睛會瞇起並在眼角出現線條。",
+      "section": "第二部分：段落填空",
+      "groupId": "round08-cloze-16-20",
+      "introLabel": "Questions 16–20｜The Power of a Smile",
+      "intro": "It is easy to smile. When we smile, our eyes become __16__ and there are lines at the sides. A smile represents __17__ and joy. It means we open our hearts and that we care for others.\n\nWe first offer the power of a smile when we are babies. We notice people around us __18__ when we do something nice. That's how we learn what it means. A smile indicates we are happy and enjoying ourselves. __19__ speaking a word. A smile can pass positive energy from one person to __20__ and help a heavy heart become light. We could even make a stranger's day better by giving a friendly smile. Let's make the world a better place by smiling."
+    },
+    {
+      "questionId": "260922143000017",
+      "revision": 1,
+      "number": 17,
+      "q": "第 17 空應填入哪一個選項？",
+      "o": [
+        "pigeon",
+        "peace",
+        "anger",
+        "danger"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 17,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-smile"
+      ],
+      "e": "答案暫判為 (B) peace。與 joy 及全文正向情緒一致。",
+      "groupId": "round08-cloze-16-20"
+    },
+    {
+      "questionId": "260922143000018",
+      "revision": 1,
+      "number": 18,
+      "q": "第 18 空應填入哪一個選項？",
+      "o": [
+        "to smile",
+        "smile",
+        "smiled",
+        "smiles"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 18,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-smile",
+        "english-gept-elementary-reading-perception-verb"
+      ],
+      "e": "答案暫判為 (B) smile。notice + 受詞 + 原形動詞可表示注意到某人做某事。",
+      "groupId": "round08-cloze-16-20"
+    },
+    {
+      "questionId": "260922143000019",
+      "revision": 1,
+      "number": 19,
+      "q": "第 19 空應填入哪一個選項？",
+      "o": [
+        "for",
+        "with",
+        "through",
+        "without"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 19,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-smile"
+      ],
+      "e": "答案暫判為 (D) without。without speaking a word 表示「不用說一句話」。",
+      "groupId": "round08-cloze-16-20"
+    },
+    {
+      "questionId": "260922143000020",
+      "revision": 1,
+      "number": 20,
+      "q": "第 20 空應填入哪一個選項？",
+      "o": [
+        "others",
+        "the other",
+        "the others",
+        "another"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 20,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-smile",
+        "english-gept-elementary-reading-pronoun"
+      ],
+      "e": "答案暫判為 (D) another。from one person to another 是固定搭配。",
+      "groupId": "round08-cloze-16-20"
+    },
+    {
+      "questionId": "260922143000021",
+      "revision": 1,
+      "number": 21,
+      "q": "第 21 空應填入哪一個選項？",
+      "o": [
+        "was",
+        "has been",
+        "had been",
+        "will be"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 21,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-festival",
+        "english-gept-elementary-reading-present-perfect"
+      ],
+      "e": "答案暫判為 (B) has been。now 表示延續到現在的狀態。",
+      "section": "第二部分：段落填空",
+      "groupId": "round08-cloze-21-25",
+      "introLabel": "Questions 21–25｜Japanese Doll Festival and Lantern Festival",
+      "intro": "In Japan, Japanese Doll Festival, which falls on the third of March, __21__ one of the biggest festivals about children now. People still go to work on that day, but parents will __22__ dolls in beautiful kimono (和服) to celebrate it for their daughters. They believe when they put dolls and food in the river, all of their bad luck __23__ away with those dolls.\n\nIn Taiwan, people do not celebrate Doll Festival. __24__, Taiwanese people celebrate Lantern Festival, on the fifteenth day of January in the lunar calendar. On that day, people would like to make their own sky lanterns __25__ with some wishes. When their sky lanterns are flying into the sky, they pray their wishes will come true. No matter how people celebrate their festivals, all they want is to be happy and healthy forever."
+    },
+    {
+      "questionId": "260922143000022",
+      "revision": 1,
+      "number": 22,
+      "q": "第 22 空應填入哪一個選項？",
+      "o": [
+        "propose",
+        "prepare",
+        "pollute",
+        "protect"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 22,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-festival"
+      ],
+      "e": "答案暫判為 (B) prepare。父母為女兒準備穿和服的娃娃。",
+      "groupId": "round08-cloze-21-25"
+    },
+    {
+      "questionId": "260922143000023",
+      "revision": 1,
+      "number": 23,
+      "q": "第 23 空應填入哪一個選項？",
+      "o": [
+        "went",
+        "have gone",
+        "will go",
+        "were going"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 23,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-festival",
+        "english-gept-elementary-reading-future-time-clause"
+      ],
+      "e": "答案暫判為 (C) will go。表示壞運氣之後會隨娃娃離去。",
+      "groupId": "round08-cloze-21-25"
+    },
+    {
+      "questionId": "260922143000024",
+      "revision": 1,
+      "number": 24,
+      "q": "第 24 空應填入哪一個選項？",
+      "o": [
+        "However",
+        "Besides",
+        "By the way",
+        "In addition"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 24,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-festival",
+        "english-gept-elementary-reading-transition"
+      ],
+      "e": "答案暫判為 (A) However。前後是日本與台灣節慶的轉折。",
+      "groupId": "round08-cloze-21-25"
+    },
+    {
+      "questionId": "260922143000025",
+      "revision": 1,
+      "number": 25,
+      "q": "第 25 空應填入哪一個選項？",
+      "o": [
+        "writing",
+        "write",
+        "to write",
+        "written"
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 25,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-cloze-festival",
+        "english-gept-elementary-reading-participle"
+      ],
+      "e": "答案暫判為 (D) written。過去分詞 written 修飾 sky lanterns。",
+      "groupId": "round08-cloze-21-25"
+    },
+    {
+      "questionId": "260922143000026",
+      "revision": 1,
+      "number": 26,
+      "q": "Mr. and Mrs. Chiu take their 10-year-old twins to the zoo. How much do they have to pay for the tickets?",
+      "o": [
+        "$320.",
+        "$120.",
+        "$220.",
+        "$190."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 26,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-zoo-notice",
+        "english-gept-elementary-reading-calculation"
+      ],
+      "e": "答案暫判為 (C) $220。兩位成人 NT$160，加兩名 10 歲兒童 NT$60。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round08-reading-26-27",
+      "introLabel": "Questions 26–27｜Taipei Zoo Notice",
+      "intro": "Welcome to Taipei Zoo\nCome to see our second koala born in the zoo!\n\nOpening Hours: Year round every day, 08:00–18:00\n(except for Chinese New Year's Eve)\nNotice: Koala House is closed every first Monday of the month; Insect House is closed every second Tuesday of the month.\n\nTickets:\nAdults: NT$80\nChildren between 6–12 or students with IDs: NT$30\nSeniors or kids under 6: Free\n\nYou Cannot:\n* Bring pets\n* Ride bicycles or roller-blade\n* Feed the animals"
+    },
+    {
+      "questionId": "260922143000027",
+      "revision": 1,
+      "number": 27,
+      "q": "What can you do in the zoo?",
+      "o": [
+        "Take pictures of the animals.",
+        "Roller-blade in Koala House.",
+        "Give lunch to the animals.",
+        "Bring dogs to the zoo."
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 27,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-zoo-notice",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (A)。公告沒有禁止拍照，其餘三項都被禁止。",
+      "groupId": "round08-reading-26-27"
+    },
+    {
+      "questionId": "260922143000028",
+      "revision": 1,
+      "number": 28,
+      "q": "How many shows are sixty-minute long?",
+      "o": [
+        "Three.",
+        "Four.",
+        "Five.",
+        "Six."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 28,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-tv-schedule",
+        "english-gept-elementary-reading-table"
+      ],
+      "e": "目前文字化 TV Schedule 直接計算會得到與四個選項不一致的結果，因此暫以 (D) Six 作占位答案，等待正式解答頁或原始版面再次核對。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round08-reading-28-29",
+      "introLabel": "Questions 28–29｜TV Schedule",
+      "intro": "TV Schedule\n\nTime | Channel 3 | Channel 5 | Channel 7 | Channel 9\n7:00 p.m. | Let's Sing and Dance | Best of Tennis | Famous Singers in Taiwan | Cooking with Wendy\n7:30 p.m. | Let's Sing and Dance | Best of Tennis | Famous Singers in Taiwan | Cooking with Wendy\n8:00 p.m. | Cartoon: Sea World | NBA: Spurs VS. Bulls | Tokyo Hits | Italian Cuisines\n8:30 p.m. | Cartoon: Sea World | NBA: Spurs VS. Bulls | Tokyo Hits | Italian Cuisines\n9:00 p.m. | Space Travels | NBA: Spurs VS. Bulls | Night Jazz | Desserts in Asia\n9:30 p.m. | Science for Kids | NBA: Spurs VS. Bulls | Night Jazz | Desserts in Asia",
+      "answerPending": true
+    },
+    {
+      "questionId": "260922143000029",
+      "revision": 1,
+      "number": 29,
+      "q": "What is the best name for Channel 7?",
+      "o": [
+        "Music Zone.",
+        "Cooking Times.",
+        "All-Day Sports.",
+        "Kids World."
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 29,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-tv-schedule",
+        "english-gept-elementary-reading-main-idea"
+      ],
+      "e": "答案暫判為 (A) Music Zone。Channel 7 的節目全部是音樂類。",
+      "groupId": "round08-reading-28-29"
+    },
+    {
+      "questionId": "260922143000030",
+      "revision": 1,
+      "number": 30,
+      "q": "What is the passage mainly about?",
+      "o": [
+        "How to keep a Beagle.",
+        "How Mei-ru took care of Alex.",
+        "How Alex got a new life.",
+        "How Animal Rescue Team works in Taiwan."
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 30,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-animal-rescue",
+        "english-gept-elementary-reading-main-idea"
+      ],
+      "e": "答案暫判為 (C)。全文主軸是 Alex 如何從流浪狗獲得新家庭與新生活。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round08-reading-30-32",
+      "introLabel": "Questions 30–32｜Alex the Beagle",
+      "intro": "Alex is a 18-month-old Beagle. He is now having fun in Mr. David Brown's backyard. The Browns treat him as a member of their family. In fact, a year ago, Alex was not so lucky. He was found on the streets of Tainan, Taiwan, sick and all wet. Mei-ru, an 8th-grader, saw the poor puppy and took him to a vet for some check-up. After that, Mei-ru wanted to keep him, but her mom said no because their apartment was too small for him. Luckily, the doctor told her to contact Animal Rescue Team Taiwan, a place which helped stray dogs with new lives. Mei-ru then put Alex's pictures onto the Net, and waited for Alex's new owner. Two weeks later, Mr. Brown saw the story of the poor dog and decided to keep him. Animal Rescue Team Taiwan helped with the money needed for Alex's trip to the U.S. Now the Browns have been taking good care of him. Although Mei-ru misses Alex often, she feels happy that Alex has a new family and a new life."
+    },
+    {
+      "questionId": "260922143000031",
+      "revision": 1,
+      "number": 31,
+      "q": "Why COULDN'T Mei-ru keep Alex?",
+      "o": [
+        "Her mom didn't like dogs.",
+        "Alex was too sick to keep.",
+        "She didn't have enough money.",
+        "Their apartment was too small for the dog."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 31,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-animal-rescue",
+        "english-gept-elementary-reading-detail"
+      ],
+      "e": "答案暫判為 (D)。文章直接說 apartment was too small for him。",
+      "groupId": "round08-reading-30-32"
+    },
+    {
+      "questionId": "260922143000032",
+      "revision": 1,
+      "number": 32,
+      "q": "Which is NOT true?",
+      "o": [
+        "Alex was under one when he was found on the streets of Tainan.",
+        "The animal doctor helped with the money for Alex's trip to America.",
+        "Animal Rescue Team Taiwan helps poor dogs find new homes.",
+        "David Brown decided to keep Alex by learning his story on the Internet."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 32,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-animal-rescue",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "答案暫判為 (B)。協助旅費的是 Animal Rescue Team Taiwan，不是獸醫。",
+      "groupId": "round08-reading-30-32"
+    },
+    {
+      "questionId": "260922143000033",
+      "revision": 1,
+      "number": 33,
+      "q": "According to this passage, how many Siberian tigers still live on the Earth?",
+      "o": [
+        "500.",
+        "200.",
+        "300.",
+        "700."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 33,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-zoo-conservation",
+        "english-gept-elementary-reading-calculation"
+      ],
+      "e": "答案暫判為 (D) 700。約 500 隻圈養加約 200 隻野外。",
+      "section": "第三部分：閱讀理解",
+      "groupId": "round08-reading-33-35",
+      "introLabel": "Questions 33–35｜Siberian Tigers and Zoos",
+      "intro": "The best way to watch a Siberian tiger would be to visit the freezing forests of Manchuria or Siberia, which is an impossible and dangerous trip for most of us. A much easier way to see the clever tactics of this big cat would be at a large zoo. There are, in fact, nearly 500 Siberian tigers in captivity, while only about 200 remain in the wild.\n\nWithin one hour, one who visits a large zoo can see animals that live in Africa, Asia, or South America.\n\nModern zoos do not always keep their animals in single cages. Many zoos now try to show a family of one species. Visitors may then see for themselves how the mother tiger cares for her cubs, how the father protects them, and how young tigers play.\n\nMany animals are born in captivity. As their natural homes in forests disappear, some wild animals are on the point of dying out. Zoos have been responsible for keeping many animals from extinction. Among these are the American bison, the Hawaiian goose, and the Arabian oryx."
+    },
+    {
+      "questionId": "260922143000034",
+      "revision": 1,
+      "number": 34,
+      "q": "What does this big cat mean?",
+      "o": [
+        "A giant cat.",
+        "A Siberian tiger.",
+        "A bison.",
+        "An oryx."
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 34,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-zoo-conservation",
+        "english-gept-elementary-reading-reference"
+      ],
+      "e": "答案暫判為 (B) A Siberian tiger。this big cat 承接前句的 Siberian tiger。",
+      "groupId": "round08-reading-33-35"
+    },
+    {
+      "questionId": "260922143000035",
+      "revision": 1,
+      "number": 35,
+      "q": "Which is NOT true?",
+      "o": [
+        "The natural homes of some wild animals are disappearing.",
+        "Modern zoos try to show a family of the same species.",
+        "Visitors can see animals from different countries just in one hour.",
+        "It's very dangerous to visit a forest because there are quite a few tigers living there."
+      ],
+      "a": 3,
+      "fixedOptions": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "set": 8,
+      "originalQuestionNumber": 35,
+      "answerVerified": false,
+      "conceptIds": [
+        "english-gept-elementary-reading-zoo-conservation",
+        "english-gept-elementary-reading-not-true"
+      ],
+      "e": "答案暫判為 (D)。文章沒有說危險是因為森林裡有很多老虎。",
+      "groupId": "round08-reading-33-35"
+    }
+  ]
+}
