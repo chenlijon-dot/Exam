@@ -1602,7 +1602,8 @@ chapter-bank/english/gept/elementary/reading/
 ├─ round-04.json             35 題
 ├─ round-05.json             35 題
 ├─ round-06.json             35 題
-└─ round-07.json             35 題
+├─ round-07.json             35 題
+└─ round-08.json             35 題
 ```
 
 第二回因既有資料結構拆成主檔 26 題＋補充檔 9 題，合計仍為 35 題。以上共 175 題已建立永久 `questionId` 與 `revision: 1`。
@@ -1613,7 +1614,7 @@ GEPT Reading runtime registry：
 exam-english-gept.js
 ```
 
-目前第一～七回均已建立正式 JSON 並在 registry 中為 `ready: true`；後續第八～十二回依 Drive authority 完成轉檔並正式上線時，再各自發新的永久 `questionId`。
+目前第一～八回均已建立正式 JSON 並在 registry 中為 `ready: true`；後續第九～十二回依 Drive authority 完成轉檔並正式上線時，再各自發新的永久 `questionId`。
 
 ## 18A.3 GEPT 初級字彙資料庫：特殊例外
 
@@ -2617,7 +2618,7 @@ chapter-bank/math/7-1/1-4/
 - [ ] 持續匯入後續基測／教育會考
 - [ ] 補建更多教材 canonical 與 reference
 - [ ] 持續各校段考拆題與 concept mapping
-- [ ] 英文 GEPT 閱讀第八～十二回依 Drive authority 逐步轉為 GitHub 可作答資料
+- [ ] 英文 GEPT 閱讀第九～十二回依 Drive authority 逐步轉為 GitHub 可作答資料
 - [ ] 收斂 static catalog / runtime patch，建立更明確的單一 readiness authority
 - [ ] 建立 repository health check，讓 JSON、bank path、asset、answer index 等基本錯誤在 deployment 前被攔截
 - [ ] 逐步統一新題庫的 `schemaVersion` 與共通 metadata
