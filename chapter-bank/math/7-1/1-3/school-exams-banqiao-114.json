@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-3-school",
+    "difficulty": "math-7-1-1-3-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-3 正負數的乘除｜各校題庫",
+    "title": "1-3 正負數的乘除｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜板橋國中 8 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-3",
+    "unit": "1-3 正負數的乘除",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-3 正負數的乘除 拆題；保留原始題號、學校／年度／段考 provenance。原本非選擇題若為網站作答改編，會明確標示 adaptedForWeb。"
+  },
+  "source": {
+    "school": "新北市立板橋國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260922151500011",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-08",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-multi-product",
+        "math-7-1-1-3-sign-parity"
+      ],
+      "q": "已知 2×3×5×7×11=2310，則 (-4)×6×(-10)×11×(-14) 的值為多少？ [114 板橋國中]",
+      "o": [
+        "36960",
+        "73920",
+        "-36960",
+        "-73920"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。共有 3 個負因數，所以積為負；絕對值為 4×6×10×11×14=36960，因此為 -36960。"
+    },
+    {
+      "questionId": "260922151500012",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-10",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-distributive",
+        "math-7-1-1-3-factor-common"
+      ],
+      "q": "計算 997²+997+2994 的值為多少？ [114 板橋國中]",
+      "o": [
+        "999000",
+        "998000",
+        "997000",
+        "996000"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。997²+997=997×998，再加 2994=997×3，所以總和為 997×1001=998000。"
+    },
+    {
+      "questionId": "260922151500013",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "二-03",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-division",
+        "math-7-1-1-3-left-to-right"
+      ],
+      "q": "計算 -72÷(-6)÷2 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "-6",
+        "6",
+        "12",
+        "-12"
+      ],
+      "a": 1,
+      "e": "官方答案為 6。依序由左往右計算：-72÷(-6)=12，12÷2=6。"
+    },
+    {
+      "questionId": "260922151500014",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "二-04",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-zero-factor",
+        "math-7-1-1-3-order-of-operations"
+      ],
+      "q": "計算 -11×23×4×0+|-3| 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "0",
+        "3",
+        "-3",
+        "1012"
+      ],
+      "a": 1,
+      "e": "官方答案為 3。前面的乘積含有 0，所以為 0；|-3|=3，因此結果為 3。"
+    },
+    {
+      "questionId": "260922151500015",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "二-06",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-multiplication-laws",
+        "math-7-1-1-3-mixed-operations"
+      ],
+      "q": "計算 4×73×25-50×9.5×2 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "6350",
+        "8250",
+        "7300",
+        "950"
+      ],
+      "a": 0,
+      "e": "官方答案為 6350。4×25=100，所以第一項為 7300；50×2=100，所以第二項為 950；7300-950=6350。"
+    },
+    {
+      "questionId": "260922151500016",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "二-09",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-mixed-operations",
+        "math-7-1-1-3-order-of-operations"
+      ],
+      "q": "計算 8×(-7)+|-3|×(-2) 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "-62",
+        "-50",
+        "62",
+        "50"
+      ],
+      "a": 0,
+      "e": "官方答案為 -62。8×(-7)=-56，|-3|×(-2)=3×(-2)=-6，合計 -62。"
+    },
+    {
+      "questionId": "260922151500017",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "二-13",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-order-of-operations",
+        "math-7-1-1-3-mixed-operations"
+      ],
+      "q": "計算 18÷(-3²)-|2³×(-3)-(-1)^2025| 的值為何？ [114 板橋國中｜原填充題改編]",
+      "o": [
+        "-25",
+        "-21",
+        "25",
+        "-35"
+      ],
+      "a": 0,
+      "e": "官方答案為 -25。-3²=-9，所以 18÷(-9)=-2；2³×(-3)-(-1)^2025=-24-(-1)=-23，其絕對值為 23，因此 -2-23=-25。"
+    },
+    {
+      "questionId": "260922151500018",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "三-2",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": "答案卷",
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-mixed-operations",
+        "math-7-1-1-3-order-of-operations"
+      ],
+      "q": "計算 (5-9)×(-2)-4×|(-13)-7|÷(-5)+(-3³)÷9 的值為何？ [114 板橋國中｜原計算題改編]",
+      "o": [
+        "21",
+        "13",
+        "-21",
+        "29"
+      ],
+      "a": 0,
+      "e": "官方答案為 21。(5-9)×(-2)=8；|(-13)-7|=20，所以 -4×20÷(-5)=+16；(-3³)÷9=-3，合計 8+16-3=21。"
+    }
+  ]
+}
