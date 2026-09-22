@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-1-school",
+    "difficulty": "math-7-1-1-1-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-1 正數與負數｜各校題庫",
+    "title": "1-1 正數與負數｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-1",
+    "unit": "1-1 正數與負數",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-1 正數與負數拆題；保留原始題號、學校／年度／段考 provenance。原本非選擇題若為網站作答改編，會明確標示 adaptedForWeb，圖形優先使用 Exam native drawing renderer。"
+  },
+  "source": {
+    "school": "新北市立板橋國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "114-新北市板橋國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260922150900001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-01",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "如圖，數線上有 P、Q、R、S 四點，則下列各點座標敘述，何者錯誤？ [114 板橋國中]",
+      "o": [
+        "P（-4又2/5）",
+        "Q（-2）",
+        "R（-1/2）",
+        "S（3又1/3）"
+      ],
+      "a": 0,
+      "diagram": {
+        "type": "number-line",
+        "min": -5,
+        "max": 4,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "labelValues": [
+          0,
+          1
+        ],
+        "showArrows": true,
+        "minorTicks": [
+          -4.8,
+          -4.6,
+          -4.4,
+          -4.2,
+          -0.5,
+          3.3333333333,
+          3.6666666667
+        ],
+        "points": [
+          {
+            "x": -4.6,
+            "label": "P",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -2,
+            "label": "Q",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -0.5,
+            "label": "R",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 3.3333333333,
+            "label": "S",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      },
+      "e": "官方答案為 A。由原圖可判讀 P 位於 -5 與 -4 之間的五等分位置，P=-4又3/5，因此「P（-4又2/5）」錯誤；Q=-2、R=-1/2、S=3又1/3 均與原圖相符。"
+    },
+    {
+      "questionId": "260922150900002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "三-1(1)",
+      "school": "新北市立板橋國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": "答案卷",
+      "type": "mcq",
+      "originalQuestionType": "作圖題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題要求在數線上標示 A(3)、B(-1/3)、C(3/4)、D(-2)、E(9/5)。為網站自動評量改編為四個 native-drawing 數線選項；原數值、核心考點與官方答案內容不變。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-order"
+      ],
+      "q": "原題要求在數線上標示 A(3)、B(-1/3)、C(3/4)、D(-2)、E(9/5)。下列哪一個數線圖標示正確？ [114 板橋國中｜原作圖題改編]",
+      "o": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "optionLayout": "grid-2x2",
+      "optionDiagrams": [
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "labelValues": [
+            0,
+            1
+          ],
+          "showArrows": true,
+          "points": [
+            {
+              "x": 3,
+              "label": "A",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333,
+              "label": "B",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "C",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "D",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 1.8,
+              "label": "E",
+              "showValue": false,
+              "style": "solid"
+            }
+          ]
+        },
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "labelValues": [
+            0,
+            1
+          ],
+          "showArrows": true,
+          "points": [
+            {
+              "x": 3,
+              "label": "A",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "B",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "C",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333,
+              "label": "D",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 1.8,
+              "label": "E",
+              "showValue": false,
+              "style": "solid"
+            }
+          ]
+        },
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "labelValues": [
+            0,
+            1
+          ],
+          "showArrows": true,
+          "points": [
+            {
+              "x": 3,
+              "label": "A",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333,
+              "label": "B",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 1.8,
+              "label": "C",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "D",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "E",
+              "showValue": false,
+              "style": "solid"
+            }
+          ]
+        },
+        {
+          "type": "number-line",
+          "min": -3,
+          "max": 4,
+          "tickStep": 1,
+          "showNumberLabels": true,
+          "labelValues": [
+            0,
+            1
+          ],
+          "showArrows": true,
+          "points": [
+            {
+              "x": 1.8,
+              "label": "A",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -0.3333333333,
+              "label": "B",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 0.75,
+              "label": "C",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": -2,
+              "label": "D",
+              "showValue": false,
+              "style": "solid"
+            },
+            {
+              "x": 3,
+              "label": "E",
+              "showValue": false,
+              "style": "solid"
+            }
+          ]
+        }
+      ],
+      "a": 0,
+      "e": "官方原題答案要求五點正確標在數線上。比較數值可得 -2 < -1/3 < 3/4 < 9/5 < 3，所以由左到右應為 D、B、C、E、A；符合選項 A。"
+    }
+  ]
+}
