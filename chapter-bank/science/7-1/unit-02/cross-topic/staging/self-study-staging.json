@@ -18,9 +18,9 @@
   ],
   "answerAuthority": "新無敵自然自修解答篇 p.371 / IMG_20260921_001221.jpg",
   "preserveOptionOrder": true,
-  "buildNote": "快速建置 staging：僅題目骨架、官方答案、附圖對應與來源；本輪不建立 questionId/revision，不做詳解、不接 runtime。",
+  "buildNote": "快速建置 staging：題目骨架、官方答案與附圖對應已完成；本輪尚未建立 questionId/revision，不做詳解、不接 runtime。",
   "questionCount": 22,
-  "pendingCount": 1,
+  "pendingCount": 0,
   "questions": [
     {
       "sequence": 1,
@@ -85,10 +85,11 @@
       "answerSourceFile": "IMG_20260921_001221.jpg",
       "answerSourcePage": 371,
       "requiresImage": true,
-      "imageRefs": [],
+      "imageRefs": [
+        "IMG_20260920_223156_q3.png"
+      ],
       "imageRole": "題目尺度示意圖（甲乙丙丁，體積由小到大）",
-      "status": "pending-image-crop",
-      "pendingReason": "原頁第99頁有必要示意圖，但本批 cropped 目錄未找到 IMG_20260920_223156 對應裁圖。"
+      "status": "clear"
     },
     {
       "sequence": 4,
