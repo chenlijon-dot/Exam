@@ -30,6 +30,15 @@
       selfStudyCount: 46,
       selfStudyDesc: '新無敵自然自修原題；細胞、組織、器官、器官系統與生物體組成層次。'
     },
+    'science-7-1-cross-topic-u02': {
+      code: '跨科主題',
+      title: '微觀與巨觀～尺度建構的世界',
+      type: 'cross',
+      root: 'chapter-bank/science/7-1/unit-02/cross-topic',
+      selfStudyCount: 22,
+      selfStudyDesc: '新無敵自然自修跨科主題原題；尺度、單位、比例尺、顯微觀察、仿生科技與奈米科學。',
+      referencePath: 'chapter-bank/science/7-1/unit-02/cross-topic/reference.json'
+    },
     'science-7-1-assessment-u01-u02': {
       code: '學力測驗',
       title: '單元一～單元二',
@@ -275,10 +284,88 @@
     showCatalog();
   }
 
+  async function openCrossTopicReference(section) {
+    const content = $('#catalogContent');
+    if (!content) return;
+    if ($('#catalogHeaderTitle')) $('#catalogHeaderTitle').textContent = '自然七上｜跨科主題';
+    if ($('#catalogHeaderSub')) $('#catalogHeaderSub').textContent = '微觀與巨觀～尺度建構的世界｜教材參考資料';
+    document.title = '跨科主題 教材參考資料｜自然七上';
+
+    content.innerHTML = `
+      <button class="catalog-back" id="backCrossTopicMenuBtn">← 返回跨科主題</button>
+      <div class="catalog-path">自然　›　七年級上學期（一上）　›　單元 2 生物體的構造　›　跨科主題　›　教材參考資料</div>
+      <h2 class="catalog-title">跨科主題　微觀與巨觀～尺度建構的世界</h2>
+      <p class="catalog-sub">教材參考資料載入中…</p>`;
+    $('#backCrossTopicMenuBtn')?.addEventListener('click', () => renderCrossTopicMenu(section));
+
+    try {
+      const res = await fetch(section.referencePath, {cache:'no-store'});
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      content.innerHTML = `
+        <button class="catalog-back" id="backCrossTopicMenuBtn">← 返回跨科主題</button>
+        <div class="catalog-path">自然　›　七年級上學期（一上）　›　單元 2 生物體的構造　›　跨科主題　›　教材參考資料</div>
+        <h2 class="catalog-title">${data.title || section.title}</h2>
+        <p class="catalog-sub">${data.subtitle || '教材重點整理'}</p>
+        <section class="english-reference-section">
+          <h3>學習重點</h3>
+          <ul class="english-reference-list">${(data.learningGoals || []).map(x => `<li>${x}</li>`).join('')}</ul>
+        </section>
+        ${(data.sections || []).map(s => `
+          <section class="english-reference-section">
+            <h3>${s.title || ''}</h3>
+            ${s.summary ? `<p>${s.summary}</p>` : ''}
+            ${Array.isArray(s.items) ? `<ul class="english-reference-list">${s.items.map(x => `<li>${x}</li>`).join('')}</ul>` : ''}
+          </section>`).join('')}
+        ${data.sourceNote ? `<div class="english-reference-source">${data.sourceNote}</div>` : ''}`;
+      $('#backCrossTopicMenuBtn')?.addEventListener('click', () => renderCrossTopicMenu(section));
+      window.scrollTo({top:0,behavior:'smooth'});
+    } catch (error) {
+      content.innerHTML = `
+        <button class="catalog-back" id="backCrossTopicMenuBtn">← 返回跨科主題</button>
+        <h2 class="catalog-title">教材參考資料載入失敗</h2>
+        <p class="catalog-sub">${error.message}</p>`;
+      $('#backCrossTopicMenuBtn')?.addEventListener('click', () => renderCrossTopicMenu(section));
+    }
+  }
+
+  function renderCrossTopicMenu(section) {
+    const content = $('#catalogContent');
+    if (!content) return;
+    if ($('#catalogHeaderTitle')) $('#catalogHeaderTitle').textContent = '自然七上｜跨科主題';
+    if ($('#catalogHeaderSub')) $('#catalogHeaderSub').textContent = section.title;
+    document.title = `跨科主題 ${section.title}｜自然七上`;
+
+    content.innerHTML = `
+      <button class="catalog-back" id="backScienceUnit2Btn">← 返回單元 2</button>
+      <div class="catalog-path">自然　›　七年級上學期（一上）　›　單元 2 生物體的構造　›　跨科主題</div>
+      <h2 class="catalog-title">跨科主題　${section.title}</h2>
+      <p class="catalog-sub">教材重點與新無敵自然自修跨科主題題庫。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card" id="scienceCrossTopicReferenceBtn">
+          <span class="top"><span class="icon">📖</span><strong>教材參考資料</strong><span class="catalog-badge reference">已整理</span></span>
+          <span class="desc">尺度、單位與科學記號、比例尺、顯微鏡測量、水中微生物、仿生科技與奈米科學。</span>
+        </button>
+        <button class="catalog-card" id="scienceCrossTopicBankBtn">
+          <span class="top"><span class="icon">📝</span><strong>章節題庫</strong><span class="catalog-badge school">22 題</span></span>
+          <span class="desc">新無敵自然自修原題；官方答案已核對，附圖與逐題詳解皆已完成。</span>
+        </button>
+      </div>`;
+
+    $('#backScienceUnit2Btn')?.addEventListener('click', restoreUnitView);
+    $('#scienceCrossTopicReferenceBtn')?.addEventListener('click', () => openCrossTopicReference(section));
+    $('#scienceCrossTopicBankBtn')?.addEventListener('click', e => openBank(section,'selfStudy',e.currentTarget));
+    showCatalog();
+  }
+
   function openMenu(sectionKey) {
     const section = SECTIONS[sectionKey];
     if (!section) return;
     saveUnitView();
+    if (section.type === 'cross') {
+      renderCrossTopicMenu(section);
+      return;
+    }
     renderMenu(section);
   }
 
