@@ -1179,17 +1179,22 @@ Stage 1：34 題文字骨架 + 官方答案 + expectedImages mapping
 第三課〈吃冰的滋味〉       簡易／中等／困難
 語文天地一〈標點符號使用法〉 簡易／中等／困難
 第四課〈差不多先生傳〉     簡易／中等／困難，各 20 題
+第五課〈論語選〉             簡易／中等／困難，各 20 題
 ```
 
-第四課三份正式自編題位於：
+第四、五課三份正式自編題分別位於：
 
 ```text
 chapter-bank/chinese/7-1/lesson-04/practice-easy.json
 chapter-bank/chinese/7-1/lesson-04/practice-medium.json
 chapter-bank/chinese/7-1/lesson-04/practice-hard.json
+
+chapter-bank/chinese/7-1/lesson-05/practice-easy.json
+chapter-bank/chinese/7-1/lesson-05/practice-medium.json
+chapter-bank/chinese/7-1/lesson-05/practice-hard.json
 ```
 
-第四課題目 authority 為 Google Drive canonical 教材知識庫；60 題均使用 `sourceType: practice-generated`、永久 `questionId`、`revision: 1`、`conceptIds` 與 canonical option identity 相容的可洗牌選項模型。顯示題號 `number` 不作歷史 identity。
+第四、五課題目 authority 均為各課 Google Drive canonical 教材知識庫；正式自編題使用 `sourceType: practice-generated`、永久 `questionId`、`revision: 1`、`conceptIds` 與 canonical option identity 相容的可洗牌選項模型。顯示題號 `number` 不作歷史 identity。第五課另保留既有 school-exam sidecar，與 practice-generated 題庫分離。
 
 ---
 
