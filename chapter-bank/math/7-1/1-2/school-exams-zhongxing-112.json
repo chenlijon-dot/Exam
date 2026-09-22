@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-school",
+    "difficulty": "math-7-1-1-2-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-2 正負數的加減｜各校題庫",
+    "title": "1-2 正負數的加減｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜中興國中 3 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "unit": "1-2 正負數的加減",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-2 正負數的加減 拆題；保留原始題號、學校／年度／段考 provenance。非選擇題改編為網站四選一時明確標示 adaptedForWeb；圖題使用 Exam native drawing renderer。"
+  },
+  "source": {
+    "school": "桃園市立中興國民中學",
+    "year": "112",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "112-桃園市中興國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "112-桃園市中興國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": false,
+    "answerNote": "選擇題 1-25 與計算題二-2 有官方解答；計算題二-1 的兩個答案格在官方解答檔中留白，因此二-1(1)、二-1(2) 依原題計算推導，answerVerified=false。"
+  },
+  "questions": [
+    {
+      "questionId": "260922234200004",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-04",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction"
+      ],
+      "q": "下列式子運算的結果何者正確？ [112 中興國中]",
+      "o": [
+        "-7-3=-10",
+        "(-1)-(-3)=-4",
+        "-2-2=0",
+        "-5+3=-8"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。-7-3=-10。"
+    },
+    {
+      "questionId": "260922234200021",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-21",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction",
+        "math-7-1-1-2-number-order"
+      ],
+      "q": "如圖數線所示，下列何者計算的結果必為正數？ [112 中興國中]",
+      "o": [
+        "a+b",
+        "a-b",
+        "|b|-|a|",
+        "b-a"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。圖中 A 在 B 左側，所以 a<b，因此 b-a>0。",
+      "diagram": {
+        "type": "number-line",
+        "min": 0,
+        "max": 10,
+        "tickStep": 10,
+        "showNumberLabels": false,
+        "showArrows": true,
+        "points": [
+          {
+            "x": 3,
+            "label": "A\\na",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 7,
+            "label": "B\\nb",
+            "showValue": false,
+            "style": "solid"
+          }
+        ],
+        "ariaLabel": "數線上 A 點在 B 點左側，A 表示 a，B 表示 b。"
+      }
+    },
+    {
+      "questionId": "260922234200028",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "二-2(1)",
+      "school": "桃園市立中興國民中學",
+      "year": "112",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與答案。",
+      "answerVerified": true,
+      "answerBasis": "official-key",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction",
+        "math-7-1-1-2-context"
+      ],
+      "q": "排球發球測驗共發球 20 次，小布有 4 次沒有發進，請問發進幾球？ [112 中興國中｜原計算題改編]",
+      "o": [
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "a": 2,
+      "e": "官方答案為 16 次。20-4=16。"
+    }
+  ]
+}
