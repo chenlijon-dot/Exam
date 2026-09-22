@@ -20,8 +20,10 @@
           banks: {
             easy: 'chapter-bank/math/7-1/1-1/easy.json',
             medium: 'chapter-bank/math/7-1/1-1/medium.json',
-            hard: 'chapter-bank/math/7-1/1-1/hard.json'
-          }
+            hard: 'chapter-bank/math/7-1/1-1/hard.json',
+            school: 'chapter-bank/math/7-1/1-1/school-exams-banqiao-114.json'
+          },
+          schoolCount: 1
         },
         {
           code: '1-2', title: '正負數的加減', page: 23,
@@ -1473,6 +1475,17 @@
               ])
     ];
 
+    if (section.banks?.school) {
+      levels.push({
+        key:'school',
+        icon:'🏫',
+        label:'各校題庫',
+        count:null,
+        badge:`${section.schoolCount || 1} 校已索引`,
+        desc:'真實段考拆題；保留學校、年度、原題號與原始題型，非選擇題會明確標示網站改編。'
+      });
+    }
+
     setHeader(`數學一上｜${section.code}`, section.title);
     document.title = `${section.code} ${section.title}｜數學一上`;
     $('#catalogContent').innerHTML = `
@@ -1483,7 +1496,7 @@
       <div class="catalog-grid">
         ${levels.map(level => `
           <button class="catalog-card" data-math-section-bank="${level.key}">
-            <span class="top"><span class="icon">${level.icon}</span><strong>${level.label}</strong><span class="catalog-badge reference">${level.count} 題</span></span>
+            <span class="top"><span class="icon">${level.icon}</span><strong>${level.label}</strong><span class="catalog-badge ${level.key === 'school' ? 'school' : 'reference'}">${level.badge || `${level.count} 題`}</span></span>
             <span class="desc">${level.desc}</span>
           </button>`).join('')}
       </div>`;
@@ -1511,8 +1524,16 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
-      const expected = difficultyKey === 'easy' ? 20 : (difficultyKey === 'hard' ? 12 : 10);
-      if (questions.length !== expected) throw new Error(`題數異常：${questions.length}/${expected}`);
+      const expected = difficultyKey === 'easy'
+        ? 20
+        : difficultyKey === 'hard'
+          ? 12
+          : difficultyKey === 'medium'
+            ? 10
+            : null;
+      if (expected !== null && questions.length !== expected) {
+        throw new Error(`題數異常：${questions.length}/${expected}`);
+      }
       if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
       const exam = data.exam || {};
