@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-1-school",
+    "difficulty": "math-7-1-1-1-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-1 正數與負數｜各校題庫",
+    "title": "1-1 正數與負數｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜嘉義國中 12 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-1",
+    "unit": "1-1 正數與負數",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-1 正數與負數 拆題；保留原始題號、學校／年度／段考 provenance。非選擇題為網站作答改編時明確標示 adaptedForWeb；圖題優先使用 Exam native drawing renderer。"
+  },
+  "source": {
+    "school": "嘉義市立嘉義國中",
+    "year": "113",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "113-嘉義市嘉義國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": true,
+    "answerNote": "官方答案卷已核對。二-04 題幹計算與答案卷記載 13 不一致，該題暫列 pendingQuestions，不進自動評量。"
+  },
+  "questions": [
+    {
+      "questionId": "260922213000001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-01",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-signed-numbers"
+      ],
+      "q": "下列選項中的數，何者互為異號數？ [113 嘉義國中]",
+      "o": [
+        "-5 和 -8",
+        "-1 和 +20",
+        "-12 和 -4",
+        "11 和 9"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。異號數是一正一負，只有 -1 和 +20 符合。"
+    },
+    {
+      "questionId": "260922213000005",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-05",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-opposite-number"
+      ],
+      "q": "下列敘述何者錯誤？ [113 嘉義國中]",
+      "o": [
+        "-6 的相反數為 6",
+        "-(-4) 的相反數為 4",
+        "3又1/3 的相反數為 -10/3",
+        "0 的相反數為 0"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。-(-4)=4，而 4 的相反數為 -4，不是 4。"
+    },
+    {
+      "questionId": "260922213000006",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-06",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-integers",
+        "math-7-1-1-1-number-line-order"
+      ],
+      "q": "設甲數為整數，且 -27/4 < 甲數 < 2又1/3，則滿足甲數的所有整數和為多少？ [113 嘉義國中]",
+      "o": [
+        "0",
+        "-10",
+        "-17",
+        "-18"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。符合條件的整數為 -6,-5,-4,-3,-2,-1,0,1,2，相加為 -18。"
+    },
+    {
+      "questionId": "260922213000009",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-09",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-reading",
+        "math-7-1-1-1-number-line-scale"
+      ],
+      "q": "數線上有 A(-3)、B(-8)、C(4)、D(9) 四點，若改以 C 為新的原點，且以原單位長的 1/2 為新的單位長，則關於此四點的新坐標，下列何者正確？ [113 嘉義國中]",
+      "o": [
+        "A(-7/2)",
+        "B(-6)",
+        "C(1/2)",
+        "D(10)"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。新坐標=(原坐標-4)÷(1/2)，D 點為 (9-4)÷(1/2)=10。"
+    },
+    {
+      "questionId": "260922213000013",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "二-01",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-number-line-order"
+      ],
+      "q": "將 A=-2又1/3、B=|-4|、C=|5|、D=-|-6|、E=3 由小到大排列，何者正確？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "D<A<E<B<C",
+        "A<D<E<B<C",
+        "D<A<B<E<C",
+        "D<E<A<B<C"
+      ],
+      "a": 0,
+      "e": "官方答案為 D<A<E<B<C。各數值為 -6、-7/3、3、4、5。"
+    },
+    {
+      "questionId": "260922213000014",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "二-02",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-distance"
+      ],
+      "q": "數線上 A、B 兩點的距離為 10，已知 A 點坐標為 5，則 B 點坐標為何？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "15 或 -5",
+        "15",
+        "-5",
+        "5 或 -15"
+      ],
+      "a": 0,
+      "e": "官方答案為 15 或 -5。距離為 10，所以 B=5±10。"
+    },
+    {
+      "questionId": "260922213000015",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "二-03",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-midpoint"
+      ],
+      "q": "數線上有 A(3)、B(-11)、C(c) 三點，若 C 為 A、B 的中點，則 c 為何？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "-4",
+        "4",
+        "-7",
+        "7"
+      ],
+      "a": 0,
+      "e": "官方答案為 -4。中點坐標=(3+(-11))/2=-4。"
+    },
+    {
+      "questionId": "260922213000017",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "二-05",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-signed-context"
+      ],
+      "q": "如果以中午 12 時為基準，上午 10 時記為 -10，則下午 3 時應記為何者？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "+15",
+        "-15",
+        "+5",
+        "-5"
+      ],
+      "a": 0,
+      "e": "官方答案為 +15。上午 10 時比中午早 2 小時記為 -10，所以每小時代表 5；下午 3 時晚 3 小時，記為 +15。"
+    },
+    {
+      "questionId": "260922213000022",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "二-10",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-absolute-value",
+        "math-7-1-1-1-integers"
+      ],
+      "q": "已知 n 為正整數，甲數為整數，若 |甲數|<n，且滿足此條件的甲數共有 13 個，則 n 為何？ [113 嘉義國中｜原填充題改編]",
+      "o": [
+        "6",
+        "7",
+        "8",
+        "13"
+      ],
+      "a": 1,
+      "e": "官方答案為 7。滿足 |x|<n 的整數共有 2n-1 個，2n-1=13，故 n=7。"
+    },
+    {
+      "questionId": "260922213000026",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "三-1(A)",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "依下圖數線判讀，A 點的坐標為何？ [113 嘉義國中｜原計算題改編]",
+      "o": [
+        "-1/3",
+        "-2/3",
+        "1/3",
+        "-1/2"
+      ],
+      "a": 0,
+      "e": "官方答案為 -1/3。A 位於 -1 與 0 之間的等分刻度上。",
+      "diagram": {
+        "type": "number-line",
+        "min": -4.25,
+        "max": 2.25,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "labelValues": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "showArrows": true,
+        "minorTicks": [
+          -3.5,
+          -2.9,
+          -2.8,
+          -2.7,
+          -2.6,
+          -2.5,
+          -2.4,
+          -2.3,
+          -2.2,
+          -2.1,
+          -1.8,
+          -1.6,
+          -1.4,
+          -1.2,
+          -0.6666666666666666,
+          -0.3333333333333333,
+          1.5
+        ],
+        "points": [
+          {
+            "x": -3.5,
+            "label": "E",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -2.4,
+            "label": "D",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -1.8,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -0.3333333333333333,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1.5,
+            "label": "C",
+            "showValue": false,
+            "style": "solid"
+          }
+        ],
+        "ariaLabel": "數線從 -4 到 2，標有 E、D、B、A、C 五點；本題要求判讀 A、C、D 坐標。"
+      }
+    },
+    {
+      "questionId": "260922213000027",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "三-1(C)",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "依下圖數線判讀，C 點的坐標為何？ [113 嘉義國中｜原計算題改編]",
+      "o": [
+        "1又1/2",
+        "1又1/3",
+        "1又2/3",
+        "2"
+      ],
+      "a": 0,
+      "e": "官方答案為 1又1/2。C 位於 1 與 2 的中點。",
+      "diagram": {
+        "type": "number-line",
+        "min": -4.25,
+        "max": 2.25,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "labelValues": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "showArrows": true,
+        "minorTicks": [
+          -3.5,
+          -2.9,
+          -2.8,
+          -2.7,
+          -2.6,
+          -2.5,
+          -2.4,
+          -2.3,
+          -2.2,
+          -2.1,
+          -1.8,
+          -1.6,
+          -1.4,
+          -1.2,
+          -0.6666666666666666,
+          -0.3333333333333333,
+          1.5
+        ],
+        "points": [
+          {
+            "x": -3.5,
+            "label": "E",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -2.4,
+            "label": "D",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -1.8,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -0.3333333333333333,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1.5,
+            "label": "C",
+            "showValue": false,
+            "style": "solid"
+          }
+        ],
+        "ariaLabel": "數線從 -4 到 2，標有 E、D、B、A、C 五點；本題要求判讀 A、C、D 坐標。"
+      }
+    },
+    {
+      "questionId": "260922213000028",
+      "revision": 1,
+      "number": 12,
+      "originalQuestionNumber": "三-1(D)",
+      "school": "嘉義市立嘉義國中",
+      "year": "113",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與官方答案。",
+      "answerVerified": true,
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-fraction-number-line",
+        "math-7-1-1-1-number-line-reading"
+      ],
+      "q": "依下圖數線判讀，D 點的坐標為何？ [113 嘉義國中｜原計算題改編]",
+      "o": [
+        "-2.4",
+        "-2.6",
+        "-2.5",
+        "-2.2"
+      ],
+      "a": 0,
+      "e": "官方答案為 -2.4（亦可寫成 -2又2/5）。D 位於 -3 與 -2 間的十分刻度。",
+      "diagram": {
+        "type": "number-line",
+        "min": -4.25,
+        "max": 2.25,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "labelValues": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "showArrows": true,
+        "minorTicks": [
+          -3.5,
+          -2.9,
+          -2.8,
+          -2.7,
+          -2.6,
+          -2.5,
+          -2.4,
+          -2.3,
+          -2.2,
+          -2.1,
+          -1.8,
+          -1.6,
+          -1.4,
+          -1.2,
+          -0.6666666666666666,
+          -0.3333333333333333,
+          1.5
+        ],
+        "points": [
+          {
+            "x": -3.5,
+            "label": "E",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -2.4,
+            "label": "D",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -1.8,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -0.3333333333333333,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1.5,
+            "label": "C",
+            "showValue": false,
+            "style": "solid"
+          }
+        ],
+        "ariaLabel": "數線從 -4 到 2，標有 E、D、B、A、C 五點；本題要求判讀 A、C、D 坐標。"
+      }
+    }
+  ]
+}
