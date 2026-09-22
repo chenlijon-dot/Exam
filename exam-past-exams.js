@@ -73,7 +73,7 @@
         ${card({id:'bct96Btn',icon:'🗓️',title:'96 年度',badge:'已收錄',desc:'第一次、第二次数學科皆已建立 33 題、官方答案、原卷附圖與逐題詳解。'})}
         ${card({id:'bct97Btn',icon:'🗓️',title:'97 年度',badge:'已收錄',desc:'第一次、第二次数學科皆已建立 34 題、官方答案、原卷附圖與逐題詳解。'})}
         ${card({id:'bct98Btn',icon:'🗓️',title:'98 年度',badge:'已收錄',desc:'第一次、第二次数學科皆已建立 34 題、官方答案、原卷附圖與逐題詳解。'})}
-        ${card({id:'bct99Btn',icon:'🗓️',title:'99 年度',badge:'已收錄',desc:'第一次數學科 34 題、官方答案、原卷附圖與逐題詳解已建立。'})}
+        ${card({id:'bct99Btn',icon:'🗓️',title:'99 年度',badge:'已收錄',desc:'第一次、第二次数學科皆已建立 34 題、官方答案、原卷附圖與逐題詳解。'})}
       </div>`;
     $('#bct90Btn')?.addEventListener('click', showBct90Sessions);
     $('#bct91Btn')?.addEventListener('click', showBct91Sessions);
@@ -220,9 +220,10 @@
       <h2 class="catalog-title">請選擇次別</h2>
       <div class="catalog-grid">
         ${card({id:'bct99FirstBtn',icon:'1️⃣',title:'第一次',badge:'34 題',desc:'99 年度第一次基測；數學科 34 題、官方答案、原卷附圖與逐題詳解已建立。'})}
-        ${card({id:'bct99SecondBtn',icon:'2️⃣',title:'第二次',badge:'待匯入',desc:'99 年度第二次基測尚未匯入。',disabled:true})}
+        ${card({id:'bct99SecondBtn',icon:'2️⃣',title:'第二次',badge:'34 題',desc:'99 年度第二次基測；數學科 34 題、官方答案、原卷附圖與逐題詳解已建立。'})}
       </div>`;
     $('#bct99FirstBtn')?.addEventListener('click', showBct99FirstSubjects);
+    $('#bct99SecondBtn')?.addEventListener('click', showBct99SecondSubjects);
   }
 
   function subjectCards(prefix, chineseCount, {mathCount=null}={}) {
@@ -594,6 +595,27 @@
     }));
   }
 
+  function showBct99SecondSubjects() {
+    setHeader('99 年度第二次基測', '選擇科目');
+    content().innerHTML = `
+      ${backButton('backBct99SecondBtn','返回次別',showBct99Sessions)}
+      <div class="catalog-path">歷屆考題　›　基測　›　99 年度　›　第二次</div>
+      <h2 class="catalog-title">請選擇科目</h2>
+      <div class="catalog-grid">
+        ${card({id:'bct99SecondChineseBtn',icon:'📖',title:'國文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct99SecondEnglishBtn',icon:'🔤',title:'英文科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct99SecondMathBtn',icon:'📐',title:'數學科',badge:'34 題',desc:'34 題原題、官方答案、20 張原卷裁圖與逐題詳解已建立。'})}
+        ${card({id:'bct99SecondScienceBtn',icon:'🔬',title:'自然科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+        ${card({id:'bct99SecondSocialBtn',icon:'🌏',title:'社會科',badge:'待匯入',desc:'尚未匯入。',disabled:true})}
+      </div>`;
+    $('#bct99SecondMathBtn')?.addEventListener('click', () => loadPastExam({
+      buttonId:'bct99SecondMathBtn',
+      path:'past-exams/bct/99/second/math.json',
+      explanationsPath:'past-exams/bct/99/second/math-explanations.json',
+      onBack:showBct99SecondSubjects
+    }));
+  }
+
   async function loadCompanionExplanations(path, data) {
     if (!path) return;
     try {
@@ -656,6 +678,7 @@
   window.showBct98FirstSubjects = showBct98FirstSubjects;
   window.showBct98SecondSubjects = showBct98SecondSubjects;
   window.showBct99FirstSubjects = showBct99FirstSubjects;
+  window.showBct99SecondSubjects = showBct99SecondSubjects;
 
   function init() {
     const target = $('#catalogContent') || document.body;
