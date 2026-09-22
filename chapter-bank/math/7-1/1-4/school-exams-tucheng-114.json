@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-4-school",
+    "difficulty": "math-7-1-1-4-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-4 指數記法與科學記號｜各校題庫",
+    "title": "1-4 指數記法與科學記號｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜土城國中 7 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-4",
+    "unit": "1-4 指數記法與科學記號",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-4 指數記法與科學記號 拆題；土城國中此卷未附官方答案，因此本批答案由題目內容計算推導，answerVerified=false，待官方答案取得後再核對。"
+  },
+  "source": {
+    "school": "新北市立土城國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": false,
+    "answerNote": "未提供官方答案；答案由題目內容計算推導，待日後取得官方答案後再核對。"
+  },
+  "questions": [
+    {
+      "questionId": "260922195100021",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-10",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-negative-base",
+        "math-7-1-1-4-parentheses-sign"
+      ],
+      "q": "算式 (-3)×(-3)×(-3)×(-3)=-3⁴。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 1,
+      "e": "左式為 (-3)^4=81；右式 -3^4=-(3^4)=-81，兩者不相等，所以敘述錯誤。"
+    },
+    {
+      "questionId": "260922195100022",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-12",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation"
+      ],
+      "q": "下列哪一個選項可以表示「五十萬分之一」？ [114 土城國中]",
+      "o": [
+        "2×10^-6",
+        "2×10^-5",
+        "5×10^-5",
+        "5×10^100000"
+      ],
+      "a": 0,
+      "e": "五十萬分之一=1/500000=0.000002=2×10^-6。"
+    },
+    {
+      "questionId": "260922195100023",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-16",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-evaluation",
+        "math-7-1-1-4-negative-base"
+      ],
+      "q": "若甲=-2⁴，乙=(-3)²，丙=(-3又1/3)×(-3)，那麼甲、乙、丙三數的大小關係為何？ [114 土城國中]",
+      "o": [
+        "丙>乙>甲",
+        "甲>丙>乙",
+        "甲>乙=丙",
+        "乙>丙>甲"
+      ],
+      "a": 0,
+      "e": "甲=-16，乙=9，丙=(-10/3)×(-3)=10，所以丙>乙>甲。"
+    },
+    {
+      "questionId": "260922195100024",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-18",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-of-ten",
+        "math-7-1-1-4-estimation"
+      ],
+      "q": "下圖數線上 O 為原點，B 點所表示的數為 10⁶。根據圖中 O、A、B 的實際距離估計，下列何者最接近 A 點所表示的數？ [114 土城國中]",
+      "o": [
+        "10⁵",
+        "10⁴",
+        "2×10⁵",
+        "5×10⁴"
+      ],
+      "a": 3,
+      "e": "A 約位於 OB 全長的 1/20 左右，因此約為 10^6÷20=5×10^4。",
+      "diagram": {
+        "type": "number-line",
+        "min": 0,
+        "max": 1000000,
+        "tickStep": 1000000,
+        "showNumberLabels": true,
+        "labelValues": [
+          0,
+          1000000
+        ],
+        "showArrows": true,
+        "points": [
+          {
+            "x": 50000,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1000000,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          }
+        ],
+        "ariaLabel": "數線上 O 為 0，A 位於靠近 O 的位置，B 為 10 的 6 次方"
+      }
+    },
+    {
+      "questionId": "260922195100025",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "一-19",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-evaluation",
+        "math-7-1-1-4-repeated-addition"
+      ],
+      "q": "若 2²+2²=2^x、3³+3³+3³=3^y、5⁵+5⁵+5⁵+5⁵+5⁵=5^z，則 x+y+z=? [114 土城國中]",
+      "o": [
+        "10",
+        "13",
+        "30",
+        "38"
+      ],
+      "a": 1,
+      "e": "2²+2²=2×2²=2³，所以 x=3；三個 3³ 為 3×3³=3⁴，所以 y=4；五個 5⁵ 為 5×5⁵=5⁶，所以 z=6，合計 13。"
+    },
+    {
+      "questionId": "260922195100026",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "一-20",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-power-factorization",
+        "math-7-1-1-4-power-evaluation"
+      ],
+      "q": "若 (9¹¹-3²⁰)÷3=m×3¹⁹，則 m=? [114 土城國中]",
+      "o": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "a": 2,
+      "e": "9¹¹=(3²)¹¹=3²²，因此 (3²²-3²⁰)÷3=3²⁰(9-1)÷3=8×3¹⁹，所以 m=8。"
+    },
+    {
+      "questionId": "260922195100027",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "二-05",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與推導答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-4-scientific-notation",
+        "math-7-1-1-4-power-of-ten"
+      ],
+      "q": "若 250000 與 0.075÷10^-7 分別以科學記號表示成 a×10^n、b×10^m，則 a+b+m+n 的值為何？ [114 土城國中｜原填充題改編]",
+      "o": [
+        "20",
+        "15",
+        "10",
+        "25"
+      ],
+      "a": 0,
+      "e": "250000=2.5×10^5，所以 a=2.5、n=5；0.075÷10^-7=7.5×10^5，所以 b=7.5、m=5。總和為 2.5+7.5+5+5=20。"
+    }
+  ]
+}
