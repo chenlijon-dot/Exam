@@ -52,6 +52,6 @@ for (const section of sections) {
     `catalog must merge Chiayi sidecar for ${section}`
   );
 }
-assert.equal((catalog.match(/schoolCount: 3/g) || []).length, 4, 'all four math sections must show 3 indexed schools');
+assert.equal((catalog.match(/schoolCount: 4/g) || []).length, 4, 'all four math sections must show 4 indexed schools');
 
 console.log('Chiayi 113 math school-bank contract: PASS');
