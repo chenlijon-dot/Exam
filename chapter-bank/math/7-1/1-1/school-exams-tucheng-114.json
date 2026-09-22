@@ -6,7 +6,7 @@
     "examType": "math-school-section-school-exam",
     "examTypeLabel": "數學七上 1-1 正數與負數｜各校題庫",
     "title": "1-1 正數與負數｜各校題庫",
-    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜土城國中 8 題",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜土城國中 9 題",
     "subject": "math",
     "subjectLabel": "數學",
     "semester": "7-1",
@@ -297,6 +297,91 @@
       ],
       "a": 3,
       "e": "若 |甲+1|=1，則乙=1，可得甲-乙=-3 或 -1；若 |甲+1|=0，則甲=-1 且 |乙-1|=2，可得甲-乙=-4 或 0。因此 1 不可能。"
+    },
+    {
+      "questionId": "260922195100009",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "二-02",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與推導答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-1-number-line-reading",
+        "math-7-1-1-1-distance"
+      ],
+      "q": "如下圖，下列四點中，哪兩點的坐標值相減的絕對值最小？ [114 土城國中｜原填充題改編]",
+      "o": [
+        "A、B",
+        "B、C",
+        "C、D",
+        "A、D"
+      ],
+      "a": 1,
+      "e": "由圖可讀得 A=-8/3、B=-3/4、C=1/2、D=9/5。相鄰距離中 |B-C|=5/4 最小，因此答案為 B、C。",
+      "diagram": {
+        "type": "number-line",
+        "min": -3,
+        "max": 2,
+        "tickStep": 1,
+        "showNumberLabels": true,
+        "labelValues": [
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "showArrows": true,
+        "minorTicks": [
+          -2.6666666666666665,
+          -2.3333333333333335,
+          -0.75,
+          -0.5,
+          -0.25,
+          0.5,
+          1.2,
+          1.4,
+          1.6,
+          1.8
+        ],
+        "points": [
+          {
+            "x": -2.6666666666666665,
+            "label": "A",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": -0.75,
+            "label": "B",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 0.5,
+            "label": "C",
+            "showValue": false,
+            "style": "solid"
+          },
+          {
+            "x": 1.8,
+            "label": "D",
+            "showValue": false,
+            "style": "solid"
+          }
+        ]
+      }
     }
   ]
 }

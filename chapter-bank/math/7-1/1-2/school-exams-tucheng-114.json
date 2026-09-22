@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-2-school",
+    "difficulty": "math-7-1-1-2-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-2 正負數的加減｜各校題庫",
+    "title": "1-2 正負數的加減｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜土城國中 5 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-2",
+    "unit": "1-2 正負數的加減",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-2 正負數的加減 拆題；土城國中此卷未附官方答案，因此本批答案由題目內容計算推導，answerVerified=false，待官方答案取得後再核對。"
+  },
+  "source": {
+    "school": "新北市立土城國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": false,
+    "answerNote": "未提供官方答案；答案由題目內容計算推導，待日後取得官方答案後再核對。"
+  },
+  "questions": [
+    {
+      "questionId": "260922195100010",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-05",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction",
+        "math-7-1-1-2-associativity"
+      ],
+      "q": "若 a、b、c 為任意三個整數，且 a、b、c 皆不為 0，則 (a-b)-c=a-(b-c)。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 1,
+      "e": "一般而言 (a-b)-c=a-b-c，而 a-(b-c)=a-b+c，兩者不一定相等，所以敘述錯誤。"
+    },
+    {
+      "questionId": "260922195100011",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "一-06",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-zero",
+        "math-7-1-1-2-subtraction"
+      ],
+      "q": "a 為任意數，0+a 或 0-a 的結果都等於 a。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 1,
+      "e": "0+a=a，但 0-a=-a；除非 a=0，否則不會都等於 a，所以敘述錯誤。"
+    },
+    {
+      "questionId": "260922195100012",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "一-07",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-opposite-sum"
+      ],
+      "q": "若兩整數相加為 0，則此兩整數互為相反數。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 0,
+      "e": "兩整數和為 0 時，一數必為另一數的相反數，所以敘述正確。"
+    },
+    {
+      "questionId": "260922195100013",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "一-11",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-integer-addition"
+      ],
+      "q": "數線上有五個點 A、B、C、D、E，所表示的數分別是 -5、-13、5、7、-3，則哪兩數之和為正數？ [114 土城國中]",
+      "o": [
+        "A、B",
+        "B、D",
+        "C、E",
+        "A、E"
+      ],
+      "a": 2,
+      "e": "C、E 所代表的數為 5 與 -3，和為 2>0；其餘各組和皆不為正。"
+    },
+    {
+      "questionId": "260922195100014",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "一-15",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "選擇題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-2-subtraction",
+        "math-7-1-1-2-number-compare"
+      ],
+      "q": "若 a=521-387、b=521-(-387)、c=(-521)-387、d=(-521)-(-387)，則下列哪一個是正確的？ [114 土城國中]",
+      "o": [
+        "a>b>c>d",
+        "a>b>d>c",
+        "b>a>d>c",
+        "b>a>c>d"
+      ],
+      "a": 2,
+      "e": "a=134、b=908、c=-908、d=-134，因此大小為 b>a>d>c。"
+    }
+  ]
+}

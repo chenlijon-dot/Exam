@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "math-7-1-1-3-school",
+    "difficulty": "math-7-1-1-3-school",
+    "examType": "math-school-section-school-exam",
+    "examTypeLabel": "數學七上 1-3 正負數的乘除｜各校題庫",
+    "title": "1-3 正負數的乘除｜各校題庫",
+    "subtitle": "數學七上｜單元 1 數與數線｜各校段考題｜土城國中 6 題",
+    "subject": "math",
+    "subjectLabel": "數學",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-1",
+    "unitGroupLabel": "單元 1 數與數線",
+    "section": "1-3",
+    "unit": "1-3 正負數的乘除",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "sourceNote": "各校真實數學段考依 1-3 正負數的乘除 拆題；土城國中此卷未附官方答案，因此本批答案由題目內容計算推導，answerVerified=false，待官方答案取得後再核對。"
+  },
+  "source": {
+    "school": "新北市立土城國中",
+    "year": "114",
+    "exam": "第一學期七年級第一次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題.pdf",
+    "answerFile": "114-新北市土城國中第一學期七年級第一次段考數學科評量試題_答案卷.pdf",
+    "answerVerified": false,
+    "answerNote": "未提供官方答案；答案由題目內容計算推導，待日後取得官方答案後再核對。"
+  },
+  "questions": [
+    {
+      "questionId": "260922195100015",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "一-08",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "是非題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-distributive",
+        "math-7-1-1-3-division"
+      ],
+      "q": "若 a、b、c 為任意三個整數，且 a、b、c 皆不為 0，則 (a+b)÷c=a÷c+b÷c。 [114 土城國中]",
+      "o": [
+        "正確",
+        "錯誤"
+      ],
+      "a": 0,
+      "e": "除法對加法可寫成分數分配：(a+b)/c=a/c+b/c，因此敘述正確。"
+    },
+    {
+      "questionId": "260922195100016",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "二-01",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與推導答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-mixed-operations",
+        "math-7-1-1-3-order-of-operations"
+      ],
+      "q": "計算 -3²+6×(-7/5)-(2/5)×(-6) 的值為何？ [114 土城國中｜原填充題改編]",
+      "o": [
+        "-15",
+        "-9",
+        "15",
+        "3"
+      ],
+      "a": 0,
+      "e": "-3²=-9，6×(-7/5)=-42/5，(2/5)×(-6)=-12/5，因此 -9-42/5-(-12/5)=-9-30/5=-15。"
+    },
+    {
+      "questionId": "260922195100017",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "二-03",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與推導答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-product-sign",
+        "math-7-1-1-3-max-product"
+      ],
+      "q": "在 -5、6、-7、-8、9、10 六個數中任取三個數相乘，最大的乘積是多少？ [114 土城國中｜原填充題改編]",
+      "o": [
+        "560",
+        "504",
+        "480",
+        "-560"
+      ],
+      "a": 0,
+      "e": "要得到最大的正乘積，可取兩個絕對值最大的負數 -8、-7，再乘最大的正數 10，得到 (-8)×(-7)×10=560。"
+    },
+    {
+      "questionId": "260922195100018",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "二-04",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "填充題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與推導答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-context",
+        "math-7-1-1-3-multiplication-division"
+      ],
+      "q": "小庭與另外 4 位同學從 13:55 到 16:15 一直打羽球雙打，每次 4 人同時上場。若 5 人上場時間平均分配，平均每人的上場時間為多少分鐘？ [114 土城國中｜原填充題改編]",
+      "o": [
+        "112",
+        "140",
+        "105",
+        "84"
+      ],
+      "a": 0,
+      "e": "總時間 140 分鐘，每分鐘共有 4 個上場名額，共 560 人分鐘；560÷5=112 分鐘。"
+    },
+    {
+      "questionId": "260922195100019",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "三-1(1)",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與推導答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-signed-sum",
+        "math-7-1-1-3-case-analysis"
+      ],
+      "q": "小晏射五支飛鏢，每支都命中鏢靶。若四種得分區至少都射中 1 支，則所有可能的總分為何？ [114 土城國中｜原計算題改編]",
+      "o": [
+        "0、6、16、23",
+        "-9、0、9、18",
+        "3、9、15、21",
+        "-6、6、12、24"
+      ],
+      "a": 0,
+      "e": "四種得分各中一次的總和為 -3+7-9+14=9。第五支必再落在其中一區，所以總分為 9+(-9)=0、9+(-3)=6、9+7=16、9+14=23。",
+      "diagram": {
+        "type": "bullseye",
+        "rings": [
+          {
+            "radius": 4,
+            "label": "-3",
+            "labelAngle": -90,
+            "labelRadius": 3.45
+          },
+          {
+            "radius": 3,
+            "label": "+7",
+            "labelAngle": -90,
+            "labelRadius": 2.45
+          },
+          {
+            "radius": 2,
+            "label": "-9",
+            "labelAngle": -90,
+            "labelRadius": 1.45
+          },
+          {
+            "radius": 1,
+            "label": "+14",
+            "labelAngle": 0,
+            "labelRadius": 0
+          }
+        ],
+        "showCenter": false,
+        "ariaLabel": "四層同心圓飛鏢靶，由外向內配分為 -3、+7、-9、+14"
+      }
+    },
+    {
+      "questionId": "260922195100020",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "三-1(2)",
+      "school": "新北市立土城國中",
+      "year": "114",
+      "exam": "第一學期七年級第一次段考",
+      "sourcePage": 2,
+      "type": "mcq",
+      "originalQuestionType": "計算題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": true,
+      "adaptationNote": "原題為非選擇題；為網站自動評量改編為四選一，保留原題數值、核心解題內容與推導答案。",
+      "answerVerified": false,
+      "answerBasis": "derived",
+      "fixedOptions": true,
+      "conceptIds": [
+        "math-7-1-1-3-signed-sum",
+        "math-7-1-1-3-case-analysis"
+      ],
+      "q": "若小晏五支飛鏢共得 -23 分，且其中 1 種得分區恰好射中 3 支，則這五支飛鏢的得分組合為何？ [114 土城國中｜原計算題改編]",
+      "o": [
+        "-9、-9、-9、-3、+7",
+        "-3、-3、-3、-9、+14",
+        "+7、+7、+7、-9、-3",
+        "+14、+14、+14、-9、-3"
+      ],
+      "a": 0,
+      "e": "三支若都為 -9，共 -27；另外兩支取 -3 與 +7，總分為 -27-3+7=-23，符合條件。",
+      "diagram": {
+        "type": "bullseye",
+        "rings": [
+          {
+            "radius": 4,
+            "label": "-3",
+            "labelAngle": -90,
+            "labelRadius": 3.45
+          },
+          {
+            "radius": 3,
+            "label": "+7",
+            "labelAngle": -90,
+            "labelRadius": 2.45
+          },
+          {
+            "radius": 2,
+            "label": "-9",
+            "labelAngle": -90,
+            "labelRadius": 1.45
+          },
+          {
+            "radius": 1,
+            "label": "+14",
+            "labelAngle": 0,
+            "labelRadius": 0
+          }
+        ],
+        "showCenter": false,
+        "ariaLabel": "四層同心圓飛鏢靶，由外向內配分為 -3、+7、-9、+14"
+      }
+    }
+  ]
+}
