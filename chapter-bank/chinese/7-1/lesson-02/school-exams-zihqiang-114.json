@@ -7,7 +7,7 @@
     "sourceFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題.pdf",
     "answerFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題_答案卷.pdf",
     "answerVerified": false,
-    "answerNote": "答案卷為 AI 生成，僅作候選答案參考；未取得原校正式答案卷，所有答案均維持 unverified。"
+    "answerNote": "原答案卷為 AI 生成，不列為官方 authority。questions 內答案已依原題、教材 canonical 或題組內容獨立核對；因未取得原校正式答案卷，answerVerified 仍維持 false。pendingQuestions 不進自動評量。"
   },
   "questions": [
     {
@@ -28,9 +28,9 @@
         "楊喚",
         "劉俠"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 3,
-      "e": "AI 生成答案卷標示候選答案為 D；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 D；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500008",
@@ -50,9 +50,9 @@
         "當命運遞給你一顆酸檸檬，就設法將它做成可口的檸檬汁。",
         "時間就像海綿裡的水一樣，如果你願意擠，總還是有的。"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 2,
-      "e": "AI 生成答案卷標示候選答案為 C；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 C；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500009",
@@ -72,9 +72,9 @@
         "能體諒相同遭遇者的不幸",
         "擁有包容別人過錯的胸襟"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 0,
-      "e": "AI 生成答案卷標示候選答案為 A；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 A；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500016",
@@ -94,9 +94,9 @@
         "眼淚化作微笑，痛苦的代就成就榮耀的光彩。",
         "患難與困苦，是磨練人格的最高學府。"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 3,
-      "e": "AI 生成答案卷標示候選答案為 D；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 D；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500018",
@@ -116,9 +116,9 @@
         "與其躲在他人的羽翼之下，不如成為他人的保護傘",
         "實踐夢想要敢於與眾不同，與人相處要能夠隨和圓融"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 0,
-      "e": "AI 生成答案卷標示候選答案為 A；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 A；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500019",
@@ -138,9 +138,9 @@
         "水晶小姐雙手關節持續腫痛，嚴重影響到日常生活，有時會突然發燒，因此最有可能罹患類風溼性關節炎。",
         "如意老師在過年大掃除時因沒有注意打掃姿勢，長時間使用手腕，抓握物品或伸直大拇指時會疼痛加劇，因此最有可能罹患痛風性關節炎。"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 2,
-      "e": "AI 生成答案卷標示候選答案為 C；未取得原校正式答案，維持 unverified。",
+      "e": "依原題與教材／題組內容獨立核對，答案為 C；未取得原校正式答案卷，answerVerified 維持 false。",
       "introLabel": "資料判讀｜三種關節炎比較",
       "intro": "退化性關節炎：病因為關節老化、不當使用或過度使用；活動頻繁或負重較大的手指、膝蓋等關節疼痛。痛風性關節炎：尿酸過多，結晶後堆積在關節處；關節疼痛腫脹，常在夜間發作於下肢，長期可能導致關節變形。類風溼關節炎：免疫系統異常，攻擊正常組織；關節疼痛腫脹並可能逐漸變形，常從手部發作，可能伴隨發燒、淋巴腫大，嚴重時多處器官可能受損。"
     },
@@ -162,9 +162,10 @@
         "名利權勢常令人迷失自己，只有遠離世俗紛擾才能無憂無慮",
         "積極樂觀的心態可以化解生命中的困境，使人真正獲得自由"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 3,
-      "e": "AI 生成答案卷標示候選答案為 D；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 D；未取得原校正式答案卷，answerVerified 維持 false。"
     }
-  ]
+  ],
+  "pendingQuestions": []
 }
