@@ -7,7 +7,7 @@
     "sourceFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題.pdf",
     "answerFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題_答案卷.pdf",
     "answerVerified": false,
-    "answerNote": "答案卷為 AI 生成，僅作候選答案參考；未取得原校正式答案卷，所有答案均維持 unverified。"
+    "answerNote": "原答案卷為 AI 生成，不列為官方 authority。questions 內答案已依原題、教材 canonical 或題組內容獨立核對；因未取得原校正式答案卷，answerVerified 仍維持 false。pendingQuestions 不進自動評量。"
   },
   "questions": [
     {
@@ -28,9 +28,9 @@
         "貨真價實／童叟無欺／遠近馳名",
         "服務親切／垂涎三尺／五花八門"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 2,
-      "e": "AI 生成答案卷標示候選答案為 C；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 C；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500011",
@@ -50,9 +50,9 @@
         "「現代的冰品，拜科學昌明之賜，固然色彩繽紛，花樣百出，但單就口味而言，比起臺灣早年的冰製品，恐怕就遜色了。」點出早年的冰品比不上現在的冰品，尤其是口味方面，更是遜色不已。",
         "「冰淇淋的味道雖好，但總難敵童年那分甜美的記憶啊」抒發懷舊之情，對作者而言，夏天吃冰其實是在享受童年的甜美記憶。"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 2,
-      "e": "AI 生成答案卷標示候選答案為 C；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 C；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500013",
@@ -72,9 +72,9 @@
         "從遠方傳來槍聲般砰的一聲，但那像是透過幾層過濾器傳來，聲音微小而模糊。",
         "我感受到小鳥輕柔的羽毛，溫和的體溫，我很後悔把牠打傷了。"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 1,
-      "e": "AI 生成答案卷標示候選答案為 B；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 B；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500014",
@@ -94,9 +94,9 @@
         "會議室裡安靜得連一根針掉在地上都聽得見",
         "寂寞，像一張楓葉，在默默中隨著季節轉變容顏"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 3,
-      "e": "AI 生成答案卷標示候選答案為 D；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 D；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500017",
@@ -116,9 +116,10 @@
         "紅豔的仙人掌汁滲入刨冰後消失無蹤",
         "弄巧成拙失去仙人掌冰獨特的紅豔"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 1,
-      "e": "AI 生成答案卷標示候選答案為 B；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 B；未取得原校正式答案卷，answerVerified 維持 false。"
     }
-  ]
+  ],
+  "pendingQuestions": []
 }
