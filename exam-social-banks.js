@@ -62,23 +62,29 @@
     },
     'civics-01': {
       title: '第1章　公民與公民德性',
-      subtitle: '第1章｜選擇難度',
+      subtitle: '第1章｜選擇題庫',
       path: 'chapter-bank/social/7-1/civics/chapter-01',
       questionCount: 20,
       pointsPerQuestion: 5,
       subjectName: '公民',
       backText: '公民章節',
-      pathLabel: '公民'
+      pathLabel: '公民',
+      schoolBank: 'school-exams-kaimo-0924.json',
+      schoolBankCount: 1,
+      schoolBankLabel: '高雄楷模書院'
     },
     'civics-02': {
       title: '第2章　人性尊嚴與人權保障',
-      subtitle: '第2章｜選擇難度',
+      subtitle: '第2章｜選擇題庫',
       path: 'chapter-bank/social/7-1/civics/chapter-02',
       questionCount: 20,
       pointsPerQuestion: 5,
       subjectName: '公民',
       backText: '公民章節',
-      pathLabel: '公民'
+      pathLabel: '公民',
+      schoolBank: 'school-exams-kaimo-0924.json',
+      schoolBankCount: 24,
+      schoolBankLabel: '高雄楷模書院'
     },
     'civics-03': {
       title: '第3章　家庭生活',
@@ -136,6 +142,38 @@
 
   let currentChapterKey = 'geo-01';
 
+  async function openSchoolBank(button) {
+    const chapter = CHAPTERS[currentChapterKey];
+    if (!chapter?.schoolBank) return;
+    const badge = button?.querySelector('.catalog-badge');
+    const oldBadge = badge?.textContent || `${chapter.schoolBankCount || ''} 題`;
+    if (button) button.disabled = true;
+    if (badge) badge.textContent = '載入中';
+    try {
+      const res = await fetch(`${chapter.path}/${chapter.schoolBank}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const questions = Array.isArray(data.questions) ? data.questions : [];
+      if (!questions.length) throw new Error('各校題庫沒有可作答題目');
+      if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
+
+      const key = data.exam?.difficulty || data.exam?.key || `social-7-1-${currentChapterKey}-school`;
+      banks[key] = questions;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        ...(data.exam || {}),
+        key,
+        backLabel: `返回${chapter.title.split('　')[0]}題庫`,
+        onBack: showSocialGeo01MenuAfterExam
+      };
+      startExam(key);
+    } catch (error) {
+      alert(`各校題庫載入失敗：${error.message}`);
+    } finally {
+      if (button) button.disabled = false;
+      if (badge) badge.textContent = oldBadge;
+    }
+  }
   async function openPractice(level, button) {
     const item = LEVELS[level];
     if (!item) return;
@@ -177,6 +215,7 @@
     $('#socialGeo01EasyBtn')?.addEventListener('click', event => openPractice('easy', event.currentTarget));
     $('#socialGeo01MediumBtn')?.addEventListener('click', event => openPractice('medium', event.currentTarget));
     $('#socialGeo01HardBtn')?.addEventListener('click', event => openPractice('hard', event.currentTarget));
+    $('#socialGeo01SchoolBtn')?.addEventListener('click', event => openSchoolBank(event.currentTarget));
   }
 
   function renderSocialGeo01Menu() {
@@ -200,6 +239,11 @@
             <span class="top"><span class="icon">${item.icon}</span><strong>${item.label}</strong><span class="catalog-badge">${chapter.questionCount} 題</span></span>
             <span class="desc">${item.desc}</span>
           </button>`).join('')}
+        ${chapter.schoolBank ? `
+          <button class="catalog-card" id="socialGeo01SchoolBtn">
+            <span class="top"><span class="icon">🏫</span><strong>各校題庫</strong><span class="catalog-badge school">${chapter.schoolBankCount} 題</span></span>
+            <span class="desc">${chapter.schoolBankLabel || '真實段考／複習卷'}｜保留原題與原選項順序</span>
+          </button>` : ''}
       </div>`;
     bindMenuButtons();
     showCatalog();
