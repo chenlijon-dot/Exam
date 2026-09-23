@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-civics-01-school-kaimo-0924",
+    "difficulty": "social-7-1-civics-01-school-kaimo-0924",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "公民七上 第1章 公民與公民德性｜各校題庫",
+    "title": "第1章 公民與公民德性｜各校題庫",
+    "subtitle": "社會七上｜公民｜高雄楷模書院｜第四份練習卷｜本章 1 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "civics",
+    "unitGroupLabel": "公民｜公民身分及社群",
+    "section": "civics-chapter-01",
+    "unit": "第1章 公民與公民德性",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "active",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上公民－適康版「一段範圍複習」逐題依真正解題概念拆入章節；原題選項順序保留。原卷未可靠標示 schoolYear，故 year 保留 unknown。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第四份練習卷｜一段範圍複習",
+    "sourceType": "school-exam",
+    "sourceFile": "0924-七上公民-適康版-一段範圍複習 題目卷.pdf",
+    "answerFile": "0924-七上公民-適康版-一段範圍複習 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260923205900002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "2",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "sourcePage": 1,
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "civ-7-1-1-justice"
+      ],
+      "q": "附圖是健康社區聯誼會住戶之間的談話內容，請問此談話內容展現出民主社會中何種基本德性？",
+      "o": [
+        "彼此互相包容與尊重並達成共識",
+        "充分理解與自己立場不同的觀點",
+        "對社會弱勢族群的權益給予保障",
+        "理性思考並且積極參與公共事務。"
+      ],
+      "a": 2,
+      "e": "官方解析指出，圖中重點是國家介入保障弱勢權益，屬社會福利範圍；並非雙方達成共識、理解彼此立場或積極參與公共事務。",
+      "sourceFile": "0924-七上公民-適康版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上公民-適康版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/civics/chapter-01/assets/kaimo-0924-q02.webp",
+      "imageAlt": "健康社區聯誼會住戶談論育嬰留職停薪補助與融合教育的對話圖"
+    }
+  ]
+}
