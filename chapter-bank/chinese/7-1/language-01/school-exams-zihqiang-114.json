@@ -7,7 +7,7 @@
     "sourceFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題.pdf",
     "answerFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題_答案卷.pdf",
     "answerVerified": false,
-    "answerNote": "答案卷為 AI 生成，僅作候選答案參考；未取得原校正式答案卷，所有答案均維持 unverified。"
+    "answerNote": "原答案卷為 AI 生成，不列為官方 authority。questions 內答案已依原題、教材 canonical 或題組內容獨立核對；因未取得原校正式答案卷，answerVerified 仍維持 false。pendingQuestions 不進自動評量。"
   },
   "questions": [
     {
@@ -28,9 +28,9 @@
         "到了三十歲，她終於完成自己的夢想──徒步走完西班牙的朝聖之路",
         "他擁有美滿的家庭，本來是很幸福的──不料，難纏的病症卻突然入侵了他的生活。"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 3,
-      "e": "AI 生成答案卷標示候選答案為 D；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 D；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500023",
@@ -50,9 +50,9 @@
         "：；；；",
         "；；、。"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 2,
-      "e": "AI 生成答案卷標示候選答案為 C；未取得原校正式答案，維持 unverified。"
+      "e": "依原題與教材／題組內容獨立核對，答案為 C；未取得原校正式答案卷，answerVerified 維持 false。"
     },
     {
       "questionId": "260923214500031",
@@ -72,9 +72,9 @@
         "標點錯一字，人生大不同",
         "沒有標點，文章更自由"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 2,
-      "e": "AI 生成答案卷標示候選答案為 C；未取得原校正式答案，維持 unverified。",
+      "e": "依原題與教材／題組內容獨立核對，答案為 C；未取得原校正式答案卷，answerVerified 維持 false。",
       "introLabel": "閱讀題組｜標點符號的重要性",
       "intro": "現代人因為使用社群與傳訊媒體的關係，不僅表達的能力大為退化，就連對標點符號的應用也越來越隨意。但是，標點符號真的不重要嗎？其實，標點符號不僅能夠幫助讀者理解語意，還能避免歧義誤解。在某些情境下，少用或錯用標點可能會讓人哭笑不得，甚至淪落超悲慘的境地。分享幾個「慘痛」例子：「我愛的人是你不是他」，如果標點不小心變成(甲)，可能會產生愛錯人，修羅場爆發的情況；又像是離家多年的兒子，寄信回家報平安：「爹娘我好想你們我過得很好不要擔心我會回家」，如果標點標錯變成(乙)，幸福與否的結論就完全顛倒，父母會誤以為兒子在外流浪受苦；再者，古代有個犯人面臨斬首，皇帝下了一道聖旨：「殺無赦」，如果標錯標點變成(丙)，就造成了立即斬首，毫不寬恕的結果。標點符號看似微不足道，卻像語言的交通指揮官，掌控語句的節奏、層次與邏輯，能讓語言清晰、精確、易懂。少了標點，輕則令人誤會，重則釀成災禍。所以，用對標點符號，溝通更順暢，誤解不登場！！"
     }
