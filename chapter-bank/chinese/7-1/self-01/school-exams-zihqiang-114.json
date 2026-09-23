@@ -7,7 +7,7 @@
     "sourceFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題.pdf",
     "answerFile": "114-桃園市自強國中第一學期七年級第一次段考國文科評量試題_答案卷.pdf",
     "answerVerified": false,
-    "answerNote": "答案卷為 AI 生成，僅作候選答案參考；未取得原校正式答案卷，所有答案均維持 unverified。"
+    "answerNote": "原答案卷為 AI 生成，不列為官方 authority。questions 內答案已依原題、教材 canonical 或題組內容獨立核對；因未取得原校正式答案卷，answerVerified 仍維持 false。pendingQuestions 不進自動評量。"
   },
   "questions": [
     {
@@ -28,11 +28,12 @@
         "公式主要說明的是 1.01 與 0.99 的運算技巧，與實際生活習慣無關",
         "成功的關鍵在於偶爾的爆發，而不是日常穩定的努力"
       ],
-      "status": "ai-answer-candidate-unverified",
+      "status": "answer-checked-unverified-official",
       "a": 0,
-      "e": "AI 生成答案卷標示候選答案為 A；未取得原校正式答案，維持 unverified。",
+      "e": "依原題與教材／題組內容獨立核對，答案為 A；未取得原校正式答案卷，answerVerified 維持 false。",
       "image": "chapter-bank/chinese/7-1/assets/zihqiang-114/q24-effort-compounding.webp",
       "imageAlt": "原題圖：1.01 的 365 次方約為 37.8；0.99 的 365 次方約為 0.03。"
     }
-  ]
+  ],
+  "pendingQuestions": []
 }
