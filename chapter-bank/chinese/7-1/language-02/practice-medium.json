@@ -1,0 +1,557 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "language-02",
+    "unit": "語文天地二 閱讀策略與資料檢索",
+    "scoreMode": "fixed",
+    "pointsPerQuestion": 5,
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依 Google Drive 語文天地二〈閱讀策略與資料檢索〉canonical 教材知識庫自編；僅使用教材可證實的閱讀策略、摘要、圖像化、資料檢索與資訊可信度概念。",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+      "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+      "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+    },
+    "difficulty": "chinese-7-1-language02-medium",
+    "title": "語文天地二〈閱讀策略與資料檢索〉｜中等",
+    "subtitle": "國文第一冊｜自編題｜中等 20 題",
+    "difficultyLabel": "中等"
+  },
+  "questions": [
+    {
+      "questionId": "260923133000021",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "小華要在三分鐘內知道一篇長文大致談什麼，最適合先怎麼做？",
+      "o": [
+        "從第一字開始逐字背誦",
+        "先瀏覽標題、段落與重要句，掌握架構",
+        "只查文章中的所有生字",
+        "先把全文改寫成作文"
+      ],
+      "a": 1,
+      "e": "時間有限且目標是掌握大意時，先瀏覽／略讀最合適。",
+      "conceptIds": [
+        "chinese-7-1-language02-skimming",
+        "chinese-7-1-language02-reading-purpose"
+      ]
+    },
+    {
+      "questionId": "260923133000022",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "讀到「天空烏雲密布，路人紛紛撐起傘」，判斷接下來可能下雨，主要運用了哪個策略？",
+      "o": [
+        "推論",
+        "摘要",
+        "資料庫",
+        "圖像化"
+      ],
+      "a": 0,
+      "e": "讀者依已知線索推導未直接說出的結果，屬於推論。",
+      "conceptIds": [
+        "chinese-7-1-language02-inference"
+      ]
+    },
+    {
+      "questionId": "260923133000023",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "閱讀一篇文章前，看標題「颱風停班停課新規定」並猜測內容可能談判定原則，這主要是哪一種策略？",
+      "o": [
+        "預測",
+        "摘要",
+        "提問",
+        "交叉比對"
+      ],
+      "a": 0,
+      "e": "依標題先推測內容屬於預測。",
+      "conceptIds": [
+        "chinese-7-1-language02-prediction"
+      ]
+    },
+    {
+      "questionId": "260923133000024",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "小美讀完一段後問自己：「作者為什麼舉這個例子？」這最符合哪一種策略？",
+      "o": [
+        "提問",
+        "略讀",
+        "搜尋引擎",
+        "連結"
+      ],
+      "a": 0,
+      "e": "閱讀中提出問題以檢查理解，是提問策略。",
+      "conceptIds": [
+        "chinese-7-1-language02-questioning"
+      ]
+    },
+    {
+      "questionId": "260923133000025",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "整理一段文字時，把三個相近觀念合併成一句自己的話，最符合摘要的哪個做法？",
+      "o": [
+        "保留所有修飾語",
+        "合併相近概念並重述",
+        "增加新的例子",
+        "改變原文主旨"
+      ],
+      "a": 1,
+      "e": "摘要可合併相近概念，並用自己的話重述。",
+      "conceptIds": [
+        "chinese-7-1-language02-summary"
+      ]
+    },
+    {
+      "questionId": "260923133000026",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "一篇文章依時間先後介紹四個階段，若要快速看出順序，最適合轉成哪種圖像？",
+      "o": [
+        "時間線或流程圖",
+        "隨機圖片拼貼",
+        "只列作者姓名",
+        "只畫裝飾邊框"
+      ],
+      "a": 0,
+      "e": "有先後程序的資訊適合以時間線或流程圖呈現關係。",
+      "conceptIds": [
+        "chinese-7-1-language02-visualization"
+      ]
+    },
+    {
+      "questionId": "260923133000027",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "學生讀到環保文章後想到自己家中的垃圾分類經驗，主要運用了哪種策略？",
+      "o": [
+        "連結",
+        "推論",
+        "略讀",
+        "資料庫"
+      ],
+      "a": 0,
+      "e": "將文本與自身經驗連結，屬於連結策略。",
+      "conceptIds": [
+        "chinese-7-1-language02-connection"
+      ]
+    },
+    {
+      "questionId": "260923133000028",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "老師要學生找出一段中最能代表全段意思的句子，這是在訓練哪項能力？",
+      "o": [
+        "找重點",
+        "預測",
+        "搜尋引擎",
+        "資料庫"
+      ],
+      "a": 0,
+      "e": "找出核心句是找重點的具體做法。",
+      "conceptIds": [
+        "chinese-7-1-language02-key-points"
+      ]
+    },
+    {
+      "questionId": "260923133000029",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "下列哪個搜尋方式最符合教材的關鍵字原則？",
+      "o": [
+        "請問我想知道有關臺灣颱風很多很多資料",
+        "臺灣 颱風 防災",
+        "的 了 和 是",
+        "隨便輸入一個熱門明星名字"
+      ],
+      "a": 1,
+      "e": "核心詞加必要限定條件，比冗長問句或無關詞更適合作為關鍵字。",
+      "conceptIds": [
+        "chinese-7-1-language02-keywords"
+      ]
+    },
+    {
+      "questionId": "260923133000030",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "搜尋「能源」得到太多結果，想找臺灣太陽能政策，下一步最適合怎麼做？",
+      "o": [
+        "把關鍵字縮成「能」",
+        "增加「臺灣 太陽能 政策」等限定詞",
+        "刪掉所有關鍵字",
+        "只看第一筆廣告"
+      ],
+      "a": 1,
+      "e": "結果過廣時應增加能縮小範圍的限定條件。",
+      "conceptIds": [
+        "chinese-7-1-language02-query-refinement",
+        "chinese-7-1-language02-keywords"
+      ]
+    },
+    {
+      "questionId": "260923133000031",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "要查某一專門領域中格式較一致、範圍明確的資料，哪個選擇較符合教材？",
+      "o": [
+        "特定主題資料庫",
+        "只看社群貼文",
+        "隨意瀏覽所有網站",
+        "只問同學印象"
+      ],
+      "a": 0,
+      "e": "資料庫有特定主題、來源或欄位結構，較適合精準查詢。",
+      "conceptIds": [
+        "chinese-7-1-language02-database"
+      ]
+    },
+    {
+      "questionId": "260923133000032",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "某網頁沒有作者、沒有機構名稱，也沒有發布日期。依教材，最合理的態度是什麼？",
+      "o": [
+        "因為文字很多所以直接相信",
+        "先保留判斷並尋找其他來源核對",
+        "只要排在搜尋前面就採用",
+        "只看圖片是否漂亮"
+      ],
+      "a": 1,
+      "e": "來源、作者／機構與日期都是可信度判讀的重要線索。",
+      "conceptIds": [
+        "chinese-7-1-language02-source-evaluation"
+      ]
+    },
+    {
+      "questionId": "260923133000033",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "兩篇文章對同一事件說法不同，依教材最適合先做什麼？",
+      "o": [
+        "選自己比較喜歡的一篇",
+        "交叉比對來源、日期與證據",
+        "兩篇都不看",
+        "看哪篇標題較聳動"
+      ],
+      "a": 1,
+      "e": "遇到不同說法時，應交叉比對來源及支持證據。",
+      "conceptIds": [
+        "chinese-7-1-language02-cross-check",
+        "chinese-7-1-language02-source-evaluation"
+      ]
+    },
+    {
+      "questionId": "260923133000034",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "下列哪一種情況最需要注意內容可能是廣告而非中立資訊？",
+      "o": [
+        "文章清楚標示贊助並推銷單一商品",
+        "政府機構公布法規資料",
+        "學校公告行事曆",
+        "資料庫列出研究摘要"
+      ],
+      "a": 0,
+      "e": "教材提醒判讀網路內容是否可能為廣告、意見或未經查證內容。",
+      "conceptIds": [
+        "chinese-7-1-language02-information-literacy"
+      ]
+    },
+    {
+      "questionId": "260923133000035",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "做摘要時，把一則長故事中的人物對話、重複例子全刪掉，只保留核心事件與結論，最符合哪項原則？",
+      "o": [
+        "刪除枝節，保留核心",
+        "保留所有細節",
+        "加入自己的評價",
+        "改寫成另一個故事"
+      ],
+      "a": 0,
+      "e": "摘要應刪除重複、例示與次要內容，保留核心訊息。",
+      "conceptIds": [
+        "chinese-7-1-language02-summary"
+      ]
+    },
+    {
+      "questionId": "260923133000036",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "如果圖像整理後只剩漂亮插圖，卻看不出事件順序與概念關係，主要違反哪項教材原則？",
+      "o": [
+        "圖像化應呈現關係與結構",
+        "圖像一定要彩色",
+        "圖像不可有文字",
+        "圖像只能用表格"
+      ],
+      "a": 0,
+      "e": "轉成圖像的目的在呈現資訊關係與結構，不是單純美化。",
+      "conceptIds": [
+        "chinese-7-1-language02-visualization"
+      ]
+    },
+    {
+      "questionId": "260923133000037",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "閱讀〈飯包哲學〉時，學生先找每段核心句，再辨識作者舉出的例證，這最符合本單元的哪個學習目的？",
+      "o": [
+        "練習以策略整理文章資訊",
+        "背誦所有標點符號",
+        "查作者出生日期",
+        "練習書法"
+      ],
+      "a": 0,
+      "e": "〈飯包哲學〉是閱讀策略實作文本，用來練習找主旨、抓重點、辨識例證與整理段落資訊。",
+      "conceptIds": [
+        "chinese-7-1-language02-fanbao-practice",
+        "chinese-7-1-language02-key-points"
+      ]
+    },
+    {
+      "questionId": "260923133000038",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "準備報告時先用搜尋引擎找廣泛線索，再進專題資料庫找精確資料，這種做法最能說明什麼？",
+      "o": [
+        "可依需求搭配不同檢索工具",
+        "所有工具功能完全相同",
+        "資料庫只能找新聞",
+        "搜尋引擎不能找公開資訊"
+      ],
+      "a": 0,
+      "e": "搜尋引擎適合廣泛搜尋，資料庫較適合特定主題的精準查詢，可依目的搭配。",
+      "conceptIds": [
+        "chinese-7-1-language02-search-engine",
+        "chinese-7-1-language02-database"
+      ]
+    },
+    {
+      "questionId": "260923133000039",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "某篇資料發布於十年前，但題目在討論今年的新規定。依教材，判讀時特別應注意哪個面向？",
+      "o": [
+        "發布日期與目前需求的相關性",
+        "字型是否漂亮",
+        "段落是否很長",
+        "圖片是否很多"
+      ],
+      "a": 0,
+      "e": "教材要求注意日期與內容相關性，過舊資料可能不符合當前需求。",
+      "conceptIds": [
+        "chinese-7-1-language02-source-evaluation"
+      ]
+    },
+    {
+      "questionId": "260923133000040",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-language02-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_語文天地二_閱讀策略與資料檢索_教材知識庫",
+        "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
+        "lesson": "語文天地二〈閱讀策略與資料檢索〉"
+      },
+      "q": "學生搜尋後只因「很多人轉傳」就判定內容正確，這個判斷最大的問題是什麼？",
+      "o": [
+        "沒有檢查來源與證據",
+        "沒有把字放大",
+        "沒有使用心智圖",
+        "沒有逐字抄寫"
+      ],
+      "a": 0,
+      "e": "可信度應看來源、機構、日期、證據並交叉比對，不是只看傳播量。",
+      "conceptIds": [
+        "chinese-7-1-language02-information-literacy",
+        "chinese-7-1-language02-source-evaluation"
+      ]
+    }
+  ]
+}
