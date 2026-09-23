@@ -140,8 +140,8 @@
     },
     {
       key: 'chinese-7-1-language-02', code: '語文天地二', title: '閱讀策略與資料檢索', author: '', page: 94,
-      type: 'language', referenceReady: false, bankMenuReady: false,
-      desc: '閱讀與資料檢索單元；目錄已確認，題庫待建。'
+      type: 'language', referenceReady: true, bankMenuReady: true,
+      desc: 'p.94～109 教材已收錄；canonical 教材知識庫與簡易／中等／困難各 20 題自編題已建立。'
     },
     {
       key: 'chinese-7-1-lesson-07', code: '第七課', title: '兒時記趣', author: '沈復', page: 110,
