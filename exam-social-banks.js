@@ -41,7 +41,10 @@
       pointsPerQuestion: 5,
       subjectName: '歷史',
       backText: '歷史章節',
-      pathLabel: '歷史'
+      pathLabel: '歷史',
+      schoolBank: 'school-exams-kaimo-0910.json',
+      schoolBankCount: 25,
+      schoolBankLabel: '高雄楷模書院'
     },
     'hist-02': {
       title: '第2章　大航海時代各方勢力的競逐',
