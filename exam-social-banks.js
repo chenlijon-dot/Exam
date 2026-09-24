@@ -83,7 +83,7 @@
       backText: '公民章節',
       pathLabel: '公民',
       schoolBank: 'school-exams-kaimo-0924.json',
-      schoolBankCount: 54,
+      schoolBankCount: 74,
       schoolBankLabel: '高雄楷模書院'
     },
     'civics-03': {
