@@ -20,8 +20,8 @@
     "analysisEligible": true,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "lifecycle": "staging",
-    "sourceNote": "高雄楷模書院第二份練習卷－七上歷史「臺灣原住民」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q1、Q3、Q5、Q6、Q10、Q19、Q21 為原卷圖題，production WebP 尚待 binary asset 推入 GitHub 後解除 imagePending。duplicate census 未發現 repository 內完全相同題目。"
+    "lifecycle": "active",
+    "sourceNote": "高雄楷模書院第二份練習卷－七上歷史「臺灣原住民」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q1、Q3、Q5、Q6、Q10、Q19、Q21 使用原題裁切 WebP 圖檔。duplicate census 未發現 repository 內完全相同題目。"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -68,10 +68,9 @@
       "e": "南島語族分布於太平洋與印度洋島嶼，臺灣位於其最北端。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q1.webp",
-      "imageAlt": "南島語族由臺灣、東南亞向太平洋與印度洋島嶼延伸的分布範圍圖",
-      "imagePending": true
+      "imageAlt": "南島語族由臺灣、東南亞向太平洋與印度洋島嶼延伸的分布範圍圖"
     },
     {
       "questionId": "260924213900002",
@@ -107,7 +106,7 @@
       "e": "臺灣原住民族屬南島語系。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900003",
@@ -143,10 +142,9 @@
       "e": "南島語族包括菲律賓原住民、紐西蘭毛利人與臺灣原住民，不包括日本大和民族。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q3.webp",
-      "imageAlt": "全球南島語系分布圖，涵蓋臺灣、東南亞、太平洋島嶼、紐西蘭與馬達加斯加等地",
-      "imagePending": true
+      "imageAlt": "全球南島語系分布圖，涵蓋臺灣、東南亞、太平洋島嶼、紐西蘭與馬達加斯加等地"
     },
     {
       "questionId": "260924213900004",
@@ -182,7 +180,7 @@
       "e": "題幹所述分布範圍為南島語系。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900005",
@@ -218,10 +216,9 @@
       "e": "南島語族地理分布的最北端為臺灣。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q5.webp",
-      "imageAlt": "南島語族分布圖，顯示臺灣位於分布範圍最北端",
-      "imagePending": true
+      "imageAlt": "南島語族分布圖，顯示臺灣位於分布範圍最北端"
     },
     {
       "questionId": "260924213900006",
@@ -257,10 +254,9 @@
       "e": "南島語族主要分布於太平洋和印度洋島嶼，不包括朝鮮民族。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q6.webp",
-      "imageAlt": "標示西南島語與東南島語範圍的南島語族分布圖",
-      "imagePending": true
+      "imageAlt": "標示西南島語與東南島語範圍的南島語族分布圖"
     },
     {
       "questionId": "260924213900007",
@@ -297,7 +293,7 @@
       "e": "平埔族與高山族的傳統分類與居住地形有關。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900008",
@@ -335,7 +331,7 @@
       "e": "甲、丁正確；原住民族原本未創制文字，也未因漢人移入而建立統一國家政治組織。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900009",
@@ -372,7 +368,7 @@
       "e": "平埔族主要居住平原、丘陵，高山族多居住山區與東部地區。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900010",
@@ -409,10 +405,9 @@
       "e": "圖中兩位同學談到的是兩大族群的居住位置。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q10.webp",
-      "imageAlt": "兩位學生對話圖：平埔族分布於臺灣西部平原丘陵，高山族居住臺灣山區及東部平原",
-      "imagePending": true
+      "imageAlt": "兩位學生對話圖：平埔族分布於臺灣西部平原丘陵，高山族居住臺灣山區及東部平原"
     },
     {
       "questionId": "260924213900011",
@@ -449,7 +444,7 @@
       "e": "平埔族較早與漢人接觸，部分逐漸融入漢人社會。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900012",
@@ -485,7 +480,7 @@
       "e": "蘭嶼主要原住民族為達悟族。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900013",
@@ -522,7 +517,7 @@
       "e": "臺灣南島語言多元可支持起源地推論，但不能直接斷定所有南島語都由臺灣傳出。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900014",
@@ -558,7 +553,7 @@
       "e": "南島語族分布不包括澳洲原住民族。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900015",
@@ -594,7 +589,7 @@
       "e": "南島語族分布最東端為復活節島，不是夏威夷。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900016",
@@ -630,7 +625,7 @@
       "e": "題幹指出基因多樣性較高的區域較接近散布起點，因此可推論南太平洋構樹可能起源自臺灣。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900017",
@@ -667,7 +662,7 @@
       "e": "平埔族較早與漢人接觸，漢化較深；高山族與漢人接觸較晚。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900018",
@@ -703,7 +698,7 @@
       "e": "陳第抵達今臺南一帶，當地平埔族群為西拉雅族。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900019",
@@ -739,10 +734,9 @@
       "e": "排灣族主要分布於臺灣南部屏東一帶，對應圖中①。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q19.webp",
-      "imageAlt": "臺灣原住民族分布位置示意圖，以①②③④標示不同區域",
-      "imagePending": true
+      "imageAlt": "臺灣原住民族分布位置示意圖，以①②③④標示不同區域"
     },
     {
       "questionId": "260924213900020",
@@ -779,7 +773,7 @@
       "e": "撒奇萊雅族屬高山各族，非平埔族群。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900021",
@@ -815,10 +809,9 @@
       "e": "凱達格蘭族傳統分布於臺灣北部，圖中甲為凱達格蘭族。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q21.webp",
-      "imageAlt": "臺灣原住民族傳統分布圖，以甲乙丙丁標示不同族群位置",
-      "imagePending": true
+      "imageAlt": "臺灣原住民族傳統分布圖，以甲乙丙丁標示不同族群位置"
     },
     {
       "questionId": "260924213900022",
@@ -855,7 +848,7 @@
       "e": "阿美族有洪水起源傳說，且為臺灣原住民族人口最多的族群。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900023",
@@ -891,7 +884,7 @@
       "e": "臺灣原住民族起源傳說常見洪水漂流說與岩石始祖說。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900024",
@@ -928,7 +921,7 @@
       "e": "從巨石走出一男一女的岩石始祖傳說屬泰雅族。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260924213900025",
@@ -965,7 +958,7 @@
       "e": "布農族有洪水漂流傳說。",
       "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
       "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     }
   ]
 }
