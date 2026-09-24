@@ -6,7 +6,7 @@
     "examType": "social-school-chapter-school-exam",
     "examTypeLabel": "公民七上 第2章 人性尊嚴與人權保障｜各校題庫",
     "title": "第2章 人性尊嚴與人權保障｜各校題庫",
-    "subtitle": "社會七上｜公民｜高雄楷模書院｜各校題庫｜本章 74 題",
+    "subtitle": "社會七上｜公民｜高雄楷模書院｜各校題庫｜本章 89 題",
     "subject": "social",
     "subjectLabel": "社會",
     "semester": "7-1",
@@ -21,7 +21,7 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "active",
-    "sourceNote": "高雄楷模書院七上公民練習卷逐題依真正解題概念拆入章節；目前收錄第四份練習卷 0924 適康／適翰／適南版，以及第三份練習卷 0917 適翰版〈人性尊嚴與人權保障〉。原題選項順序與出題時法規名稱保留；原卷未可靠標示 schoolYear，故 year 保留 unknown。完全重複題共用既有 questionId，不在正式 bank 重複 append。"
+    "sourceNote": "高雄楷模書院七上公民練習卷逐題依目前 canonical 的真正解題概念拆入章節；目前收錄第四份練習卷 0924 適康／適翰／適南版，以及第三份練習卷 0917 適翰版〈人性尊嚴與人權保障〉與適康／適南版〈性別差異如何產生不平等〉。原題選項順序與出題時用語保留；原卷未可靠標示 schoolYear，故 year 保留 unknown。完全重複題共用既有 questionId，不在正式 bank 重複 append。"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -269,7 +269,7 @@
     },
     {
       "questionId": "260923205900009",
-      "revision": 2,
+      "revision": 3,
       "number": 9,
       "originalQuestionNumber": "9",
       "school": "高雄楷模書院",
@@ -287,7 +287,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-stereotype"
       ],
-      "q": "下文是小愛的心情日記。文中何者敘述的是傳統性別刻板印象對小愛所造成的困擾？清早起床一照鏡子，(甲)痘子又多冒了好幾顆，心情有點低落，媽媽叫我，(乙)我卻不想理她。走進教室，就被冒失的小賴迎面撞個正著，並丟下一句『對不起喔！(丙)波霸小姐！』隨即溜走，我忍不住對著他破口大罵，想不到他厚著臉皮對我說：「(丁)呦，女孩子要溫柔，不要像個男人婆！」真是把我氣炸了……。 [升學王 適康版]",
+      "q": "下文是小愛的心情日記。文中何者敘述的是傳統性別刻板印象對小愛所造成的困擾？清早起床一照鏡子，(甲)痘子又多冒了好幾顆，心情有點低落，媽媽叫我，(乙)我卻不想理她。走進教室，就被冒失的小賴迎面撞個正著，並丟下一句『對不起喔！(丙)波霸小姐！』隨即溜走，我忍不住對著他破口大罵，想不到他厚著臉皮對我說：「(丁)呦，女孩子要溫柔，不要像個男人婆！」真是把我氣炸了……。 [升學王 適康版／適南版]",
       "o": [
         "甲",
         "乙",
@@ -732,7 +732,7 @@
     },
     {
       "questionId": "260923205900023",
-      "revision": 3,
+      "revision": 4,
       "number": 23,
       "originalQuestionNumber": "23",
       "school": "高雄楷模書院",
@@ -750,7 +750,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-discrimination"
       ],
-      "q": "南亞公司日前的公布欄中，貼出右述的公告內容。單就該公告內容判斷，是屬於哪一個性別不平等現象？ [升學王 適康版／適翰版]",
+      "q": "南亞公司日前的公布欄中，貼出右述的公告內容。單就該公告內容判斷，是屬於哪一個性別不平等現象？ [升學王 適康版／適南版／適翰版]",
       "o": [
         "性別刻板印象",
         "社會性別",
@@ -1053,7 +1053,7 @@
       "sourceFile": "0924-七上公民-適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上公民-適翰版-一段範圍複習 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 2,
+      "revision": 3,
       "questionId": "260923215900010",
       "number": 32,
       "originalQuestionNumber": "11",
@@ -1061,7 +1061,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-discrimination"
       ],
-      "q": "瑞士這個富裕的阿爾卑斯山國家，長期存在著兩性薪資差距問題，示威群眾高舉「我愛強悍的女人」（I love badass women）和「打倒父權社會」（Eliminate the patriarchy）的海報與布條，宣洩她們對這些問題的不滿。請問：依據上述內容判斷，是希望改變在現今職場上的何種現象？\n\n爭取同工同酬 瑞士婦女發動罷工上街\n吹著口哨、敲打著鍋碗瓢盆，數十萬名穿著紫色衣服的瑞士抗議民眾，6 月 14 日高舉女權主義標語湧入各城鎮街頭。同時，瑞士各地婦女發動全國罷工，要求男女同工同酬。這是相隔近三十年後，瑞士婦女再度為薪資平等而發動全國大罷工。\n由 16 個瑞士工會組成的傘狀組織「瑞士工會聯盟」（USS）發出聲明表示：「今天 2019 年 6 月 14 日這天，發生瑞士近代史上最大的政治事件。數十萬名婦女參與整天的行動，進行罷工抗議—訴求同工同酬，女性應依據她們付出的勞力獲得相對的報酬」 [升學王 適翰版]",
+      "q": "瑞士這個富裕的阿爾卑斯山國家，長期存在著兩性薪資差距問題，示威群眾高舉「我愛強悍的女人」（I love badass women）和「打倒父權社會」（Eliminate the patriarchy）的海報與布條，宣洩她們對這些問題的不滿。請問：依據上述內容判斷，是希望改變在現今職場上的何種現象？\n\n爭取同工同酬 瑞士婦女發動罷工上街\n吹著口哨、敲打著鍋碗瓢盆，數十萬名穿著紫色衣服的瑞士抗議民眾，6 月 14 日高舉女權主義標語湧入各城鎮街頭。同時，瑞士各地婦女發動全國罷工，要求男女同工同酬。這是相隔近三十年後，瑞士婦女再度為薪資平等而發動全國大罷工。\n由 16 個瑞士工會組成的傘狀組織「瑞士工會聯盟」（USS）發出聲明表示：「今天 2019 年 6 月 14 日這天，發生瑞士近代史上最大的政治事件。數十萬名婦女參與整天的行動，進行罷工抗議—訴求同工同酬，女性應依據她們付出的勞力獲得相對的報酬」 [升學王 適康版／適南版／適翰版]",
       "o": [
         "性別偏見",
         "性別平權",
@@ -1086,7 +1086,7 @@
       "sourceFile": "0924-七上公民-適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上公民-適翰版-一段範圍複習 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 2,
+      "revision": 3,
       "questionId": "260923215900018",
       "number": 33,
       "originalQuestionNumber": "19",
@@ -1094,7 +1094,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-discrimination"
       ],
-      "q": "阿良是名同性戀者，老闆知道後便將阿良調離現職並減薪。這種因性傾向不同之差異，而遭受工作上不平等之差別待遇，就是什麼？ [升學王 適翰版]",
+      "q": "阿良是名同性戀者，老闆知道後便將阿良調離現職並減薪。這種因性傾向不同之差異，而遭受工作上不平等之差別待遇，就是什麼？ [升學王 適康版／適南版／適翰版]",
       "o": [
         "性別刻板印象",
         "性別角色學習",
@@ -1620,7 +1620,7 @@
       "sourceFile": "0924-七上公民-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上公民-適南版-一段範圍複習 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 1,
+      "revision": 2,
       "questionId": "260923233000016",
       "number": 49,
       "originalQuestionNumber": "19",
@@ -1628,7 +1628,7 @@
       "conceptIds": [
         "civ-7-1-2-social-gender"
       ],
-      "q": "父母對待兒子和女兒，往往都有不同的教育方式。當男孩子受到委屈時，若是有哭泣的反應，父母通常可能告訴他「男生要勇敢！」女孩子若是哭泣，則多半較能夠得到父母的安慰。對於男孩、女孩不同的教育方式，是屬於哪一種性別的認知區分方式？ [升學王 適南版]",
+      "q": "父母對待兒子和女兒，往往都有不同的教育方式。當男孩子受到委屈時，若是有哭泣的反應，父母通常可能告訴他「男生要勇敢！」女孩子若是哭泣，則多半較能夠得到父母的安慰。對於男孩、女孩不同的教育方式，是屬於哪一種性別的認知區分方式？ [升學王 適康版／適南版]",
       "o": [
         "生理性別",
         "性別偏見",
@@ -1653,7 +1653,7 @@
       "sourceFile": "0924-七上公民-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上公民-適南版-一段範圍複習 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 1,
+      "revision": 2,
       "questionId": "260923233000017",
       "number": 50,
       "originalQuestionNumber": "20",
@@ -1662,7 +1662,7 @@
         "civ-7-1-2-gender-stereotype",
         "civ-7-1-2-gender-prejudice"
       ],
-      "q": "《天線寶寶》在 1999 年美國播出時，曾引起福音派的衛道人士質疑「丁丁」是同性戀，認為丁丁頭上的倒三角形天線及身上的紫色，都是同性戀的象徵。也有人提出丁丁拿女用紅色皮包不合理。對於這評論，我們該如何看待才客觀？ [升學王 適南版]",
+      "q": "《天線寶寶》在 1999 年美國播出時，曾引起福音派的衛道人士質疑「丁丁」是同性戀，認為丁丁頭上的倒三角形天線及身上的紫色，都是同性戀的象徵。也有人提出丁丁拿女用紅色皮包不合理。對於這評論，我們該如何看待才客觀？ [升學王 適康版／適南版]",
       "o": [
         "應該在丁丁身上標示性別",
         "禁止天線寶寶的播放",
@@ -2083,7 +2083,7 @@
       "sourceFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 題目卷.pdf",
       "answerFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 1,
+      "revision": 2,
       "questionId": "260924083300008",
       "number": 63,
       "originalQuestionNumber": "9",
@@ -2091,7 +2091,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-stereotype"
       ],
-      "q": "上完公民課，小美將上課的重點抄在筆記上，卻忘了將名稱寫上去。筆記解釋為：「人們對某些群體，不去深入了解，而有先入為主的觀念。」根據內容判斷，該名稱應是指下列何者？ [升學王 適翰版]",
+      "q": "上完公民課，小美將上課的重點抄在筆記上，卻忘了將名稱寫上去。筆記解釋為：「人們對某些群體，不去深入了解，而有先入為主的觀念。」根據內容判斷，該名稱應是指下列何者？ [升學王 適康版／適南版／適翰版]",
       "o": [
         "性騷擾",
         "性霸凌",
@@ -2116,7 +2116,7 @@
       "sourceFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 題目卷.pdf",
       "answerFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 1,
+      "revision": 2,
       "questionId": "260924083300009",
       "number": 64,
       "originalQuestionNumber": "10",
@@ -2124,7 +2124,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-stereotype"
       ],
-      "q": "人們對於男性或女性有不同的期待，容易形成性別刻板印象。下列何者沒有「性別刻板印象」的觀念？ [升學王 適翰版]",
+      "q": "人們對於男性或女性有不同的期待，容易形成性別刻板印象。下列何者沒有「性別刻板印象」的觀念？ [升學王 適康版／適南版／適翰版]",
       "o": [
         "A",
         "B",
@@ -2151,7 +2151,7 @@
       "sourceFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 題目卷.pdf",
       "answerFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 1,
+      "revision": 2,
       "questionId": "260924083300010",
       "number": 65,
       "originalQuestionNumber": "11",
@@ -2159,7 +2159,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-discrimination"
       ],
-      "q": "附圖中，小芳所遇到的問題是下列何項因素所造成的？ [升學王 適翰版]",
+      "q": "附圖中，小芳所遇到的問題是下列何項因素所造成的？ [升學王 適康版／適南版／適翰版]",
       "o": [
         "種族歧視",
         "性別歧視",
@@ -2219,7 +2219,7 @@
       "sourceFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 題目卷.pdf",
       "answerFile": "0917-七上公民-適翰版-人性尊嚴與人權保障 解析卷.pdf",
       "lifecycle": "active",
-      "revision": 1,
+      "revision": 2,
       "questionId": "260924083300012",
       "number": 67,
       "originalQuestionNumber": "14",
@@ -2227,7 +2227,7 @@
       "conceptIds": [
         "civ-7-1-2-gender-stereotype"
       ],
-      "q": "幼稚園的孩童在學習社會禮貌、對人要問好的時候，師長或是爸媽常常用一種方式教導幼童如何分辨男女：「長頭髮的是姊姊、短頭髮的是哥哥」。請問這樣以頭髮長度判斷男女的標準，屬於下列何種表現？ [升學王 適翰版]",
+      "q": "幼稚園的孩童在學習社會禮貌、對人要問好的時候，師長或是爸媽常常用一種方式教導幼童如何分辨男女：「長頭髮的是姊姊、短頭髮的是哥哥」。請問這樣以頭髮長度判斷男女的標準，屬於下列何種表現？ [升學王 適康版／適南版／適翰版]",
       "o": [
         "社會性別",
         "性別刻板印象",
@@ -2504,6 +2504,510 @@
       ],
       "a": 2,
       "e": "父母、傳播媒體與學校都可能影響社會性別認知；基因遺傳主要影響生理性別，不是社會性別的學習途徑。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000001",
+      "number": 76,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment",
+        "civ-7-1-2-rights-remedy"
+      ],
+      "q": "郁菁經過一番努力，終於如願以償考上空姐，但在某次執勤時，卻遭乘客故意襲胸並且出現不尊重的言語。請問：郁菁遇到此種狀況，應該如何應對才適當？ [升學王 適康版／適南版]",
+      "o": [
+        "因為是服務業，不能得罪客人，所以只好隱忍",
+        "當場呼客人一巴掌，顯現女生不好惹",
+        "飛機降落後，請機上安全人員將該名乘客帶走並依法律程序爭取權益",
+        "同時也對顧客襲胸，以牙還牙。"
+      ],
+      "a": 2,
+      "e": "官方解析指出，乘客行為屬性騷擾，受害者可依法律程序爭取權益。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000002",
+      "number": 77,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "conceptIds": [
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "荷蘭教育文化部部長主張將身分證的性別欄移除，主要是為了解決何種問題？ [升學王 適康版／適南版]",
+      "o": [
+        "種族上的歧視",
+        "工作上的歧視",
+        "性別上的歧視",
+        "職業上的歧視。"
+      ],
+      "a": 2,
+      "e": "官方解析指出，以性別分類可能限制個人生活，嚴重時形成性別歧視。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000003",
+      "number": 78,
+      "originalQuestionNumber": "6",
+      "sourcePage": 1,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "若遇到異性或同性對自己有粗俗的言語和不當的肢體碰撞時，下列何項態度較為適宜？ [升學王 適康版／適南版]",
+      "o": [
+        "默默隱忍",
+        "逆來順受",
+        "嚴正制止",
+        "一笑置之。"
+      ],
+      "a": 2,
+      "e": "面對性騷擾或不受歡迎的性別互動，應明確表達感受並制止不適當行為。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000004",
+      "number": 79,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "conceptIds": [
+        "civ-7-1-2-human-dignity",
+        "civ-7-1-2-gender-stereotype"
+      ],
+      "q": "最近新聞報導南部某高職男學生，因為對自己的性向一直有質疑，從一、兩年前的中性打扮，到最近完全和班上女學生一樣穿女生制服上下學，甚至只上女生廁所，但校方和家人非但不責備他，還鼓勵他活出自己。請問：以下觀點何者有誤？ [升學王 適康版／適南版]",
+      "o": [
+        "每個人都是獨立個體，須給予尊重",
+        "應了解同性別或不同性別的個人差異",
+        "落實性別平等就是要破除性別刻板印象",
+        "這些人只是少數中的少數，還是要以社會大多數的想法為主。"
+      ],
+      "a": 3,
+      "e": "官方解析指出，即使屬少數，每個人仍是獨立個體，應受到尊重。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000005",
+      "number": 80,
+      "originalQuestionNumber": "8",
+      "sourcePage": 2,
+      "conceptIds": [
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "附圖是某幼兒園的徵才廣告，根據內容，哪一項條件顯示出性別歧視？ [升學王 適康版／適南版]",
+      "o": [
+        "工作時間",
+        "月薪多寡",
+        "具教師資格",
+        "女性優先錄取。"
+      ],
+      "a": 3,
+      "e": "徵才條件限定女性優先錄取，對男性形成不公平待遇，屬性別歧視。",
+      "image": "chapter-bank/social/7-1/civics/chapter-02/assets/kaimo-0917-kangnan-q08.webp",
+      "imageAlt": "幼兒園徵才廣告，內容含女性優先錄取條件"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000006",
+      "number": 81,
+      "originalQuestionNumber": "9",
+      "sourcePage": 2,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "阿純向老師反應，小華喜歡在下課講一些黃色笑話給同學聽，也不管旁邊有沒有不想聽的同學，這件事已經造成很多人的困擾。根據上述，小華的行為已經讓同學產生何種困擾？ [升學王 適康版／適南版]",
+      "o": [
+        "性霸凌",
+        "性騷擾",
+        "性別刻板印象",
+        "性別歧視。"
+      ],
+      "a": 1,
+      "e": "官方解析指出，不受歡迎且與性或性別有關的言語可能構成性騷擾。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000007",
+      "number": 82,
+      "originalQuestionNumber": "10",
+      "sourcePage": 2,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "許多人常誤認為性騷擾只是小事，甚至對於性騷擾還有錯誤的觀念，請問：下列哪一位同學的敘述錯誤？ [升學王 適康版／適南版]",
+      "o": [
+        "小明：即使是男女朋友，還是必須尊重對方否則仍可能會造成性騷擾。",
+        "小華：性騷擾不只是肢體上的接觸，言語上的騷擾也算是性騷擾",
+        "小方：性騷擾不管在同性或異性之間都會發生",
+        "小傑：說黃色笑話是有幽默感的行為。"
+      ],
+      "a": 3,
+      "e": "黃色笑話若造成他人不舒服，可能屬言語上的性騷擾，不應視為單純幽默。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000008",
+      "number": 83,
+      "originalQuestionNumber": "12",
+      "sourcePage": 2,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "青少年有時在性別互動上，欠缺性別尊重，有時會讓對方感受到言語或行為的騷擾。請問：下列哪一位同學碰到的問題不屬於性騷擾？ [升學王 適康版／適南版]",
+      "o": [
+        "曉玉：同學喜歡講黃色笑話，讓我覺得很不自在",
+        "君翔：下課時總是有許多女同學拿情書給我",
+        "小香：上禮拜有男同學偷看我換體育服",
+        "風間：同學常常惡作劇脫我褲子。"
+      ],
+      "a": 1,
+      "e": "官方解析指出，性騷擾須為違反意願且與性或性別有關的騷擾；單純收到情書不必然構成性騷擾。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000009",
+      "number": 84,
+      "originalQuestionNumber": "13",
+      "sourcePage": 2,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "下列哪一圖示為「性騷擾防治標誌」？ [升學王 適康版／適南版]",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 3,
+      "e": "官方解析指出 A 為回收標章、B 為環保標章、C 為省水標章，D 才是性騷擾防治標誌。",
+      "image": "chapter-bank/social/7-1/civics/chapter-02/assets/kaimo-0917-kangnan-q13.webp",
+      "imageAlt": "四個標誌選項：回收標章、環保標章、省水標章與性騷擾防治標誌"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000010",
+      "number": 85,
+      "originalQuestionNumber": "14",
+      "sourcePage": 2,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment",
+        "civ-7-1-2-campus-gender-incident"
+      ],
+      "q": "校園中的性騷擾事件時有所聞，下列四位同學的經驗，何人已經遇到性騷擾了？ [升學王 適康版／適南版]",
+      "o": [
+        "建華：同學總是取笑我功課不好",
+        "阿寶：同學老是笑我個子長不高",
+        "美美：同學總是不願意和我同一組",
+        "小鈴：男同學總是惡作劇掀我的裙子。"
+      ],
+      "a": 3,
+      "e": "掀裙子屬不受歡迎且具有性意味的肢體行為，構成校園性騷擾。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000011",
+      "number": 86,
+      "originalQuestionNumber": "17",
+      "sourcePage": 3,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "《性騷擾防治法》通過後，對於性騷擾的定義有了相當明確的規定。下列何種行為將構成性騷擾？ [升學王 適康版／適南版]",
+      "o": [
+        "情侶手牽手逛街",
+        "父親幫剛出生的女兒換尿布",
+        "婦產科醫生為女病人進行觸診",
+        "在辦公室裡大聲說黃色笑話。"
+      ],
+      "a": 3,
+      "e": "官方解析指出，對他人作出不受歡迎且與性或性別有關的言語行為，可能構成性騷擾。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000012",
+      "number": 87,
+      "originalQuestionNumber": "18",
+      "sourcePage": 3,
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "附圖是小華在內政部的性騷擾防治網所看見的標示，黑色的手代表鹹豬手，紅色的手代表拒絕性騷擾，微笑代表和諧的社會，由此可知要建立一個和諧安全的社會，人與人的互動要能做到下列哪一種行為準則？ [升學王 適康版／適南版]",
+      "o": [
+        "男尊女卑，以男為主",
+        "彼此尊重理性溝通",
+        "避免接觸減少衝突",
+        "勇於接觸不分你我。"
+      ],
+      "a": 1,
+      "e": "官方解析指出，建立和諧安全的社會需以彼此尊重、理性溝通作為互動原則。",
+      "image": "chapter-bank/social/7-1/civics/chapter-02/assets/kaimo-0917-kangnan-q18.webp",
+      "imageAlt": "性騷擾防治標誌：黑色手、紅色拒絕手勢與微笑圖像"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000013",
+      "number": 88,
+      "originalQuestionNumber": "21",
+      "sourcePage": 3,
+      "conceptIds": [
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "人們常會因為各種刻板印象，而對特定族群做出不公平的待遇，而使其受到身體或精神上的侵害，這就是歧視行為。下列敘述中，何者是屬於性別上的歧視？ [升學王 適康版／適南版]",
+      "o": [
+        "納粹黨迫害猶太人",
+        "非裔的美國人常受到不公平對待",
+        "印度的階級觀念限制某些族群的發展",
+        "小美是個女生，但身材像男生。"
+      ],
+      "a": 3,
+      "e": "官方解析將 A、B 歸為種族歧視，C 為階級歧視，因此 D 為性別相關歧視題項。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000014",
+      "number": 89,
+      "originalQuestionNumber": "22",
+      "sourcePage": 3,
+      "conceptIds": [
+        "civ-7-1-2-social-gender"
+      ],
+      "q": "性別可包括「生理性別」與「社會性別」，下列對於「社會性別」的敘述，何者正確？ [升學王 適康版／適南版]",
+      "o": [
+        "透過各種途徑以及後天的學習模仿而成",
+        "是生理結構、性器官的差異",
+        "最早影響社會性別認知的學習途徑是學校教育",
+        "無法藉由後天的學習影響其行為表現。"
+      ],
+      "a": 0,
+      "e": "社會性別主要透過家庭、學校、同儕與媒體等後天途徑學習形成；生理結構屬生理性別。"
+    },
+    {
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜性別差異如何產生不平等",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "sourceFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 題目卷.pdf",
+      "answerFile": "0917-七上公民-適康版 適南版-性別差異如何產生不平等 解析卷.pdf",
+      "lifecycle": "active",
+      "revision": 1,
+      "questionId": "260924093000015",
+      "number": 90,
+      "originalQuestionNumber": "24",
+      "sourcePage": 4,
+      "conceptIds": [
+        "civ-7-1-2-gender-stereotype"
+      ],
+      "q": "自古以來，帶有性別歧視與刻板印象的文句不少，下列何者不含有此種涵義？ [升學王 適康版／適南版]",
+      "o": [
+        "紅顏禍水",
+        "女子無才便是德",
+        "女大十八變",
+        "男兒有淚不輕彈。"
+      ],
+      "a": 2,
+      "e": "官方解析指出「女大十八變」主要描述女性成長過程，不屬性別歧視或性別刻板印象的文句。"
     }
   ]
 }
