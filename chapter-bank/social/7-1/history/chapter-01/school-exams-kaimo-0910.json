@@ -1,0 +1,971 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-01-school-kaimo-0910",
+    "difficulty": "social-7-1-history-01-school-kaimo-0910",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第1章 史前臺灣與原住民文化｜各校題庫",
+    "title": "第1章 史前臺灣與原住民文化｜各校題庫",
+    "subtitle": "社會七上｜歷史｜高雄楷模書院｜第二份練習卷｜臺灣原住民｜25 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-01",
+    "unit": "第1章 史前臺灣與原住民文化",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "高雄楷模書院第二份練習卷－七上歷史「臺灣原住民」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q1、Q3、Q5、Q6、Q10、Q19、Q21 為原卷圖題，production WebP 尚待 binary asset 推入 GitHub 後解除 imagePending。duplicate census 未發現 repository 內完全相同題目。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第二份練習卷｜臺灣原住民",
+    "sourceType": "school-exam",
+    "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+    "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260924213900001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "附圖為筱安在臺灣歷史書籍中看到的圖片，有關此圖的標題應為下列何者？",
+      "o": [
+        "南島語族分布範圍圖",
+        "17 世紀荷蘭在東亞的貿易據點分布圖",
+        "17 世紀葡萄牙在東亞的貿易據點分布圖",
+        "鄭氏政權的疆域範圍圖"
+      ],
+      "a": 0,
+      "e": "南島語族分布於太平洋與印度洋島嶼，臺灣位於其最北端。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q1.webp",
+      "imageAlt": "南島語族由臺灣、東南亞向太平洋與印度洋島嶼延伸的分布範圍圖",
+      "imagePending": true
+    },
+    {
+      "questionId": "260924213900002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "2",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "臺灣原住民各族群是屬於哪一種語系？",
+      "o": [
+        "南島語系",
+        "阿爾泰語系",
+        "閃米語系",
+        "漢藏語系"
+      ],
+      "a": 0,
+      "e": "臺灣原住民族屬南島語系。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900003",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "3",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "附圖是全球南島語系分布圖，根據此圖判斷，下列哪一族群不屬於南島語族？",
+      "o": [
+        "日本大和民族",
+        "菲律賓原住民",
+        "紐西蘭毛利人",
+        "臺灣原住民"
+      ],
+      "a": 0,
+      "e": "南島語族包括菲律賓原住民、紐西蘭毛利人與臺灣原住民，不包括日本大和民族。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q3.webp",
+      "imageAlt": "全球南島語系分布圖，涵蓋臺灣、東南亞、太平洋島嶼、紐西蘭與馬達加斯加等地",
+      "imagePending": true
+    },
+    {
+      "questionId": "260924213900004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "某個語系包含有 1,200 種以上的語言，人口多數居住在東南亞地區，分布區域東達復活節島，西到馬達加斯加島，南至紐西蘭，最北端則為臺灣。上文所述的語系應為下列何者？",
+      "o": [
+        "印歐語系",
+        "阿爾泰語系",
+        "南島語系",
+        "漢藏語系"
+      ],
+      "a": 2,
+      "e": "題幹所述分布範圍為南島語系。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "附圖是南島語族分布圖，根據圖中的分布範圍來看，南島語族分布的最北端應在下列何處？",
+      "o": [
+        "日本",
+        "臺灣",
+        "菲律賓",
+        "中國東南沿海"
+      ],
+      "a": 1,
+      "e": "南島語族地理分布的最北端為臺灣。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q5.webp",
+      "imageAlt": "南島語族分布圖，顯示臺灣位於分布範圍最北端",
+      "imagePending": true
+    },
+    {
+      "questionId": "260924213900006",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "6",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "附圖是南島語族分布圖。根據此圖判斷，下列哪一族群不屬於南島語族？",
+      "o": [
+        "臺灣原住民",
+        "紐西蘭毛利人",
+        "菲律賓巴丹島原住民",
+        "大韓民國朝鮮民族"
+      ],
+      "a": 3,
+      "e": "南島語族主要分布於太平洋和印度洋島嶼，不包括朝鮮民族。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q6.webp",
+      "imageAlt": "標示西南島語與東南島語範圍的南島語族分布圖",
+      "imagePending": true
+    },
+    {
+      "questionId": "260924213900007",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "影響臺灣島上的原住民族，分為兩大族群的因素，最可能是：",
+      "o": [
+        "追逐白鹿",
+        "地形因素",
+        "語言分歧",
+        "躲避洪水"
+      ],
+      "a": 1,
+      "e": "平埔族與高山族的傳統分類與居住地形有關。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900008",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "8",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-highland-indigenous",
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "臺灣的原住民各有不同的社會組織。請問：下列關於臺灣原住民的說明，哪些是正確的？\n(甲)包括平埔族與高山族\n(乙)直到大批漢族移入臺灣時，才仿漢字建立原住民的文字\n(丙)原住民在大批漢族移居臺灣時才團結一致，建立國家政治組織\n(丁)臺灣原住民各族群屬於南島語系的民族",
+      "o": [
+        "甲乙",
+        "甲丙",
+        "甲丁",
+        "乙丁"
+      ],
+      "a": 2,
+      "e": "甲、丁正確；原住民族原本未創制文字，也未因漢人移入而建立統一國家政治組織。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900009",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "9",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "臺灣原住民可分為平埔族和高山族，若要比較平埔族和高山族的異同，下列敘述何者正確？",
+      "o": [
+        "前者居住在平原地帶，後者多居住在近山或山區等地區",
+        "前者分布在臺灣東部，後者分布在臺灣西部",
+        "前者有阿美族，後者有西拉雅族",
+        "皆屬於南島語系的民族，在漢人移入臺灣時已有一套文字系統。"
+      ],
+      "a": 0,
+      "e": "平埔族主要居住平原、丘陵，高山族多居住山區與東部地區。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900010",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "10",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "附圖為兩位同學在討論期末報告的情形。請問：這兩位同學是以何項作為平埔族與高山族的畫分標準？",
+      "o": [
+        "居住地區",
+        "貧富差距",
+        "文字有無",
+        "教育程度"
+      ],
+      "a": 0,
+      "e": "圖中兩位同學談到的是兩大族群的居住位置。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q10.webp",
+      "imageAlt": "兩位學生對話圖：平埔族分布於臺灣西部平原丘陵，高山族居住臺灣山區及東部平原",
+      "imagePending": true
+    },
+    {
+      "questionId": "260924213900011",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "11",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "臺灣原住民族群大致被分為平埔族與高山族兩大類，其生活型態與社會組織大不相同，下列敘述何者正確？",
+      "o": [
+        "平埔族包括了泰雅、排灣等族",
+        "平埔族經過長期與漢人相處，逐漸被漢化",
+        "平埔族大多居住在臺灣山區地帶",
+        "高山族早期分布在臺灣西部的平原、丘陵地帶。"
+      ],
+      "a": 1,
+      "e": "平埔族較早與漢人接觸，部分逐漸融入漢人社會。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900012",
+      "revision": 1,
+      "number": 12,
+      "originalQuestionNumber": "12",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "幾年前，儲放在蘭嶼的核廢料曾引起當地原住民的不滿，並要求政府盡速撤離。請問：居住在蘭嶼的原住民屬於下列哪一族？",
+      "o": [
+        "泰雅族",
+        "阿美族",
+        "達悟族",
+        "魯凱族"
+      ],
+      "a": 2,
+      "e": "蘭嶼主要原住民族為達悟族。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900013",
+      "revision": 1,
+      "number": 13,
+      "originalQuestionNumber": "13",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian",
+        "hist-7-1-1-paper-mulberry-migration"
+      ],
+      "q": "學習南島語族的起源之後，你覺得下列哪一種推論，最不合理？",
+      "o": [
+        "因為太平洋構樹起源於臺灣，臺灣原住民族一定是最早製造樹皮衣的人",
+        "在各國找到的臺灣玉製品遺物，都是臺灣原住民族的先民製造出來的",
+        "臺灣的南島語言最多元分歧，代表所有南島語都是臺灣傳出去的",
+        "想證明一個重要的學科推論，需要運用不同學科的知識，彼此佐證。"
+      ],
+      "a": 2,
+      "e": "臺灣南島語言多元可支持起源地推論，但不能直接斷定所有南島語都由臺灣傳出。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900014",
+      "revision": 1,
+      "number": 14,
+      "originalQuestionNumber": "14",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "原住民電視臺播出一節目「發現南島」，計畫在其片頭浮光掠影般出現一些南島民族的居地照片，請問下列哪一張照片較「不」適合採用？",
+      "o": [
+        "紐西蘭毛利人的舞蹈",
+        "菲律賓土著的陶藝",
+        "臺灣達悟族的飛魚祭",
+        "澳洲原住民族歌舞"
+      ],
+      "a": 3,
+      "e": "南島語族分布不包括澳洲原住民族。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900015",
+      "revision": 1,
+      "number": 15,
+      "originalQuestionNumber": "15",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "下列四位同學正在討論南島語族分布的四個極點。其中哪一位同學的說法錯誤？\n甲生：最東端為夏威夷。\n乙生：最西端為馬達加斯加島。\n丙生：最北端為臺灣。\n丁生：最南端為紐西蘭。",
+      "o": [
+        "甲生",
+        "乙生",
+        "丙生",
+        "丁生"
+      ],
+      "a": 0,
+      "e": "南島語族分布最東端為復活節島，不是夏威夷。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900016",
+      "revision": 1,
+      "number": 16,
+      "originalQuestionNumber": "16",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-paper-mulberry-migration"
+      ],
+      "q": "在西方紡織品傳入前，太平洋南島語族長期維持種植、拍打構樹樹皮製成「樹皮布」的習俗。學者指出，從生物地理學與遺傳學的觀點來看，「基因多樣性」較高的區域比較接近族群散布的起點，所謂「基因多樣性」又稱為「遺傳多樣性」，是指同種個體間因生活環境不同，經歷長時間的天擇、突變所產生的結果。如果基因多樣性越高，則族群中可提供環境天擇的基因越多，對環境適應的能力就越強，有利於族群的生存及演化。目前已知「臺灣是構樹基因多樣性相對較高的區域」，請問：這句話該如何解讀較適切？",
+      "o": [
+        "南太平洋的構樹可能起源自臺灣",
+        "臺灣構樹由太平洋南島語族傳入",
+        "臺灣的原住民並不會製做樹皮衣",
+        "南島語族間尚無互相交流的技術。"
+      ],
+      "a": 0,
+      "e": "題幹指出基因多樣性較高的區域較接近散布起點，因此可推論南太平洋構樹可能起源自臺灣。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900017",
+      "revision": 1,
+      "number": 17,
+      "originalQuestionNumber": "17",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "下列關於臺灣原住民的兩大支系「平埔族」和「高山族」的比較，何者敘述正確？",
+      "o": [
+        "平埔族居住在東部平原地帶；高山族居住在西部丘陵地帶",
+        "平埔族的代表是西拉雅族；高山族的代表是凱達格蘭族",
+        "平埔族的漢化程度較深；高山族與漢人接觸較晚",
+        "清朝時稱平埔族為生番，稱高山族為熟番。"
+      ],
+      "a": 2,
+      "e": "平埔族較早與漢人接觸，漢化較深；高山族與漢人接觸較晚。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900018",
+      "revision": 1,
+      "number": 18,
+      "originalQuestionNumber": "18",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous"
+      ],
+      "q": "明朝的陳第曾至臺灣西南部安平外海，在停留約 20 日之間，他寫下第一篇記錄臺灣原住民的漢文文章《東番記》，裡面提到：「『大員』一地，乃赤崁外一小島，為入番社的門戶，島上多漢人，乃販海商賈。」陳第當時最有可能遇到下列哪一族的原住民？",
+      "o": [
+        "西拉雅族",
+        "凱達格蘭族",
+        "噶瑪蘭族",
+        "排灣族"
+      ],
+      "a": 0,
+      "e": "陳第抵達今臺南一帶，當地平埔族群為西拉雅族。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900019",
+      "revision": 1,
+      "number": 19,
+      "originalQuestionNumber": "19",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "臺灣排灣族擁有特有的頭目、貴族、勇士、平民的階級制度，最自豪的藝術文化為鼻笛，以人首與百步蛇的木雕廣為人知。請問：上述排灣族最可能分布於附圖中何處？",
+      "o": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ],
+      "a": 0,
+      "e": "排灣族主要分布於臺灣南部屏東一帶，對應圖中①。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q19.webp",
+      "imageAlt": "臺灣原住民族分布位置示意圖，以①②③④標示不同區域",
+      "imagePending": true
+    },
+    {
+      "questionId": "260924213900020",
+      "revision": 1,
+      "number": 20,
+      "originalQuestionNumber": "20",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "國立臺灣博物館是國內典藏平埔族群文物的重鎮之一，如果館方希望由收藏的展件中重現平埔族群與漢族接觸之社會歷史情境的各地古文書、展現服飾文化之美的傳統服飾、風格獨特兼具線條與寫實之趣的木雕等。下列哪一族群的展件無法展出？",
+      "o": [
+        "貓霧捒族",
+        "西拉雅族",
+        "凱達格蘭族",
+        "撒奇萊雅族"
+      ],
+      "a": 3,
+      "e": "撒奇萊雅族屬高山各族，非平埔族群。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900021",
+      "revision": 1,
+      "number": 21,
+      "originalQuestionNumber": "21",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous"
+      ],
+      "q": "北一女學生穎之，每天上下學都會行經總統府前的凱達格蘭大道，雄壯威武的憲兵最令她印象深刻。請問：此道路名稱的由來，和附圖中哪一個原住民族群有關？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 0,
+      "e": "凱達格蘭族傳統分布於臺灣北部，圖中甲為凱達格蘭族。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0910-q21.webp",
+      "imageAlt": "臺灣原住民族傳統分布圖，以甲乙丙丁標示不同族群位置",
+      "imagePending": true
+    },
+    {
+      "questionId": "260924213900022",
+      "revision": 1,
+      "number": 22,
+      "originalQuestionNumber": "22",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-oral-tradition",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "老師帶領同學們拜訪某一臺灣原住民部落後，同學們寫下以下心得：\n他們的祖先有著躲避大洪水的傳說，他們是原住民部落中人數最多的族群。」請問：老師帶同學們去訪問的，是哪一原住民族群？",
+      "o": [
+        "泰雅族",
+        "阿美族",
+        "布農族",
+        "卑南族"
+      ],
+      "a": 1,
+      "e": "阿美族有洪水起源傳說，且為臺灣原住民族人口最多的族群。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900023",
+      "revision": 1,
+      "number": 23,
+      "originalQuestionNumber": "23",
+      "sourcePage": 4,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-oral-tradition"
+      ],
+      "q": "臺灣原住民族沒有自己的文字，由代代相傳的神話以及口述傳說，傳承族群的文化與生活的方式與活動足跡。請問下列何傳說，屬於臺灣原住民族的起源？",
+      "o": [
+        "上帝造人說",
+        "野獸化人說",
+        "先知分海說",
+        "洪水漂流說"
+      ],
+      "a": 3,
+      "e": "臺灣原住民族起源傳說常見洪水漂流說與岩石始祖說。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900024",
+      "revision": 1,
+      "number": 24,
+      "originalQuestionNumber": "24",
+      "sourcePage": 4,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-oral-tradition",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "臺灣某個原住民族代代相傳的傳說，很久以前，在現在的大霸尖山有一塊巨石，每天都有鳥在巨石前叫著。有一天，巨石被鳥推開而崩裂，從巨石裡走出一男一女，是最早出現在地面上的人類，就是這個原住民族的祖先。請問這個原住民族是？",
+      "o": [
+        "卑南族",
+        "阿美族",
+        "泰雅族",
+        "達悟族"
+      ],
+      "a": 2,
+      "e": "從巨石走出一男一女的岩石始祖傳說屬泰雅族。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260924213900025",
+      "revision": 1,
+      "number": 25,
+      "originalQuestionNumber": "25",
+      "sourcePage": 4,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜臺灣原住民",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-oral-tradition",
+        "hist-7-1-1-highland-indigenous"
+      ],
+      "q": "臺灣各個原住民族的神話，有不少關於洪水氾濫、族人漂流避難的傳說故事。如某個原住民族的神話，有巨蛇堵住溪水出海口，以至於大水淹沒陸地，族人與動物逃往玉山避難。請問下面哪一個原住民族，有洪水漂流的傳說？",
+      "o": [
+        "魯凱族",
+        "布農族",
+        "排灣族",
+        "噶瑪蘭族"
+      ],
+      "a": 1,
+      "e": "布農族有洪水漂流傳說。",
+      "sourceFile": "0910-七上歷史-全版本-臺灣原住民 題目卷.pdf",
+      "answerFile": "0910-七上歷史-全版本-臺灣原住民 解析卷.pdf",
+      "lifecycle": "staging"
+    }
+  ]
+}
