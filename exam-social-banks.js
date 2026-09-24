@@ -7,7 +7,10 @@
       subtitle: '認識位置與地圖｜選擇難度',
       path: 'chapter-bank/social/7-1/geography/chapter-01',
       questionCount: 10,
-      pointsPerQuestion: 10
+      pointsPerQuestion: 10,
+      schoolBank: 'school-exams-kaimo-0903.json',
+      schoolBankCount: 25,
+      schoolBankLabel: '高雄楷模書院'
     },
     'geo-02': {
       title: '第2章　世界中的臺灣',
