@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "sourceType": "school-exam",
+    "sourceProvider": "高雄楷模書院",
+    "school": "unknown",
+    "publisherVersion": "適康版（康軒）",
+    "year": "unknown",
+    "schoolYear": "unknown",
+    "semester": 1,
+    "grade": 7,
+    "examName": "第一份練習卷｜Get Ready",
+    "subject": "english",
+    "sourceFile": "0903-七上英文-適康版-Get Ready 題目卷.pdf",
+    "answerFile": "0903-七上英文-適康版-Get Ready 解析卷.pdf",
+    "answerVerified": true,
+    "preserveOptionOrder": true
+  },
+  "lessonMapping": "lesson-01",
+  "questions": [
+    {
+      "questionId": "260926223000008",
+      "revision": 1,
+      "originalQuestionNumber": "一-8",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "A：＿＿＿ is he? B：He is ＿＿＿ brother, Andy.",
+      "o": [
+        "How; his",
+        "Who; my",
+        "What; he",
+        "How old; my"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "Who; my"
+      ],
+      "referenceAnswer": "Who; my",
+      "chapterTags": [
+        "lesson-01",
+        "grammar-3"
+      ],
+      "conceptIds": [
+        "english-7-1-l1-who",
+        "english-7-1-l1-family"
+      ],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000013",
+      "revision": 1,
+      "originalQuestionNumber": "一-13",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "Mike：Who ＿＿＿ in the room（房間）? Irene：Roy and his brother ＿＿＿.",
+      "o": [
+        "be; are",
+        "are; is",
+        "is; are",
+        "am; is"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "is; are"
+      ],
+      "referenceAnswer": "is; are",
+      "chapterTags": [
+        "lesson-01",
+        "grammar-1",
+        "grammar-3"
+      ],
+      "conceptIds": [
+        "english-7-1-l1-who",
+        "english-7-1-l1-be"
+      ],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000023",
+      "revision": 1,
+      "originalQuestionNumber": "三-2",
+      "sourcePage": 3,
+      "type": "translation",
+      "questionType": "translation",
+      "q": "Fred：那個男孩是誰？ Tina：他是我的弟弟。他的名字是 Jack。",
+      "gradingMode": "ai",
+      "acceptedAnswers": [
+        "Fred: Who is that boy? Tina: He is my brother. His name is Jack."
+      ],
+      "referenceAnswer": "Fred: Who is that boy? Tina: He is my brother. His name is Jack.",
+      "chapterTags": [
+        "lesson-01",
+        "word-bank",
+        "grammar-3"
+      ],
+      "conceptIds": [
+        "english-7-1-l1-who",
+        "english-7-1-l1-family"
+      ],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "整句式翻譯",
+      "aiGrading": "required"
+    }
+  ]
+}
