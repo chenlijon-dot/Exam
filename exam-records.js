@@ -258,7 +258,18 @@
   }
 
   function makeSignature(attempt) {
-    return `${attempt.examKey}|${attempt.metricType}|${attempt.correct}|${attempt.incorrect}|${attempt.unanswered}|${attempt.answers.map(a => a.selectedIndex ?? 'x').join(',')}`;
+    const answerSignature = (attempt.answers || []).map(answer => {
+      const identity = answer.questionId || answer.number || '';
+      const revision = answer.questionRevision || '';
+      const result = answer.result || '';
+      const response = answer.selectedCanonicalIndex ??
+        answer.selectedIndex ??
+        answer.studentAnswer ??
+        answer.selectedText ??
+        '';
+      return `${identity}@${revision}:${result}:${String(response)}`;
+    }).join('||');
+    return `${attempt.examKey}|${attempt.metricType}|${attempt.correct}|${attempt.incorrect}|${attempt.unanswered}|${answerSignature}`;
   }
 
   function storeAttemptLocally(attempt) {
