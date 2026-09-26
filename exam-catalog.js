@@ -31,9 +31,13 @@
   const ENGLISH_7_1_LESSONS = [
     {
       key: 'english-7-1-get-ready', code: 'Get Ready', title: '哈囉你好嗎？', page: 1,
-      type: 'ready', referenceReady: true, bankMenuReady: false,
+      type: 'ready', referenceReady: true, bankMenuReady: false, schoolExamReady: true,
       referencePath: 'chapter-bank/english/7-1/get-ready/reference.json',
-      desc: '字母、招呼、基本介紹、姓名、年齡與英文書寫原則；僅提供教材參考資料，不建立章節題庫。'
+      schoolExamPaths: [
+        'chapter-bank/english/7-1/get-ready/school-exams-kaimo-0903.json',
+        'chapter-bank/english/7-1/lesson-01/school-exams-kaimo-0903.json'
+      ],
+      desc: '字母、招呼、基本介紹、姓名、年齡與英文書寫原則；已收錄 Get Ready 真實練習卷。'
     },
     {
       key: 'english-7-1-lesson-01', code: 'Lesson 1', title: 'Who’s That Young Man?', page: 9,
@@ -649,6 +653,11 @@
           <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge ${lesson.bankMenuReady ? 'reference' : 'soon'}">${lesson.bankMenuReady ? '45 題已建立' : '待建'}</span></span>
           <span class="desc">${lesson.bankMenuReady ? '簡易、中等、困難各 15 題；四選一並附逐題詳解。' : '教材內容確認後，再建立單字、文法、閱讀與各校段考拆解題。'}</span>
         </button>`}
+        ${lesson.schoolExamReady && Array.isArray(lesson.schoolExamPaths) ? `
+        <button class="catalog-card chapter-card" id="englishSchoolExamBtn">
+          <span class="top"><strong>🏫 真實考題</strong><span class="catalog-badge school">24 題</span></span>
+          <span class="desc">高雄楷模書院提供｜適康版 Get Ready 第一份練習卷；保留原題號、原選項與手寫題型。</span>
+        </button>` : ''}
       </div>`;
     $('#backEnglish71LessonsBtn')?.addEventListener('click', showEnglish71Lessons);
     if (lesson.referenceReady && lesson.referencePath) {
@@ -656,6 +665,74 @@
     }
     if (lesson.type !== 'ready' && lesson.bankMenuReady && lesson.banks) {
       $('#englishLessonBankBtn')?.addEventListener('click', () => showEnglishLessonBanks(lessonKey));
+    }
+    if (lesson.schoolExamReady && Array.isArray(lesson.schoolExamPaths)) {
+      $('#englishSchoolExamBtn')?.addEventListener('click', event => {
+        openEnglishSchoolExam(lessonKey, event.currentTarget);
+      });
+    }
+  }
+
+  async function openEnglishSchoolExam(lessonKey, button) {
+    const lesson = ENGLISH_7_1_LESSONS.find(item => item.key === lessonKey);
+    const paths = lesson?.schoolExamPaths;
+    if (!lesson || !Array.isArray(paths) || !paths.length || !button) return;
+
+    const oldHtml = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="top"><span class="icon">⏳</span><strong>準備真實考題…</strong></span><span class="desc">正在合併原卷各章 sidecar</span>';
+
+    try {
+      const payloads = await Promise.all(paths.map(async path => {
+        const response = await fetch(path, { cache:'no-store' });
+        if (!response.ok) throw new Error(`${path} HTTP ${response.status}`);
+        return response.json();
+      }));
+
+      const merged = payloads
+        .flatMap(data => Array.isArray(data.questions) ? data.questions : [])
+        .sort((a,b) => String(a.questionId || '').localeCompare(String(b.questionId || '')))
+        .map((question,index) => ({
+          ...question,
+          number: index + 1,
+          displayNumber: question.originalQuestionNumber || String(index + 1),
+          subject: 'english'
+        }));
+
+      if (merged.length !== 24) throw new Error(`題數異常：${merged.length}/24`);
+      if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
+
+      const key = 'english-7-1-get-ready-kaimo-0903';
+      banks[key] = merged;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        key,
+        difficulty: key,
+        title: 'Get Ready｜真實考題',
+        subtitle: '高雄楷模書院提供｜適康版｜第一份練習卷｜24 題',
+        subject: 'english',
+        subjectLabel: '國一英文',
+        semester: '7-1',
+        semesterLabel: '七年級上學期',
+        unit: 'Get Ready',
+        lesson: 'get-ready',
+        examType: 'english-school-exam',
+        sourceType: 'school-exam',
+        sourceProvider: '高雄楷模書院',
+        school: 'unknown',
+        examName: '第一份練習卷｜Get Ready',
+        scoreMode: 'percent',
+        preserveOptionOrder: true,
+        backLabel: '返回 Get Ready',
+        onBack: () => showEnglish71Lesson(lessonKey)
+      };
+
+      window.startExam(key);
+    } catch (error) {
+      console.error('[english-school-exam] load failed', error);
+      alert(`真實考題載入失敗：${error.message}`);
+      button.disabled = false;
+      button.innerHTML = oldHtml;
     }
   }
 
