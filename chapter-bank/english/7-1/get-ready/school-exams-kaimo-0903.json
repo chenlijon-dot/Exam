@@ -1,0 +1,603 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "sourceType": "school-exam",
+    "sourceProvider": "高雄楷模書院",
+    "school": "unknown",
+    "publisherVersion": "適康版（康軒）",
+    "year": "unknown",
+    "schoolYear": "unknown",
+    "semester": 1,
+    "grade": 7,
+    "examName": "第一份練習卷｜Get Ready",
+    "subject": "english",
+    "sourceFile": "0903-七上英文-適康版-Get Ready 題目卷.pdf",
+    "answerFile": "0903-七上英文-適康版-Get Ready 解析卷.pdf",
+    "answerVerified": true,
+    "preserveOptionOrder": true
+  },
+  "lessonMapping": "get-ready",
+  "questions": [
+    {
+      "questionId": "260926223000001",
+      "revision": 1,
+      "originalQuestionNumber": "一-1",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "Mr. Collins is my teacher. ＿＿＿ is tall.",
+      "o": [
+        "I",
+        "He",
+        "Her",
+        "His"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "He"
+      ],
+      "referenceAnswer": "He",
+      "chapterTags": [
+        "get-ready",
+        "introductions"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000002",
+      "revision": 1,
+      "originalQuestionNumber": "一-2",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "＿＿＿ are a student.",
+      "o": [
+        "I",
+        "You",
+        "He",
+        "She"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "You"
+      ],
+      "referenceAnswer": "You",
+      "chapterTags": [
+        "get-ready",
+        "introductions"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000003",
+      "revision": 1,
+      "originalQuestionNumber": "一-3",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "A boy is crying（哭）there. Is he ＿＿＿ brother?",
+      "o": [
+        "you",
+        "you’re",
+        "your",
+        "he’s"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "your"
+      ],
+      "referenceAnswer": "your",
+      "chapterTags": [
+        "get-ready",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000004",
+      "revision": 1,
+      "originalQuestionNumber": "一-4",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "A：How are you? B：＿＿＿ am fine. Thank you.",
+      "o": [
+        "She",
+        "I",
+        "He",
+        "You"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "I"
+      ],
+      "referenceAnswer": "I",
+      "chapterTags": [
+        "get-ready",
+        "greetings",
+        "introductions"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000005",
+      "revision": 1,
+      "originalQuestionNumber": "一-5",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "Brian：What’s your new teacher’s name? Diana：＿＿＿ name is Jeremy.",
+      "o": [
+        "He’s",
+        "My",
+        "His",
+        "Your"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "His"
+      ],
+      "referenceAnswer": "His",
+      "chapterTags": [
+        "get-ready",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000006",
+      "revision": 1,
+      "originalQuestionNumber": "一-6",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "＿＿＿ sister is tall, but ＿＿＿ am short.",
+      "o": [
+        "My; I",
+        "I; my",
+        "I; I",
+        "My; my"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "My; I"
+      ],
+      "referenceAnswer": "My; I",
+      "chapterTags": [
+        "get-ready",
+        "introductions",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000007",
+      "revision": 1,
+      "originalQuestionNumber": "一-7",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "Jane is ＿＿＿ sister. They are twins（雙胞胎）.",
+      "o": [
+        "he",
+        "her",
+        "she",
+        "you"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "her"
+      ],
+      "referenceAnswer": "her",
+      "chapterTags": [
+        "get-ready",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000009",
+      "revision": 1,
+      "originalQuestionNumber": "一-9",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "My sister is ＿＿＿ old. She is cute（可愛的）.",
+      "o": [
+        "one years",
+        "one year",
+        "one-year",
+        "year one"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "one year"
+      ],
+      "referenceAnswer": "one year",
+      "chapterTags": [
+        "get-ready",
+        "age"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000010",
+      "revision": 1,
+      "originalQuestionNumber": "一-10",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "A：My dog is old. B：How old is he? A：He’s already（已經）＿＿＿.",
+      "o": [
+        "thirteen year old",
+        "thirteen years old",
+        "thirteen-year-old",
+        "thirteen-years-old"
+      ],
+      "a": 1,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "thirteen years old"
+      ],
+      "referenceAnswer": "thirteen years old",
+      "chapterTags": [
+        "get-ready",
+        "age"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000011",
+      "revision": 1,
+      "originalQuestionNumber": "一-11",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "My dog, Cody, ＿＿＿ fifteen years old. ＿＿＿ old.",
+      "o": [
+        "is; It’s",
+        "am; He’s",
+        "is; Its",
+        "are; His"
+      ],
+      "a": 0,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "is; It’s"
+      ],
+      "referenceAnswer": "is; It’s",
+      "chapterTags": [
+        "get-ready",
+        "age",
+        "introductions"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000012",
+      "revision": 1,
+      "originalQuestionNumber": "一-12",
+      "sourcePage": 1,
+      "type": "mcq",
+      "questionType": "mcq",
+      "q": "Cathy：Is Lucy seven ＿＿＿ old? Frank：Yes, she is a seven-＿＿＿-old girl.",
+      "o": [
+        "years; years",
+        "year; years",
+        "years; year",
+        "year; year"
+      ],
+      "a": 2,
+      "fixedOptions": true,
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "years; year"
+      ],
+      "referenceAnswer": "years; year",
+      "chapterTags": [
+        "get-ready",
+        "age"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000014",
+      "revision": 1,
+      "originalQuestionNumber": "二-1",
+      "sourcePage": 2,
+      "type": "sentence-correction",
+      "questionType": "sentence-correction",
+      "q": "My name is tom.",
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "My name is Tom."
+      ],
+      "referenceAnswer": "My name is Tom.",
+      "chapterTags": [
+        "get-ready",
+        "writing",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "改成正確的句子",
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000015",
+      "revision": 1,
+      "originalQuestionNumber": "二-2",
+      "sourcePage": 2,
+      "type": "sentence-correction",
+      "questionType": "sentence-correction",
+      "q": "Goodafternoon。",
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "Good afternoon."
+      ],
+      "referenceAnswer": "Good afternoon.",
+      "chapterTags": [
+        "get-ready",
+        "writing",
+        "greetings"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "改正英文句子書寫格式上的錯誤",
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000016",
+      "revision": 1,
+      "originalQuestionNumber": "二-3",
+      "sourcePage": 2,
+      "type": "sentence-correction",
+      "questionType": "sentence-correction",
+      "q": "how are you,",
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "How are you?"
+      ],
+      "referenceAnswer": "How are you?",
+      "chapterTags": [
+        "get-ready",
+        "writing",
+        "greetings"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "改正英文句子書寫格式上的錯誤",
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000017",
+      "revision": 1,
+      "originalQuestionNumber": "二-4",
+      "sourcePage": 2,
+      "type": "sentence-transformation",
+      "questionType": "sentence-transformation",
+      "q": "Her name is Peggy, and his name is Brian.",
+      "gradingMode": "hybrid",
+      "acceptedAnswers": [
+        "She is Peggy, and he is Brian."
+      ],
+      "referenceAnswer": "She is Peggy, and he is Brian.",
+      "chapterTags": [
+        "get-ready",
+        "introductions",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "用代名詞主格改寫",
+      "aiGrading": "fallback"
+    },
+    {
+      "questionId": "260926223000018",
+      "revision": 1,
+      "originalQuestionNumber": "二-5",
+      "sourcePage": 2,
+      "type": "pronoun-replacement",
+      "questionType": "pronoun-replacement",
+      "q": "That girl is the boy’s sister.",
+      "gradingMode": "hybrid",
+      "acceptedAnswers": [
+        "She is his sister."
+      ],
+      "referenceAnswer": "She is his sister.",
+      "chapterTags": [
+        "get-ready",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "把畫線部分改成代名詞",
+      "formatEvidence": {
+        "underlineSpans": [
+          "That girl",
+          "the boy’s"
+        ]
+      },
+      "aiGrading": "fallback"
+    },
+    {
+      "questionId": "260926223000019",
+      "revision": 1,
+      "originalQuestionNumber": "二-6",
+      "sourcePage": 2,
+      "type": "answer-the-question",
+      "questionType": "answer-the-question",
+      "q": "I’m fine.",
+      "gradingMode": "normalized",
+      "acceptedAnswers": [
+        "How are you?"
+      ],
+      "referenceAnswer": "How are you?",
+      "chapterTags": [
+        "get-ready",
+        "greetings"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "依畫線部分造原問句",
+      "formatEvidence": {
+        "underlineSpans": [
+          "fine"
+        ]
+      },
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000020",
+      "revision": 1,
+      "originalQuestionNumber": "二-7",
+      "sourcePage": 2,
+      "type": "sentence-transformation",
+      "questionType": "sentence-transformation",
+      "q": "His name’s Richard.",
+      "gradingMode": "normalized",
+      "acceptedAnswers": [
+        "He’s Richard.",
+        "He is Richard."
+      ],
+      "referenceAnswer": "He’s Richard.",
+      "chapterTags": [
+        "get-ready",
+        "introductions",
+        "names"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "用代名詞主格改寫",
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000021",
+      "revision": 1,
+      "originalQuestionNumber": "二-8",
+      "sourcePage": 2,
+      "type": "sentence-correction",
+      "questionType": "sentence-correction",
+      "q": "mary is my student.",
+      "gradingMode": "exact",
+      "acceptedAnswers": [
+        "Mary is my student."
+      ],
+      "referenceAnswer": "Mary is my student.",
+      "chapterTags": [
+        "get-ready",
+        "writing"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "改成正確的句子",
+      "aiGrading": "none"
+    },
+    {
+      "questionId": "260926223000022",
+      "revision": 1,
+      "originalQuestionNumber": "三-1",
+      "sourcePage": 3,
+      "type": "translation",
+      "questionType": "translation",
+      "q": "她的名字叫 Mimi。她是我的貓。",
+      "gradingMode": "ai",
+      "acceptedAnswers": [
+        "Her name is Mimi. She is my cat."
+      ],
+      "referenceAnswer": "Her name is Mimi. She is my cat.",
+      "chapterTags": [
+        "get-ready",
+        "names",
+        "introductions"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "整句式翻譯",
+      "aiGrading": "required"
+    },
+    {
+      "questionId": "260926223000024",
+      "revision": 1,
+      "originalQuestionNumber": "三-3",
+      "sourcePage": 3,
+      "type": "translation",
+      "questionType": "translation",
+      "q": "Liz：你媽媽好嗎？ Ben：她很好。謝謝你。",
+      "gradingMode": "ai",
+      "acceptedAnswers": [
+        "Liz: How is your mother? Ben: She is fine. Thank you."
+      ],
+      "referenceAnswer": "Liz: How is your mother? Ben: She is fine. Thank you.",
+      "chapterTags": [
+        "get-ready",
+        "greetings"
+      ],
+      "conceptIds": [],
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "prompt": "整句式翻譯",
+      "aiGrading": "required"
+    }
+  ]
+}
