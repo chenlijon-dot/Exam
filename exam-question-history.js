@@ -32,7 +32,7 @@
         : '';
 
     const secondLine = answer && resultLabel
-      ? `上次：選 ${answer}｜${resultLabel}`
+      ? `上次：${answer}｜${resultLabel}`
       : resultLabel
         ? `上次：${resultLabel}`
         : '';
@@ -50,13 +50,33 @@
         answer.selectedDisplayLabel || answer.selectedLetter || answer.selectedText || ''
       ).trim();
       const resultLabel = answer.result === 'correct' ? '正確' : '錯誤';
+      const isOpenResponse = [
+        'handwriting',
+        'spelling',
+        'sentence-correction',
+        'sentence-transformation',
+        'pronoun-replacement',
+        'rearrangement',
+        'translation',
+        'answer-the-question',
+        'sentence-making',
+        'manual',
+        'open-ended'
+      ].includes(String(answer.questionType || '').toLowerCase());
       const label = displayAnswer
-        ? `當時：選 ${displayAnswer}｜${resultLabel}`
+        ? (isOpenResponse
+          ? `當時作答：${displayAnswer}｜${resultLabel}`
+          : `當時：選 ${displayAnswer}｜${resultLabel}`)
         : `當時：${resultLabel}`;
+
+      const feedback = isOpenResponse
+        ? String(answer?.gradingResult?.feedback || answer?.gradingResult?.whyWrong || '').trim()
+        : '';
 
       view[questionId] = {
         wrong: answer.result === 'incorrect',
-        label
+        label,
+        feedback
       };
     }
     return view;
@@ -132,6 +152,12 @@
         ? 'question-history-answer wrong'
         : 'question-history-answer correct';
       info.textContent = historical.label;
+      if (historical.feedback) {
+        const feedback = document.createElement('div');
+        feedback.className = 'question-history-answer-feedback';
+        feedback.textContent = `AI 回饋：${historical.feedback}`;
+        info.appendChild(feedback);
+      }
 
       const annotation = card.querySelector('[data-question-history-annotation]');
       if (annotation) annotation.insertAdjacentElement('afterend', info);
