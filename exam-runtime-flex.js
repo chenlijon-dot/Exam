@@ -162,8 +162,28 @@
     return questionType(question) === 'manual-study';
   }
 
+  const ENGLISH_OPEN_RESPONSE_TYPES = new Set([
+    'spelling',
+    'sentence-correction',
+    'sentence-transformation',
+    'pronoun-replacement',
+    'rearrangement',
+    'translation',
+    'answer-the-question',
+    'sentence-making',
+    'manual',
+    'open-ended'
+  ]);
+
   function isHandwriting(question) {
-    return questionType(question) === 'handwriting';
+    const type = questionType(question);
+    if (type === 'handwriting') return true;
+    const subject = String(
+      question?.subject ||
+      window.examContextCurrent?.subject ||
+      ''
+    ).toLowerCase();
+    return subject === 'english' && ENGLISH_OPEN_RESPONSE_TYPES.has(type);
   }
 
   function handwritingKey(question, questionIndex, ctx = window.examContextCurrent || getContext(level)) {
@@ -429,10 +449,18 @@
         return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="manual-study">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="manual-study-box"><span class="manual-study-badge">紙筆練習｜不計分</span><div class="manual-study-note">${escapeHtml(instruction)}</div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
       }
 
-      if (type === 'handwriting') {
-        const instruction = x.handwritingInstruction || '請寫出完整計算過程與答案；本題會在交卷時由 Firebase Gemini 判題並計分。';
-        const answer = x.expectedAnswer || x.manualAnswer || '';
-        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="handwriting">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="handwriting-box"><span class="handwriting-badge">✍️ 手寫計分題｜Firebase Gemini 判題</span><div class="handwriting-note">${escapeHtml(instruction)}</div><button type="button" class="handwriting-open" data-handwriting-open="${i}">✍️ 開始手寫作答</button><div class="handwriting-preview"><img alt="第${x.number || i+1}題手寫作答預覽"></div><div class="handwriting-status">尚未作答。</div><div class="handwriting-grade"></div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
+      if (isHandwriting(x)) {
+        const isEnglishOpen = String(ctx?.subject || '').toLowerCase() === 'english' && type !== 'handwriting';
+        const instruction = x.handwritingInstruction || x.prompt || (
+          isEnglishOpen
+            ? '請依題目要求手寫英文答案；交卷時由 Firebase Gemini 辨識，再依本題 gradingMode 判分。'
+            : '請寫出完整計算過程與答案；本題會在交卷時由 Firebase Gemini 判題並計分。'
+        );
+        const answer = x.referenceAnswer || x.expectedAnswer || x.manualAnswer || (Array.isArray(x.acceptedAnswers) ? x.acceptedAnswers[0] : '') || '';
+        const badge = isEnglishOpen
+          ? `✍️ 英文手寫計分題｜${escapeHtml(x.gradingMode || 'ai')}`
+          : '✍️ 手寫計分題｜Firebase Gemini 判題';
+        return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}" data-open-response="1">${intro}${qtitle}${media}${diagramMedia}${optionMedia}<div class="handwriting-box"><span class="handwriting-badge">${badge}</span><div class="handwriting-note">${escapeHtml(instruction)}</div><button type="button" class="handwriting-open" data-handwriting-open="${i}">✍️ 開始手寫作答</button><div class="handwriting-preview"><img alt="第${x.number || i+1}題手寫作答預覽"></div><div class="handwriting-status">尚未作答。</div><div class="handwriting-grade"></div></div><div class="explain"><b>參考答案：${escapeHtml(answer)}</b>${x.e ? `　${escapeHtml(x.e)}` : ''}</div></section>`;
       }
 
       const opts = renderOptionList(x, i);
@@ -581,7 +609,15 @@
               index,
               verdict: grading?.verdict || 'unclear',
               recognizedAnswer: grading?.recognizedAnswer || '',
-              confidence: Number(grading?.confidence ?? 0)
+              recognizedWork: grading?.recognizedWork || '',
+              errorStep: grading?.errorStep || '',
+              whyWrong: grading?.whyWrong || '',
+              correction: grading?.correction || '',
+              nextHint: grading?.nextHint || '',
+              feedback: grading?.feedback || '',
+              confidence: Number(grading?.confidence ?? 0),
+              modelName: grading?.modelName || '',
+              gradingMode: grading?.gradingMode || questions[index]?.gradingMode || ''
             })),
             manualStudyTotal:manualTotal,
             score:info.score
