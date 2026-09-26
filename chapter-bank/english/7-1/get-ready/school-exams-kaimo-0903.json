@@ -449,7 +449,7 @@
     },
     {
       "questionId": "260926223000018",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-5",
       "sourcePage": 2,
       "type": "pronoun-replacement",
@@ -457,7 +457,8 @@
       "q": "That girl is the boy’s sister.",
       "gradingMode": "hybrid",
       "acceptedAnswers": [
-        "She is his sister."
+        "She is his sister.",
+        "She is the boy's sister."
       ],
       "referenceAnswer": "She is his sister.",
       "chapterTags": [
@@ -465,16 +466,21 @@
         "names"
       ],
       "conceptIds": [],
-      "answerVerified": true,
+      "answerVerified": false,
       "preserveOptionOrder": true,
       "prompt": "把畫線部分改成代名詞",
       "formatEvidence": {
         "underlineSpans": [
-          "That girl",
-          "the boy’s"
+          "That girl"
         ]
       },
-      "aiGrading": "fallback"
+      "aiGrading": "fallback",
+      "authorityConflict": {
+        "status": "pending",
+        "questionEvidence": "原卷影像確認畫線只有 That girl。",
+        "answerAuthority": "解析卷答案為 She is his sister.，並在詳解同時改寫 the boy’s → his。",
+        "gradingDecision": "暫時接受解析卷答案，以及依原卷畫線指示得到的 She is the boy's sister.；待來源釐清後再收斂。"
+      }
     },
     {
       "questionId": "260926223000019",
