@@ -51,10 +51,11 @@
     } catch {}
   }
 
-  async function waitForFirebaseGrader(timeoutMs = 12000) {
+  async function waitForFirebaseGrader(timeoutMs = 12000, subject = 'math') {
     const started = performance.now();
+    const method = subject === 'english' ? 'gradeEnglishHandwriting' : 'gradeMathHandwriting';
     while (performance.now() - started < timeoutMs) {
-      if (typeof window.ChrisExamAI?.gradeMathHandwriting === 'function') {
+      if (typeof window.ChrisExamAI?.[method] === 'function') {
         return window.ChrisExamAI;
       }
       await new Promise(resolve => setTimeout(resolve, 120));
@@ -342,7 +343,7 @@
     });
   }
 
-  async function uploadAndGrade({ key, question }) {
+  async function uploadAndGrade({ key, question, context = {} }) {
     const answer = getAnswer(key);
 
     if (!answer?.dataUrl) {
@@ -360,7 +361,27 @@
       };
     }
 
-    const ai = await waitForFirebaseGrader();
+    const subject = String(context?.subject || question?.subject || '').toLowerCase() === 'english'
+      ? 'english'
+      : 'math';
+    const ai = await waitForFirebaseGrader(12000, subject);
+
+    if (subject === 'english') {
+      const questionOverride = {
+        id: question.questionId || key,
+        semester: context?.semester || question.semester || '',
+        unit: context?.unit || question.unit || '',
+        lesson: context?.lesson || context?.section || '',
+        concept: Array.isArray(question.conceptIds) ? question.conceptIds.join(', ') : '',
+        text: question.q || '',
+        prompt: question.prompt || '',
+        questionType: question.questionType || question.type || 'open-ended',
+        gradingMode: question.gradingMode || 'ai',
+        acceptedAnswers: question.acceptedAnswers || [],
+        referenceAnswer: question.referenceAnswer || question.expectedAnswer || question.manualAnswer || ''
+      };
+      return ai.gradeEnglishHandwriting(answer.dataUrl, questionOverride);
+    }
 
     const questionOverride = {
       id: question.questionId || key,
