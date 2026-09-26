@@ -194,6 +194,26 @@
     return `${ctx?.key || level || 'exam'}::${number}`;
   }
 
+  function renderQuestionText(question) {
+    const raw = String(question?.q || '');
+    const spans = Array.isArray(question?.formatEvidence?.underlineSpans)
+      ? question.formatEvidence.underlineSpans.filter(Boolean)
+      : [];
+    if (!spans.length) return escapeHtml(raw);
+
+    let html = '';
+    let cursor = 0;
+    for (const span of spans) {
+      const index = raw.indexOf(span, cursor);
+      if (index < 0) continue;
+      html += escapeHtml(raw.slice(cursor, index));
+      html += `<u>${escapeHtml(span)}</u>`;
+      cursor = index + span.length;
+    }
+    html += escapeHtml(raw.slice(cursor));
+    return html;
+  }
+
   function renderOptionList(question, questionIndex) {
     const options = Array.isArray(question?.o) ? question.o : [];
     const images = Array.isArray(question?.optionImages) ? question.optionImages : [];
@@ -441,7 +461,8 @@
         ? `<div class="question-diagram-host" data-diagram-question="${i}"></div>`
         : '';
       const optionMedia = x.optionImage ? `<div class="question-media option-media"><img src="${escapeHtml(x.optionImage)}" alt="${escapeHtml(x.optionImageAlt || `第${i+1}題選項圖`)}" loading="lazy"></div>` : '';
-      const qtitle = `<div class="qtitle"><span class="num">${x.number || i+1}</span><span class="question-text">${escapeHtml(x.q)}</span></div>`;
+      const shownNumber = x.displayNumber || x.originalQuestionNumber || x.number || i + 1;
+      const qtitle = `<div class="qtitle"><span class="num">${escapeHtml(shownNumber)}</span><span class="question-text">${renderQuestionText(x)}</span></div>`;
 
       if (type === 'manual-study') {
         const instruction = x.manualInstruction || '請在紙上作答；本題不列入自動計分。';
