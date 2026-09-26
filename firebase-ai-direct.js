@@ -247,6 +247,117 @@
     };
   }
 
+
+  function englishExactNormalize(value) {
+    return String(value ?? '').trim();
+  }
+
+  function englishNormalized(value) {
+    return String(value ?? '')
+      .trim()
+      .replace(/[’‘]/g, "'")
+      .replace(/[“”]/g, '"')
+      .replace(/，/g, ',')
+      .replace(/。/g, '.')
+      .replace(/？/g, '?')
+      .replace(/！/g, '!')
+      .replace(/：/g, ':')
+      .replace(/；/g, ';')
+      .replace(/\\s+/g, ' ')
+      .replace(/\\s+([,.?!:;])/g, '$1')
+      .replace(/\\b(he|she|it)\\s+is\\b/gi, "$1's")
+      .replace(/\\byou\\s+are\\b/gi, "you're")
+      .replace(/\\bwe\\s+are\\b/gi, "we're")
+      .replace(/\\bthey\\s+are\\b/gi, "they're")
+      .replace(/\\bi\\s+am\\b/gi, "i'm");
+  }
+
+  function englishDeterministicMatch(answer, acceptedAnswers, mode) {
+    const accepted = Array.isArray(acceptedAnswers) ? acceptedAnswers.filter(Boolean) : [];
+    if (!accepted.length) return false;
+    if (mode === 'exact') {
+      const candidate = englishExactNormalize(answer);
+      return accepted.some(item => englishExactNormalize(item) === candidate);
+    }
+    const candidate = englishNormalized(answer);
+    return accepted.some(item => englishNormalized(item).toLowerCase() === candidate.toLowerCase());
+  }
+
+  async function gradeEnglishHandwriting(dataUrl, questionOverride = null) {
+    const match = String(dataUrl || '').match(/^data:(image\\/[a-zA-Z0-9.+-]+);base64,(.+)$/s);
+    if (!match) throw new Error('找不到可判讀的英文手寫圖片。');
+
+    const question = questionOverride || {};
+    const gradingMode = String(question.gradingMode || 'ai').toLowerCase();
+    const acceptedAnswers = Array.isArray(question.acceptedAnswers)
+      ? question.acceptedAnswers.filter(Boolean)
+      : [];
+    const referenceAnswer = question.referenceAnswer || acceptedAnswers[0] || question.expectedAnswer || '';
+    const prompt = `你是台灣國中七年級英文老師。請先忠實辨識學生手寫英文，再依題目要求判定作答。
+
+題型：${question.questionType || question.type || 'open-ended'}
+gradingMode：${gradingMode}
+題目：${question.text || ''}
+作答提示：${question.prompt || ''}
+參考答案：${referenceAnswer}
+acceptedAnswers：${JSON.stringify(acceptedAnswers)}
+課次／概念：${question.lesson || question.unit || ''} ${question.concept || ''}
+
+判讀原則：
+1. 這是國一英文，不是英文作文競賽。
+2. 先忠實抄錄學生實際寫出的英文到 recognizedAnswer；大小寫、拼字、標點要盡量照原稿，不要自行修正。
+3. 若字跡無法可靠辨識，verdict=unclear，不要猜。
+4. 語意、核心文法、指定轉換、代名詞、be 動詞、所有格等依題目考點判定。
+5. 合理縮寫與不同但正確表達，可在 hybrid / ai 題型接受。
+6. 若題目本身考大小寫、標點、拼字或書寫格式，這些細節就是考點，不可寬鬆放過。
+7. exact / normalized 題型的最終對錯會由程式 deterministic 比對；你仍需忠實辨識 recognizedAnswer，並可提供 feedback。
+8. hybrid 題型只有在 deterministic acceptedAnswers 比對失敗時，才採用你的語意判斷。
+9. ai 題型直接依上述國一英文 rubric 判斷，不要求逐字等同參考答案。
+10. verdict=correct 時 correction 留空；incorrect 時簡短指出錯誤並提供 suggested correction。
+11. 使用繁體中文回饋。
+
+只回傳 JSON，不要 Markdown：
+{"verdict":"correct|incorrect|unclear","recognizedAnswer":"","recognizedWork":"","errorStep":"","whyWrong":"","correction":"","nextHint":"","feedback":"","confidence":0.0}`;
+
+    const { response, modelName } = await generateWithFallback([
+      { text: prompt },
+      { inlineData: { mimeType: match[1], data: match[2].replace(/\\s/g, '') } }
+    ]);
+
+    const obj = parseGeminiJson(response.response.text());
+    let verdict = ['correct','incorrect','unclear'].includes(String(obj.verdict || '').toLowerCase())
+      ? String(obj.verdict).toLowerCase() : 'unclear';
+    const recognizedAnswer = String(obj.recognizedAnswer || '').trim();
+
+    if (verdict !== 'unclear' && (gradingMode === 'exact' || gradingMode === 'normalized')) {
+      verdict = englishDeterministicMatch(recognizedAnswer, acceptedAnswers, gradingMode)
+        ? 'correct' : 'incorrect';
+    } else if (verdict !== 'unclear' && gradingMode === 'hybrid') {
+      if (englishDeterministicMatch(recognizedAnswer, acceptedAnswers, 'normalized')) {
+        verdict = 'correct';
+      }
+    }
+
+    let confidence = Number(obj.confidence);
+    if (!Number.isFinite(confidence)) confidence = null;
+    if (confidence !== null && confidence > 1) confidence /= 100;
+    if (confidence !== null) confidence = Math.max(0, Math.min(1, confidence));
+
+    return {
+      verdict,
+      recognizedAnswer,
+      recognizedWork: String(obj.recognizedWork || ''),
+      errorStep: String(obj.errorStep || ''),
+      whyWrong: String(obj.whyWrong || ''),
+      correction: String(obj.correction || ''),
+      nextHint: String(obj.nextHint || ''),
+      feedback: String(obj.feedback || ''),
+      confidence,
+      modelName,
+      gradingMode
+    };
+  }
+
   function renderMathResult(result, box) {
     const c = {
       correct:{title:'✓ 作答正確',border:'#86efac',bg:'#f0fdf4',ink:'#166534'},
@@ -335,6 +446,7 @@
     generate,
     getModel,
     gradeMathHandwriting,
+    gradeEnglishHandwriting,
     renderMathResult,
     model: MODEL,
     models: [...MODEL_CANDIDATES],
