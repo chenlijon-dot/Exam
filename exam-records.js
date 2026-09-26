@@ -91,7 +91,7 @@
       const explanation = $('.explain', card)?.textContent.replace(/^答案：\s*[A-D]\s*/,'').trim() || '';
       const number = Number(card.dataset.questionNumber || source.number || idx + 1);
 
-      if (questionType === 'handwriting') {
+      if (questionType === 'handwriting' || card.dataset.openResponse === '1') {
         const grading = handwritingByIndex.get(sourceIndex) || {};
         const verdict = grading.verdict || 'unanswered';
 
@@ -99,13 +99,15 @@
         else if (verdict === 'incorrect') incorrect++;
         else unanswered++;
 
-        if (questionId && (verdict === 'correct' || verdict === 'incorrect')) {
+        if (questionId) {
           historyAnswers.push({
             questionId,
             questionRevision,
             questionType,
+            gradingMode: grading.gradingMode || source.gradingMode || '',
             number,
             question,
+            prompt: source.prompt || '',
             options: [],
             selectedIndex: null,
             selectedDisplayIndex: null,
@@ -113,12 +115,25 @@
             selectedLetter: null,
             selectedDisplayLabel: null,
             selectedText: grading.recognizedAnswer || '',
+            studentAnswer: grading.recognizedAnswer || '',
+            recognizedWork: grading.recognizedWork || '',
             correctIndex: null,
             correctCanonicalIndex: null,
             correctLetter: null,
-            correctText: source.expectedAnswer || source.manualAnswer || '',
+            correctText: source.referenceAnswer || source.expectedAnswer || source.manualAnswer || (Array.isArray(source.acceptedAnswers) ? source.acceptedAnswers[0] : '') || '',
+            acceptedAnswers: Array.isArray(source.acceptedAnswers) ? source.acceptedAnswers : [],
             isCorrect: verdict === 'correct',
             result: verdict,
+            gradingResult: {
+              verdict,
+              errorStep: grading.errorStep || '',
+              whyWrong: grading.whyWrong || '',
+              correction: grading.correction || '',
+              nextHint: grading.nextHint || '',
+              feedback: grading.feedback || '',
+              confidence: Number(grading.confidence ?? 0),
+              modelName: grading.modelName || ''
+            },
             explanation,
             intro: source.intro || '',
             introLabel: source.introLabel || '',
