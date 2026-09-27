@@ -284,7 +284,7 @@
   }
 
   async function gradeEnglishHandwriting(dataUrl, questionOverride = null) {
-    const match = String(dataUrl || '').match(/^data:(image\\/[a-zA-Z0-9.+-]+);base64,(.+)$/s);
+    const match = String(dataUrl || '').match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/s);
     if (!match) throw new Error('找不到可判讀的英文手寫圖片。');
 
     const question = questionOverride || {};
