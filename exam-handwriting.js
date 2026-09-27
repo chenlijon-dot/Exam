@@ -66,6 +66,7 @@
         if (typeof window.ChrisExamAI?.gradeMathHandwriting === 'function') {
           resolve(window.ChrisExamAI);
         } else {
+          firebaseAiScriptPromise = null;
           reject(new Error('Firebase AI Logic 腳本已載入，但判題模組尚未初始化。'));
         }
       };
@@ -75,10 +76,9 @@
         reject(new Error('Firebase AI Logic 腳本載入失敗，請檢查網路後再試。'));
       };
 
-      if (script) {
-        script.addEventListener('load', finish, { once:true });
-        script.addEventListener('error', fail, { once:true });
-        return;
+      if (script && typeof window.ChrisExamAI?.gradeMathHandwriting !== 'function') {
+        script.remove();
+        script = null;
       }
 
       script = document.createElement('script');
