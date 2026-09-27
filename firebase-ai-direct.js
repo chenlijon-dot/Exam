@@ -204,12 +204,12 @@
 
   function currentMathQuestion(override = null) {
     return override || window.MathPaperQuestionConfig || {
-      id: 'math-paper-quadratic-test-001',
-      semester: '九年級上學期',
-      unit: '一元二次方程式',
-      text: 'x^2 - 5x + 6 = 0，求 x 的所有解。',
-      expectedAnswer: 'x = 2 或 x = 3',
-      gradingInstructions: '請依數學意義判斷，完整解集合為 x = 2 與 x = 3。'
+      id: 'math-paper-linear-test-001',
+      semester: '七年級上學期',
+      unit: '一元一次方程式',
+      text: '3(x - 2) + 5 = 2x + 7，求 x。',
+      expectedAnswer: 'x = 8',
+      gradingInstructions: '請依數學意義判斷，不可只做答案字串比較。此題正確解為 x = 8。'
     };
   }
 

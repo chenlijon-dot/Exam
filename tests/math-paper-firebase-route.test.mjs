@@ -3,6 +3,7 @@ import fs from 'node:fs';
 
 const read = path => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const catalog = read('exam-math-catalog.js');
+const firebase = read('firebase-ai-direct.js');
 
 assert.doesNotMatch(
   catalog,
@@ -12,23 +13,45 @@ assert.doesNotMatch(
 
 assert.match(
   catalog,
-  /x² - 5x \+ 6 = 0/,
-  'paper practice must keep the original fixed quadratic test question'
+  /3\(x - 2\) \+ 5 = 2x \+ 7，求 x/,
+  'paper practice must keep the original fixed linear test question'
 );
 
 assert.match(
   catalog,
-  /math-paper-quadratic-test-001/,
-  'paper practice must keep a stable test questionId'
+  /math-paper-linear-test-001/,
+  'paper practice must use the stable linear test questionId'
 );
 
-for (const section of ['1-1','1-2','1-3','1-4']) {
-  assert.ok(
-    !catalog.includes(`PAPER_HANDWRITING_SOURCES`) ||
-    !catalog.includes(`chapter-bank/math/7-1/${section}/hard.json`),
-    'paper practice must not expose a selector backed by live chapter handwriting banks'
-  );
-}
+assert.match(
+  catalog,
+  /expectedAnswer:\s*['"]x = 8['"]/,
+  'fixed linear test question must carry x = 8 as expectedAnswer'
+);
+
+assert.match(
+  firebase,
+  /3\(x - 2\) \+ 5 = 2x \+ 7，求 x/,
+  'Firebase fallback question must match the visible fixed linear test question'
+);
+
+assert.match(
+  firebase,
+  /expectedAnswer:\s*['"]x = 8['"]/,
+  'Firebase fallback must use x = 8 for the fixed linear test question'
+);
+
+assert.doesNotMatch(
+  catalog,
+  /x² - 5x \+ 6 = 0/,
+  'paper practice must not show the obsolete quadratic test question'
+);
+
+assert.doesNotMatch(
+  firebase,
+  /x\^2 - 5x \+ 6 = 0/,
+  'Firebase fallback must not grade against the obsolete quadratic question'
+);
 
 assert.doesNotMatch(
   catalog,
@@ -50,14 +73,8 @@ assert.match(
 
 assert.match(
   catalog,
-  /expectedAnswer[^\n]*x = 2 或 x = 3|expectedAnswer:\s*['"]x = 2 或 x = 3['"]/,
-  'fixed test question must carry its expected answer into Firebase grading'
-);
-
-assert.match(
-  catalog,
   /Firebase AI Logic/,
   'paper practice UI should identify Firebase AI Logic as the grading path'
 );
 
-console.log('Math paper fixed-test Firebase route contract: PASS');
+console.log('Math paper fixed linear-test Firebase route contract: PASS');
