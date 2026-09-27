@@ -120,18 +120,18 @@
   const $ = (sel, root = document) => root.querySelector(sel);
 
   const PAPER_TEST_QUESTION = {
-    questionId:'math-paper-quadratic-test-001',
+    questionId:'math-paper-linear-test-001',
     revision:1,
     type:'handwriting',
-    q:'x² - 5x + 6 = 0，求 x 的所有解。',
-    handwritingInstruction:'請寫出計算過程，並清楚寫出兩個解。',
-    expectedAnswer:'x = 2 或 x = 3',
-    gradingInstructions:'請以數學意義判斷，不可用答案字串逐字比較。此題完整解集合為 x = 2 與 x = 3。x=2 or 3、x=2,3、x=3,2、{2,3}、x=2 或 x=3 等寫法都代表相同的兩個解，皆應視為答案正確。若學生完整得到 2 與 3 兩個根，而且計算過程沒有明顯數學錯誤，verdict 必須為 correct。只有漏掉其中一個根、加入錯誤的根、或計算過程有實質錯誤時才判 incorrect。',
-    semester:'九年級上學期',
-    unit:'一元二次方程式'
+    q:'3(x - 2) + 5 = 2x + 7，求 x。',
+    handwritingInstruction:'請寫出計算過程，並清楚寫出 x 的值。',
+    expectedAnswer:'x = 8',
+    gradingInstructions:'請依數學意義判斷，不可只做答案字串比較。此題為一元一次方程式 3(x - 2) + 5 = 2x + 7，正確解為 x = 8。若學生得到 x=8、8、x = 8 等等值寫法，且主要移項、展開與運算邏輯正確，verdict 應為 correct；若答案錯誤，請指出最早可確認的實質計算錯誤。',
+    semester:'七年級上學期',
+    unit:'一元一次方程式'
   };
 
-  const PAPER_TEST_KEY = 'math-paper-practice::math-paper-quadratic-test-001';
+  const PAPER_TEST_KEY = 'math-paper-practice::math-paper-linear-test-001';
   let paperPracticeGrade = null;
 
   function paperEscapeHtml(value) {
@@ -266,7 +266,7 @@
 
       await window.ExamHandwriting.openCanvas({
         key:PAPER_TEST_KEY,
-        title:'第 1 題｜x² - 5x + 6 = 0',
+        title:'第 1 題｜3(x - 2) + 5 = 2x + 7',
         subtitle:PAPER_TEST_QUESTION.handwritingInstruction
       });
 
