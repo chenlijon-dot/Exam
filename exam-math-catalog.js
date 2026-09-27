@@ -119,70 +119,25 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
 
-  const PAPER_HANDWRITING_SOURCES = [
-    { section:'1-1', title:'正數與負數', path:'chapter-bank/math/7-1/1-1/hard.json' },
-    { section:'1-2', title:'正負數的加減', path:'chapter-bank/math/7-1/1-2/hard.json' },
-    { section:'1-3', title:'正負數的乘除', path:'chapter-bank/math/7-1/1-3/hard.json' },
-    { section:'1-4', title:'指數記法與科學記號', path:'chapter-bank/math/7-1/1-4/hard.json' }
-  ];
+  const PAPER_TEST_QUESTION = {
+    questionId:'math-paper-quadratic-test-001',
+    revision:1,
+    type:'handwriting',
+    q:'x² - 5x + 6 = 0，求 x 的所有解。',
+    handwritingInstruction:'請寫出計算過程，並清楚寫出兩個解。',
+    expectedAnswer:'x = 2 或 x = 3',
+    gradingInstructions:'請以數學意義判斷，不可用答案字串逐字比較。此題完整解集合為 x = 2 與 x = 3。x=2 or 3、x=2,3、x=3,2、{2,3}、x=2 或 x=3 等寫法都代表相同的兩個解，皆應視為答案正確。若學生完整得到 2 與 3 兩個根，而且計算過程沒有明顯數學錯誤，verdict 必須為 correct。只有漏掉其中一個根、加入錯誤的根、或計算過程有實質錯誤時才判 incorrect。',
+    semester:'九年級上學期',
+    unit:'一元二次方程式'
+  };
 
-  let paperPracticeQuestions = [];
-  let paperPracticeIndex = 0;
-  let paperPracticeLoadPromise = null;
-  const paperPracticeGrades = new Map();
+  const PAPER_TEST_KEY = 'math-paper-practice::math-paper-quadratic-test-001';
+  let paperPracticeGrade = null;
 
   function paperEscapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, ch => ({
       '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
     })[ch]);
-  }
-
-  function paperQuestionKey(question) {
-    const id = question?.questionId || `paper-${paperPracticeIndex + 1}`;
-    return window.ExamHandwriting?.answerKey?.('math-paper-practice', id)
-      || `math-paper-practice::${id}`;
-  }
-
-  async function loadPaperPracticeQuestions() {
-    if (paperPracticeQuestions.length) return paperPracticeQuestions;
-    if (paperPracticeLoadPromise) return paperPracticeLoadPromise;
-
-    paperPracticeLoadPromise = (async () => {
-      const groups = await Promise.all(
-        PAPER_HANDWRITING_SOURCES.map(async source => {
-          const response = await fetch(source.path, { cache:'no-store' });
-          if (!response.ok) throw new Error(`${source.path}：HTTP ${response.status}`);
-          const data = await response.json();
-          return (Array.isArray(data.questions) ? data.questions : [])
-            .filter(question => String(question?.type || question?.questionType || '').toLowerCase() === 'handwriting')
-            .map(question => ({
-              ...question,
-              semester: data.exam?.semester || '7-1',
-              unit: data.exam?.unit || source.title,
-              section: source.section,
-              sectionTitle: source.title,
-              sourcePath: source.path
-            }));
-        })
-      );
-
-      paperPracticeQuestions = groups.flat();
-      if (!paperPracticeQuestions.length) {
-        throw new Error('目前數學題庫找不到可供紙筆作答的手寫題。');
-      }
-      paperPracticeIndex = Math.min(paperPracticeIndex, paperPracticeQuestions.length - 1);
-      return paperPracticeQuestions;
-    })();
-
-    try {
-      return await paperPracticeLoadPromise;
-    } finally {
-      paperPracticeLoadPromise = null;
-    }
-  }
-
-  function currentPaperPracticeQuestion() {
-    return paperPracticeQuestions[paperPracticeIndex] || null;
   }
 
   function renderPaperGrade(result, box) {
@@ -217,9 +172,10 @@
         ${row('應該這樣改：', result.correction)}
         ${row('接著試試看：', result.nextHint)}
         ${result.feedback ? `<div style="margin-top:9px;line-height:1.7">${paperEscapeHtml(result.feedback)}</div>` : ''}
-        ${(confidence || result.modelName)
-          ? `<div style="font-size:.78rem;opacity:.72;margin-top:8px">${confidence ? `判讀信心：${confidence}` : ''}${confidence && result.modelName ? '　' : ''}${result.modelName ? `模型：${paperEscapeHtml(result.modelName)} · Firebase AI Logic` : 'Firebase AI Logic'}</div>`
-          : '<div style="font-size:.78rem;opacity:.72;margin-top:8px">Firebase AI Logic</div>'}
+        <div style="font-size:.78rem;opacity:.72;margin-top:8px">
+          ${confidence ? `判讀信心：${confidence}　` : ''}
+          ${result.modelName ? `模型：${paperEscapeHtml(result.modelName)} · ` : ''}Firebase AI Logic
+        </div>
       </div>`;
   }
 
@@ -246,7 +202,7 @@
       <div style="margin:18px 0 24px">
         <button class="catalog-card chapter-card" id="mathPaperPracticeBtn" style="width:100%;text-align:left;border:2px solid #93c5fd;background:#eff6ff">
           <span class="top"><strong>✍️ 紙筆作答</strong><span class="catalog-badge reference">測試版</span></span>
-          <span class="desc">載入目前數學題庫的手寫題，使用完整作答畫布並由 Firebase AI Logic 判題。</span>
+          <span class="desc">固定測試題，使用完整手寫畫布並由 Firebase AI Logic 判題。</span>
         </button>
       </div>
 
@@ -264,68 +220,25 @@
     $('[data-math-semester="7-1"]')?.addEventListener('click', showMath71Units);
   }
 
-  async function showPaperPractice() {
-    setHeader('數學科｜紙筆作答', '目前題庫手寫題｜Firebase AI Logic');
+  function showPaperPractice() {
+    setHeader('數學科｜紙筆作答', '固定測試題｜Firebase AI Logic');
     document.title = '紙筆作答｜數學科';
 
-    $('#catalogContent').innerHTML = `
-      <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
-      <div class="catalog-path">數學　›　紙筆作答</div>
-      <h2 class="catalog-title">紙筆作答</h2>
-      <p class="catalog-sub">直接使用目前數學題庫中的手寫題；完成作答後由 Firebase AI Logic 的 Gemini 依該題題幹、標準答案與判分規則批改。</p>
-      <div style="padding:18px;border:1px solid #dfe5ee;border-radius:16px;background:#fff;color:#64748b">正在載入目前題庫的手寫題…</div>`;
-
-    $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
-
-    try {
-      await loadPaperPracticeQuestions();
-      renderPaperPractice();
-    } catch (error) {
-      $('#catalogContent').innerHTML = `
-        <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
-        <div class="catalog-path">數學　›　紙筆作答</div>
-        <h2 class="catalog-title">紙筆作答</h2>
-        <div style="padding:14px;border:1px solid #fecaca;border-radius:12px;background:#fef2f2;color:#991b1b">
-          無法載入目前題庫：${paperEscapeHtml(error?.message || error)}
-        </div>`;
-      $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
-    }
-  }
-
-  function renderPaperPractice() {
-    const question = currentPaperPracticeQuestion();
-    if (!question) return;
-
-    const key = paperQuestionKey(question);
-    const answer = window.ExamHandwriting?.getAnswer?.(key);
-    const grade = paperPracticeGrades.get(key) || null;
-
-    const options = paperPracticeQuestions.map((item, index) => {
-      const selected = index === paperPracticeIndex ? 'selected' : '';
-      return `<option value="${index}" ${selected}>${paperEscapeHtml(item.section)}｜${paperEscapeHtml(item.q)}</option>`;
-    }).join('');
+    const answer = window.ExamHandwriting?.getAnswer?.(PAPER_TEST_KEY);
 
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
       <div class="catalog-path">數學　›　紙筆作答</div>
-      <h2 class="catalog-title">紙筆作答</h2>
-      <p class="catalog-sub">目前題庫手寫題，共 ${paperPracticeQuestions.length} 題。作答與正式題庫共用同一套完整手寫畫布，判題直接走 Firebase AI Logic。</p>
-
-      <label style="display:block;margin:14px 0 16px;font-weight:800;color:#334155">
-        選擇目前題目
-        <select id="paperQuestionSelect" style="display:block;width:100%;margin-top:7px;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;font-size:.95rem">
-          ${options}
-        </select>
-      </label>
+      <h2 class="catalog-title">紙筆作答測試</h2>
+      <p class="catalog-sub">使用固定測試題驗證手寫畫布與 Firebase AI Logic 判題流程。</p>
 
       <div style="background:#fff;border:1px solid #dfe5ee;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 4px 14px rgba(15,23,42,.04)">
         <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:#eef4ff;color:#2563eb;font-weight:800">${paperPracticeIndex + 1}</span>
+          <span style="display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:#eef4ff;color:#2563eb;font-weight:800">1</span>
           <div style="flex:1;min-width:0">
-            <div style="font-size:.88rem;color:#64748b;margin-bottom:7px">${paperEscapeHtml(question.section)} ${paperEscapeHtml(question.sectionTitle)}｜${paperEscapeHtml(question.questionId || '')}</div>
             <div style="font-size:1.08rem;font-weight:800;margin:2px 0 8px">請寫出計算過程並求出答案：</div>
-            <div style="font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:8px 0 10px;line-height:1.55">${paperEscapeHtml(question.q)}</div>
-            ${question.handwritingInstruction ? `<div style="font-size:.92rem;color:#64748b;margin-bottom:14px">${paperEscapeHtml(question.handwritingInstruction)}</div>` : ''}
+            <div style="font-size:1.42rem;font-weight:800;letter-spacing:.02em;margin:8px 0 10px;line-height:1.55">${paperEscapeHtml(PAPER_TEST_QUESTION.q)}</div>
+            <div style="font-size:.92rem;color:#64748b;margin-bottom:14px">${paperEscapeHtml(PAPER_TEST_QUESTION.handwritingInstruction)}</div>
             <button id="openMathPaperCanvasBtn" type="button" style="border:0;border-radius:12px;padding:11px 18px;font-size:1rem;font-weight:800;cursor:pointer;background:#2563eb;color:white">✍️ ${answer?.dataUrl ? '修改作答' : '作答'}</button>
 
             <div id="paperAnswerPreview" style="${answer?.dataUrl ? '' : 'display:none;'}margin-top:16px">
@@ -345,29 +258,27 @@
 
     $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
 
-    $('#paperQuestionSelect')?.addEventListener('change', event => {
-      paperPracticeIndex = Number(event.target.value) || 0;
-      renderPaperPractice();
-    });
-
     $('#openMathPaperCanvasBtn')?.addEventListener('click', async () => {
       if (!window.ExamHandwriting?.openCanvas) {
         alert('手寫模組尚未載入，請重新整理後再試。');
         return;
       }
+
       await window.ExamHandwriting.openCanvas({
-        key,
-        title:`${question.section}｜${question.q}`,
-        subtitle:question.handwritingInstruction || '請寫出完整計算過程與答案'
+        key:PAPER_TEST_KEY,
+        title:'第 1 題｜x² - 5x + 6 = 0',
+        subtitle:PAPER_TEST_QUESTION.handwritingInstruction
       });
-      paperPracticeGrades.delete(key);
-      renderPaperPractice();
+
+      paperPracticeGrade = null;
+      showPaperPractice();
     });
 
     $('#submitPaperExamBtn')?.addEventListener('click', async event => {
       const button = event.currentTarget;
       const status = $('#paperSubmitStatus');
       const resultBox = $('#paperAiResult');
+
       if (!window.ExamHandwriting?.uploadAndGrade) {
         alert('Firebase 手寫判題模組尚未載入，請重新整理後再試。');
         return;
@@ -376,21 +287,22 @@
       const oldText = button.textContent;
       button.disabled = true;
       button.textContent = 'Firebase Gemini 判題中…';
-      if (status) status.textContent = '正在將目前題目與手寫作答送交 Firebase AI Logic…';
+      if (status) status.textContent = '正在將固定測試題與手寫作答送交 Firebase AI Logic…';
       if (resultBox) resultBox.innerHTML = '';
 
       try {
         const result = await window.ExamHandwriting.uploadAndGrade({
-          key,
-          question,
+          key:PAPER_TEST_KEY,
+          question:PAPER_TEST_QUESTION,
           context:{
             subject:'math',
-            semester:question.semester || '7-1',
-            unit:question.unit || question.sectionTitle || '',
-            section:question.section || ''
+            semester:PAPER_TEST_QUESTION.semester,
+            unit:PAPER_TEST_QUESTION.unit,
+            section:'paper-test'
           }
         });
-        paperPracticeGrades.set(key, result);
+
+        paperPracticeGrade = result;
         if (status) status.textContent = 'Firebase Gemini 判題完成。';
         renderPaperGrade(result, resultBox);
       } catch (error) {
@@ -402,7 +314,9 @@
       }
     });
 
-    if (grade) renderPaperGrade(grade, $('#paperAiResult'));
+    if (paperPracticeGrade) {
+      renderPaperGrade(paperPracticeGrade, $('#paperAiResult'));
+    }
   }
 
   function showMath71Units() {
