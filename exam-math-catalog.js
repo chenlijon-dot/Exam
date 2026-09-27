@@ -119,555 +119,108 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
 
-  let paperAnswerDataUrl = '';
-  let paperAnswerHasInk = false;
+  const PAPER_HANDWRITING_SOURCES = [
+    { section:'1-1', title:'正數與負數', path:'chapter-bank/math/7-1/1-1/hard.json' },
+    { section:'1-2', title:'正負數的加減', path:'chapter-bank/math/7-1/1-2/hard.json' },
+    { section:'1-3', title:'正負數的乘除', path:'chapter-bank/math/7-1/1-3/hard.json' },
+    { section:'1-4', title:'指數記法與科學記號', path:'chapter-bank/math/7-1/1-4/hard.json' }
+  ];
 
-  const PAPER_RECORD_REPO =
-    'chenlijon-dot/Exam-Record';
-
-  const PAPER_TOKEN_KEY =
-    'examRecords.githubToken.session';
-
-
-  function getPaperGithubToken() {
-    return (
-      sessionStorage.getItem(PAPER_TOKEN_KEY) ||
-      ''
-    );
-  }
-
-
-  function paperUtf8ToBase64(text) {
-    const bytes =
-      new TextEncoder().encode(text);
-
-    let binary = '';
-
-    bytes.forEach(
-      b => binary += String.fromCharCode(b)
-    );
-
-    return btoa(binary);
-  }
-
-
-  function paperBase64ToUtf8(text) {
-    const binary =
-      atob(
-        String(text || '')
-          .replace(/\n/g, '')
-      );
-
-    const bytes =
-      Uint8Array.from(
-        binary,
-        c => c.charCodeAt(0)
-      );
-
-    return new TextDecoder().decode(bytes);
-  }
-
+  let paperPracticeQuestions = [];
+  let paperPracticeIndex = 0;
+  let paperPracticeLoadPromise = null;
+  const paperPracticeGrades = new Map();
 
   function paperEscapeHtml(value) {
-    return String(value ?? '')
-      .replace(
-        /[&<>"']/g,
-        ch => ({
-          '&': '&amp;',
-          '<': '&lt;',
-          '>': '&gt;',
-          '"': '&quot;',
-          "'": '&#39;'
-        })[ch]
-      );
+    return String(value ?? '').replace(/[&<>"']/g, ch => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    })[ch]);
   }
 
-
-  async function paperGithubApi(
-    path,
-    options = {}
-  ) {
-    const token =
-      getPaperGithubToken();
-
-    if (!token) {
-      throw new Error(
-        '請先到「GitHub 同步設定」輸入 Token。'
-      );
-    }
-
-    const res =
-      await fetch(
-        `https://api.github.com${path}`,
-        {
-          ...options,
-
-          headers: {
-            'Accept':
-              'application/vnd.github+json',
-
-            'X-GitHub-Api-Version':
-              '2022-11-28',
-
-            'Authorization':
-              `Bearer ${token}`,
-
-            ...(options.headers || {})
-          }
-        }
-      );
-
-    if (!res.ok) {
-      let detail = '';
-
-      try {
-        detail =
-          (await res.json()).message ||
-          '';
-      } catch {}
-
-      const err =
-        new Error(
-          `GitHub ${res.status}` +
-          (
-            detail
-              ? `：${detail}`
-              : ''
-          )
-        );
-
-      err.status = res.status;
-
-      throw err;
-    }
-
-    return (
-      res.status === 204
-        ? null
-        : res.json()
-    );
+  function paperQuestionKey(question) {
+    const id = question?.questionId || `paper-${paperPracticeIndex + 1}`;
+    return window.ExamHandwriting?.answerKey?.('math-paper-practice', id)
+      || `math-paper-practice::${id}`;
   }
 
+  async function loadPaperPracticeQuestions() {
+    if (paperPracticeQuestions.length) return paperPracticeQuestions;
+    if (paperPracticeLoadPromise) return paperPracticeLoadPromise;
 
-  function mathHandwritingRequestId() {
-    const d = new Date();
-
-    const pad =
-      n => String(n).padStart(2, '0');
-
-    return (
-      `${d.getFullYear()}` +
-      `${pad(d.getMonth() + 1)}` +
-      `${pad(d.getDate())}-` +
-      `${pad(d.getHours())}` +
-      `${pad(d.getMinutes())}` +
-      `${pad(d.getSeconds())}-` +
-      Math.random()
-        .toString(36)
-        .slice(2, 7)
-    );
-  }
-
-
-  async function uploadMathHandwritingRequest(
-    dataUrl
-  ) {
-    const token =
-      getPaperGithubToken();
-
-    if (!token) {
-      throw new Error(
-        '請先到「GitHub 同步設定」輸入 Token。'
-      );
-    }
-
-    const match =
-      String(dataUrl || '').match(
-        /^data:image\/png;base64,(.+)$/s
-      );
-
-    if (!match) {
-      throw new Error(
-        '手寫圖片格式不是 PNG。'
-      );
-    }
-
-    const imageBase64 =
-      match[1].replace(/\s/g, '');
-
-    const id =
-      mathHandwritingRequestId();
-
-    const imagePath =
-      `math-handwriting-images/${id}.png`;
-
-    /*
-     * First commit the actual handwriting PNG.
-     */
-    await paperGithubApi(
-      `/repos/${PAPER_RECORD_REPO}/contents/${imagePath}`,
-      {
-        method: 'PUT',
-
-        headers: {
-          'Content-Type':
-            'application/json'
-        },
-
-        body: JSON.stringify({
-          message:
-            `Save math handwriting ${id}`,
-
-          content:
-            imageBase64,
-
-          branch:
-            'main'
+    paperPracticeLoadPromise = (async () => {
+      const groups = await Promise.all(
+        PAPER_HANDWRITING_SOURCES.map(async source => {
+          const response = await fetch(source.path, { cache:'no-store' });
+          if (!response.ok) throw new Error(`${source.path}：HTTP ${response.status}`);
+          const data = await response.json();
+          return (Array.isArray(data.questions) ? data.questions : [])
+            .filter(question => String(question?.type || question?.questionType || '').toLowerCase() === 'handwriting')
+            .map(question => ({
+              ...question,
+              semester: data.exam?.semester || '7-1',
+              unit: data.exam?.unit || source.title,
+              section: source.section,
+              sectionTitle: source.title,
+              sourcePath: source.path
+            }));
         })
+      );
+
+      paperPracticeQuestions = groups.flat();
+      if (!paperPracticeQuestions.length) {
+        throw new Error('目前數學題庫找不到可供紙筆作答的手寫題。');
       }
-    );
+      paperPracticeIndex = Math.min(paperPracticeIndex, paperPracticeQuestions.length - 1);
+      return paperPracticeQuestions;
+    })();
 
-
-    /*
-     * Then create the grading request.
-     * This second commit triggers the Gemini workflow.
-     */
-    const request = {
-      schemaVersion: 1,
-
-      id,
-
-      requestedAt:
-        new Date().toISOString(),
-
-      subject:
-        '數學',
-
-      semester:
-        '九年級上學期',
-
-      unit:
-        '一元二次方程式',
-
-      questionId:
-        'math-paper-quadratic-test-001',
-
-      question:
-        'x^2 - 5x + 6 = 0，求 x 的所有解。',
-
-      expectedAnswer:
-        'x = 2 或 x = 3',
-
-      gradingInstructions:
-        '請以數學意義判斷，不可用答案字串逐字比較。此題完整解集合為 x = 2 與 x = 3。x=2 or 3、x=2,3、x=3,2、{2,3}、x=2 或 x=3 等寫法都代表相同的兩個解，皆應視為答案正確。若學生完整得到 2 與 3 兩個根，而且計算過程沒有明顯數學錯誤，verdict 必須為 correct。只有漏掉其中一個根、加入錯誤的根、或計算過程有實質錯誤時才判 incorrect。',
-
-      imagePath,
-
-      source:
-        nativeInkBridgeAvailable()
-          ? 'android-native-ink'
-          : 'web-canvas'
-    };
-
-    const requestPath =
-      `math-handwriting-requests/${id}.json`;
-
-    await paperGithubApi(
-      `/repos/${PAPER_RECORD_REPO}/contents/${requestPath}`,
-      {
-        method: 'PUT',
-
-        headers: {
-          'Content-Type':
-            'application/json'
-        },
-
-        body: JSON.stringify({
-          message:
-            `Request Gemini math handwriting grading ${id}`,
-
-          content:
-            paperUtf8ToBase64(
-              JSON.stringify(
-                request,
-                null,
-                2
-              )
-            ),
-
-          branch:
-            'main'
-        })
-      }
-    );
-
-    return id;
-  }
-
-
-  async function fetchMathHandwritingResult(
-    id
-  ) {
     try {
-      const data =
-        await paperGithubApi(
-          `/repos/${PAPER_RECORD_REPO}/contents/` +
-          `math-handwriting-results/${id}.json?ref=main`
-        );
-
-      const text =
-        paperBase64ToUtf8(
-          data.content || ''
-        );
-
-      return JSON.parse(text);
-
-    } catch (e) {
-
-      if (e.status === 404) {
-        return null;
-      }
-
-      throw e;
+      return await paperPracticeLoadPromise;
+    } finally {
+      paperPracticeLoadPromise = null;
     }
   }
 
-
-  function paperSleep(ms) {
-    return new Promise(
-      resolve => setTimeout(resolve, ms)
-    );
+  function currentPaperPracticeQuestion() {
+    return paperPracticeQuestions[paperPracticeIndex] || null;
   }
 
-
-  async function waitForMathHandwritingResult(
-    id,
-    statusEl
-  ) {
-    /*
-     * Up to roughly 2 minutes.
-     */
-    for (
-      let i = 0;
-      i < 40;
-      i += 1
-    ) {
-      if (statusEl) {
-        statusEl.textContent =
-          i === 0
-            ? 'Gemini 正在判讀手寫作答…'
-            : `Gemini 正在判讀手寫作答… ${i * 3} 秒`;
-      }
-
-      const result =
-        await fetchMathHandwritingResult(
-          id
-        );
-
-      if (result) {
-        return result;
-      }
-
-      await paperSleep(3000);
-    }
-
-    throw new Error(
-      'Gemini 尚未完成判題。GitHub Actions 可能仍在執行，請稍後再按一次交卷。'
-    );
-  }
-
-
-  function renderMathHandwritingResult(
-    result,
-    box
-  ) {
+  function renderPaperGrade(result, box) {
     if (!box) return;
-
-    if (
-      !result ||
-      result.status !== 'completed'
-    ) {
-      box.innerHTML =
-        `<div style="margin-top:12px;padding:13px 14px;border-radius:13px;border:1px solid #fed7aa;background:#fff7ed;color:#9a3412">` +
-        `AI 判題失敗：${paperEscapeHtml(result?.error || '未知錯誤')}` +
-        `</div>`;
-
+    if (!result) {
+      box.innerHTML = '';
       return;
     }
 
-    const verdict =
-      result.verdict || 'unclear';
+    const verdict = result.verdict || 'unclear';
+    const cfg = verdict === 'correct'
+      ? { title:'✓ 作答正確', border:'#86efac', bg:'#f0fdf4', ink:'#166534' }
+      : verdict === 'incorrect'
+        ? { title:'✗ 作答需要修正', border:'#fca5a5', bg:'#fef2f2', ink:'#991b1b' }
+        : { title:'？AI 無法可靠判讀', border:'#fde68a', bg:'#fffbeb', ink:'#92400e' };
 
-    const config = {
-      correct: {
-        title: '✓ 作答正確',
-        border: '#86efac',
-        bg: '#f0fdf4',
-        ink: '#166534'
-      },
+    const row = (label, value) => value
+      ? `<div style="margin:5px 0"><b>${label}</b>${paperEscapeHtml(value)}</div>`
+      : '';
 
-      incorrect: {
-        title: '✗ 作答需要修正',
-        border: '#fca5a5',
-        bg: '#fef2f2',
-        ink: '#991b1b'
-      },
-
-      unclear: {
-        title: '？AI 無法可靠判讀',
-        border: '#fde68a',
-        bg: '#fffbeb',
-        ink: '#92400e'
-      }
-    }[verdict] || {
-      title: '？AI 無法可靠判讀',
-      border: '#fde68a',
-      bg: '#fffbeb',
-      ink: '#92400e'
-    };
-
-    const answer =
-      paperEscapeHtml(
-        result.recognizedAnswer || ''
-      );
-
-    const work =
-      paperEscapeHtml(
-        result.recognizedWork || ''
-      );
-
-    const feedback =
-      paperEscapeHtml(
-        result.feedback || ''
-      );
-
-    const confidence =
-      typeof result.confidence ===
-        'number'
-        ? `${Math.round(
-            result.confidence * 100
-          )}%`
-        : '';
+    const confidence = typeof result.confidence === 'number'
+      ? `${Math.round(result.confidence * 100)}%`
+      : '';
 
     box.innerHTML = `
-      <div style="
-        margin-top:14px;
-        padding:15px;
-        border-radius:14px;
-        border:1px solid ${config.border};
-        background:${config.bg};
-        color:${config.ink}
-      ">
-        <div style="
-          font-size:1.08rem;
-          font-weight:900;
-          margin-bottom:8px
-        ">
-          ${config.title}
-        </div>
-
-        ${
-          answer
-            ? `<div style="margin:5px 0"><b>AI 辨識答案：</b>${answer}</div>`
-            : ''
-        }
-
-        ${
-          work
-            ? `<div style="margin:5px 0"><b>AI 辨識過程：</b>${work}</div>`
-            : ''
-        }
-
-        ${
-          feedback
-            ? `<div style="margin-top:9px;line-height:1.7">${feedback}</div>`
-            : ''
-        }
-
-        ${
-          confidence
-            ? `<div style="font-size:.78rem;opacity:.68;margin-top:8px">判讀信心：${confidence}　模型：${paperEscapeHtml(result.model || 'Gemini')}</div>`
-            : ''
-        }
+      <div style="margin-top:14px;padding:15px;border-radius:14px;border:1px solid ${cfg.border};background:${cfg.bg};color:${cfg.ink}">
+        <div style="font-size:1.08rem;font-weight:900;margin-bottom:8px">${cfg.title}</div>
+        ${row('辨識答案：', result.recognizedAnswer)}
+        ${row('辨識過程：', result.recognizedWork)}
+        ${row('錯在這一步：', result.errorStep)}
+        ${row('為什麼錯：', result.whyWrong)}
+        ${row('應該這樣改：', result.correction)}
+        ${row('接著試試看：', result.nextHint)}
+        ${result.feedback ? `<div style="margin-top:9px;line-height:1.7">${paperEscapeHtml(result.feedback)}</div>` : ''}
+        ${(confidence || result.modelName)
+          ? `<div style="font-size:.78rem;opacity:.72;margin-top:8px">${confidence ? `判讀信心：${confidence}` : ''}${confidence && result.modelName ? '　' : ''}${result.modelName ? `模型：${paperEscapeHtml(result.modelName)} · Firebase AI Logic` : 'Firebase AI Logic'}</div>`
+          : '<div style="font-size:.78rem;opacity:.72;margin-top:8px">Firebase AI Logic</div>'}
       </div>`;
-  }
-
-
-  async function runMathHandwritingAnalysis(
-    button,
-    statusEl,
-    resultBox
-  ) {
-    if (!paperAnswerDataUrl) {
-      return;
-    }
-
-    if (!getPaperGithubToken()) {
-      alert(
-        '請先到「GitHub 同步設定」輸入 Token，再使用 Gemini 判題。'
-      );
-
-      return;
-    }
-
-    const oldText =
-      button.textContent;
-
-    button.disabled = true;
-    button.textContent =
-      'AI 判題中…';
-
-    if (resultBox) {
-      resultBox.innerHTML = '';
-    }
-
-    if (statusEl) {
-      statusEl.textContent =
-        '正在上傳手寫作答…';
-    }
-
-    try {
-      const id =
-        await uploadMathHandwritingRequest(
-          paperAnswerDataUrl
-        );
-
-      if (statusEl) {
-        statusEl.textContent =
-          '手寫作答已送出，等待 Gemini 判題…';
-      }
-
-      const result =
-        await waitForMathHandwritingResult(
-          id,
-          statusEl
-        );
-
-      if (statusEl) {
-        statusEl.textContent =
-          result.status === 'completed'
-            ? 'Gemini 判題完成。'
-            : 'Gemini 判題程序完成，但發生錯誤。';
-      }
-
-      renderMathHandwritingResult(
-        result,
-        resultBox
-      );
-
-    } catch (e) {
-
-      if (statusEl) {
-        statusEl.textContent =
-          `無法完成 AI 判題：${e.message}`;
-      }
-
-    } finally {
-
-      button.disabled = false;
-      button.textContent =
-        oldText;
-    }
   }
 
   function setHeader(title, sub) {
@@ -711,715 +264,145 @@
     $('[data-math-semester="7-1"]')?.addEventListener('click', showMath71Units);
   }
 
-  function showPaperPractice() {
-    setHeader('數學科｜紙筆作答', '自由手寫畫布測試');
+  async function showPaperPractice() {
+    setHeader('數學科｜紙筆作答', '目前題庫手寫題｜Firebase AI Logic');
     document.title = '紙筆作答｜數學科';
 
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
       <div class="catalog-path">數學　›　紙筆作答</div>
-      <h2 class="catalog-title">紙筆作答測試</h2>
-      <p class="catalog-sub">使用原生手寫畫布完成作答後，可將題目與手寫答案送給 Gemini 判題。</p>
+      <h2 class="catalog-title">紙筆作答</h2>
+      <p class="catalog-sub">直接使用目前數學題庫中的手寫題；完成作答後由 Firebase AI Logic 的 Gemini 依該題題幹、標準答案與判分規則批改。</p>
+      <div style="padding:18px;border:1px solid #dfe5ee;border-radius:16px;background:#fff;color:#64748b">正在載入目前題庫的手寫題…</div>`;
+
+    $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
+
+    try {
+      await loadPaperPracticeQuestions();
+      renderPaperPractice();
+    } catch (error) {
+      $('#catalogContent').innerHTML = `
+        <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
+        <div class="catalog-path">數學　›　紙筆作答</div>
+        <h2 class="catalog-title">紙筆作答</h2>
+        <div style="padding:14px;border:1px solid #fecaca;border-radius:12px;background:#fef2f2;color:#991b1b">
+          無法載入目前題庫：${paperEscapeHtml(error?.message || error)}
+        </div>`;
+      $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
+    }
+  }
+
+  function renderPaperPractice() {
+    const question = currentPaperPracticeQuestion();
+    if (!question) return;
+
+    const key = paperQuestionKey(question);
+    const answer = window.ExamHandwriting?.getAnswer?.(key);
+    const grade = paperPracticeGrades.get(key) || null;
+
+    const options = paperPracticeQuestions.map((item, index) => {
+      const selected = index === paperPracticeIndex ? 'selected' : '';
+      return `<option value="${index}" ${selected}>${paperEscapeHtml(item.section)}｜${paperEscapeHtml(item.q)}</option>`;
+    }).join('');
+
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backPaperMathBtn">← 返回數學</button>
+      <div class="catalog-path">數學　›　紙筆作答</div>
+      <h2 class="catalog-title">紙筆作答</h2>
+      <p class="catalog-sub">目前題庫手寫題，共 ${paperPracticeQuestions.length} 題。作答與正式題庫共用同一套完整手寫畫布，判題直接走 Firebase AI Logic。</p>
+
+      <label style="display:block;margin:14px 0 16px;font-weight:800;color:#334155">
+        選擇目前題目
+        <select id="paperQuestionSelect" style="display:block;width:100%;margin-top:7px;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;font-size:.95rem">
+          ${options}
+        </select>
+      </label>
 
       <div style="background:#fff;border:1px solid #dfe5ee;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 4px 14px rgba(15,23,42,.04)">
         <div style="display:flex;align-items:flex-start;gap:10px">
-          <span style="display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:#eef4ff;color:#2563eb;font-weight:800">1</span>
+          <span style="display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:#eef4ff;color:#2563eb;font-weight:800">${paperPracticeIndex + 1}</span>
           <div style="flex:1;min-width:0">
+            <div style="font-size:.88rem;color:#64748b;margin-bottom:7px">${paperEscapeHtml(question.section)} ${paperEscapeHtml(question.sectionTitle)}｜${paperEscapeHtml(question.questionId || '')}</div>
             <div style="font-size:1.08rem;font-weight:800;margin:2px 0 8px">請寫出計算過程並求出答案：</div>
-            <div style="font-size:1.42rem;font-weight:800;letter-spacing:.02em;margin:8px 0 16px">x² - 5x + 6 = 0，求 x 的所有解。</div>
-            <button id="openMathPaperCanvasBtn" style="border:0;border-radius:12px;padding:11px 18px;font-size:1rem;font-weight:800;cursor:pointer;background:#2563eb;color:white">✍️ ${paperAnswerDataUrl ? '修改作答' : '作答'}</button>
+            <div style="font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:8px 0 10px;line-height:1.55">${paperEscapeHtml(question.q)}</div>
+            ${question.handwritingInstruction ? `<div style="font-size:.92rem;color:#64748b;margin-bottom:14px">${paperEscapeHtml(question.handwritingInstruction)}</div>` : ''}
+            <button id="openMathPaperCanvasBtn" type="button" style="border:0;border-radius:12px;padding:11px 18px;font-size:1rem;font-weight:800;cursor:pointer;background:#2563eb;color:white">✍️ ${answer?.dataUrl ? '修改作答' : '作答'}</button>
 
-            <div id="paperAnswerPreview" style="${paperAnswerDataUrl ? '' : 'display:none;'}margin-top:16px">
+            <div id="paperAnswerPreview" style="${answer?.dataUrl ? '' : 'display:none;'}margin-top:16px">
               <div style="font-size:.92rem;color:#64748b;margin-bottom:7px">已完成作答</div>
-              <button id="paperAnswerImageBtn" type="button" style="display:block;border:1px solid #cbd5e1;background:#fff;border-radius:12px;padding:6px;cursor:pointer;max-width:230px">
-                <img id="paperAnswerImage" alt="手寫作答縮圖" src="${paperAnswerDataUrl}" style="display:block;width:210px;max-width:100%;height:auto;border-radius:8px;background:#fff">
-              </button>
-              <div style="font-size:.82rem;color:#94a3b8;margin-top:5px">點縮圖可重新開啟並修改</div>
+              <img alt="手寫作答縮圖" src="${answer?.dataUrl || ''}" style="display:block;width:210px;max-width:100%;height:auto;border:1px solid #cbd5e1;border-radius:10px;background:#fff">
             </div>
           </div>
         </div>
       </div>
 
       <div style="position:sticky;bottom:0;background:rgba(246,248,251,.94);backdrop-filter:blur(10px);padding:12px 0 4px;display:flex;gap:10px;z-index:5">
-        <button id="submitPaperExamBtn" ${paperAnswerDataUrl ? '' : 'disabled'} style="border:0;border-radius:12px;padding:12px 18px;font-size:1rem;font-weight:800;cursor:${paperAnswerDataUrl ? 'pointer' : 'not-allowed'};background:${paperAnswerDataUrl ? '#15803d' : '#cbd5e1'};color:white;flex:1">🤖 交卷並由 Gemini 判題</button>
+        <button id="submitPaperExamBtn" ${answer?.dataUrl ? '' : 'disabled'} style="border:0;border-radius:12px;padding:12px 18px;font-size:1rem;font-weight:800;cursor:${answer?.dataUrl ? 'pointer' : 'not-allowed'};background:${answer?.dataUrl ? '#15803d' : '#cbd5e1'};color:white;flex:1">🤖 交卷並由 Firebase Gemini 判題</button>
       </div>
 
-      <div
-        id="paperSubmitStatus"
-        style="font-size:.9rem;color:#64748b;margin-top:8px"
-      ></div>
-
+      <div id="paperSubmitStatus" style="font-size:.9rem;color:#64748b;margin-top:8px"></div>
       <div id="paperAiResult"></div>`;
 
     $('#backPaperMathBtn')?.addEventListener('click', showMathSemesters);
-    $('#openMathPaperCanvasBtn')?.addEventListener('click', openPaperCanvas);
-    $('#paperAnswerImageBtn')?.addEventListener('click', openPaperCanvas);
-    $('#submitPaperExamBtn')?.addEventListener(
-      'click',
-      () => {
 
-        const button =
-          $('#submitPaperExamBtn');
+    $('#paperQuestionSelect')?.addEventListener('change', event => {
+      paperPracticeIndex = Number(event.target.value) || 0;
+      renderPaperPractice();
+    });
 
-        const status =
-          $('#paperSubmitStatus');
-
-        const resultBox =
-          $('#paperAiResult');
-
-        if (
-          !button ||
-          !paperAnswerDataUrl
-        ) {
-          return;
-        }
-
-        runMathHandwritingAnalysis(
-          button,
-          status,
-          resultBox
-        );
+    $('#openMathPaperCanvasBtn')?.addEventListener('click', async () => {
+      if (!window.ExamHandwriting?.openCanvas) {
+        alert('手寫模組尚未載入，請重新整理後再試。');
+        return;
       }
-    );
-  }
-
-  function setNativeDrawingMode(enabled) {
-    try {
-      const nativeBridge = window.StudentExamNative;
-
-      if (
-        nativeBridge &&
-        typeof nativeBridge.setDrawingMode === 'function'
-      ) {
-        nativeBridge.setDrawingMode(!!enabled);
-      }
-    } catch (e) {
-      console.warn(
-        'StudentExam drawing-mode bridge unavailable:',
-        e
-      );
-    }
-  }
-
-  function nativeInkBridgeAvailable() {
-    try {
-      const bridge =
-        window.StudentExamNative;
-
-      return !!(
-        bridge &&
-        typeof bridge.showNativeInkSurface === 'function' &&
-        typeof bridge.clearNativeInkSurface === 'function' &&
-        typeof bridge.finishNativeInkSurface === 'function' &&
-        typeof bridge.hideNativeInkSurface === 'function'
-      );
-    } catch {
-      return false;
-    }
-  }
-
-
-  function showNativeInkForCanvas(canvas) {
-    if (!nativeInkBridgeAvailable()) {
-      return false;
-    }
-
-    const rect =
-      canvas.getBoundingClientRect();
-
-    const vw =
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      1;
-
-    const vh =
-      window.innerHeight ||
-      document.documentElement.clientHeight ||
-      1;
-
-    window.StudentExamNative.showNativeInkSurface(
-      rect.left / vw,
-      rect.top / vh,
-      rect.right / vw,
-      rect.bottom / vh
-    );
-
-    return true;
-  }
-
-
-  function openPaperCanvas() {
-    if ($('#mathPaperCanvasOverlay')) return;
-
-    setNativeDrawingMode(true);
-
-    const oldOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-
-    const overlay = document.createElement('div');
-    overlay.id = 'mathPaperCanvasOverlay';
-    overlay.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#eef2f7;display:flex;flex-direction:column;overscroll-behavior:none;touch-action:none';
-    overlay.innerHTML = `
-      <div style="flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:8px 10px;background:#0f172a;color:white;box-shadow:0 2px 8px rgba(15,23,42,.2)">
-        <button id="paperCanvasCancelBtn" type="button" style="border:0;border-radius:10px;padding:9px 13px;font-weight:800;background:#334155;color:white">取消</button>
-        <div style="flex:1;min-width:0">
-          <div style="font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">第 1 題｜x² - 5x + 6 = 0</div>
-          <div style="font-size:.78rem;opacity:.78">用手指或觸控筆直接書寫</div>
-        </div>
-        <button id="paperCanvasClearBtn" type="button" style="border:0;border-radius:10px;padding:9px 13px;font-weight:800;background:#475569;color:white">清除</button>
-        <button id="paperCanvasDoneBtn" type="button" style="border:0;border-radius:10px;padding:9px 15px;font-weight:800;background:#22c55e;color:#052e16">完成</button>
-      </div>
-      <div id="paperCanvasStage" style="position:relative;flex:1;min-height:0;padding:10px;background:#e2e8f0;touch-action:none;overflow:hidden">
-        <div id="paperCanvasDebugHud"
-             style="position:absolute;left:18px;top:18px;z-index:20;pointer-events:none;background:rgba(15,23,42,.82);color:#e2e8f0;border-radius:8px;padding:7px 9px;font:12px/1.35 monospace;white-space:pre;box-shadow:0 2px 8px rgba(0,0,0,.18)">waiting for input...</div>
-        <canvas id="mathPaperCanvas" style="display:block;width:100%;height:100%;background:white;border-radius:8px;box-shadow:0 2px 12px rgba(15,23,42,.14);touch-action:none;user-select:none;-webkit-user-select:none"></canvas>
-      </div>`;
-    document.body.appendChild(overlay);
-
-    const canvas = $('#mathPaperCanvas', overlay);
-    const stage = $('#paperCanvasStage', overlay);
-    const ctx = canvas.getContext('2d', { alpha: false });
-
-    /*
-     * First integration:
-     * fresh answers use Android Native Ink.
-     * Existing-answer editing remains Web Canvas until the next step.
-     */
-    const useNativeInk =
-      nativeInkBridgeAvailable() &&
-      !paperAnswerDataUrl;
-
-    let drawing = false;
-    let activePointerId = null;
-
-    /*
-     * SM-T220 reports both capacitive stylus and palm as
-     * pointerType "touch", and contact size is not reliable.
-     *
-     * Therefore we do not choose the drawing pointer on
-     * pointerdown. A pointer must first demonstrate deliberate
-     * movement before it becomes the active writing pointer.
-     */
-    const pointerCandidates = new Map();
-
-    let lastX = 0;
-    let lastY = 0;
-
-    let previousX = 0;
-    let previousY = 0;
-
-    let localHasInk = paperAnswerHasInk;
-
-    const debugHud = $('#paperCanvasDebugHud', overlay);
-
-    let debugWindowStart = performance.now();
-    let debugEventCount = 0;
-    let debugSampleCount = 0;
-    let debugDistanceTotal = 0;
-    let debugDistanceCount = 0;
-
-    let debugPointerType = '-';
-    let debugStreamType = '-';
-    let debugPressure = 0;
-    let debugWidth = 0;
-    let debugHeight = 0;
-
-    function sizeCanvas() {
-      const rect = stage.getBoundingClientRect();
-      const cssW = Math.max(1, Math.floor(rect.width - 20));
-      const cssH = Math.max(1, Math.floor(rect.height - 20));
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.floor(cssW * dpr);
-      canvas.height = Math.floor(cssH * dpr);
-      canvas.style.width = `${cssW}px`;
-      canvas.style.height = `${cssH}px`;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.fillStyle = '#ffffff';
-      ctx.fillRect(0, 0, cssW, cssH);
-      ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.5;
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
-      return { cssW, cssH };
-    }
-
-    const canvasSize = sizeCanvas();
-
-    function loadPreviousAnswer() {
-      if (!paperAnswerDataUrl) return;
-      const img = new Image();
-      img.onload = () => {
-        ctx.fillStyle = '#ffffff';
-        ctx.fillRect(0, 0, canvasSize.cssW, canvasSize.cssH);
-        const scale = Math.min(canvasSize.cssW / img.width, canvasSize.cssH / img.height);
-        const w = img.width * scale;
-        const h = img.height * scale;
-        ctx.drawImage(img, 0, 0, img.width, img.height, (canvasSize.cssW - w) / 2, (canvasSize.cssH - h) / 2, w, h);
-      };
-      img.src = paperAnswerDataUrl;
-    }
-    loadPreviousAnswer();
-
-    if (useNativeInk) {
-
-      /*
-       * Wait until layout is committed, then overlay the native View
-       * exactly over the HTML canvas.
-       */
-      requestAnimationFrame(() => {
-        showNativeInkForCanvas(canvas);
+      await window.ExamHandwriting.openCanvas({
+        key,
+        title:`${question.section}｜${question.q}`,
+        subtitle:question.handwritingInstruction || '請寫出完整計算過程與答案'
       });
-    }
+      paperPracticeGrades.delete(key);
+      renderPaperPractice();
+    });
 
-    function pointFromEvent(e) {
-      const r = canvas.getBoundingClientRect();
-      return { x: e.clientX - r.left, y: e.clientY - r.top };
-    }
-
-    function updateDebugHud(e, samples) {
-      if (!debugHud) return;
-
-      debugPointerType = e.pointerType || '-';
-      debugStreamType = e.type || '-';
-
-      debugWidth =
-        typeof e.width === 'number'
-          ? e.width
-          : 0;
-
-      debugHeight =
-        typeof e.height === 'number'
-          ? e.height
-          : 0;
-
-      debugEventCount += 1;
-      debugSampleCount += samples.length;
-
-      const now = performance.now();
-      const elapsed = now - debugWindowStart;
-
-      if (elapsed < 500) return;
-
-      const hz =
-        elapsed > 0
-          ? (debugEventCount * 1000 / elapsed)
-          : 0;
-
-      const samplesPerEvent =
-        debugEventCount > 0
-          ? debugSampleCount / debugEventCount
-          : 0;
-
-      const avgDistance =
-        debugDistanceCount > 0
-          ? debugDistanceTotal / debugDistanceCount
-          : 0;
-
-      debugHud.textContent =
-        `pointer : ${debugPointerType}\n` +
-        `stream  : ${debugStreamType}\n` +
-        `Hz      : ${hz.toFixed(1)}\n` +
-        `samples : ${samplesPerEvent.toFixed(2)}/event\n` +
-        `avgDist : ${avgDistance.toFixed(2)} px\n` +
-        `contact : ${debugWidth.toFixed(1)} x ${debugHeight.toFixed(1)} px\n` +
-        `pressure: ${debugPressure.toFixed(3)}`;
-
-      debugWindowStart = now;
-      debugEventCount = 0;
-      debugSampleCount = 0;
-      debugDistanceTotal = 0;
-      debugDistanceCount = 0;
-    }
-
-    function drawPointerSamples(e) {
-      if (e.cancelable) {
-        e.preventDefault();
-      }
-
-      /*
-       * No active writing pointer yet:
-       * evaluate this pointer as a candidate.
-       */
-      if (activePointerId === null) {
-        const candidate =
-          pointerCandidates.get(e.pointerId);
-
-        if (!candidate) return;
-
-        const p = pointFromEvent(e);
-
-        const dx = p.x - candidate.lastX;
-        const dy = p.y - candidate.lastY;
-
-        candidate.distance +=
-          Math.hypot(dx, dy);
-
-        candidate.lastX = p.x;
-        candidate.lastY = p.y;
-        candidate.moves += 1;
-
-        /*
-         * A real writing stroke normally starts moving
-         * immediately. A resting palm usually does not.
-         *
-         * Require both:
-         *   - at least 2 movement events
-         *   - at least 2.4 px total movement
-         *
-         * Once promoted, start drawing from the original
-         * pointerdown location so the beginning of the stroke
-         * is not lost.
-         */
-        if (
-          candidate.moves >= 2 &&
-          candidate.distance >= 2.4
-        ) {
-          activePointerId = e.pointerId;
-          drawing = true;
-
-          lastX = candidate.startX;
-          lastY = candidate.startY;
-
-          previousX = lastX;
-          previousY = lastY;
-
-          try {
-            canvas.setPointerCapture?.(
-              e.pointerId
-            );
-          } catch {}
-
-          ctx.beginPath();
-          ctx.moveTo(lastX, lastY);
-          ctx.lineTo(
-            lastX + 0.01,
-            lastY + 0.01
-          );
-          ctx.stroke();
-
-          localHasInk = true;
-        } else {
-          return;
-        }
-      }
-
-      /*
-       * Once a writing pointer has been chosen,
-       * every other simultaneous contact is ignored.
-       */
-      if (e.pointerId !== activePointerId) {
+    $('#submitPaperExamBtn')?.addEventListener('click', async event => {
+      const button = event.currentTarget;
+      const status = $('#paperSubmitStatus');
+      const resultBox = $('#paperAiResult');
+      if (!window.ExamHandwriting?.uploadAndGrade) {
+        alert('Firebase 手寫判題模組尚未載入，請重新整理後再試。');
         return;
       }
 
-      const samples =
-        typeof e.getCoalescedEvents === 'function'
-          ? e.getCoalescedEvents()
-          : [e];
-
-      if (!samples || samples.length === 0) return;
-
-      debugPressure =
-        typeof e.pressure === 'number'
-          ? e.pressure
-          : 0;
-
-      updateDebugHud(e, samples);
-
-      for (const sample of samples) {
-        const p = pointFromEvent(sample);
-
-        const dx = p.x - lastX;
-        const dy = p.y - lastY;
-        const distance = Math.hypot(dx, dy);
-
-        debugDistanceTotal += distance;
-        debugDistanceCount += 1;
-
-        if (typeof sample.pressure === 'number') {
-          debugPressure = sample.pressure;
-        }
-
-        /*
-         * Remove only very tiny capacitive noise.
-         * Do not filter normal handwriting movement.
-         */
-        if (distance < 0.15) {
-          continue;
-        }
-
-        /*
-         * Low-sample-rate reconstruction.
-         *
-         * SM-T220 is currently giving us roughly 25-35 Hz with
-         * one real sample per event. Do not move or replace the
-         * real pointer coordinates. Instead, subdivide the gap
-         * between two real samples into short segments.
-         *
-         * This does not invent a different handwriting path and
-         * avoids the shape distortion caused by aggressive
-         * Bezier smoothing.
-         */
-        const targetSpacing = 2.5;
-
-        const steps = Math.min(
-          6,
-          Math.max(
-            1,
-            Math.ceil(distance / targetSpacing)
-          )
-        );
-
-        const startX = lastX;
-        const startY = lastY;
-
-        ctx.beginPath();
-        ctx.moveTo(startX, startY);
-
-        for (let i = 1; i <= steps; i += 1) {
-          const t = i / steps;
-
-          const x =
-            startX +
-            (p.x - startX) * t;
-
-          const y =
-            startY +
-            (p.y - startY) * t;
-
-          ctx.lineTo(x, y);
-        }
-
-        ctx.stroke();
-
-        previousX = lastX;
-        previousY = lastY;
-
-        /*
-         * Always finish exactly on the real hardware sample.
-         */
-        lastX = p.x;
-        lastY = p.y;
-      }
-
-      localHasInk = true;
-    }
-
-    canvas.addEventListener('pointerdown', e => {
-      e.preventDefault();
-
-      const p = pointFromEvent(e);
-
-      /*
-       * Do not immediately claim this pointer.
-       * A resting palm should remain only a candidate.
-       */
-      pointerCandidates.set(
-        e.pointerId,
-        {
-          startX: p.x,
-          startY: p.y,
-          lastX: p.x,
-          lastY: p.y,
-          distance: 0,
-          moves: 0,
-          startedAt: performance.now()
-        }
-      );
-
-      /*
-       * Do not call setPointerCapture yet.
-       * We only capture the pointer after it proves to be
-       * the writing pointer.
-       */
-      debugPointerType = e.pointerType || '-';
-
-      debugWidth =
-        typeof e.width === 'number'
-          ? e.width
-          : 0;
-
-      debugHeight =
-        typeof e.height === 'number'
-          ? e.height
-          : 0;
-
-      debugPressure =
-        typeof e.pressure === 'number'
-          ? e.pressure
-          : 0;
-    }, { passive: false });
-
-    /*
-     * Chromium / Android WebView can expose pointerrawupdate,
-     * which arrives closer to the hardware sampling rate than
-     * ordinary pointermove.
-     *
-     * When available, use it as the primary drawing stream.
-     * Otherwise fall back to pointermove.
-     */
-    const useRawPointer =
-      'onpointerrawupdate' in window;
-
-    if (useRawPointer) {
-      canvas.addEventListener(
-        'pointerrawupdate',
-        drawPointerSamples,
-        { passive: false }
-      );
-    } else {
-      canvas.addEventListener(
-        'pointermove',
-        drawPointerSamples,
-        { passive: false }
-      );
-    }
-
-    function finishStroke(e) {
-      pointerCandidates.delete(
-        e.pointerId
-      );
-
-      /*
-       * Palm/finger candidate that never became the pen:
-       * nothing else to do.
-       */
-      if (e.pointerId !== activePointerId) {
-        return;
-      }
-
-      if (e.cancelable) {
-        e.preventDefault();
-      }
-
-      drawing = false;
+      const oldText = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Firebase Gemini 判題中…';
+      if (status) status.textContent = '正在將目前題目與手寫作答送交 Firebase AI Logic…';
+      if (resultBox) resultBox.innerHTML = '';
 
       try {
-        canvas.releasePointerCapture?.(
-          e.pointerId
-        );
-      } catch {}
-
-      activePointerId = null;
-    }
-
-    canvas.addEventListener(
-      'pointerup',
-      finishStroke,
-      { passive: false }
-    );
-
-    canvas.addEventListener(
-      'pointercancel',
-      finishStroke,
-      { passive: false }
-    );
-    canvas.addEventListener('contextmenu', e => e.preventDefault());
-
-    window.StudentExamNativeInkFinished =
-      dataUrl => {
-
-        if (
-          !dataUrl ||
-          !dataUrl.startsWith('data:image/')
-        ) {
-          return;
-        }
-
-        paperAnswerDataUrl = dataUrl;
-        paperAnswerHasInk = true;
-
-        closeOverlay();
-        showPaperPractice();
-      };
-
-
-    function closeOverlay() {
-
-      if (useNativeInk) {
-        try {
-          window.StudentExamNative
-            ?.hideNativeInkSurface?.();
-        } catch {}
+        const result = await window.ExamHandwriting.uploadAndGrade({
+          key,
+          question,
+          context:{
+            subject:'math',
+            semester:question.semester || '7-1',
+            unit:question.unit || question.sectionTitle || '',
+            section:question.section || ''
+          }
+        });
+        paperPracticeGrades.set(key, result);
+        if (status) status.textContent = 'Firebase Gemini 判題完成。';
+        renderPaperGrade(result, resultBox);
+      } catch (error) {
+        console.error('[MathPaperPractice] Firebase grading failed', error);
+        if (status) status.textContent = `無法完成 Firebase AI 判題：${error?.message || error}`;
+      } finally {
+        button.disabled = false;
+        button.textContent = oldText;
       }
-
-      if (
-        window.StudentExamNativeInkFinished
-      ) {
-        window.StudentExamNativeInkFinished =
-          null;
-      }
-
-      setNativeDrawingMode(false);
-      document.body.style.overflow = oldOverflow;
-      overlay.remove();
-    }
-
-    $('#paperCanvasCancelBtn', overlay)?.addEventListener('click', closeOverlay);
-    $('#paperCanvasClearBtn', overlay)?.addEventListener('click', () => {
-
-      if (useNativeInk) {
-
-        try {
-          window.StudentExamNative
-            ?.clearNativeInkSurface?.();
-        } catch {}
-
-        return;
-      }
-
-      const r =
-        canvas.getBoundingClientRect();
-
-      ctx.fillStyle = '#ffffff';
-
-      ctx.fillRect(
-        0,
-        0,
-        r.width,
-        r.height
-      );
-
-      ctx.strokeStyle = '#111827';
-      ctx.lineWidth = 2.5;
-
-      localHasInk = false;
     });
-    $('#paperCanvasDoneBtn', overlay)?.addEventListener('click', () => {
 
-      /*
-       * Native mode exports one PNG only when Done is pressed.
-       * No live stroke data crosses the JS bridge.
-       */
-      if (useNativeInk) {
-
-        try {
-          window.StudentExamNative
-            ?.finishNativeInkSurface?.();
-        } catch (e) {
-          console.error(
-            'Native ink export failed:',
-            e
-          );
-        }
-
-        return;
-      }
-
-      if (!localHasInk) {
-        alert(
-          '畫布還是空白的，請先寫下作答內容。'
-        );
-        return;
-      }
-
-      paperAnswerDataUrl =
-        canvas.toDataURL('image/png');
-
-      paperAnswerHasInk = true;
-
-      closeOverlay();
-      showPaperPractice();
-    });
+    if (grade) renderPaperGrade(grade, $('#paperAiResult'));
   }
 
   function showMath71Units() {
