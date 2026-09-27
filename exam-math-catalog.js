@@ -246,7 +246,7 @@
       <div style="margin:18px 0 24px">
         <button class="catalog-card chapter-card" id="mathPaperPracticeBtn" style="width:100%;text-align:left;border:2px solid #93c5fd;background:#eff6ff">
           <span class="top"><strong>✍️ 紙筆作答</strong><span class="catalog-badge reference">測試版</span></span>
-          <span class="desc">適合需要寫計算過程、畫圖或列式的題目。第一版先測試自由手寫畫布。</span>
+          <span class="desc">載入目前數學題庫的手寫題，使用完整作答畫布並由 Firebase AI Logic 判題。</span>
         </button>
       </div>
 
