@@ -51,16 +51,66 @@
     } catch {}
   }
 
+  let firebaseAiScriptPromise = null;
+
+  function ensureFirebaseAiScript() {
+    if (typeof window.ChrisExamAI?.gradeMathHandwriting === 'function') {
+      return Promise.resolve(window.ChrisExamAI);
+    }
+    if (firebaseAiScriptPromise) return firebaseAiScriptPromise;
+
+    firebaseAiScriptPromise = new Promise((resolve, reject) => {
+      let script = document.getElementById('firebaseAiDirectModule');
+
+      const finish = () => {
+        if (typeof window.ChrisExamAI?.gradeMathHandwriting === 'function') {
+          resolve(window.ChrisExamAI);
+        } else {
+          firebaseAiScriptPromise = null;
+          reject(new Error('Firebase AI Logic 腳本已載入，但判題模組尚未初始化。'));
+        }
+      };
+
+      const fail = () => {
+        firebaseAiScriptPromise = null;
+        reject(new Error('Firebase AI Logic 腳本載入失敗，請檢查網路後再試。'));
+      };
+
+      if (script && typeof window.ChrisExamAI?.gradeMathHandwriting !== 'function') {
+        script.remove();
+        script = null;
+      }
+
+      script = document.createElement('script');
+      script.id = 'firebaseAiDirectModule';
+      script.src = `firebase-ai-direct.js?v=${Date.now()}`;
+      script.defer = true;
+      script.onload = finish;
+      script.onerror = fail;
+      document.head.appendChild(script);
+    });
+
+    return firebaseAiScriptPromise;
+  }
+
   async function waitForFirebaseGrader(timeoutMs = 12000, subject = 'math') {
-    const started = performance.now();
     const method = subject === 'english' ? 'gradeEnglishHandwriting' : 'gradeMathHandwriting';
+
+    if (typeof window.ChrisExamAI?.[method] === 'function') {
+      return window.ChrisExamAI;
+    }
+
+    await ensureFirebaseAiScript();
+
+    const started = performance.now();
     while (performance.now() - started < timeoutMs) {
       if (typeof window.ChrisExamAI?.[method] === 'function') {
         return window.ChrisExamAI;
       }
       await new Promise(resolve => setTimeout(resolve, 120));
     }
-    throw new Error('Firebase AI Logic 尚未完成載入，請稍後再交卷。');
+
+    throw new Error('Firebase AI Logic 尚未完成初始化，請稍後再交卷。');
   }
 
   function openCanvas({

@@ -430,15 +430,6 @@ acceptedAnswers：${JSON.stringify(acceptedAnswers)}
       event.stopPropagation();
       event.stopImmediatePropagation();
       runScienceDirect(scienceButton);
-      return;
-    }
-
-    const mathButton = event.target.closest?.('#submitPaperExamBtn');
-    if (mathButton) {
-      event.preventDefault();
-      event.stopPropagation();
-      event.stopImmediatePropagation();
-      runMathDirect(mathButton);
     }
   }, true);
 
