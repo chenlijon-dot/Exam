@@ -16,7 +16,7 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": true,
-    "questionCount": 0,
+    "questionCount": 4,
     "classifiedQuestionCount": 4,
     "pendingImageQuestionNumbers": [
       26,
@@ -24,7 +24,133 @@
       33,
       34
     ],
-    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節 4 題 Q26、Q30、Q33、Q34 均依賴原卷圖像，目前保留分類與 pending，待裁圖後正式加入。"
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；4 題均已建立正式題目資料與核對官方答案，原卷裁圖已完成，待 GitHub 圖片資產上傳後解除 pending。",
+    "answerableQuestionCount": 0
   },
-  "questions": []
+  "questions": [
+    {
+      "questionId": "260928231800009",
+      "revision": 1,
+      "number": 1,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "26",
+      "sourcePage": 3,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s03-osmosis",
+        "science-7-1-u02-s03-plasmolysis",
+        "science-7-1-u02-s03-hypertonic-solution"
+      ],
+      "q": "醃漬小黃瓜時，常會在小黃瓜上灑鹽。附圖為正常的小黃瓜細胞示意圖，附表中的圖為小白與小林預測醃漬後的小黃瓜細胞可能的示意圖。推論醃漬後的示意圖與造成小黃瓜細胞變化的原因，下列何者正確？",
+      "o": [
+        "小白的圖正確，水由細胞內流至外界",
+        "小白的圖正確，鹽由細胞內流至外界",
+        "小林的圖正確，水由外界流至細胞內",
+        "小林的圖正確，鹽由外界流至細胞內"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。灑鹽後細胞外溶液濃度較高，水經滲透作用由細胞內移向外界，細胞膜與內容物因失水而向內縮。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q26.png"
+    },
+    {
+      "questionId": "260928231800010",
+      "revision": 1,
+      "number": 2,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "30",
+      "sourcePage": 3,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s03-osmosis",
+        "science-7-1-u02-s03-water-movement",
+        "science-7-1-u02-s03-plasmolysis"
+      ],
+      "q": "細胞會因為滲透作用獲得水或失去水，細胞也會因此膨脹或萎縮。當某植物細胞由甲圖變為乙圖，細胞內水分應該會如何變化？",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。由甲圖變為乙圖時，細胞膜與細胞壁分離、細胞內容物向內縮，表示細胞失水，因此水分含量隨時間下降。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q30.png"
+    },
+    {
+      "questionId": "260928231800011",
+      "revision": 1,
+      "number": 3,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "33",
+      "sourcePage": 4,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s03-diffusion",
+        "science-7-1-u02-s03-membrane-transport",
+        "science-7-1-u02-s03-oxygen-transport"
+      ],
+      "q": "當細胞外氧氣濃度＞細胞內時，氧氣的移動途徑與方式為何？",
+      "o": [
+        "甲、擴散作用",
+        "乙、擴散作用",
+        "丙、滲透作用",
+        "丁、滲透作用"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。氧氣會由高濃度處向低濃度處擴散，圖中的乙途徑表示由細胞外向細胞內通過細胞膜。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q33-q34.png"
+    },
+    {
+      "questionId": "260928231800012",
+      "revision": 1,
+      "number": 4,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "34",
+      "sourcePage": 4,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s03-membrane-protein",
+        "science-7-1-u02-s03-mineral-transport",
+        "science-7-1-u02-s03-membrane-transport"
+      ],
+      "q": "下列哪一種物質可依丙途徑進出細胞？",
+      "o": [
+        "礦物質",
+        "氧",
+        "二氧化碳",
+        "蛋白質"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。丙途徑經由細胞膜上的膜蛋白，礦物質等物質可藉此進出細胞。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q33-q34.png"
+    }
+  ]
 }
