@@ -4,10 +4,79 @@
     "title": "2-1 生物體的基本構造｜各校題庫",
     "difficulty": "science-7-1-u02-s01-school",
     "sourceType": "school-exam",
-    "questionCount": 0,
-    "status": "planned",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-02",
+    "unitGroupLabel": "單元 2 生物體的構造",
+    "section": "section-01",
+    "unit": "2-1 生物體的基本構造",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
     "preserveOptionOrder": true,
-    "analysisEligible": true
+    "analysisEligible": true,
+    "questionCount": 2,
+    "classifiedQuestionCount": 2,
+    "pendingImageQuestionNumbers": [],
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節 2 題皆不依賴附圖，已依原卷與正式答案卷完成文字正式化。"
   },
-  "questions": []
+  "questions": [
+    {
+      "questionId": "260928203100001",
+      "revision": 1,
+      "number": 1,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "11",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s01-cell-discovery",
+        "science-7-1-u02-s01-hooke-cork-cell-wall"
+      ],
+      "q": "17世紀英國科學家虎克利用自製的顯微鏡觀察軟木栓的薄片，他所看到的蜂窩狀小格子其實是細胞的哪一部分構造？",
+      "o": [
+        "細胞膜",
+        "細胞質",
+        "細胞壁",
+        "細胞核"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。虎克觀察軟木栓薄片時，所見蜂窩狀小格子主要是死亡植物細胞留下的細胞壁。"
+    },
+    {
+      "questionId": "260928203100002",
+      "revision": 1,
+      "number": 2,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "25",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s01-cell-theory",
+        "science-7-1-u02-s01-history-of-cell"
+      ],
+      "q": "下列有關細胞的發現與細胞學說之敘述，何者正確？",
+      "o": [
+        "虎克(Robert Hooke)是第一位發明單管狀複式顯微鏡的人並利用它來觀察軟木栓薄片，發現軟木栓是由許多蜂窩狀的小格子所構成",
+        "許旺(Theodor Schwann)是第一位描述細胞的科學家",
+        "雷文霍克(Antoni van Leeuwenhoek)提出動、植物體都是由細胞所組成",
+        "細胞學說的重要內容為：「細胞是生物體構造與功能的基本單位」"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。細胞學說的重要內容之一是細胞為生物體構造與功能的基本單位；虎克並非顯微鏡發明者，也不是細胞學說的提出者。"
+    }
+  ]
 }
