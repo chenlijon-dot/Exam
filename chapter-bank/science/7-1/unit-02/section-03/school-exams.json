@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "title": "2-3 有關生命的物質｜各校題庫",
+    "difficulty": "science-7-1-u02-s03-school",
+    "sourceType": "school-exam",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-02",
+    "unitGroupLabel": "單元 2 生物體的構造",
+    "section": "section-03",
+    "unit": "2-3 有關生命的物質",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "questionCount": 0,
+    "classifiedQuestionCount": 4,
+    "pendingImageQuestionNumbers": [
+      26,
+      30,
+      33,
+      34
+    ],
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節 4 題 Q26、Q30、Q33、Q34 均依賴原卷圖像，目前保留分類與 pending，待裁圖後正式加入。"
+  },
+  "questions": []
+}
