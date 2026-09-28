@@ -16,7 +16,7 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": true,
-    "questionCount": 3,
+    "questionCount": 11,
     "classifiedQuestionCount": 11,
     "pendingImageQuestionNumbers": [
       13,
@@ -28,13 +28,45 @@
       20,
       36
     ],
-    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節共分類 11 題，目前先正式化不依賴附圖的 Q14、Q31、Q32；Q13、Q15～Q20、Q36 待原卷裁圖資產後補。"
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；11 題均已建立正式題目資料與核對官方答案，其中 Q13、Q15～Q20、Q36 的原卷裁圖已完成，待 GitHub 圖片資產上傳後解除 pending。",
+    "answerableQuestionCount": 3
   },
   "questions": [
     {
-      "questionId": "260928203100003",
+      "questionId": "260928231800001",
       "revision": 1,
       "number": 1,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "13",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-leaf-epidermis",
+        "science-7-1-u02-s02-guard-cell",
+        "science-7-1-u02-s02-cell-nucleus"
+      ],
+      "q": "小薇做「實驗2-1細胞觀察」時用高倍物鏡觀察風車草葉片的下表皮並將其所觀察的結果畫下來，如下圖所示，下列有關她所畫的圖之敘述，何者正確？",
+      "o": [
+        "甲是保衛細胞",
+        "乙是表皮細胞",
+        "甲、乙細胞都具有葉綠體",
+        "甲、乙細胞都具有細胞核"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。圖中的甲、乙分屬不同的植物表皮相關細胞；兩者都具有細胞核，但一般表皮細胞通常沒有葉綠體。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q13.png"
+    },
+    {
+      "questionId": "260928203100003",
+      "revision": 1,
+      "number": 2,
       "school": "高雄市立大灣國中",
       "schoolYear": "114",
       "year": "114",
@@ -60,9 +92,190 @@
       "e": "官方答案為 C。亞甲藍液可使部分細胞構造染色，增加顏色差異與對比，便於觀察。"
     },
     {
+      "questionId": "260928231800002",
+      "revision": 1,
+      "number": 3,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "15",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-cell-wall",
+        "science-7-1-u02-s02-plant-cell-structure"
+      ],
+      "q": "將此植物細胞放入純水中卻不會膨脹破裂，是因為哪一個構造的關係？",
+      "o": [
+        "丁",
+        "戊",
+        "己",
+        "庚"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。庚代表細胞壁；植物細胞吸水時，細胞壁可提供支持並限制過度膨脹。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+    },
+    {
+      "questionId": "260928231800003",
+      "revision": 1,
+      "number": 4,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "16",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-cell-nucleus",
+        "science-7-1-u02-s02-genetic-material"
+      ],
+      "q": "圖中哪一構造內有遺傳物質，是細胞的生命中樞，可控制細胞的代謝作用，若除去，細胞將逐漸死亡？",
+      "o": [
+        "甲",
+        "乙",
+        "戊",
+        "己"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。甲為細胞核，內含遺傳物質並控制細胞多項生命活動。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+    },
+    {
+      "questionId": "260928231800004",
+      "revision": 1,
+      "number": 5,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "17",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-chloroplast",
+        "science-7-1-u02-s02-photosynthesis"
+      ],
+      "q": "圖中哪一構造可進行光合作用，製造養分？",
+      "o": [
+        "甲",
+        "乙",
+        "戊",
+        "己"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。己為葉綠體，可進行光合作用製造養分。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+    },
+    {
+      "questionId": "260928231800005",
+      "revision": 1,
+      "number": 6,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "18",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-mitochondrion",
+        "science-7-1-u02-s02-cellular-respiration"
+      ],
+      "q": "圖中哪一構造可利用養分進行呼吸作用，產生細胞所需的能量？",
+      "o": [
+        "甲",
+        "乙",
+        "戊",
+        "己"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。乙為粒線體，是細胞進行呼吸作用、產生能量的重要胞器。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+    },
+    {
+      "questionId": "260928231800006",
+      "revision": 1,
+      "number": 7,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "19",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-vacuole",
+        "science-7-1-u02-s02-storage"
+      ],
+      "q": "圖中哪一構造可儲存水分、養分或廢物等物質？",
+      "o": [
+        "甲",
+        "乙",
+        "戊",
+        "己"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。戊為液胞，可儲存水分、養分或廢物等物質。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+    },
+    {
+      "questionId": "260928231800007",
+      "revision": 1,
+      "number": 8,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "20",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-plant-animal-cell-comparison",
+        "science-7-1-u02-s02-chloroplast",
+        "science-7-1-u02-s02-cell-wall"
+      ],
+      "q": "動物細胞不具有圖中哪些構造？",
+      "o": [
+        "甲戊",
+        "乙丙",
+        "丁己",
+        "己庚"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。己為葉綠體、庚為細胞壁，皆不是一般動物細胞所具有的構造。",
+      "imagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+    },
+    {
       "questionId": "260928203100004",
       "revision": 1,
-      "number": 2,
+      "number": 9,
       "school": "高雄市立大灣國中",
       "schoolYear": "114",
       "year": "114",
@@ -90,7 +303,7 @@
     {
       "questionId": "260928203100005",
       "revision": 1,
-      "number": 3,
+      "number": 10,
       "school": "高雄市立大灣國中",
       "schoolYear": "114",
       "year": "114",
@@ -114,6 +327,36 @@
       ],
       "a": 0,
       "e": "官方答案為 A。洋蔥表皮細胞是植物細胞，具有細胞壁；人體口腔皮膜細胞是動物細胞，沒有細胞壁。兩者都具有細胞膜與細胞核，而洋蔥鱗葉表皮通常沒有葉綠體。"
+    },
+    {
+      "questionId": "260928231800008",
+      "revision": 1,
+      "number": 11,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "36",
+      "sourcePage": 4,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-cell-shape-function",
+        "science-7-1-u02-s02-neuron"
+      ],
+      "q": "在人體不同組織中的細胞形狀不同，功能也不同。下列箭頭所指的細胞，何者最可能具有快速傳遞訊息的功能？",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 3,
+      "e": "官方答案為 D。D 圖箭頭所指為具多突起的神經細胞，形態適合快速傳遞訊息。",
+      "optionImagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q36.png"
     }
   ]
 }
