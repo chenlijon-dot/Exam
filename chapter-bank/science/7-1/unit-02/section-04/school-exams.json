@@ -16,12 +16,13 @@
     "scoreMode": "percent",
     "preserveOptionOrder": true,
     "analysisEligible": true,
-    "questionCount": 3,
+    "questionCount": 4,
     "classifiedQuestionCount": 4,
     "pendingImageQuestionNumbers": [
       29
     ],
-    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節共分類 4 題，目前先正式化不依賴附圖的 Q12、Q22、Q23；Q29 待原卷裁圖資產後補。"
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；4 題均已建立正式題目資料與核對官方答案，Q29 原卷裁圖已完成，待 GitHub 圖片資產上傳後解除 pending。",
+    "answerableQuestionCount": 3
   },
   "questions": [
     {
@@ -106,6 +107,37 @@
       ],
       "a": 3,
       "e": "官方答案為 D。植物具有細胞、組織與器官等層次，但一般不以器官系統描述其組成層次。"
+    },
+    {
+      "questionId": "260928231800013",
+      "revision": 1,
+      "number": 4,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "29",
+      "sourcePage": 3,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s04-plant-organs",
+        "science-7-1-u02-s04-vegetative-organ",
+        "science-7-1-u02-s04-reproductive-organ"
+      ],
+      "q": "下列有來自 4 種不同植物的部分部位，何者為該植物的營養器官？",
+      "o": [
+        "木棉花",
+        "黃金竹",
+        "花生",
+        "芭樂"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。黃金竹圖示的是莖，屬營養器官；花、果實與種子屬生殖相關構造。",
+      "optionImagePending": true,
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q29.png"
     }
   ]
 }
