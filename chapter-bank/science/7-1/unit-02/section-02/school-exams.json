@@ -4,10 +4,116 @@
     "title": "2-2 細胞的形態和構造｜各校題庫",
     "difficulty": "science-7-1-u02-s02-school",
     "sourceType": "school-exam",
-    "questionCount": 0,
-    "status": "planned",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-02",
+    "unitGroupLabel": "單元 2 生物體的構造",
+    "section": "section-02",
+    "unit": "2-2 細胞的形態和構造",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
     "preserveOptionOrder": true,
-    "analysisEligible": true
+    "analysisEligible": true,
+    "questionCount": 3,
+    "classifiedQuestionCount": 11,
+    "pendingImageQuestionNumbers": [
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      36
+    ],
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節共分類 11 題，目前先正式化不依賴附圖的 Q14、Q31、Q32；Q13、Q15～Q20、Q36 待原卷裁圖資產後補。"
   },
-  "questions": []
+  "questions": [
+    {
+      "questionId": "260928203100003",
+      "revision": 1,
+      "number": 1,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "14",
+      "sourcePage": 2,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-cell-staining",
+        "science-7-1-u02-s02-methylene-blue"
+      ],
+      "q": "當我們用顯微鏡觀察動、植物細胞時，常會滴加亞甲藍液，下列何者為滴加亞甲藍液的目的？",
+      "o": [
+        "使細胞維持原來的形狀",
+        "增加細胞的透光率",
+        "使細胞中的構造顏色深淺不同",
+        "維持細胞的正常生理"
+      ],
+      "a": 2,
+      "e": "官方答案為 C。亞甲藍液可使部分細胞構造染色，增加顏色差異與對比，便於觀察。"
+    },
+    {
+      "questionId": "260928203100004",
+      "revision": 1,
+      "number": 2,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "31",
+      "sourcePage": 3,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-cytoplasm",
+        "science-7-1-u02-s02-cell-shape-function"
+      ],
+      "q": "下列有關生物細胞的敘述，何者正確？",
+      "o": [
+        "動物體內的細胞皆呈球狀，而植物體內的細胞皆呈長方體",
+        "細胞質為膠狀的水溶液，內含有許多種微小的胞器，是細胞進行代謝作用的場所",
+        "就單一細胞而言，藍鯨體內之細胞比變形蟲的生理機能為多",
+        "動、植物體內的各種細胞形狀、大小均差不多"
+      ],
+      "a": 1,
+      "e": "官方答案為 B。細胞質為膠狀的水溶液，含有多種胞器，是許多代謝反應進行的場所；細胞形狀與大小會因功能而異。"
+    },
+    {
+      "questionId": "260928203100005",
+      "revision": 1,
+      "number": 3,
+      "school": "高雄市立大灣國中",
+      "schoolYear": "114",
+      "year": "114",
+      "semester": "第一學期",
+      "examName": "七年級第一次段考",
+      "originalQuestionNumber": "32",
+      "sourcePage": 4,
+      "sourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題.pdf",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u02-s02-plant-animal-cell-comparison",
+        "science-7-1-u02-s02-cell-wall"
+      ],
+      "q": "下列有關在實驗 2-1 所觀察的洋蔥的表皮細胞和人體口腔皮膜細胞之比較，何者正確？",
+      "o": [
+        "洋蔥的表皮細胞有細胞壁，人體口腔皮膜細胞沒有細胞壁",
+        "洋蔥的表皮細胞沒有細胞膜，人體口腔皮膜細胞有細胞膜",
+        "洋蔥的表皮細胞沒有細胞核，人體口腔皮膜細胞有細胞核",
+        "洋蔥的表皮細胞有葉綠體，人體口腔皮膜細胞沒有葉綠體"
+      ],
+      "a": 0,
+      "e": "官方答案為 A。洋蔥表皮細胞是植物細胞，具有細胞壁；人體口腔皮膜細胞是動物細胞，沒有細胞壁。兩者都具有細胞膜與細胞核，而洋蔥鱗葉表皮通常沒有葉綠體。"
+    }
+  ]
 }
