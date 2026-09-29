@@ -21,7 +21,7 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "active",
-    "sourceNote": "升學王／高雄楷模書院第一份練習卷－七上地理「位置」全版本。25 題經教材 canonical 逐題分析後皆歸入第1章，並細分至 1-1、1-2、1-3、1-4；原題順序與來源資訊保留，解析卷為答案 authority。",
+    "sourceNote": "升學王／高雄楷模書院第一份練習卷－七上地理「位置」全版本。25 題經教材 canonical 逐題分析後皆歸入第1章〈認識位置與地圖〉；原題順序與來源資訊保留，解析卷為答案 authority。細部 conceptIds 僅供內部知識點與回溯使用，不作為段考章節索引層級。",
     "sourceLabel": "升學王"
   },
   "source": {
