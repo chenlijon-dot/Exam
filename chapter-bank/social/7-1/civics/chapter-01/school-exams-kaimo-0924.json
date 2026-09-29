@@ -21,7 +21,8 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "active",
-    "sourceNote": "高雄楷模書院第四份練習卷－七上公民「一段範圍複習」各版本逐題依真正解題概念拆入章節；目前收錄適康版與適翰版。原題選項順序與出題時法規名稱保留；原卷未可靠標示 schoolYear，故 year 保留 unknown。完全重複題共用既有 questionId，不在正式 bank 重複 append。"
+    "sourceNote": "高雄楷模書院第四份練習卷－七上公民「一段範圍複習」各版本逐題依真正解題概念拆入章節；目前收錄適康版與適翰版。原題選項順序與出題時法規名稱保留；原卷未可靠標示 schoolYear，故 year 保留 unknown。完全重複題共用既有 questionId，不在正式 bank 重複 append。",
+    "sourceLabel": "升學王"
   },
   "source": {
     "school": "高雄楷模書院",
