@@ -125,8 +125,7 @@
 ```text
 3-1 食物和養分
 ├─ self-study.json：50 題 census
-├─ 30 題已有正式答案 authority，可進入自動評量
-└─ 20 題待正式解答頁，保留於 pendingQuestions
+└─ 50 題均已有正式答案 authority，可進入自動評量
 
 3-2 酵素的作用
 └─ 來源頁混入 1 題，已依 curriculum 分流保存為 pending；3-2 runtime 尚未啟用

@@ -6,9 +6,9 @@
       code: '3-1',
       title: '食物和養分',
       root: 'chapter-bank/science/7-1/unit-03/section-01',
-      selfStudyCount: 30,
+      selfStudyCount: 50,
       censusCount: 50,
-      pendingCount: 20,
+      pendingCount: 0,
       selfStudyDesc: '新無敵自然自修原題；養分種類、熱量、營養標示、維生素礦物質與食物成分檢測。'
     }
   };
