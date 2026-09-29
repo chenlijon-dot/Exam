@@ -227,7 +227,7 @@
       key: 'unit-3', number: '單元 3', title: '生物體內的營養',
       sections: [
         { key: 'science-7-1-3-1', code: '3-1', title: '食物和養分', enabled: true, desc: '新無敵自然自修：50題均已核對正式解答，可直接作答；養分、熱量、營養標示與食物成分檢測' },
-        { key: 'science-7-1-3-2', code: '3-2', title: '酵素的作用', enabled: false },
+        { key: 'science-7-1-3-2', code: '3-2', title: '酵素的作用', enabled: true, desc: '新無敵自然自修：54個作答項目；53題自動評量＋1題紙筆練習，酵素特性、專一性、溫度與酸鹼度、唾液澱粉酶實驗與科學素養' },
         { key: 'science-7-1-3-3', code: '3-3', title: '光合作用', enabled: false },
         { key: 'science-7-1-3-4', code: '3-4', title: '人體的消化系統', enabled: false },
         { key: 'science-7-1-core-3', code: '核心素養', title: '養分的消化與吸收', enabled: false, type: 'literacy' }
@@ -1052,7 +1052,7 @@
       <button class="catalog-back" id="backSemestersBtn">← 返回學期</button>
       <div class="catalog-path">自然　›　七年級上學期（一上）</div>
       <h2 class="catalog-title">請選擇單元</h2>
-      <p class="catalog-sub">目前單元 1 的 1-1、1-2、1-3，單元 2 的 2-1、2-2、2-3、2-4，以及單元 3 的 3-1 已有題庫入口；其餘小節先完成分類，題目後續加入。</p>
+      <p class="catalog-sub">目前單元 1 的 1-1、1-2、1-3，單元 2 的 2-1、2-2、2-3、2-4，以及單元 3 的 3-1、3-2 已有題庫入口；其餘小節先完成分類，題目後續加入。</p>
       <div class="catalog-grid">
         ${SCIENCE_7_1_UNITS.map(u => {
           const ready = u.sections.filter(s => s.enabled).length;
