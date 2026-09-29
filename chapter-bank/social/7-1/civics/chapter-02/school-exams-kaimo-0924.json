@@ -21,7 +21,8 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "active",
-    "sourceNote": "高雄楷模書院七上公民練習卷逐題依目前 canonical 的真正解題概念拆入章節；目前收錄第四份練習卷 0924 各版本、第三份練習卷 0917 各版本，以及第二份練習卷 0910 適康／適南版〈人性尊嚴與普世人權〉。原題選項順序與出題時法規名稱保留，舊法名僅於解析註記現行名稱；原卷未可靠標示 schoolYear，故 year 保留 unknown。完全重複題共用既有 questionId，不在正式 bank 重複 append。"
+    "sourceNote": "高雄楷模書院七上公民練習卷逐題依目前 canonical 的真正解題概念拆入章節；目前收錄第四份練習卷 0924 各版本、第三份練習卷 0917 各版本，以及第二份練習卷 0910 適康／適南版〈人性尊嚴與普世人權〉。原題選項順序與出題時法規名稱保留，舊法名僅於解析註記現行名稱；原卷未可靠標示 schoolYear，故 year 保留 unknown。完全重複題共用既有 questionId，不在正式 bank 重複 append。",
+    "sourceLabel": "升學王"
   },
   "source": {
     "school": "高雄楷模書院",
