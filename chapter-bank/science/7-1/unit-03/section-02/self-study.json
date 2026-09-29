@@ -5,20 +5,1936 @@
     "difficulty": "science-7-1-u03-s02-self-study",
     "sourceType": "supplemental-workbook",
     "sourceTitle": "新無敵國中自然 1",
-    "sourceSection": "3-1 食物中的養分與能量（來源頁混入3-2考點）",
+    "sourceSection": "3-2 酵素的作用",
     "mappedSection": "3-2 酵素的作用",
-    "questionCount": 1,
-    "answerableQuestionCount": 0,
+    "questionCount": 54,
+    "answerableQuestionCount": 53,
+    "manualStudyCount": 1,
     "pendingImageQuestionNumbers": [],
     "preserveOptionOrder": true,
     "analysisEligible": true,
-    "answerAuthority": "新無敵自然自修會考試題範例 p.124 印刷答案",
-    "buildStage": "pending until 3-2 formal bank is established",
-    "note": "本題原位於來源書3-1頁面，但核心考點為酵素分解澱粉，因此依canonical分流至3-2；目前不啟用3-2 runtime。"
+    "answerAuthority": "新無敵自然自修解答篇 p.372–373；會考試題範例 p.137 印刷答案與解析；另含自3-1依curriculum分流之STEP1 Q2（來源p.122，答案p.124）。",
+    "buildStage": "complete",
+    "explanationStatus": "54/54",
+    "note": "新拍3-2共53個作答項目（52題自動評量選擇題＋1題manual-study），另併入3-1分流的1題選擇題，正式bank共54題；其中53題可自動評量、1題紙筆練習不計分。所有MCQ固定保留原選項順序並明示optionCanonicalIndices。"
   },
-  "questions": [],
-  "pendingQuestions": [
+  "questions": [
     {
+      "questionId": "260929221900001",
+      "revision": 1,
+      "number": 1,
+      "q": "對於酵素的敘述，下列何者正確？",
+      "o": [
+        "酵素在生物體內是由活細胞產生",
+        "酵素一定在細胞內進行反應",
+        "酵素的主要成分是礦物質",
+        "酵素在任何溫度下皆具有活性"
+      ],
+      "a": 0,
+      "e": "酵素由活細胞產生，但可在細胞外作用；多數酵素主要成分為蛋白質，活性也會受溫度影響。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收1",
+      "originalQuestionNumber": 1,
+      "sourcePage": 128,
+      "sourceFile": "IMG_20260929_181253.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-properties"
+      ]
+    },
+    {
+      "questionId": "260929221900002",
+      "revision": 1,
+      "number": 2,
+      "q": "右圖是酵素生理學家採自不同地區的細菌所進行的活性反應圖，則由圖中資料可推特此類細菌應生活於何處？",
+      "o": [
+        "極地",
+        "深海",
+        "喜馬拉雅山山頂",
+        "火山溫泉"
+      ],
+      "a": 3,
+      "e": "圖中酵素在高溫時活性最高，推測此細菌適應高溫環境，因此最可能生活於火山溫泉。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收1",
+      "originalQuestionNumber": 2,
+      "sourcePage": 128,
+      "sourceFile": "IMG_20260929_181253.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "adaptation"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/sv1-q2-temperature-curve.webp",
+      "imageAlt": "細菌酵素活性隨溫度變化曲線，高溫處出現明顯活性高峰"
+    },
+    {
+      "questionId": "260929221900003",
+      "revision": 1,
+      "number": 3,
+      "q": "關於酵素的敘述，下列何者錯誤？",
+      "o": [
+        "由活細胞產生的物質",
+        "主要成分是蛋白質",
+        "酵素在人體內的作用效果隨溫度上升而增加",
+        "人體內酵素種類很多"
+      ],
+      "a": 2,
+      "e": "酵素活性只在適當溫度範圍內隨溫度升高而增加，超過最適溫度會下降甚至失去活性。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收1",
+      "originalQuestionNumber": 3,
+      "sourcePage": 128,
+      "sourceFile": "IMG_20260929_181253.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "enzyme-properties"
+      ]
+    },
+    {
+      "questionId": "260929221900004",
+      "revision": 1,
+      "number": 4,
+      "q": "下列哪一曲線，可用來表示人體內的酵素活性和溫度的關係？",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 0,
+      "e": "人體酵素約在37℃附近活性最佳，溫度過高時會迅速失去活性，因此A圖最合理。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收1",
+      "originalQuestionNumber": 4,
+      "sourcePage": 128,
+      "sourceFile": "IMG_20260929_181253.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ],
+      "optionImage": "chapter-bank/science/7-1/unit-03/section-02/assets/sv1-q4-temperature-options.webp",
+      "optionImageAlt": "A至D四個酵素活性與溫度關係曲線選項"
+    },
+    {
+      "questionId": "260929221900005",
+      "revision": 1,
+      "number": 5,
+      "q": "下列何者是酵素作用的最佳酸鹼性？",
+      "o": [
+        "酸性",
+        "中性",
+        "鹼性",
+        "視酵素種類而定"
+      ],
+      "a": 3,
+      "e": "不同酵素有不同的最適酸鹼度，不能一概而論。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收1",
+      "originalQuestionNumber": 5,
+      "sourcePage": 128,
+      "sourceFile": "IMG_20260929_181253.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-ph"
+      ]
+    },
+    {
+      "questionId": "260929221900006",
+      "revision": 1,
+      "number": 6,
+      "q": "酵素的專一性是指下列何者？",
+      "o": [
+        "一種酵素只能影響一種反應",
+        "一種酵素只能在一種酸鹼性環境反應",
+        "一種酵素只能在一種溫度反應",
+        "一種酵素只能進行一次反應"
+      ],
+      "a": 0,
+      "e": "一種酵素通常只催化特定反應，這就是酵素的專一性。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收1",
+      "originalQuestionNumber": 6,
+      "sourcePage": 128,
+      "sourceFile": "IMG_20260929_181253.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity"
+      ]
+    },
+    {
+      "questionId": "260929221900007",
+      "revision": 1,
+      "number": 7,
+      "q": "試管中有未知成分的水溶液，當滴入碘液後溶液變成藍黑色，則此溶液中含有哪一種物質？",
+      "o": [
+        "糖",
+        "澱粉",
+        "蛋白質",
+        "脂質"
+      ],
+      "a": 1,
+      "e": "碘液遇澱粉會呈藍黑色，因此可判斷含有澱粉。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收2",
+      "originalQuestionNumber": 1,
+      "sourcePage": 130,
+      "sourceFile": "IMG_20260929_181306.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "starch-iodine-test"
+      ]
+    },
+    {
+      "questionId": "260929221900008",
+      "revision": 1,
+      "number": 8,
+      "q": "某液體加本氏液，加熱後由綠色變紅色，由此可證明某溶液中含有什麼？",
+      "o": [
+        "蛋白質",
+        "澱粉",
+        "葡萄糖",
+        "水"
+      ],
+      "a": 2,
+      "e": "本氏液加熱後出現綠、黃、橙、紅等顏色，可檢測還原糖如葡萄糖。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收2",
+      "originalQuestionNumber": 2,
+      "sourcePage": 130,
+      "sourceFile": "IMG_20260929_181306.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "benedict-test"
+      ]
+    },
+    {
+      "questionId": "260929221900009",
+      "revision": 1,
+      "number": 9,
+      "q": "某人的尿液加入本氏液後加熱，結果呈現紅色，則可推知此人尿液中有何種物質？",
+      "o": [
+        "含有紅血球",
+        "含有糖",
+        "含有蛋白質",
+        "水分太少"
+      ],
+      "a": 1,
+      "e": "本氏液呈紅色為糖的陽性反應，因此尿液中含糖。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收2",
+      "originalQuestionNumber": 3,
+      "sourcePage": 130,
+      "sourceFile": "IMG_20260929_181306.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "benedict-test"
+      ]
+    },
+    {
+      "questionId": "260929221900010",
+      "revision": 1,
+      "number": 10,
+      "q": "檢測西瓜汁是否含有葡萄糖，一般用何種試劑測定？",
+      "o": [
+        "碘液",
+        "本氏液",
+        "氯化亞鈷試紙",
+        "亞甲藍液"
+      ],
+      "a": 1,
+      "e": "葡萄糖可用本氏液加熱檢測。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收2",
+      "originalQuestionNumber": 4,
+      "sourcePage": 130,
+      "sourceFile": "IMG_20260929_181306.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "benedict-test"
+      ]
+    },
+    {
+      "questionId": "260929221900011",
+      "revision": 1,
+      "number": 11,
+      "q": "有甲、乙、丙、丁四支試管，甲管置入水和澱粉，乙管置入澱粉和唾液，丙管置入澱粉、唾液和醋，丁管將澱粉和煮沸後唾液置入。將上述各試管分別加入本氏液並隔水加熱，何者會產生紅色反應？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 1,
+      "e": "只有乙管唾液酵素在適宜環境中能將澱粉分解成糖，故本氏液加熱後呈陽性反應。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收2",
+      "originalQuestionNumber": 5,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "enzyme-experiment"
+      ]
+    },
+    {
+      "questionId": "260929221900012",
+      "revision": 1,
+      "number": 12,
+      "q": "小莉用筷子沾著稀飯的湯在乾淨的白布上寫字，等字乾了就看不見了，若想讓白布上的字顯現出來，可噴灑下列哪一種溶液？",
+      "o": [
+        "醋",
+        "酒精",
+        "食鹽水",
+        "稀碘液"
+      ],
+      "a": 3,
+      "e": "稀飯含澱粉，碘液遇澱粉會呈藍黑色，因此可使字跡顯現。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收2",
+      "originalQuestionNumber": 6,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "starch-iodine-test"
+      ]
+    },
+    {
+      "questionId": "260929221900013",
+      "revision": 1,
+      "number": 13,
+      "q": "煮沸過的唾液，加入裝有2 mL澱粉液的試管，再置於37℃保麗龍盒中40分鐘後，在試管中加入本氏液，隔水加熱的結果與解釋分別為何？",
+      "o": [
+        "藍色，煮沸過的唾液中酵素失去作用",
+        "黃色，試管中有糖產生",
+        "橙色，試管中沒有糖產生",
+        "藍黑色，澱粉與本氏液反應"
+      ],
+      "a": 0,
+      "e": "唾液酵素經煮沸會失去活性，無法分解澱粉產生糖，因此本氏液維持淡藍色。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "隨堂驗收2",
+      "originalQuestionNumber": 7,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "enzyme-temperature"
+      ]
+    },
+    {
+      "questionId": "260929221900014",
+      "revision": 1,
+      "number": 14,
+      "q": "有關酵素的敘述，下列何者錯誤？",
+      "o": [
+        "一種酵素可催化多種反應",
+        "酵素可在生物體外作用",
+        "溫度會影響酵素作用",
+        "唾液中含有能分解澱粉的酵素"
+      ],
+      "a": 0,
+      "e": "酵素具有專一性，一種酵素通常只催化特定反應。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 1,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity"
+      ]
+    },
+    {
+      "questionId": "260929221900015",
+      "revision": 1,
+      "number": 15,
+      "q": "酵素在參與物質合成或分解時會如何？",
+      "o": [
+        "變成生成物",
+        "維持原狀並可再參與反應",
+        "因受分解破壞而不能再用",
+        "最後失去活性"
+      ],
+      "a": 1,
+      "e": "酵素是催化劑，反應前後本身不被消耗，可重複使用。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 2,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-properties"
+      ]
+    },
+    {
+      "questionId": "260929221900016",
+      "revision": 1,
+      "number": 16,
+      "q": "下列哪一物質不會影響澱粉酵素的活動？",
+      "o": [
+        "鹽酸",
+        "冰塊",
+        "纖維素",
+        "熱水"
+      ],
+      "a": 2,
+      "e": "酸鹼度與溫度會影響酵素活性；纖維素不是調控澱粉酵素活性的環境因子。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 3,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "enzyme-ph"
+      ]
+    },
+    {
+      "questionId": "260929221900017",
+      "revision": 1,
+      "number": 17,
+      "q": "關於酵素的敘述，下列何者錯誤？",
+      "o": [
+        "黴菌中也含有酵素",
+        "酵素在活酵母菌中才有作用",
+        "不同種類的酵素，功能亦不同",
+        "酵素會參與生物細胞內的生理反應"
+      ],
+      "a": 1,
+      "e": "酵素可被分離並在適當條件下於生物體外發揮作用，不限於活酵母菌內。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 4,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-properties"
+      ]
+    },
+    {
+      "questionId": "260929221900018",
+      "revision": 1,
+      "number": 18,
+      "q": "酵素作用時，關於其溫度的敘述，下列何者正確？",
+      "o": [
+        "愈高愈好",
+        "愈低愈好",
+        "有一定範圍",
+        "沒有限制"
+      ],
+      "a": 2,
+      "e": "每種酵素都有適合的作用溫度範圍與最適溫度。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 5,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ]
+    },
+    {
+      "questionId": "260929221900019",
+      "revision": 1,
+      "number": 19,
+      "q": "將食物置於低溫環境下可保存較久，是利用酵素哪一種特性的結果？",
+      "o": [
+        "低溫環境會使酵素變性",
+        "低溫環境會使酵素失去催化的能力",
+        "低溫環境會使酵素作用之pH值發生改變",
+        "低溫環境會使酵素活性降低"
+      ],
+      "a": 3,
+      "e": "低溫通常使酵素反應速率下降而非永久破壞，因此食物變質速度降低。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 6,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ]
+    },
+    {
+      "questionId": "260929221900020",
+      "revision": 1,
+      "number": 20,
+      "q": "酵素作用時，關於其酸鹼性的敘述，下列何者正確？",
+      "o": [
+        "愈酸性愈好",
+        "中性",
+        "愈鹼性愈好",
+        "視酵素種類而定"
+      ],
+      "a": 3,
+      "e": "不同酵素各有其最適酸鹼度。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 7,
+      "sourcePage": 131,
+      "sourceFile": "IMG_20260929_181317.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-ph"
+      ]
+    },
+    {
+      "questionId": "260929221900021",
+      "revision": 1,
+      "number": 21,
+      "q": "將食物放入冰箱，可保持新鮮，因為低溫有何作用？",
+      "o": [
+        "殺死細菌",
+        "降低酵素活性",
+        "增加食物風味",
+        "將糖轉成澱粉"
+      ],
+      "a": 1,
+      "e": "低溫可降低酵素活性及反應速率，使食物變質較慢。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 8,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "food-preservation"
+      ]
+    },
+    {
+      "questionId": "260929221900022",
+      "revision": 1,
+      "number": 22,
+      "q": "如果有一科學家，在實驗室中觀察到一種細菌內酵素的活性在75℃時達到最大，則此細菌最可能在哪裡發現？",
+      "o": [
+        "深海",
+        "河口沼澤",
+        "高溫溫泉",
+        "人體腸道"
+      ],
+      "a": 2,
+      "e": "最適溫度高達75℃，顯示它較適應高溫環境，因此可能來自高溫溫泉。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 9,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "adaptation"
+      ]
+    },
+    {
+      "questionId": "260929221900023",
+      "revision": 1,
+      "number": 23,
+      "q": "有一個反應簡式：甲＋乙→丙＋丁＋乙，其中何者最有可能是酵素？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 1,
+      "e": "乙在反應前後都出現且未被消耗，符合酵素作為催化劑可重複使用的特性。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "基本學力篇",
+      "originalQuestionNumber": 10,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-properties",
+        "enzyme-reaction"
+      ]
+    },
+    {
+      "questionId": "260929221900024",
+      "revision": 1,
+      "number": 24,
+      "q": "關於生物體內的酵素，下列何項敘述錯誤？",
+      "o": [
+        "胃液內的酵素喜歡在酸性環境下作用",
+        "分解澱粉、蛋白質、脂質的酵素是不同的種類",
+        "動、植物體內都有酵素",
+        "酵素一定要在生物體內才有作用"
+      ],
+      "a": 3,
+      "e": "酵素在適當條件下即使離開生物體仍可作用。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 11,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-properties",
+        "enzyme-specificity"
+      ]
+    },
+    {
+      "questionId": "260929221900025",
+      "revision": 1,
+      "number": 25,
+      "q": "下圖為在生物體內進行某種化學反應的方式，則哪一種分子是酵素？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 1,
+      "e": "乙在反應前後形狀不變且協助反應物分解，因此乙代表酵素。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 12,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-reaction"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q12-reaction-diagram.webp",
+      "imageAlt": "反應物甲與分子乙結合後加水分解成丙、丁，乙在反應前後不變的示意圖"
+    },
+    {
+      "questionId": "260929221900026",
+      "revision": 1,
+      "number": 26,
+      "q": "酵素的活動受溫度影響，那麼酵素活性和溫度的關係，應以下列哪一圖形表示較為正確？",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 2,
+      "e": "酵素活性通常先隨溫度升高而增加，達最適溫度後因高溫造成結構受影響而迅速下降，C圖最合理。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 13,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ],
+      "optionImage": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q13-temperature-options.webp",
+      "optionImageAlt": "A至D四種酵素活性與溫度關係曲線"
+    },
+    {
+      "questionId": "260929221900027",
+      "revision": 1,
+      "number": 27,
+      "q": "種子內有酵素，遇到合適環境便會促使種子發芽。為了不讓種子發芽，你認為種子應存放在下列何種環境？",
+      "o": [
+        "潮濕高溫",
+        "低溫潮濕",
+        "低溫乾燥",
+        "乾燥高溫"
+      ],
+      "a": 2,
+      "e": "低溫可降低酵素活性，乾燥又缺乏萌芽所需水分，因此最能抑制發芽。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 14,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "seed-germination"
+      ]
+    },
+    {
+      "questionId": "260929221900028",
+      "revision": 1,
+      "number": 28,
+      "q": "右圖曲線是表示下列何者？",
+      "o": [
+        "酵素甲、乙和丙的活動情形一樣",
+        "酵素甲只在酸性、酵素乙只在中性、酵素丙只在鹼性環境中活動",
+        "三種酵素最佳活動時所需之pH範圍不同",
+        "酵素丙活性最大，酵素乙次之，酵素甲活性最小"
+      ],
+      "a": 2,
+      "e": "圖中三種酵素的活性高峰出現在不同pH，表示各有不同最適酸鹼度。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 15,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-ph"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q15-ph-curves.webp",
+      "imageAlt": "酵素甲乙丙在不同pH值下的活性曲線"
+    },
+    {
+      "questionId": "260929221900029",
+      "revision": 1,
+      "number": 29,
+      "q": "有關酵素的敘述，下列何者錯誤？",
+      "o": [
+        "0℃時即被破壞失去活性",
+        "主要成分是蛋白質",
+        "酸鹼性也會影響酵素的活性",
+        "每一種酵素有自己適宜的溫度範圍"
+      ],
+      "a": 0,
+      "e": "低溫通常只是暫時降低酵素活性，回到適宜溫度後活性可恢復，不等於被破壞。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 16,
+      "sourcePage": 132,
+      "sourceFile": "IMG_20260929_181338.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ]
+    },
+    {
+      "questionId": "260929221900030",
+      "revision": 1,
+      "number": 30,
+      "q": "取一片水蘊草葉片，在顯微鏡下觀察，可見到細胞壁，若滴入蝸牛的消化液，經過30分鐘後再觀察，發現水蘊草細胞壁消失，由此可以推測蝸牛消化液可以分解什麼？",
+      "o": [
+        "蛋白質",
+        "脂質",
+        "澱粉",
+        "纖維素"
+      ],
+      "a": 3,
+      "e": "高等植物細胞壁主要成分為纖維素，因此細胞壁消失表示消化液能分解纖維素。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 17,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity",
+        "cellulose"
+      ]
+    },
+    {
+      "questionId": "260929221900031",
+      "revision": 1,
+      "number": 31,
+      "q": "小翔想研究在人類腸道的共生細菌作用情形，將細菌酵素萃取出來置於試管中，再分別加入不同受質，接下來做何種處理，可協助細菌酵素作用的進行？",
+      "o": [
+        "隔水加熱至沸騰",
+        "直接加熱到50℃",
+        "4℃低溫下放20分鐘",
+        "握在手中20分鐘"
+      ],
+      "a": 3,
+      "e": "人體腸道細菌的酵素適合接近人體溫度；手掌溫度較接近此範圍。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 18,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ]
+    },
+    {
+      "questionId": "260929221900032",
+      "revision": 1,
+      "number": 32,
+      "q": "有關酵素的敘述，下列何者錯誤？",
+      "o": [
+        "主要成分為蛋白質，故凡能影響此物質結構之因子均會影響其活性",
+        "酵素必定是加速生理化學反應進行",
+        "酵素可反覆催化同一種生理化學反應",
+        "並非所有生理化學反應均有酵素參與"
+      ],
+      "a": 1,
+      "e": "酵素的作用是催化，使反應較容易進行；題目答案指出「必定是加速」的絕對敘述不恰當。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 19,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-properties"
+      ]
+    },
+    {
+      "questionId": "260929221900033",
+      "revision": 1,
+      "number": 33,
+      "q": "如右圖，甲、乙、丙三支試管均加入3 mL澱粉液及3 mL唾液，分別置於0℃、37℃、90℃的水中。每隔一段時間，分別從三支試管各取出等量液體，冷卻後滴加碘液，則哪一支試管的液體最快不再出現藍黑色反應？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "甲、丙"
+      ],
+      "a": 1,
+      "e": "37℃最接近唾液澱粉酶的適宜溫度，澱粉分解最快，因此最早不再出現碘液藍黑反應。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 20,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "enzyme-temperature"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q20-temperature-experiment.webp",
+      "imageAlt": "甲乙丙三支含澱粉液與唾液的試管分別置於0℃、37℃、90℃水浴的實驗圖"
+    },
+    {
+      "questionId": "260929221900034",
+      "revision": 1,
+      "number": 34,
+      "q": "右圖為某生物體內酵素活性變化的示意圖。下列關於此酵素的敘述何者最恰當？",
+      "o": [
+        "不可能為人體內的酵素",
+        "其活性隨溫度升高而增加",
+        "此酵素約在30℃～40℃時活性最佳",
+        "此酵素在40℃時會瞬間失去活性"
+      ],
+      "a": 2,
+      "e": "曲線高峰約在30～40℃，因此該範圍是其最佳活性溫度；超過後逐漸下降。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 21,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q21-temperature-curve.webp",
+      "imageAlt": "酵素活性在約30至40℃達高峰、之後下降的曲線"
+    },
+    {
+      "questionId": "260929221900035",
+      "revision": 1,
+      "number": 35,
+      "q": "右圖為某種生物體內的一種關鍵酵素活性與溫度的關係圖。若該酵素與生物存活有關，則依圖判斷該生物最不可能生活於何處？",
+      "o": [
+        "熱帶河流",
+        "溫帶草原",
+        "河口沼澤",
+        "高溫溫泉"
+      ],
+      "a": 3,
+      "e": "曲線顯示約65℃時酵素已幾乎無活性，因此此生物最不可能生活在高溫溫泉。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 22,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "adaptation"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q22-temperature-curve.webp",
+      "imageAlt": "關鍵酵素活性隨溫度升高至約30至40℃達高峰，約65℃接近零的曲線"
+    },
+    {
+      "questionId": "260929221900036",
+      "revision": 1,
+      "number": 36,
+      "q": "由上述可知酵素的本質與下列何者接近？",
+      "o": [
+        "醣類",
+        "維生素",
+        "脂質",
+        "蛋白質"
+      ],
+      "a": 3,
+      "e": "大多數酵素的主要成分是蛋白質，因此其本質最接近蛋白質。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 23,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-properties"
+      ]
+    },
+    {
+      "questionId": "260929221900037",
+      "revision": 1,
+      "number": 37,
+      "q": "關於在高等生物體內的酵素，下列何者正確？",
+      "o": [
+        "酵素種類多，每種酵素量少",
+        "酵素種類少，每種酵素量少",
+        "酵素種類多，每種酵素量多",
+        "酵素種類少，每種酵素量多"
+      ],
+      "a": 0,
+      "e": "高等生物代謝反應種類多，酵素具有專一性且可重複催化，因此酵素種類多而每種所需量相對少。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 24,
+      "sourcePage": 133,
+      "sourceFile": "IMG_20260929_181346.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity",
+        "enzyme-properties"
+      ]
+    },
+    {
+      "questionId": "260929221900038",
+      "revision": 1,
+      "number": 38,
+      "q": "根據右圖甲、乙兩組裝置，溫水與冰水中各有澱粉液加唾液或水的試管，俊彥想要探討什麼？",
+      "o": [
+        "酸鹼性對唾液中所含酵素的影響",
+        "本氏液對唾液中所含酵素的影響",
+        "溫度對唾液中所含酵素的影響",
+        "澱粉對唾液中所含酵素的影響"
+      ],
+      "a": 2,
+      "e": "兩組主要差異是溫水與冰水的溫度不同，因此研究的是溫度對唾液酵素作用的影響。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 25,
+      "sourcePage": 134,
+      "sourceFile": "IMG_20260929_181403.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "enzyme-experiment",
+        "enzyme-temperature"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q25-28-experiment.webp",
+      "imageAlt": "甲組溫水與乙組冰水中各放置澱粉液加唾液或水的四支試管實驗裝置"
+    },
+    {
+      "questionId": "260929221900039",
+      "revision": 1,
+      "number": 39,
+      "q": "俊彥將此兩組裝置內的試管放置約30分鐘後，取出甲～丁四支試管分別加入3 mL本氏液，並隔水加熱，則此四支試管內的顏色變化順序（甲→丁）應該為何較合理？",
+      "o": [
+        "紅、綠、藍、藍",
+        "紅、藍、黃、綠",
+        "藍、綠、紅、藍",
+        "藍、藍、紅、黃"
+      ],
+      "a": 0,
+      "e": "甲管在適宜溫度且有唾液酵素，產糖最多；乙次之；丙、丁無唾液酵素而無糖反應，故依答案為紅、綠、藍、藍。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 26,
+      "sourcePage": 134,
+      "sourceFile": "IMG_20260929_181403.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "benedict-test",
+        "enzyme-experiment"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q25-28-experiment.webp",
+      "imageAlt": "甲組溫水與乙組冰水中各放置澱粉液加唾液或水的四支試管實驗裝置"
+    },
+    {
+      "questionId": "260929221900040",
+      "revision": 1,
+      "number": 40,
+      "q": "承26題結果，由此實驗結果可得到下列哪一結論？",
+      "o": [
+        "溫度可加速碘液作用",
+        "唾液愈多，澱粉分解愈快",
+        "本氏液可加速澱粉的分解",
+        "唾液能分解澱粉，但是會受到溫度的影響"
+      ],
+      "a": 3,
+      "e": "有唾液的試管能產生糖，而且溫水與冰水反應程度不同，顯示唾液可分解澱粉且受溫度影響。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 27,
+      "sourcePage": 134,
+      "sourceFile": "IMG_20260929_181403.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "enzyme-temperature",
+        "enzyme-experiment"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q25-28-experiment.webp",
+      "imageAlt": "甲組溫水與乙組冰水中各放置澱粉液加唾液或水的四支試管實驗裝置"
+    },
+    {
+      "questionId": "260929221900041",
+      "revision": 1,
+      "number": 41,
+      "q": "若俊彥想另外設計一組實驗來探討「在適宜溫度範圍內，唾液中所含酵素可將澱粉分解」，則應考慮選取哪兩支試管來進行呢？",
+      "o": [
+        "甲乙",
+        "甲丙",
+        "乙丁",
+        "丙丁"
+      ],
+      "a": 1,
+      "e": "甲、丙在同一適宜溫度下，只有是否含唾液酵素的差別，可作為實驗組與對照組。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 28,
+      "sourcePage": 134,
+      "sourceFile": "IMG_20260929_181403.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "enzyme-experiment"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/advanced-q25-28-experiment.webp",
+      "imageAlt": "甲組溫水與乙組冰水中各放置澱粉液加唾液或水的四支試管實驗裝置"
+    },
+    {
+      "questionId": "260929221900042",
+      "revision": 1,
+      "number": 42,
+      "q": "現在果糖較過去便宜許多，你認為較可能的原因為何？",
+      "o": [
+        "利用澱粉分解、轉換",
+        "目前水果產量較高",
+        "人工較過去便宜",
+        "從水果提煉的技術進步"
+      ],
+      "a": 0,
+      "e": "利用酵素將澱粉分解並轉換，可大量生產果糖並降低成本。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 29,
+      "sourcePage": 134,
+      "sourceFile": "IMG_20260929_181403.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-application"
+      ]
+    },
+    {
+      "questionId": "260929221900043",
+      "revision": 1,
+      "number": 43,
+      "q": "下列何者不是因為果糖便宜化，對傳統的甘蔗糖企業所造成的影響？",
+      "o": [
+        "提升競爭力",
+        "員工可能面臨失業問題",
+        "改變經營形態或項目",
+        "甘蔗園荒廢或變更為其他用地"
+      ],
+      "a": 0,
+      "e": "果糖成本降低會使傳統甘蔗糖產業競爭壓力增加，不會因此提升其競爭力。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "進階學力篇",
+      "originalQuestionNumber": 30,
+      "sourcePage": 135,
+      "sourceFile": "IMG_20260929_181412.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-application"
+      ]
+    },
+    {
+      "questionId": "260929221900044",
+      "revision": 1,
+      "number": 44,
+      "q": "已知利用相同茶樹的葉片但不同的製作過程，可得綠茶及紅茶。茶葉中所含的酵素X在超過70℃後，就無法再有催化能力。右圖為製作綠茶及紅茶時的四個步驟（依序由步驟I→II→III→IV）及其溫度調控示意圖，比較四個步驟中綠茶及紅茶的酵素X之活性，下列何者最合理？",
+      "o": [
+        "步驟I結束時：綠茶＞紅茶",
+        "步驟II結束時：綠茶＝紅茶",
+        "步驟III結束時：綠茶＜紅茶",
+        "步驟IV結束時：綠茶＝紅茶"
+      ],
+      "a": 3,
+      "e": "步驟I綠茶溫度已超過70℃而失去活性；至步驟III紅茶也曾超過70℃而失去活性，之後兩者皆無活性，因此步驟IV相等。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 1",
+      "originalQuestionNumber": 1,
+      "sourcePage": 135,
+      "sourceFile": "IMG_20260929_181412.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/step1-q1-tea-temperature-chart.webp",
+      "imageAlt": "綠茶與紅茶四個製作步驟的溫度控制圖，70℃為酵素X失活門檻"
+    },
+    {
+      "questionId": "260929221900045",
+      "revision": 1,
+      "number": 45,
+      "q": "將酵素甲和澱粉溶液在試管中混合均勻，並定時測量試管內的澱粉濃度。已知試管內澱粉濃度會隨著時間而改變，如右圖所示，下列關於酵素甲的敘述，何者正確？",
+      "o": [
+        "甲主要由葡萄糖組成",
+        "甲與澱粉反應後，會被分解成胺基酸",
+        "若降低甲的活性，會使澱粉的合成速率變快",
+        "若提高甲的活性，會使澱粉的分解速率變快"
+      ],
+      "a": 3,
+      "e": "澱粉濃度隨時間下降，表示酵素甲能分解澱粉；活性提高時分解速率會加快。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 1",
+      "originalQuestionNumber": 2,
+      "sourcePage": 135,
+      "sourceFile": "IMG_20260929_181412.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-reaction",
+        "starch-enzyme"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/step1-q2-starch-time-curve.webp",
+      "imageAlt": "澱粉濃度隨時間持續下降的曲線"
+    },
+    {
+      "questionId": "260929221900046",
+      "revision": 1,
+      "number": 46,
+      "q": "在甲、乙及丙三支試管中分別裝入等量且濃度相同的溶液X，依實驗設計分別再加入等量的葡萄糖液、澱粉液或水，充分混勻再靜置於適宜溫度，待足夠反應時間後，以碘液進行檢測。結果甲、乙、丙皆呈黃褐色。根據此實驗結果判斷溶液X中最可能含有下列何種成分？",
+      "o": [
+        "澱粉",
+        "葡萄糖",
+        "分解澱粉的酵素",
+        "分解葡萄糖的酵素"
+      ],
+      "a": 2,
+      "e": "乙管加入澱粉後仍呈黃褐色，代表澱粉已被分解，因此X最可能含有分解澱粉的酵素。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 1",
+      "originalQuestionNumber": 3,
+      "sourcePage": 135,
+      "sourceFile": "IMG_20260929_181412.jpg",
+      "answerSourceFile": "IMG_20260929_173345.jpg",
+      "answerSourcePage": 372,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity",
+        "starch-iodine-test"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/step1-q3-solution-x-table.webp",
+      "imageAlt": "甲乙丙三試管含溶液X，分別加入葡萄糖液、澱粉液或水後以碘液檢測，結果皆黃褐色的表格"
+    },
+    {
+      "questionId": "260929221900047",
+      "revision": 1,
+      "number": 47,
+      "q": "已知某種酵素最適合在37℃及pH＝8的環境中作用，且在pH＜5的環境下會被完全破壞。若某人吃下此種酵素，則此酵素在口腔、胃及小腸中的活性大小，下列何者最合理？",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 2,
+      "e": "口腔接近中性，酵素仍有一些活性；胃液強酸使其完全被破壞，因此進入小腸後也不再有活性，故選C。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 1",
+      "originalQuestionNumber": 4,
+      "sourcePage": 136,
+      "sourceFile": "IMG_20260929_181427.jpg",
+      "answerSourceFile": "IMG_20260929_181437.jpg",
+      "answerSourcePage": 137,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-ph",
+        "digestion-enzyme"
+      ],
+      "optionImage": "chapter-bank/science/7-1/unit-03/section-02/assets/step1-q4-digestive-activity-options.webp",
+      "optionImageAlt": "A至D四組口腔、胃、小腸中的酵素活性長條圖"
+    },
+    {
+      "questionId": "260929221900048",
+      "revision": 1,
+      "number": 48,
+      "q": "酵素在生化反應時，其活性會受到反應時的環境影響。現有甲、乙兩種性質相似的酵素，為了比較兩者對溫度及酸鹼值的容忍程度（即仍保持有活性的範圍）的差異，而做活性測定。圖(一)是測定溫度對酵素活性之影響；圖(二)是在30℃的狀態下，測定酸鹼值(pH值)對酵素活性之影響。根據兩圖中測定酵素活性之結果，下列敘述何者正確？",
+      "o": [
+        "甲酵素對溫度的容忍程度較乙酵素高",
+        "甲酵素活性最佳的溫度較乙酵素高",
+        "在pH值6.7之環境下，甲酵素活性較乙酵素高",
+        "在pH值6.7之環境下，甲酵素幾乎測不到活性"
+      ],
+      "a": 3,
+      "e": "由pH圖可見甲的活性範圍約到pH 6附近，在pH 6.7時幾乎無活性；乙仍有活性。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 2",
+      "originalQuestionNumber": 1,
+      "sourcePage": 136,
+      "sourceFile": "IMG_20260929_181427.jpg",
+      "answerSourceFile": "IMG_20260929_181437.jpg",
+      "answerSourcePage": 137,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-temperature",
+        "enzyme-ph"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/step2-q1-temperature-ph-curves.webp",
+      "imageAlt": "甲乙兩種酵素的溫度活性曲線及30℃時的pH活性曲線"
+    },
+    {
+      "questionId": "260929221900049",
+      "revision": 1,
+      "number": 49,
+      "q": "酵素是能進行代謝反應的蛋白質。某科學家以分子生物技術，做出五種不同長度的酵素X，並分別測定其酵素活性如右圖。依據實驗結果，酵素X分子中具有活性的部分最可能是哪一段？",
+      "o": [
+        "第196號胺基酸到第419號胺基酸",
+        "第1號胺基酸到第44號胺基酸",
+        "第44號胺基酸到第196號胺基酸",
+        "第197號胺基酸到第302號胺基酸"
+      ],
+      "a": 2,
+      "e": "比較有活性與無活性的不同片段，可將必要區域縮小到44～196號胺基酸之間。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 2",
+      "originalQuestionNumber": 2,
+      "sourcePage": 136,
+      "sourceFile": "IMG_20260929_181427.jpg",
+      "answerSourceFile": "IMG_20260929_181437.jpg",
+      "answerSourcePage": 137,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-protein-structure"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/step2-q2-protein-fragments.webp",
+      "imageAlt": "完整酵素X與五種不同胺基酸片段的長度及酵素活性結果圖"
+    },
+    {
+      "questionId": "260929221900050",
+      "revision": 1,
+      "number": 50,
+      "q": "鴻宇向農夫要了一些稻米，將稻米剝去種皮、壓碎後分別裝入甲、乙、丙、丁四支試管，各加入5毫升純水。甲立即滴入碘液呈藍黑色；乙立即加入本氏液後隔水加熱呈淡藍色；丙放置4小時後加入本氏液隔水加熱呈橙色；丁加入2毫升唾液，靜置30分鐘後加入本氏液隔水加熱。則丁試管的顏色反應為何種顏色？",
+      "o": [
+        "藍黑色",
+        "透明無色",
+        "淡藍色",
+        "橙色"
+      ],
+      "a": 3,
+      "e": "甲證明稻米有澱粉；加入唾液後澱粉酶可將澱粉分解成糖，因此丁管本氏液加熱會呈橙色。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 2",
+      "originalQuestionNumber": 3,
+      "sourcePage": 137,
+      "sourceFile": "IMG_20260929_181437.jpg",
+      "answerSourceFile": "IMG_20260929_181437.jpg",
+      "answerSourcePage": 137,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "salivary-amylase",
+        "benedict-test"
+      ],
+      "image": "chapter-bank/science/7-1/unit-03/section-02/assets/step2-q3-rice-experiment-table.webp",
+      "imageAlt": "甲乙丙丁四支稻米試管的處理步驟與前三組結果表"
+    },
+    {
+      "questionId": "260929221900051",
+      "revision": 1,
+      "number": 51,
+      "q": "取自草食性蝸牛消化道內的消化液，最可能分解下列何種物質？",
+      "o": [
+        "澱粉",
+        "纖維素",
+        "蛋白質",
+        "脂質"
+      ],
+      "a": 1,
+      "e": "草食性蝸牛主要取食植物嫩葉，因此消化液中最可能具有可分解植物細胞壁纖維素的酵素。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "會考試題範例 STEP 2",
+      "originalQuestionNumber": 4,
+      "sourcePage": 137,
+      "sourceFile": "IMG_20260929_181437.jpg",
+      "answerSourceFile": "IMG_20260929_181437.jpg",
+      "answerSourcePage": 137,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity",
+        "cellulose"
+      ]
+    },
+    {
+      "questionId": "260929221900052",
+      "revision": 1,
+      "number": 52,
+      "q": "市售口含錠或口香糖含有能預防齲齒的寡糖，主要作用原理為何？",
+      "o": [
+        "可讓口腔中益生菌取得生長優勢",
+        "可殺死口腔中會造成蛀牙的細菌",
+        "不被造成蛀牙的細菌所利用",
+        "不易被人體消化、吸收"
+      ],
+      "a": 2,
+      "e": "文中指出人體消化酵素不能分解寡糖，且利用寡糖會產生酸性物質的蛀牙菌無法有效利用，因此可降低齲齒風險。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "科學素養篇",
+      "originalQuestionNumber": 1,
+      "sourcePage": 138,
+      "sourceFile": "IMG_20260929_181500.jpg",
+      "answerSourceFile": "IMG_20260929_173354.jpg",
+      "answerSourcePage": 373,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity",
+        "science-literacy"
+      ]
+    },
+    {
+      "questionId": "260929221900053",
+      "revision": 1,
+      "number": 53,
+      "type": "manual-study",
+      "q": "請寫出兩個文中提到木寡糖可促進腸道益生菌生長的原因？",
+      "manualInstruction": "請根據文章內容寫出兩點；本題為紙筆練習，不列入自動計分。",
+      "manualAnswer": "（1）木寡糖在酸性條件下相對穩定，能有效到達大腸。（2）木寡糖不易被有害菌利用，可調整腸道生態，使益生菌取得生長優勢。",
+      "e": "答案需包含「酸性環境中相對穩定」與「不易被有害菌利用」兩個核心理由。",
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-2 酵素的作用",
+      "mappedSection": "3-2 酵素的作用",
+      "originalQuestionGroup": "科學素養篇",
+      "originalQuestionNumber": 2,
+      "sourcePage": 138,
+      "sourceFile": "IMG_20260929_181500.jpg",
+      "answerSourceFile": "IMG_20260929_173354.jpg",
+      "answerSourcePage": 373,
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "science-literacy",
+        "prebiotic-oligosaccharide"
+      ]
+    },
+    {
+      "questionId": "260929221900054",
+      "revision": 1,
+      "number": 54,
       "q": "已知蜂蜜中含有分解澱粉的酵素。現有甲、乙兩試管皆裝有等量且濃度相同的澱粉液，隨機在其中一支加入蜂蜜，另一支加入等量的水。將兩支試管充分搖勻，靜置於適宜的溫度，待足夠的反應時間後，以碘液檢測。結果顯示甲呈現藍黑色，乙呈現黃褐色。根據此結果，推測哪一支試管加入了蜂蜜及其理由，下列何者最合理？",
       "o": [
         "甲，因未檢測出澱粉",
@@ -26,20 +1942,31 @@
         "乙，因未檢測出澱粉",
         "乙，因有檢測出澱粉"
       ],
+      "a": 2,
+      "e": "蜂蜜中的酵素可分解澱粉；乙呈黃褐色表示碘液未檢出澱粉，因此乙最可能加入蜂蜜。",
       "sourceType": "supplemental-workbook",
       "sourceTitle": "新無敵國中自然 1",
       "sourceSection": "3-1 食物中的養分與能量（來源頁混入3-2考點）",
       "mappedSection": "3-2 酵素的作用",
-      "answerVerified": true,
-      "preserveOptionOrder": true,
-      "originalQuestionGroup": "會考試題範例 STEP 1",
+      "originalQuestionGroup": "3-1 會考試題範例 STEP 1 分流",
       "originalQuestionNumber": 2,
       "sourcePage": 122,
       "sourceFile": "IMG_20260929_120757.jpg",
       "answerSourceFile": "IMG_20260929_120817.jpg",
       "answerSourcePage": 124,
-      "officialAnswerIndex": 2,
-      "status": "pending-section-bank"
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "enzyme-specificity",
+        "starch-iodine-test"
+      ]
     }
-  ]
+  ],
+  "pendingQuestions": []
 }
