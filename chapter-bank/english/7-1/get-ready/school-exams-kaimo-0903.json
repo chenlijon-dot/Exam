@@ -605,5 +605,8 @@
       "prompt": "整句式翻譯",
       "aiGrading": "required"
     }
-  ]
+  ],
+  "exam": {
+    "sourceLabel": "升學王"
+  }
 }
