@@ -21,7 +21,8 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "active",
-    "sourceNote": "高雄楷模書院第二份練習卷－七上歷史「臺灣原住民」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q1、Q3、Q5、Q6、Q10、Q19、Q21 使用原題裁切 WebP 圖檔。duplicate census 未發現 repository 內完全相同題目。"
+    "sourceNote": "高雄楷模書院第二份練習卷－七上歷史「臺灣原住民」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q1、Q3、Q5、Q6、Q10、Q19、Q21 使用原題裁切 WebP 圖檔。duplicate census 未發現 repository 內完全相同題目。",
+    "sourceLabel": "升學王"
   },
   "source": {
     "school": "高雄楷模書院",
