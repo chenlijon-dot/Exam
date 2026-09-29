@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "title": "3-2 酵素的作用｜新無敵自然自修",
+    "difficulty": "science-7-1-u03-s02-self-study",
+    "sourceType": "supplemental-workbook",
+    "sourceTitle": "新無敵國中自然 1",
+    "sourceSection": "3-1 食物中的養分與能量（來源頁混入3-2考點）",
+    "mappedSection": "3-2 酵素的作用",
+    "questionCount": 1,
+    "answerableQuestionCount": 0,
+    "pendingImageQuestionNumbers": [],
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "answerAuthority": "新無敵自然自修會考試題範例 p.124 印刷答案",
+    "buildStage": "pending until 3-2 formal bank is established",
+    "note": "本題原位於來源書3-1頁面，但核心考點為酵素分解澱粉，因此依canonical分流至3-2；目前不啟用3-2 runtime。"
+  },
+  "questions": [],
+  "pendingQuestions": [
+    {
+      "q": "研究人員將含有分解澱粉酵素的蜂蜜加入澱粉溶液中，反應一段時間後再加入碘液。下列哪一項結果最能說明蜂蜜中的酵素已將部分澱粉分解？",
+      "o": [
+        "呈現更深的藍黑色",
+        "仍維持原本藍黑色且完全不變",
+        "藍黑色變淡或不再呈典型藍黑色",
+        "加入碘液前後均呈紅色"
+      ],
+      "sourceType": "supplemental-workbook",
+      "sourceTitle": "新無敵國中自然 1",
+      "sourceSection": "3-1 食物中的養分與能量（來源頁混入3-2考點）",
+      "mappedSection": "3-2 酵素的作用",
+      "answerVerified": true,
+      "preserveOptionOrder": true,
+      "originalQuestionGroup": "會考試題範例 STEP 1",
+      "originalQuestionNumber": 2,
+      "sourcePage": 122,
+      "sourceFile": "IMG_20260929_120757.jpg",
+      "answerSourceFile": "IMG_20260929_120817.jpg",
+      "answerSourcePage": 124,
+      "officialAnswerIndex": 2,
+      "status": "pending-section-bank"
+    }
+  ]
+}
