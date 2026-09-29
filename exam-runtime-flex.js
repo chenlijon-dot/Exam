@@ -464,7 +464,7 @@
       const optionMedia = x.optionImage ? `<div class="question-media option-media"><img src="${escapeHtml(x.optionImage)}" alt="${escapeHtml(x.optionImageAlt || `第${i+1}題選項圖`)}" loading="lazy"></div>` : '';
       const shownNumber = x.displayNumber || x.originalQuestionNumber || x.number || i + 1;
       const sourceLabel = (() => {
-        if (x.sourceLabel) return String(x.sourceLabel);
+        if (x.sourceLabel || ctx?.sourceLabel) return String(x.sourceLabel || ctx.sourceLabel);
         const year = String(x.year || '').trim();
         const school = String(x.school || '').trim();
         if (school && year && year !== 'unknown') return `${year.replace(/年$/, '')}年 ${school}`;
