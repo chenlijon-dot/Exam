@@ -18,11 +18,9 @@
     "analysisEligible": true,
     "questionCount": 4,
     "classifiedQuestionCount": 4,
-    "pendingImageQuestionNumbers": [
-      29
-    ],
-    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；4 題均已建立正式題目資料與核對官方答案，Q29 原卷裁圖已完成，待 GitHub 圖片資產上傳後解除 pending。",
-    "answerableQuestionCount": 3
+    "pendingImageQuestionNumbers": [],
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節 4 題已完成原題、官方答案與必要原卷圖片資產，均可正式作答。",
+    "answerableQuestionCount": 4
   },
   "questions": [
     {
@@ -136,8 +134,9 @@
       ],
       "a": 1,
       "e": "官方答案為 B。黃金竹圖示的是莖，屬營養器官；花、果實與種子屬生殖相關構造。",
-      "optionImagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q29.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q29.png",
+      "optionImage": "chapter-bank/science/7-1/unit-02/section-04/assets/dawan-q29-plant-organs-options.png",
+      "optionImageAlt": "A至D四種植物部位圖片選項"
     }
   ]
 }
