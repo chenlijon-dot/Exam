@@ -1,0 +1,956 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-geography-01-school-kaimo-0910-staging",
+    "difficulty": "social-7-1-geography-01-school-kaimo-0910-staging",
+    "examType": "social-school-chapter-school-exam-staging",
+    "examTypeLabel": "地理七上 第1章 認識位置與地圖｜升學王 staging",
+    "title": "第1章 認識位置與地圖｜升學王第二份練習卷 staging",
+    "subtitle": "社會七上｜地理｜升學王｜第二份練習卷｜地圖｜25 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "geography",
+    "unitGroupLabel": "地理｜臺灣的環境（上）",
+    "section": "geography-chapter-01",
+    "unit": "第1章 認識位置與地圖",
+    "difficultyLabel": "各校題庫 staging",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceLabel": "升學王",
+    "sourceNote": "升學王／高雄楷模書院第二份練習卷－七上地理「地圖」全版本。25 題經逐題分析皆歸入第1章；同來源解析卷提供答案 authority。Q4、Q6、Q7、Q15、Q19、Q21、Q24 需接原題圖。duplicate census 未發現與現有第1章各校題庫完全重複題。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第二份練習卷｜地圖",
+    "sourceType": "school-exam",
+    "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+    "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260930230000001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-time-zone"
+      ],
+      "q": "地球自轉一周需要 24 小時，平均每小時由西向東自轉幾度？",
+      "o": [
+        "15 度",
+        "20 度",
+        "25 度",
+        "30 度"
+      ],
+      "a": 0,
+      "e": "360°÷24 小時＝15°／小時。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "2",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-time-zone"
+      ],
+      "q": "地球平均每一小時由西向東自轉 15 度，請問：自轉一周需要幾個小時？",
+      "o": [
+        "15",
+        "24",
+        "25",
+        "30"
+      ],
+      "a": 1,
+      "e": "地球自轉一周 360 度需要 24 小時。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000003",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "3",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-time-zone"
+      ],
+      "q": "下列哪兩個地區之間沒有時差的問題？",
+      "o": [
+        "（60°E，30°N）和（60°W，30°N）",
+        "（0°，25°S）和（180°，25°S）",
+        "（120°E，50°N）和（120°E，20°N）",
+        "（25°E，30°S）和（60°W，30°S）"
+      ],
+      "a": 2,
+      "e": "C 選項兩地皆位於 120°E，因此沒有經度造成的時差。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-time-difference"
+      ],
+      "q": "附圖是世界地圖的一部分。家住東京（代號乙）的櫻子，99 年 11 月時將與家人到臺北旅遊，參觀花博，當櫻子抵達臺灣桃園國際機場時，她要將手錶上的時間如何調整為臺北時間？",
+      "o": [
+        "撥快 1 小時",
+        "撥慢 1 小時",
+        "撥快 3 小時",
+        "撥慢 3 小時"
+      ],
+      "a": 1,
+      "e": "日本位在 135°E 時區，比臺灣快一小時，因此調整為臺北時間需調慢一小時。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930230000005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-latitude-climate",
+        "geo-7-1-3-solar-angle"
+      ],
+      "q": "造成全球各地氣候不同，低緯度區氣溫較高，高緯度區氣溫較低的主要原因為何？",
+      "o": [
+        "地球自轉",
+        "地形差異",
+        "氣壓系統",
+        "太陽照射"
+      ],
+      "a": 3,
+      "e": "低緯度太陽照射角度較大，高緯度太陽照射較斜，影響氣溫高低。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000006",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "6",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-solar-angle"
+      ],
+      "q": "附圖為全球氣候區畫分圖，每年夏至時（6 月 21 日或 22 日），陽光會直射哪一條緯線？",
+      "o": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "a": 1,
+      "e": "夏至太陽直射北回歸線 23.5°N，圖中為 b 線。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930230000007",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-latitude-climate"
+      ],
+      "q": "位置對氣候的影響甚大，若僅考量緯度位置，附圖中哪一地區最可能是屬於寒帶氣候？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 1,
+      "e": "乙位於高緯度地區，因此最可能屬於寒帶氣候。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930230000008",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "8",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-large-small-scale"
+      ],
+      "q": "丹丹拿了「臺灣海陸位置圖」與「高雄市愛河下游地圖」兩張地圖互相比較，下列為他所得出的比較結果，請問：其中哪一項正確？",
+      "o": [
+        "前者為大比例尺地圖",
+        "後者為小比例尺地圖",
+        "前者顯示的區域範圍較小",
+        "後者顯示較詳細的街道名稱"
+      ],
+      "a": 3,
+      "e": "大比例尺地圖範圍較小、內容較詳細，因此愛河下游地圖會顯示較詳細的街道名稱。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000009",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "9",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-scale"
+      ],
+      "q": "比例尺 1／10000，是指地圖上長度 4 公分代表實際地表距離多少公分？",
+      "o": [
+        "400 公分",
+        "4000 公分",
+        "40000 公分",
+        "400000 公分"
+      ],
+      "a": 2,
+      "e": "1：10000＝4：x，因此 x＝40000 公分。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000010",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "10",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-map-elements",
+        "geo-7-1-1-cardinal-directions"
+      ],
+      "q": "一般而言，一張地圖上若沒有標示方向時，通常以「上方」代表哪個方向？",
+      "o": [
+        "東方",
+        "西方",
+        "南方",
+        "北方"
+      ],
+      "a": 3,
+      "e": "地圖未標方向時，通常以上北、下南、右東、左西判讀。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000011",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "11",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-digital-map"
+      ],
+      "q": "近年來隨著數位科技的發達，傳統地圖已有式微的趨勢，電子地圖趁勢興起。請問：下列哪一項關於電子地圖的敘述有誤？",
+      "o": [
+        "可在電腦上顯示或分析",
+        "地圖的更新速度較傳統地圖慢",
+        "可以有彈性的放大縮小比例",
+        "可以與搜尋功能相互結合使用"
+      ],
+      "a": 1,
+      "e": "電子地圖的更新速度通常較傳統紙本地圖快，因此 B 錯誤。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000012",
+      "revision": 1,
+      "number": 12,
+      "originalQuestionNumber": "12",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-1-absolute-position",
+        "geo-7-1-4-gps-navigation"
+      ],
+      "q": "小芳想到花蓮一間濱海民宿度假，下列何者無法幫助小芳了解這間民宿的絕對位置？",
+      "o": [
+        "地圖",
+        "地址",
+        "照片",
+        "衛星定位系統"
+      ],
+      "a": 2,
+      "e": "照片本身無法可靠判讀民宿的絕對位置。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000013",
+      "revision": 1,
+      "number": 13,
+      "originalQuestionNumber": "13",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-digital-map",
+        "geo-7-1-4-gps-navigation"
+      ],
+      "q": "電子地圖是新興的地圖呈現形式，此種地圖所具有的特色不包括下列何者？",
+      "o": [
+        "提供地圖的查詢",
+        "可進行距離量測",
+        "呈現方式較笨重",
+        "可進行衛星導航"
+      ],
+      "a": 2,
+      "e": "電子地圖可由 3C 產品使用，並非呈現方式較笨重。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000014",
+      "revision": 1,
+      "number": 14,
+      "originalQuestionNumber": "14",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-time-difference"
+      ],
+      "q": "家住臺南的小萱想打電話給住在美國舊金山（西經 120 度，北緯 37 度）的表姊，小萱打電話的時間是晚上 9 點。請問：表姊居住地的時間為何？",
+      "o": [
+        "上午 7 點",
+        "上午 5 點",
+        "下午 5 點",
+        "下午 9 點"
+      ],
+      "a": 1,
+      "e": "舊金山與臺灣經度相差約 240 度，即 16 小時；21 時－16 時＝5 時。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000015",
+      "revision": 1,
+      "number": 15,
+      "originalQuestionNumber": "15",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-time-difference"
+      ],
+      "q": "住在臺北的小英，與網友珊珊在網路上聊天，其對話如下──小英：「珊珊妳好，今晚星星很漂亮吧！」珊珊：「我這邊看不到星星，現在是星期天下午兩點，太陽正大呢！」小英：「真的嗎？可是我們已經是星期天晚上十點了！」珊珊：「那我們離得可真遠耶！所以妳會看到美麗的星星。」請根據附圖判斷，珊珊可能住在何地？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 1,
+      "e": "兩地相差 8 小時，經度差約 120 度；珊珊所在地時間較臺灣慢，應位於臺灣西方，圖中為乙。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930230000016",
+      "revision": 1,
+      "number": 16,
+      "originalQuestionNumber": "16",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-time-zone",
+        "geo-7-1-3-time-difference"
+      ],
+      "q": "「1895 年，臺灣總督府頒布規定，臺灣、澎湖群島因位於帝國西南方，比帝國標準時間晚一小時，為臺灣標準時間。」依上文判斷，帝國標準時間所採用的經線應為下列何者？〔98.第二次基測〕",
+      "o": [
+        "東經 105 度",
+        "東經 120 度",
+        "東經 135 度",
+        "東經 150 度"
+      ],
+      "a": 2,
+      "e": "臺灣約採東經 120 度時間，帝國標準時間快一小時，往東增加 15 度為東經 135 度。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000017",
+      "revision": 1,
+      "number": 17,
+      "originalQuestionNumber": "17",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-latitude-climate"
+      ],
+      "q": "一般而言，全球氣候區可分為三個，分別是熱帶、溫帶和寒帶，這種畫分方式是以哪兩條線為界？",
+      "o": [
+        "赤道和極圈",
+        "赤道和回歸線",
+        "回歸線和極圈",
+        "極點和極圈"
+      ],
+      "a": 2,
+      "e": "熱帶、溫帶與寒帶以回歸線和極圈作為主要分界。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000018",
+      "revision": 1,
+      "number": 18,
+      "originalQuestionNumber": "18",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-latitude-climate"
+      ],
+      "q": "溫帶氣候區分布在下列哪一個範圍？",
+      "o": [
+        "赤道和極圈",
+        "赤道和回歸線",
+        "回歸線和極圈",
+        "極點和極圈"
+      ],
+      "a": 2,
+      "e": "溫帶約分布在南、北緯 23.5 度到 66.5 度之間，也就是回歸線和極圈之間。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000019",
+      "revision": 1,
+      "number": 19,
+      "originalQuestionNumber": "19",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-3-latitude-climate",
+        "geo-7-1-3-solar-angle"
+      ],
+      "q": "在地球上，有幾條重要的緯度線將地球分為三大氣候帶（如下圖），請問：有關以下配對說明，何者錯誤？",
+      "o": [
+        "丙、丁兩區因皆位於低緯地區，太陽終年大角度照射，溫度較高，故同屬於熱帶氣候區",
+        "戊、己地區因緯度漸高，陽光斜射地表，氣溫漸低，分屬於溫、寒帶氣候",
+        "「b」線為熱帶、溫帶分界線，度數為 23.5°，俗稱「回歸線」",
+        "「a」線為溫帶、寒帶分界線，度數為 60°，俗稱「極圈」"
+      ],
+      "a": 3,
+      "e": "極圈緯度為 66.5°，不是 60°，因此 D 錯誤。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930230000020",
+      "revision": 1,
+      "number": 20,
+      "originalQuestionNumber": "20",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-scale"
+      ],
+      "q": "在一張比例尺為 1／1000 的地圖上，若長度 5 公分代表實際距離有多少？",
+      "o": [
+        "500 公分",
+        "50 公尺",
+        "500 公尺",
+        "5 公里"
+      ],
+      "a": 1,
+      "e": "1：1000＝5：x，因此 x＝5000 公分＝50 公尺。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000021",
+      "revision": 1,
+      "number": 21,
+      "originalQuestionNumber": "21",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-map-elements",
+        "geo-7-1-4-scale",
+        "geo-7-1-1-cardinal-directions"
+      ],
+      "q": "家弘為了尋找傳說中的寶藏，拿著藏寶圖（如圖）來到金銀島。已知寶藏埋在港口西北方約 200 公尺的地底，則寶藏的埋藏處最接近下列何處？",
+      "o": [
+        "礦坑",
+        "樹屋",
+        "沼澤",
+        "墓地"
+      ],
+      "a": 0,
+      "e": "由圖上的方向標可知北方朝右，搭配比例尺判讀，港口西北方約 200 公尺最接近礦坑。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930230000022",
+      "revision": 1,
+      "number": 22,
+      "originalQuestionNumber": "22",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-large-small-scale"
+      ],
+      "q": "康康想要在學校附近做土地利用的調查，那他應使用下列哪一種比例尺的地圖較為適宜？",
+      "o": [
+        "1：1,000",
+        "1：10,000",
+        "1：100,000",
+        "1：1,000,000"
+      ],
+      "a": 0,
+      "e": "學校附近範圍小，需要較詳細資訊，應選大比例尺的 1：1,000。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000023",
+      "revision": 1,
+      "number": 23,
+      "originalQuestionNumber": "23",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-large-small-scale",
+        "geo-7-1-4-gps-navigation"
+      ],
+      "q": "GPS 可藉由電腦處理以提供最新且及時的地圖，且藉由儀器上比例尺的調整，可以獲得不同需求程度的資料內容。下列資訊何者使用的比例尺需要最大？",
+      "o": [
+        "臺灣全圖",
+        "縣市地圖",
+        "巷弄地圖",
+        "高速公路圖"
+      ],
+      "a": 2,
+      "e": "巷弄所需資料最詳細，因此需要使用最大的比例尺。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930230000024",
+      "revision": 1,
+      "number": 24,
+      "originalQuestionNumber": "24",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-digital-map"
+      ],
+      "q": "傳統地圖為紙張地圖，近代由於資訊進步，再加上手機及電腦普及，於是電子地圖逐漸取代傳統地圖。附表為上述兩者的差異比較，何者敘述正確？",
+      "o": [
+        "繪製範圍",
+        "繪製內容",
+        "比例尺大小",
+        "更新速度"
+      ],
+      "a": 3,
+      "e": "繪製範圍、內容與比例尺會依目的而變化；電子地圖更新速度較快，故 D 正確。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930230000025",
+      "revision": 1,
+      "number": 25,
+      "originalQuestionNumber": "25",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第二份練習卷｜地圖",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-01"
+      ],
+      "conceptIds": [
+        "geo-7-1-4-gps-navigation",
+        "geo-7-1-2-coordinate-grid"
+      ],
+      "q": "隨著科技的進步，GPS 已逐漸取代了傳統的紙張地圖。請問：GPS 的地理位置標示主要是利用何種資料來加以定位？",
+      "o": [
+        "相對位置",
+        "地理方位",
+        "海陸位置",
+        "經緯位置"
+      ],
+      "a": 3,
+      "e": "GPS 主要利用衛星測量經緯度，再標示在地圖位置上。",
+      "sourceFile": "0910-七上地理-全版本-地圖 題目卷.pdf",
+      "answerFile": "0910-七上地理-全版本-地圖 解析卷.pdf",
+      "lifecycle": "staging"
+    }
+  ]
+}
