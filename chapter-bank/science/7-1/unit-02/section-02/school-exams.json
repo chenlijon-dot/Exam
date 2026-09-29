@@ -18,18 +18,9 @@
     "analysisEligible": true,
     "questionCount": 11,
     "classifiedQuestionCount": 11,
-    "pendingImageQuestionNumbers": [
-      13,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      36
-    ],
-    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；11 題均已建立正式題目資料與核對官方答案，其中 Q13、Q15～Q20、Q36 的原卷裁圖已完成，待 GitHub 圖片資產上傳後解除 pending。",
-    "answerableQuestionCount": 3
+    "pendingImageQuestionNumbers": [],
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節 11 題已完成原題、官方答案與必要原卷圖片資產，均可正式作答。",
+    "answerableQuestionCount": 11
   },
   "questions": [
     {
@@ -60,8 +51,9 @@
       ],
       "a": 3,
       "e": "官方答案為 D。圖中的甲、乙分屬不同的植物表皮相關細胞；兩者都具有細胞核，但一般表皮細胞通常沒有葉綠體。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q13.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q13.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q13-leaf-epidermis.png",
+      "imageAlt": "風車草葉片下表皮細胞觀察圖，標示甲、乙"
     },
     {
       "questionId": "260928203100003",
@@ -118,8 +110,9 @@
       ],
       "a": 3,
       "e": "官方答案為 D。庚代表細胞壁；植物細胞吸水時，細胞壁可提供支持並限制過度膨脹。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q15-q20-plant-cell.png",
+      "imageAlt": "植物細胞構造示意圖，標示甲至庚"
     },
     {
       "questionId": "260928231800003",
@@ -148,8 +141,9 @@
       ],
       "a": 0,
       "e": "官方答案為 A。甲為細胞核，內含遺傳物質並控制細胞多項生命活動。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q15-q20-plant-cell.png",
+      "imageAlt": "植物細胞構造示意圖，標示甲至庚"
     },
     {
       "questionId": "260928231800004",
@@ -178,8 +172,9 @@
       ],
       "a": 3,
       "e": "官方答案為 D。己為葉綠體，可進行光合作用製造養分。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q15-q20-plant-cell.png",
+      "imageAlt": "植物細胞構造示意圖，標示甲至庚"
     },
     {
       "questionId": "260928231800005",
@@ -208,8 +203,9 @@
       ],
       "a": 1,
       "e": "官方答案為 B。乙為粒線體，是細胞進行呼吸作用、產生能量的重要胞器。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q15-q20-plant-cell.png",
+      "imageAlt": "植物細胞構造示意圖，標示甲至庚"
     },
     {
       "questionId": "260928231800006",
@@ -238,8 +234,9 @@
       ],
       "a": 2,
       "e": "官方答案為 C。戊為液胞，可儲存水分、養分或廢物等物質。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q15-q20-plant-cell.png",
+      "imageAlt": "植物細胞構造示意圖，標示甲至庚"
     },
     {
       "questionId": "260928231800007",
@@ -269,8 +266,9 @@
       ],
       "a": 3,
       "e": "官方答案為 D。己為葉綠體、庚為細胞壁，皆不是一般動物細胞所具有的構造。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p002_q15-q20.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q15-q20-plant-cell.png",
+      "imageAlt": "植物細胞構造示意圖，標示甲至庚"
     },
     {
       "questionId": "260928203100004",
@@ -355,8 +353,9 @@
       ],
       "a": 3,
       "e": "官方答案為 D。D 圖箭頭所指為具多突起的神經細胞，形態適合快速傳遞訊息。",
-      "optionImagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q36.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q36.png",
+      "optionImage": "chapter-bank/science/7-1/unit-02/section-02/assets/dawan-q36-cell-types-options.png",
+      "optionImageAlt": "A至D四種人體細胞圖片選項"
     }
   ]
 }
