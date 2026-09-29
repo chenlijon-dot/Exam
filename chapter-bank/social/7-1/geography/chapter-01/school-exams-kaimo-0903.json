@@ -21,7 +21,8 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "active",
-    "sourceNote": "高雄楷模書院第一份練習卷－七上地理「位置」全版本。25 題皆依原題順序保留；解析卷為答案 authority。Q1、Q2、Q4、Q5、Q10、Q17、Q19、Q20、Q22 使用原題裁切 WebP 圖檔；Q20 保留圖(一)、圖(二)雙圖，Q22 保留主圖與圖形選項。duplicate census 未發現 repository 內完全相同題目。"
+    "sourceNote": "高雄楷模書院第一份練習卷－七上地理「位置」全版本。25 題皆依原題順序保留；解析卷為答案 authority。Q1、Q2、Q4、Q5、Q10、Q17、Q19、Q20、Q22 使用原題裁切 WebP 圖檔；Q20 保留圖(一)、圖(二)雙圖，Q22 保留主圖與圖形選項。duplicate census 未發現 repository 內完全相同題目。",
+    "sourceLabel": "升學王"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -315,7 +316,7 @@
         "geography-chapter-01"
       ],
       "conceptIds": [
-        "geo-7-1-2-latitude"
+        "geo-7-1-3-solar-angle"
       ],
       "q": "下列關於回歸線的敘述，哪一項是正確的？",
       "o": [
@@ -754,7 +755,8 @@
         "geography-chapter-01"
       ],
       "conceptIds": [
-        "geo-7-1-2-coordinate-grid"
+        "geo-7-1-2-coordinate-grid",
+        "geo-7-1-4-gps-navigation"
       ],
       "q": "圖(一)為具有 GPS（全球衛星定位系統）的手錶款式。請根據手錶中的資料判斷，手錶的位置在圖(二)中何處？",
       "o": [
@@ -836,6 +838,7 @@
         "geography-chapter-01"
       ],
       "conceptIds": [
+        "geo-7-1-4-map-elements",
         "geo-7-1-1-cardinal-directions"
       ],
       "q": "附圖為某小島常年由東北方吹來的風向示意圖，若欲在此圖上畫出指北方向標，該如何標示才正確？",
