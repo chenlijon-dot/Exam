@@ -9,7 +9,7 @@
       questionCount: 10,
       pointsPerQuestion: 10,
       schoolBank: 'school-exams-kaimo-0903.json',
-      schoolBankCount: 25,
+      schoolBankCount: 50,
       schoolBankLabel: '升學王'
     },
     'geo-02': {
