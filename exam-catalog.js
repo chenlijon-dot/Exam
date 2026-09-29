@@ -226,7 +226,7 @@
     {
       key: 'unit-3', number: '單元 3', title: '生物體內的營養',
       sections: [
-        { key: 'science-7-1-3-1', code: '3-1', title: '食物和養分', enabled: true, desc: '新無敵自然自修：30題可作答，另20題等待正式解答authority；養分、熱量、營養標示與食物成分檢測' },
+        { key: 'science-7-1-3-1', code: '3-1', title: '食物和養分', enabled: true, desc: '新無敵自然自修：50題均已核對正式解答，可直接作答；養分、熱量、營養標示與食物成分檢測' },
         { key: 'science-7-1-3-2', code: '3-2', title: '酵素的作用', enabled: false },
         { key: 'science-7-1-3-3', code: '3-3', title: '光合作用', enabled: false },
         { key: 'science-7-1-3-4', code: '3-4', title: '人體的消化系統', enabled: false },
