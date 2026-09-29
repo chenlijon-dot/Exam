@@ -279,6 +279,16 @@
   const SOCIAL_7_1_AREAS = {
     geography: {
       name: '地理', icon: '🗺️', partTitle: '臺灣的環境（上）',
+      semesterExams: [
+        {
+          key: 'geo-7-1-kaimo-0903',
+          label: '段考／複習卷',
+          title: '第一份練習卷｜位置',
+          sourceLabel: '升學王',
+          count: 25,
+          path: 'chapter-bank/social/7-1/geography/chapter-01/school-exams-kaimo-0903.json'
+        }
+      ],
       chapters: [
         { key: 'geo-01', code: '第1章', title: '認識位置與地圖', page: 8, type: 'chapter', referenceReady: true, detail: 'p.6～21 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
         { key: 'geo-02', code: '第2章', title: '世界中的臺灣', page: 22, type: 'chapter', referenceReady: true, detail: 'p.22～33 教材已收錄；辨識檔與 canonical 教材知識庫已建立' },
@@ -518,6 +528,41 @@
     $('[data-social-semester="7-1"]')?.addEventListener('click', () => showSocial71Chapters(areaKey));
   }
 
+  async function openSocialSemesterExam(areaKey, examKey, button) {
+    const area = SOCIAL_7_1_AREAS[areaKey];
+    const exam = area?.semesterExams?.find(item => item.key === examKey);
+    if (!area || !exam) return;
+    const badge = button?.querySelector('.catalog-badge');
+    const oldBadge = badge?.textContent || `${exam.count || ''} 題`;
+    if (button) button.disabled = true;
+    if (badge) badge.textContent = '載入中';
+    try {
+      const res = await fetch(exam.path, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const questions = Array.isArray(data.questions) ? data.questions : [];
+      if (!questions.length) throw new Error('段考／複習卷沒有可作答題目');
+      if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
+
+      const key = data.exam?.difficulty || data.exam?.key || exam.key;
+      banks[key] = questions;
+      window.examContexts = window.examContexts || {};
+      window.examContexts[key] = {
+        ...(data.exam || {}),
+        key,
+        sourceLabel: data.exam?.sourceLabel || exam.sourceLabel || '',
+        backLabel: `返回${area.name}七上章節`,
+        onBack: () => showSocial71Chapters(areaKey)
+      };
+      startExam(key);
+    } catch (error) {
+      alert(`段考／複習卷載入失敗：${error.message}`);
+    } finally {
+      if (button) button.disabled = false;
+      if (badge) badge.textContent = oldBadge;
+    }
+  }
+
   function showSocial71Chapters(areaKey) {
     const area = SOCIAL_7_1_AREAS[areaKey];
     if (!area) return;
@@ -529,6 +574,11 @@
       <h2 class="catalog-title">${area.partTitle}</h2>
       <p class="catalog-sub">章名與起始頁碼已由 2026-09-19 提供的實體課本目錄確認；出版社／學年度版本待封面或版權頁確認。</p>
       <div class="catalog-grid">
+        ${(area.semesterExams || []).map(exam => `
+          <button class="catalog-card chapter-card" data-social-semester-exam="${exam.key}">
+            <span class="top"><strong>📝 ${exam.label}</strong><span class="catalog-badge school">${exam.count} 題</span></span>
+            <span class="desc">[${exam.sourceLabel}] ${exam.title}｜以完整原卷作答；各題仍保留章節與小節分類。</span>
+          </button>`).join('')}
         ${area.chapters.map(chapter => `
           <button class="catalog-card chapter-card" data-social-chapter="${chapter.key}">
             <span class="top"><strong>${chapter.code}　${chapter.title}</strong><span class="catalog-badge ${chapter.referenceReady ? 'reference' : 'reference'}">${chapter.referenceReady ? '教材已收錄' : '目錄已確認'}</span></span>
@@ -536,6 +586,9 @@
           </button>`).join('')}
       </div>`;
     $('#backSocialSemestersBtn')?.addEventListener('click', () => showSocialSemesters(areaKey));
+    (area.semesterExams || []).forEach(exam =>
+      $(`[data-social-semester-exam="${exam.key}"]`)?.addEventListener('click', event => openSocialSemesterExam(areaKey, exam.key, event.currentTarget))
+    );
     area.chapters.forEach(chapter =>
       $("[data-social-chapter=\"" + chapter.key + "\"]")?.addEventListener('click', () => showSocial71Chapter(areaKey, chapter.key))
     );
