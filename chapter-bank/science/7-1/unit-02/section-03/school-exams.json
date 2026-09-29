@@ -18,14 +18,9 @@
     "analysisEligible": true,
     "questionCount": 4,
     "classifiedQuestionCount": 4,
-    "pendingImageQuestionNumbers": [
-      26,
-      30,
-      33,
-      34
-    ],
-    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；4 題均已建立正式題目資料與核對官方答案，原卷裁圖已完成，待 GitHub 圖片資產上傳後解除 pending。",
-    "answerableQuestionCount": 0
+    "pendingImageQuestionNumbers": [],
+    "sourceNote": "高雄市立大灣國中 114 學年度第一學期七年級第一次段考；本節 4 題已完成原題、官方答案與必要原卷圖片資產，均可正式作答。",
+    "answerableQuestionCount": 4
   },
   "questions": [
     {
@@ -56,8 +51,9 @@
       ],
       "a": 0,
       "e": "官方答案為 A。灑鹽後細胞外溶液濃度較高，水經滲透作用由細胞內移向外界，細胞膜與內容物因失水而向內縮。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q26.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q26.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/dawan-q26-cucumber-osmosis.png",
+      "imageAlt": "正常小黃瓜細胞與醃漬後細胞預測圖表"
     },
     {
       "questionId": "260928231800010",
@@ -87,8 +83,9 @@
       ],
       "a": 2,
       "e": "官方答案為 C。由甲圖變為乙圖時，細胞膜與細胞壁分離、細胞內容物向內縮，表示細胞失水，因此水分含量隨時間下降。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q30.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p003_q30.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/dawan-q30-plant-cell-water-change.png",
+      "imageAlt": "植物細胞由甲圖變為乙圖，以及A至D水分變化圖形選項"
     },
     {
       "questionId": "260928231800011",
@@ -118,8 +115,9 @@
       ],
       "a": 1,
       "e": "官方答案為 B。氧氣會由高濃度處向低濃度處擴散，圖中的乙途徑表示由細胞外向細胞內通過細胞膜。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q33-q34.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q33-q34.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/dawan-q33-q34-membrane-transport.png",
+      "imageAlt": "物質通過細胞膜的甲乙丙丁途徑示意圖"
     },
     {
       "questionId": "260928231800012",
@@ -149,8 +147,9 @@
       ],
       "a": 0,
       "e": "官方答案為 A。丙途徑經由細胞膜上的膜蛋白，礦物質等物質可藉此進出細胞。",
-      "imagePending": true,
-      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q33-q34.png"
+      "imageSourceFile": "114-高雄市大灣國中第一學期七年級第一次段考自然科評量試題_p004_q33-q34.png",
+      "image": "chapter-bank/science/7-1/unit-02/section-03/assets/dawan-q33-q34-membrane-transport.png",
+      "imageAlt": "物質通過細胞膜的甲乙丙丁途徑示意圖"
     }
   ]
 }
