@@ -84,7 +84,15 @@ Private `chenlijon-dot/Exam-Record` 仍保留既有 GitHub 同步、machine-read
 ├─ 國文
 ├─ 英文
 ├─ 數學
-├─ 自然
+├─ 
+
+### 自然七上 Unit 3 進度（2026-09-29）
+
+- 3-1〈食物和養分〉已建立新無敵自然自修題庫：整批 census 50 題，其中 30 題具有正式答案 authority 並已啟用作答，20 題等待後續正式解答頁，保留於 `pendingQuestions`。
+- 17 張作答必要題圖／表格已轉為 production WebP 並完成 GitHub remote read-back。
+- 來源頁中的 STEP1 Q2 實際考點屬 3-2〈酵素的作用〉，已分流保存為 3-2 pending；3-2～3-4 尚未啟用題庫。
+- Unit 3 runtime 已建立並僅啟用 3-1，自編題與各校題庫仍保持待建立。
+自然
 ├─ 社會
 └─ 歷屆考題
 ```
