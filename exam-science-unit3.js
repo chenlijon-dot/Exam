@@ -6,10 +6,21 @@
       code: '3-1',
       title: '食物和養分',
       root: 'chapter-bank/science/7-1/unit-03/section-01',
+      sectionSlug: 'section-01',
       selfStudyCount: 50,
       censusCount: 50,
       pendingCount: 0,
       selfStudyDesc: '新無敵自然自修原題；養分種類、熱量、營養標示、維生素礦物質與食物成分檢測。'
+    },
+    'science-7-1-3-2': {
+      code: '3-2',
+      title: '酵素的作用',
+      root: 'chapter-bank/science/7-1/unit-03/section-02',
+      sectionSlug: 'section-02',
+      selfStudyCount: 54,
+      censusCount: 54,
+      pendingCount: 0,
+      selfStudyDesc: '新無敵自然自修原題；酵素特性、專一性、溫度與酸鹼度、唾液澱粉酶實驗與科學素養。'
     }
   };
 
@@ -59,7 +70,7 @@
   }
 
   function makeContext(data, section) {
-    const bankKey = data.exam?.difficulty || 'science-7-1-u03-s01-self-study';
+    const bankKey = data.exam?.difficulty || `science-7-1-u03-${section.sectionSlug === 'section-02' ? 's02' : 's01'}-self-study`;
     return {
       ...(data.exam || {}),
       key: bankKey,
@@ -71,7 +82,7 @@
       semesterLabel:'七年級上學期',
       unitGroup:'unit-03',
       unitGroupLabel:'單元 3 生物體內的營養',
-      section:'section-01',
+      section:section.sectionSlug || 'section-01',
       unit:`${section.code} ${section.title}`,
       difficulty:'selfStudy',
       difficultyLabel:'自修題庫',
@@ -93,13 +104,13 @@
       const data = await fetchBank(`${section.root}/self-study.json`);
       const questions = data.questions.filter(q => !q.imagePending && !q.optionImagePending);
       if (!questions.length) {
-        alert('3-1 自修題庫目前沒有可作答題目。');
+        alert(`${section.code} 自修題庫目前沒有可作答題目。`);
         return;
       }
       if (typeof banks === 'undefined' || typeof startExam !== 'function') {
         throw new Error('題庫引擎尚未就緒');
       }
-      const bankKey = data.exam?.difficulty || 'science-7-1-u03-s01-self-study';
+      const bankKey = data.exam?.difficulty || `science-7-1-u03-${section.sectionSlug === 'section-02' ? 's02' : 's01'}-self-study`;
       banks[bankKey] = questions;
       window.examContexts = window.examContexts || {};
       window.examContexts[bankKey] = makeContext(data, section);
@@ -120,7 +131,11 @@
       const data = await fetchBank(`${section.root}/self-study.json`);
       const count = data.questions.filter(q => !q.imagePending && !q.optionImagePending).length;
       const pending = Array.isArray(data.pendingQuestions) ? data.pendingQuestions.length : 0;
-      badge.textContent = pending ? `${count} 題可作答｜${pending} 題待解答` : `${count} 題`;
+      const manual = data.questions.filter(q => q.type === 'manual-study').length;
+      const scored = count - manual;
+      badge.textContent = pending
+        ? `${scored} 題可評量｜${manual} 題紙筆｜${pending} 題待解答`
+        : (manual ? `${scored} 題可評量｜${manual} 題紙筆` : `${count} 題`);
       badge.classList.remove('soon');
       badge.classList.add('school');
     } catch {
