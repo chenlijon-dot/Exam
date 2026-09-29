@@ -80,6 +80,7 @@
     style.id = 'flexExamStyles';
     style.textContent = `
       .question-text{font-weight:750}
+      .question-source{display:inline-block;margin-left:7px;font-size:.78em;font-weight:800;color:#64748b;white-space:nowrap}
       .question-media{margin:12px 0 14px;border:1px solid #dbe3ef;background:#fff;border-radius:14px;padding:10px;overflow:auto;text-align:center}
       .question-media img{display:block;max-width:100%;height:auto;margin:auto;border-radius:8px}
       .option-media{margin-top:4px}
@@ -462,7 +463,20 @@
         : '';
       const optionMedia = x.optionImage ? `<div class="question-media option-media"><img src="${escapeHtml(x.optionImage)}" alt="${escapeHtml(x.optionImageAlt || `第${i+1}題選項圖`)}" loading="lazy"></div>` : '';
       const shownNumber = x.displayNumber || x.originalQuestionNumber || x.number || i + 1;
-      const qtitle = `<div class="qtitle"><span class="num">${escapeHtml(shownNumber)}</span><span class="question-text">${renderQuestionText(x)}</span></div>`;
+      const sourceLabel = (() => {
+        if (x.sourceLabel) return String(x.sourceLabel);
+        const year = String(x.year || '').trim();
+        const school = String(x.school || '').trim();
+        if (school && year && year !== 'unknown') return `${year.replace(/年$/, '')}年 ${school}`;
+        if (school && school !== '高雄楷模書院') return school;
+        return '';
+      })();
+      const renderedQuestion = renderQuestionText(x);
+      const alreadyHasSource = /\[[^\]]*(?:升學王|國中|高中|國小|書院)[^\]]*\]\s*$/.test(String(x.q || ''));
+      const sourceBadge = sourceLabel && !alreadyHasSource
+        ? `<span class="question-source">[${escapeHtml(sourceLabel)}]</span>`
+        : '';
+      const qtitle = `<div class="qtitle"><span class="num">${escapeHtml(shownNumber)}</span><span class="question-text">${renderedQuestion}</span>${sourceBadge}</div>`;
 
       if (type === 'manual-study') {
         const instruction = x.manualInstruction || '請在紙上作答；本題不列入自動計分。';
