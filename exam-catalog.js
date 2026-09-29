@@ -286,7 +286,7 @@
           title: '第一份練習卷｜位置',
           sourceLabel: '升學王',
           count: 25,
-          path: 'chapter-bank/social/7-1/geography/chapter-01/school-exams-kaimo-0903.json'
+          path: 'chapter-bank/social/7-1/geography/school-exams-kaimo-0903.json'
         }
       ],
       chapters: [
