@@ -1,0 +1,950 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-02-school-kaimo-0917",
+    "difficulty": "social-7-1-history-02-school-kaimo-0917",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第2章 大航海時代各方勢力的競逐｜各校題庫",
+    "title": "第2章 大航海時代各方勢力的競逐｜各校題庫",
+    "subtitle": "社會七上｜歷史｜高雄楷模書院｜第三份練習卷｜國際勢力的競逐｜25 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-02",
+    "unit": "第2章 大航海時代各方勢力的競逐",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "高雄楷模書院第三份練習卷－七上歷史「國際勢力的競逐」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q10、Q16 為原卷圖題，cropped PNG 已存在 Google Drive，待 production WebP binary asset 推入 GitHub 後解除 imagePending。Q15 與 Q17 為原卷完全重複題，依原卷忠實保留；Q23 與 Q24 為高度近似題，也依原卷保留。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第三份練習卷｜國際勢力的競逐",
+    "sourceType": "school-exam",
+    "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+    "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260930191900001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "位居東亞航線上的臺灣島，由於東亞海域的貿易開始蓬勃發展，自何時後，開始成為商船航行上的指標與補給據點？",
+      "o": [
+        "13 世紀",
+        "15 世紀",
+        "16 世紀",
+        "17 世紀"
+      ],
+      "a": 2,
+      "e": "16 世紀為大航海時代，臺灣因東亞航線位置而成為重要航行指標與補給據點。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "2",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "十六世紀之後，歐洲人紛紛來到東亞與中國建立貿易。請問：當時葡萄牙與中國的貿易根據地為何處？",
+      "o": [
+        "馬尼拉",
+        "巴達維亞",
+        "臺灣",
+        "澳門"
+      ],
+      "a": 3,
+      "e": "葡萄牙人在澳門建立貿易據點。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900003",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "3",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "「這個國家發現新航路後，占領世界許多地區作為貿易據點，包括中國的澳門。」請問：上文所描述的是下列哪一個國家？",
+      "o": [
+        "荷蘭",
+        "西班牙",
+        "葡萄牙",
+        "英國"
+      ],
+      "a": 2,
+      "e": "在澳門建立據點的是葡萄牙。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "17 世紀時，臺灣是漢人、荷蘭人、西班牙人在東亞地區進行貿易的重要據點，這是因為當時臺灣具備了下列哪一項優越的地理條件？",
+      "o": [
+        "氣候",
+        "人口",
+        "地形",
+        "位置"
+      ],
+      "a": 3,
+      "e": "臺灣位於東亞海域樞紐，位置是成為貿易據點的關鍵。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "「卡拉維爾帆船為一款盛行在 15 世紀的三桅帆船，當時的葡萄牙和西班牙航海家普遍採用它來進行海上探險。它的特點為易操作不易擱淺，速度亦大幅增加受到當時航海人員的喜愛。也因為此種帆船的特性，讓當時的歐洲國家逐漸克服海洋的阻礙，找到通往□□的新航路。」上文缺空處應填入下列何者？",
+      "o": [
+        "非洲",
+        "歐洲",
+        "亞洲",
+        "美洲"
+      ],
+      "a": 2,
+      "e": "15 世紀末歐洲人發現通往亞洲的新航路。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900006",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "6",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "臺灣是 17 世紀漢人、日本人、荷蘭人、西班牙人等在東亞地區進行貿易的重要據點。當時臺灣會扮演這種角色的原因，主要是具備了下列哪一項優越的地理條件？［94.第一次基測］",
+      "o": [
+        "地形",
+        "氣候",
+        "位置",
+        "人口"
+      ],
+      "a": 2,
+      "e": "臺灣位於西太平洋南北航線交會處。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900007",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban"
+      ],
+      "q": "14 世紀明朝實行海禁政策，下令東南沿海各省船隻不可私自出海，其主要原因為何？",
+      "o": [
+        "鄭芝龍多次來犯",
+        "歐洲列強的覬覦",
+        "日本鎖國政策影響",
+        "防備倭寇劫掠"
+      ],
+      "a": 3,
+      "e": "明朝海禁主要為防備倭寇。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900008",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "8",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants",
+        "hist-7-1-2-zheng-zhilong"
+      ],
+      "q": "17 世紀前期，臺灣是海商顏思齊、鄭芝龍的大本營。請問：其勢力範圍在今天何處？",
+      "o": [
+        "臺南、高雄一帶",
+        "雲林、嘉義一帶",
+        "新竹、苗栗一帶",
+        "花蓮、臺東一帶"
+      ],
+      "a": 1,
+      "e": "顏思齊、鄭芝龍曾招募漢人開墾今日雲林、嘉義一帶。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900009",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "9",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "16、17 世紀以來，由於大航海時代的緣故，臺灣的國際地位變得更為重要。在荷蘭領臺之前，早已在臺灣本島進行貿易的外國勢力是下列何者？",
+      "o": [
+        "日本",
+        "俄國",
+        "美國",
+        "韓國"
+      ],
+      "a": 0,
+      "e": "日本倭寇與商人早於荷蘭統治前已在臺灣及澎湖活動。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900010",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "10",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants",
+        "hist-7-1-2-zheng-zhilong"
+      ],
+      "q": "佳葦與家人到雲林地區旅遊，他們在一座紀念碑前拍了一張全家福的照片，如附圖所示。請問：照片中的紀念碑應是為了紀念何事？",
+      "o": [
+        "荷蘭人登陸臺灣南部",
+        "漢人移民抵抗日本倭寇的侵擾",
+        "漢人不堪荷蘭人的壓迫而起義",
+        "漢人來臺拓墾的開始"
+      ],
+      "a": 3,
+      "e": "顏思齊、鄭芝龍招募漢人開墾雲林、嘉義一帶，因此紀念漢人來臺拓墾的開始。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0917-q10.webp",
+      "imageAlt": "雲林地區紀念漢人來臺拓墾的紀念碑照片",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930191900011",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "11",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants",
+        "hist-7-1-2-zheng-zhilong"
+      ],
+      "q": "1620 年代，臺灣今日雲林至嘉義一帶，成為哪些海商的根據地？",
+      "o": [
+        "顏思齊、鄭芝龍",
+        "顏思齊、鄭成功",
+        "鄭芝龍、鄭成功",
+        "鄭成功、沈有容"
+      ],
+      "a": 0,
+      "e": "顏思齊、鄭芝龍在雲林、嘉義一帶建立據點。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900012",
+      "revision": 1,
+      "number": 12,
+      "originalQuestionNumber": "12",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-zhilong"
+      ],
+      "q": "17 世紀前期，招募漢人開墾雲林、嘉義地區，掌握臺灣與中國東南沿海貿易的海商應是何人？",
+      "o": [
+        "鄭芝龍",
+        "施琅",
+        "沈有容",
+        "鄭成功"
+      ],
+      "a": 0,
+      "e": "鄭芝龍曾招募漢人開墾雲林、嘉義地區並掌握相關海上貿易。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900013",
+      "revision": 1,
+      "number": 13,
+      "originalQuestionNumber": "13",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban"
+      ],
+      "q": "紐約在 911 恐怖攻擊事件發生之後，美國政府曾下令民航機全面禁航，以防止恐怖分子再度劫機攻擊；與此舉類似，中國歷史上明朝曾為防止海商與倭寇劫掠而實施何種政策？",
+      "o": [
+        "鎖國政策",
+        "閉關政策",
+        "鎖海政策",
+        "海禁政策"
+      ],
+      "a": 3,
+      "e": "明朝為防備倭寇，實施海禁政策。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900014",
+      "revision": 1,
+      "number": 14,
+      "originalQuestionNumber": "14",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "關於十六、十七世紀西方國家相繼競逐東亞，臺灣逐成為攻取的目標，下列何者敘述正確？",
+      "o": [
+        "臺灣位於東亞海域樞紐，自古以來就是航運必經之路",
+        "臺灣的原住民渴望宗教信仰，歐洲人紛紛來臺傳教",
+        "臺灣盛產絲綢、茶葉、香料，是歐洲人貿易首選商品",
+        "臺灣氣候四季如春，適合歐洲人居住，各國激烈爭奪"
+      ],
+      "a": 0,
+      "e": "臺灣位於東亞海域樞紐，交通位置是各方競逐的重要原因。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900015",
+      "revision": 1,
+      "number": 15,
+      "originalQuestionNumber": "15",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-spanish-northern-taiwan"
+      ],
+      "q": "西元 1597 年，有一封呈報給國王的信中寫到：「我們希望占領福爾摩沙的這個港口，最迫切的理由是為了確保菲律賓的安全。因為……日本企圖奪取這個港口以進占馬尼拉，我們要確保菲律賓的安全就必須擁有這個港口。」由上述背景判斷，這封書信最可能是呈報給哪一國國王？﹝98.第二次基測﹞",
+      "o": [
+        "荷蘭",
+        "英國",
+        "菲律賓",
+        "西班牙"
+      ],
+      "a": 3,
+      "e": "西班牙占領菲律賓馬尼拉，因此此信最可能呈報給西班牙國王。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900016",
+      "revision": 1,
+      "number": 16,
+      "originalQuestionNumber": "16",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-voc"
+      ],
+      "q": "下表是某一組織的重要事件整理，根據內容判斷，下列何者最適合放入表中的「？」處？［105.會考］",
+      "o": [
+        "從印度輸出大量瓷器販賣至中國",
+        "以白銀吸引中國商人至馬尼拉交易",
+        "以澳門為據點，推動亞洲傳教事業",
+        "設亞洲總部於巴達維亞，統籌經營"
+      ],
+      "a": 3,
+      "e": "題幹描述荷蘭東印度公司，其亞洲總部設於巴達維亞。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0917-q16.webp",
+      "imageAlt": "某組織重要事件表，含成立於十七世紀初、在臺灣與南非建立殖民地、與日本貿易等敘述",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930191900017",
+      "revision": 1,
+      "number": 17,
+      "originalQuestionNumber": "17",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-spanish-northern-taiwan"
+      ],
+      "q": "西元 1597 年，有一封呈報給國王的信中寫到：「我們希望占領福爾摩沙的這個港口，最迫切的理由是為了確保菲律賓的安全。因為……日本企圖奪取這個港口以進占馬尼拉，我們要確保菲律賓的安全就必須擁有這個港口。」由上述背景判斷，這封書信最可能是呈報給哪一國國王？﹝98.第二次基測﹞",
+      "o": [
+        "荷蘭",
+        "英國",
+        "菲律賓",
+        "西班牙"
+      ],
+      "a": 3,
+      "e": "此題與 Q15 為原卷重複題；依原卷保留，答案同為西班牙。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900018",
+      "revision": 1,
+      "number": 18,
+      "originalQuestionNumber": "18",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "臺灣自 17 世紀起，一直為各國所競逐的目標，主要原因是臺灣地處中國大陸東南沿海，戰略地位重要，是哪一海域南來北往的交通樞紐？",
+      "o": [
+        "東太平洋",
+        "西太平洋",
+        "印度洋",
+        "大西洋"
+      ],
+      "a": 1,
+      "e": "臺灣位於西太平洋南來北往交通樞紐。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900019",
+      "revision": 1,
+      "number": 19,
+      "originalQuestionNumber": "19",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-spanish-northern-taiwan"
+      ],
+      "q": "17 世紀，西班牙人來到亞洲，他們在何處建立重要貿易據點，作為貿易中心？",
+      "o": [
+        "澳門",
+        "馬尼拉",
+        "臺灣",
+        "澎湖"
+      ],
+      "a": 1,
+      "e": "西班牙人在菲律賓馬尼拉建立重要貿易據點。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900020",
+      "revision": 1,
+      "number": 20,
+      "originalQuestionNumber": "20",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "16 世紀的葡萄牙人航海日誌顯示，當時他們所走的「澳門日本航線」是進入臺灣海峽後，越過澎湖往東北，沿淡水、雞籠，經琉球到日本。試問葡萄牙人行走這條航路的資訊最可能得自下列何者？",
+      "o": [
+        "荷蘭 東印度公司",
+        "海商集團",
+        "明朝海軍",
+        "西班牙海軍"
+      ],
+      "a": 1,
+      "e": "漢人與日本倭寇海商集團熟悉相關走私與航行路線。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900021",
+      "revision": 1,
+      "number": 21,
+      "originalQuestionNumber": "21",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "17 世紀初期，臺灣西南部地區出現了一個日本聚落，這個聚落出現的原因最可能為何？",
+      "o": [
+        "日本人口過剩，必須移民臺灣",
+        "日本缺乏蔗糖，來臺種植甘蔗",
+        "與荷蘭貿易合作，共同開發臺灣",
+        "日本倭寇以臺灣為據點，進行走私貿易"
+      ],
+      "a": 3,
+      "e": "當時中國海禁、日本鎖國背景下，倭寇與海商利用臺灣作為走私貿易據點。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900022",
+      "revision": 1,
+      "number": 22,
+      "originalQuestionNumber": "22",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location"
+      ],
+      "q": "21 世紀，是經濟全球化影響所有人生活的時代。但是，這並不是歷史上第一次出現這種現象。許多研究都證明：「十七世紀興盛的航海活動，是全球經濟網路形成的第一步。」請問：在這波浪潮中，臺灣扮演了什麼樣的角色？",
+      "o": [
+        "中國對外通商的出口港",
+        "東亞國際貿易的中繼站",
+        "關鍵貿易商品的生產地",
+        "航海冒險活動的發源地"
+      ],
+      "a": 1,
+      "e": "臺灣因位於東亞海域樞紐，成為國際貿易中繼站。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900023",
+      "revision": 1,
+      "number": 23,
+      "originalQuestionNumber": "23",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban",
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "16 世紀末，明朝為了防止日本人騷擾東南沿海地區，派兵進駐澎湖，此項政策所造成的影響為何？",
+      "o": [
+        "導致澎湖的貿易絡繹不絕",
+        "臺灣本島取代澎湖成為海商的活動場所",
+        "日本趁機占領臺灣本島",
+        "臺灣因此變成倭寇的大本營"
+      ],
+      "a": 1,
+      "e": "明朝駐軍澎湖後，各方海商逐漸轉移到臺灣本島活動。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900024",
+      "revision": 1,
+      "number": 24,
+      "originalQuestionNumber": "24",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban",
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "16 世紀末，明朝政府為了防止海商活動威脅中國東南沿海安全，派兵進駐澎湖，此項政策所造成的影響為何？",
+      "o": [
+        "導致澎湖的貿易絡繹不絕",
+        "臺灣本島取代澎湖成為海商的活動場所",
+        "日本趁機占領臺灣本島",
+        "臺灣因此變成倭寇的大本營"
+      ],
+      "a": 1,
+      "e": "明朝派兵進駐澎湖，使原以澎湖為據點的海商逐漸轉往臺灣。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930191900025",
+      "revision": 1,
+      "number": 25,
+      "originalQuestionNumber": "25",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第三份練習卷｜國際勢力的競逐",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban",
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "16 世紀後期，中國東南沿海地區的走私貿易和海上劫掠活動為何由澎湖轉移至臺灣本島？",
+      "o": [
+        "清代實施海禁政策",
+        "明朝政府駐軍澎湖",
+        "澎湖四周不利航海",
+        "臺灣本島發現金礦"
+      ],
+      "a": 1,
+      "e": "明朝政府駐軍澎湖後，原以澎湖為據點的海商轉往臺灣本島。",
+      "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
+      "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
+      "lifecycle": "staging"
+    }
+  ]
+}
