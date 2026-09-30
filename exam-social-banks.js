@@ -46,7 +46,8 @@
       backText: '歷史章節',
       pathLabel: '歷史',
       schoolBank: 'school-exams-kaimo-0910.json',
-      schoolBankCount: 25,
+      schoolBankExtraPaths: ['school-exams-kaimo-0903.json'],
+      schoolBankCount: 50,
       schoolBankLabel: '高雄楷模書院'
     },
     'hist-02': {
@@ -159,10 +160,14 @@
     if (button) button.disabled = true;
     if (badge) badge.textContent = '載入中';
     try {
-      const res = await fetch(`${chapter.path}/${chapter.schoolBank}`, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      const questions = Array.isArray(data.questions) ? data.questions : [];
+      const bankPaths = [chapter.schoolBank, ...(chapter.schoolBankExtraPaths || [])].filter(Boolean);
+      const banksData = await Promise.all(bankPaths.map(async bankPath => {
+        const res = await fetch(`${chapter.path}/${bankPath}`, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`${bankPath}: HTTP ${res.status}`);
+        return res.json();
+      }));
+      const data = banksData[0] || {};
+      const questions = banksData.flatMap(bank => Array.isArray(bank.questions) ? bank.questions : []);
       if (!questions.length) throw new Error('各校題庫沒有可作答題目');
       if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
