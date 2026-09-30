@@ -1,0 +1,972 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-01-school-kaimo-0903",
+    "difficulty": "social-7-1-history-01-school-kaimo-0903",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第1章 史前臺灣與原住民文化｜各校題庫",
+    "title": "第1章 史前臺灣與原住民文化｜各校題庫",
+    "subtitle": "社會七上｜歷史｜高雄楷模書院｜第一份練習卷｜史前的臺灣｜25 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-01",
+    "unit": "第1章 史前臺灣與原住民文化",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "高雄楷模書院第一份練習卷－七上歷史「史前的臺灣」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q1、Q7、Q20 為原卷圖題，cropped PNG 已存在 Google Drive，待 production WebP binary asset 推入 GitHub 後解除 imagePending。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第一份練習卷｜史前的臺灣",
+    "sourceType": "school-exam",
+    "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+    "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "260930162000001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-changbin-culture",
+        "hist-7-1-1-paleolithic"
+      ],
+      "q": "附表中的甲、乙、丙、丁代表不同史前文化的經濟活動，其中何者最適合用來描述長濱文化？［103.會考］",
+      "o": [
+        "甲 以採集、狩獵、漁撈方式維生",
+        "乙 以鐵製工具用於狩獵、農耕、捕魚",
+        "丙 以捕魚為主，已能種植農作物",
+        "丁 大量栽培稻米，也從事狩獵、漁撈"
+      ],
+      "a": 0,
+      "e": "長濱文化屬舊石器時代。乙為金屬器時代；丙、丁為新石器時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0903-q1.webp",
+      "imageAlt": "甲乙丙丁四種史前文化經濟活動比較表",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930162000002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "2",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-archaeology",
+        "hist-7-1-1-paleolithic"
+      ],
+      "q": "距今約五萬年前，臺灣進入舊石器時代。請問：歷史學者要研究舊石器時代的文化，必須透過何種方式得知當時人類生活的情形？",
+      "o": [
+        "歷史傳說故事與想像",
+        "考古遺址的發掘與研究",
+        "史前人類的文字紀錄",
+        "根據當時史書的記載"
+      ],
+      "a": 1,
+      "e": "史前人類因為沒有文字的發明，只能根據考古出土的遺物得知先民的生活情況。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000003",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "3",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-paleolithic"
+      ],
+      "q": "大雄乘坐時光機回到舊石器時代，他可能會經歷下列何種生活方式？",
+      "o": [
+        "捕到魚後，因不知用火只能生吃",
+        "飼養牲畜，用火烤熟做為食物",
+        "打製石器，和野生動物搏鬥",
+        "收割作物，分類放入陶製容器"
+      ],
+      "a": 2,
+      "e": "舊石器時代已知用火；飼養牲畜、收割作物、燒製陶器屬新石器時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-intro-periodization"
+      ],
+      "q": "歷史學者常常會把歷史做分期以方便研究，例如人類的歷史就可以簡單的分成「史前時代」及「歷史時代」。請問：歷史學者區分的依據為何？",
+      "o": [
+        "使用工具的材質",
+        "文字發明與否",
+        "農業的出現",
+        "是否會用火"
+      ],
+      "a": 1,
+      "e": "人類發明文字才有紀錄，有文字紀錄才進入歷史時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-yuanshan-culture",
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "某個臺灣文化遺址頗富區域性色彩，如各種磨製大型石器；另有貝塚，保存了大量食用後棄置的貝殼、獸骨、魚骨等；而且從石器的類型可判斷當時已經有進步的農業。請問：以上應為哪一文化遺址？",
+      "o": [
+        "長濱文化",
+        "大坌坑文化",
+        "圓山文化",
+        "十三行文化"
+      ],
+      "a": 2,
+      "e": "由「貝塚」等特徵可知為圓山文化。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000006",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "6",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "上歷史課時，幾位同學探討新石器時代人類的生活概況，何人所言錯誤？",
+      "o": [
+        "東誠：「使用磨製石器。」",
+        "小尊：「使用鐵刀狩獵。」",
+        "孝天：「下田耕種為生。」",
+        "宗偉：「已知燒製陶器。」"
+      ],
+      "a": 1,
+      "e": "使用鐵器屬金屬器時代特徵。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000007",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-archaeology",
+        "hist-7-1-1-metal-age",
+        "hist-7-1-1-shisanhang-culture"
+      ],
+      "q": "附圖是一個史前時代文化層，因為不同時期的人類很可能在同一地區活動，所以留下不同的層位遺跡。下列哪一種物品，會放在甲層中？",
+      "o": [
+        "用來埋葬死者的石板棺與陪葬的玉器",
+        "煉鐵爐附近發現的鐵渣",
+        "全臺規模最大的貝塚",
+        "以打製的方式將石器作成工具"
+      ],
+      "a": 1,
+      "e": "甲、乙、丙分別為金屬器時代、新石器時代、舊石器時代；甲層可見十三行文化的鐵渣。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0903-q7.webp",
+      "imageAlt": "史前文化層甲乙丙示意圖",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930162000008",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "8",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "鐵器的使用，是人類歷史文化進展的重要里程碑，而在臺灣的考古發掘中，哪一個文化遺址發現煉鐵作坊遺址，顯示臺灣鐵器文化的開始？",
+      "o": [
+        "卑南文化",
+        "圓山文化",
+        "大坌坑文化",
+        "十三行文化"
+      ],
+      "a": 3,
+      "e": "十三行文化為金屬器時代代表文化。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000009",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "9",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-paleolithic",
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "課堂上同學們正在討論臺灣的史前文化遺址，其中甲遺址發現紅褐色的陶器和煉鐵作坊；乙遺址的特色是已知用火、使用打製的石器，過著採集、狩獵的生活；丙遺址的陶器腹部有粗繩紋、石器有磨製的石斧、石鏃和以芋薯為主的農作。若將三個遺址按照時間先後排列，下列哪一選項正確？",
+      "o": [
+        "甲乙丙",
+        "乙丙甲",
+        "乙甲丙",
+        "丙甲乙"
+      ],
+      "a": 1,
+      "e": "甲為金屬器時代，乙為舊石器時代，丙為新石器時代，因此順序為乙、丙、甲。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000010",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "10",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-changbin-culture",
+        "hist-7-1-1-paleolithic"
+      ],
+      "q": "上歷史課的時候，師生共同討論臺灣長濱文化，學生各自表達自己的看法。甲生說：「長濱文化是舊石器時代早期的文化類型。」乙生說：「長濱文化以農業為主要維生方式。」丙生說：「從長濱遺址中可以發現當時人類有食用貝類的現象。」丁生說：「長濱文化出現在臺灣東部，是目前臺灣發現最早的史前遺址之一。」以上哪一位學生正確？",
+      "o": [
+        "甲生",
+        "乙生",
+        "丙生",
+        "丁生"
+      ],
+      "a": 3,
+      "e": "應改為：甲是舊石器時代晚期；乙以採集、漁獵為主；丙所述為圓山文化。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000011",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "11",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-intro-periodization"
+      ],
+      "q": "一般而言，歷史學者會以下列何者來作為區分史前時代和歷史時代的依據？",
+      "o": [
+        "器具種類",
+        "文字發明",
+        "宗教信仰",
+        "產食方式"
+      ],
+      "a": 1,
+      "e": "有文字紀錄的時期稱歷史時代，文字發明以前稱史前時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000012",
+      "revision": 1,
+      "number": 12,
+      "originalQuestionNumber": "12",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-changbin-culture",
+        "hist-7-1-1-paleolithic"
+      ],
+      "q": "下列有關「長濱文化」的敘述，何者錯誤？\n(甲)已知用火(乙)已知煉鐵(丙)過著採集、漁獵、農耕的生活(丁)通常居住在洞穴或岩蔭中",
+      "o": [
+        "(甲)(丁)",
+        "(乙)(丙)",
+        "(乙)(丁)",
+        "(甲)(丙)"
+      ],
+      "a": 1,
+      "e": "長濱文化是舊石器時代晚期文化；煉鐵屬金屬器時代，農耕屬新石器時代之後的文化特徵。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000013",
+      "revision": 1,
+      "number": 13,
+      "originalQuestionNumber": "13",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-changbin-culture",
+        "hist-7-1-1-paleolithic"
+      ],
+      "q": "有關臺灣「長濱文化」的敘述，下列何者正確？",
+      "o": [
+        "距今五萬到五千年間，屬於舊石器時代早期代表",
+        "長濱人定居海邊岩洞內，將捕獲的魚裝於陶罐內",
+        "飼養豬狗等家畜，以防禦夜晚野獸攻擊岩洞",
+        "長濱人以採集岩洞外的果實及漁獵為主要維生方式"
+      ],
+      "a": 3,
+      "e": "長濱文化是舊石器時代晚期代表，以採集、漁獵維生。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000014",
+      "revision": 1,
+      "number": 14,
+      "originalQuestionNumber": "14",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "位於臺中市 清水區的牛罵頭遺址文化園區正式開放參觀，園區裡展示著出土的文物與復原的樣貌，例如：細繩紋紅陶、磨製的石刀與石斧。依據展示的物品可推測，牛罵頭文化最可能屬於下列哪一時期？",
+      "o": [
+        "舊石器時代",
+        "新石器時代",
+        "青銅器時代",
+        "鐵器時代"
+      ],
+      "a": 1,
+      "e": "文物中有陶器、磨製石器，因此為新石器時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000015",
+      "revision": 1,
+      "number": 15,
+      "originalQuestionNumber": "15",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-yuanshan-culture"
+      ],
+      "q": "貝塚為該遺址最大的特色，它保存大量食用後的貝殼和獸骨、魚骨等。依貝塚所保存下來食物殘渣推測，當時人類已知飼養家畜，可以種植稻米等植物。下列敘述何者正確？",
+      "o": [
+        "屬於新石器時代的文化",
+        "與其他地區的貿易往來",
+        "已具有國家的規模",
+        "已進入歷史時代"
+      ],
+      "a": 0,
+      "e": "由飼養家畜、種植稻米等植物，可知人類已進入產食的新石器時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000016",
+      "revision": 1,
+      "number": 16,
+      "originalQuestionNumber": "16",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "人類進入新石器時代以後有許多重大的變革，而有「新石器革命」之稱，其主要意義為何？",
+      "o": [
+        "已知用火取暖、照明與熟食，使生命得以延長",
+        "開始使用文字，明確記載當時人們的各種活動",
+        "進入產食階段，人們開始有餘暇從事文明創造",
+        "發展嚴密的軍事及國家組織，保障群體的安全"
+      ],
+      "a": 2,
+      "e": "農業的發展使人類進入產食時代，人們開始有餘暇從事文明創造。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000017",
+      "revision": 1,
+      "number": 17,
+      "originalQuestionNumber": "17",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "臺東討壺怒吼聯盟要求臺大歸還卑南遺址的文物，於是臺大在民國 94 年 4 月先歸還了一批，其中包括陶壺、石質標本等大約 164 箱文物。根據考古學者的分類，卑南文化屬於哪一個時期？",
+      "o": [
+        "舊石器時代晚期",
+        "新石器時代早期",
+        "新石器時代晚期",
+        "金屬器時代"
+      ],
+      "a": 2,
+      "e": "卑南文化屬新石器時代晚期。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000018",
+      "revision": 1,
+      "number": 18,
+      "originalQuestionNumber": "18",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "小宇是個古董收藏家，某天他在擦拭銅鏡時，突然出現一道刺眼的光線，等他回過神來，發現他回到了遠古時期臺灣的一個叢林部落，見到小孩拿著陶器到河邊盛水。請問：小宇最遠應該是回到大約距今多少年前？",
+      "o": [
+        "五十多萬年前",
+        "五萬多年前",
+        "七千多年前",
+        "二千多年前"
+      ],
+      "a": 2,
+      "e": "陶器的出現屬新石器時代特徵，時間約距今七千至二千年前。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000019",
+      "revision": 1,
+      "number": 19,
+      "originalQuestionNumber": "19",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "在十三行文化遺址中，出土了瑪瑙珠、玻璃製品，以及其他質料的珠子，還發現金飾、鎏金青銅碗、銀管飾物、銅刀柄、銅碗、銅鈴、銅幣等來自於南洋或中國的外來物品。由上述內容可推論出下列何者？",
+      "o": [
+        "屬於新石器時代的文化",
+        "與其他地區的貿易往來",
+        "已具有國家的規模",
+        "已進入歷史時代"
+      ],
+      "a": 1,
+      "e": "十三行文化本身可煉鐵，但玻璃、瑪瑙珠、銅器等為外來物品，可推論與其他地區有貿易往來。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000020",
+      "revision": 1,
+      "number": 20,
+      "originalQuestionNumber": "20",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-archaeology",
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-yuanshan-culture",
+        "hist-7-1-1-changbin-culture"
+      ],
+      "q": "附圖是臺灣史前文化的分布圖，請指出下列正確的配對：甲—十三行文化、乙—圓山文化、丙—長濱文化、丁—卑南文化",
+      "o": [
+        "甲乙",
+        "甲丁",
+        "乙丙",
+        "丙丁"
+      ],
+      "a": 0,
+      "e": "正確配對為甲—十三行文化、乙—圓山文化；丙為卑南文化、丁為長濱文化。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0903-q20.webp",
+      "imageAlt": "臺灣史前文化分布圖，標示甲乙丙丁位置",
+      "imagePending": true
+    },
+    {
+      "questionId": "260930162000021",
+      "revision": 1,
+      "number": 21,
+      "originalQuestionNumber": "21",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "民國 79 年，中研院在臺北縣八里鄉（今新北市八里區）汙水處理廠預定地上，發掘出先民使用過的陶罐、鐵刀，和骨製的矛與魚鉤等器具。由這些出土文物，可看出此一文化遺址應屬於哪一時代？［91.第二次基測］",
+      "o": [
+        "舊石器時代",
+        "新石器時代早期",
+        "新石器時代晚期",
+        "金屬器時代"
+      ],
+      "a": 3,
+      "e": "出土鐵刀等鐵器，顯示屬金屬器時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000022",
+      "revision": 1,
+      "number": 22,
+      "originalQuestionNumber": "22",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-paleolithic",
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "在臺灣史前文化遺址中，若以使用器具來畫分，其順序為：「打製石器→磨製石器或燒製陶器→鐵器。」下列有關文化遺址按上述先後排列，哪一項是正確的？",
+      "o": [
+        "長濱文化→卑南文化→十三行文化",
+        "大坌坑文化→圓山文化→卑南文化",
+        "長濱文化→大坌坑文化→圓山文化",
+        "十三行文化→長濱文化→圓山文化"
+      ],
+      "a": 0,
+      "e": "打製石器為舊石器時代，磨製石器為新石器時代，使用鐵器為金屬器時代。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000023",
+      "revision": 1,
+      "number": 23,
+      "originalQuestionNumber": "23",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-metal-age",
+        "hist-7-1-1-archaeology"
+      ],
+      "q": "以下為考古學者筆下的臺灣某史前文化遺址內涵：「一般墓葬大都採側身曲肢葬，以一到兩個陶罐陪葬。少量的墓葬，雖然墓坑埋葬姿勢與其他墓葬無異，但有較多的陪葬品，包括玻璃、金質和銀質的裝飾品以及青銅器和銅錢等。這種墓葬，男女都有。而兒童和少年的墓葬中，也有少數有較多的陪葬。」下列選項為上述資料所主要陳述的概念，何者的解讀較不恰當？",
+      "o": [
+        "此文化遺址應是北部的十三行文化",
+        "此遺址已顯示當時社會有財富差別",
+        "此遺址已明顯出現社會階級的分化",
+        "此遺址顯示當時社會屬父權所主導"
+      ],
+      "a": 3,
+      "e": "從資料內容無法推斷當時社會由父權主導。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000024",
+      "revision": 1,
+      "number": 24,
+      "originalQuestionNumber": "24",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-archaeology",
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "芝穎是新北市八里地區考古隊的工作人員，日前有民眾在八里某地區發現史前遺物，芝穎被指派前往挖掘文化。請問：下列何者最可能是芝穎挖掘後，所繪之八里地區的文化層形態？",
+      "o": [
+        "卑南文化－長濱文化",
+        "十三行文化－大坌坑文化",
+        "大坌坑文化－十三行文化",
+        "大坌坑文化－圓山文化"
+      ],
+      "a": 1,
+      "e": "八里地區相關史前遺址包括大坌坑文化與十三行文化；年代較近的十三行文化位於較上層，大坌坑文化位於較下層。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "260930162000025",
+      "revision": 1,
+      "number": 25,
+      "originalQuestionNumber": "25",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第一份練習卷｜史前的臺灣",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "「白天媽媽縫製獸皮衣，大姊忙著耕種小米作物，小妹用陶罐出去裝水回來，小弟把玩著玻璃手環，到了晚上一家人輪流烤著爸爸白天抓來的山豬。」請問：這種生活型態最早出現哪一個史前文化中？",
+      "o": [
+        "長濱文化",
+        "大坌坑文化",
+        "十三行文化",
+        "卑南文化"
+      ],
+      "a": 2,
+      "e": "題幹所述為金屬器時代生活；十三行文化為金屬器時代代表。",
+      "sourceFile": "0903-七上歷史-全版本-史前的臺灣 題目卷.pdf",
+      "answerFile": "0903-七上歷史-全版本-史前的臺灣 解析卷.pdf",
+      "lifecycle": "staging"
+    }
+  ]
+}
