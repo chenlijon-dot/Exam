@@ -17,7 +17,10 @@
       subtitle: '世界中的臺灣｜選擇難度',
       path: 'chapter-bank/social/7-1/geography/chapter-02',
       questionCount: 20,
-      pointsPerQuestion: 5
+      pointsPerQuestion: 5,
+      schoolBank: 'school-exams-kaimo-0917.json',
+      schoolBankCount: 25,
+      schoolBankLabel: '升學王'
     },
     'geo-03': {
       title: '第3章　地形',
