@@ -58,7 +58,10 @@
       pointsPerQuestion: 5,
       subjectName: '歷史',
       backText: '歷史章節',
-      pathLabel: '歷史'
+      pathLabel: '歷史',
+      schoolBank: 'school-exams-kaimo-0917.json',
+      schoolBankCount: 25,
+      schoolBankLabel: '高雄楷模書院'
     },
     'hist-03': {
       title: '第3章　大航海時代臺灣原住民與外來者',
