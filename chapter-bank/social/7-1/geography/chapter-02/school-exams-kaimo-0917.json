@@ -6,7 +6,7 @@
     "examType": "social-school-chapter-school-exam",
     "examTypeLabel": "地理七上 第2章 世界中的臺灣｜各校題庫",
     "title": "第2章 世界中的臺灣｜各校題庫",
-    "subtitle": "社會七上｜地理｜升學王｜第三份練習卷｜25 題",
+    "subtitle": "社會七上｜地理｜升學王｜各校題庫｜32 題",
     "subject": "social",
     "subjectLabel": "社會",
     "semester": "7-1",
@@ -21,7 +21,7 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "active",
-    "sourceNote": "升學王／高雄楷模書院第三份練習卷－七上地理「全球海陸分布、臺灣地區的範圍」。25 題均歸入第2章〈世界中的臺灣〉；Q10 與 Q19 為來源卷本身重複題，為保存真實考卷結構均予保留。",
+    "sourceNote": "升學王／高雄楷模書院七上地理練習卷。目前收錄第三份「全球海陸分布、臺灣地區的範圍」25 題，以及第四份「一段範圍複習」中歸入第2章的 7 題，共 32 題；原題順序、來源與解析卷答案 authority 均保留。第三份 Q10 與 Q19 為來源卷本身重複題，仍保留真實原卷結構。",
     "sourceLabel": "升學王"
   },
   "source": {
@@ -960,6 +960,274 @@
       "lifecycle": "active",
       "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0917-q25.webp",
       "imageAlt": "世界各洲位置示意圖，標示甲乙丙丁"
+    },
+    {
+      "questionId": "260930155400005",
+      "revision": 2,
+      "number": 5,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-02"
+      ],
+      "conceptIds": [
+        "geo-7-1-2-2-taiwan-absolute-location"
+      ],
+      "q": "下列為四個假想島嶼的位置圖，由經緯度判斷，何者與臺灣島位置最相近？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 3,
+      "e": "臺灣島大致位於東經 120°～122°、北緯 22°～25°之間。",
+      "sourceFile": "0924-七上地理-全版本-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上地理-全版本-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0924-q05.webp",
+      "imageAlt": "四個假想島嶼的經緯度位置圖"
+    },
+    {
+      "questionId": "260930155400009",
+      "revision": 2,
+      "number": 9,
+      "originalQuestionNumber": "9",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-02"
+      ],
+      "conceptIds": [
+        "geo-7-1-2-2-taiwan-relative-location"
+      ],
+      "q": "斯里蘭卡代表隊搭乘飛機從當地直飛臺灣，參加亞青盃女子排球賽，附圖為飛行示意圖，其飛行方向大致為何？",
+      "o": [
+        "東北方",
+        "東南方",
+        "西北方",
+        "西南方"
+      ],
+      "a": 0,
+      "e": "解析卷答案為 A；解析卷未附文字解析。",
+      "sourceFile": "0924-七上地理-全版本-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上地理-全版本-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0924-q09.webp",
+      "imageAlt": "斯里蘭卡飛往臺灣的飛行方向示意圖"
+    },
+    {
+      "questionId": "260930155400010",
+      "revision": 2,
+      "number": 10,
+      "originalQuestionNumber": "10",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-02"
+      ],
+      "conceptIds": [
+        "geo-7-1-2-2-taiwan-relative-location"
+      ],
+      "q": "環宇航空公司接受私人包機委託，將搭載乘客從臺北松山機場起飛，前往附圖中的海島參加浪漫的婚禮。請問：若以最短路徑規畫，則飛行方向應為何？",
+      "o": [
+        "東北方",
+        "東南方",
+        "西南方",
+        "西北方"
+      ],
+      "a": 2,
+      "e": "圖中島嶼位於南半球，且經度較臺灣小，故位於臺灣的西南方。",
+      "sourceFile": "0924-七上地理-全版本-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上地理-全版本-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0924-q10.webp",
+      "imageAlt": "臺北飛往海島的最短路徑示意圖"
+    },
+    {
+      "questionId": "260930155400015",
+      "revision": 2,
+      "number": 15,
+      "originalQuestionNumber": "15",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-02"
+      ],
+      "conceptIds": [
+        "geo-7-1-2-2-east-asia-island-arc",
+        "geo-7-1-2-2-taiwan-relative-location"
+      ],
+      "q": "李大衛為擴大海外市場的競爭力，親自來到評估中的亞洲島嶼進行實地考察，希望了解當地的投資環境及發展前景，決定海外渡假村的投資地點。下列為他的祕書幫他準備的四張機票，請問：何者的距離最遠，航班飛行的時間最長？",
+      "o": [
+        "選項 A（見圖）",
+        "選項 B（見圖）",
+        "選項 C（見圖）",
+        "選項 D（見圖）"
+      ],
+      "a": 3,
+      "e": "選項中的島嶼皆為東亞島弧的島群，其中以美國領地的阿留申群島距離臺灣最遠。",
+      "sourceFile": "0924-七上地理-全版本-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上地理-全版本-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0924-q15.webp",
+      "imageAlt": "四張亞洲島嶼航班機票選項圖"
+    },
+    {
+      "questionId": "260930155400017",
+      "revision": 2,
+      "number": 17,
+      "originalQuestionNumber": "17",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-02"
+      ],
+      "conceptIds": [
+        "geo-7-1-2-1-three-oceans-seven-continents"
+      ],
+      "q": "大洋洲是由數個島群所組成，區內的島嶼常成為觀光勝地。家瑜正在其中的「帛琉」群島度假，她應位在附圖中的哪裡？",
+      "o": [
+        "甲",
+        "乙",
+        "丙",
+        "丁"
+      ],
+      "a": 0,
+      "e": "大洋洲位於太平洋上；解析卷指出乙為印度洋、丙為大西洋、丁為北極海。",
+      "sourceFile": "0924-七上地理-全版本-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上地理-全版本-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0924-q17.webp",
+      "imageAlt": "帛琉與各大洋位置示意圖"
+    },
+    {
+      "questionId": "260930155400023",
+      "revision": 2,
+      "number": 23,
+      "originalQuestionNumber": "23",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-02"
+      ],
+      "conceptIds": [
+        "geo-7-1-2-2-diverse-ecosystem",
+        "geo-7-1-2-x-data-interpretation"
+      ],
+      "q": "附圖為臺灣天然植物垂直分布圖，由圖判斷下列何者敘述正確？",
+      "o": [
+        "緯度愈高，植物愈茂密",
+        "氣溫愈高，植物種類愈多",
+        "降水量愈多，植物種類愈多",
+        "海拔高度愈高，植物愈茂密"
+      ],
+      "a": 1,
+      "e": "海拔高度 700 公尺以下的植物種類有四種；海拔越高氣溫越低，植物種類越少，因此 B 正確。",
+      "sourceFile": "0924-七上地理-全版本-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上地理-全版本-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0924-q23.webp",
+      "imageAlt": "臺灣天然植物垂直分布圖"
+    },
+    {
+      "questionId": "260930155400025",
+      "revision": 2,
+      "number": 25,
+      "originalQuestionNumber": "25",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "geography-chapter-02"
+      ],
+      "conceptIds": [
+        "geo-7-1-2-1-three-oceans-seven-continents"
+      ],
+      "q": "附圖是由某一視角觀看地球的海陸分布情形。圖中「甲」指的是哪一個海域？",
+      "o": [
+        "大西洋",
+        "印度洋",
+        "北極海",
+        "太平洋"
+      ],
+      "a": 2,
+      "e": "圖中的甲是歐、亞、北美三洲北側陸地所圍繞的北極海。",
+      "sourceFile": "0924-七上地理-全版本-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上地理-全版本-一段範圍複習 解析卷.pdf",
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/kaimo-0924-q25.webp",
+      "imageAlt": "地球海陸分布視角圖，標示甲海域"
     }
   ]
 }
