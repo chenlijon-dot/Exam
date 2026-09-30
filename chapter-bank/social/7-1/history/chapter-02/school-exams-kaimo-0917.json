@@ -20,8 +20,8 @@
     "analysisEligible": true,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "lifecycle": "staging",
-    "sourceNote": "高雄楷模書院第三份練習卷－七上歷史「國際勢力的競逐」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q10、Q16 為原卷圖題，cropped PNG 已存在 Google Drive，待 production WebP binary asset 推入 GitHub 後解除 imagePending。Q15 與 Q17 為原卷完全重複題，依原卷忠實保留；Q23 與 Q24 為高度近似題，也依原卷保留。"
+    "lifecycle": "active",
+    "sourceNote": "高雄楷模書院第三份練習卷－七上歷史「國際勢力的競逐」全版本。25 題依原題順序與原選項保留；解析卷為答案 authority。Q10、Q16 使用原卷裁切 WebP 圖檔。Q15 與 Q17 為原卷完全重複題，依原卷忠實保留；Q23 與 Q24 為高度近似題，也依原卷保留。"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -68,7 +68,7 @@
       "e": "16 世紀為大航海時代，臺灣因東亞航線位置而成為重要航行指標與補給據點。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900002",
@@ -104,7 +104,7 @@
       "e": "葡萄牙人在澳門建立貿易據點。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900003",
@@ -140,7 +140,7 @@
       "e": "在澳門建立據點的是葡萄牙。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900004",
@@ -176,7 +176,7 @@
       "e": "臺灣位於東亞海域樞紐，位置是成為貿易據點的關鍵。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900005",
@@ -212,7 +212,7 @@
       "e": "15 世紀末歐洲人發現通往亞洲的新航路。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900006",
@@ -248,7 +248,7 @@
       "e": "臺灣位於西太平洋南北航線交會處。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900007",
@@ -284,7 +284,7 @@
       "e": "明朝海禁主要為防備倭寇。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900008",
@@ -321,7 +321,7 @@
       "e": "顏思齊、鄭芝龍曾招募漢人開墾今日雲林、嘉義一帶。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900009",
@@ -357,7 +357,7 @@
       "e": "日本倭寇與商人早於荷蘭統治前已在臺灣及澎湖活動。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900010",
@@ -394,10 +394,9 @@
       "e": "顏思齊、鄭芝龍招募漢人開墾雲林、嘉義一帶，因此紀念漢人來臺拓墾的開始。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0917-q10.webp",
-      "imageAlt": "雲林地區紀念漢人來臺拓墾的紀念碑照片",
-      "imagePending": true
+      "imageAlt": "雲林地區紀念漢人來臺拓墾的紀念碑照片"
     },
     {
       "questionId": "260930191900011",
@@ -434,7 +433,7 @@
       "e": "顏思齊、鄭芝龍在雲林、嘉義一帶建立據點。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900012",
@@ -470,7 +469,7 @@
       "e": "鄭芝龍曾招募漢人開墾雲林、嘉義地區並掌握相關海上貿易。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900013",
@@ -506,7 +505,7 @@
       "e": "明朝為防備倭寇，實施海禁政策。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900014",
@@ -542,7 +541,7 @@
       "e": "臺灣位於東亞海域樞紐，交通位置是各方競逐的重要原因。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900015",
@@ -578,7 +577,7 @@
       "e": "西班牙占領菲律賓馬尼拉，因此此信最可能呈報給西班牙國王。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900016",
@@ -614,10 +613,9 @@
       "e": "題幹描述荷蘭東印度公司，其亞洲總部設於巴達維亞。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0917-q16.webp",
-      "imageAlt": "某組織重要事件表，含成立於十七世紀初、在臺灣與南非建立殖民地、與日本貿易等敘述",
-      "imagePending": true
+      "imageAlt": "某組織重要事件表，含成立於十七世紀初、在臺灣與南非建立殖民地、與日本貿易等敘述"
     },
     {
       "questionId": "260930191900017",
@@ -653,7 +651,7 @@
       "e": "此題與 Q15 為原卷重複題；依原卷保留，答案同為西班牙。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900018",
@@ -689,7 +687,7 @@
       "e": "臺灣位於西太平洋南來北往交通樞紐。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900019",
@@ -725,7 +723,7 @@
       "e": "西班牙人在菲律賓馬尼拉建立重要貿易據點。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900020",
@@ -761,7 +759,7 @@
       "e": "漢人與日本倭寇海商集團熟悉相關走私與航行路線。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900021",
@@ -797,7 +795,7 @@
       "e": "當時中國海禁、日本鎖國背景下，倭寇與海商利用臺灣作為走私貿易據點。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900022",
@@ -833,7 +831,7 @@
       "e": "臺灣因位於東亞海域樞紐，成為國際貿易中繼站。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900023",
@@ -870,7 +868,7 @@
       "e": "明朝駐軍澎湖後，各方海商逐漸轉移到臺灣本島活動。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900024",
@@ -907,7 +905,7 @@
       "e": "明朝派兵進駐澎湖，使原以澎湖為據點的海商逐漸轉往臺灣。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "260930191900025",
@@ -944,7 +942,7 @@
       "e": "明朝政府駐軍澎湖後，原以澎湖為據點的海商轉往臺灣本島。",
       "sourceFile": "0917-七上歷史-全版本-國際勢力的競逐 題目卷.pdf",
       "answerFile": "0917-七上歷史-全版本-國際勢力的競逐 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     }
   ]
 }
