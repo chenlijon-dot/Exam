@@ -20,8 +20,8 @@
     "analysisEligible": true,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "lifecycle": "staging",
-    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適康版、適翰版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-01 的 11 題。解析卷為答案 authority。圖題使用原卷 cropped PNG，待 production WebP 推入 GitHub 後解除 imagePending。"
+    "lifecycle": "active",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適康版、適翰版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-01 的 11 題。解析卷為答案 authority。Q7、Q11、Q24 使用原卷裁切 WebP 圖檔。"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -69,7 +69,7 @@
       "e": "鐵刀屬金屬器時代，不是新石器時代。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000003",
@@ -106,7 +106,7 @@
       "e": "新北市八里區有十三行博物館，臺東市有國立臺灣史前文化博物館，展示卑南文化等文物。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000004",
@@ -143,7 +143,7 @@
       "e": "長濱文化與卑南文化都位於臺東。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000005",
@@ -180,7 +180,7 @@
       "e": "外來玻璃、瑪瑙珠與銅器等顯示十三行文化與其他地區有貿易往來。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000007",
@@ -216,10 +216,9 @@
       "e": "耕種、飼養家畜、製陶與磨製石器皆為新石器時代特徵。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-kh-q7.webp",
-      "imageAlt": "史前人類生活示意圖",
-      "imagePending": true
+      "imageAlt": "史前人類生活示意圖"
     },
     {
       "questionId": "261001113000009",
@@ -255,7 +254,7 @@
       "e": "文字出現後才進入有文字紀錄的歷史時代。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000011",
@@ -292,10 +291,9 @@
       "e": "青銅刀柄屬十三行文化相關文物，最可能展示於新北市八里區十三行博物館。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-kh-q11.webp",
-      "imageAlt": "青銅刀柄文物照片",
-      "imagePending": true
+      "imageAlt": "青銅刀柄文物照片"
     },
     {
       "questionId": "261001113000018",
@@ -331,7 +329,7 @@
       "e": "卑南文化位於臺東，其餘選項所列文化均與臺北地區有關。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000020",
@@ -367,7 +365,7 @@
       "e": "南島語族分布不包括澳洲原住民族。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000023",
@@ -404,7 +402,7 @@
       "e": "陳第到達今臺南地區，當地平埔族為西拉雅族。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000024",
@@ -440,10 +438,9 @@
       "e": "大坌坑文化屬新石器時代，包含漁獵、農耕、磨製石器與製陶。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-kh-q24.webp",
-      "imageAlt": "古代人類生活樣貌甲乙丙丁戊己附圖",
-      "imagePending": true
+      "imageAlt": "古代人類生活樣貌甲乙丙丁戊己附圖"
     }
   ]
 }
