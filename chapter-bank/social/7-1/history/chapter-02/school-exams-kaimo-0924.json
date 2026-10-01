@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-02-school-kaimo-0924",
+    "difficulty": "social-7-1-history-02-school-kaimo-0924",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第2章｜各校題庫",
+    "title": "第2章 大航海時代各方勢力的競逐｜各校題庫",
+    "subtitle": "社會七上｜歷史｜高雄楷模書院｜第四份練習卷｜一段範圍複習｜本章 16 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-02",
+    "unit": "第2章 大航海時代各方勢力的競逐",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適南版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-02 的 16 題。解析卷為答案 authority。圖題使用原卷 cropped PNG，待 production WebP 推入 GitHub 後解除 imagePending。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第四份練習卷｜一段範圍複習",
+    "sourceType": "school-exam",
+    "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+    "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "261001105000001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-rule"
+      ],
+      "q": "荷蘭統治臺灣初期，曾經分別在各地成立「地方會議」（Landdag），要求各社選出長老，每年集會。其用意可能為何？",
+      "o": [
+        "做為傳播政令機構",
+        "做為徵收稅捐的機構",
+        "做為傳播宗教的機構",
+        "做為代表民意的機構"
+      ],
+      "a": 0,
+      "e": "荷蘭人的地方會議主要用來傳播政令，並對原住民族進行間接控制。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-trade"
+      ],
+      "q": "附表為西元 1640～1653 年「荷蘭人在臺財務收支表」。請問：當時外銷獲利的主要物產為何？",
+      "o": [
+        "茶葉、樟腦",
+        "鹿皮、橡膠",
+        "茶葉、香料",
+        "鹿皮、蔗糖"
+      ],
+      "a": 3,
+      "e": "荷蘭統治臺灣時主要外銷獲利物產包括鹿皮與蔗糖。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-q4.webp",
+      "imageAlt": "1640至1653年荷蘭人在臺財務收支表",
+      "imagePending": true
+    },
+    {
+      "questionId": "261001105000005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-spanish-northern-taiwan",
+        "hist-7-1-2-east-asian-trade-network"
+      ],
+      "q": "十七世紀時，有封信函中提到：「今年有兩艘船前往我們統治的雞籠，除了補給外，也負責購買中國商品運回我國的根據地馬尼拉，但船隻卻遲遲未回；且原先每年從中國與澳門前來馬尼拉貿易的船隻也還沒進港。我擔心若進口貨物不足，我們會蒙受許多的損失。」根據上文判斷，此封信函最可能是下列何者之間的通信？〔109.會考補考〕",
+      "o": [
+        "葡萄牙使節給明朝皇帝",
+        "鄭經給英國東印度公司",
+        "臺灣長官給巴達維亞總督",
+        "菲律賓總督給西班牙國王"
+      ],
+      "a": 3,
+      "e": "西班牙以馬尼拉為根據地，並曾統治雞籠、淡水，因此應是菲律賓總督給西班牙國王。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000009",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "9",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-spanish-northern-taiwan"
+      ],
+      "q": "17 世紀西班牙人來臺灣時，除了占領今日的淡水、基隆以外，還占領了今日的何地？",
+      "o": [
+        "宜蘭",
+        "桃園",
+        "新竹",
+        "苗栗"
+      ],
+      "a": 0,
+      "e": "1626 年後，西班牙陸續占領雞籠、淡水與蛤仔難（今宜蘭）等地。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000010",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "10",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location",
+        "hist-7-1-2-east-asian-trade-network"
+      ],
+      "q": "有位學者認為，十七世紀興盛的航海活動，是全球經濟網路形成的第一步。在這波浪潮中，臺灣扮演了什麼樣的角色？〔95.第二次基測〕",
+      "o": [
+        "中國對外通商的出口港",
+        "東亞國際貿易的中繼站",
+        "漢人移民南洋的轉運點",
+        "英國對華交易的根據地"
+      ],
+      "a": 1,
+      "e": "臺灣位於東亞海域樞紐，因此成為國際貿易中繼站。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000011",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "11",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants",
+        "hist-7-1-2-zheng-zhilong"
+      ],
+      "q": "顏思齊、鄭芝龍在 17 世紀前期到達臺灣，他們當時以下列哪些地方作為根據地？",
+      "o": [
+        "新竹、苗栗",
+        "淡水、基隆",
+        "嘉義、雲林",
+        "臺南、高雄"
+      ],
+      "a": 2,
+      "e": "今日雲林、嘉義一帶為顏思齊、鄭芝龍的大本營。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000012",
+      "revision": 1,
+      "number": 12,
+      "originalQuestionNumber": "12",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "《臺灣通史》記載，臺灣的開拓自顏思齊始，更推崇他為「手拓臺灣之壯士」。從雲林北港（舊稱笨港）登陸，墾荒定居，今日在北港建有「顏思齊先生開拓臺灣登陸紀念碑」。當時顏思齊是以何種身分著稱？",
+      "o": [
+        "倭寇",
+        "海商",
+        "明朝將領",
+        "航海家"
+      ],
+      "a": 1,
+      "e": "顏思齊是 17 世紀前期著名海商。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000013",
+      "revision": 1,
+      "number": 13,
+      "originalQuestionNumber": "13",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-koxinga-conquest",
+        "hist-7-1-2-zheng-regime"
+      ],
+      "q": "明朝滅亡後，不少明朝遺臣相繼在中國南方擁立宗室為王，成立政權與清廷對抗。請問：歷史上如何稱呼這段時期？",
+      "o": [
+        "南朝時期",
+        "鄭氏政權時期",
+        "南宋時期",
+        "南明時期"
+      ],
+      "a": 3,
+      "e": "明朝遺臣在中國南方擁立宗室延續明朝政權，史稱南明。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000016",
+      "revision": 1,
+      "number": 16,
+      "originalQuestionNumber": "16",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-age-of-sail",
+        "hist-7-1-2-european-eastward-expansion"
+      ],
+      "q": "亨利王子是國王若昂一世的第三子，他不是王儲，卻在他的國家中有其影響力，建立了全世界首間航海學校、天文臺、圖書館、港口及船廠，也是在他的大力推廣與建立基礎上，他的國家率先找到前進東方的新航路，而且占領中國的澳門作為貿易的據點。根據上述，亨利王子是哪一國家的人？",
+      "o": [
+        "西班牙",
+        "葡萄牙",
+        "印度",
+        "日本"
+      ],
+      "a": 1,
+      "e": "率先找到前往東方新航路並占領澳門作貿易據點的是葡萄牙。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000017",
+      "revision": 1,
+      "number": 17,
+      "originalQuestionNumber": "17",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-fort-zeelandia",
+        "hist-7-1-2-historical-landscape"
+      ],
+      "q": "臺灣有一個一級古蹟，它見證了荷蘭人到鄭氏政權到清朝及日本人的統治，這個一級古蹟應為下列何者？",
+      "o": [
+        "安平古堡",
+        "孔廟",
+        "延平郡王祠",
+        "億載金城"
+      ],
+      "a": 0,
+      "e": "今日安平古堡即荷蘭人在臺南安平所建的熱蘭遮城，其歷史跨越多個統治時期。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000018",
+      "revision": 1,
+      "number": 18,
+      "originalQuestionNumber": "18",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-koxinga-conquest",
+        "hist-7-1-2-fort-zeelandia",
+        "hist-7-1-2-zheng-regime"
+      ],
+      "q": "戲劇社正在排演一齣戲《1661 國姓來襲》，根據戲劇內容，請判斷下列敘述何者正確？\n場景一 甲：「父親，萬萬不可啊！自古只有父教子要盡忠報國，豈有教子貳心叛國的道理？」\n場景二 乙：「我欲平克臺灣，以為根本之地，安頓將領家眷，然後東征西討，無內顧之憂，並可生聚教訓也。」\n場景三 丙：「我方願意交出城堡，而你得讓我方所有人攜帶財物離開福爾摩沙。」",
+      "o": [
+        "甲是鄭經，乙是鄭成功，丙是荷蘭人",
+        "甲「盡忠報國」、「貳心叛國」的國是指明朝",
+        "丙離開後要返回公司的根據地馬尼拉",
+        "丙要交出的是在臺江內海外側的紅毛城"
+      ],
+      "a": 1,
+      "e": "解析卷指出甲、乙皆指鄭成功相關情境，丙為荷蘭人；「國」是指明朝，因此 B 正確。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000019",
+      "revision": 1,
+      "number": 19,
+      "originalQuestionNumber": "19",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban",
+        "hist-7-1-2-zheng-regime",
+        "hist-7-1-2-source-analysis"
+      ],
+      "q": "某段史料如下：「歲壬寅二月，忽有遷民之令……令濱海之民悉徙內地五十里，以絕接濟臺灣之患……民既盡遷，於是毀屋廬以作長城，掘墳塋而為深塹……民有闌出咫尺者，執而誅戮。」這段史料應是描述哪一時期的史事？",
+      "o": [
+        "清帝國領有臺灣後",
+        "荷蘭統治臺灣時期",
+        "顏思齊據有雲林、嘉義一帶時",
+        "鄭成功父子以臺灣為反清基地時"
+      ],
+      "a": 3,
+      "e": "由「以絕接濟臺灣之患」可判斷是清廷為防堵鄭氏反清勢力所實施的遷界、海禁措施。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000020",
+      "revision": 1,
+      "number": 20,
+      "originalQuestionNumber": "20",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-age-of-sail",
+        "hist-7-1-2-european-eastward-expansion"
+      ],
+      "q": "地理大發現時期，發現了到東方貿易的新航路，造成許多歐洲國家的富強，但下列何國原有的貿易地位卻因而減弱？",
+      "o": [
+        "葡萄牙",
+        "西班牙",
+        "土耳其",
+        "義大利"
+      ],
+      "a": 2,
+      "e": "歐亞貿易由陸路轉向海路後，位於舊陸路貿易中心的土耳其地位減弱。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000021",
+      "revision": 1,
+      "number": 21,
+      "originalQuestionNumber": "21",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-source-analysis"
+      ],
+      "q": "小叮噹的任意門被大雄玩壞了，修復時需要重新輸入臺灣大航海時期資料，以下的參考資料，何者是不需要的？",
+      "o": [
+        "《熱蘭遮城日記》",
+        "聯合東印度公司檔案",
+        "《巴達維亞日誌》",
+        "《臺灣建省誌》"
+      ],
+      "a": 3,
+      "e": "《臺灣建省誌》屬清領後期建省相關資料，不屬大航海時期。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000024",
+      "revision": 1,
+      "number": 24,
+      "originalQuestionNumber": "24",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-rule",
+        "hist-7-1-2-historical-landscape"
+      ],
+      "q": "臺灣民謠「安平追想曲」中有「身穿花紅長洋裝，風吹金髮思情郎」等歌詞，根據歌詞中的女主角是「金髮」又穿「洋裝」來判斷，這首歌的場景應該是發生在哪一時空背景？",
+      "o": [
+        "西班牙人統治下的安平港邊",
+        "荷蘭人統治下的安平港邊",
+        "鄭成功統治下的臺南海邊",
+        "日本人統治下的臺南海邊"
+      ],
+      "a": 1,
+      "e": "由安平與金髮洋人意象，題目設定指向荷蘭人統治下的安平。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001105000025",
+      "revision": 1,
+      "number": 25,
+      "originalQuestionNumber": "25",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-japan-sakoku-impact",
+        "hist-7-1-2-chinese-merchants"
+      ],
+      "q": "17 世紀初期，臺灣西南部地區出現了一個日本聚落，這個聚落出現的原因最可能為何？",
+      "o": [
+        "日本人口過剩，必須移民臺灣",
+        "日本缺乏蔗糖，來臺種植甘蔗",
+        "與荷蘭貿易合作，共同開發臺灣",
+        "日本倭寇以臺灣為據點，進行走私貿易"
+      ],
+      "a": 3,
+      "e": "中國海禁與日本鎖國使漢人與日本倭寇以臺灣為據點進行走私貿易。",
+      "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    }
+  ]
+}
