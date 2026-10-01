@@ -15,7 +15,7 @@ h1{font-size:22px;margin:0 0 5px;line-height:1.3}
 .back{display:inline-flex;align-items:center;min-height:42px;padding:8px 12px;border:1px solid var(--border);border-radius:12px;background:#132a44;color:var(--text);text-decoration:none;font-weight:700}
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:14px;align-items:start}
 .globe-card,.card{border:1px solid var(--border);background:linear-gradient(180deg,rgba(15,34,56,.96),rgba(8,20,35,.96));border-radius:20px}
-.globe-card{padding:12px;overflow:hidden}
+.globe-card{padding:12px;overflow:hidden;overscroll-behavior:contain}
 .sun-control{border:1px solid var(--border);background:rgba(5,14,25,.62);border-radius:16px;padding:12px;margin-bottom:10px}
 .sun-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .sun-title{font-weight:800}
@@ -25,8 +25,8 @@ h1{font-size:22px;margin:0 0 5px;line-height:1.3}
 input[type=range]{width:100%;accent-color:var(--sun);margin:11px 0 6px}
 .tip{font-size:12px;line-height:1.5;color:var(--muted)}
 .mode{font-size:12px;color:#9edcff;margin-top:4px}
-.canvas-wrap{position:relative;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 50% 38%,#173b5f,#081525 72%)}
-canvas{display:block;width:100%;aspect-ratio:1/1;touch-action:none;cursor:grab}
+.canvas-wrap{position:relative;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 50% 38%,#173b5f,#081525 72%);overscroll-behavior:contain;touch-action:none}
+canvas{display:block;width:100%;aspect-ratio:1/1;touch-action:none;overscroll-behavior:contain;cursor:grab;user-select:none;-webkit-user-select:none}
 canvas:active{cursor:grabbing}
 .badge{position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(4,10,18,.64);font-size:12px}
 .sun-dot{width:11px;height:11px;border-radius:50%;background:var(--sun);box-shadow:0 0 16px rgba(255,211,110,.8)}
@@ -246,18 +246,26 @@ canvas:active{cursor:grabbing}
     $('fixedBtn').classList.toggle('active',state.fixed);
   }
   function canvasPos(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+  function consumeGlobeGesture(e){
+    if(e.cancelable) e.preventDefault();
+    e.stopPropagation();
+  }
   canvas.addEventListener('pointerdown',e=>{
+    consumeGlobeGesture(e);
     canvas.setPointerCapture(e.pointerId);const p=canvasPos(e);
     state.dragging=true;state.moved=false;state.startX=p.x;state.startY=p.y;state.startLon=state.centerLon;state.startLat=state.centerLat;
-  });
+  },{passive:false});
   canvas.addEventListener('pointermove',e=>{
-    if(!state.dragging)return;const p=canvasPos(e),dx=p.x-state.startX,dy=p.y-state.startY;
+    if(!state.dragging)return;
+    consumeGlobeGesture(e);
+    const p=canvasPos(e),dx=p.x-state.startX,dy=p.y-state.startY;
     if(Math.hypot(dx,dy)>5)state.moved=true;
     state.centerLon=normLon(state.startLon-dx*.32);
     if(!state.fixed)state.centerLat=clamp(state.startLat+dy*.25,-80,80);
     requestRender();
-  });
+  },{passive:false});
   canvas.addEventListener('pointerup',e=>{
+    consumeGlobeGesture(e);
     const p0=canvasPos(e);
     if(!state.moved&&state.d3){
       const {cssW,cssH}=resize(),p=projectionFor(cssW,cssH),cx=cssW/2,cy=cssH/2,R=Math.min(cssW,cssH)*.43*state.zoom;
@@ -267,9 +275,15 @@ canvas:active{cursor:grabbing}
       }
     }
     state.dragging=false;render();
-  });
-  canvas.addEventListener('pointercancel',()=>state.dragging=false);
-  canvas.addEventListener('wheel',e=>{e.preventDefault();state.zoom=clamp(state.zoom*(e.deltaY>0?.95:1.05),.74,1.12);requestRender()},{passive:false});
+  },{passive:false});
+  canvas.addEventListener('pointercancel',e=>{
+    consumeGlobeGesture(e);
+    state.dragging=false;
+  },{passive:false});
+  canvas.addEventListener('touchstart',consumeGlobeGesture,{passive:false});
+  canvas.addEventListener('touchmove',consumeGlobeGesture,{passive:false});
+  canvas.addEventListener('contextmenu',e=>e.preventDefault());
+  canvas.addEventListener('wheel',e=>{e.preventDefault();e.stopPropagation();state.zoom=clamp(state.zoom*(e.deltaY>0?.95:1.05),.74,1.12);requestRender()},{passive:false});
 
   $('sunSlider').addEventListener('input',e=>{
     state.manualSunLon=sliderToLon(e.target.value);
