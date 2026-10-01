@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-01-school-kaimo-0924-kh",
+    "difficulty": "social-7-1-history-01-school-kaimo-0924-kh",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第1章｜各校題庫",
+    "title": "第1章 史前臺灣與原住民文化｜各校題庫",
+    "subtitle": "社會七上｜歷史｜高雄楷模書院｜第四份練習卷｜適康版、適翰版｜一段範圍複習｜本章 11 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-01",
+    "unit": "第1章 史前臺灣與原住民文化",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適康版、適翰版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-01 的 11 題。解析卷為答案 authority。圖題使用原卷 cropped PNG，待 production WebP 推入 GitHub 後解除 imagePending。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+    "sourceType": "school-exam",
+    "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+    "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "261001113000002",
+      "revision": 1,
+      "number": 2,
+      "originalQuestionNumber": "2",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "上歷史課時，幾位同學探討新石器時代人類的生活概況，何人所言錯誤？",
+      "o": [
+        "東誠：「使用磨製石器。」",
+        "小尊：「使用鐵刀狩獵。」",
+        "孝天：「下田耕種為生。」",
+        "宗偉：「已知燒製陶器。」"
+      ],
+      "a": 1,
+      "e": "鐵刀屬金屬器時代，不是新石器時代。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000003",
+      "revision": 1,
+      "number": 3,
+      "originalQuestionNumber": "3",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "在臺灣目前發現的眾多史前文化中，新北市八里區與臺東市皆設有史前文化博物館，展示哪些文物供人參觀研究？",
+      "o": [
+        "十三行文化、卑南文化",
+        "卑南文化、圓山文化",
+        "長濱文化、圓山文化",
+        "十三行文化、圓山文化"
+      ],
+      "a": 0,
+      "e": "新北市八里區有十三行博物館，臺東市有國立臺灣史前文化博物館，展示卑南文化等文物。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000004",
+      "revision": 1,
+      "number": 4,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-changbin-culture",
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "彼得的爸爸利用暑假期間帶全家到臺東參加原住民的豐年祭典。請問：他們可順道前往臺東縣的哪些史前文化遺址參觀？(甲)長濱文化(乙)圓山文化(丙)十三行文化(丁)卑南文化",
+      "o": [
+        "(甲)(丙)",
+        "(甲)(丁)",
+        "(甲)(乙)(丁)",
+        "(乙)(丙)(丁)"
+      ],
+      "a": 1,
+      "e": "長濱文化與卑南文化都位於臺東。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000005",
+      "revision": 1,
+      "number": 5,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "在十三行文化遺址中，出土了瑪瑙珠、玻璃製品，以及其他質料的珠子，還發現金飾、鎏金青銅碗、銀管飾物、銅刀柄、銅碗、銅鈴、銅幣等來自於南洋或中國的外來物品。由上述內容可推論出下列何者？",
+      "o": [
+        "屬於新石器時代的文化",
+        "與其他地區的貿易往來",
+        "已具有國家的規模",
+        "已進入歷史時代"
+      ],
+      "a": 1,
+      "e": "外來玻璃、瑪瑙珠與銅器等顯示十三行文化與其他地區有貿易往來。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000007",
+      "revision": 1,
+      "number": 7,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "歷史老師畫了一張「史前人類生活」示意圖（如附圖），希望可以幫助學生記憶。根據圖中內容判斷，老師正在教授哪一個範圍的課程？",
+      "o": [
+        "舊石器時代",
+        "新石器時代",
+        "青銅器時代",
+        "鐵器時代"
+      ],
+      "a": 1,
+      "e": "耕種、飼養家畜、製陶與磨製石器皆為新石器時代特徵。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-kh-q7.webp",
+      "imageAlt": "史前人類生活示意圖",
+      "imagePending": true
+    },
+    {
+      "questionId": "261001113000009",
+      "revision": 1,
+      "number": 9,
+      "originalQuestionNumber": "9",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-intro-periodization"
+      ],
+      "q": "臺灣大約在四百多年前從史前時代進入了歷史時代，是因為下列哪一項文明的出現？",
+      "o": [
+        "陶器",
+        "鐵器",
+        "文字",
+        "農耕"
+      ],
+      "a": 2,
+      "e": "文字出現後才進入有文字紀錄的歷史時代。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000011",
+      "revision": 1,
+      "number": 11,
+      "originalQuestionNumber": "11",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-shisanhang-culture",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "臺灣史前遺址豐富，端視出土文物的多寡，經常會在當地設置博物館。某博物館舉辦特展，展出《青銅刀柄》（如附圖）。請問：上述的博物館最有可能是下列何者？",
+      "o": [
+        "臺東縣臺東市的國立史前文化博物館",
+        "金門縣金沙鎮的金門文化園區歷史民俗博物館",
+        "臺北市的國立故宮博物院",
+        "新北市八里區十三行博物館"
+      ],
+      "a": 3,
+      "e": "青銅刀柄屬十三行文化相關文物，最可能展示於新北市八里區十三行博物館。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-kh-q11.webp",
+      "imageAlt": "青銅刀柄文物照片",
+      "imagePending": true
+    },
+    {
+      "questionId": "261001113000018",
+      "revision": 1,
+      "number": 18,
+      "originalQuestionNumber": "18",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "臺灣目前所發現的史前文化遺址眾多，將近有兩千多處，下列哪一個臺灣史前文化遺址的分布地區與其他有明顯的不同？",
+      "o": [
+        "卑南文化",
+        "十三行文化",
+        "大坌坑文化",
+        "圓山文化"
+      ],
+      "a": 0,
+      "e": "卑南文化位於臺東，其餘選項所列文化均與臺北地區有關。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000020",
+      "revision": 1,
+      "number": 20,
+      "originalQuestionNumber": "20",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "原住民電視臺播出一節目「發現南島」，計畫在其片頭浮光掠影般出現一些南島民族的居地照片，請問下列哪一張照片較「不」適合採用？",
+      "o": [
+        "紐西蘭毛利人的舞蹈",
+        "菲律賓土著的陶藝",
+        "臺灣達悟族的飛魚祭",
+        "澳洲原住民族歌舞"
+      ],
+      "a": 3,
+      "e": "南島語族分布不包括澳洲原住民族。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000023",
+      "revision": 1,
+      "number": 23,
+      "originalQuestionNumber": "23",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-oral-tradition"
+      ],
+      "q": "明朝的陳第曾至臺灣西南部安平外海，在停留約 20 日之間，他寫下第一篇記錄臺灣原住民的漢文文章《東番記》，裡面提到：「『大員』一地，乃赤崁外一小島，為入番社的門戶，島上多漢人，乃販海商賈。」陳第當時最有可能遇到下列哪一族的原住民？",
+      "o": [
+        "西拉雅族",
+        "凱達格蘭族",
+        "噶瑪蘭族",
+        "排灣族"
+      ],
+      "a": 0,
+      "e": "陳第到達今臺南地區，當地平埔族為西拉雅族。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000024",
+      "revision": 1,
+      "number": 24,
+      "originalQuestionNumber": "24",
+      "sourcePage": 4,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "附圖呈現古代人類的幾種生活樣貌，臺灣的大坌坑文化應涵蓋其中哪些活動？〔109.會考補考〕",
+      "o": [
+        "甲乙丁戊",
+        "甲丙丁戊",
+        "乙丁戊己",
+        "丙丁戊己"
+      ],
+      "a": 1,
+      "e": "大坌坑文化屬新石器時代，包含漁獵、農耕、磨製石器與製陶。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-kh-q24.webp",
+      "imageAlt": "古代人類生活樣貌甲乙丙丁戊己附圖",
+      "imagePending": true
+    }
+  ]
+}
