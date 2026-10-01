@@ -46,8 +46,8 @@
       backText: '歷史章節',
       pathLabel: '歷史',
       schoolBank: 'school-exams-kaimo-0910.json',
-      schoolBankExtraPaths: ['school-exams-kaimo-0903.json', 'school-exams-kaimo-0924.json'],
-      schoolBankCount: 59,
+      schoolBankExtraPaths: ['school-exams-kaimo-0903.json', 'school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json'],
+      schoolBankCount: 70,
       schoolBankLabel: '高雄楷模書院'
     },
     'hist-02': {
@@ -60,8 +60,8 @@
       backText: '歷史章節',
       pathLabel: '歷史',
       schoolBank: 'school-exams-kaimo-0917.json',
-      schoolBankExtraPaths: ['school-exams-kaimo-0924.json'],
-      schoolBankCount: 41,
+      schoolBankExtraPaths: ['school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json'],
+      schoolBankCount: 55,
       schoolBankLabel: '高雄楷模書院'
     },
     'hist-03': {
