@@ -20,8 +20,8 @@
     "analysisEligible": true,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "lifecycle": "staging",
-    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適南版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-02 的 16 題。解析卷為答案 authority。圖題使用原卷 cropped PNG，待 production WebP 推入 GitHub 後解除 imagePending。"
+    "lifecycle": "active",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適南版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-02 的 16 題。解析卷為答案 authority。Q4 使用原卷裁切 WebP 圖檔。"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -68,7 +68,7 @@
       "e": "荷蘭人的地方會議主要用來傳播政令，並對原住民族進行間接控制。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000004",
@@ -104,10 +104,9 @@
       "e": "荷蘭統治臺灣時主要外銷獲利物產包括鹿皮與蔗糖。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-q4.webp",
-      "imageAlt": "1640至1653年荷蘭人在臺財務收支表",
-      "imagePending": true
+      "imageAlt": "1640至1653年荷蘭人在臺財務收支表"
     },
     {
       "questionId": "261001105000005",
@@ -144,7 +143,7 @@
       "e": "西班牙以馬尼拉為根據地，並曾統治雞籠、淡水，因此應是菲律賓總督給西班牙國王。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000009",
@@ -180,7 +179,7 @@
       "e": "1626 年後，西班牙陸續占領雞籠、淡水與蛤仔難（今宜蘭）等地。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000010",
@@ -217,7 +216,7 @@
       "e": "臺灣位於東亞海域樞紐，因此成為國際貿易中繼站。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000011",
@@ -254,7 +253,7 @@
       "e": "今日雲林、嘉義一帶為顏思齊、鄭芝龍的大本營。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000012",
@@ -290,7 +289,7 @@
       "e": "顏思齊是 17 世紀前期著名海商。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000013",
@@ -327,7 +326,7 @@
       "e": "明朝遺臣在中國南方擁立宗室延續明朝政權，史稱南明。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000016",
@@ -364,7 +363,7 @@
       "e": "率先找到前往東方新航路並占領澳門作貿易據點的是葡萄牙。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000017",
@@ -401,7 +400,7 @@
       "e": "今日安平古堡即荷蘭人在臺南安平所建的熱蘭遮城，其歷史跨越多個統治時期。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000018",
@@ -439,7 +438,7 @@
       "e": "解析卷指出甲、乙皆指鄭成功相關情境，丙為荷蘭人；「國」是指明朝，因此 B 正確。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000019",
@@ -477,7 +476,7 @@
       "e": "由「以絕接濟臺灣之患」可判斷是清廷為防堵鄭氏反清勢力所實施的遷界、海禁措施。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000020",
@@ -514,7 +513,7 @@
       "e": "歐亞貿易由陸路轉向海路後，位於舊陸路貿易中心的土耳其地位減弱。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000021",
@@ -550,7 +549,7 @@
       "e": "《臺灣建省誌》屬清領後期建省相關資料，不屬大航海時期。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000024",
@@ -587,7 +586,7 @@
       "e": "由安平與金髮洋人意象，題目設定指向荷蘭人統治下的安平。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000025",
@@ -624,7 +623,7 @@
       "e": "中國海禁與日本鎖國使漢人與日本倭寇以臺灣為據點進行走私貿易。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     }
   ]
 }
