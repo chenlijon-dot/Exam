@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-02-school-kaimo-0924-kh",
+    "difficulty": "social-7-1-history-02-school-kaimo-0924-kh",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第2章｜各校題庫",
+    "title": "第2章 大航海時代各方勢力的競逐｜各校題庫",
+    "subtitle": "社會七上｜歷史｜高雄楷模書院｜第四份練習卷｜適康版、適翰版｜一段範圍複習｜本章 14 題",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-02",
+    "unit": "第2章 大航海時代各方勢力的競逐",
+    "difficultyLabel": "各校題庫",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適康版、適翰版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-02 的 14 題。解析卷為答案 authority。圖題使用原卷 cropped PNG，待 production WebP 推入 GitHub 後解除 imagePending。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+    "sourceType": "school-exam",
+    "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+    "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "261001113000001",
+      "revision": 1,
+      "number": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban",
+        "hist-7-1-2-european-eastward-expansion"
+      ],
+      "q": "圖為展示於澎湖天后宮的「臺澎第一碑」。請問：此碑應呈現了下列哪一項事件？",
+      "o": [
+        "西班牙東來亞洲尋求貿易",
+        "明軍將領逼退澎湖荷蘭人",
+        "荷蘭人攻打澳門葡萄牙人",
+        "葡萄牙強占澳門作根據地"
+      ],
+      "a": 1,
+      "e": "碑文與沈有容諭退紅毛番事件相關，呈現明軍將領逼退澎湖荷蘭人。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-kh-q1.webp",
+      "imageAlt": "澎湖天后宮臺澎第一碑照片",
+      "imagePending": true
+    },
+    {
+      "questionId": "261001113000006",
+      "revision": 1,
+      "number": 6,
+      "originalQuestionNumber": "6",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-regime"
+      ],
+      "q": "鄭氏三代繼荷蘭人之後經營臺灣，建立臺灣史上第一個漢人政權。請問：鄭氏三代(甲)鄭克塽；(乙)鄭成功；(丙)鄭經，若按照統治先後順序排列，下列何者正確？",
+      "o": [
+        "甲乙丙",
+        "丙甲乙",
+        "丙乙甲",
+        "乙丙甲"
+      ],
+      "a": 3,
+      "e": "鄭氏三代順序為鄭成功、鄭經、鄭克塽，即乙、丙、甲。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000008",
+      "revision": 1,
+      "number": 8,
+      "originalQuestionNumber": "8",
+      "sourcePage": 1,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants",
+        "hist-7-1-2-zheng-zhilong"
+      ],
+      "q": "16 世紀後期，明朝政府派兵進駐澎湖，使得原本以澎湖為基地的海商只能轉往臺灣活動。請問：最早來到今日雲林、嘉義一帶開墾，也是漢人來臺拓墾之始，是下列何人？",
+      "o": [
+        "顏思齊",
+        "鄭成功",
+        "沈有容",
+        "李旦"
+      ],
+      "a": 0,
+      "e": "顏思齊在17世紀前期招募漢人開墾雲林、嘉義一帶。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000010",
+      "revision": 1,
+      "number": 10,
+      "originalQuestionNumber": "10",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-koxinga-conquest",
+        "hist-7-1-2-zheng-regime"
+      ],
+      "q": "明朝滅亡後，不少明朝遺臣相繼在中國南方擁立宗室為王，成立政權與清廷對抗。請問：歷史上如何稱呼這段時期？",
+      "o": [
+        "南朝時期",
+        "鄭氏政權時期",
+        "南宋時期",
+        "南明時期"
+      ],
+      "a": 3,
+      "e": "這段延續明朝政權並與清廷對抗的時期稱為南明。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000012",
+      "revision": 1,
+      "number": 12,
+      "originalQuestionNumber": "12",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-trade",
+        "hist-7-1-2-east-asian-trade-network"
+      ],
+      "q": "附圖為一幅臺灣對外貿易圖，此時臺灣成為列強貿易的轉運站，被納入當時的國際貿易體系中。請問：這是下列哪一時期的臺灣貿易圖？",
+      "o": [
+        "西班牙時期",
+        "荷蘭統治時期",
+        "鄭氏政權時期",
+        "清帝國時期"
+      ],
+      "a": 1,
+      "e": "解析卷指出圖示為17世紀荷蘭統治臺灣時期的對外貿易。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-kh-q12.webp",
+      "imageAlt": "17世紀臺灣對外貿易圖",
+      "imagePending": true
+    },
+    {
+      "questionId": "261001113000013",
+      "revision": 1,
+      "number": 13,
+      "originalQuestionNumber": "13",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban"
+      ],
+      "q": "1371 年，明朝政府宣布：民船規模不得過大，不准攜帶物品到外國進行貿易，一旦違法，主謀者處斬，其餘者發邊充軍。試問：明朝政府施行這項政策的主要目的為何？",
+      "o": [
+        "打擊鄭氏政權的經濟，削弱鄭氏反清的力量",
+        "打擊倭寇，強化中國海防安全",
+        "拒絕與歐洲勢力進行貿易往來，打擊歐洲人殖民東亞的野心",
+        "打擊中國人偷渡到國外，以防中國人力銳減，影響國力"
+      ],
+      "a": 1,
+      "e": "明初海禁主要為防範倭寇並強化中國沿海防務。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000014",
+      "revision": 1,
+      "number": 14,
+      "originalQuestionNumber": "14",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-spanish-northern-taiwan"
+      ],
+      "q": "「西元 1626 年，12 艘歐洲某國的帆船，從呂宋島出發取道臺灣東岸北上，繞過三貂角後，在雞籠登陸，並且築城守禦；三年後，他們又占領淡水，也在此修築城堡，開始以這兩地為據點，向中國、日本等地貿易和傳教。」文中所描述的國家應該是下列何者？",
+      "o": [
+        "葡萄牙",
+        "西班牙",
+        "日本",
+        "荷蘭"
+      ],
+      "a": 1,
+      "e": "1626年占領雞籠、後又占領淡水的是西班牙。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000015",
+      "revision": 1,
+      "number": 15,
+      "originalQuestionNumber": "15",
+      "sourcePage": 2,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-land-development"
+      ],
+      "q": "鄭氏時期，臺灣土地的開發較荷、西在臺時有更進一步的發展，關於當時臺灣的土地開發，下列敘述何者最為正確？",
+      "o": [
+        "以臺灣西部為主，東部逐漸有零星的開發",
+        "以臺灣南部為主，但是經濟重心逐漸北移",
+        "以臺灣北部為主，經濟重心已轉移至北部",
+        "以臺灣南部為主，北部亦有零星的開發"
+      ],
+      "a": 3,
+      "e": "鄭氏土地開發以南部為主，北部亦有零星開發。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000016",
+      "revision": 1,
+      "number": 16,
+      "originalQuestionNumber": "16",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-trade"
+      ],
+      "q": "下列有關鄭氏政權在臺時期的貿易情形，下列何者正確？",
+      "o": [
+        "重視商貿活動，其目的在於改善臺灣物資不足",
+        "清帝國的海禁政策成功斷絕了臺灣與中國的貿易發展",
+        "輸往日本的貨物主要是軍用物資，輸入臺灣的主要是蔗糖、鹿皮",
+        "鄭氏政權與英國因交惡而互不往來"
+      ],
+      "a": 0,
+      "e": "鄭氏重視商貿活動，以改善臺灣物資不足；清廷海禁下仍有走私貿易，且與英國亦有往來。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000017",
+      "revision": 1,
+      "number": 17,
+      "originalQuestionNumber": "17",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-european-eastward-expansion",
+        "hist-7-1-2-dutch-trade"
+      ],
+      "q": "澎湖的天后宮有一石碑，碑文上面寫：「沈有容諭退紅毛番韋麻郎等」，這一段碑文見證了澎湖在臺灣開發史上的重要性，且與下列哪一敘述最有關係？",
+      "o": [
+        "日本人欲占領臺灣，作為前進南洋群島的跳板",
+        "荷蘭欲取得貿易地點，拓展與中國的貿易市場",
+        "西班牙人欲取得戰略要地，以掠奪葡萄牙船隻",
+        "臺灣平埔族欲抗拒荷蘭人統治，聯合漢人起義"
+      ],
+      "a": 1,
+      "e": "紅毛番指荷蘭人，當時荷蘭希望取得貿易據點拓展對中國貿易。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000019",
+      "revision": 1,
+      "number": 19,
+      "originalQuestionNumber": "19",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-koxinga-conquest",
+        "hist-7-1-2-fort-zeelandia",
+        "hist-7-1-2-zheng-regime"
+      ],
+      "q": "戲劇社正在排演一齣戲《1661 國姓來襲》，根據戲劇內容，請判斷下列敘述何者正確？\n場景一 甲：「父親，萬萬不可啊！自古只有父教子要盡忠報國，豈有教子貳心叛國的道理？」\n場景二 乙：「我欲平克臺灣，以為根本之地，安頓將領家眷，然後東征西討，無內顧之憂，並可生聚教訓也。」\n場景三 丙：「我方願意交出城堡，而你得讓我方所有人攜帶財物離開福爾摩沙。」",
+      "o": [
+        "甲是鄭經，乙是鄭成功，丙是荷蘭人",
+        "甲「盡忠報國」、「貳心叛國」的國是指明朝",
+        "丙離開後要返回公司的根據地馬尼拉",
+        "丙要交出的是在臺江內海外側的紅毛城"
+      ],
+      "a": 1,
+      "e": "正確敘述為B；甲、乙皆涉及鄭成功，丙為荷蘭人，荷蘭根據地為巴達維亞，交出的城堡為熱蘭遮城。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000021",
+      "revision": 1,
+      "number": 21,
+      "originalQuestionNumber": "21",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-koxinga-conquest",
+        "hist-7-1-2-historical-landscape"
+      ],
+      "q": "17 世紀中葉，鄭成功決定以臺灣作為反清復明的基地。當時鄭成功為了趕走荷蘭人而登陸臺灣本島時，所看到的海岸景觀應與下列何者最相似？",
+      "o": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "a": 0,
+      "e": "解析卷答案為A；此題需依原卷四個海岸景觀圖判讀。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging",
+      "optionImage": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-kh-q21.webp",
+      "optionImageAlt": "第21題四個海岸景觀選項圖",
+      "imagePending": true
+    },
+    {
+      "questionId": "261001113000022",
+      "revision": 1,
+      "number": 22,
+      "originalQuestionNumber": "22",
+      "sourcePage": 3,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban",
+        "hist-7-1-2-zheng-regime",
+        "hist-7-1-2-source-analysis"
+      ],
+      "q": "某段史料如下：「歲壬寅二月，忽有遷民之令……令濱海之民悉徙內地五十里，以絕接濟臺灣之患……民既盡遷，於是毀屋廬以作長城，掘墳塋而為深塹……民有闌出咫尺者，執而誅戮。」這段史料應是描述哪一時期的史事？",
+      "o": [
+        "清帝國領有臺灣後",
+        "荷蘭統治臺灣時期",
+        "顏思齊據有雲林、嘉義一帶時",
+        "鄭成功父子以臺灣為反清基地時"
+      ],
+      "a": 3,
+      "e": "這是清廷為防堵鄭氏反清勢力所實施的遷界與海禁措施。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261001113000025",
+      "revision": 1,
+      "number": 25,
+      "originalQuestionNumber": "25",
+      "sourcePage": 4,
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "第四份練習卷｜一段範圍複習｜適康版、適翰版",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": true,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-trade",
+        "hist-7-1-2-japan-sakoku-impact"
+      ],
+      "q": "台灣歷史當中，各方勢力在臺灣競爭發展的時期，荷蘭人曾經與來台灣貿易的日本商人有發生糾紛衝突，請問下列選項敘述，何者是荷蘭人與日本商人在台灣發生衝突的因素？\n(甲)日本商人長期在台貿易未曾繳稅、日本商人拒絕繳稅給荷蘭人\n(乙)荷蘭商人在日本貿易有繳稅、日本商人在臺灣貿易卻有免稅待遇\n(丙)荷蘭商人在日本貿易享有免稅待遇、日本商人在台貿易卻已經長期繳重稅給荷蘭人\n(丁)荷蘭商人在日本貿易享有免稅待遇。",
+      "o": [
+        "(甲)(乙)",
+        "(甲)(丁)",
+        "(丙)(丁)",
+        "(乙)(丁)"
+      ],
+      "a": 1,
+      "e": "甲、丁正確，因此答案為B。",
+      "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
+      "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
+      "lifecycle": "staging"
+    }
+  ]
+}
