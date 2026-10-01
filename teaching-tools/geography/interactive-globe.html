@@ -52,7 +52,7 @@ canvas:active{cursor:grabbing}
   <div class="top">
     <div>
       <h1>🌍 互動地球儀</h1>
-      <div class="sub">地理教學工具｜真實世界海岸線、經緯線、太陽直射、日夜分界與經度時間。資料使用 Natural Earth / world-atlas，不使用 Google Maps。</div>
+      <div class="sub">地理教學工具｜真實世界海岸線、經緯線、太陽直射、日夜分界與經度時間。資料使用 Natural Earth / world-atlas，不使用 Google Maps。此版已針對手機降低地圖解析度與重繪頻率。</div>
     </div>
     <a class="back" href="../../index.html" id="backExam">← 返回 Exam</a>
   </div>
@@ -123,7 +123,7 @@ canvas:active{cursor:grabbing}
     selectedLon:120,selectedLat:23.5,
     manualSunLon:null,fixed:false,fixedOffset:0,
     dragging:false,moved:false,startX:0,startY:0,startLon:120,startLat:18,
-    lastSliderTap:0, world:null, land:null, borders:null, d3:null
+    lastSliderTap:0, world:null, land:null, d3:null, graticule:null, equator:null, renderQueued:false
   };
   const rad=Math.PI/180,deg=180/Math.PI;
   const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -174,14 +174,23 @@ canvas:active{cursor:grabbing}
       .scale(R)
       .rotate([-state.centerLon,-state.centerLat,0])
       .clipAngle(90)
-      .precision(.45);
+      .precision(1.15);
   }
   function resize(){
-    const r=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);
+    const r=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1, innerWidth<700?1.15:1.5);
     const w=Math.max(300,Math.round(r.width*dpr)),h=w;
     if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}
     return {cssW:r.width,cssH:r.width,dpr};
   }
+  function requestRender(){
+    if(state.renderQueued) return;
+    state.renderQueued=true;
+    requestAnimationFrame(()=>{
+      state.renderQueued=false;
+      render();
+    });
+  }
+
   function render(){
     if(!state.d3) return;
     const {cssW,cssH,dpr}=resize();
@@ -194,18 +203,17 @@ canvas:active{cursor:grabbing}
       ctx.beginPath();path(state.land);ctx.fillStyle='#78b964';ctx.fill();
       ctx.beginPath();path(state.land);ctx.strokeStyle='rgba(41,81,45,.75)';ctx.lineWidth=.7;ctx.stroke();
     }
-    if(state.borders){
-      ctx.beginPath();path(state.borders);ctx.strokeStyle='rgba(235,245,238,.17)';ctx.lineWidth=.55;ctx.stroke();
-    }
-
-    const night=state.d3.geoCircle().center([normLon(sun.subLon+180),-sun.declination]).radius(90).precision(1)();
+    const night=state.d3.geoCircle().center([normLon(sun.subLon+180),-sun.declination]).radius(90).precision(3)();
     ctx.beginPath();path(night);ctx.fillStyle='rgba(2,8,18,.67)';ctx.fill();
     ctx.beginPath();path(night);ctx.strokeStyle='rgba(255,211,110,.82)';ctx.lineWidth=1.2;ctx.setLineDash([5,5]);ctx.stroke();ctx.setLineDash([]);
 
-    ctx.beginPath();path(state.d3.geoGraticule10());ctx.strokeStyle='rgba(220,237,251,.30)';ctx.lineWidth=.8;ctx.stroke();
+    if(state.graticule){
+      ctx.beginPath();path(state.graticule);ctx.strokeStyle='rgba(220,237,251,.28)';ctx.lineWidth=.75;ctx.stroke();
+    }
 
-    const eq={type:'LineString',coordinates:Array.from({length:181},(_,i)=>[-180+i*2,0])};
-    ctx.beginPath();path(eq);ctx.strokeStyle='rgba(255,255,255,.75)';ctx.lineWidth=1.35;ctx.stroke();
+    if(state.equator){
+      ctx.beginPath();path(state.equator);ctx.strokeStyle='rgba(255,255,255,.75)';ctx.lineWidth=1.3;ctx.stroke();
+    }
 
     if(state.d3.geoDistance([state.centerLon,state.centerLat],[sun.subLon,sun.declination])<Math.PI/2){
       const sp=p([sun.subLon,sun.declination]);
@@ -247,7 +255,7 @@ canvas:active{cursor:grabbing}
     if(Math.hypot(dx,dy)>5)state.moved=true;
     state.centerLon=normLon(state.startLon-dx*.32);
     if(!state.fixed)state.centerLat=clamp(state.startLat+dy*.25,-80,80);
-    render();
+    requestRender();
   });
   canvas.addEventListener('pointerup',e=>{
     const p0=canvasPos(e);
@@ -261,12 +269,12 @@ canvas:active{cursor:grabbing}
     state.dragging=false;render();
   });
   canvas.addEventListener('pointercancel',()=>state.dragging=false);
-  canvas.addEventListener('wheel',e=>{e.preventDefault();state.zoom=clamp(state.zoom*(e.deltaY>0?.95:1.05),.74,1.12);render()},{passive:false});
+  canvas.addEventListener('wheel',e=>{e.preventDefault();state.zoom=clamp(state.zoom*(e.deltaY>0?.95:1.05),.74,1.12);requestRender()},{passive:false});
 
   $('sunSlider').addEventListener('input',e=>{
     state.manualSunLon=sliderToLon(e.target.value);
     if(state.fixed)state.fixedOffset=normLon(state.manualSunLon-state.centerLon);
-    render();
+    requestRender();
   });
   $('sunSlider').addEventListener('dblclick',syncSliderToTaiwan);
   $('sunSlider').addEventListener('touchend',()=>{
@@ -284,19 +292,22 @@ canvas:active{cursor:grabbing}
 
   try{
     const [d3,topo,worldMod]=await Promise.all([
-      import('https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm'),
+      import('https://cdn.jsdelivr.net/npm/d3-geo@3/+esm'),
       import('https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/+esm'),
-      import('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json/+esm')
+      import('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-110m.json/+esm')
     ]);
     const world=worldMod.default||worldMod;
     state.d3=d3;state.world=world;
     state.land=topo.feature(world,world.objects.land);
-    state.borders=topo.mesh(world,world.objects.countries,(a,b)=>a!==b);
-    $('loading').textContent='Natural Earth 世界海岸線';
-    setTimeout(()=>$('loading').style.display='none',1800);
+    state.graticule=d3.geoGraticule10();
+    state.equator={type:'LineString',coordinates:Array.from({length:91},(_,i)=>[-180+i*4,0])};
+    $('loading').textContent='Natural Earth 輕量海岸線';
+    setTimeout(()=>$('loading').style.display='none',1200);
     render();
-    if('ResizeObserver'in window)new ResizeObserver(render).observe(canvas);
-    setInterval(()=>{if(!state.dragging&&state.manualSunLon==null&&!state.fixed)render()},1000);
+    if('ResizeObserver'in window)new ResizeObserver(requestRender).observe(canvas);
+    setInterval(()=>{
+      if(!state.dragging&&state.manualSunLon==null&&!state.fixed) requestRender();
+    },30000);
   }catch(err){
     $('loading').textContent='世界地圖載入失敗，請確認網路連線後重新整理';
     console.error(err);
