@@ -505,14 +505,18 @@
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backSocialCategoriesBtn">← 返回社會科</button>
       <div class="catalog-path">社會　›　${area.name}</div>
+      ${areaKey === 'geography' ? `
+        <h2 class="catalog-title">教學工具</h2>
+        <p class="catalog-sub">地理互動教材可直接操作經緯度、太陽照射、日夜分界與地方時間。</p>
+        <div class="catalog-grid" style="margin-bottom:26px">
+          <button class="catalog-card chapter-card" id="geographyTeachingToolsBtn">
+            <span class="top"><span class="icon">🌍</span><strong>地理教學工具</strong><span class="catalog-badge reference">可使用</span></span>
+            <span class="desc">互動地球儀｜真實海岸線｜觸控旋轉｜經緯線｜360° 太陽滑桿｜台灣時間同步｜太陽固定模式。</span>
+          </button>
+        </div>` : ''}
       <h2 class="catalog-title">請選擇學期</h2>
       <p class="catalog-sub">七年級上學期第一冊已依實體課本目錄建立；其他學期等待教材確認。</p>
       <div class="catalog-grid">
-        ${areaKey === 'geography' ? `
-          <button class="catalog-card chapter-card" id="geographyTeachingToolsBtn">
-            <span class="top"><span class="icon">🧭</span><strong>教學工具</strong><span class="catalog-badge reference">可使用</span></span>
-            <span class="desc">互動地球儀｜經緯線、真實海岸線、太陽直射、日夜分界與經度時間。</span>
-          </button>` : ''}
         ${SOCIAL_SEMESTERS.map(s => `
           <button class="catalog-card" data-social-semester="${s.key}" ${s.enabled ? '' : 'disabled'}>
             <span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.enabled ? 'reference' : 'soon'}">${s.enabled ? '第一冊已確認' : '待建'}</span></span>
