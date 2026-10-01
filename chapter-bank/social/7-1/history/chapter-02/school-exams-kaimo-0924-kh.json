@@ -20,8 +20,8 @@
     "analysisEligible": true,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "lifecycle": "staging",
-    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適康版、適翰版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-02 的 14 題。解析卷為答案 authority。圖題使用原卷 cropped PNG，待 production WebP 推入 GitHub 後解除 imagePending。"
+    "lifecycle": "active",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適康版、適翰版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-02 的 14 題。解析卷為答案 authority。Q1、Q12、Q21 使用原卷裁切 WebP 圖檔。"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -69,10 +69,9 @@
       "e": "碑文與沈有容諭退紅毛番事件相關，呈現明軍將領逼退澎湖荷蘭人。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-kh-q1.webp",
-      "imageAlt": "澎湖天后宮臺澎第一碑照片",
-      "imagePending": true
+      "imageAlt": "澎湖天后宮臺澎第一碑照片"
     },
     {
       "questionId": "261001113000006",
@@ -108,7 +107,7 @@
       "e": "鄭氏三代順序為鄭成功、鄭經、鄭克塽，即乙、丙、甲。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000008",
@@ -145,7 +144,7 @@
       "e": "顏思齊在17世紀前期招募漢人開墾雲林、嘉義一帶。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000010",
@@ -182,7 +181,7 @@
       "e": "這段延續明朝政權並與清廷對抗的時期稱為南明。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000012",
@@ -219,10 +218,9 @@
       "e": "解析卷指出圖示為17世紀荷蘭統治臺灣時期的對外貿易。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-kh-q12.webp",
-      "imageAlt": "17世紀臺灣對外貿易圖",
-      "imagePending": true
+      "imageAlt": "17世紀臺灣對外貿易圖"
     },
     {
       "questionId": "261001113000013",
@@ -258,7 +256,7 @@
       "e": "明初海禁主要為防範倭寇並強化中國沿海防務。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000014",
@@ -294,7 +292,7 @@
       "e": "1626年占領雞籠、後又占領淡水的是西班牙。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000015",
@@ -330,7 +328,7 @@
       "e": "鄭氏土地開發以南部為主，北部亦有零星開發。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000016",
@@ -366,7 +364,7 @@
       "e": "鄭氏重視商貿活動，以改善臺灣物資不足；清廷海禁下仍有走私貿易，且與英國亦有往來。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000017",
@@ -403,7 +401,7 @@
       "e": "紅毛番指荷蘭人，當時荷蘭希望取得貿易據點拓展對中國貿易。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000019",
@@ -441,7 +439,7 @@
       "e": "正確敘述為B；甲、乙皆涉及鄭成功，丙為荷蘭人，荷蘭根據地為巴達維亞，交出的城堡為熱蘭遮城。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000021",
@@ -478,10 +476,9 @@
       "e": "解析卷答案為A；此題需依原卷四個海岸景觀圖判讀。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
-      "optionImage": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-kh-q21.webp",
-      "optionImageAlt": "第21題四個海岸景觀選項圖",
-      "imagePending": true
+      "lifecycle": "active",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/kaimo-0924-kh-q21.webp",
+      "imageAlt": "第21題四個海岸景觀選項圖"
     },
     {
       "questionId": "261001113000022",
@@ -519,7 +516,7 @@
       "e": "這是清廷為防堵鄭氏反清勢力所實施的遷界與海禁措施。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001113000025",
@@ -556,7 +553,7 @@
       "e": "甲、丁正確，因此答案為B。",
       "sourceFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適康版 適翰版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     }
   ]
 }
