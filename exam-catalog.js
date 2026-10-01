@@ -508,6 +508,11 @@
       <h2 class="catalog-title">請選擇學期</h2>
       <p class="catalog-sub">七年級上學期第一冊已依實體課本目錄建立；其他學期等待教材確認。</p>
       <div class="catalog-grid">
+        ${areaKey === 'geography' ? `
+          <button class="catalog-card chapter-card" id="geographyTeachingToolsBtn">
+            <span class="top"><span class="icon">🧭</span><strong>教學工具</strong><span class="catalog-badge reference">可使用</span></span>
+            <span class="desc">互動地球儀｜經緯線、真實海岸線、太陽直射、日夜分界與經度時間。</span>
+          </button>` : ''}
         ${SOCIAL_SEMESTERS.map(s => `
           <button class="catalog-card" data-social-semester="${s.key}" ${s.enabled ? '' : 'disabled'}>
             <span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.enabled ? 'reference' : 'soon'}">${s.enabled ? '第一冊已確認' : '待建'}</span></span>
@@ -515,7 +520,28 @@
           </button>`).join('')}
       </div>`;
     $('#backSocialCategoriesBtn')?.addEventListener('click', showSocialCategories);
+    $('#geographyTeachingToolsBtn')?.addEventListener('click', showGeographyTeachingTools);
     $('[data-social-semester="7-1"]')?.addEventListener('click', () => showSocial71Chapters(areaKey));
+  }
+
+  function showGeographyTeachingTools() {
+    setHeader('社會科｜地理', '教學工具');
+    document.title = '地理教學工具｜國中題庫';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backGeographyToolsBtn">← 返回地理</button>
+      <div class="catalog-path">社會　›　地理　›　教學工具</div>
+      <h2 class="catalog-title">地理教學工具</h2>
+      <p class="catalog-sub">用互動模型直接操作經緯度、太陽照射與地方時間，搭配第1章〈認識位置與地圖〉與第2章〈世界中的臺灣〉。</p>
+      <div class="catalog-grid">
+        <button class="catalog-card chapter-card" id="interactiveGlobeToolBtn">
+          <span class="top"><span class="icon">🌍</span><strong>互動地球儀</strong><span class="catalog-badge reference">開啟工具</span></span>
+          <span class="desc">真實世界海岸線｜觸控旋轉｜經緯線｜太陽 360° 滑桿｜台灣時間同步｜太陽固定模式｜日夜分界。</span>
+        </button>
+      </div>`;
+    $('#backGeographyToolsBtn')?.addEventListener('click', () => showSocialSemesters('geography'));
+    $('#interactiveGlobeToolBtn')?.addEventListener('click', () => {
+      window.location.href = 'teaching-tools/geography/interactive-globe.html';
+    });
   }
 
   function showSocial71Chapters(areaKey) {
