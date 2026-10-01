@@ -20,8 +20,8 @@
     "analysisEligible": true,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "lifecycle": "staging",
-    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適南版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-01 的 9 題。解析卷為答案 authority。圖題使用原卷 cropped PNG，待 production WebP 推入 GitHub 後解除 imagePending。"
+    "lifecycle": "active",
+    "sourceNote": "高雄楷模書院第四份練習卷－七上歷史「一段範圍複習」適南版。原卷共25題，依考點逐題跨章分流；本 sidecar 收錄 chapter-01 的 9 題。解析卷為答案 authority。Q2、Q14、Q23 使用原卷裁切 WebP 圖檔。"
   },
   "source": {
     "school": "高雄楷模書院",
@@ -69,10 +69,9 @@
       "e": "器具出現鐵斧，表示已進入金屬器時代，故為十三行文化。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-q2.webp",
-      "imageAlt": "史前文化遺址特徵表：臺灣北部、漁獵農耕、陶罐鐵斧",
-      "imagePending": true
+      "imageAlt": "史前文化遺址特徵表：臺灣北部、漁獵農耕、陶罐鐵斧"
     },
     {
       "questionId": "261001105000003",
@@ -109,7 +108,7 @@
       "e": "由貝塚等特徵可判斷為圓山文化。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000006",
@@ -148,7 +147,7 @@
       "e": "依解析卷，甲為圓山文化、丙為卑南文化、乙為十三行文化，順序為甲、丙、乙。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000007",
@@ -185,7 +184,7 @@
       "e": "圓山文化為新石器時代文化，冶製鐵器屬金屬器時代。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000008",
@@ -221,7 +220,7 @@
       "e": "卑南文化位於臺東，其餘選項所列文化皆與臺北地區有關。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000014",
@@ -257,10 +256,9 @@
       "e": "農業出現是新石器革命的重要變化；採集與打製石器屬舊石器時代，鐵製農具屬金屬器時代。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-q14.webp",
-      "imageAlt": "歷史課上課情形示意圖",
-      "imagePending": true
+      "imageAlt": "歷史課上課情形示意圖"
     },
     {
       "questionId": "261001105000015",
@@ -297,7 +295,7 @@
       "e": "題幹直接提到石生、石樹合生等祖先起源傳說，可判斷泰雅族有巨石傳說傳統。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000022",
@@ -334,7 +332,7 @@
       "e": "使用鐵製器具是金屬器時代才有的特徵。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging"
+      "lifecycle": "active"
     },
     {
       "questionId": "261001105000023",
@@ -370,10 +368,9 @@
       "e": "解析卷指出甲為大坌坑文化遺物、丁為圓山文化遺物、戊為卑南文化遺物，皆屬新石器時代。",
       "sourceFile": "0924-七上歷史-適南版-一段範圍複習 題目卷.pdf",
       "answerFile": "0924-七上歷史-適南版-一段範圍複習 解析卷.pdf",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/kaimo-0924-q23.webp",
-      "imageAlt": "臺灣史前文化博物館文物甲乙丙丁戊附圖",
-      "imagePending": true
+      "imageAlt": "臺灣史前文化博物館文物甲乙丙丁戊附圖"
     }
   ]
 }
