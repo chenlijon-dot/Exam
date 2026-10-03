@@ -39,3 +39,27 @@ export function chooseTickStep(pixelsPerCm) {
   if (p >= 5) return 1;
   return 5;
 }
+
+
+export function computeTwoWorldMeasurement(pixelDistance, mapPixelsPerCm, rulerPixelsPerCm) {
+  const px = Math.abs(Number(pixelDistance) || 0);
+  const mapPpcm = Math.max(0.000001, Math.abs(Number(mapPixelsPerCm) || 0));
+  const rulerPpcm = Math.max(0.000001, Math.abs(Number(rulerPixelsPerCm) || 0));
+  const mapCm = px / mapPpcm;
+  const rulerCm = px / rulerPpcm;
+  const scaleFactor = mapPpcm / rulerPpcm;
+  return { pixelDistance: px, mapCm, rulerCm, scaleFactor };
+}
+
+export function chooseAdaptiveTickStep(pixelsPerCm) {
+  const p = Math.max(0.000001, Math.abs(Number(pixelsPerCm) || 0));
+  const raw = Math.max(0.01, 30 / p);
+  const power = 10 ** Math.floor(Math.log10(raw));
+  const normalized = raw / power;
+  let nice;
+  if (normalized <= 1) nice = 1;
+  else if (normalized <= 2) nice = 2;
+  else if (normalized <= 5) nice = 5;
+  else nice = 10;
+  return nice * power;
+}
