@@ -49,7 +49,7 @@ canvas:active{cursor:grabbing}
   <div class="top">
     <div>
       <h1>📏 比例尺教學</h1>
-      <div class="sub">把「尺上量到的長度 × 倍率 = 實際長度」直接拉給你看。尺可以無限左右移動、雙指縮放；在尺上點 A、B 兩點即可量測。</div>
+      <div class="sub">先在上方放置 A、B 兩個地圖點，再用下方可縮放的尺去量兩點距離；最後用「尺上讀值 × 倍率」換算實際長度。</div>
     </div>
     <a class="back" href="../../index.html" id="backExam">← 返回 Exam</a>
   </div>
@@ -82,18 +82,18 @@ canvas:active{cursor:grabbing}
 
       <div class="canvas-wrap">
         <canvas id="ruler" width="900" height="430" aria-label="可縮放無限長尺"></canvas>
-        <div class="canvas-hint">單指左右拖曳尺 · 雙指縮放 · 輕點尺面依序設定 A、B · 電腦可用滾輪縮放</div>
+        <div class="canvas-hint">拖 A、B 改變地圖點距離 · 拖尺可平移 · 雙指 / 滾輪縮放尺的刻度</div>
       </div>
     </section>
 
     <aside class="panel">
       <div class="card">
         <div class="label">量測點</div>
-        <div class="row"><span class="aText">A 點</span><span class="mid aText" id="pointA">尚未設定</span></div>
-        <div class="row"><span class="bText">B 點</span><span class="mid bText" id="pointB">尚未設定</span></div>
+        <div class="row"><span class="aText">A 點</span><span class="mid aText" id="pointA">地圖位置</span></div>
+        <div class="row"><span class="bText">B 點</span><span class="mid bText" id="pointB">地圖位置</span></div>
         <div class="actions" style="margin-top:12px">
           <button id="clearBtn" type="button">清除量測</button>
-          <button id="exampleBtn" type="button">放入範例 2–7 cm</button>
+          <button id="exampleBtn" type="button">重設 A / B</button>
         </div>
       </div>
 
@@ -107,7 +107,7 @@ canvas:active{cursor:grabbing}
       <div class="card wide">
         <div class="label">計算方式</div>
         <div class="formula" id="formulaText">請先在尺上設定 A、B 兩點。</div>
-        <div class="note" style="margin-top:10px">這個工具採「倍率」教學：例如尺上量到 5 cm、倍率 ×1000，實際長度就是 5000 cm，也就是 50 m。縮放畫面只改變尺看起來的大小，不會改變 A、B 的真實尺上位置。</div>
+        <div class="note" style="margin-top:10px">A、B 是地圖上的兩個位置，和尺的座標彼此獨立。改變尺的縮放後，同一段 A–B 畫面距離會得到不同的尺上讀值；再用倍率換算成實際長度。</div>
       </div>
     </aside>
   </div>
@@ -127,14 +127,14 @@ const $ = id => document.getElementById(id);
 const canvas = $('ruler');
 const ctx = canvas.getContext('2d');
 const state = {
-  centerCm: 0,
-  pixelsPerCm: 42,
+  rulerOriginX: 0,
+  pixelsPerCm: 80,
   scale: 1,
-  a: null,
-  b: null,
+  aX: null,
+  bX: null,
   pointers: new Map(),
   gesture: null,
-  activeMarker: null,
+  dragMode: null,
   tapStart: null,
   raf: 0
 };
@@ -159,35 +159,41 @@ function resizeCanvas() {
     canvas.width = w;
     canvas.height = h;
   }
+  if (state.aX == null || state.bX == null) {
+    state.aX = rect.width * 0.28;
+    state.bX = rect.width * 0.72;
+    state.rulerOriginX = rect.width * 0.12;
+  }
   return { w: rect.width, h: rect.height, dpr };
 }
 
-function xToCm(x, width) {
-  return state.centerCm + (x - width / 2) / state.pixelsPerCm;
-}
-function cmToX(cm, width) {
-  return width / 2 + (cm - state.centerCm) * state.pixelsPerCm;
+function rulerCmAtX(x) {
+  return (x - state.rulerOriginX) / state.pixelsPerCm;
 }
 
-function drawMarker(cm, label, color, width, topY, bottomY) {
-  if (cm == null) return;
-  const x = cmToX(cm, width);
-  if (x < -30 || x > width + 30) return;
+function measuredCm() {
+  if (state.aX == null || state.bX == null) return null;
+  return Math.abs(state.bX - state.aX) / state.pixelsPerCm;
+}
+
+function drawPoint(x, label, color, pointY, rulerTop) {
   ctx.strokeStyle = color;
-  ctx.lineWidth = 3;
+  ctx.lineWidth = 2.5;
+  ctx.setLineDash([6,5]);
   ctx.beginPath();
-  ctx.moveTo(x, topY);
-  ctx.lineTo(x, bottomY);
+  ctx.moveTo(x, pointY + 13);
+  ctx.lineTo(x, rulerTop - 5);
   ctx.stroke();
+  ctx.setLineDash([]);
   ctx.fillStyle = color;
   ctx.beginPath();
-  ctx.arc(x, topY, 9, 0, Math.PI * 2);
+  ctx.arc(x, pointY, 15, 0, Math.PI * 2);
   ctx.fill();
   ctx.fillStyle = '#07111e';
-  ctx.font = '800 12px system-ui';
+  ctx.font = '900 15px system-ui';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText(label, x, topY);
+  ctx.fillText(label, x, pointY);
 }
 
 function draw() {
@@ -198,83 +204,59 @@ function draw() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
   ctx.scale(size.dpr,size.dpr);
 
-  const rulerTop = Math.round(height * 0.42);
-  const rulerBottom = Math.round(height * 0.72);
+  const pointY = Math.round(height * 0.23);
+  const rulerTop = Math.round(height * 0.48);
+  const rulerBottom = Math.round(height * 0.78);
   const baseline = rulerBottom - 22;
+
+  // Map-space A/B points: independent from the ruler coordinate system.
+  ctx.strokeStyle = 'rgba(255,211,110,.85)';
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(state.aX,pointY);
+  ctx.lineTo(state.bX,pointY);
+  ctx.stroke();
+  const mcm=measuredCm();
+  ctx.fillStyle='#ffeab2';
+  ctx.font='800 16px system-ui';
+  ctx.textAlign='center'; ctx.textBaseline='bottom';
+  ctx.fillText(mcm==null?'—':niceNumber(mcm,3)+' cm（尺上讀值）',(state.aX+state.bX)/2,pointY-24);
+  drawPoint(state.aX,'A','#72ddff',pointY,rulerTop);
+  drawPoint(state.bX,'B','#ff9f7a',pointY,rulerTop);
+
+  // Independent movable / zoomable ruler.
   const grad = ctx.createLinearGradient(0,rulerTop,0,rulerBottom);
   grad.addColorStop(0,'#f3e8c8');
   grad.addColorStop(1,'#cbbd92');
   ctx.fillStyle = grad;
   ctx.fillRect(0,rulerTop,width,rulerBottom-rulerTop);
   ctx.fillStyle = '#b49f6d';
-  ctx.fillRect(0,rulerTop, width, 4);
-  ctx.fillRect(0,rulerBottom-4, width, 4);
+  ctx.fillRect(0,rulerTop,width,4);
+  ctx.fillRect(0,rulerBottom-4,width,4);
 
-  const step = chooseTickStep(state.pixelsPerCm);
-  const majorEvery = step < 1 ? 1 : step * 5;
-  const leftCm = xToCm(0,width);
-  const rightCm = xToCm(width,width);
-  const first = Math.floor(leftCm / step) * step;
-
-  ctx.strokeStyle = '#263238';
-  ctx.fillStyle = '#17212a';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'top';
-
-  for (let cm = first, guard = 0; cm <= rightCm + step && guard < 5000; cm += step, guard++) {
-    const rounded = Math.round(cm / step) * step;
-    const x = cmToX(rounded,width);
-    const mod = Math.abs(rounded / majorEvery - Math.round(rounded / majorEvery));
-    const isMajor = mod < 0.00001;
-    const isWhole = Math.abs(rounded - Math.round(rounded)) < 0.00001;
-    const tick = isMajor ? 54 : (isWhole ? 38 : 24);
-    ctx.lineWidth = isMajor ? 2 : 1;
-    ctx.beginPath();
-    ctx.moveTo(x,baseline);
-    ctx.lineTo(x,baseline-tick);
-    ctx.stroke();
-    if (isMajor) {
-      ctx.font = '700 13px system-ui';
-      ctx.fillText(niceNumber(rounded,2) + ' cm',x,baseline+6);
-    }
+  const step=chooseTickStep(state.pixelsPerCm);
+  const majorEvery=step<1?1:step*5;
+  const leftCm=rulerCmAtX(0), rightCm=rulerCmAtX(width);
+  const first=Math.floor(leftCm/step)*step;
+  ctx.strokeStyle='#263238'; ctx.fillStyle='#17212a';
+  ctx.textAlign='center'; ctx.textBaseline='top';
+  for(let cm=first,guard=0;cm<=rightCm+step&&guard<5000;cm+=step,guard++){
+    const rounded=Math.round(cm/step)*step;
+    const x=state.rulerOriginX+rounded*state.pixelsPerCm;
+    const isMajor=Math.abs(rounded/majorEvery-Math.round(rounded/majorEvery))<.00001;
+    const isWhole=Math.abs(rounded-Math.round(rounded))<.00001;
+    const tick=isMajor?54:(isWhole?38:24);
+    ctx.lineWidth=isMajor?2:1;
+    ctx.beginPath();ctx.moveTo(x,baseline);ctx.lineTo(x,baseline-tick);ctx.stroke();
+    if(isMajor){ctx.font='700 13px system-ui';ctx.fillText(niceNumber(rounded,2)+' cm',x,baseline+6);}
   }
+  ctx.strokeStyle='rgba(20,30,38,.35)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(0,baseline);ctx.lineTo(width,baseline);ctx.stroke();
 
-  ctx.strokeStyle = 'rgba(20,30,38,.35)';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(0,baseline);
-  ctx.lineTo(width,baseline);
-  ctx.stroke();
-
-  if (state.a != null && state.b != null) {
-    const xa = cmToX(state.a,width);
-    const xb = cmToX(state.b,width);
-    const y = rulerTop - 34;
-    ctx.strokeStyle = '#ffd36e';
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.moveTo(xa,y);
-    ctx.lineTo(xb,y);
-    ctx.stroke();
-    ctx.fillStyle = '#ffd36e';
-    ctx.beginPath();ctx.arc(xa,y,5,0,Math.PI*2);ctx.fill();
-    ctx.beginPath();ctx.arc(xb,y,5,0,Math.PI*2);ctx.fill();
-    const m = computeMeasurement(state.a,state.b,state.scale);
-    ctx.fillStyle = '#ffeab2';
-    ctx.font = '800 14px system-ui';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'bottom';
-    ctx.fillText(niceNumber(m.measuredCm,3) + ' cm', (xa+xb)/2, y-7);
-  }
-
-  drawMarker(state.a,'A','#72ddff',width,rulerTop+16,rulerBottom-10);
-  drawMarker(state.b,'B','#ff9f7a',width,rulerTop+16,rulerBottom-10);
-
-  ctx.fillStyle = 'rgba(238,246,255,.82)';
-  ctx.font = '700 13px system-ui';
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'top';
-  ctx.fillText('目前視覺縮放：' + niceNumber(state.pixelsPerCm,1) + ' px / cm',14,14);
+  ctx.fillStyle='rgba(238,246,255,.82)';
+  ctx.font='700 13px system-ui';ctx.textAlign='left';ctx.textBaseline='top';
+  ctx.fillText('尺的縮放：'+niceNumber(state.pixelsPerCm,1)+' px / cm',14,14);
+  ctx.fillText('A、B 是地圖點；尺可獨立拖動與縮放',14,34);
 
   updateReadout();
 }
@@ -286,20 +268,21 @@ function updateScaleControls() {
 }
 
 function updateReadout() {
-  $('pointA').textContent = state.a == null ? '尚未設定' : niceNumber(state.a,3) + ' cm';
-  $('pointB').textContent = state.b == null ? '尚未設定' : niceNumber(state.b,3) + ' cm';
-  if (state.a == null || state.b == null) {
-    $('measuredText').textContent = '—';
-    $('actualText').textContent = '—';
-    $('formulaText').textContent = '請先在尺上設定 A、B 兩點。';
+  $('pointA').textContent = '地圖點';
+  $('pointB').textContent = '地圖點';
+  const cm=measuredCm();
+  if (cm == null) {
+    $('measuredText').textContent='—';
+    $('actualText').textContent='—';
+    $('formulaText').textContent='請設定 A、B 兩個地圖點。';
     return;
   }
-  const m = computeMeasurement(state.a,state.b,state.scale);
-  $('measuredText').textContent = niceNumber(m.measuredCm,3) + ' cm';
-  $('actualText').textContent = formatLength(m.actualCm);
-  $('formulaText').textContent =
-    niceNumber(m.measuredCm,3) + ' cm × ' + niceNumber(state.scale,4) +
-    ' = ' + niceNumber(m.actualCm,3) + ' cm = ' + formatLength(m.actualCm);
+  const actualCm=cm*state.scale;
+  $('measuredText').textContent=niceNumber(cm,3)+' cm';
+  $('actualText').textContent=formatLength(actualCm);
+  $('formulaText').textContent=
+    niceNumber(cm,3)+' cm × '+niceNumber(state.scale,4)+
+    ' = '+niceNumber(actualCm,3)+' cm = '+formatLength(actualCm);
 }
 
 function setScale(value) {
@@ -309,116 +292,82 @@ function setScale(value) {
 }
 
 function pointerPosition(e) {
-  const rect = canvas.getBoundingClientRect();
-  return { x:e.clientX-rect.left, y:e.clientY-rect.top };
+  const rect=canvas.getBoundingClientRect();
+  return {x:e.clientX-rect.left,y:e.clientY-rect.top};
 }
 
-function nearestMarker(x,width) {
-  const candidates = [];
-  if (state.a != null) candidates.push({name:'a',d:Math.abs(cmToX(state.a,width)-x)});
-  if (state.b != null) candidates.push({name:'b',d:Math.abs(cmToX(state.b,width)-x)});
-  candidates.sort((m,n)=>m.d-n.d);
-  return candidates.length && candidates[0].d < 20 ? candidates[0].name : null;
+function markerAt(x,y,height) {
+  const pointY=Math.round(height*.23);
+  if(Math.hypot(x-state.aX,y-pointY)<28)return 'a';
+  if(Math.hypot(x-state.bX,y-pointY)<28)return 'b';
+  return null;
 }
 
-canvas.addEventListener('pointerdown', e => {
+canvas.addEventListener('pointerdown',e=>{
   canvas.setPointerCapture(e.pointerId);
-  const p = pointerPosition(e);
+  const p=pointerPosition(e),rect=canvas.getBoundingClientRect();
   state.pointers.set(e.pointerId,p);
-  const rect = canvas.getBoundingClientRect();
-
-  if (state.pointers.size === 1) {
-    state.activeMarker = nearestMarker(p.x,rect.width);
-    state.tapStart = {x:p.x,y:p.y,time:Date.now(),center:state.centerCm,moved:false,marker:state.activeMarker};
-  } else if (state.pointers.size === 2) {
-    const pts = Array.from(state.pointers.values());
-    const midX = (pts[0].x+pts[1].x)/2;
-    const dist = Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y);
-    state.gesture = {
-      dist,
-      pixelsPerCm:state.pixelsPerCm,
-      anchorCm:xToCm(midX,rect.width),
-      midX
-    };
-    state.tapStart = null;
-    state.activeMarker = null;
+  if(state.pointers.size===1){
+    const marker=markerAt(p.x,p.y,rect.height);
+    state.dragMode=marker||'ruler';
+    state.tapStart={x:p.x,y:p.y,aX:state.aX,bX:state.bX,origin:state.rulerOriginX};
+  } else if(state.pointers.size===2){
+    const pts=Array.from(state.pointers.values());
+    const midX=(pts[0].x+pts[1].x)/2;
+    const dist=Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y);
+    state.gesture={dist,pixelsPerCm:state.pixelsPerCm,anchorCm:rulerCmAtX(midX),midX};
+    state.dragMode='pinch';
   }
 });
 
-canvas.addEventListener('pointermove', e => {
-  if (!state.pointers.has(e.pointerId)) return;
-  const p = pointerPosition(e);
+canvas.addEventListener('pointermove',e=>{
+  if(!state.pointers.has(e.pointerId))return;
+  const p=pointerPosition(e),rect=canvas.getBoundingClientRect();
   state.pointers.set(e.pointerId,p);
-  const rect = canvas.getBoundingClientRect();
-
-  if (state.pointers.size >= 2) {
-    const pts = Array.from(state.pointers.values()).slice(0,2);
-    const midX = (pts[0].x+pts[1].x)/2;
-    const dist = Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y);
-    if (!state.gesture) return;
-    state.pixelsPerCm = clamp(state.gesture.pixelsPerCm * dist / Math.max(20,state.gesture.dist),2,260);
-    state.centerCm = state.gesture.anchorCm - (midX-rect.width/2)/state.pixelsPerCm;
-    requestDraw();
-    return;
-  }
-
-  if (!state.tapStart) return;
-  const dx = p.x-state.tapStart.x,dy=p.y-state.tapStart.y;
-  if (Math.hypot(dx,dy) > 5) state.tapStart.moved = true;
-
-  if (state.activeMarker) {
-    state[state.activeMarker] = xToCm(p.x,rect.width);
-  } else {
-    state.centerCm = state.tapStart.center - dx/state.pixelsPerCm;
+  if(state.pointers.size>=2&&state.gesture){
+    const pts=Array.from(state.pointers.values()).slice(0,2);
+    const midX=(pts[0].x+pts[1].x)/2;
+    const dist=Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y);
+    state.pixelsPerCm=clamp(state.gesture.pixelsPerCm*dist/Math.max(20,state.gesture.dist),4,320);
+    state.rulerOriginX=midX-state.gesture.anchorCm*state.pixelsPerCm;
+  } else if(state.tapStart){
+    const dx=p.x-state.tapStart.x;
+    if(state.dragMode==='a') state.aX=clamp(state.tapStart.aX+dx,18,rect.width-18);
+    else if(state.dragMode==='b') state.bX=clamp(state.tapStart.bX+dx,18,rect.width-18);
+    else if(state.dragMode==='ruler') state.rulerOriginX=state.tapStart.origin+dx;
   }
   requestDraw();
 });
 
-canvas.addEventListener('pointerup', e => {
-  const p = pointerPosition(e);
-  const rect = canvas.getBoundingClientRect();
-  const tap = state.tapStart && !state.tapStart.moved && !state.tapStart.marker && Date.now()-state.tapStart.time < 450;
-
+function endPointer(e){
   state.pointers.delete(e.pointerId);
-  if (state.pointers.size < 2) state.gesture = null;
-
-  if (tap) {
-    const cm = xToCm(p.x,rect.width);
-    if (state.a == null) state.a = cm;
-    else if (state.b == null) state.b = cm;
-    else { state.a = cm; state.b = null; }
-  }
-
-  if (state.pointers.size === 0) {
-    state.tapStart = null;
-    state.activeMarker = null;
-  }
+  if(state.pointers.size<2)state.gesture=null;
+  if(state.pointers.size===0){state.tapStart=null;state.dragMode=null;}
   requestDraw();
-});
-canvas.addEventListener('pointercancel', e => {
-  state.pointers.delete(e.pointerId);
-  if (state.pointers.size === 0) {
-    state.tapStart = null;
-    state.activeMarker = null;
-    state.gesture = null;
-  }
-});
+}
+canvas.addEventListener('pointerup',endPointer);
+canvas.addEventListener('pointercancel',endPointer);
 
-canvas.addEventListener('wheel', e => {
+canvas.addEventListener('wheel',e=>{
   e.preventDefault();
-  const rect = canvas.getBoundingClientRect();
-  const p = pointerPosition(e);
-  const anchor = xToCm(p.x,rect.width);
-  state.pixelsPerCm = clamp(state.pixelsPerCm * (e.deltaY > 0 ? 0.9 : 1.1),2,260);
-  state.centerCm = anchor - (p.x-rect.width/2)/state.pixelsPerCm;
+  const rect=canvas.getBoundingClientRect(),p=pointerPosition(e);
+  const anchor=rulerCmAtX(p.x);
+  state.pixelsPerCm=clamp(state.pixelsPerCm*(e.deltaY>0?.9:1.1),4,320);
+  state.rulerOriginX=p.x-anchor*state.pixelsPerCm;
   requestDraw();
 },{passive:false});
 
 $('scaleSlider').addEventListener('input', e => setScale(sliderToScale(Number(e.target.value)/1000)));
 $('scaleInput').addEventListener('change', e => setScale(e.target.value));
 document.querySelectorAll('[data-scale]').forEach(btn => btn.addEventListener('click',()=>setScale(btn.dataset.scale)));
-$('clearBtn').addEventListener('click',()=>{state.a=null;state.b=null;requestDraw();});
-$('exampleBtn').addEventListener('click',()=>{state.a=2;state.b=7;state.centerCm=4.5;state.pixelsPerCm=42;requestDraw();});
+$('clearBtn').addEventListener('click',()=>{
+  const w=canvas.getBoundingClientRect().width;
+  state.aX=w*.35; state.bX=w*.65; requestDraw();
+});
+$('exampleBtn').addEventListener('click',()=>{
+  const w=canvas.getBoundingClientRect().width;
+  state.aX=w*.28; state.bX=w*.72; state.rulerOriginX=w*.12; state.pixelsPerCm=80; requestDraw();
+});
 $('backExam').addEventListener('click',e=>{if(history.length>1){e.preventDefault();history.back();}});
 
 setScale(1);
