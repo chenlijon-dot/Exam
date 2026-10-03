@@ -541,10 +541,17 @@
           <span class="top"><span class="icon">🌍</span><strong>互動地球儀</strong><span class="catalog-badge reference">開啟工具</span></span>
           <span class="desc">真實世界海岸線｜觸控旋轉｜經緯線｜太陽 360° 滑桿｜台灣時間同步｜太陽固定模式｜日夜分界。</span>
         </button>
+        <button class="catalog-card chapter-card" id="scaleRulerToolBtn">
+          <span class="top"><span class="icon">📏</span><strong>比例尺教學</strong><span class="catalog-badge reference">開啟工具</span></span>
+          <span class="desc">無限長尺｜手指拖曳與雙指縮放｜A/B 兩點量測｜倍率 0.01～10000｜實際長度自動換算。</span>
+        </button>
       </div>`;
     $('#backGeographyToolsBtn')?.addEventListener('click', () => showSocialSemesters('geography'));
     $('#interactiveGlobeToolBtn')?.addEventListener('click', () => {
       window.location.href = 'teaching-tools/geography/interactive-globe.html';
+    });
+    $('#scaleRulerToolBtn')?.addEventListener('click', () => {
+      window.location.href = 'teaching-tools/geography/scale-ruler.html';
     });
   }
 
