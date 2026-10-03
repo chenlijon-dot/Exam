@@ -5,7 +5,9 @@ import {
   scaleToSlider,
   computeMeasurement,
   formatLength,
-  chooseTickStep
+  chooseTickStep,
+  computeTwoWorldMeasurement,
+  chooseAdaptiveTickStep
 } from './scale-ruler-core.mjs';
 
 function approx(actual, expected, eps = 1e-9) {
@@ -46,3 +48,28 @@ assert.equal(chooseTickStep(10), 1);
 assert.equal(chooseTickStep(2), 5);
 
 console.log('scale-ruler-core tests passed');
+
+
+assert.deepEqual(
+  computeTwoWorldMeasurement(120, 60, 30),
+  { pixelDistance: 120, mapCm: 2, rulerCm: 4, scaleFactor: 2 }
+);
+assert.deepEqual(
+  computeTwoWorldMeasurement(120, 60, 15),
+  { pixelDistance: 120, mapCm: 2, rulerCm: 8, scaleFactor: 4 }
+);
+assert.deepEqual(
+  computeTwoWorldMeasurement(120, 60, 240),
+  { pixelDistance: 120, mapCm: 2, rulerCm: 0.5, scaleFactor: 0.25 }
+);
+assert.deepEqual(
+  computeTwoWorldMeasurement(60, 60, 12),
+  { pixelDistance: 60, mapCm: 1, rulerCm: 5, scaleFactor: 5 }
+);
+
+assert.equal(chooseAdaptiveTickStep(6000), 0.01);
+assert.equal(chooseAdaptiveTickStep(60), 0.5);
+assert.equal(chooseAdaptiveTickStep(6), 5);
+assert.equal(chooseAdaptiveTickStep(0.006), 5000);
+
+console.log('two-world model tests passed');
