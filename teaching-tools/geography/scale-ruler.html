@@ -49,7 +49,7 @@ canvas:active{cursor:grabbing}
   <div class="top">
     <div>
       <h1>📏 比例尺教學</h1>
-      <div class="sub">先在上方放置 A、B 兩個地圖點，再用下方可縮放的尺去量兩點距離；最後用「尺上讀值 × 倍率」換算實際長度。</div>
+      <div class="sub">A、B 是「圖上的兩點」；尺是另一個世界。A、B 的圖上距離不變，但縮放尺後，同一段距離可以讀成 0.5 cm、2 cm、4 cm、8 cm……這就是比例尺。</div>
     </div>
     <a class="back" href="../../index.html" id="backExam">← 返回 Exam</a>
   </div>
@@ -59,8 +59,8 @@ canvas:active{cursor:grabbing}
       <div class="scale-box">
         <div class="scale-head">
           <div>
-            <div class="scale-title">比例倍率</div>
-            <div class="tip" style="margin-top:2px">實際長度 = 尺上量測長度 × 倍率</div>
+            <div class="scale-title">比例尺倍率</div>
+            <div class="tip" style="margin-top:2px">圖上 1 cm = 尺世界 × 倍率；倍率改變時，尺的刻度會真的縮放</div>
           </div>
           <div class="scale-now" id="scaleNow">× 1</div>
         </div>
@@ -77,12 +77,12 @@ canvas:active{cursor:grabbing}
           <button type="button" data-scale="1000">×1000</button>
           <button type="button" data-scale="10000">×10000</button>
         </div>
-        <div class="tip">滑桿採對數分布，所以 0.01～10000 都能順手調整，不會全部擠在同一邊。</div>
+        <div class="tip">滑桿採對數分布。×2 代表圖上 1 cm 對應尺世界 2 cm；×5 代表圖上 1 cm 對應尺世界 5 cm。</div>
       </div>
 
       <div class="canvas-wrap">
         <canvas id="ruler" width="900" height="430" aria-label="可縮放無限長尺"></canvas>
-        <div class="canvas-hint">拖 A、B 改變地圖點距離 · 拖尺可平移 · 雙指 / 滾輪縮放尺的刻度</div>
+        <div class="canvas-hint">拖 A、B 改變圖上距離 · 拖尺左右平移 · 上方滑桿縮放尺世界</div>
       </div>
     </section>
 
@@ -93,21 +93,21 @@ canvas:active{cursor:grabbing}
         <div class="row"><span class="bText">B 點</span><span class="mid bText" id="pointB">地圖位置</span></div>
         <div class="actions" style="margin-top:12px">
           <button id="clearBtn" type="button">清除量測</button>
-          <button id="exampleBtn" type="button">重設 A / B</button>
+          <button id="exampleBtn" type="button">範例：圖上 2 cm</button>
         </div>
       </div>
 
       <div class="card">
-        <div class="label">尺上量測長度</div>
+        <div class="label">圖上距離（A–B）</div>
         <div class="big" id="measuredText">—</div>
-        <div class="label" style="margin-top:13px">換算後實際長度</div>
+        <div class="label" style="margin-top:13px">尺世界對應距離</div>
         <div class="big" id="actualText">—</div>
       </div>
 
       <div class="card wide">
         <div class="label">計算方式</div>
         <div class="formula" id="formulaText">請先在尺上設定 A、B 兩點。</div>
-        <div class="note" style="margin-top:10px">A、B 是地圖上的兩個位置，和尺的座標彼此獨立。改變尺的縮放後，同一段 A–B 畫面距離會得到不同的尺上讀值；再用倍率換算成實際長度。</div>
+        <div class="note" style="margin-top:10px">兩個世界：A–B 屬於圖上世界；下面的尺屬於尺世界。A–B 在圖上例如固定 2 cm，倍率 ×2 時尺讀 4 cm；×4 時讀 8 cm；×0.25 時讀 0.5 cm。</div>
       </div>
     </aside>
   </div>
@@ -118,9 +118,9 @@ import {
   clampScale,
   sliderToScale,
   scaleToSlider,
-  computeMeasurement,
+  computeTwoWorldMeasurement,
   formatLength,
-  chooseTickStep
+  chooseAdaptiveTickStep
 } from './scale-ruler-core.mjs';
 
 const $ = id => document.getElementById(id);
@@ -128,7 +128,8 @@ const canvas = $('ruler');
 const ctx = canvas.getContext('2d');
 const state = {
   rulerOriginX: 0,
-  pixelsPerCm: 80,
+  mapPixelsPerCm: 60,
+  pixelsPerCm: 60,
   scale: 1,
   aX: null,
   bX: null,
@@ -171,9 +172,13 @@ function rulerCmAtX(x) {
   return (x - state.rulerOriginX) / state.pixelsPerCm;
 }
 
-function measuredCm() {
+function measurement() {
   if (state.aX == null || state.bX == null) return null;
-  return Math.abs(state.bX - state.aX) / state.pixelsPerCm;
+  return computeTwoWorldMeasurement(
+    Math.abs(state.bX - state.aX),
+    state.mapPixelsPerCm,
+    state.pixelsPerCm
+  );
 }
 
 function drawPoint(x, label, color, pointY, rulerTop) {
@@ -216,11 +221,11 @@ function draw() {
   ctx.moveTo(state.aX,pointY);
   ctx.lineTo(state.bX,pointY);
   ctx.stroke();
-  const mcm=measuredCm();
+  const measure=measurement();
   ctx.fillStyle='#ffeab2';
   ctx.font='800 16px system-ui';
   ctx.textAlign='center'; ctx.textBaseline='bottom';
-  ctx.fillText(mcm==null?'—':niceNumber(mcm,3)+' cm（尺上讀值）',(state.aX+state.bX)/2,pointY-24);
+  ctx.fillText(measure==null?'—':'圖上 '+niceNumber(measure.mapCm,3)+' cm',(state.aX+state.bX)/2,pointY-24);
   drawPoint(state.aX,'A','#72ddff',pointY,rulerTop);
   drawPoint(state.bX,'B','#ff9f7a',pointY,rulerTop);
 
@@ -234,7 +239,7 @@ function draw() {
   ctx.fillRect(0,rulerTop,width,4);
   ctx.fillRect(0,rulerBottom-4,width,4);
 
-  const step=chooseTickStep(state.pixelsPerCm);
+  const step=chooseAdaptiveTickStep(state.pixelsPerCm);
   const majorEvery=step<1?1:step*5;
   const leftCm=rulerCmAtX(0), rightCm=rulerCmAtX(width);
   const first=Math.floor(leftCm/step)*step;
@@ -255,8 +260,8 @@ function draw() {
 
   ctx.fillStyle='rgba(238,246,255,.82)';
   ctx.font='700 13px system-ui';ctx.textAlign='left';ctx.textBaseline='top';
-  ctx.fillText('尺的縮放：'+niceNumber(state.pixelsPerCm,1)+' px / cm',14,14);
-  ctx.fillText('A、B 是地圖點；尺可獨立拖動與縮放',14,34);
+  ctx.fillText('圖上基準：'+niceNumber(state.mapPixelsPerCm,1)+' px / cm',14,14);
+  ctx.fillText('比例：圖上 1 cm = 尺世界 '+niceNumber(state.scale,4)+' cm',14,34);
 
   updateReadout();
 }
@@ -268,25 +273,26 @@ function updateScaleControls() {
 }
 
 function updateReadout() {
-  $('pointA').textContent = '地圖點';
-  $('pointB').textContent = '地圖點';
-  const cm=measuredCm();
-  if (cm == null) {
+  $('pointA').textContent = '圖上點';
+  $('pointB').textContent = '圖上點';
+  const m=measurement();
+  if (!m) {
     $('measuredText').textContent='—';
     $('actualText').textContent='—';
-    $('formulaText').textContent='請設定 A、B 兩個地圖點。';
+    $('formulaText').textContent='請設定 A、B 兩個圖上點。';
     return;
   }
-  const actualCm=cm*state.scale;
-  $('measuredText').textContent=niceNumber(cm,3)+' cm';
-  $('actualText').textContent=formatLength(actualCm);
+  $('measuredText').textContent=niceNumber(m.mapCm,3)+' cm';
+  $('actualText').textContent=formatLength(m.rulerCm);
   $('formulaText').textContent=
-    niceNumber(cm,3)+' cm × '+niceNumber(state.scale,4)+
-    ' = '+niceNumber(actualCm,3)+' cm = '+formatLength(actualCm);
+    '圖上 '+niceNumber(m.mapCm,3)+' cm × '+niceNumber(m.scaleFactor,4)+
+    ' = 尺世界 '+niceNumber(m.rulerCm,3)+' cm；也就是圖上 1 cm = '+
+    formatLength(m.scaleFactor);
 }
 
 function setScale(value) {
   state.scale = clampScale(value);
+  state.pixelsPerCm = state.mapPixelsPerCm / state.scale;
   updateScaleControls();
   requestDraw();
 }
@@ -328,8 +334,11 @@ canvas.addEventListener('pointermove',e=>{
     const pts=Array.from(state.pointers.values()).slice(0,2);
     const midX=(pts[0].x+pts[1].x)/2;
     const dist=Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y);
-    state.pixelsPerCm=clamp(state.gesture.pixelsPerCm*dist/Math.max(20,state.gesture.dist),4,320);
+    state.pixelsPerCm=clamp(state.gesture.pixelsPerCm*dist/Math.max(20,state.gesture.dist),0.006,6000);
+    state.scale=clampScale(state.mapPixelsPerCm/state.pixelsPerCm);
+    state.pixelsPerCm=state.mapPixelsPerCm/state.scale;
     state.rulerOriginX=midX-state.gesture.anchorCm*state.pixelsPerCm;
+    updateScaleControls();
   } else if(state.tapStart){
     const dx=p.x-state.tapStart.x;
     if(state.dragMode==='a') state.aX=clamp(state.tapStart.aX+dx,18,rect.width-18);
@@ -352,8 +361,11 @@ canvas.addEventListener('wheel',e=>{
   e.preventDefault();
   const rect=canvas.getBoundingClientRect(),p=pointerPosition(e);
   const anchor=rulerCmAtX(p.x);
-  state.pixelsPerCm=clamp(state.pixelsPerCm*(e.deltaY>0?.9:1.1),4,320);
+  state.pixelsPerCm=clamp(state.pixelsPerCm*(e.deltaY>0?.9:1.1),0.006,6000);
+  state.scale=clampScale(state.mapPixelsPerCm/state.pixelsPerCm);
+  state.pixelsPerCm=state.mapPixelsPerCm/state.scale;
   state.rulerOriginX=p.x-anchor*state.pixelsPerCm;
+  updateScaleControls();
   requestDraw();
 },{passive:false});
 
@@ -362,11 +374,14 @@ $('scaleInput').addEventListener('change', e => setScale(e.target.value));
 document.querySelectorAll('[data-scale]').forEach(btn => btn.addEventListener('click',()=>setScale(btn.dataset.scale)));
 $('clearBtn').addEventListener('click',()=>{
   const w=canvas.getBoundingClientRect().width;
-  state.aX=w*.35; state.bX=w*.65; requestDraw();
+  const mid=w/2;
+  state.aX=mid-state.mapPixelsPerCm; state.bX=mid+state.mapPixelsPerCm; requestDraw();
 });
 $('exampleBtn').addEventListener('click',()=>{
   const w=canvas.getBoundingClientRect().width;
-  state.aX=w*.28; state.bX=w*.72; state.rulerOriginX=w*.12; state.pixelsPerCm=80; requestDraw();
+  const mid=w/2;
+  state.aX=mid-state.mapPixelsPerCm; state.bX=mid+state.mapPixelsPerCm;
+  state.rulerOriginX=w*.12; setScale(2);
 });
 $('backExam').addEventListener('click',e=>{if(history.length>1){e.preventDefault();history.back();}});
 
