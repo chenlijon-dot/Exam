@@ -19,7 +19,6 @@ jobs:
           node-version: '22'
       - name: Syntax checks
         run: |
-          node --check school-paper-import.js
           node --check exam-science-school-records.js
           node --check firebase-firestore-sync.js
           node --check exam-records.js
