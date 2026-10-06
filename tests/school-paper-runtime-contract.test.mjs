@@ -18,6 +18,8 @@ assert.match(records, /recordOrigin: ctx\.recordOrigin \|\| 'web'/);
 assert.match(records, /schoolExamId: ctx\.schoolExamId \|\| ''/);
 assert.match(firestore, /async function importSchoolPaperAttempt/);
 assert.match(firestore, /where\('schoolExamId', '==', schoolExamId\)/);
+const importBlock = firestore.match(/async function importSchoolPaperAttempt[\s\S]*?window\.ChrisExamHistoryStore/)?.[0] || '';
+assert.doesNotMatch(importBlock, /firestore\.limit\(1\)/, 'school-paper idempotency must inspect all matching schoolExamId attempts, not only an arbitrary first document');
 assert.match(firestore, /existingPaper/);
 assert.match(firestore, /recordOrigin === 'school-paper'/);
 assert.match(firestore, /already-imported/);
