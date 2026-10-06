@@ -71,7 +71,7 @@
       "originalPaperResult": "correct",
       "points": 3,
       "paperEarnedPoints": 3,
-      "image": "assets/q01-volume.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q01-volume.png",
       "imageAlt": "一-1 題目附圖"
     },
     {
@@ -546,7 +546,7 @@
       "originalPaperResult": "incorrect",
       "points": 3,
       "paperEarnedPoints": 0,
-      "image": "assets/q12-microscope-combinations.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q12-microscope-combinations.png",
       "imageAlt": "一-12 題目附圖"
     },
     {
@@ -634,7 +634,7 @@
       "originalPaperResult": "correct",
       "points": 3,
       "paperEarnedPoints": 3,
-      "image": "assets/q14-stereo-microscope.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q14-stereo-microscope.png",
       "imageAlt": "一-14 題目附圖"
     },
     {
@@ -680,7 +680,7 @@
       "originalPaperResult": "correct",
       "points": 3,
       "paperEarnedPoints": 3,
-      "image": "assets/q15-diatom-position.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q15-diatom-position.png",
       "imageAlt": "一-15 題目附圖"
     },
     {
@@ -725,7 +725,7 @@
       "originalPaperResult": "incorrect",
       "points": 3,
       "paperEarnedPoints": 0,
-      "image": "assets/q16-objectives.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q16-objectives.png",
       "imageAlt": "一-16 題目附圖"
     },
     {
@@ -771,7 +771,7 @@
       "points": 3,
       "paperEarnedPoints": 3,
       "intro": "研究土壤濕度對豬籠草生長的影響；應只改變澆水量，其餘如土壤種類、光線需相同。",
-      "image": "assets/q17-pitcher-plant-table.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q17-pitcher-plant-table.png",
       "imageAlt": "一-17 題目附圖"
     },
     {
@@ -816,7 +816,7 @@
       "originalPaperResult": "correct",
       "points": 3,
       "paperEarnedPoints": 3,
-      "image": "assets/q18-banknote.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q18-banknote.png",
       "imageAlt": "一-18 題目附圖"
     },
     {
@@ -904,7 +904,7 @@
       "originalPaperResult": "incorrect",
       "points": 3,
       "paperEarnedPoints": 0,
-      "image": "assets/q20-diatom-objectives.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q20-diatom-objectives.png",
       "imageAlt": "一-20 題目附圖"
     },
     {
@@ -950,7 +950,7 @@
       "points": 4,
       "paperEarnedPoints": 4,
       "intro": "2000人分成四組，每人每天服一粒藥丸一年：A 1克糖→70人感冒；B 1克糖+200mg維生素C→74人；C 1克糖+400mg維生素C→67人；D 1克糖+800mg維生素C→72人。",
-      "image": "assets/q21-vitamin-c-table.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q21-vitamin-c-table.png",
       "imageAlt": "二-1 題目附圖"
     },
     {
@@ -995,7 +995,7 @@
       "originalPaperResult": "correct",
       "points": 4,
       "paperEarnedPoints": 4,
-      "image": "assets/q22-leaf-view.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q22-leaf-view.png",
       "imageAlt": "二-2 題目附圖"
     },
     {
@@ -1041,7 +1041,7 @@
       "points": 4,
       "paperEarnedPoints": 4,
       "intro": "右圖為海平面上、下生物圈示意圖，標示甲、乙、丙、丁、戊、己及高度位置。",
-      "image": "assets/q23-q25-biosphere.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q23-q25-biosphere.png",
       "imageAlt": "二-3 題目附圖"
     },
     {
@@ -1087,7 +1087,7 @@
       "points": 4,
       "paperEarnedPoints": 4,
       "intro": "右圖為海平面上、下生物圈示意圖。",
-      "image": "assets/q23-q25-biosphere.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q23-q25-biosphere.png",
       "imageAlt": "二-4 題目附圖"
     },
     {
@@ -1133,7 +1133,7 @@
       "points": 4,
       "paperEarnedPoints": 0,
       "intro": "右圖為海平面上、下生物圈示意圖。",
-      "image": "assets/q23-q25-biosphere.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q23-q25-biosphere.png",
       "imageAlt": "二-5 題目附圖"
     },
     {
@@ -1267,7 +1267,7 @@
       "points": 4,
       "paperEarnedPoints": 4,
       "intro": "文文想利用實驗室中的顯微鏡觀察生態池小生物。",
-      "image": "assets/q28-microscope-lenses.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q28-microscope-lenses.png",
       "imageAlt": "三-3 題目附圖"
     },
     {
@@ -1313,7 +1313,7 @@
       "points": 4,
       "paperEarnedPoints": 0,
       "intro": "安安研究埃及斑蚊與白線斑蚊幼蟲在不同濃度食鹽水中的存活：0%為27/28隻，0.8%為21/24隻，1.2%為2/17隻，3.5%兩者皆0隻。",
-      "image": "assets/q29-q30-mosquito-table.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q29-q30-mosquito-table.png",
       "imageAlt": "三-4 題目附圖"
     },
     {
@@ -1359,7 +1359,7 @@
       "points": 4,
       "paperEarnedPoints": 4,
       "intro": "安安研究埃及斑蚊與白線斑蚊幼蟲在不同濃度食鹽水中的存活。",
-      "image": "assets/q29-q30-mosquito-table.png",
+      "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q29-q30-mosquito-table.png",
       "imageAlt": "三-5 題目附圖"
     }
   ]
