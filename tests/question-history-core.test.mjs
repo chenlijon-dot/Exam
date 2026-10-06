@@ -58,3 +58,10 @@ assert.deepEqual(
 );
 
 console.log('question-history core: PASS');
+
+// school-paper history aggregation
+const paperAggregate = core.aggregateQuestionHistory([
+  { historyDomain:'question', submittedAt:'2026-10-06T00:00:00+08:00', answers:[{questionId:'paper-q1',result:'incorrect',selectedDisplayLabel:'B'}] },
+  { historyDomain:'question', submittedAt:'2026-10-07T00:00:00+08:00', answers:[{questionId:'paper-q1',result:'correct',selectedDisplayLabel:'A'}] }
+]);
+assert.deepEqual(JSON.parse(JSON.stringify(paperAggregate['paper-q1'])), {answeredCount:2,correctCount:1,wrongCount:1,lastAttemptAt:'2026-10-07T00:00:00+08:00',lastSelectedAnswer:'A',lastResult:'correct'});
