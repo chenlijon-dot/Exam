@@ -1793,31 +1793,36 @@ vocabularyProgress
 10. 修改 Firebase 資料 schema 前，先更新本文件並確認舊資料相容性。
 
 
-## School paper exam imports
+## School exam source records
 
-School paper exams use the same question-history authority as web attempts.
+School exam questions use the same question-history authority as every other fixed question bank.
 
-Required attempt fields:
+The original paper result is stored as the first normal question-history attempt:
 
 - `schemaVersion: 3`
 - `historyDomain: "question"`
-- `recordOrigin: "school-paper"`
 - `recordType: "school-exam"`
-- permanent `schoolExamId`
 - permanent per-item `questionId` and `questionRevision`
+- the student's original selected answer and `correct / incorrect` result
 
-The first normalized paper record is:
+The first source snapshot is:
 
 `chapter-bank/science/7-1/unit-01/school-exam-records/2026-unit-01-school-exam-01-attempt.json`
 
-Import behavior:
+There is no separate school-paper Firebase import API.
 
-1. The browser must have an authorized Firebase user.
-2. `school-paper-import.js` validates the artifact.
-3. `firebase-firestore-sync.js#importSchoolPaperAttempt` queries the current user's `attempts` by `schoolExamId`.
-4. An existing match returns `already-imported`; no duplicate attempt is written.
-5. A missing match is written once under `users/{uid}/attempts`.
+When the school-exam record page is first opened, the browser checks `examRecords.v1`. If the original paper attempt is missing, it is inserted once into that existing local attempt list. The normal Firebase local-record sync path may then persist it exactly like other attempts.
 
-No `questionProgress` or second wrong-answer counter collection is created. `ExamQuestionHistoryCore.aggregateQuestionHistory()` continues to aggregate both paper and web attempts by permanent `questionId`.
+Review mode is read-only and does not create an attempt.
 
-If the paper's actual exam date is unknown, do not invent it. Keep `submittedAt` empty and preserve the import/build time separately in `recordedAt`.
+A later retry uses the ordinary exam runtime and ordinary attempt capture. The original paper attempt and all later web attempts share the same permanent `questionId` values, so `ExamQuestionHistoryCore.aggregateQuestionHistory()` naturally combines them into:
+
+- `answeredCount`
+- `correctCount`
+- `wrongCount`
+- `lastResult`
+
+Do not add a second wrong-answer authority or a dedicated `questionProgress` collection for school exams.
+
+If the actual paper exam date is unknown, do not invent it. Preserve `sourceExamDateKnown:false`; the system may use the record/build time only as the technical ordering timestamp.
+
