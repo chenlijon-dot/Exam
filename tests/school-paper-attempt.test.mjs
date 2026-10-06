@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const bank=JSON.parse(fs.readFileSync(new URL('../chapter-bank/science/7-1/unit-01/school-exam-records/2026-unit-01-school-exam-01.json',import.meta.url),'utf8'));
+const a=JSON.parse(fs.readFileSync(new URL('../chapter-bank/science/7-1/unit-01/school-exam-records/2026-unit-01-school-exam-01-attempt.json',import.meta.url),'utf8'));
+assert.equal(a.schemaVersion,3);assert.equal(a.historyDomain,'question');assert.equal(a.recordOrigin,'school-paper');assert.equal(a.recordType,'school-exam');
+assert.equal(a.schoolExamId,'science-7-1-u01-school-paper-20261006-01');assert.equal(a.sourceScore,73);assert.equal(a.sourceFullScore,100);assert.equal(a.answers.length,30);
+assert.equal(a.answers.filter(x=>x.result==='correct').length,22);assert.equal(a.answers.filter(x=>x.result==='incorrect').length,8);
+assert.deepEqual(a.answers.filter(x=>x.result==='incorrect').map(x=>x.originalLabel),['一-7','一-11','一-12','一-16','一-20','二-5','三-2','三-4']);
+const bankIds=new Set(bank.questions.map(q=>String(q.questionId)));assert.ok(a.answers.every(x=>bankIds.has(String(x.questionId))));
+assert.equal(a.answers.reduce((s,x)=>s+Number(x.earnedPoints||0),0),73);
+assert.ok(a.answers.every(x=>Number.isInteger(x.selectedCanonicalIndex)&&Number.isInteger(x.correctCanonicalIndex)));
+console.log('school-paper attempt: PASS');
