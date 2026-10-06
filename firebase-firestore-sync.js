@@ -274,7 +274,8 @@
       firestore.limit(1)
     );
     const existing = await firestore.getDocs(existingQuery);
-    if (!existing.empty) return { status:'already-imported', id:existing.docs[0].id };
+    const existingPaper = existing.docs.find(doc => doc.data()?.recordOrigin === 'school-paper');
+    if (existingPaper) return { status:'already-imported', id:existingPaper.id };
 
     const payload = cleanForFirestore({
       ...attempt,
