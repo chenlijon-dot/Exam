@@ -76,7 +76,7 @@
       view[questionId] = {
         wrong: answer.result === 'incorrect',
         label,
-        feedback
+        ...(feedback ? { feedback } : {})
       };
     }
     return view;
