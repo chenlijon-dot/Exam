@@ -270,8 +270,7 @@
     const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
     const existingQuery = firestore.query(
       attemptsRef,
-      firestore.where('schoolExamId', '==', schoolExamId),
-      firestore.limit(1)
+      firestore.where('schoolExamId', '==', schoolExamId)
     );
     const existing = await firestore.getDocs(existingQuery);
     const existingPaper = existing.docs.find(doc => doc.data()?.recordOrigin === 'school-paper');
