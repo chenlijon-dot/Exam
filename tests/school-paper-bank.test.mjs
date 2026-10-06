@@ -11,4 +11,9 @@ for(const q of d.questions.filter(q=>q.image)) {
   assert.match(q.image,/^chapter-bank\/science\/7-1\/unit-01\/school-exam-records\/assets\//);
   assert.ok(fs.existsSync(new URL('../' + q.image, import.meta.url)), `missing asset: ${q.image}`);
 }
+for(const q of d.questions.filter(q=>q.optionImage)) {
+  assert.match(q.optionImage,/^chapter-bank\/science\/7-1\/unit-01\/school-exam-records\/assets\//);
+  assert.ok(fs.existsSync(new URL('../' + q.optionImage, import.meta.url)), `missing option asset: ${q.optionImage}`);
+}
+assert.ok(d.questions.find(q=>q.originalLabel==='一-18')?.optionImage, 'Q18 image options must be preserved');
 console.log('school-paper bank: PASS');
