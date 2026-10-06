@@ -32,7 +32,7 @@
         : '';
 
     const secondLine = answer && resultLabel
-      ? `上次：${answer}｜${resultLabel}`
+      ? `上次：選 ${answer}｜${resultLabel}`
       : resultLabel
         ? `上次：${resultLabel}`
         : '';
