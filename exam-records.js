@@ -228,8 +228,6 @@
     return {
       schemaVersion: 3,
       historyDomain,
-      recordOrigin: ctx.recordOrigin || 'web',
-      schoolExamId: ctx.schoolExamId || '',
       recordType: isAccuracyExam ? 'past-exam' : 'practice',
       metricType: isAccuracyExam ? 'accuracy' : 'score',
       examKey: ctx.key || ctx.difficulty || fallbackDiff.key,
