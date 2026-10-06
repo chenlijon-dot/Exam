@@ -260,41 +260,10 @@
     return mergeHistoryAttempts(cloud, local).slice(0, limitValue);
   }
 
-  async function importSchoolPaperAttempt(attempt) {
-    if (!attempt || attempt.recordOrigin !== 'school-paper') throw new Error('invalid school-paper attempt');
-    if (attempt.historyDomain !== 'question') throw new Error('school-paper attempt must use question historyDomain');
-    const schoolExamId = String(attempt.schoolExamId || '').trim();
-    if (!schoolExamId) throw new Error('schoolExamId is required');
-    if (!activeUser?.uid || !db || !firestore) return { status:'not-ready', message:'Firebase 尚未完成登入或初始化' };
-
-    const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
-    const existingQuery = firestore.query(
-      attemptsRef,
-      firestore.where('schoolExamId', '==', schoolExamId)
-    );
-    const existing = await firestore.getDocs(existingQuery);
-    const existingPaper = existing.docs.find(doc => doc.data()?.recordOrigin === 'school-paper');
-    if (existingPaper) return { status:'already-imported', id:existingPaper.id };
-
-    const payload = cleanForFirestore({
-      ...attempt,
-      firebaseUid: activeUser.uid,
-      userEmail: activeUser.email || '',
-      cloudSchemaVersion: 1,
-      syncedAtClient: new Date().toISOString()
-    });
-    const docRef = await firestore.addDoc(attemptsRef, {
-      ...payload,
-      syncedAt: firestore.serverTimestamp()
-    });
-    return { status:'imported', id:docRef.id };
-  }
-
   window.ChrisExamHistoryStore = {
     loadRecentQuestionAttempts,
     loadExamAttempts,
-    loadVocabularyAttempts,
-    importSchoolPaperAttempt
+    loadVocabularyAttempts
   };
 
   async function initFirestore() {
