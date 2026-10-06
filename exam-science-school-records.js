@@ -97,38 +97,37 @@
     document.head.appendChild(style);
   }
 
-  async function setImportButtonStatus(button) {
-    if (!button) return;
-    if (!window.ChrisExamAuth?.authorized) {
-      button.textContent = '登入後可匯入學習歷程';
-      button.disabled = true;
-      return;
+  function loadLocalRecords() {
+    try {
+      const records = JSON.parse(localStorage.getItem('examRecords.v1') || '[]');
+      return Array.isArray(records) ? records : [];
+    } catch {
+      return [];
     }
-    button.disabled = false;
-    button.textContent = '匯入我的學習歷程';
   }
 
-  async function handleImport(button) {
-    const old = button.textContent;
-    button.disabled = true;
-    button.textContent = '匯入中…';
-    try {
-      const attempt = await loadAttempt();
-      const result = await window.SchoolPaperImport?.importAttempt?.(attempt);
-      if (!result) throw new Error('紙本匯入模組尚未就緒');
-      if (result.status === 'already-imported') button.textContent = '✓ 已匯入，不重複計數';
-      else if (result.status === 'imported') button.textContent = '✓ 已匯入學習歷程';
-      else throw new Error(result.message || result.status || '匯入失敗');
-    } catch (error) {
-      button.disabled = false;
-      button.textContent = old;
-      alert(`紙本考試匯入失敗：${error.message}`);
-    }
+  async function ensureOriginalPaperRecorded() {
+    const records = loadLocalRecords();
+    const alreadyRecorded = records.some(record =>
+      String(record?.schoolExamId || '') === SCHOOL_EXAM_ID &&
+      record?.recordOrigin === 'school-paper'
+    );
+    if (alreadyRecorded) return false;
+
+    const attempt = await loadAttempt();
+    const normalized = {
+      ...attempt,
+      submittedAt: attempt.submittedAt || attempt.recordedAt || new Date().toISOString()
+    };
+    records.unshift(normalized);
+    localStorage.setItem('examRecords.v1', JSON.stringify(records.slice(0, 300)));
+    return true;
   }
 
   async function showRecordList({ preserveUnit = false } = {}) {
     if (!preserveUnit) saveUnitView();
     injectStyles();
+    try { await ensureOriginalPaperRecorded(); } catch (error) { console.warn('[SchoolPaperRecords] unable to seed original result', error); }
     setCatalogHeader('自然一上｜單元 1', '學校考試紀錄');
     document.title = '學校考試紀錄｜自然一上單元 1';
     const content = $('#catalogContent');
@@ -137,7 +136,7 @@
       <button class="catalog-back" id="schoolPaperBackUnitBtn">← 返回單元 1</button>
       <div class="catalog-path">自然　›　七年級上學期（一上）　›　單元 1　›　學校考試紀錄</div>
       <h2 class="catalog-title">🏫 學校考試紀錄</h2>
-      <p class="catalog-sub">真實紙本考試會納入既有 questionId 回溯；查看舊考卷不會新增作答次數。</p>
+      <p class="catalog-sub">這是一份來自學校考試的普通題庫；可回顧原始作答，也可重新作答與重新計分。</p>
       <div class="catalog-grid">
         <div class="catalog-card chapter-card" style="cursor:default">
           <span class="top"><strong>七年級第一學期第一單元</strong><span class="catalog-badge school">73 / 100</span></span>
@@ -148,16 +147,14 @@
             <div class="school-paper-stat"><b>73%</b>正確率</div>
           </div>
           <div class="school-paper-actions">
-            <button type="button" class="school-paper-action" id="schoolPaperReviewBtn">查看考卷</button>
-            <button type="button" class="school-paper-action secondary" id="schoolPaperImportBtn">匯入我的學習歷程</button>
+            <button type="button" class="school-paper-action" id="schoolPaperReviewBtn">回顧這次考試</button>
+            <button type="button" class="school-paper-action secondary" id="schoolPaperRetryFromListBtn">重新作答</button>
           </div>
         </div>
       </div>`;
     $('#schoolPaperBackUnitBtn')?.addEventListener('click', restoreUnitView);
     $('#schoolPaperReviewBtn')?.addEventListener('click', showReview);
-    const importBtn = $('#schoolPaperImportBtn');
-    importBtn?.addEventListener('click', () => handleImport(importBtn));
-    setImportButtonStatus(importBtn);
+    $('#schoolPaperRetryFromListBtn')?.addEventListener('click', retryPaperExam);
     showCatalog();
   }
 
@@ -174,7 +171,7 @@
   }
 
   function historyText(stats) {
-    if (!stats?.answeredCount) return '尚未匯入／沒有其他作答紀錄';
+    if (!stats?.answeredCount) return '尚無作答紀錄';
     const parts = [`作答 ${stats.answeredCount} 次`];
     if (stats.wrongCount) parts.push(`錯題 ${stats.wrongCount} 次`);
     if (stats.lastResult) parts.push(`上次：${stats.lastResult === 'correct' ? '正確' : '錯誤'}`);
@@ -245,7 +242,7 @@
       subject:'science', subjectLabel:'自然', semester:'7-1', semesterLabel:'七年級上學期',
       unitGroup:'unit-01', unitGroupLabel:'單元 1 生命現象與科學探究', unit:'單元 1 生命現象與科學探究',
       examType:true, scoreMode:'percent', analysisEligible:true, preserveOptionOrder:true,
-      recordOrigin:'web', schoolExamId:SCHOOL_EXAM_ID,
+      sourceType:'school-exam',
       backLabel:'返回學校考試紀錄',
       onBack:() => showRecordList({ preserveUnit:true })
     };
@@ -260,8 +257,5 @@
     showRecordList();
   }, true);
 
-  window.addEventListener('chrisexam-auth-ready', () => setImportButtonStatus($('#schoolPaperImportBtn')));
-  window.addEventListener('chrisexam-auth-changed', () => setImportButtonStatus($('#schoolPaperImportBtn')));
-
-  window.ScienceSchoolRecords = { showRecordList, showReview, retryPaperExam };
+  window.ScienceSchoolRecords = { showRecordList, showReview, retryPaperExam, ensureOriginalPaperRecorded };
 })();
