@@ -204,6 +204,7 @@
           <div><b>${esc(q.originalLabel)}</b>　${esc(q.q)}</div>
           ${q.intro ? `<div class="record-note" style="margin-top:8px">${esc(q.intro)}</div>` : ''}
           ${q.image ? `<img class="school-paper-review-image" src="${esc(q.image)}" alt="${esc(q.imageAlt || '題目附圖')}">` : ''}
+          ${q.optionImage ? `<img class="school-paper-review-image" src="${esc(q.optionImage)}" alt="${esc(q.optionImageAlt || '題目選項圖')}">` : ''}
           <div style="margin-top:8px">${options}</div>
           <div class="school-paper-result">${wrong ? `❌ 當時作答：${esc(a?.selectedDisplayLabel || '')}　✅ 正確答案：${esc(a?.correctLetter || '')}` : `✅ 當時作答：${esc(a?.selectedDisplayLabel || '')}`}</div>
           <div class="record-note">${esc(q.e || '')}</div>
