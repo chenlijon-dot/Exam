@@ -1876,3 +1876,31 @@ Sheet 與網站題庫可互相回溯
 ```
 
 未來遇到新的科目、新題型、新考卷格式，優先更新本母 SOP，而不是硬把新資料塞進舊模板。
+
+## 學校紙本考試紀錄匯入
+
+紙本學校考試與「各校題庫」用途不同：
+
+- 各校題庫：題目來源，可供一般練習。
+- 學校考試紀錄：特定學員真實完成過的紙本結果，必須保留當時作答 snapshot 並進入回溯。
+
+固定流程：
+
+1. 原始 JPG 放入 `學校考試卷紀錄/<科目>/`，題內必要圖表放 `cropped/`。
+2. Google Sheet 建立 `Exams / Questions / QA`。
+3. 一個實際作答項目一列；原卷大題與題號只作 provenance，不作永久 identity。
+4. 每題建立永久 `questionId` / `revision`，並標示 `mappedSection`。
+5. 題幹與選項文字化；只有解題必需圖表進 GitHub `assets/`，不把整頁拍照當 runtime 題圖。
+6. Sheet QA 必須確認題數、配分、得分、正誤數、重複／缺失 questionId 與 mappedSection。
+7. QA PASS 後建立：
+   - unit-level school paper bank JSON
+   - schema-v3 `school-paper` attempt JSON
+8. 已授權使用者從「學校考試紀錄」入口執行一次性 Firebase 匯入；`schoolExamId` 負責防重複。
+9. 查看考卷是 read-only review，不 dispatch `exam:submitted`，不增加作答次數。
+10. 「重新挑戰這份考卷」才進既有 exam runtime，新的 attempt 使用 `recordOrigin:"web"` 並保留同一 `schoolExamId`。
+11. 紙本與 web attempt 以相同 `questionId` 共同累計 `answeredCount / correctCount / wrongCount`。
+
+第一份實作：
+`chapter-bank/science/7-1/unit-01/school-exam-records/2026-unit-01-school-exam-01.json`
+
+其 Google Sheet QA 為 30 題、22 題正確、8 題錯誤、73/100。
