@@ -25,9 +25,10 @@ assert.doesNotMatch(ui, /chrisexam-auth-ready|chrisexam-auth-changed/);
 assert.doesNotMatch(nav, /school-paper-import\.js/);
 assert.doesNotMatch(nav, /loadSchoolPaperImportModule/);
 
-assert.match(firestore, /BUILT_IN_SCHOOL_PAPER_ATTEMPT_PATHS/);
-assert.match(firestore, /loadBuiltInSchoolPaperAttempts/);
-assert.match(firestore, /mergeHistoryAttempts\(cloud, local, builtIn\)/);
+assert.match(ui, /function ensureOriginalPaperRecorded/);
+assert.match(ui, /examRecords\.v1/);
+assert.match(ui, /localStorage\.setItem/);
+assert.match(ui, /schoolExamId/);
 assert.doesNotMatch(firestore, /importSchoolPaperAttempt/);
 
 assert.match(records, /historyDomain/);
