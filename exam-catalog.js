@@ -209,6 +209,7 @@
         { key: 'science-7-1-1-1', code: '1-1', title: '生命現象和生物圈', enabled: true, desc: '生命現象、生物圈、環境限制因子與生物適應' },
         { key: 'science-method', code: '1-2', title: '科學方法', enabled: true, desc: '科學方法步驟、實驗組與對照組、變因與資料判讀' },
         { key: 'science-7-1-1-3', code: '1-3', title: '認識實驗室', enabled: true, desc: '實驗器材、量筒、複式與解剖顯微鏡、倍率、成像與操作' },
+        { key: 'science-7-1-u01-school-records', code: '🏫', title: '學校考試紀錄', enabled: true, type: 'school-records', desc: '1 次考試｜最新 73 分｜8 題錯誤' },
         { key: 'science-7-1-core-1', code: '核心素養', title: '生活在沙漠中的生物', enabled: false, type: 'literacy' }
       ]
     },
