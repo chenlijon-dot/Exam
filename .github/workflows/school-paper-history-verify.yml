@@ -25,15 +25,10 @@ jobs:
           node --check exam-records.js
           node --check exam-catalog.js
           node --check exam-navigation-fix.js
-      - name: School paper tests
+      - name: Full repository test suite
         run: |
-          node tests/school-paper-bank.test.mjs
-          node tests/school-paper-attempt.test.mjs
-          node tests/school-paper-import.test.mjs
-          node tests/science-school-records-ui.test.mjs
-          node tests/school-paper-review.test.mjs
-          node tests/school-paper-retry.test.mjs
-          node tests/school-paper-runtime-contract.test.mjs
-          node tests/question-history-core.test.mjs
-          node tests/question-history-contract.test.mjs
-          node tests/question-history-ui.test.mjs
+          set -e
+          for test in tests/*.test.mjs; do
+            echo "==> $test"
+            node "$test"
+          done
