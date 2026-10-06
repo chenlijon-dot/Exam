@@ -1791,3 +1791,33 @@ vocabularyProgress
 8. 不要直接改變既有 `progressKey = gept-elementary:{vocabId}`，除非先規劃 Firestore 資料遷移。
 9. 新增學生端 UI 時，避免暴露內部服務與演算法字眼。
 10. 修改 Firebase 資料 schema 前，先更新本文件並確認舊資料相容性。
+
+
+## School paper exam imports
+
+School paper exams use the same question-history authority as web attempts.
+
+Required attempt fields:
+
+- `schemaVersion: 3`
+- `historyDomain: "question"`
+- `recordOrigin: "school-paper"`
+- `recordType: "school-exam"`
+- permanent `schoolExamId`
+- permanent per-item `questionId` and `questionRevision`
+
+The first normalized paper record is:
+
+`chapter-bank/science/7-1/unit-01/school-exam-records/2026-unit-01-school-exam-01-attempt.json`
+
+Import behavior:
+
+1. The browser must have an authorized Firebase user.
+2. `school-paper-import.js` validates the artifact.
+3. `firebase-firestore-sync.js#importSchoolPaperAttempt` queries the current user's `attempts` by `schoolExamId`.
+4. An existing match returns `already-imported`; no duplicate attempt is written.
+5. A missing match is written once under `users/{uid}/attempts`.
+
+No `questionProgress` or second wrong-answer counter collection is created. `ExamQuestionHistoryCore.aggregateQuestionHistory()` continues to aggregate both paper and web attempts by permanent `questionId`.
+
+If the paper's actual exam date is unknown, do not invent it. Keep `submittedAt` empty and preserve the import/build time separately in `recordedAt`.
