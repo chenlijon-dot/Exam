@@ -1,0 +1,39 @@
+name: Verify school paper history
+
+on:
+  push:
+    branches:
+      - feat/school-paper-exam-history
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        run: |
+          node --check school-paper-import.js
+          node --check exam-science-school-records.js
+          node --check firebase-firestore-sync.js
+          node --check exam-records.js
+          node --check exam-catalog.js
+          node --check exam-navigation-fix.js
+      - name: School paper tests
+        run: |
+          node tests/school-paper-bank.test.mjs
+          node tests/school-paper-attempt.test.mjs
+          node tests/school-paper-import.test.mjs
+          node tests/science-school-records-ui.test.mjs
+          node tests/school-paper-review.test.mjs
+          node tests/school-paper-retry.test.mjs
+          node tests/school-paper-runtime-contract.test.mjs
+          node tests/question-history-core.test.mjs
+          node tests/question-history-contract.test.mjs
+          node tests/question-history-ui.test.mjs
