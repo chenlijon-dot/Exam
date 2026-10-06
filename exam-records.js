@@ -99,7 +99,7 @@
         else if (verdict === 'incorrect') incorrect++;
         else unanswered++;
 
-        if (questionId) {
+        if (questionId && (verdict === 'correct' || verdict === 'incorrect')) {
           historyAnswers.push({
             questionId,
             questionRevision,
