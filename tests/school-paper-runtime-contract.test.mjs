@@ -7,28 +7,35 @@ const nav = read('exam-navigation-fix.js');
 const records = read('exam-records.js');
 const firestore = read('firebase-firestore-sync.js');
 const ui = read('exam-science-school-records.js');
-const importer = read('school-paper-import.js');
 
 assert.match(catalog, /science-7-1-u01-school-records/);
 assert.match(catalog, /type: 'school-records'/);
 assert.match(catalog, /s\.type !== 'school-records'/);
-assert.match(nav, /loadSchoolPaperImportModule/);
-assert.match(nav, /loadScienceSchoolRecordsModule/);
-assert.match(records, /recordOrigin: ctx\.recordOrigin \|\| 'web'/);
-assert.match(records, /schoolExamId: ctx\.schoolExamId \|\| ''/);
-assert.match(firestore, /async function importSchoolPaperAttempt/);
-assert.match(firestore, /where\('schoolExamId', '==', schoolExamId\)/);
-const importBlock = firestore.match(/async function importSchoolPaperAttempt[\s\S]*?window\.ChrisExamHistoryStore/)?.[0] || '';
-assert.doesNotMatch(importBlock, /firestore\.limit\(1\)/, 'school-paper idempotency must inspect all matching schoolExamId attempts, not only an arbitrary first document');
-assert.match(firestore, /existingPaper/);
-assert.match(firestore, /recordOrigin === 'school-paper'/);
-assert.match(firestore, /already-imported/);
-assert.match(firestore, /importSchoolPaperAttempt/);
-assert.match(ui, /只讀回顧/);
-assert.match(ui, /q\.optionImage/);
-assert.match(ui, /recordOrigin:'web'/);
-assert.match(ui, /schoolExamId:SCHOOL_EXAM_ID/);
-assert.match(importer, /recordOrigin !== 'school-paper'/);
-assert.match(importer, /historyDomain !== 'question'/);
 
-console.log('school-paper runtime contract: PASS');
+assert.match(ui, /學校考試紀錄/);
+assert.match(ui, /73 \/ 100/);
+assert.match(ui, /查看考卷|回顧這次考試/);
+assert.match(ui, /重新挑戰這份考卷/);
+assert.match(ui, /startExam\(EXAM_KEY\)/);
+assert.match(ui, /只讀回顧/);
+assert.doesNotMatch(ui, /匯入我的學習歷程/);
+assert.doesNotMatch(ui, /SchoolPaperImport/);
+assert.doesNotMatch(ui, /chrisexam-auth-ready|chrisexam-auth-changed/);
+
+assert.doesNotMatch(nav, /school-paper-import\.js/);
+assert.doesNotMatch(nav, /loadSchoolPaperImportModule/);
+
+assert.match(firestore, /BUILT_IN_SCHOOL_PAPER_ATTEMPT_PATHS/);
+assert.match(firestore, /loadBuiltInSchoolPaperAttempts/);
+assert.match(firestore, /mergeHistoryAttempts\(cloud, local, builtIn\)/);
+assert.doesNotMatch(firestore, /importSchoolPaperAttempt/);
+
+assert.match(records, /historyDomain/);
+assert.match(records, /answers: historyAnswers/);
+
+assert.ok(
+  !fs.existsSync(new URL('../school-paper-import.js', import.meta.url)),
+  'school-paper-import.js should be removed; school paper history is a built-in source, not a separate import workflow'
+);
+
+console.log('school-paper simplified runtime contract: PASS');
