@@ -817,7 +817,9 @@
       "points": 3,
       "paperEarnedPoints": 3,
       "image": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q18-banknote.png",
-      "imageAlt": "一-18 題目附圖"
+      "imageAlt": "一-18 題目附圖",
+      "optionImage": "chapter-bank/science/7-1/unit-01/school-exam-records/assets/q18-options.png",
+      "optionImageAlt": "解剖顯微鏡觀察鈔票時的 A、B、C 三個影像選項"
     },
     {
       "questionId": "261006010100019",
