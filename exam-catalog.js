@@ -209,6 +209,7 @@
         { key: 'science-7-1-1-1', code: '1-1', title: '生命現象和生物圈', enabled: true, desc: '生命現象、生物圈、環境限制因子與生物適應' },
         { key: 'science-method', code: '1-2', title: '科學方法', enabled: true, desc: '科學方法步驟、實驗組與對照組、變因與資料判讀' },
         { key: 'science-7-1-1-3', code: '1-3', title: '認識實驗室', enabled: true, desc: '實驗器材、量筒、複式與解剖顯微鏡、倍率、成像與操作' },
+        { key: 'science-7-1-u01-school-records', code: '🏫', title: '學校考試紀錄', enabled: true, type: 'school-records', desc: '1 次考試｜最新 73 分｜8 題錯誤' },
         { key: 'science-7-1-core-1', code: '核心素養', title: '生活在沙漠中的生物', enabled: false, type: 'literacy' }
       ]
     },
@@ -1092,7 +1093,7 @@
       <p class="catalog-sub">目前單元 1 的 1-1、1-2、1-3，單元 2 的 2-1、2-2、2-3、2-4，以及單元 3 的 3-1、3-2 已有題庫入口；其餘小節先完成分類，題目後續加入。</p>
       <div class="catalog-grid">
         ${SCIENCE_7_1_UNITS.map(u => {
-          const ready = u.sections.filter(s => s.enabled).length;
+          const ready = u.sections.filter(s => s.enabled && s.type !== 'school-records').length;
           return `<button class="catalog-card chapter-card" data-science-unit="${u.key}"><span class="top"><strong>${u.number}　${u.title}</strong><span class="catalog-badge ${ready ? '' : 'soon'}">${ready ? `${ready} 節可作答` : '架構已建'}</span></span><span class="desc">${u.sections.map(s => `${s.code} ${s.title}`).join('、')}</span></button>`;
         }).join('')}
       </div>`;
@@ -1113,7 +1114,12 @@
       <h2 class="catalog-title">${unit.number}　${unit.title}</h2>
       <p class="catalog-sub">已建立教材小節分類；標示「題庫可用」者可以開始作答。</p>
       <div class="catalog-grid">
-        ${unit.sections.map(s => `<button class="catalog-card chapter-card" data-science-section="${s.key}" ${s.enabled ? '' : 'disabled'}><span class="top"><strong>${s.code}　${s.title}</strong><span class="catalog-badge ${s.enabled ? '' : (s.type === 'literacy' ? 'core' : 'soon')}">${s.enabled ? '題庫可用' : (s.type === 'literacy' ? '核心素養｜待建' : (s.type === 'assessment' ? '學力測驗｜待匯入' : '建置中'))}</span></span><span class="desc">${s.enabled ? (s.desc || '進入題庫') : (s.desc || '章節位置已建立，題目後續補入。')}</span></button>`).join('')}
+        ${unit.sections.map(s => {
+          const isSchoolRecord = s.type === 'school-records';
+          const badgeClass = isSchoolRecord ? 'school' : (s.enabled ? '' : (s.type === 'literacy' ? 'core' : 'soon'));
+          const badgeText = isSchoolRecord ? '1 次考試' : (s.enabled ? '題庫可用' : (s.type === 'literacy' ? '核心素養｜待建' : (s.type === 'assessment' ? '學力測驗｜待匯入' : '建置中')));
+          return `<button class="catalog-card chapter-card" data-science-section="${s.key}" ${s.enabled ? '' : 'disabled'}><span class="top"><strong>${s.code}　${s.title}</strong><span class="catalog-badge ${badgeClass}">${badgeText}</span></span><span class="desc">${s.enabled ? (s.desc || '進入題庫') : (s.desc || '章節位置已建立，題目後續補入。')}</span></button>`;
+        }).join('')}
       </div>`;
     $('#backScienceUnitsBtn')?.addEventListener('click', showScience71Units);
     if (unitKey === 'unit-1') $('[data-science-section="science-method"]')?.addEventListener('click', enterScienceMethod);

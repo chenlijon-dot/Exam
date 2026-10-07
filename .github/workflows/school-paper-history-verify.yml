@@ -1,0 +1,33 @@
+name: Verify school paper history
+
+on:
+  push:
+    branches:
+      - feat/school-paper-exam-history
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        run: |
+          node --check exam-science-school-records.js
+          node --check firebase-firestore-sync.js
+          node --check exam-records.js
+          node --check exam-catalog.js
+          node --check exam-navigation-fix.js
+      - name: Full repository test suite
+        run: |
+          set -e
+          for test in tests/*.test.mjs; do
+            echo "==> $test"
+            node "$test"
+          done

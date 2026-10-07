@@ -9,6 +9,7 @@ const document = {
   querySelector() { return null; },
   querySelectorAll() { return []; },
   createElement() { return { style:{}, classList:{ add(){}, remove(){}, toggle(){} }, appendChild(){}, addEventListener(){}, remove(){} }; },
+  head: { appendChild() {} },
   body: { appendChild() {} },
   readyState: 'complete'
 };

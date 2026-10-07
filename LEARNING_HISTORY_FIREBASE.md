@@ -1791,3 +1791,38 @@ vocabularyProgress
 8. 不要直接改變既有 `progressKey = gept-elementary:{vocabId}`，除非先規劃 Firestore 資料遷移。
 9. 新增學生端 UI 時，避免暴露內部服務與演算法字眼。
 10. 修改 Firebase 資料 schema 前，先更新本文件並確認舊資料相容性。
+
+
+## School exam source records
+
+School exam questions use the same question-history authority as every other fixed question bank.
+
+The original paper result is stored as the first normal question-history attempt:
+
+- `schemaVersion: 3`
+- `historyDomain: "question"`
+- `recordType: "school-exam"`
+- permanent per-item `questionId` and `questionRevision`
+- the student's original selected answer and `correct / incorrect` result
+
+The first source snapshot is:
+
+`chapter-bank/science/7-1/unit-01/school-exam-records/2026-unit-01-school-exam-01-attempt.json`
+
+There is no separate school-paper Firebase import API.
+
+When the school-exam record page is first opened, the browser checks `examRecords.v1`. If the original paper attempt is missing, it is inserted once into that existing local attempt list. The normal Firebase local-record sync path may then persist it exactly like other attempts.
+
+Review mode is read-only and does not create an attempt.
+
+A later retry uses the ordinary exam runtime and ordinary attempt capture. The original paper attempt and all later web attempts share the same permanent `questionId` values, so `ExamQuestionHistoryCore.aggregateQuestionHistory()` naturally combines them into:
+
+- `answeredCount`
+- `correctCount`
+- `wrongCount`
+- `lastResult`
+
+Do not add a second wrong-answer authority or a dedicated `questionProgress` collection for school exams.
+
+If the actual paper exam date is unknown, do not invent it. Preserve `sourceExamDateKnown:false`; the system may use the record/build time only as the technical ordering timestamp.
+

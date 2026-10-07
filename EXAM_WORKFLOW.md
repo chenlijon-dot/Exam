@@ -1876,3 +1876,25 @@ Sheet 與網站題庫可互相回溯
 ```
 
 未來遇到新的科目、新題型、新考卷格式，優先更新本母 SOP，而不是硬把新資料塞進舊模板。
+
+## 學校考試題庫
+
+學校考試不要建立另一套測驗系統。它和網站其他題庫的本質相同，只多了「來源是學校考試」以及「已知第一次紙本作答結果」。
+
+固定流程：
+
+1. 原始 JPG 放在 `學校考試卷紀錄/<科目>/`；題內必要圖表放 `cropped/`。
+2. 題目照既有題庫規則建立永久 `questionId / revision`，並保留原始題號與來源。
+3. 題幹、選項、正解與必要圖片整理成一般 chapter-bank JSON；來源欄位標示 school exam 即可。
+4. 紙本已知成績保存成這份題庫的「第一次作答紀錄」，沿用既有 `historyDomain:"question"` 與 `answers[]`。
+5. 第一次進入「學校考試紀錄」時，網站若尚未有這筆原始作答紀錄，就一次性加入既有 `examRecords.v1`；不提供額外的「匯入學習歷程」按鈕，也不建立專用 Firebase import API。
+6. 「回顧這次考試」只顯示原始答案、正解與既有每題錯題累積，不新增作答。
+7. 「重新作答」直接走現有 `startExam()`、計分、作答紀錄與 Firebase 同步流程，和其他題庫一樣。
+8. 紙本第一次與之後網站重做，只要 `questionId` 相同，就共同累計 `answeredCount / correctCount / wrongCount`。
+9. Google Sheet 只做整理與 QA，不是 runtime authority。
+
+第一份實作：
+`chapter-bank/science/7-1/unit-01/school-exam-records/2026-unit-01-school-exam-01.json`
+
+原始結果：30 題、22 題正確、8 題錯誤、73/100。
+
