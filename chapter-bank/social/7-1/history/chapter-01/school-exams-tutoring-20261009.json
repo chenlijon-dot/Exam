@@ -21,7 +21,7 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "staging",
-    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。此 sidecar 收錄 chapter-01 的 10 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。圖題先記錄 Drive cropped 原始檔與預期 production WebP 路徑。"
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-01 的 10 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。Q13、Q17、Q21 的 production WebP 已完成並 remote read-back。"
   },
   "source": {
     "school": "[補習班]",
@@ -209,7 +209,6 @@
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180856_q13.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q13.webp",
-      "imagePending": true,
       "imageAlt": "第13題原住民族分類圖"
     },
     {
@@ -313,7 +312,6 @@
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q17.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q17.webp",
-      "imagePending": true,
       "imageAlt": "第17題世界分布範圍圖"
     },
     {
@@ -385,7 +383,6 @@
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q21.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q21.webp",
-      "imagePending": true,
       "imageAlt": "第21題新石器時代文化與特色表"
     }
   ]
