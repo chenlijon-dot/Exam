@@ -21,7 +21,7 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "staging",
-    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-02 的 21 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。Q3、Q9、Q20、Q22、Q24 與題組一共用圖的 production WebP 已完成並 remote read-back。"
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-02 的 21 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。Q3、Q9、Q20、Q22、Q24 與題組一共用圖的 production WebP 已完成並 remote read-back。 AI 已逐題推定答案與簡短解析；此批答案未有官方／原補習班答案卷核對，仍不得視為 verified authority。"
   },
   "source": {
     "school": "[補習班]",
@@ -34,7 +34,8 @@
       "IMG_20261009_180909.jpg"
     ],
     "answerFile": null,
-    "answerVerified": false
+    "answerVerified": false,
+    "answerAuthority": "AI 推定答案，未官方驗證"
   },
   "questions": [],
   "pendingQuestions": [
@@ -68,8 +69,13 @@
         "葡萄牙"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "菲律賓自16世紀後期起長期受西班牙殖民統治，因此可見西班牙殖民遺跡。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900003",
@@ -102,11 +108,16 @@
         "荷蘭東印度公司官員"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180856_q3.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q3.webp",
-      "imageAlt": "第3題資料一與資料二"
+      "imageAlt": "第3題資料一與資料二",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "顏思齊、鄭芝龍屬活躍於東亞海域的海商武裝勢力，並曾在臺灣拓墾。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900005",
@@ -138,8 +149,13 @@
         "鄭氏"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "反清事業、向英商取得軍用品等線索指向鄭氏政權。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900006",
@@ -172,8 +188,13 @@
         "我們是葡萄牙人，占領臺灣跟中國貿易"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "明朝海禁背景下，海商在中國東南沿海進行走私貿易符合14至17世紀史實；其餘選項地點或勢力錯置。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900008",
@@ -206,8 +227,13 @@
         "葡萄牙人"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "普羅民遮城為荷蘭人在臺南所建，因此題幹所稱西方人為荷蘭人。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900009",
@@ -240,11 +266,16 @@
         "西班牙統治時期"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180856_q9.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q9.webp",
-      "imageAlt": "第9題臺灣對外貿易示意圖"
+      "imageAlt": "第9題臺灣對外貿易示意圖",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "圖中臺灣與中國、日本、東南亞及巴達維亞間的商品流向，符合荷蘭統治臺灣時期的國際貿易網絡。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900010",
@@ -278,8 +309,13 @@
         "透過貿易取得軍用品"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "軍屯主要是鄭成功時期為解決軍糧問題所推行；題目將其列為陳永華輔佐時所頒布政策，AI判定此項較不恰當。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900012",
@@ -312,8 +348,13 @@
         "倭寇侵擾走私劫掠"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "日本實施鎖國後，西班牙在北臺灣原本仰賴的對日貿易價值下降，因而減少駐軍。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900016",
@@ -346,8 +387,13 @@
         "金門"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "「沈有容諭退紅毛番韋麻郎等」碑位於澎湖天后宮。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900019",
@@ -380,8 +426,13 @@
         "西班牙人"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "1661年鄭成功攻臺時圍攻荷蘭據點，題幹中的勸降情境指向鄭成功勢力。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900020",
@@ -414,11 +465,16 @@
         "丙、丁"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q20.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q20.webp",
-      "imageAlt": "第20題東亞與東南亞地圖"
+      "imageAlt": "第20題東亞與東南亞地圖",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "圖中乙為臺灣、丁為巴達維亞（爪哇）；兩者皆曾為17世紀荷蘭重要據點。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900022",
@@ -451,11 +507,16 @@
         "顏思齊與倭寇"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q22.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q22.webp",
-      "imageAlt": "第22題和平條約部分內容"
+      "imageAlt": "第22題和平條約部分內容",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "熱蘭遮城交給國姓爺的條文，對應鄭成功與荷蘭人之間的降約。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900023",
@@ -488,8 +549,13 @@
         "熱蘭遮城"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "1622年荷蘭自巴達維亞出兵攻打葡萄牙在澳門的據點但失敗，之後轉往澎湖。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900024",
@@ -521,12 +587,17 @@
         "防範沈有容入侵"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "intro": "(1) 洪武 14 年：禁瀕海民私通海外諸國。\n(2) 洪武 23 年：兩廣、浙江、福建居民無知，往往交通外番，私易貨物，以故嚴禁之。\n(3) 洪武 30 年：禁人民無得擅出海與國外國互市。",
       "sourceImageFile": "IMG_20261009_180909_q24.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q24.webp",
-      "imageAlt": "第24題明朝洪武年間禁令"
+      "imageAlt": "第24題明朝洪武年間禁令",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "明初海禁的主要背景之一是防範倭寇與沿海走私、劫掠活動。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900025",
@@ -559,13 +630,18 @@
         "高雄市"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "introLabel": "題組一｜圖(七)",
       "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
       "sourceImageFile": "IMG_20261009_180909_q二.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
-      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
+      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "赤崁、熱蘭遮城、鹿耳門水道皆位於今日臺南一帶。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900026",
@@ -598,13 +674,18 @@
         "荷蘭"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "introLabel": "題組一｜圖(七)",
       "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
       "sourceImageFile": "IMG_20261009_180909_q二.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
-      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
+      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "赤崁與熱蘭遮城作為同一時期港市景觀，對應荷蘭統治臺灣時期。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900027",
@@ -637,13 +718,18 @@
         "英國對華交易的根據地"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "introLabel": "題組一｜圖(七)",
       "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
       "sourceImageFile": "IMG_20261009_180909_q二.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
-      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
+      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "臺灣位處東亞海域樞紐，在17世紀國際貿易中扮演中繼站角色。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900028",
@@ -676,10 +762,15 @@
         "西班牙國王"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "introLabel": "題組二｜十七世紀晚期條約",
-      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "17世紀晚期與歐洲公司簽約、並持續統治臺灣的鄭氏君主為鄭經。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900029",
@@ -711,10 +802,15 @@
         "香料、稻米"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "introLabel": "題組二｜十七世紀晚期條約",
-      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "鄭氏時期重要出口品包括蔗糖、鹿皮等。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900030",
@@ -746,10 +842,15 @@
         "葡萄牙"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "introLabel": "題組二｜十七世紀晚期條約",
-      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "鄭氏政權曾與英國東印度公司進行貿易並取得軍用品，因此甲國推定為英國。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900031",
@@ -782,10 +883,15 @@
         "施琅攻下臺灣"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "introLabel": "題組二｜十七世紀晚期條約",
-      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "鄭氏政權於施琅攻臺後結束，相關條約與商業安排也隨政權終止。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     }
   ]
 }
