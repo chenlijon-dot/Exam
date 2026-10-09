@@ -21,7 +21,7 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "staging",
-    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-01 的 10 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。Q13、Q17、Q21 的 production WebP 已完成並 remote read-back。"
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-01 的 10 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。Q13、Q17、Q21 的 production WebP 已完成並 remote read-back。 AI 已逐題推定答案與簡短解析；此批答案未有官方／原補習班答案卷核對，仍不得視為 verified authority。"
   },
   "source": {
     "school": "[補習班]",
@@ -34,7 +34,8 @@
       "IMG_20261009_180909.jpg"
     ],
     "answerFile": null,
-    "answerVerified": false
+    "answerVerified": false,
+    "answerAuthority": "AI 推定答案，未官方驗證"
   },
   "questions": [],
   "pendingQuestions": [
@@ -69,8 +70,13 @@
         "十三行文化"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "題幹描述臺東卑南車站施工時發現約三千年前玉石與陶質遺物，對應卑南文化。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900004",
@@ -103,8 +109,13 @@
         "中國銅錢"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "中國銅錢屬外來物品，可作為與海外／中國地區存在交換或貿易往來的證據。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900007",
@@ -137,8 +148,13 @@
         "圓山文化的貝塚"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "長濱文化遺址位於臺灣東部，並以打製石器等舊石器時代遺物著名。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900011",
@@ -171,8 +187,13 @@
         "十三行文化"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "番仔園遺址已有鐵器與外來玻璃、瑪瑙等，屬金屬器時代，與十三行文化同一時期。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900013",
@@ -205,11 +226,16 @@
         "使用貨幣類型"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180856_q13.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q13.webp",
-      "imageAlt": "第13題原住民族分類圖"
+      "imageAlt": "第13題原住民族分類圖",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "清代常以是否接受政府治理、納餉等情況區分原住民族群，故以接受朝廷治理作為分類依據最合適。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900014",
@@ -241,8 +267,13 @@
         "平埔族"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "日治時期後來以「高砂族」稱呼臺灣高山原住民族。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900015",
@@ -275,8 +306,13 @@
         "小乙使用打製石器捕捉獵物"
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "圓山文化屬新石器時代，尚未進入煉鐵技術階段。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900017",
@@ -308,11 +344,16 @@
         "倭寇活動範圍"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q17.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q17.webp",
-      "imageAlt": "第17題世界分布範圍圖"
+      "imageAlt": "第17題世界分布範圍圖",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "圖示呈現跨越臺灣、東南亞、太平洋島嶼等範圍，最符合南島語族分布。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900018",
@@ -345,8 +386,13 @@
         "也可證明當時的煉鐵技術爐火純青"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
-      "lifecycle": "staging"
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "新石器時代尚未發展成熟煉鐵技術，因此「煉鐵技術爐火純青」可判斷為錯誤。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     },
     {
       "questionId": "261009211900021",
@@ -379,11 +425,16 @@
         "卑南文化－粗繩紋陶器"
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
-      "status": "pending-answer-key",
+      "status": "pending-official-answer-verification",
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q21.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q21.webp",
-      "imageAlt": "第21題新石器時代文化與特色表"
+      "imageAlt": "第21題新石器時代文化與特色表",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "南關里遺址發現稻米遺存／化石，是其重要考古特色；其餘配對不符。",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified"
     }
   ]
 }
