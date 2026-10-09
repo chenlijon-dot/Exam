@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-01-school-tutoring-20261009",
+    "difficulty": "social-7-1-history-01-school-tutoring-20261009",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第1章｜[補習班] 題庫",
+    "title": "第1章 史前臺灣與原住民文化｜[補習班] 題庫",
+    "subtitle": "社會七上｜歷史｜[補習班]｜第二篇 1～2章複習｜本章 10 個作答項目｜答案待補",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-01",
+    "unit": "第1章 史前臺灣與原住民文化",
+    "difficultyLabel": "[補習班] 題庫",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。此 sidecar 收錄 chapter-01 的 10 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。圖題先記錄 Drive cropped 原始檔與預期 production WebP 路徑。"
+  },
+  "source": {
+    "school": "[補習班]",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "七年級歷史（一）｜第二篇 1～2章複習",
+    "sourceType": "school-exam",
+    "sourceFiles": [
+      "IMG_20261009_180856.jpg",
+      "IMG_20261009_180909.jpg"
+    ],
+    "answerFile": null,
+    "answerVerified": false
+  },
+  "questions": [],
+  "pendingQuestions": [
+    {
+      "questionId": "261009211900002",
+      "revision": 1,
+      "originalQuestionNumber": "2",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-archaeology"
+      ],
+      "q": "1980 年，南迴鐵路卑南車站（今臺東車站）即將開工，未料於開工典禮前兩天，怪手預先整地並舉行破土儀式，竟整出了 3,000 年前的玉石與陶質遺物，引起了臺灣考古學界的驚嘆與重視，遂開啟臺灣近代史上首次的搶救考古，挖掘出相當豐富的物品，讓民眾更加認識臺灣的史前文化。上述中所提到的文物最有可能跟下列哪一史前文化有關？",
+      "o": [
+        "圓山文化",
+        "卑南文化",
+        "大坌坑文化",
+        "十三行文化"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900004",
+      "revision": 1,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-archaeology",
+        "hist-7-1-1-shisanhang-culture"
+      ],
+      "q": "臺灣在 17 世紀之前沒有留下文字記載，要追溯臺灣先民的足跡，考古資料和口語傳說是最重要的途徑。若在考古上發現下列哪個物品，就能推論出當時居民與海外其他地區已有貿易往來？",
+      "o": [
+        "玉器石棺",
+        "煉鐵作坊",
+        "粗繩紋陶",
+        "中國銅錢"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900007",
+      "revision": 1,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-changbin-culture",
+        "hist-7-1-1-paleolithic"
+      ],
+      "q": "小嫻一家人沿著臺 11 線開車到花東地區遊玩，花東地區除了山海奇景之外，更有豐富的史前文化。小嫻在花東地區可以看到下列哪一史前遺跡？",
+      "o": [
+        "大坌坑文化的繩紋陶",
+        "長濱文化的石器",
+        "十三行文化的鐵器",
+        "圓山文化的貝塚"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900011",
+      "revision": 1,
+      "originalQuestionNumber": "11",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-metal-age",
+        "hist-7-1-1-shisanhang-culture"
+      ],
+      "q": "番仔園遺址距今約在 1,500 年前，曾發現鐵刀，也有骨角器、玻璃手鐲、瑪瑙珠等物品出土。根據上文，番仔園遺址與下列何者在考古分類上屬於同一個時期？",
+      "o": [
+        "長濱文化",
+        "大坌坑文化",
+        "卑南文化",
+        "十三行文化"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900013",
+      "revision": 1,
+      "originalQuestionNumber": "13",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-plains-indigenous",
+        "hist-7-1-1-indigenous-naming"
+      ],
+      "q": "翰翰將圖(二)中的五個原住民族分為圖(三)中的兩類，若是以清帝國時期來分，當時分類的依據最可能是下列何者？",
+      "o": [
+        "器物製作技術",
+        "文字發展程度",
+        "接受朝廷治理",
+        "使用貨幣類型"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "sourceImageFile": "IMG_20261009_180856_q13.png",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q13.webp",
+      "imagePending": true,
+      "imageAlt": "第13題原住民族分類圖"
+    },
+    {
+      "questionId": "261009211900014",
+      "revision": 1,
+      "originalQuestionNumber": "14",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-indigenous-naming"
+      ],
+      "q": "日本統治臺灣初期，對於臺灣原住民的稱呼是延續清帝國時期的用語，直到 1923 年，據說那一年日本皇太子來臺訪問觀看阿美族的表演時，聽到解說員的介紹覺得不妥，下令廢除使用清帝國時期的用語，而改用以下哪一名稱來稱呼原住民族群？",
+      "o": [
+        "生番",
+        "熟番",
+        "高砂族",
+        "平埔族"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900015",
+      "revision": 1,
+      "originalQuestionNumber": "15",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-yuanshan-culture",
+        "hist-7-1-1-neolithic"
+      ],
+      "q": "歷史老師要同學們模擬圓山文化人類的生活情形。下列哪一同學最不符合情境？",
+      "o": [
+        "阿漢正在種植作物",
+        "小祈開始研究煉鐵技術",
+        "阿帥會用火烤食物來吃",
+        "小乙使用打製石器捕捉獵物"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900017",
+      "revision": 1,
+      "originalQuestionNumber": "17",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-austronesian"
+      ],
+      "q": "圖(四)是小林看到的一幅圖，若要給這幅圖一個圖名，下列何者最適合？",
+      "o": [
+        "南島語族分布圖",
+        "荷蘭殖民分布圖",
+        "東亞貿易轉運圖",
+        "倭寇活動範圍"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "sourceImageFile": "IMG_20261009_180909_q17.png",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q17.webp",
+      "imagePending": true,
+      "imageAlt": "第17題世界分布範圍圖"
+    },
+    {
+      "questionId": "261009211900018",
+      "revision": 1,
+      "originalQuestionNumber": "18",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-metal-age"
+      ],
+      "q": "拍賣會上，某賣家正在兜售一件號稱是新石器時代臺灣出土的古董，但是隨即被識破是假的。下列該賣家的哪一敘述是他被拆穿的原因？",
+      "o": [
+        "它屬於新石器時代的大坌坑文化",
+        "這個古董距今約有 5,800 年的歷史",
+        "它證明該時期人類開始進入產食階段",
+        "也可證明當時的煉鐵技術爐火純青"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900021",
+      "revision": 1,
+      "originalQuestionNumber": "21",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-01"
+      ],
+      "conceptIds": [
+        "hist-7-1-1-neolithic",
+        "hist-7-1-1-nanguanli-rice"
+      ],
+      "q": "下表為倫倫上完歷史課後，將臺灣新石器時代的各文化及特色整理成表格。倫倫所整理的表格當中何者正確？",
+      "o": [
+        "大坌坑文化－貝塚",
+        "圓山文化－石板棺",
+        "南關里遺址－稻米化石",
+        "卑南文化－粗繩紋陶器"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "sourceImageFile": "IMG_20261009_180909_q21.png",
+      "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q21.webp",
+      "imagePending": true,
+      "imageAlt": "第21題新石器時代文化與特色表"
+    }
+  ]
+}
