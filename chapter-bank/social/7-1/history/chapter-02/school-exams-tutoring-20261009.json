@@ -21,7 +21,7 @@
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
     "lifecycle": "staging",
-    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。此 sidecar 收錄 chapter-02 的 21 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。圖題先記錄 Drive cropped 原始檔與預期 production WebP 路徑。"
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-02 的 21 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。Q3、Q9、Q20、Q22、Q24 與題組一共用圖的 production WebP 已完成並 remote read-back。"
   },
   "source": {
     "school": "[補習班]",
@@ -106,7 +106,6 @@
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180856_q3.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q3.webp",
-      "imagePending": true,
       "imageAlt": "第3題資料一與資料二"
     },
     {
@@ -245,7 +244,6 @@
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180856_q9.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q9.webp",
-      "imagePending": true,
       "imageAlt": "第9題臺灣對外貿易示意圖"
     },
     {
@@ -420,7 +418,6 @@
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q20.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q20.webp",
-      "imagePending": true,
       "imageAlt": "第20題東亞與東南亞地圖"
     },
     {
@@ -458,7 +455,6 @@
       "lifecycle": "staging",
       "sourceImageFile": "IMG_20261009_180909_q22.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q22.webp",
-      "imagePending": true,
       "imageAlt": "第22題和平條約部分內容"
     },
     {
@@ -530,7 +526,6 @@
       "intro": "(1) 洪武 14 年：禁瀕海民私通海外諸國。\n(2) 洪武 23 年：兩廣、浙江、福建居民無知，往往交通外番，私易貨物，以故嚴禁之。\n(3) 洪武 30 年：禁人民無得擅出海與國外國互市。",
       "sourceImageFile": "IMG_20261009_180909_q24.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q24.webp",
-      "imagePending": true,
       "imageAlt": "第24題明朝洪武年間禁令"
     },
     {
@@ -570,7 +565,6 @@
       "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
       "sourceImageFile": "IMG_20261009_180909_q二.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
-      "imagePending": true,
       "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
     },
     {
@@ -610,7 +604,6 @@
       "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
       "sourceImageFile": "IMG_20261009_180909_q二.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
-      "imagePending": true,
       "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
     },
     {
@@ -650,7 +643,6 @@
       "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
       "sourceImageFile": "IMG_20261009_180909_q二.png",
       "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
-      "imagePending": true,
       "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
     },
     {
