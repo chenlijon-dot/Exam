@@ -1,0 +1,799 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-history-02-school-tutoring-20261009",
+    "difficulty": "social-7-1-history-02-school-tutoring-20261009",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "歷史七上 第2章｜[補習班] 題庫",
+    "title": "第2章 大航海時代各方勢力的競逐｜[補習班] 題庫",
+    "subtitle": "社會七上｜歷史｜[補習班]｜第二篇 1～2章複習｜本章 21 個作答項目｜答案待補",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-02",
+    "unit": "第2章 大航海時代各方勢力的競逐",
+    "difficultyLabel": "[補習班] 題庫",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。此 sidecar 收錄 chapter-02 的 21 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。圖題先記錄 Drive cropped 原始檔與預期 production WebP 路徑。"
+  },
+  "source": {
+    "school": "[補習班]",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "七年級歷史（一）｜第二篇 1～2章複習",
+    "sourceType": "school-exam",
+    "sourceFiles": [
+      "IMG_20261009_180856.jpg",
+      "IMG_20261009_180909.jpg"
+    ],
+    "answerFile": null,
+    "answerVerified": false
+  },
+  "questions": [],
+  "pendingQuestions": [
+    {
+      "questionId": "261009211900001",
+      "revision": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-european-eastward-expansion"
+      ],
+      "q": "16 世紀後，歐洲國家紛紛東來亞洲建立殖民據點。若今日我們前往菲律賓觀光，有機會看到哪一個國家曾經殖民當地所留下的遺跡？",
+      "o": [
+        "荷蘭",
+        "西班牙",
+        "法國",
+        "葡萄牙"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900003",
+      "revision": 1,
+      "originalQuestionNumber": "3",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants",
+        "hist-7-1-2-zheng-zhilong"
+      ],
+      "q": "下列為描述顏思齊與鄭芝龍的事蹟，根據文中資料判斷，此二人應為何種身分？\n資料一：明朝天啟年間，顏思齊與鄭芝龍率領兵眾渡海來臺，築寨、練兵、墾荒等，顏思齊被稱為「開臺先賢」。\n資料二：四百年前「海上武裝集團」顏思齊、鄭芝龍，在嘉義沿海一帶建立「諸羅外九庄」。",
+      "o": [
+        "隻身抗荷的漢人英烈",
+        "鎮守邊疆的明朝將領",
+        "稱霸海上貿易的海商",
+        "荷蘭東印度公司官員"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "sourceImageFile": "IMG_20261009_180856_q3.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q3.webp",
+      "imagePending": true,
+      "imageAlt": "第3題資料一與資料二"
+    },
+    {
+      "questionId": "261009211900005",
+      "revision": 1,
+      "originalQuestionNumber": "5",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-trade"
+      ],
+      "q": "英國人約翰發現一份祖先與外國人的買賣契約書，原來約翰的祖先曾大量運銷軍用品前往臺灣，供當時政權反清事業所需。上述約翰祖先的貿易往來對象應為何者？",
+      "o": [
+        "十三行文化人",
+        "荷蘭",
+        "西班牙",
+        "鄭氏"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900006",
+      "revision": 1,
+      "originalQuestionNumber": "6",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-chinese-merchants",
+        "hist-7-1-2-european-eastward-expansion"
+      ],
+      "q": "7 年甲班在準備歷史話劇的演出，各組分別代表 14 至 17 世紀不同的海上勢力。下列哪一組臺詞最符合設定的情境？",
+      "o": [
+        "我們是西班牙人，已成功占領臺灣南部",
+        "我們是海商，在中國東南沿海進行走私",
+        "我是鄭芝龍，曾經招募漢人來澎湖開墾",
+        "我們是葡萄牙人，占領臺灣跟中國貿易"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900008",
+      "revision": 1,
+      "originalQuestionNumber": "8",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-rule",
+        "hist-7-1-2-historical-landscape"
+      ],
+      "q": "臺語稱水泥為「紅毛土」，因為當初西方人在興建「普羅民遮城」時，以糯米、紅糖和石灰混合成一種洋灰的代替品，因此被稱為「紅毛土」。上述引進「紅毛土」的西方人應為下列何者？",
+      "o": [
+        "日本人",
+        "西班牙人",
+        "荷蘭人",
+        "葡萄牙人"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900009",
+      "revision": 1,
+      "originalQuestionNumber": "9",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-trade",
+        "hist-7-1-2-east-asian-trade-network"
+      ],
+      "q": "圖(一)為某時期臺灣對外貿易示意圖，依內容判斷，這應是下列哪一時期臺灣對外貿易情形？",
+      "o": [
+        "明朝統治時期",
+        "荷蘭統治時期",
+        "鄭成功統治時期",
+        "西班牙統治時期"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "sourceImageFile": "IMG_20261009_180856_q9.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q9.webp",
+      "imagePending": true,
+      "imageAlt": "第9題臺灣對外貿易示意圖"
+    },
+    {
+      "questionId": "261009211900010",
+      "revision": 1,
+      "originalQuestionNumber": "10",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-education",
+        "hist-7-1-2-military-colony",
+        "hist-7-1-2-zheng-trade"
+      ],
+      "q": "陳永華深得鄭成功賞識，日後成為鄭家麾下的謀士，對於鄭氏政權的治理，如擬定政策、建立制度等貢獻良多，因而有「鄭氏諸葛」之稱。下列關於陳永華輔佐鄭氏時，所頒布的政策何者有誤？",
+      "o": [
+        "建立全臺第一間孔廟",
+        "行軍屯解決糧食問題",
+        "與日本進行走私貿易",
+        "透過貿易取得軍用品"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900012",
+      "revision": 1,
+      "originalQuestionNumber": "12",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-spanish-northern-taiwan",
+        "hist-7-1-2-japan-sakoku-impact"
+      ],
+      "q": "西班牙於 1626 年占領雞籠、淡水、蛤仔難等地，作為牽制荷蘭勢力及對中國、日本貿易的據點。之後由於某些原因，西班牙卻減少駐臺守軍，1642 年結束西班牙在北臺灣的統治。上述減少駐軍的原因最有可能是下列何者？",
+      "o": [
+        "中國實施海禁政策",
+        "日本實施鎖國政策",
+        "鄭氏尋求反清基地",
+        "倭寇侵擾走私劫掠"
+      ],
+      "sourceFile": "IMG_20261009_180856.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900016",
+      "revision": 1,
+      "originalQuestionNumber": "16",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-european-eastward-expansion",
+        "hist-7-1-2-maritime-ban"
+      ],
+      "q": "哲青暑假到臺灣離島旅遊，看到當地有一古蹟為「沈有容諭退紅毛番韋麻郎等」的石碑，他應該是到下列何地旅遊？",
+      "o": [
+        "綠島",
+        "蘭嶼",
+        "澎湖",
+        "金門"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900019",
+      "revision": 1,
+      "originalQuestionNumber": "19",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-koxinga-conquest",
+        "hist-7-1-2-fort-zeelandia"
+      ],
+      "q": "小鼎看到一幅油畫旁的介紹寫著：「5 月 24 日，一位在麻豆社對原住民傳教的牧師，因太太和兩個年幼的女兒被劫持為人質，被迫進入熱蘭遮城送信向荷蘭人勸降。」依上述，畫中要脅牧師的勢力最有可能是下列何者？",
+      "o": [
+        "顏思齊",
+        "鄭芝龍",
+        "鄭成功",
+        "西班牙人"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900020",
+      "revision": 1,
+      "originalQuestionNumber": "20",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-voc",
+        "hist-7-1-2-dutch-rule"
+      ],
+      "q": "在新航路發現後，歐洲人紛紛到亞洲尋找據點。17 世紀初，荷蘭人占領了圖(五)中的哪兩地？",
+      "o": [
+        "甲、乙",
+        "乙、丙",
+        "乙、丁",
+        "丙、丁"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "sourceImageFile": "IMG_20261009_180909_q20.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q20.webp",
+      "imagePending": true,
+      "imageAlt": "第20題東亞與東南亞地圖"
+    },
+    {
+      "questionId": "261009211900022",
+      "revision": 1,
+      "originalQuestionNumber": "22",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-koxinga-conquest",
+        "hist-7-1-2-fort-zeelandia"
+      ],
+      "q": "大華在歷史課本上看到一個和平條約部分內容如圖(六)，根據內容判斷，簽署條約的雙方最有可能是下列何者？",
+      "o": [
+        "沈有容與荷蘭人",
+        "鄭成功與荷蘭人",
+        "西班牙與荷蘭人",
+        "顏思齊與倭寇"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "sourceImageFile": "IMG_20261009_180909_q22.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q22.webp",
+      "imagePending": true,
+      "imageAlt": "第22題和平條約部分內容"
+    },
+    {
+      "questionId": "261009211900023",
+      "revision": 1,
+      "originalQuestionNumber": "23",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-european-eastward-expansion",
+        "hist-7-1-2-dutch-rule"
+      ],
+      "q": "1622 年巴達維亞提督率領艦隊襲擊葡萄牙的貿易據點，企圖奪取此地據為己有。激戰一番後葡萄牙守兵成功擊敗敵軍。上述戰事發生地點最有可能位於下列何者？",
+      "o": [
+        "澎湖",
+        "澳門",
+        "馬尼拉",
+        "熱蘭遮城"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging"
+    },
+    {
+      "questionId": "261009211900024",
+      "revision": 1,
+      "originalQuestionNumber": "24",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-maritime-ban"
+      ],
+      "q": "右列為明朝洪武年間所頒布的禁令，依內容判斷，當時頒布這幾項禁令的目的應為下列何者？",
+      "o": [
+        "防備倭寇的猖獗",
+        "抵制鄭成功勢力",
+        "對抗日本的鎖國",
+        "防範沈有容入侵"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "intro": "(1) 洪武 14 年：禁瀕海民私通海外諸國。\n(2) 洪武 23 年：兩廣、浙江、福建居民無知，往往交通外番，私易貨物，以故嚴禁之。\n(3) 洪武 30 年：禁人民無得擅出海與國外國互市。",
+      "sourceImageFile": "IMG_20261009_180909_q24.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-q24.webp",
+      "imagePending": true,
+      "imageAlt": "第24題明朝洪武年間禁令"
+    },
+    {
+      "questionId": "261009211900025",
+      "revision": 1,
+      "originalQuestionNumber": "二-1",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-historical-landscape",
+        "hist-7-1-2-fort-zeelandia"
+      ],
+      "q": "根據圖(七)內容判斷，圖中描繪的區域應位於今日哪一個行政區內？",
+      "o": [
+        "臺中市",
+        "嘉義縣",
+        "臺南市",
+        "高雄市"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "introLabel": "題組一｜圖(七)",
+      "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
+      "sourceImageFile": "IMG_20261009_180909_q二.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
+      "imagePending": true,
+      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
+    },
+    {
+      "questionId": "261009211900026",
+      "revision": 1,
+      "originalQuestionNumber": "二-2",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-dutch-rule",
+        "hist-7-1-2-fort-zeelandia"
+      ],
+      "q": "根據圖(七)內容判斷，該區域當時是哪一勢力統治？",
+      "o": [
+        "西班牙",
+        "鄭氏",
+        "清帝國",
+        "荷蘭"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "introLabel": "題組一｜圖(七)",
+      "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
+      "sourceImageFile": "IMG_20261009_180909_q二.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
+      "imagePending": true,
+      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
+    },
+    {
+      "questionId": "261009211900027",
+      "revision": 1,
+      "originalQuestionNumber": "二-3",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-taiwan-maritime-location",
+        "hist-7-1-2-east-asian-trade-network"
+      ],
+      "q": "當時的臺灣由於地理位置優越，而在貿易上扮演了什麼樣的角色？",
+      "o": [
+        "中國對外通商的出口港",
+        "東亞國際貿易的中繼站",
+        "漢人移民南洋的轉運點",
+        "英國對華交易的根據地"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "introLabel": "題組一｜圖(七)",
+      "intro": "圖(七)為臺灣某個時期沿海港市圖，當時圖中描繪的區域是臺灣貿易最繁盛之地。然而，昔日滄海、今日桑田，圖片中的地形地貌已經與今日有很大的差異。",
+      "sourceImageFile": "IMG_20261009_180909_q二.png",
+      "image": "chapter-bank/social/7-1/history/chapter-02/assets/tutoring-20261009-group-a.webp",
+      "imagePending": true,
+      "imageAlt": "題組一圖七：赤崁、熱蘭遮城與鹿耳門水道"
+    },
+    {
+      "questionId": "261009211900028",
+      "revision": 1,
+      "originalQuestionNumber": "二-4",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-regime",
+        "hist-7-1-2-zheng-trade"
+      ],
+      "q": "文中的「臺灣國王」指的是哪一位人物？",
+      "o": [
+        "鄭經",
+        "荷蘭國王",
+        "顏思齊",
+        "西班牙國王"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "introLabel": "題組二｜十七世紀晚期條約",
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+    },
+    {
+      "questionId": "261009211900029",
+      "revision": 1,
+      "originalQuestionNumber": "二-5",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-trade"
+      ],
+      "q": "承第 4 題，在該國王統治之下，臺灣最主要出口的商品為何？",
+      "o": [
+        "稻米、鹿皮",
+        "蔗糖、鹿皮",
+        "絲綢、瓷器",
+        "香料、稻米"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "introLabel": "題組二｜十七世紀晚期條約",
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+    },
+    {
+      "questionId": "261009211900030",
+      "revision": 1,
+      "originalQuestionNumber": "二-6",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-zheng-trade"
+      ],
+      "q": "文中的「甲國」為下列哪一國家？",
+      "o": [
+        "英國",
+        "荷蘭",
+        "西班牙",
+        "葡萄牙"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "introLabel": "題組二｜十七世紀晚期條約",
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+    },
+    {
+      "questionId": "261009211900031",
+      "revision": 1,
+      "originalQuestionNumber": "二-7",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級歷史（一）｜第二篇 1～2 章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "chapterTags": [
+        "history-chapter-02"
+      ],
+      "conceptIds": [
+        "hist-7-1-2-shi-lang",
+        "hist-7-1-2-end-of-zheng-regime"
+      ],
+      "q": "該條約最有可能因為哪一事情而被迫中止？",
+      "o": [
+        "鄭成功趕走荷蘭人",
+        "荷蘭打敗西班牙人",
+        "顏思齊因病逝世",
+        "施琅攻下臺灣"
+      ],
+      "sourceFile": "IMG_20261009_180909.jpg",
+      "status": "pending-answer-key",
+      "lifecycle": "staging",
+      "introLabel": "題組二｜十七世紀晚期條約",
+      "intro": "下列為十七世紀晚期，歐洲的甲國與當時臺灣統治者簽訂條約的部分內容：\n1. 為維持公司與臺灣國王間之友誼，國王允許協助公司及所屬個人在臺灣之生活能自由而不會被困擾。\n2. 臺灣國王允許本國人民受虐待、困擾或傷害時採取行動，直接或間接保護或補救之。3 年後，因臺灣統治者急需甲國的軍火，因此雙方又補訂 10 條協約。"
+    }
+  ]
+}
