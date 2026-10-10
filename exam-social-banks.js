@@ -10,7 +10,10 @@
       pointsPerQuestion: 10,
       schoolBank: 'school-exams-kaimo-0903.json',
       schoolBankCount: 68,
-      schoolBankLabel: '升學王'
+      schoolBankLabel: '升學王',
+      supplementalBanks: [
+        { label: '補習班', icon: '📘', count: 15, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+      ]
     },
     'geo-02': {
       title: '第2章　世界中的臺灣',
@@ -20,7 +23,10 @@
       pointsPerQuestion: 5,
       schoolBank: 'school-exams-kaimo-0917.json',
       schoolBankCount: 32,
-      schoolBankLabel: '升學王'
+      schoolBankLabel: '升學王',
+      supplementalBanks: [
+        { label: '補習班', icon: '📘', count: 16, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+      ]
     },
     'geo-03': {
       title: '第3章　地形',
