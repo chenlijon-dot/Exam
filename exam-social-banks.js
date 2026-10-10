@@ -46,9 +46,9 @@
       backText: '歷史章節',
       pathLabel: '歷史',
       schoolBank: 'school-exams-kaimo-0910.json',
-      schoolBankExtraPaths: ['school-exams-kaimo-0903.json', 'school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json'],
-      schoolBankCount: 70,
-      schoolBankLabel: '高雄楷模書院'
+      schoolBankExtraPaths: ['school-exams-kaimo-0903.json', 'school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json', 'school-exams-tutoring-20261009.json'],
+      schoolBankCount: 80,
+      schoolBankLabel: '高雄楷模書院＋補習班'
     },
     'hist-02': {
       title: '第2章　大航海時代各方勢力的競逐',
@@ -60,9 +60,9 @@
       backText: '歷史章節',
       pathLabel: '歷史',
       schoolBank: 'school-exams-kaimo-0917.json',
-      schoolBankExtraPaths: ['school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json'],
-      schoolBankCount: 55,
-      schoolBankLabel: '高雄楷模書院'
+      schoolBankExtraPaths: ['school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json', 'school-exams-tutoring-20261009.json'],
+      schoolBankCount: 76,
+      schoolBankLabel: '高雄楷模書院＋補習班'
     },
     'hist-03': {
       title: '第3章　大航海時代臺灣原住民與外來者',
