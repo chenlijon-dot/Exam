@@ -12,7 +12,7 @@
       schoolBankCount: 68,
       schoolBankLabel: '升學王',
       supplementalBanks: [
-        { label: '補習班', icon: '📘', count: 15, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+        { label: '補習班', icon: '📘', count: 15, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證', reviewOnly: true }
       ]
     },
     'geo-02': {
@@ -25,7 +25,7 @@
       schoolBankCount: 32,
       schoolBankLabel: '升學王',
       supplementalBanks: [
-        { label: '補習班', icon: '📘', count: 16, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+        { label: '補習班', icon: '📘', count: 16, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證', reviewOnly: true }
       ]
     },
     'geo-03': {
@@ -56,7 +56,7 @@
       schoolBankCount: 70,
       schoolBankLabel: '高雄楷模書院',
       supplementalBanks: [
-        { label: '補習班', icon: '📘', count: 10, paths: ['school-exams-tutoring-20261009.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+        { label: '補習班', icon: '📘', count: 10, paths: ['school-exams-tutoring-20261009.json'], desc: '補習班考題｜AI 推定答案未官方驗證', reviewOnly: true }
       ]
     },
     'hist-02': {
@@ -73,7 +73,7 @@
       schoolBankCount: 55,
       schoolBankLabel: '高雄楷模書院',
       supplementalBanks: [
-        { label: '補習班', icon: '📘', count: 21, paths: ['school-exams-tutoring-20261009.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+        { label: '補習班', icon: '📘', count: 21, paths: ['school-exams-tutoring-20261009.json'], desc: '補習班考題｜AI 推定答案未官方驗證', reviewOnly: true }
       ]
     },
     'hist-03': {
@@ -186,7 +186,12 @@
         return res.json();
       }));
       const data = banksData[0] || {};
-      const questions = banksData.flatMap(bank => Array.isArray(bank.questions) ? bank.questions : []);
+      const questions = banksData.flatMap(bank => {
+        const active = Array.isArray(bank.questions) ? bank.questions : [];
+        if (active.length) return active;
+        if (bankConfig?.reviewOnly && Array.isArray(bank.pendingQuestions)) return bank.pendingQuestions;
+        return [];
+      });
       if (!questions.length) throw new Error('題庫沒有可作答題目');
       if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
@@ -196,6 +201,9 @@
       window.examContexts[key] = {
         ...(data.exam || {}),
         key,
+        reviewOnly: !!bankConfig?.reviewOnly,
+        analysisEligible: bankConfig?.reviewOnly ? false : (data.exam?.analysisEligible ?? true),
+        sourceLabel: bankConfig?.label || data.exam?.sourceLabel || chapter.schoolBankLabel || '',
         backLabel: `返回${chapter.title.split('　')[0]}題庫`,
         onBack: showSocialGeo01MenuAfterExam
       };
