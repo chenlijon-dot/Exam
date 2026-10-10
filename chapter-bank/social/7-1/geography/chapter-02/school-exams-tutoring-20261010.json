@@ -22,7 +22,7 @@
     "sourceType": "school-exam",
     "lifecycle": "staging",
     "sourceLabel": "補習班",
-    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180816.jpg、IMG_20261009_180826.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 第2章 世界中的臺灣 的 16 個作答項目。整卷 Census、逐題文字辨識、第二輪視覺 QA、chapter／section／concept mapping 已完成；使用者已完成 cropped PNG。未提供官方答案卷，因此全部保留於 pendingQuestions，不進自動判分。AI 已逐題推定答案與簡短解析，但均為未官方驗證。"
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180816.jpg、IMG_20261009_180826.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 第2章 世界中的臺灣 的 16 個作答項目。整卷 Census、逐題文字辨識、第二輪視覺 QA、chapter／section／concept mapping 已完成；使用者已完成 cropped PNG，production WebP 已完成 GitHub push 與 remote read-back；本章 9 個作答項目已完成圖片接線。未提供官方答案卷，因此全部保留於 pendingQuestions，不進自動判分。AI 已逐題推定答案與簡短解析，但均為未官方驗證。"
   },
   "source": {
     "school": "[補習班]",
@@ -84,7 +84,7 @@
     },
     {
       "questionId": "261010091700003",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "3",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -120,11 +120,12 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q3.png",
-      "imagePending": true,
       "visualType": "pie-chart",
       "a": 0,
       "aiInferredAnswer": "A",
-      "e": "東亞島弧位於太平洋西側；圖中甲占 49%，代表全球面積最大的太平洋。"
+      "e": "東亞島弧位於太平洋西側；圖中甲占 49%，代表全球面積最大的太平洋。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-q03.webp",
+      "imageAlt": "第3題世界各大洋面積比例圖"
     },
     {
       "questionId": "261010091700004",
@@ -212,7 +213,7 @@
     },
     {
       "questionId": "261010091700007",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "7",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -248,11 +249,12 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q7.png",
-      "imagePending": true,
       "visualType": "maritime-zone-diagram",
       "a": 2,
       "aiInferredAnswer": "C",
-      "e": "由領海基線向外 12 浬為領海；再向外至 200 浬範圍屬專屬經濟海域，因此圖中甲、乙分別為領海與經濟海域。"
+      "e": "由領海基線向外 12 浬為領海；再向外至 200 浬範圍屬專屬經濟海域，因此圖中甲、乙分別為領海與經濟海域。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-q07.webp",
+      "imageAlt": "第7題領海與經濟海域示意圖"
     },
     {
       "questionId": "261010091700009",
@@ -298,7 +300,7 @@
     },
     {
       "questionId": "261010091700010",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "10",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -334,11 +336,12 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q10.png",
-      "imagePending": true,
       "visualType": "typhoon-route-map",
       "a": 0,
       "aiInferredAnswer": "A",
-      "e": "圖中路徑主要涵蓋臺灣周邊、臺灣海峽、東海與西北太平洋；未明顯延伸進入南海範圍。"
+      "e": "圖中路徑主要涵蓋臺灣周邊、臺灣海峽、東海與西北太平洋；未明顯延伸進入南海範圍。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-q10.webp",
+      "imageAlt": "第10題颱風路徑圖"
     },
     {
       "questionId": "261010091700011",
@@ -383,7 +386,7 @@
     },
     {
       "questionId": "261010091700016",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "16",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -419,11 +422,12 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_Q16.png",
-      "imagePending": true,
       "visualType": "world-distribution-map",
       "a": 2,
       "aiInferredAnswer": "C",
-      "e": "圖中深色分布集中在北半球高緯度的北美洲、歐洲與亞洲，非洲不在主要分布區。"
+      "e": "圖中深色分布集中在北半球高緯度的北美洲、歐洲與亞洲，非洲不在主要分布區。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-q16.webp",
+      "imageAlt": "第16題熊類全球分布圖"
     },
     {
       "questionId": "261010091700017",
@@ -469,7 +473,7 @@
     },
     {
       "questionId": "261010091700018",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "18",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -505,15 +509,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_Q18.png",
-      "imagePending": true,
       "visualType": "island-chain-map",
       "a": 3,
       "aiInferredAnswer": "D",
-      "e": "第一、第二等島鏈位於西太平洋及其周邊，因此三個島鏈均屬太平洋區域。"
+      "e": "第一、第二等島鏈位於西太平洋及其周邊，因此三個島鏈均屬太平洋區域。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-q18.webp",
+      "imageAlt": "第18題島鏈位置圖"
     },
     {
       "questionId": "261010091700022",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "22",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -548,15 +553,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q22.png",
-      "imagePending": true,
       "visualType": "lyrics-image",
       "a": 0,
       "aiInferredAnswer": "A",
-      "e": "歌詞提到南美洲、非洲與歐洲，三洲皆瀕臨大西洋。"
+      "e": "歌詞提到南美洲、非洲與歐洲，三洲皆瀕臨大西洋。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-q22.webp",
+      "imageAlt": "第22題歌詞圖片"
     },
     {
       "questionId": "261010091700023",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "23",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -592,11 +598,12 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q23.png",
-      "imagePending": true,
       "visualType": "event-poster",
       "a": 0,
       "aiInferredAnswer": "A",
-      "e": "海報呈現季節性候鳥／生物活動，臺灣位於熱帶與溫帶過渡位置，適合作為遷徙生物的停留與棲息地。"
+      "e": "海報呈現季節性候鳥／生物活動，臺灣位於熱帶與溫帶過渡位置，適合作為遷徙生物的停留與棲息地。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-q23.webp",
+      "imageAlt": "第23題候鳥活動海報"
     },
     {
       "questionId": "261010091700024",
@@ -642,7 +649,7 @@
     },
     {
       "questionId": "261010091700028",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-4",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -678,15 +685,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q二題組.png",
-      "imagePending": true,
       "visualType": "gps-coordinate-device",
       "a": 0,
       "aiInferredAnswer": "A",
-      "e": "北緯 38°、東經 139°位於日本附近，因此最可能前往日本。"
+      "e": "北緯 38°、東經 139°位於日本附近，因此最可能前往日本。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-group-gps.webp",
+      "imageAlt": "題組 GPS 座標顯示圖"
     },
     {
       "questionId": "261010091700029",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-5",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -722,11 +730,12 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q二題組-5.png",
-      "imagePending": true,
       "visualType": "continent-area-pie-chart",
       "a": 3,
       "aiInferredAnswer": "D",
-      "e": "澳大利亞屬大洋洲；大洋洲是七大洲中面積最小者，對應圓餅圖中最小的丁。"
+      "e": "澳大利亞屬大洋洲；大洋洲是七大洲中面積最小者，對應圓餅圖中最小的丁。",
+      "image": "chapter-bank/social/7-1/geography/chapter-02/assets/tutoring-20261010-group-continent-area.webp",
+      "imageAlt": "題組全球各洲面積比例圖"
     }
   ]
 }
