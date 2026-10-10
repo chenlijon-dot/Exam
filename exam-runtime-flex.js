@@ -411,13 +411,13 @@
     level = selected;
     questions = banks[level];
     graded = false;
+    const ctx = getContext(selected);
     const submitButton = $('#submitBtn');
     if (submitButton) {
       submitButton.disabled = !!ctx?.reviewOnly;
       submitButton.textContent = ctx?.reviewOnly ? '答案未官方驗證｜不計分' : '交卷看成績';
     }
     window.ExamHandwriting?.reset?.();
-    const ctx = getContext(selected);
     window.examContextCurrent = ctx;
 
     startScreen.classList.add('hidden');
