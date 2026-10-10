@@ -46,9 +46,12 @@
       backText: '歷史章節',
       pathLabel: '歷史',
       schoolBank: 'school-exams-kaimo-0910.json',
-      schoolBankExtraPaths: ['school-exams-kaimo-0903.json', 'school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json', 'school-exams-tutoring-20261009.json'],
-      schoolBankCount: 80,
-      schoolBankLabel: '高雄楷模書院＋補習班'
+      schoolBankExtraPaths: ['school-exams-kaimo-0903.json', 'school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json'],
+      schoolBankCount: 70,
+      schoolBankLabel: '高雄楷模書院',
+      supplementalBanks: [
+        { label: '補習班', icon: '📘', count: 10, paths: ['school-exams-tutoring-20261009.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+      ]
     },
     'hist-02': {
       title: '第2章　大航海時代各方勢力的競逐',
@@ -60,9 +63,12 @@
       backText: '歷史章節',
       pathLabel: '歷史',
       schoolBank: 'school-exams-kaimo-0917.json',
-      schoolBankExtraPaths: ['school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json', 'school-exams-tutoring-20261009.json'],
-      schoolBankCount: 76,
-      schoolBankLabel: '高雄楷模書院＋補習班'
+      schoolBankExtraPaths: ['school-exams-kaimo-0924.json', 'school-exams-kaimo-0924-kh.json'],
+      schoolBankCount: 55,
+      schoolBankLabel: '高雄楷模書院',
+      supplementalBanks: [
+        { label: '補習班', icon: '📘', count: 21, paths: ['school-exams-tutoring-20261009.json'], desc: '補習班考題｜AI 推定答案未官方驗證' }
+      ]
     },
     'hist-03': {
       title: '第3章　大航海時代臺灣原住民與外來者',
@@ -156,15 +162,18 @@
 
   let currentChapterKey = 'geo-01';
 
-  async function openSchoolBank(button) {
+  async function openSchoolBank(button, bankConfig = null) {
     const chapter = CHAPTERS[currentChapterKey];
-    if (!chapter?.schoolBank) return;
+    if (!chapter) return;
     const badge = button?.querySelector('.catalog-badge');
-    const oldBadge = badge?.textContent || `${chapter.schoolBankCount || ''} 題`;
+    const bankPaths = bankConfig?.paths?.length
+      ? bankConfig.paths
+      : [chapter.schoolBank, ...(chapter.schoolBankExtraPaths || [])].filter(Boolean);
+    if (!bankPaths.length) return;
+    const oldBadge = badge?.textContent || `${bankConfig?.count || chapter.schoolBankCount || ''} 題`;
     if (button) button.disabled = true;
     if (badge) badge.textContent = '載入中';
     try {
-      const bankPaths = [chapter.schoolBank, ...(chapter.schoolBankExtraPaths || [])].filter(Boolean);
       const banksData = await Promise.all(bankPaths.map(async bankPath => {
         const res = await fetch(`${chapter.path}/${bankPath}`, { cache: 'no-store' });
         if (!res.ok) throw new Error(`${bankPath}: HTTP ${res.status}`);
@@ -172,7 +181,7 @@
       }));
       const data = banksData[0] || {};
       const questions = banksData.flatMap(bank => Array.isArray(bank.questions) ? bank.questions : []);
-      if (!questions.length) throw new Error('各校題庫沒有可作答題目');
+      if (!questions.length) throw new Error('題庫沒有可作答題目');
       if (typeof banks === 'undefined' || typeof startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
       const key = data.exam?.difficulty || data.exam?.key || `social-7-1-${currentChapterKey}-school`;
@@ -186,7 +195,7 @@
       };
       startExam(key);
     } catch (error) {
-      alert(`各校題庫載入失敗：${error.message}`);
+      alert(`${bankConfig?.label || '各校題庫'}載入失敗：${error.message}`);
     } finally {
       if (button) button.disabled = false;
       if (badge) badge.textContent = oldBadge;
@@ -234,6 +243,14 @@
     $('#socialGeo01MediumBtn')?.addEventListener('click', event => openPractice('medium', event.currentTarget));
     $('#socialGeo01HardBtn')?.addEventListener('click', event => openPractice('hard', event.currentTarget));
     $('#socialGeo01SchoolBtn')?.addEventListener('click', event => openSchoolBank(event.currentTarget));
+    document.querySelectorAll('[data-supplemental-bank-index]').forEach(button => {
+      button.addEventListener('click', event => {
+        const chapter = CHAPTERS[currentChapterKey];
+        const index = Number(event.currentTarget.getAttribute('data-supplemental-bank-index'));
+        const bankConfig = chapter?.supplementalBanks?.[index];
+        if (bankConfig) openSchoolBank(event.currentTarget, bankConfig);
+      });
+    });
   }
 
   function renderSocialGeo01Menu() {
@@ -262,6 +279,11 @@
             <span class="top"><span class="icon">🏫</span><strong>各校題庫</strong><span class="catalog-badge school">${chapter.schoolBankCount} 題</span></span>
             <span class="desc">${chapter.schoolBankLabel || '真實段考／複習卷'}｜保留原題與原選項順序</span>
           </button>` : ''}
+        ${(chapter.supplementalBanks || []).map((bank, index) => `
+          <button class="catalog-card" data-supplemental-bank-index="${index}">
+            <span class="top"><span class="icon">${bank.icon || '📚'}</span><strong>${bank.label}</strong><span class="catalog-badge school">${bank.count} 題</span></span>
+            <span class="desc">${bank.desc || '其他來源題庫'}｜保留原題與原選項順序</span>
+          </button>`).join('')}
       </div>`;
     bindMenuButtons();
     showCatalog();
