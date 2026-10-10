@@ -501,7 +501,8 @@
       }
 
       const opts = renderOptionList(x, i);
-      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}">${intro}${qtitle}${media}${diagramMedia}${optionMedia}${opts}<div class="explain"><b>答案：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
+      const answerLabel = ctx.reviewOnly ? 'AI 推定答案' : '答案';
+      return `<section class="card" data-q="${i}" data-question-number="${x.number || i+1}" data-question-type="${escapeHtml(type)}">${intro}${qtitle}${media}${diagramMedia}${optionMedia}${opts}<div class="explain"><b>${answerLabel}：${letters[x.a]}</b>　${escapeHtml(x.e || '')}</div></section>`;
     }).join('');
     bindOptionImageFallbacks(quiz);
     renderQuestionDiagrams(quiz);
@@ -692,15 +693,18 @@
       if(!confirm('確定重新作答？目前選擇會清除。'))return;
       window.ExamQuestionHistoryUI?.resetForRetry?.();
       graded=false;
+      const ctx = window.examContextCurrent || getContext(level);
       const submitButton = $('#submitBtn');
-      if (submitButton) submitButton.disabled = false;
+      if (submitButton) {
+        submitButton.disabled = !!ctx.reviewOnly;
+        submitButton.textContent = ctx.reviewOnly ? '答案未官方驗證｜不計分' : '交卷看成績';
+      }
       document.dispatchEvent(new CustomEvent('exam:retry-started', {
-        detail: window.examContextCurrent || {}
+        detail: ctx
       }));
       window.ExamHandwriting?.reset?.();
       render();
       result.style.display='none';
-      const ctx = window.examContextCurrent || getContext(level);
       $('#explainBtn').textContent = ctx.reviewOnly ? '顯示 AI 推定答案' : '顯示詳解';
       window.scrollTo({top:0,behavior:'smooth'});
     };
