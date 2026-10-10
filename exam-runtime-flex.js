@@ -413,8 +413,8 @@
     graded = false;
     const submitButton = $('#submitBtn');
     if (submitButton) {
-      submitButton.disabled = false;
-      submitButton.textContent = '交卷看成績';
+      submitButton.disabled = !!ctx?.reviewOnly;
+      submitButton.textContent = ctx?.reviewOnly ? '答案未官方驗證｜不計分' : '交卷看成績';
     }
     window.ExamHandwriting?.reset?.();
     const ctx = getContext(selected);
@@ -433,15 +433,17 @@
       const mcqTotal = questions.length - handwritingTotal - manualTotal;
       const scoredTotal = mcqTotal + handwritingTotal;
       status.innerHTML = `<span class="pill" id="progress">已作答 0 / ${scoredTotal}</span>` +
-        (ctx.scoreMode === 'percent'
-          ? `<span class="pill">選擇題 ${mcqTotal} 題</span>${handwritingTotal ? `<span class="pill">手寫 ${handwritingTotal} 題｜Firebase Gemini 判題</span>` : ''}<span class="pill">以正答率顯示</span>`
-          : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * scoredTotal} 分</span>`) +
+        (ctx.reviewOnly
+          ? `<span class="pill">補習班題庫 ${mcqTotal} 題</span><span class="pill">AI 推定答案｜未官方驗證｜不計分</span>`
+          : (ctx.scoreMode === 'percent'
+            ? `<span class="pill">選擇題 ${mcqTotal} 題</span>${handwritingTotal ? `<span class="pill">手寫 ${handwritingTotal} 題｜Firebase Gemini 判題</span>` : ''}<span class="pill">以正答率顯示</span>`
+            : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * scoredTotal} 分</span>`)) +
         (manualTotal ? `<span class="pill">紙筆練習 ${manualTotal} 題｜不計分</span>` : '');
     }
     $('#backBtn').textContent = ctx.backLabel || (ctx.examType ? '返回歷屆考題' : '選擇其他難度');
     render();
     result.style.display = 'none';
-    $('#explainBtn').textContent = '顯示詳解';
+    $('#explainBtn').textContent = ctx.reviewOnly ? '顯示 AI 推定答案' : '顯示詳解';
     document.dispatchEvent(new CustomEvent('exam:started', { detail: ctx }));
     window.scrollTo({top:0,behavior:'smooth'});
   };
@@ -544,6 +546,10 @@
       if (graded) return;
       const submitButton = this;
       const ctx = window.examContextCurrent || getContext(level);
+      if (ctx.reviewOnly) {
+        alert('這批補習班題目目前只有 AI 推定答案，尚未有官方答案卷，因此不提供交卷計分。可使用「顯示 AI 推定答案」進行複習。');
+        return;
+      }
       const handwritingItems = questions
         .map((question, index) => ({ question, index }))
         .filter(item => isHandwriting(item.question));
@@ -674,7 +680,10 @@
       const els=[...document.querySelectorAll('.explain')];
       const show=!els.every(e=>e.classList.contains('show'));
       els.forEach(e=>e.classList.toggle('show',show));
-      this.textContent=show?'隱藏詳解':'顯示詳解';
+      const ctx = window.examContextCurrent || getContext(level);
+      this.textContent = show
+        ? (ctx.reviewOnly ? '隱藏 AI 推定答案' : '隱藏詳解')
+        : (ctx.reviewOnly ? '顯示 AI 推定答案' : '顯示詳解');
     };
   }
 
@@ -691,7 +700,8 @@
       window.ExamHandwriting?.reset?.();
       render();
       result.style.display='none';
-      $('#explainBtn').textContent='顯示詳解';
+      const ctx = window.examContextCurrent || getContext(level);
+      $('#explainBtn').textContent = ctx.reviewOnly ? '顯示 AI 推定答案' : '顯示詳解';
       window.scrollTo({top:0,behavior:'smooth'});
     };
   }
