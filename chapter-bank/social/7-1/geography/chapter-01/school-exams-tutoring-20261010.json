@@ -571,15 +571,10 @@
       "aiInferredAnswer": "B",
       "e": "GPS 顯示 38°N、139°E，位於赤道以北、本初子午線以東，因此落在右上方的乙區。",
       "images": [
-        {
-          "src": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-gps.webp",
-          "alt": "題組 GPS 座標顯示圖"
-        },
-        {
-          "src": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-hemisphere.webp",
-          "alt": "題組南北半球與東西半球分區圖"
-        }
-      ]
+        "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-gps.webp",
+        "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-hemisphere.webp"
+      ],
+      "imageAlt": "題組 GPS 座標顯示圖與南北半球／東西半球分區圖"
     },
     {
       "questionId": "261010091700027",
