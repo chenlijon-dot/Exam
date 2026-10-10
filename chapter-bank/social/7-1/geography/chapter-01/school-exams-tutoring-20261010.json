@@ -22,7 +22,7 @@
     "sourceType": "school-exam",
     "lifecycle": "staging",
     "sourceLabel": "補習班",
-    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180816.jpg、IMG_20261009_180826.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 第1章 認識位置與地圖 的 15 個作答項目。整卷 Census、逐題文字辨識、第二輪視覺 QA、chapter／section／concept mapping 已完成；使用者已完成 cropped PNG。未提供官方答案卷，因此全部保留於 pendingQuestions，不進自動判分。AI 已逐題推定答案與簡短解析，但均為未官方驗證。"
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180816.jpg、IMG_20261009_180826.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 第1章 認識位置與地圖 的 15 個作答項目。整卷 Census、逐題文字辨識、第二輪視覺 QA、chapter／section／concept mapping 已完成；使用者已完成 cropped PNG，production WebP 已完成 GitHub push 與 remote read-back；本章 12 個作答項目已完成圖片接線。未提供官方答案卷，因此全部保留於 pendingQuestions，不進自動判分。AI 已逐題推定答案與簡短解析，但均為未官方驗證。"
   },
   "source": {
     "school": "[補習班]",
@@ -125,7 +125,7 @@
     },
     {
       "questionId": "261010091700008",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "8",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -160,15 +160,16 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q8.png",
-      "imagePending": true,
       "visualType": "scale-option-diagram",
       "a": 0,
       "aiInferredAnswer": "A",
-      "e": "四圖中 A、B 圖上距離近似相同時，比例尺分母越小，換算的實際距離越短，因此選 1：500。"
+      "e": "四圖中 A、B 圖上距離近似相同時，比例尺分母越小，換算的實際距離越短，因此選 1：500。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-q08.webp",
+      "imageAlt": "第8題比例尺比較圖"
     },
     {
       "questionId": "261010091700012",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "12",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -204,15 +205,16 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q12.png",
-      "imagePending": true,
       "visualType": "world-coordinate-map",
       "a": 1,
       "aiInferredAnswer": "B",
-      "e": "小潔位於西半球、約西經 150 度附近，與臺灣東經約 120 度的時差最大。"
+      "e": "小潔位於西半球、約西經 150 度附近，與臺灣東經約 120 度的時差最大。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-q12.webp",
+      "imageAlt": "第12題世界經緯度位置圖"
     },
     {
       "questionId": "261010091700013",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "13",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -247,15 +249,16 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q13.png",
-      "imagePending": true,
       "visualType": "address-sign",
       "a": 3,
       "aiInferredAnswer": "D",
-      "e": "圖中門牌地址屬絕對位置；經緯度同樣能精確指出絕對位置，因此選 D。"
+      "e": "圖中門牌地址屬絕對位置；經緯度同樣能精確指出絕對位置，因此選 D。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-q13.webp",
+      "imageAlt": "第13題門牌地址圖"
     },
     {
       "questionId": "261010091700014",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "14",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -291,15 +294,16 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q14.png",
-      "imagePending": true,
       "visualType": "poem-image",
       "a": 2,
       "aiInferredAnswer": "C",
-      "e": "臺東位於臺灣東岸，受地球自西向東自轉影響，東部較早迎接日出。"
+      "e": "臺東位於臺灣東岸，受地球自西向東自轉影響，東部較早迎接日出。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-q14.webp",
+      "imageAlt": "第14題描述臺東日出的詩句圖"
     },
     {
       "questionId": "261010091700015",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "15",
       "sourcePage": 1,
       "school": "[補習班]",
@@ -337,11 +341,12 @@
       ],
       "sourceFile": "IMG_20261009_180816.jpg",
       "sourceImageFile": "IMG_20261009_180816_q15.png",
-      "imagePending": true,
       "visualType": "coordinate-options",
       "a": 3,
       "aiInferredAnswer": "D",
-      "e": "臺灣約在 120°E；快 2 小時約在東經 150°，且熱帶需位於低緯度，因此 10°S、150°E 最符合。"
+      "e": "臺灣約在 120°E；快 2 小時約在東經 150°，且熱帶需位於低緯度，因此 10°S、150°E 最符合。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-q15.webp",
+      "imageAlt": "第15題四個經緯度位置選項圖"
     },
     {
       "questionId": "261010091700019",
@@ -387,7 +392,7 @@
     },
     {
       "questionId": "261010091700020",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "20",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -423,15 +428,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q20.png",
-      "imagePending": true,
       "visualType": "clock-options",
       "a": 3,
       "aiInferredAnswer": "D",
-      "e": "臺北為 UTC+8、倫敦以零時區計算，臺北下午 5 點減 8 小時為倫敦上午 9 點。"
+      "e": "臺北為 UTC+8、倫敦以零時區計算，臺北下午 5 點減 8 小時為倫敦上午 9 點。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-q20.webp",
+      "imageAlt": "第20題世界城市時鐘選項圖"
     },
     {
       "questionId": "261010091700021",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "21",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -467,15 +473,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q21.png",
-      "imagePending": true,
       "visualType": "taiwan-county-map",
       "a": 2,
       "aiInferredAnswer": "C",
-      "e": "圖中星號位於嘉義一帶；四個選項中，雲林西螺與嘉義距離最近。"
+      "e": "圖中星號位於嘉義一帶；四個選項中，雲林西螺與嘉義距離最近。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-q21.webp",
+      "imageAlt": "第21題臺灣縣市與燈會位置圖"
     },
     {
       "questionId": "261010091700025",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-1",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -511,15 +518,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q二題組.png",
-      "imagePending": true,
       "visualType": "gps-coordinate-device",
       "a": 3,
       "aiInferredAnswer": "D",
-      "e": "GPS 以經緯度座標精確表示位置，屬於絕對位置。"
+      "e": "GPS 以經緯度座標精確表示位置，屬於絕對位置。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-gps.webp",
+      "imageAlt": "題組 GPS 座標顯示圖"
     },
     {
       "questionId": "261010091700026",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-2",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -558,15 +566,24 @@
         "IMG_20261009_180826_q二題組.png",
         "IMG_20261009_180826_q二題組-2.png"
       ],
-      "imagePending": true,
       "visualType": "gps+hemisphere-diagram",
       "a": 1,
       "aiInferredAnswer": "B",
-      "e": "GPS 顯示 38°N、139°E，位於赤道以北、本初子午線以東，因此落在右上方的乙區。"
+      "e": "GPS 顯示 38°N、139°E，位於赤道以北、本初子午線以東，因此落在右上方的乙區。",
+      "images": [
+        {
+          "src": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-gps.webp",
+          "alt": "題組 GPS 座標顯示圖"
+        },
+        {
+          "src": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-hemisphere.webp",
+          "alt": "題組南北半球與東西半球分區圖"
+        }
+      ]
     },
     {
       "questionId": "261010091700027",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-3",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -602,15 +619,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q二題組.png",
-      "imagePending": true,
       "visualType": "gps-coordinate-device",
       "a": 0,
       "aiInferredAnswer": "A",
-      "e": "旅遊地點約 38°N、139°E，相較臺灣緯度更北、經度更東，因此位於臺灣東北方。"
+      "e": "旅遊地點約 38°N、139°E，相較臺灣緯度更北、經度更東，因此位於臺灣東北方。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-gps.webp",
+      "imageAlt": "題組 GPS 座標顯示圖"
     },
     {
       "questionId": "261010091700030",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-6",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -646,15 +664,16 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q二題組partII.png",
-      "imagePending": true,
       "visualType": "tasmania-coordinate-map",
       "a": 1,
       "aiInferredAnswer": "B",
-      "e": "塔斯馬尼亞約位於 40°S、150°E，較臺灣向南且向東，因此應朝東南方飛行。"
+      "e": "塔斯馬尼亞約位於 40°S、150°E，較臺灣向南且向東，因此應朝東南方飛行。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-tasmania.webp",
+      "imageAlt": "題組塔斯馬尼亞經緯度位置圖"
     },
     {
       "questionId": "261010091700031",
-      "revision": 1,
+      "revision": 2,
       "originalQuestionNumber": "二-7",
       "sourcePage": 2,
       "school": "[補習班]",
@@ -690,11 +709,12 @@
       ],
       "sourceFile": "IMG_20261009_180826.jpg",
       "sourceImageFile": "IMG_20261009_180826_q二題組partII.png",
-      "imagePending": true,
       "visualType": "tasmania-coordinate-map",
       "a": 2,
       "aiInferredAnswer": "C",
-      "e": "塔斯馬尼亞約在 150°E，較臺灣約 120°E 向東 30 度，約快 2 小時，因此手錶應調快 2 小時。"
+      "e": "塔斯馬尼亞約在 150°E，較臺灣約 120°E 向東 30 度，約快 2 小時，因此手錶應調快 2 小時。",
+      "image": "chapter-bank/social/7-1/geography/chapter-01/assets/tutoring-20261010-group-tasmania.webp",
+      "imageAlt": "題組塔斯馬尼亞經緯度位置圖"
     }
   ]
 }
