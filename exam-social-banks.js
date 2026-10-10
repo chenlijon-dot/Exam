@@ -97,7 +97,10 @@
       pathLabel: '公民',
       schoolBank: 'school-exams-kaimo-0924.json',
       schoolBankCount: 16,
-      schoolBankLabel: '高雄楷模書院'
+      schoolBankLabel: '高雄楷模書院',
+      supplementalBanks: [
+        { label: '補習班', icon: '📘', count: 16, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證', reviewOnly: true }
+      ]
     },
     'civics-02': {
       title: '第2章　人性尊嚴與人權保障',
@@ -110,7 +113,10 @@
       pathLabel: '公民',
       schoolBank: 'school-exams-kaimo-0924.json',
       schoolBankCount: 113,
-      schoolBankLabel: '高雄楷模書院'
+      schoolBankLabel: '高雄楷模書院',
+      supplementalBanks: [
+        { label: '補習班', icon: '📘', count: 15, paths: ['school-exams-tutoring-20261010.json'], desc: '補習班考題｜AI 推定答案未官方驗證', reviewOnly: true }
+      ]
     },
     'civics-03': {
       title: '第3章　家庭生活',
