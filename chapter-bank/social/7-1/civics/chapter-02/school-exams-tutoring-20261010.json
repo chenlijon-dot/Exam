@@ -1,0 +1,657 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "social-7-1-civics-02-school-tutoring-20261010",
+    "difficulty": "social-7-1-civics-02-school-tutoring-20261010",
+    "examType": "social-school-chapter-school-exam",
+    "examTypeLabel": "公民七上 第2章｜[補習班] 題庫",
+    "title": "第2章 人性尊嚴與人權保障｜[補習班] 題庫",
+    "subtitle": "社會七上｜公民｜[補習班]｜第三篇 1～2章複習｜本章 15 個作答項目｜答案待補",
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "civics",
+    "unitGroupLabel": "公民｜公民身分及社群",
+    "section": "civics-chapter-02",
+    "unit": "第2章 人性尊嚴與人權保障",
+    "difficultyLabel": "[補習班] 題庫",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam",
+    "lifecycle": "staging",
+    "sourceLabel": "補習班",
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180837.jpg、IMG_20261009_180847.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 第2章 人性尊嚴與人權保障 的 15 個作答項目。整卷 Census、逐題文字辨識、第二輪視覺 QA、chapter／section／concept mapping 已完成；使用者已完成 cropped PNG。未提供官方答案卷，因此全部保留於 pendingQuestions，不進自動判分。AI 已逐題推定答案與簡短解析，但均為未官方驗證。目前圖題尚待 production WebP push 與 remote read-back。"
+  },
+  "source": {
+    "school": "[補習班]",
+    "year": "unknown",
+    "semester": "第一學期",
+    "exam": "七年級公民（一）｜第三篇 1～2章複習",
+    "sourceType": "school-exam",
+    "sourceFiles": [
+      "IMG_20261009_180837.jpg",
+      "IMG_20261009_180847.jpg"
+    ],
+    "answerFile": null,
+    "answerVerified": false,
+    "answerAuthority": "AI 推定答案，未官方驗證"
+  },
+  "questions": [],
+  "pendingQuestions": [
+    {
+      "questionId": "261010153000001",
+      "revision": 1,
+      "originalQuestionNumber": "1",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-equality-law"
+      ],
+      "q": "某縣市多所國中新學期課本出現「性別光譜」內容，引發部分家長及議員抗議。校方表示依法在教材上須教導學生認識性別的多樣性，且學校應保護學生不受性別因素傷害。該「法」應是指下列何者？",
+      "o": [
+        "《民法》",
+        "《性騷擾防治法》",
+        "《性別平等工作法》",
+        "《性別平等教育法》"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "題幹情境發生在學校教材與學生受教環境，最直接對應《性別平等教育法》。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000003",
+      "revision": 1,
+      "originalQuestionNumber": "3",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-equality-law",
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "圖（一）為電視播報的新聞，其主要是為了達到下列何項目的？",
+      "o": [
+        "尊重他人意見",
+        "保障婦女人權",
+        "強化刻板印象",
+        "禁止種族歧視"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "新聞內容為企業辭退懷孕婦女遭裁罰，重點是保障女性在職場上不因懷孕遭受不利待遇。",
+      "sourceImageFile": "IMG_20261009_180837_q3.png",
+      "visualType": "news-card",
+      "imagePending": true,
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000004",
+      "revision": 1,
+      "originalQuestionNumber": "4",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "中國舉行的「杭州國際馬拉松大賽」，曾因比賽規定男子組冠軍可獲得 3 萬元人民幣獎金，而女子組冠軍獎金只有 2 萬元人民幣。有幾名女選手不滿，決定寫信給「國際田徑聯合會」，要求介入調查。此一比賽規則顯現出主辦單位存在何種觀念？",
+      "o": [
+        "性別歧視",
+        "性別偏見",
+        "性別平等",
+        "性別多元"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "同一競賽依性別給予不同獎金，形成不平等差別待遇，屬性別歧視。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000007",
+      "revision": 1,
+      "originalQuestionNumber": "7",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "性別平等是現代社會積極推廣的觀念，但是性別不平等的情況仍然時有所聞。下列何者屬於性別不平等的現象？",
+      "o": [
+        "女性也可以擔任機長駕駛飛機",
+        "男性也可以接受育嬰訓練成為保母",
+        "男性設計師在時尚圈的作品非常出色",
+        "女性在職場上的成功被認為是靠外貌紅利"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "把女性職場成就歸因於外貌而否定其能力，反映性別偏見與不平等。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000009",
+      "revision": 1,
+      "originalQuestionNumber": "9",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-stereotype"
+      ],
+      "q": "某高職要求女學生穿長褲須有醫生證明，並由校方審核，想要申請「長褲證」。上述校方這樣的規定應是受到何種因素的影響？",
+      "o": [
+        "生理性別不同",
+        "性別刻板印象",
+        "國家政策規定",
+        "性別多元概念發展"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "以女性應穿特定服裝作為預設，反映對性別角色與外表的刻板印象。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000010",
+      "revision": 1,
+      "originalQuestionNumber": "10",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-1",
+      "sectionName": "人性尊嚴與人權",
+      "conceptIds": [
+        "civ-7-1-2-human-dignity",
+        "civ-7-1-2-human-rights"
+      ],
+      "q": "自由民主憲政秩序之價值體系中，人權保障與人性尊嚴維護為其核心理念，其不可侵犯已成為憲法價值體系的基礎原則。下列關於人性尊嚴與人權相關敘述何者正確？",
+      "o": [
+        "人性尊嚴是人權保障核心概念",
+        "《世界人權宣言》列舉人性尊嚴種類",
+        "人性尊嚴為與生俱來不被剝奪的權利",
+        "人權為抽象概念須靠人性尊嚴來體現"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "人性尊嚴是人權保障的核心價值與基礎概念。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000012",
+      "revision": 1,
+      "originalQuestionNumber": "12",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "一位男子搭高鐵時見鄰座是女性，竟趁機伸手摸該女性大腿；還在列車快到站時握住該女的手，被害人嚇得大聲制止，並依法提告。法院審理後認定該男子為逞一己色慾，漠視被害人身體自主權，依法判處 2 月徒刑、罰金 5,000 元。上述是依下列何法判處？",
+      "o": [
+        "《民法》",
+        "《性騷擾防治法》",
+        "《性別平等教育法》",
+        "《性別平等工作法》"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "事件發生於一般公共場所，題目所對應的法規為《性騷擾防治法》。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000013",
+      "revision": 1,
+      "originalQuestionNumber": "13",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-1",
+      "sectionName": "人性尊嚴與人權",
+      "conceptIds": [
+        "civ-7-1-2-udhr"
+      ],
+      "q": "圖（四）為阿忠看到的一幅活動海報。圖中的紀念日是為了紀念 1948 年何條約通過？",
+      "o": [
+        "《獨立宣言》",
+        "《世界人權宣言》",
+        "《公民與政治權利國際公約》",
+        "《經濟社會文化權利國際公約》"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "12 月 10 日世界人權日紀念聯合國於 1948 年通過《世界人權宣言》。",
+      "sourceImageFile": "IMG_20261009_180837_q13.png",
+      "visualType": "event-poster",
+      "imagePending": true,
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000014",
+      "revision": 1,
+      "originalQuestionNumber": "14",
+      "sourcePage": 1,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-1",
+      "sectionName": "人性尊嚴與人權",
+      "conceptIds": [
+        "civ-7-1-2-human-dignity"
+      ],
+      "q": "人性尊嚴是指任何人都有作為人的尊嚴，人性尊嚴不但是人權的核心基礎，也是基本權利實踐的判斷標準。下列關於人性尊嚴的敘述，何者錯誤？",
+      "o": [
+        "是先天固有的",
+        "是把人當作工具",
+        "是人權的核心價值",
+        "強調人是可以自我決定的主體"
+      ],
+      "sourceFile": "IMG_20261009_180837.jpg",
+      "a": 1,
+      "aiInferredAnswer": "B",
+      "e": "人性尊嚴強調人具有自主性，不能只把人當作達成目的的工具，因此 B 錯誤。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000017",
+      "revision": 1,
+      "originalQuestionNumber": "17",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-stereotype",
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "女護理師、男醫師、空姐、男機師等，都是我們生活中常見的詞彙，但近來，男護理師、女醫師的數量漸增，此現象可能與下列何者有關？",
+      "o": [
+        "保障性別平權",
+        "強化刻板印象",
+        "禁止種族歧視",
+        "關注身障權益"
+      ],
+      "sourceFile": "IMG_20261009_180847.jpg",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "不同性別皆能依能力與興趣選擇職業，反映性別平權的落實與刻板印象的鬆動。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000018",
+      "revision": 1,
+      "originalQuestionNumber": "18",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-equality-law",
+        "civ-7-1-2-sexual-harassment"
+      ],
+      "q": "新北市一名女員工，因不滿同事將她的照片改成情色照散布，向主管反映也沒有得到改善，氣得向勞工局投訴。新北市就業歧視評議委員會認定，雇主在性騷擾事件發生後未作處置，依法開罰 10 萬元。主管機關對該雇主開罰的法源依據為下列何者？",
+      "o": [
+        "《性別平等工作法》",
+        "《性侵害犯罪防治法》",
+        "《性別平等教育法》",
+        "《勞動基準法》"
+      ],
+      "sourceFile": "IMG_20261009_180847.jpg",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "事件發生於職場，且涉及雇主對職場性騷擾的防治義務，最直接對應《性別平等工作法》。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000019",
+      "revision": 1,
+      "originalQuestionNumber": "19",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-equality-law",
+        "civ-7-1-2-gender-discrimination"
+      ],
+      "q": "「同工不同酬」、「禁孕條款」、「單身條款」等現象都是違法的，若企業遭舉發後被開罰，主要是因為哪一法律的關係？",
+      "o": [
+        "《性別平等工作法》",
+        "《性騷擾防治法》",
+        "《性別平等教育法》",
+        "《憲法》"
+      ],
+      "sourceFile": "IMG_20261009_180847.jpg",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "題列情形都是職場中的性別差別待遇，屬《性別平等工作法》規範範圍。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000022",
+      "revision": 1,
+      "originalQuestionNumber": "22",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-equality-law"
+      ],
+      "q": "下列「性別平等」相關法律的敘述，何者正確？",
+      "o": [
+        "《憲法》：保障工作權的性別平等，強調同工同酬",
+        "《性別平等工作法》：學校課程設計不能因性別而有差別待遇",
+        "《世界人權宣言》：禁止工作上的性別歧視",
+        "《性別平等教育法》：使不同性別的人在接受教育時，都有多元發展的機會"
+      ],
+      "sourceFile": "IMG_20261009_180847.jpg",
+      "a": 3,
+      "aiInferredAnswer": "D",
+      "e": "學校教育中的性別平等與多元發展主要由《性別平等教育法》保障，因此 D 正確。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000024",
+      "revision": 1,
+      "originalQuestionNumber": "24",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-2",
+      "sectionName": "人權保障的落實",
+      "conceptIds": [
+        "civ-7-1-2-gender-equality-law"
+      ],
+      "q": "我國相關法律規定，學校在招生或就學許可、學校課程設置及活動設計等方面，不得因性別而有差別待遇，讓性別平權理念得以深植學生內心。上述相關法律應是指下列何者？",
+      "o": [
+        "《民法》",
+        "《性騷擾防治法》",
+        "《性別平等教育法》",
+        "《性別平等工作法》"
+      ],
+      "sourceFile": "IMG_20261009_180847.jpg",
+      "a": 2,
+      "aiInferredAnswer": "C",
+      "e": "題幹明確描述學校招生、課程與活動設計的性別平等要求，因此是《性別平等教育法》。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    },
+    {
+      "questionId": "261010153000026",
+      "revision": 1,
+      "originalQuestionNumber": "二-2",
+      "sourcePage": 2,
+      "school": "[補習班]",
+      "year": "unknown",
+      "semester": "第一學期",
+      "exam": "七年級公民（一）｜第三篇 1～2章複習",
+      "type": "mcq",
+      "originalQuestionType": "單選題",
+      "runtimeQuestionType": "mcq",
+      "adaptedForWeb": false,
+      "answerVerified": false,
+      "fixedOptions": true,
+      "preserveOptionOrder": true,
+      "status": "pending-official-answer-verification",
+      "lifecycle": "staging",
+      "answerAuthority": "ai-inferred",
+      "verificationStatus": "ai-inferred-unverified",
+      "sectionCode": "2-1",
+      "sectionName": "人性尊嚴與人權",
+      "conceptIds": [
+        "civ-7-1-2-human-rights"
+      ],
+      "q": "依上文，甲最可能為下列何者？",
+      "o": [
+        "《憲法》",
+        "《國籍法》",
+        "《世界人權宣言》",
+        "《性別平等工作法》"
+      ],
+      "sourceFile": "IMG_20261009_180847.jpg",
+      "a": 0,
+      "aiInferredAnswer": "A",
+      "e": "題幹說明大法官以我國保障基本權利的最高法規範審查法律，最符合《憲法》。",
+      "introLabel": "題組一",
+      "intro": "司法院大法官曾針對「原住民與非原住民結婚所生子女之原住民身分案」作出判決，認定立法院所訂定的《原住民身分法》第 4 條第 2 項規定違反我國憲法保障原住民身分認同權及平等權之意旨，要求相關機關限期修法；逾期未完成修法者，該規定失效，原住民與非原住民結婚所生子女皆得取得原住民身分並辦理登記。",
+      "chapterTags": [
+        "civics-chapter-02"
+      ]
+    }
+  ]
+}
