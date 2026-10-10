@@ -6,7 +6,7 @@
     "examType": "social-school-chapter-school-exam",
     "examTypeLabel": "歷史七上 第1章｜[補習班] 題庫",
     "title": "第1章 史前臺灣與原住民文化｜[補習班] 題庫",
-    "subtitle": "社會七上｜歷史｜[補習班]｜第二篇 1～2章複習｜本章 10 個作答項目｜答案待補",
+    "subtitle": "社會七上｜歷史｜[補習班]｜第二篇 1～2章複習｜本章 10 題｜AI 推定答案未官方驗證",
     "subject": "social",
     "subjectLabel": "社會",
     "semester": "7-1",
@@ -17,11 +17,11 @@
     "unit": "第1章 史前臺灣與原住民文化",
     "difficultyLabel": "[補習班] 題庫",
     "scoreMode": "percent",
-    "analysisEligible": false,
+    "analysisEligible": true,
     "preserveOptionOrder": true,
     "sourceType": "school-exam",
-    "lifecycle": "staging",
-    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-01 的 10 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷，因此全部保留於 pendingQuestions，不進自動判分。Q13、Q17、Q21 的 production WebP 已完成並 remote read-back。 AI 已逐題推定答案與簡短解析；此批答案未有官方／原補習班答案卷核對，仍不得視為 verified authority。"
+    "lifecycle": "active",
+    "sourceNote": "來源標記為 [補習班]。原始 evidence 為 IMG_20261009_180856.jpg、IMG_20261009_180909.jpg；原卷共 24 題單題 + 7 題題組，共 31 個作答項目。本 sidecar 收錄 chapter-01 的 10 個作答項目。第二輪逐題 QA 已完成；目前未提供答案卷；依使用者要求納入網站可作答題庫。答案為 AI 推定、未官方驗證，answerVerified 保持 false。Q13、Q17、Q21 的 production WebP 已完成並 remote read-back。 AI 已逐題推定答案與簡短解析；此批答案未有官方／原補習班答案卷核對，仍不得視為 verified authority。"
   },
   "source": {
     "school": "[補習班]",
@@ -37,8 +37,7 @@
     "answerVerified": false,
     "answerAuthority": "AI 推定答案，未官方驗證"
   },
-  "questions": [],
-  "pendingQuestions": [
+  "questions": [
     {
       "questionId": "261009211900002",
       "revision": 1,
@@ -71,7 +70,7 @@
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "a": 1,
       "aiInferredAnswer": "B",
       "e": "題幹描述臺東卑南車站施工時發現約三千年前玉石與陶質遺物，對應卑南文化。",
@@ -110,7 +109,7 @@
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "a": 3,
       "aiInferredAnswer": "D",
       "e": "中國銅錢屬外來物品，可作為與海外／中國地區存在交換或貿易往來的證據。",
@@ -149,7 +148,7 @@
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "a": 1,
       "aiInferredAnswer": "B",
       "e": "長濱文化遺址位於臺灣東部，並以打製石器等舊石器時代遺物著名。",
@@ -188,7 +187,7 @@
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "a": 3,
       "aiInferredAnswer": "D",
       "e": "番仔園遺址已有鐵器與外來玻璃、瑪瑙等，屬金屬器時代，與十三行文化同一時期。",
@@ -227,7 +226,7 @@
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "sourceImageFile": "IMG_20261009_180856_q13.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q13.webp",
       "imageAlt": "第13題原住民族分類圖",
@@ -268,7 +267,7 @@
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "a": 2,
       "aiInferredAnswer": "C",
       "e": "日治時期後來以「高砂族」稱呼臺灣高山原住民族。",
@@ -307,7 +306,7 @@
       ],
       "sourceFile": "IMG_20261009_180856.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "a": 1,
       "aiInferredAnswer": "B",
       "e": "圓山文化屬新石器時代，尚未進入煉鐵技術階段。",
@@ -345,7 +344,7 @@
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "sourceImageFile": "IMG_20261009_180909_q17.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q17.webp",
       "imageAlt": "第17題世界分布範圍圖",
@@ -387,7 +386,7 @@
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "a": 3,
       "aiInferredAnswer": "D",
       "e": "新石器時代尚未發展成熟煉鐵技術，因此「煉鐵技術爐火純青」可判斷為錯誤。",
@@ -426,7 +425,7 @@
       ],
       "sourceFile": "IMG_20261009_180909.jpg",
       "status": "pending-official-answer-verification",
-      "lifecycle": "staging",
+      "lifecycle": "active",
       "sourceImageFile": "IMG_20261009_180909_q21.png",
       "image": "chapter-bank/social/7-1/history/chapter-01/assets/tutoring-20261009-q21.webp",
       "imageAlt": "第21題新石器時代文化與特色表",
@@ -436,5 +435,6 @@
       "answerAuthority": "ai-inferred",
       "verificationStatus": "ai-inferred-unverified"
     }
-  ]
+  ],
+  "pendingQuestions": []
 }
