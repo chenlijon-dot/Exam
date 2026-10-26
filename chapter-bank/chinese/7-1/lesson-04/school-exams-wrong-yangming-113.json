@@ -1,0 +1,154 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceNote": "紙本批改錯題精選；依原校答案與原卷核對。爭議題不啟用。"
+  },
+  "source": {
+    "school": "高雄市立陽明國中",
+    "year": "113",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "113-高雄市立陽明國中第一學期七年級第二次段考國文科評量試題.pdf",
+    "sourceUrl": "https://drive.google.com/file/d/1n6uKNMGb5lxClzNd1VIbO3u8N1UZaWea/view",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-yangming-113-q07",
+      "revision": 1,
+      "originalQuestionNumber": "7",
+      "school": "高雄市立陽明國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "school-answer-key-and-paper-mark-confirmed",
+      "sourcePage": null,
+      "sourceUrl": "https://drive.google.com/file/d/1n6uKNMGb5lxClzNd1VIbO3u8N1UZaWea/view",
+      "sourceFile": "113-高雄市立陽明國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-sentence-logic"
+      ],
+      "preserveOptionOrder": true,
+      "q": "下列文句何者有語病？ [113 陽明國中]",
+      "o": [
+        "他在錢鋪裡做夥計，他會寫會算，只是總不會精細，十字常常寫成千字",
+        "那家人急忙跑去，一時尋不著東街汪大夫，卻把西街牛醫王大夫請來了",
+        "我是起得很早的，但是當我看到她們時，她們的清掃工作老早就開始了",
+        "路旁那家蓋房子的，即便施工時不注意，弄得馬路上到處是黃黃的泥巴。"
+      ],
+      "a": 3,
+      "e": "D 項使用「即便」引導讓步條件，卻未有適當對應的結果敘述，造成語意不完整；其他三句語意可成立。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-yangming-113-q09",
+      "revision": 1,
+      "originalQuestionNumber": "9",
+      "school": "高雄市立陽明國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "school-answer-key-and-paper-mark-confirmed",
+      "sourcePage": null,
+      "sourceUrl": "https://drive.google.com/file/d/1n6uKNMGb5lxClzNd1VIbO3u8N1UZaWea/view",
+      "sourceFile": "113-高雄市立陽明國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-irony"
+      ],
+      "preserveOptionOrder": true,
+      "q": "在語文中，言詞表面的意思和作者內心本意相反的技巧稱為「倒反」。下列何者沒有運用「倒反」技巧？ [113 陽明國中]",
+      "o": [
+        "我寫的春聯很成功，爸爸說以後都不用再買春聯了",
+        "一天內竟跌倒了兩次，我實在是太幸運了",
+        "你的眼睛真大，這麼明顯的錯字竟然看不出來",
+        "媽媽煮的菜太美味了，我們決定改去外面餐廳吃飯。"
+      ],
+      "a": 0,
+      "e": "A 可照字面理解為春聯寫得好，未必構成反話；B、C、D 具有褒詞表達貶意或與情境相反的倒反效果。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-yangming-113-q11",
+      "revision": 1,
+      "originalQuestionNumber": "11",
+      "school": "高雄市立陽明國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "school-answer-key-and-paper-mark-confirmed",
+      "sourcePage": null,
+      "sourceUrl": "https://drive.google.com/file/d/1n6uKNMGb5lxClzNd1VIbO3u8N1UZaWea/view",
+      "sourceFile": "113-高雄市立陽明國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-theme-symbolism"
+      ],
+      "preserveOptionOrder": true,
+      "q": "關於〈差不多先生傳〉一文的敘述，下列何者正確？ [113 陽明國中]",
+      "o": [
+        "透過真實人物差不多先生的生活態度，嘲諷處事不認真的人",
+        "依時間順序，先寫重要大事，再補充小事，描述差不多先生的一生",
+        "本文旨在稱讚差不多先生是一位有德行的圓通大師，是國人的典範",
+        "差不多先生的家人病急亂投醫，可呼應差不多先生是全國人的代表。"
+      ],
+      "a": 3,
+      "e": "差不多先生是虛構的象徵性人物；故事由生活小事推至致命大事，並用「有德行」反諷。家人的草率也反映此態度具有社會普遍性。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-yangming-113-q13",
+      "revision": 1,
+      "originalQuestionNumber": "13",
+      "school": "高雄市立陽明國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "school-answer-key-and-paper-mark-confirmed",
+      "sourcePage": null,
+      "sourceUrl": "https://drive.google.com/file/d/1n6uKNMGb5lxClzNd1VIbO3u8N1UZaWea/view",
+      "sourceFile": "113-高雄市立陽明國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-dash-turn"
+      ],
+      "preserveOptionOrder": true,
+      "q": "破折號用於語意的轉變、聲音的延續，或在行文中為補充說明某詞語之處，而此說明後文氣需要停頓。下列哪一選項的破折號用法與「於是人人都成了一個差不多先生──然而中國從此就成了一個懶人國了」相同？ [113 陽明國中]",
+      "o": [
+        "我實在不贊成這次提案──也罷，那就依照你們的意思吧",
+        "嗚──嗚──嗚──，手機傳來國家級防災警報聲響",
+        "我只希望，我們的距離──我和所有野鳥的距離，永遠這樣接近",
+        "漢武帝時，掌管音樂的衙署──樂府，負責搜集民間歌謠來配樂。"
+      ],
+      "a": 0,
+      "e": "原文由群眾效法的敘述轉折至國家變成懶人國的反面結果。A 同為語意轉變；B 延長聲音，C、D 補充說明。"
+    }
+  ]
+}
