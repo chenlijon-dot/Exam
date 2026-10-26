@@ -1,0 +1,58 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "sourceNote": "紙本批改錯題精選；依原校答案與原卷核對。爭議題不啟用。"
+  },
+  "source": {
+    "school": "臺北市立誠正國中",
+    "year": "114",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-臺北市立誠正國中第一學期七年級第二次段考國文科評量試題.pdf",
+    "sourceUrl": "https://drive.google.com/file/d/1ndY1nVphQE7D3KHwYj3vPHc1apOZc5rg/view",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-chengzheng-114-q15",
+      "revision": 1,
+      "originalQuestionNumber": "15",
+      "school": "臺北市立誠正國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "school-answer-key-and-paper-mark-confirmed",
+      "sourcePage": null,
+      "sourceUrl": "https://drive.google.com/file/d/1ndY1nVphQE7D3KHwYj3vPHc1apOZc5rg/view",
+      "sourceFile": "114-臺北市立誠正國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-death-euphemisms"
+      ],
+      "preserveOptionOrder": true,
+      "q": "差不多先生最後一命嗚呼，下列哪一組詞語，可以替換「一命嗚呼」？ [114 誠正國中]",
+      "o": [
+        "行將就木、與世長辭",
+        "日薄西山、駕鶴西歸",
+        "溘然長逝、骨化形銷",
+        "彌留之際、撒手人寰"
+      ],
+      "a": 2,
+      "e": "「一命嗚呼」指已經死亡；「溘然長逝」和「骨化形銷」都可表死亡。其他各組含臨死前、接近死亡而非已死亡的詞。"
+    }
+  ]
+}
