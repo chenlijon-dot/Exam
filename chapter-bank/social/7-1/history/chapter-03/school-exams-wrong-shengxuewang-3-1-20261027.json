@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "subject": "social",
+    "subjectLabel": "社會",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "history",
+    "unitGroupLabel": "歷史｜臺灣的歷史（上）",
+    "section": "history-chapter-03",
+    "unit": "第3章 大航海時代臺灣原住民與外來者",
+    "title": "歷史 3-1｜各校考題〈錯題〉",
+    "subtitle": "升學王七年級 3-1｜紙本自我練習錯題精選｜9 題",
+    "difficulty": "social-7-1-history-03-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "sourceLabel": "升學王",
+    "sourceNote": "紙本自我練習錯題精選；以實際作答錯誤作為進入題庫的篩選條件。本次不建立或累加錯誤次數。9 題均依紙本紅筆訂正答案登錄；本批錯題無需額外題目圖片。"
+  },
+  "source": {
+    "school": "高雄楷模書院",
+    "year": "unknown",
+    "exam": "升學王七年級歷史 3-1",
+    "sourceType": "school-exam",
+    "sourceFiles": [
+      "img20261027_21424823.jpg",
+      "img20261027_21434666.jpg",
+      "img20261027_21472111.jpg"
+    ],
+    "answerVerified": true,
+    "answerAuthority": "紙本批改／訂正答案"
+  },
+  "questions": [
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q12",
+      "revision": 1,
+      "originalQuestionNumber": "12",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 2,
+      "sourceFile": "img20261027_21424823.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-deerskin-trade",
+        "hist-7-1-3-sika-deer-decline"
+      ],
+      "preserveOptionOrder": true,
+      "q": "荷蘭治臺期間，採取了某些制度，用來規範管理原住民的交易活動。下列關於荷蘭人管理原住民的交易活動方式敘述選項，何者錯誤？",
+      "o": [
+        "荷蘭將原住民交易活動承包給漢人",
+        "漢人以生活物資，向原住民收購鹿皮",
+        "漢人將收購自原住民的商品，賣給荷蘭聯合東印度公司",
+        "捕捉鹿的數量有限，鹿並未明顯減少"
+      ],
+      "a": 3,
+      "e": "荷治時期鹿皮貿易規模很大，梅花鹿數量明顯減少；因此「捕捉數量有限、鹿未明顯減少」不正確。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q15",
+      "revision": 1,
+      "originalQuestionNumber": "15",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 2,
+      "sourceFile": "img20261027_21424823.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-regional-difference",
+        "hist-7-1-3-foreigners-indigenous-contact"
+      ],
+      "preserveOptionOrder": true,
+      "q": "《巴達維亞城日誌》是荷蘭人東印度公司在亞洲地區留下的相關資料。裡面有許多關於臺灣原住民的記載。其中對於現今臺南地區，當時的大員灣一帶的目加溜灣、蕭壠和新港社的原住民，荷蘭人認為是赤裸身體走動而不覺羞恥、不斷從事殺戮、沒有臣服於任何法律或社會秩序的粗俗野蠻人。但提到了關於現今恆春，當時稱作瑯嶠的原住民，認為瑯嶠人是全島最文明的人，雖然住在又小又醜的房子裡，不過走動時衣著得體，出外都穿衣物。請問這段資料可以告訴我們什麼事情？",
+      "o": [
+        "荷蘭人認為臺灣原住民都很野蠻",
+        "荷蘭人對原住民的統治非常粗暴",
+        "荷蘭人認為文明與否跟穿著有關",
+        "這些資料充滿偏見，毫無歷史價值"
+      ],
+      "a": 2,
+      "e": "材料直接以是否穿著衣物來區分「文明」程度，反映荷蘭人的文明觀與觀察標準。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q16",
+      "revision": 1,
+      "originalQuestionNumber": "16",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 3,
+      "sourceFile": "img20261027_21434666.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-local-council",
+        "hist-7-1-3-dutch-indirect-rule"
+      ],
+      "preserveOptionOrder": true,
+      "q": "荷蘭統治臺灣初期，曾經分別在各地成立「地方會議」（Landdag），要求各社選出長老，每年集會。其用意可能為何？",
+      "o": [
+        "做為傳播政令機構",
+        "做為徵收稅捐的機構",
+        "做為傳播宗教的機構",
+        "做為代表民意的機構"
+      ],
+      "a": 0,
+      "e": "地方會議是荷蘭統治原住民的重要間接治理工具，可藉由長老傳達政令並維持統治。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q18",
+      "revision": 1,
+      "originalQuestionNumber": "18",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 3,
+      "sourceFile": "img20261027_21434666.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-han-cultural-influence",
+        "hist-7-1-3-local-council"
+      ],
+      "preserveOptionOrder": true,
+      "q": "荷蘭人佔領臺灣後，大量招募中國漢人來臺開墾，福建泉州陳某帶著家眷、同鄉友人來應募，請問陳某可能會碰到情況有幾項？（甲）取得由東印度公司提供的農具、耕牛、種子；（乙）荷蘭傳教士向他傳教；（丙）必須繳納各種稅給東印度公司；（丁）在臺南種植東印度公司引進的咖啡；（戊）參加地方會議聽取荷蘭長官的命令。",
+      "o": [
+        "兩項",
+        "三項",
+        "四項",
+        "五項"
+      ],
+      "a": 3,
+      "e": "依本次紙本紅筆訂正答案，本題答案為 D（五項）；題目依原卷訂正答案登錄。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q19",
+      "revision": 1,
+      "originalQuestionNumber": "19",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 3,
+      "sourceFile": "img20261027_21434666.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-madou-incident",
+        "hist-7-1-3-dutch-indirect-rule"
+      ],
+      "preserveOptionOrder": true,
+      "q": "下列為 1635 年麻豆社與荷蘭人所簽訂的條約項目：「1. 麻豆人不再對抗荷蘭人與其盟友。2. 頭目交出檳榔、椰子幼樹與領土給予荷蘭。3. 作戰時要與荷蘭人並肩作戰。4. 不得干擾收購鹿皮的中國人，並且讓他們自由通行。5. 若被召喚，部落長老要到熱蘭遮城聆聽長官的政策。」請問：荷蘭當局想透過條約達成哪些目的，下列敘述何者為非？",
+      "o": [
+        "讓麻豆社屈服，接受歸降",
+        "確保在臺鹿皮的商業利益",
+        "併入麻豆社武力，鞏固統治",
+        "與麻豆社成為檳榔、椰子的貿易夥伴"
+      ],
+      "a": 3,
+      "e": "條約目的在於使麻豆社歸降、配合作戰並保障鹿皮交易，不是建立檳榔、椰子的貿易夥伴關係。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q21",
+      "revision": 1,
+      "originalQuestionNumber": "21",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 3,
+      "sourceFile": "img20261027_21434666.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-sinkan-manuscripts",
+        "hist-7-1-3-han-cultural-influence"
+      ],
+      "preserveOptionOrder": true,
+      "q": "家珍在古物市場中買到一份古文書，她請教歷史老師，發現這是一份荷蘭統治時期漢人與原住民買賣土地時簽訂的雙語契約。請問：此契約中的雙語，應該是指哪兩種語言？",
+      "o": [
+        "漢文、新港文",
+        "漢文、荷蘭文",
+        "荷蘭文、新港文",
+        "新港文、羅馬文"
+      ],
+      "a": 0,
+      "e": "新港文書常以漢文與以羅馬字母記錄的西拉雅語（新港文）並列，因此答案為漢文、新港文。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q23",
+      "revision": 1,
+      "originalQuestionNumber": "23",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 3,
+      "sourceFile": "img20261027_21434666.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-foreigners-indigenous-contact",
+        "hist-7-1-3-indigenous-han-conflict"
+      ],
+      "preserveOptionOrder": true,
+      "q": "在面對荷蘭人的統治時，有些原住民部落會選擇奮起反抗，請問他們可能合作的對象不包含何者？",
+      "o": [
+        "西班牙人",
+        "日本人",
+        "漢人",
+        "其他部落"
+      ],
+      "a": 0,
+      "e": "依紙本訂正答案，西班牙人不屬於此題所列原住民反荷行動中可能合作的對象。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q24",
+      "revision": 1,
+      "originalQuestionNumber": "24",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 3,
+      "sourceFile": "img20261027_21434666.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-christian-mission",
+        "hist-7-1-3-sinkan-manuscripts"
+      ],
+      "preserveOptionOrder": true,
+      "q": "綜合你對原住民族的歷史知識，請判斷哪一段敘述是正確的？",
+      "o": [
+        "荷蘭人的傳教事業影響深遠，直到十九世紀仍有原住民信仰",
+        "荷蘭傳教士擁有象徵權力的權杖，協助荷蘭人推行政令",
+        "西拉雅族各社都虔誠信奉基督教，與荷蘭人保持友好",
+        "基督宗教的傳播，使得原住民有機會保存歷史"
+      ],
+      "a": 3,
+      "e": "傳教士使用羅馬字母記錄原住民族語言，留下新港文書等資料，使部分原住民歷史與語言得以保存。"
+    },
+    {
+      "questionId": "hist-7-1-c03-wrong-shengxuewang-3-1-q25",
+      "revision": 1,
+      "originalQuestionNumber": "25",
+      "school": "高雄楷模書院",
+      "year": "unknown",
+      "exam": "升學王七年級歷史 3-1",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "verificationStatus": "paper-correction-confirmed",
+      "sourcePage": 3,
+      "sourceFile": "img20261027_21434666.jpg",
+      "sourceContinuationFile": "img20261027_21472111.jpg",
+      "chapterTags": [
+        "history-chapter-03",
+        "history-3-1"
+      ],
+      "conceptIds": [
+        "hist-7-1-3-deerskin-trade",
+        "hist-7-1-3-foreigners-indigenous-contact"
+      ],
+      "preserveOptionOrder": true,
+      "q": "荷蘭人統治臺灣期間，為方便統治，採取何種政策來管理原住民部落的對外商業貿易活動？",
+      "o": [
+        "長老會議統一管理",
+        "將原住民的交易活動承包給漢人",
+        "由荷蘭聯合東印度公司直接定價及收購",
+        "荷蘭商人組成各種商社，分區交易"
+      ],
+      "a": 1,
+      "e": "荷蘭人以贌社等承包方式，讓漢人承包原住民部落的交易活動，以便管理與取得商業利益。"
+    }
+  ]
+}
