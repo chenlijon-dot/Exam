@@ -33,7 +33,10 @@
       subtitle: '地形｜選擇難度',
       path: 'chapter-bank/social/7-1/geography/chapter-03',
       questionCount: 20,
-      pointsPerQuestion: 5
+      pointsPerQuestion: 5,
+      schoolBank: 'school-exams-wrong-shengxuewang-1021.json',
+      schoolBankCount: 13,
+      schoolBankLabel: '各校考題〈錯題〉'
     },
     'geo-04': {
       title: '第4章　海岸與島嶼',
@@ -296,7 +299,7 @@
           </button>`).join('')}
         ${chapter.schoolBank ? `
           <button class="catalog-card" id="socialGeo01SchoolBtn">
-            <span class="top"><span class="icon">🏫</span><strong>各校題庫</strong><span class="catalog-badge school">${chapter.schoolBankCount} 題</span></span>
+            <span class="top"><span class="icon">🏫</span><strong>${chapter.schoolBankLabel === '各校考題〈錯題〉' ? '各校考題〈錯題〉' : '各校題庫'}</strong><span class="catalog-badge school">${chapter.schoolBankCount} 題</span></span>
             <span class="desc">${chapter.schoolBankLabel || '真實段考／複習卷'}｜保留原題與原選項順序</span>
           </button>` : ''}
         ${(chapter.supplementalBanks || []).map((bank, index) => `
