@@ -87,7 +87,11 @@
       pointsPerQuestion: 5,
       subjectName: '歷史',
       backText: '歷史章節',
-      pathLabel: '歷史'
+      pathLabel: '歷史',
+      schoolBank: 'school-exams-wrong-shengxuewang-3-1-20261027.json',
+      schoolBankCount: 9,
+      schoolBankLabel: '升學王七年級 3-1｜紙本自我練習錯題',
+      schoolBankTitle: '各校考題〈錯題〉'
     },
     'civics-01': {
       title: '第1章　公民與公民德性',
