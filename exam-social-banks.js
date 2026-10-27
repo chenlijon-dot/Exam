@@ -303,7 +303,7 @@
           </button>`).join('')}
         ${chapter.schoolBank ? `
           <button class="catalog-card" id="socialGeo01SchoolBtn">
-            <span class="top"><span class="icon">🏫</span><strong>${chapter.schoolBankLabel === '各校考題〈錯題〉' ? '各校考題〈錯題〉' : '各校題庫'}</strong><span class="catalog-badge school">${chapter.schoolBankCount} 題</span></span>
+            <span class="top"><span class="icon">🏫</span><strong>${chapter.schoolBankTitle || (chapter.schoolBankLabel === '各校考題〈錯題〉' ? '各校考題〈錯題〉' : '各校題庫')}</strong><span class="catalog-badge school">${chapter.schoolBankCount} 題</span></span>
             <span class="desc">${chapter.schoolBankLabel || '真實段考／複習卷'}｜保留原題與原選項順序</span>
           </button>` : ''}
         ${(chapter.supplementalBanks || []).map((bank, index) => `
