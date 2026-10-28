@@ -1,0 +1,93 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true
+  },
+  "source": {
+    "school": "臺中市立四育國中",
+    "year": "114",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-台中市立四育國中第一學期七年級第二次段考國文科評量試題.pdf",
+    "sourceUrl": "https://drive.google.com/file/d/1zkrUjlRteYAco3P4Vr_s1GMwDCHMfVfm/view",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-siyu-114-5",
+      "revision": 1,
+      "originalQuestionNumber": "單選5",
+      "school": "臺中市立四育國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "sourceFile": "114-台中市立四育國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1zkrUjlRteYAco3P4Vr_s1GMwDCHMfVfm/view",
+      "sourcePage": null,
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-character-similar-form"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "A",
+      "paperEvidenceStatus": "red-correction-visible-2026-10-28",
+      "q": "差不多先生「十字常常寫成千字，千字常常寫成十字」，這是因為「十」、「千」字形相近所造成的錯誤。下列選項「」中的錯別字，何者也是因「字形相近」而造成的錯誤？ [114 臺中市立四育國中]",
+      "o": [
+        "沿著石階往上走，想不到別有洞天，竟是一個風景「怡」人的好去處",
+        "劇中主角掛刀「配」劍，行俠仗義，路見不平就挺身而出，拔刀相助",
+        "陽明山花團錦簇，每到假日，遊客莫不趨之若「騖」，爭相上山賞花",
+        "病癒後的他，狼吞虎嚥「味」口大開，簡直可以去參加大胃王比賽了"
+      ],
+      "a": 2,
+      "e": "正確 C。趨之若鶩中的「鶩」意為野鴨，誤寫成形近的「騖」（奔馳、追求）；A「怡」應為「宜」，主要是用字辨義。注意不能只看到錯字，就認定屬形近字。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-siyu-114-1-group",
+      "revision": 1,
+      "originalQuestionNumber": "題組1",
+      "school": "臺中市立四育國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "sourceFile": "114-台中市立四育國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1zkrUjlRteYAco3P4Vr_s1GMwDCHMfVfm/view",
+      "sourcePage": null,
+      "lessonMapping": "第四課〈差不多先生傳〉（胡適作者延伸閱讀）",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-author-extension-independence"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "B",
+      "paperEvidenceStatus": "red-correction-visible-2026-10-28",
+      "intro": "我大清早起，站在人家屋角上啞啞的啼。人家討嫌我，說我不吉利；我不能呢呢喃喃討人家的歡喜！天寒風緊，無枝可棲。我整日裡飛去飛回，整日裡又寒又飢。我不能帶著鞘兒，翁翁央央的替人家飛；不能叫人家繫在竹竿頭，賺一把小米！（胡適〈老鴉〉）",
+      "introLabel": "胡適〈老鴉〉作者延伸題組",
+      "q": "由詩中可知，老鴉具有何種性格？ [114 臺中市立四育國中]",
+      "o": [
+        "堅持原則，獨立不屈",
+        "盡忠職守，勤奮不懈",
+        "頑固守舊，不知變通",
+        "自怨自艾，顧影自憐"
+      ],
+      "a": 0,
+      "e": "正確 A。老鴉不為取悅他人改變本性，寧願受寒飢也不屈從，突顯獨立與堅持，不是強調勤奮。此題屬胡適作者延伸閱讀。"
+    }
+  ]
+}
