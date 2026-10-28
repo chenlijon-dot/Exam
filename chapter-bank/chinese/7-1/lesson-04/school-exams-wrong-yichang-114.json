@@ -1,0 +1,58 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true
+  },
+  "source": {
+    "school": "花蓮縣立宜昌國中",
+    "year": "114",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-花蓮縣立宜昌國中第一學期七年級第二次段考國文科評量試題.pdf",
+    "sourceUrl": "https://drive.google.com/file/d/1UzjP1YATntiMmyqylAfCCIAUOy4shAyB/view",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-yichang-114-3",
+      "revision": 1,
+      "originalQuestionNumber": "選擇3",
+      "school": "花蓮縣立宜昌國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "sourceFile": "114-花蓮縣立宜昌國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1UzjP1YATntiMmyqylAfCCIAUOy4shAyB/view",
+      "sourcePage": null,
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-orthography"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "A",
+      "paperEvidenceStatus": "red-correction-visible-2026-10-28",
+      "q": "下列選項「」中的詞語，何者用字完全正確？ [114 花蓮縣立宜昌國中]",
+      "o": [
+        "敷衍荀且",
+        "溫固知新",
+        "切搓學習",
+        "敦厚樸實"
+      ],
+      "a": 3,
+      "e": "正確 D。A 應為「敷衍苟且」，B 應為「溫故知新」，C 應為「切磋學習」；只有「敦厚樸實」字形完全正確。"
+    }
+  ]
+}
