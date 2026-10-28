@@ -1,0 +1,124 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true
+  },
+  "source": {
+    "school": "新北市立鷺江國中",
+    "year": "114",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceFile": "114-新北市立鷺江國中第一學期七年級第二次段考國文科評量試題.pdf",
+    "sourceUrl": "https://drive.google.com/file/d/1ot_CaTuDXoiabb6FbczzQG461Z98FCOo/view",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-lujiang-114-2",
+      "revision": 1,
+      "originalQuestionNumber": "選擇2",
+      "school": "新北市立鷺江國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "sourceFile": "114-新北市立鷺江國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1ot_CaTuDXoiabb6FbczzQG461Z98FCOo/view",
+      "sourcePage": null,
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-vocabulary-peixiaoxin"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "D",
+      "paperEvidenceStatus": "red-correction-visible-2026-10-28",
+      "q": "下列文句，對「」內的解釋何者有誤？ [114 新北市立鷺江國中]",
+      "o": [
+        "員工對老闆「賠小心」，是指員工隨時隨地，小心謹慎",
+        "孔子所謂的「恕」道是指推己及人，以同理心對待他人",
+        "欣欣今天「不上」六點就出門了，表示「還不到」六點鐘",
+        "默默服務的導護志工是有資格被稱之為「人物」的一群，表示他們是對社會有貢獻的人"
+      ],
+      "a": 0,
+      "e": "正確 A。「賠小心」是謙卑陪笑、向對方表示歉意或小心應對，並非泛指隨時謹慎；D「人物」為值得稱許、有貢獻的人。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-lujiang-114-5",
+      "revision": 1,
+      "originalQuestionNumber": "選擇5",
+      "school": "新北市立鷺江國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "sourceFile": "114-新北市立鷺江國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1ot_CaTuDXoiabb6FbczzQG461Z98FCOo/view",
+      "sourcePage": null,
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-pronunciation"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "D",
+      "paperEvidenceStatus": "red-correction-visible-2026-10-28",
+      "q": "下列文句「」中的字，何者讀音正確？ [114 新北市立鷺江國中]",
+      "o": [
+        "對於改過向善的人，我們應該「予」以肯定：ㄩˊ",
+        "王醫師的醫術十分精「湛」，一生救人無數：ㄓㄢˋ",
+        "他近日到「陝」西省遊玩，飽覽山水風光：ㄒㄧㄚˊ",
+        "游泳選手們好比池中「蛟」龍，在水中競技：ㄐㄧㄠˇ"
+      ],
+      "a": 1,
+      "e": "正確 B。湛讀ㄓㄢˋ；予以的予讀ㄩˇ，陝讀ㄕㄢˇ，蛟讀ㄐㄧㄠ。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-lujiang-114-13",
+      "revision": 1,
+      "originalQuestionNumber": "選擇13",
+      "school": "新北市立鷺江國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "type": "mcq",
+      "sourceType": "school-exam",
+      "answerVerified": true,
+      "sourceFile": "114-新北市立鷺江國中第一學期七年級第二次段考國文科評量試題.pdf",
+      "sourceUrl": "https://drive.google.com/file/d/1ot_CaTuDXoiabb6FbczzQG461Z98FCOo/view",
+      "sourcePage": null,
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-genre-satire"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "D",
+      "paperEvidenceStatus": "red-correction-visible-2026-10-28",
+      "q": "關於〈差不多先生傳〉一文的敘述，何者正確？ [114 新北市立鷺江國中]",
+      "o": [
+        "是一篇應用人物傳記手法寄託作者情志的寓言",
+        "先說明差不多先生的思想特質，再介紹其外表",
+        "旨在藉主角言行，針砭一般人圓通豁達的態度",
+        "寫出了主角姓名、籍貫等，說明故事具真實性"
+      ],
+      "a": 0,
+      "e": "正確 A。虛構人物以傳記形式諷刺敷衍苟且；開頭先介紹代表性、外貌與思考，不能說先思想後外表；姓名籍貫是諷刺設計，不代表真人。"
+    }
+  ]
+}
