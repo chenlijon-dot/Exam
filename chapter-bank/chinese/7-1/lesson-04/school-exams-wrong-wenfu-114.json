@@ -1,0 +1,80 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true
+  },
+  "source": {
+    "school": "高雄市立文府國中",
+    "year": "114",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceUrl": "https://drive.google.com/file/d/17qC3TTjKTO0mPqm4dtcWRjaQe40j4EuI/view"
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-wenfu-114-s4q8",
+      "revision": 1,
+      "originalQuestionNumber": "四-8",
+      "school": "高雄市立文府國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "sourceUrl": "https://drive.google.com/file/d/17qC3TTjKTO0mPqm4dtcWRjaQe40j4EuI/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "conceptIds": [
+        "chinese-7-1-l04-文章結構"
+      ],
+      "selectedPaperAnswer": "B",
+      "preserveOptionOrder": true,
+      "q": "關於〈差不多先生傳〉一文的敘述，下列何者錯誤？",
+      "o": [
+        "是一篇應用人物傳記手法寄託作者情志的寓言",
+        "以虛構人物差不多先生為主角，透過其生平事蹟，諷刺處事敷衍的人",
+        "以倒敘手法鋪陳事例，且所舉事例的影響性由輕而重，以凸顯人物性格",
+        "旨在藉差不多先生，諷刺做事馬虎的態度，小則危害個人，大則危害社會。"
+      ],
+      "a": 2,
+      "e": "文章按童年、求學、工作、搭車、就醫的時間順序敘述，不是倒敘；C 為錯誤敘述。"
+    }
+  ],
+  "pendingQuestions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-wenfu-114-s4q9",
+      "revision": 1,
+      "originalQuestionNumber": "四-9",
+      "school": "高雄市立文府國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": false,
+      "sourceUrl": "https://drive.google.com/file/d/17qC3TTjKTO0mPqm4dtcWRjaQe40j4EuI/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "conceptIds": [
+        "chinese-7-1-l04-倒反修辭"
+      ],
+      "selectedPaperAnswer": "D",
+      "preserveOptionOrder": true,
+      "q": "倒反修辭是指「文辭表面的意義和作者內心的真意相反」，下列哪一個選項的文句沒有使用倒反修辭？",
+      "o": [
+        "舅舅講話十分幽默，我每次聽了都差點笑破肚皮。",
+        "媽媽煮的菜十分美味，我們已經決定改去外面的餐廳吃飯了！",
+        "她的走路速度可說是健步如飛，若跟她結伴趕公車，車早就開走了！",
+        "各種新式詐騙手法崛起，當民眾接獲穩賺不賠的好消息，都應特別警惕。"
+      ],
+      "a": 0,
+      "e": "原校公布 A；但 D 也是一般警示語而非明顯倒反，疑有不只一個可成立答案，待校方核實。",
+      "verificationStatus": "pending-answer-key-dispute"
+    }
+  ]
+}
