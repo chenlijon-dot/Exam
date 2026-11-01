@@ -1,0 +1,107 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true
+  },
+  "source": {
+    "school": "臺中市立向上國中",
+    "year": "114",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceUrl": "https://drive.google.com/file/d/1vC-uMx5B6xkuNllWiuWFcqd5fveLk1tH/view"
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-xiangshang-114-s3q16",
+      "revision": 1,
+      "originalQuestionNumber": "三-16",
+      "school": "臺中市立向上國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "sourceUrl": "https://drive.google.com/file/d/1vC-uMx5B6xkuNllWiuWFcqd5fveLk1tH/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "conceptIds": [
+        "chinese-7-1-l04-死亡詞語"
+      ],
+      "selectedPaperAnswer": "C",
+      "preserveOptionOrder": true,
+      "q": "(甲)一命嗚呼 (乙)日薄西山 (丙)撒手人寰 (丁)騰雲駕霧 (戊)駕鶴西歸 (己)與世長辭。上述詞語，有幾個是指「死亡」？",
+      "o": [
+        "三個",
+        "四個",
+        "五個",
+        "六個"
+      ],
+      "a": 1,
+      "e": "甲、丙、戊、己指死亡，共四項；日薄西山指衰老或衰敗，騰雲駕霧非死亡。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-xiangshang-114-s3q17",
+      "revision": 1,
+      "originalQuestionNumber": "三-17",
+      "school": "臺中市立向上國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "sourceUrl": "https://drive.google.com/file/d/1vC-uMx5B6xkuNllWiuWFcqd5fveLk1tH/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "conceptIds": [
+        "chinese-7-1-l04-反諷主旨"
+      ],
+      "selectedPaperAnswer": "C",
+      "preserveOptionOrder": true,
+      "q": "關於〈差不多先生傳〉一文的敘述，下列何者正確？",
+      "o": [
+        "文中介紹差不多先生的籍貫、姓名，暗示真有其人",
+        "先說明差不多先生的思想特質，再介紹其外表",
+        "由衷的稱讚差不多先生是個不愛計較的圓通大師",
+        "作者文末運用反諷手法，針砭國人不認真的通病"
+      ],
+      "a": 3,
+      "e": "差不多先生為虛構的象徵性人物；「圓通大師」是反諷而非真心稱讚，D 正確。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-xiangshang-114-s4q32",
+      "revision": 1,
+      "originalQuestionNumber": "四-32",
+      "school": "臺中市立向上國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "sourceUrl": "https://drive.google.com/file/d/1vC-uMx5B6xkuNllWiuWFcqd5fveLk1tH/view",
+      "lessonMapping": "第四課〈差不多先生傳〉（跨文本人物諷刺）",
+      "conceptIds": [
+        "chinese-7-1-l04-跨文本拖延"
+      ],
+      "selectedPaperAnswer": "B",
+      "preserveOptionOrder": true,
+      "q": "「她懶得抄筆記，也懶得思考，只想著以後再學、以後再想。」倘若要幫助「等一下小姐」改善此種態度，下列哪一句最適合提點她？",
+      "o": [
+        "勤能補拙，為學貴在持之以恆",
+        "順其自然，該做的事不必太急",
+        "成功要藉由機運與靈感的配合",
+        "只要保有愉悅心情，一定會進步"
+      ],
+      "a": 0,
+      "e": "A 強調當下努力與持之以恆，對應拖延與懶散的問題；B 恰恰容易放任拖延。",
+      "introLabel": "跨文本閱讀｜〈等一下小姐〉",
+      "intro": "她，懶洋洋，一拖再拖，要「等一下」才起床。起床後當然不會順便疊被，她要等一下洗完臉、吃過早飯，再專程走回房間整理床鋪。她每天上課都匆匆忙忙，當然沒時間幫別人倒牛奶、烤麵包或拿鞋子。在電梯裡遇見熟人時，她只顧著看手錶，常常忘了跟人打招呼。過馬路也半跑著走，怎會想到牽幼童過街？走進校門只顧往教室裡跑，哪有心情欣賞早晨的美麗校園？上課時她懶洋洋地坐著聽講，心想要抄重點，等一下下課再抄。如果需要背，也等考試前一天再背，反正離考試還有好多天。聽師長訓話，即使深受感動也只點點頭，懶得動筆記下來，也懶得細細咀嚼，她沒有經過這番記憶的手續，好句子忘得比誰都快。看電視不管看到什麼，聽到什麼，她都只想著，現在是放鬆自己的娛樂時間，她懶得學習、懶得思考。她會告訴自己：「要學、要想，等有必要的時候再學、再想也不遲。」出外旅遊更是為了「玩」，何必多花精神研究什麼、觀察什麼呢？如果需要研究、需要觀察，等上史地課或生物課時，老師自然會教我們呀！等一下，等一下，等……。「等一下小姐」日子過得並不悠閒，因為隨時都有事「等著」要她去做。心情上不清不爽爽的，自然快樂不起來，而且平白浪費了許多學習和思考的時間，不知不覺成了不可愛又不長進的落伍人了。"
+    }
+  ],
+  "pendingQuestions": []
+}
