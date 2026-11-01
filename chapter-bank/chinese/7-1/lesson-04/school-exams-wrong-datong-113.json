@@ -1,0 +1,83 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam"
+  },
+  "source": {
+    "school": "彰化市立大同國中",
+    "year": "113",
+    "sourceType": "school-exam",
+    "sourceUrl": "https://drive.google.com/file/d/1uQ7Nns7bI7Fad85Uym8jpiamBbeKp2Wt/view",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-datong-113-q04",
+      "revision": 1,
+      "originalQuestionNumber": "4",
+      "school": "彰化市立大同國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "answerSource": "official-school-answer-sheet",
+      "sourceUrl": "https://drive.google.com/file/d/1uQ7Nns7bI7Fad85Uym8jpiamBbeKp2Wt/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-成語應用"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "C",
+      "q": "下列哪一個成語使用正確？",
+      "o": [
+        "個性「一絲不苟」的人，做事總是苟且隨便。",
+        "數學老師總是「不厭其煩」的說明解題方式。",
+        "那種「既往不咎」的人，表面上看起來跟你要好，其實別有用心。",
+        "大家推選阿明擔任班長，他「巧言令色」的接受了。"
+      ],
+      "a": 1,
+      "e": "B 正確。不厭其煩是不嫌麻煩、反覆詳細說明；一絲不苟指認真，既往不咎是不追究以前過失，巧言令色是用花言巧語與討好臉色取悅他人。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-datong-113-q18",
+      "revision": 1,
+      "originalQuestionNumber": "18",
+      "school": "彰化市立大同國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "answerSource": "official-school-answer-sheet",
+      "sourceUrl": "https://drive.google.com/file/d/1uQ7Nns7bI7Fad85Uym8jpiamBbeKp2Wt/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-胡適生平"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "D",
+      "q": "下列有關胡適先生的敘述，何者錯誤？",
+      "o": [
+        "改名為「適」乃因於「物競天擇，適者生存」。",
+        "領導文學革命，鼓吹文言文運動。",
+        "出版中國第一本白話新詩集《嘗試集》。",
+        "畢生提倡民主與自由，主張「科學的人生觀」。"
+      ],
+      "a": 1,
+      "e": "B 錯誤。胡適倡導白話文與文學改良，不是鼓吹文言文運動。"
+    }
+  ],
+  "pendingQuestions": []
+}
