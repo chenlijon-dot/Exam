@@ -1,0 +1,117 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam"
+  },
+  "source": {
+    "school": "臺中市立崇德國中",
+    "year": "113",
+    "sourceType": "school-exam",
+    "sourceUrl": "https://drive.google.com/file/d/1ofgIYDN7x51Kr2vnTt4Fa5L_jn8b_yde/view",
+    "answerVerified": false
+  },
+  "questions": [],
+  "pendingQuestions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-chongde-113-q05",
+      "revision": 1,
+      "originalQuestionNumber": "5",
+      "school": "臺中市立崇德國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": false,
+      "answerSource": "AI-reference-answer-user-supplied",
+      "sourceUrl": "https://drive.google.com/file/d/1ofgIYDN7x51Kr2vnTt4Fa5L_jn8b_yde/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-近音近形詞"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "B",
+      "q": "許多詞語讀音相同或相似，但字形與意義卻不相同，如「修養／休養」、「一班／一斑」、「切記／切忌」、「題材／體裁」，關於以上詞語的使用，下列何者錯誤？",
+      "o": [
+        "病後宜多「休養」，但這也不妨礙充實內涵、「修養」品德",
+        "由「一班」官員都遭到檢調約談收押，貪汙舞弊的情況可見「一斑」",
+        "一個合格的旅人「切忌」入境隨俗，「切記」觸犯當地的各項禁忌",
+        "生活中的點滴都是寫作的「題材」，不妨選取適合的「體裁」表現"
+      ],
+      "a": 2,
+      "e": "C 將切記與切忌的意思反用；正確應為切記入境隨俗、切忌觸犯禁忌。",
+      "verificationStatus": "AI-answer-not-school-verified"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-chongde-113-q08",
+      "revision": 1,
+      "originalQuestionNumber": "8",
+      "school": "臺中市立崇德國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": false,
+      "answerSource": "AI-reference-answer-user-supplied",
+      "sourceUrl": "https://drive.google.com/file/d/1ofgIYDN7x51Kr2vnTt4Fa5L_jn8b_yde/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-胡適作者知識"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "C",
+      "q": "若要利用關鍵字搜尋古今人物，以下哪組關鍵字能正確搜尋到所配對的人物？",
+      "o": [
+        "私人講學、戰國：孔子",
+        "我手寫我口、嘗試集：胡適",
+        "不遷怒不貳過、善於經商：子貢",
+        "兒童詩先驅、火車事故：杏林子"
+      ],
+      "a": 1,
+      "e": "AI 參考答案 B。〈嘗試集〉為胡適作品；「我手寫我口」為白話文倡議脈絡，但該語最早與黃遵憲相關，故這是線索配對題，需留意歷史語境。孔子為春秋時人，『不遷怒，不貳過』指顏回。",
+      "verificationStatus": "AI-answer-not-school-verified"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-chongde-113-q09",
+      "revision": 1,
+      "originalQuestionNumber": "9",
+      "school": "臺中市立崇德國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": false,
+      "answerSource": "AI-reference-answer-user-supplied",
+      "sourceUrl": "https://drive.google.com/file/d/1ofgIYDN7x51Kr2vnTt4Fa5L_jn8b_yde/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-文章順敘"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "B",
+      "q": "關於差不多先生傳全文的寫作手法，下列解讀何者錯誤？",
+      "o": [
+        "按事件發生的前後順序鋪陳，屬順敘筆法",
+        "事件逐漸繁複詳細，更深刻描述主角特色",
+        "先敘後議，每一事件後都做出主觀評論",
+        "事情越來越重大，影響也愈加嚴重"
+      ],
+      "a": 2,
+      "e": "AI 參考答案 C。文章以生活事例順敘並由輕至重，未在每件事後分別加入主觀議論；主要批判集中篇末。",
+      "verificationStatus": "AI-answer-not-school-verified"
+    }
+  ]
+}
