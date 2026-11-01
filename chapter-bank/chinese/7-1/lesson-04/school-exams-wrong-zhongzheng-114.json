@@ -1,0 +1,78 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "unit": "第四課 差不多先生傳",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam",
+    "preserveOptionOrder": true,
+    "analysisEligible": true
+  },
+  "source": {
+    "school": "新北市立中正國中",
+    "year": "114",
+    "exam": "第一學期七年級第二次段考",
+    "sourceType": "school-exam",
+    "sourceUrl": "https://drive.google.com/file/d/1N9t4ejWD_C8CFZ76BEtqdjchNzC6XCCP/view"
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-zhongzheng-114-s4q4",
+      "revision": 1,
+      "originalQuestionNumber": "四-4",
+      "school": "新北市立中正國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "sourceUrl": "https://drive.google.com/file/d/1N9t4ejWD_C8CFZ76BEtqdjchNzC6XCCP/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "conceptIds": [
+        "chinese-7-1-l04-字義辨析"
+      ],
+      "selectedPaperAnswer": "A",
+      "preserveOptionOrder": true,
+      "q": "下列選項「 」中的字，何者意義相同？",
+      "o": [
+        "連下幾天大雨，「遍」地積水難消／暑假期間，日本各地「遍」布觀光客",
+        "忠「言」逆耳，令人感嘆／烏俄戰爭持續多年，人民生活苦不堪「言」",
+        "學習要「溫」故知新，才能保持進步／李伯伯「溫」文儒雅，還寫得一手好書法",
+        "他遲到二分鐘，「白」瞪著眼，看著火車開走／他忘了餐廳星期一公休，「白」跑一趟"
+      ],
+      "a": 3,
+      "e": "兩句的「白」皆指徒然、白費，故 D。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-zhongzheng-114-s4q6",
+      "revision": 1,
+      "originalQuestionNumber": "四-6",
+      "school": "新北市立中正國中",
+      "year": "114",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "sourceUrl": "https://drive.google.com/file/d/1N9t4ejWD_C8CFZ76BEtqdjchNzC6XCCP/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "conceptIds": [
+        "chinese-7-1-l04-字形辨識"
+      ],
+      "selectedPaperAnswer": "D",
+      "preserveOptionOrder": true,
+      "q": "下列文句，何者用字完全正確？",
+      "o": [
+        "由於救援不利，造成災區重建進度不力於居民生活恢復正常",
+        "政府臨時徵兆醫護人員，正是因為疫情已有惡化的徵召",
+        "最大冰山融解速度不同一般，海水升溫可見一斑",
+        "他待人有禮貌休養很好，最近生病住院修養了幾日。"
+      ],
+      "a": 2,
+      "e": "C 的「可見一斑」正確；A「不力／不利」、B「徵召／徵兆」、D「修養／休養」須辨義。"
+    }
+  ],
+  "pendingQuestions": []
+}
