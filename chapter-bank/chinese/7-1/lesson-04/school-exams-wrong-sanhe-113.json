@@ -1,0 +1,83 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "section": "lesson-04",
+    "title": "第四課〈差不多先生傳〉｜各校考題〈錯題〉",
+    "difficulty": "chinese-7-1-l04-school-wrong",
+    "sourceType": "school-exam"
+  },
+  "source": {
+    "school": "新北市立三和國中",
+    "year": "113",
+    "sourceType": "school-exam",
+    "sourceUrl": "https://drive.google.com/file/d/1uyeFZjpjyKGsZ0KFj5CFkcdAxBio8MY2/view",
+    "answerVerified": true
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-sanhe-113-q07",
+      "revision": 1,
+      "originalQuestionNumber": "7",
+      "school": "新北市立三和國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "answerSource": "official-school-answer-sheet",
+      "sourceUrl": "https://drive.google.com/file/d/1uyeFZjpjyKGsZ0KFj5CFkcdAxBio8MY2/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-倒反修辭"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "D",
+      "q": "「他說完了這句格言，就絕了氣。」作者表面上稱讚差不多先生臨死的遺言為「格言」，實則是在諷刺，這種言語表面的意思和內心本意相反的技巧稱為「倒反」。下列哪些文句並未運用「倒反」技巧？",
+      "o": [
+        "哥哥最大方，連這點小錢都要算得一清二楚。",
+        "小昇真是太天才了，竟然把事情搞到神仙也難以收拾的地步。",
+        "媽媽煮的菜非常美味，菜一上桌立刻就被我們吃光光。",
+        "你的眼睛真是雪亮，布告欄上斗大的字也會看錯。"
+      ],
+      "a": 2,
+      "e": "C 順著字面稱讚菜餚好吃，沒有表裡相反的意思；A、B、D 使用反話。"
+    },
+    {
+      "questionId": "chinese-7-1-l04-school-wrong-sanhe-113-q08",
+      "revision": 1,
+      "originalQuestionNumber": "8",
+      "school": "新北市立三和國中",
+      "year": "113",
+      "exam": "第一學期七年級第二次段考",
+      "sourceType": "school-exam",
+      "type": "mcq",
+      "answerVerified": true,
+      "answerSource": "official-school-answer-sheet",
+      "sourceUrl": "https://drive.google.com/file/d/1uyeFZjpjyKGsZ0KFj5CFkcdAxBio8MY2/view",
+      "lessonMapping": "第四課〈差不多先生傳〉",
+      "chapterTags": [
+        "chinese-7-1-lesson-04"
+      ],
+      "conceptIds": [
+        "chinese-7-1-l04-回文修辭"
+      ],
+      "preserveOptionOrder": true,
+      "selectedPaperAnswer": "D",
+      "q": "「回文」是一種上下兩句，詞彙大多相同，詞序排列恰好相反的修辭法，例如差不多先生傳中「十字常常寫成千字，千字常常寫成十字」。請問下列四位同學根據回文修辭定義所找的例子，何者正確？",
+      "o": [
+        "阿芷：「有村舍處就有佳蔭，有佳蔭處就有村舍。」",
+        "阿天：「知之者不如好之者，好之者不如樂之者。」",
+        "小喆：「人生何處不相逢，相逢有如在夢中。」",
+        "小紳：「聽一遍不如看一遍，看一遍不如做一遍。」"
+      ],
+      "a": 0,
+      "e": "A 將村舍與佳蔭對調，構成回文；D 是遞進排比，並非倒轉詞序。"
+    }
+  ],
+  "pendingQuestions": []
+}
