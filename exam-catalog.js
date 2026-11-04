@@ -957,9 +957,13 @@
     $('#catalogContent').innerHTML = `
       <button class="catalog-back" id="backSubjectsBtn">← 返回科目</button>
       <div class="catalog-path">國文</div>
-      <h2 class="catalog-title">請選擇學期</h2>
-      <p class="catalog-sub">七年級上學期第一冊已依實體課本目錄建立完整課次；其他學期後續加入。</p>
+      <h2 class="catalog-title">請選擇學習項目</h2>
+      <p class="catalog-sub">可依學期練習課本章節，也可進入獨立的國語文閱讀測驗訓練。</p>
       <div class="catalog-grid">
+        <button class="catalog-card" id="chineseReadingTrainingBtn">
+          <span class="top"><span class="icon">📚</span><strong>國語文閱讀測驗訓練</strong><span class="catalog-badge soon">題庫準備中</span></span>
+          <span class="desc">獨立閱讀理解訓練｜文章及題組將逐步匯入。</span>
+        </button>
         ${CHINESE_SEMESTERS.map(s => `
           <button class="catalog-card" data-chinese-semester="${s.key}">
             <span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.key === '7-1' ? 'reference' : ''}">${s.short}</span></span>
@@ -967,7 +971,26 @@
           </button>`).join('')}
       </div>`;
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
+    $('#chineseReadingTrainingBtn')?.addEventListener('click', showChineseReadingTraining);
     CHINESE_SEMESTERS.forEach(s => $(`[data-chinese-semester="${s.key}"]`)?.addEventListener('click', () => showChineseSemester(s.key)));
+  }
+
+  // 閱讀測驗獨立於課本學期；目前只提供導航，不載入或宣稱已有題庫。
+  function showChineseReadingTraining() {
+    setHeader('國文科｜國語文閱讀測驗訓練', '文章閱讀理解｜獨立訓練');
+    document.title = '國語文閱讀測驗訓練｜國文科';
+    $('#catalogContent').innerHTML = `
+      <button class="catalog-back" id="backChineseReadingBtn">← 返回國文</button>
+      <div class="catalog-path">國文　›　國語文閱讀測驗訓練</div>
+      <h2 class="catalog-title">國語文閱讀測驗訓練</h2>
+      <p class="catalog-sub">閱讀文章與測驗題組尚未正式匯入。未來將在此提供獨立的閱讀理解訓練。</p>
+      <div class="catalog-grid">
+        <div class="catalog-card" aria-label="閱讀測驗題庫準備中">
+          <span class="top"><span class="icon">📖</span><strong>閱讀測驗題庫</strong><span class="catalog-badge soon">待建</span></span>
+          <span class="desc">完成文章文字、題目與答案核對後再啟用作答。</span>
+        </div>
+      </div>`;
+    $('#backChineseReadingBtn')?.addEventListener('click', showChineseSemesters);
   }
 
   function showChineseSemester(semesterKey) {
