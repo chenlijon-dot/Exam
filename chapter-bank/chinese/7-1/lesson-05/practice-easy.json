@@ -13,7 +13,7 @@
     "analysisEligible": false,
     "preserveOptionOrder": false,
     "sourceType": "practice-generated",
-    "sourceNote": "依 Google Drive 第五課〈論語選〉canonical 教材知識庫自編；正式選文限〈學而〉、〈述而〉、〈衛靈公〉三則，另僅使用教材明列之孔子、《論語》基本常識與課內補充，不引入教材外章句。",
+    "sourceNote": "依 Google Drive 第五課〈論語選〉canonical 教材知識庫自編，參考12校七上第二次段考之字音、字形、字義和基本文意考點；新增題屬自編題，不冒充原校試題。正式選文限〈學而〉、〈述而〉、〈衛靈公〉三則。",
     "source": {
       "type": "practice-generated",
       "authority": "Google Drive canonical",
@@ -23,7 +23,7 @@
     },
     "difficulty": "chinese-7-1-l05-easy",
     "title": "第五課〈論語選〉｜簡易",
-    "subtitle": "國文第一冊｜自編題｜簡易 20 題",
+    "subtitle": "國文第一冊｜自編題｜簡易 30 題",
     "difficultyLabel": "簡易"
   },
   "questions": [
@@ -545,6 +545,266 @@
       "e": "教材孔子介紹指出，孔子被後世尊為「至聖先師」。",
       "conceptIds": [
         "chinese-7-1-l05-confucius-profile"
+      ]
+    },
+    {
+      "questionId": "261104130000001",
+      "revision": 1,
+      "number": 21,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「不亦說乎」的「說」在這裡應讀作哪一個音？",
+      "o": [
+        "ㄕㄨㄛ",
+        "ㄕㄨㄟˋ",
+        "ㄩㄝˋ",
+        "ㄩㄝ"
+      ],
+      "a": 2,
+      "e": "「說」在本句通「悅」，表示喜悅，讀ㄩㄝˋ；不是一般「說話」的ㄕㄨㄛ。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-shuo"
+      ]
+    },
+    {
+      "questionId": "261104130000002",
+      "revision": 1,
+      "number": 22,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「人不知而不慍」的「慍」正確注音為何？",
+      "o": [
+        "ㄨㄣ",
+        "ㄩㄣˋ",
+        "ㄨㄣˋ",
+        "ㄩㄣ"
+      ],
+      "a": 1,
+      "e": "「慍」讀ㄩㄣˋ，表示怨恨、生氣；與「溫」的讀音不同。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-yun"
+      ]
+    },
+    {
+      "questionId": "261104130000003",
+      "revision": 1,
+      "number": 23,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「其恕乎」的「恕」應讀作何音？",
+      "o": [
+        "ㄖㄨˋ",
+        "ㄋㄨˋ",
+        "ㄕㄨ",
+        "ㄕㄨˋ"
+      ],
+      "a": 3,
+      "e": "「恕」讀ㄕㄨˋ，意為推己及人，不能與「怒」ㄋㄨˋ混淆。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-shu"
+      ]
+    },
+    {
+      "questionId": "261104130000004",
+      "revision": 1,
+      "number": 24,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「擇其善者而從之」的「擇」應讀作何音？",
+      "o": [
+        "ㄗㄜˊ",
+        "ㄓㄜˊ",
+        "ㄗㄞˊ",
+        "ㄕˋ"
+      ],
+      "a": 0,
+      "e": "「擇」讀ㄗㄜˊ，意為選取；「抉擇」「選擇」均如此讀。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-follow-good"
+      ]
+    },
+    {
+      "questionId": "261104130000005",
+      "revision": 1,
+      "number": 25,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「三人行，必有我□焉」空格應填入哪個正確國字？",
+      "o": [
+        "獅",
+        "師",
+        "詩",
+        "施"
+      ],
+      "a": 1,
+      "e": "應寫「師」，指可以學習、效法或借鏡的人。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-shi"
+      ]
+    },
+    {
+      "questionId": "261104130000006",
+      "revision": 1,
+      "number": 26,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「己所不欲，□施於人」空格應填入何字？",
+      "o": [
+        "物",
+        "務",
+        "勿",
+        "誤"
+      ],
+      "a": 2,
+      "e": "「勿」即「不要」；全句強調不要把自己不願承受的事加諸他人。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-do-not-impose"
+      ]
+    },
+    {
+      "questionId": "261104130000007",
+      "revision": 1,
+      "number": 27,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「學而時習之」中的「之」指的是什麼？",
+      "o": [
+        "先前學得的內容",
+        "遠方來的朋友",
+        "不認識自己的人",
+        "有道德修養的君子"
+      ],
+      "a": 0,
+      "e": "「之」代指已學習的內容，學後還需時常溫習、練習。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-review-learning"
+      ]
+    },
+    {
+      "questionId": "261104130000008",
+      "revision": 1,
+      "number": 28,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「勿施於人」中的「施」字最接近哪個意思？",
+      "o": [
+        "施捨金錢",
+        "建立學校",
+        "增加學問",
+        "施加、加諸"
+      ],
+      "a": 3,
+      "e": "這裡的「施」指把事情施加在他人身上，不是施捨。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-do-not-impose"
+      ]
+    },
+    {
+      "questionId": "261104130000009",
+      "revision": 1,
+      "number": 29,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「有朋自遠方來」的「自」是什麼意思？",
+      "o": [
+        "自己",
+        "從",
+        "自然",
+        "因此"
+      ],
+      "a": 1,
+      "e": "「自遠方來」是「從遠方而來」，「自」作介詞，表示來源。",
+      "conceptIds": [
+        "chinese-7-1-l05-wenyan-meaning"
+      ]
+    },
+    {
+      "questionId": "261104130000010",
+      "revision": 1,
+      "number": 30,
+      "difficulty": "chinese-7-1-l05-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「三人行，必有我師焉」中的「行」指什麼？",
+      "o": [
+        "從事各種行業",
+        "寫一篇文章",
+        "一同走路、同行",
+        "奉行法律"
+      ],
+      "a": 2,
+      "e": "「三人行」意為幾個人同行，用以說明可以向身邊的人學習。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-sanren"
       ]
     }
   ]
