@@ -966,8 +966,8 @@
             <span class="desc">${s.key === '7-1' ? '第一冊：10 課、語文天地 2 單元、自學 3 篇' : '查看章節建置狀態'}</span>
           </button>`).join('')}
         <button class="catalog-card" id="chineseReadingTrainingBtn">
-          <span class="top"><span class="icon">📚</span><strong>國語文閱讀測驗訓練</strong><span class="catalog-badge soon">題庫準備中</span></span>
-          <span class="desc">獨立閱讀理解訓練｜文章及題組將逐步匯入。</span>
+          <span class="top"><span class="icon">📚</span><strong>國語文閱讀測驗訓練</strong><span class="catalog-badge reference">前三篇試用</span></span>
+          <span class="desc">上方閱讀文章、下方作答｜目前開放前三篇。</span>
         </button>
       </div>`;
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
@@ -977,20 +977,11 @@
 
   // 閱讀測驗獨立於課本學期；目前只提供導航，不載入或宣稱已有題庫。
   function showChineseReadingTraining() {
-    setHeader('國文科｜國語文閱讀測驗訓練', '文章閱讀理解｜獨立訓練');
-    document.title = '國語文閱讀測驗訓練｜國文科';
-    $('#catalogContent').innerHTML = `
-      <button class="catalog-back" id="backChineseReadingBtn">← 返回國文</button>
-      <div class="catalog-path">國文　›　國語文閱讀測驗訓練</div>
-      <h2 class="catalog-title">國語文閱讀測驗訓練</h2>
-      <p class="catalog-sub">閱讀文章與測驗題組尚未正式匯入。未來將在此提供獨立的閱讀理解訓練。</p>
-      <div class="catalog-grid">
-        <div class="catalog-card" aria-label="閱讀測驗題庫準備中">
-          <span class="top"><span class="icon">📖</span><strong>閱讀測驗題庫</strong><span class="catalog-badge soon">待建</span></span>
-          <span class="desc">完成文章文字、題目與答案核對後再啟用作答。</span>
-        </div>
-      </div>`;
-    $('#backChineseReadingBtn')?.addEventListener('click', showChineseSemesters);
+    if (!window.ChineseReadingTraining?.open) {
+      alert('閱讀測驗模組尚未載入，請重新整理頁面。');
+      return;
+    }
+    window.ChineseReadingTraining.open(showChineseSemesters);
   }
 
   function showChineseSemester(semesterKey) {
