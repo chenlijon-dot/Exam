@@ -960,15 +960,15 @@
       <h2 class="catalog-title">請選擇學習項目</h2>
       <p class="catalog-sub">可依學期練習課本章節，也可進入獨立的國語文閱讀測驗訓練。</p>
       <div class="catalog-grid">
-        <button class="catalog-card" id="chineseReadingTrainingBtn">
-          <span class="top"><span class="icon">📚</span><strong>國語文閱讀測驗訓練</strong><span class="catalog-badge soon">題庫準備中</span></span>
-          <span class="desc">獨立閱讀理解訓練｜文章及題組將逐步匯入。</span>
-        </button>
         ${CHINESE_SEMESTERS.map(s => `
           <button class="catalog-card" data-chinese-semester="${s.key}">
             <span class="top"><strong>${s.title}</strong><span class="catalog-badge ${s.key === '7-1' ? 'reference' : ''}">${s.short}</span></span>
             <span class="desc">${s.key === '7-1' ? '第一冊：10 課、語文天地 2 單元、自學 3 篇' : '查看章節建置狀態'}</span>
           </button>`).join('')}
+        <button class="catalog-card" id="chineseReadingTrainingBtn">
+          <span class="top"><span class="icon">📚</span><strong>國語文閱讀測驗訓練</strong><span class="catalog-badge soon">題庫準備中</span></span>
+          <span class="desc">獨立閱讀理解訓練｜文章及題組將逐步匯入。</span>
+        </button>
       </div>`;
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
     $('#chineseReadingTrainingBtn')?.addEventListener('click', showChineseReadingTraining);
