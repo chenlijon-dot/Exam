@@ -13,7 +13,7 @@
     "analysisEligible": false,
     "preserveOptionOrder": false,
     "sourceType": "practice-generated",
-    "sourceNote": "依 Google Drive 第五課〈論語選〉canonical 教材知識庫自編；正式選文限〈學而〉、〈述而〉、〈衛靈公〉三則，另僅使用教材明列之孔子、《論語》基本常識與課內補充，不引入教材外章句。",
+    "sourceNote": "依第五課〈論語選〉canonical 教材、逐字注釋及12校七上第二次段考命題方式設計；新增高階比較、形音義、古文虛詞、跨章句統整、反駁與情境推論。新增題均為自編題，不冒充原校試題；延伸引句屬比較補充。",
     "source": {
       "type": "practice-generated",
       "authority": "Google Drive canonical",
@@ -23,7 +23,7 @@
     },
     "difficulty": "chinese-7-1-l05-hard",
     "title": "第五課〈論語選〉｜困難",
-    "subtitle": "國文第一冊｜自編題｜困難 50 題（擴充中）",
+    "subtitle": "國文第一冊｜自編題｜困難 80 題",
     "difficultyLabel": "困難"
   },
   "questions": [
@@ -1354,6 +1354,786 @@
       "e": "「子貢問曰」引出提問，「子曰」引出回答，直接標示問答形式。",
       "conceptIds": [
         "chinese-7-1-l05-literary-feature"
+      ]
+    },
+    {
+      "questionId": "261104130300001",
+      "revision": 1,
+      "number": 51,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "比較「不亦說乎」的「說」與「遊說諸侯」的「說」，何者正確？",
+      "o": [
+        "前者ㄕㄨㄛ表示說話，後者ㄩㄝˋ表示快樂",
+        "兩者均讀ㄕㄨㄛ",
+        "前者ㄩㄝˋ指喜悅，後者ㄕㄨㄟˋ指勸說",
+        "兩者均讀ㄕㄨㄟˋ"
+      ],
+      "a": 2,
+      "e": "本課「說」通悅，讀ㄩㄝˋ；「遊說」讀ㄕㄨㄟˋ，指勸說。",
+      "conceptIds": [
+        "chinese-7-1-l05-word-form-sound"
+      ]
+    },
+    {
+      "questionId": "261104130300002",
+      "revision": 1,
+      "number": 52,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "以下哪組字形與意思的配對完全正確？",
+      "o": [
+        "慍：怨怒；醞：釀製、逐漸形成",
+        "慍：溫和；醞：憤怒",
+        "恕：命令；怒：體諒",
+        "擇：施捨；澤：選取"
+      ],
+      "a": 0,
+      "e": "慍為怨怒，醞常見於醞釀；恕是體諒，怒是生氣；擇為選取。",
+      "conceptIds": [
+        "chinese-7-1-l05-word-form-sound"
+      ]
+    },
+    {
+      "questionId": "261104130300003",
+      "revision": 1,
+      "number": 53,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「人不知而不慍」和「學而時習之」中的「而」可如何替換最不失原意？",
+      "o": [
+        "前者「因為」，後者「卻」",
+        "前者「而且」，後者「雖然」",
+        "前者「為了」，後者「於是」",
+        "前者「卻」，後者「並且」"
+      ],
+      "a": 3,
+      "e": "前者表轉折「卻不怨」，後者表承接、並列的「學了並且溫習」。",
+      "conceptIds": [
+        "chinese-7-1-l05-wenyan-meaning"
+      ]
+    },
+    {
+      "questionId": "261104130300004",
+      "revision": 1,
+      "number": 54,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「己所不欲」中的「所」在文意上的作用最接近哪項？",
+      "o": [
+        "表示處所方位",
+        "與後方動詞結合，指自己不想要的事物或對待",
+        "表示正在進行的時間",
+        "表示把話改成否定祈使"
+      ],
+      "a": 1,
+      "e": "「所不欲」指自己不願意的事物／遭遇，是所字結構。",
+      "conceptIds": [
+        "chinese-7-1-l05-wenyan-meaning"
+      ]
+    },
+    {
+      "questionId": "261104130300005",
+      "revision": 1,
+      "number": 55,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「勿施於人」中的「勿」與何者同屬禁止、勸阻語氣？",
+      "o": [
+        "毋以善小而不為",
+        "未雨綢繆",
+        "不亦樂乎",
+        "無遠弗屆"
+      ],
+      "a": 0,
+      "e": "「毋」與「勿」都有不要的禁止意味；另外三者並非此用法。",
+      "conceptIds": [
+        "chinese-7-1-l05-wenyan-meaning"
+      ]
+    },
+    {
+      "questionId": "261104130300006",
+      "revision": 1,
+      "number": 56,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「擇其善者而從之」中的「善者」和「其不善者」可以如何理解？",
+      "o": [
+        "絕對指兩個固定身份的學生",
+        "可以是觀察到的良好與不良言行，不必侷限兩類人",
+        "只指文章中的三位人物",
+        "必須先把所有人分成善惡階級"
+      ],
+      "a": 1,
+      "e": "學習重點是辨識並借鏡言行，不能僵化成把人永遠貼上善惡標籤。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-follow-good"
+      ]
+    },
+    {
+      "questionId": "261104130300007",
+      "revision": 1,
+      "number": 57,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "甲看到自己嫉妒的同學成績好就拒絕學習，乙觀察他有效的讀法並調整自己。依「擇」字，哪項推論較合理？",
+      "o": [
+        "甲較正確，擇是選喜歡的人",
+        "兩人皆無法學習",
+        "乙較符合，擇是辨別值得採納的做法",
+        "甲較符合，因孔子反對競爭"
+      ],
+      "a": 2,
+      "e": "擇善不等於選喜歡的人，而是辨識值得學習的行為，乙更合本意。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-follow-good"
+      ]
+    },
+    {
+      "questionId": "261104130300008",
+      "revision": 1,
+      "number": 58,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "下列對「三人行，必有我師焉」的說明，哪一項加入了原句無法支持的限制？",
+      "o": [
+        "每人或有可供我借鏡之處",
+        "要謙虛觀察他人的言行",
+        "不善的行為也能成為警惕",
+        "同行者必須是已取得教師資格的人"
+      ],
+      "a": 3,
+      "e": "本句「師」不指必須具有正式教師資格，而是可供學習或反省的對象。",
+      "conceptIds": [
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "261104130300009",
+      "revision": 1,
+      "number": 59,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "子貢問的是「有一言而可以終身行之者乎」，孔子不以複雜規章作答，最可能要強調什麼？",
+      "o": [
+        "持續且普遍可實行的做人準則",
+        "所有人只需要記住一個發音",
+        "做任何事都必須拒絕他人意見",
+        "只要終身保留同一個習慣就夠"
+      ],
+      "a": 0,
+      "e": "子貢尋求可長期奉行的準則，孔子以「恕」概括人際倫理。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-theme"
+      ]
+    },
+    {
+      "questionId": "261104130300010",
+      "revision": 1,
+      "number": 60,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "小文討厭被別人嘲諷，卻認為只有熟人才值得自己不嘲諷。依第三則，最合理的修正為何？",
+      "o": [
+        "只要對陌生人不說話就足夠",
+        "恕道不應只受熟識程度限制",
+        "恕只對同班同學有效",
+        "自己不受嘲諷就可以嘲諷他人"
+      ],
+      "a": 1,
+      "e": "「勿施於人」不限親疏，推己及人應涵蓋其他人。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-do-not-impose"
+      ]
+    },
+    {
+      "questionId": "261104130300011",
+      "revision": 1,
+      "number": 61,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "某班為避免衝突，規定任何人不可提出不同意見，卻宣稱符合「人不知而不慍」。最根本的誤讀是什麼？",
+      "o": [
+        "孔子主張禁止共同討論",
+        "孔子只談長者教學",
+        "把不怨他人誤解錯當成不得溝通與表達",
+        "第一則只是在解釋朋友遠行"
+      ],
+      "a": 2,
+      "e": "不慍是面對不被理解的修養，並不禁止理性討論、提出不同意見。",
+      "conceptIds": [
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "261104130300012",
+      "revision": 1,
+      "number": 62,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「不亦君子乎」若與「擇其善者而從之」結合，哪項最可行？",
+      "o": [
+        "凡是不被稱讚，就停止改進",
+        "只須從有名望者學習",
+        "不須辨別他人言行",
+        "不因他人不理解而怨，仍持續學習改善"
+      ],
+      "a": 3,
+      "e": "自持與求進步並行，不能把不慍解成拒絕學習。",
+      "conceptIds": [
+        "chinese-7-1-l05-multi-concept"
+      ]
+    },
+    {
+      "questionId": "261104130300013",
+      "revision": 1,
+      "number": 63,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "甲只效法別人優點，乙只批評別人缺點，丙效法優點並省察自己的不足。依第二則何者最充分？",
+      "o": [
+        "丙",
+        "甲",
+        "乙",
+        "甲與乙合起來已必定足夠"
+      ],
+      "a": 0,
+      "e": "第二則包含擇善而從與見不善自改兩個方向，丙較完整。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-self-reflection"
+      ]
+    },
+    {
+      "questionId": "261104130300014",
+      "revision": 1,
+      "number": 64,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "甲常說「別人不知道我很努力，所以都不值得交往」；乙雖遭誤解仍願溝通。依第一則評價？",
+      "o": [
+        "甲較君子，因保護自尊",
+        "乙更近不慍，也保留交流可能",
+        "兩者都強調以怨報怨",
+        "甲正確，孔子不認同朋友"
+      ],
+      "a": 1,
+      "e": "不慍是不把別人的不了解化為怨恨，乙較合其意。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-composure"
+      ]
+    },
+    {
+      "questionId": "261104130300015",
+      "revision": 1,
+      "number": 65,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "某組將「有朋自遠方來，不亦樂乎」配「志同道合者切磋」；將「三人行，必有我師焉」配「見人長短而省察」，最合理的是？",
+      "o": [
+        "第一組錯，第二組對",
+        "第一組對，第二組錯",
+        "兩組都可成立，但學習重心不同",
+        "兩組都錯，兩句均指旅行"
+      ],
+      "a": 2,
+      "e": "第一句偏同道相聚交流之樂，第二句偏從身邊人觀察長短並學習。",
+      "conceptIds": [
+        "chinese-7-1-l05-compare-passages"
+      ]
+    },
+    {
+      "questionId": "261104130300016",
+      "revision": 1,
+      "number": 66,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "下列哪一組比較最能區分「擇其善者而從之」與「己所不欲，勿施於人」？",
+      "o": [
+        "前者談如何模仿錯誤，後者談如何不讀書",
+        "前者只談陌生人，後者只談朋友",
+        "兩者都是規定只能交善友",
+        "前者談從人取法，後者談以己及人的相處倫理"
+      ],
+      "a": 3,
+      "e": "第二則核心是向人學習及自省，第三則核心是尊重他人感受。",
+      "conceptIds": [
+        "chinese-7-1-l05-compare-concepts"
+      ]
+    },
+    {
+      "questionId": "261104130300017",
+      "revision": 1,
+      "number": 67,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "一位老師鼓勵學生學習同學的優點，也提醒他們反思同學的錯誤，而非嘲笑。最適合支持的引句為何？",
+      "o": [
+        "擇其善者而從之，其不善者而改之",
+        "不亦說乎",
+        "有朋自遠方來",
+        "有一言而可以終身行之者乎"
+      ],
+      "a": 0,
+      "e": "雙向觀察與反省直接對應第二則完整句意。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-follow-good"
+      ]
+    },
+    {
+      "questionId": "261104130300018",
+      "revision": 1,
+      "number": 68,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「不亦說乎」是反問，但其實期待讀者認同學習之樂。哪一選項具有相似語氣？",
+      "o": [
+        "你昨天去了哪裡？",
+        "努力後有所收穫，不也是件樂事嗎？",
+        "這件事可能發生嗎？",
+        "你願意回答哪個題目？"
+      ],
+      "a": 1,
+      "e": "「不也是……嗎」用反問加強肯定，與不亦說乎相近。",
+      "conceptIds": [
+        "chinese-7-1-l05-literary-feature"
+      ]
+    },
+    {
+      "questionId": "261104130300019",
+      "revision": 1,
+      "number": 69,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "以下哪一句「其」最不適合與「其恕乎」視為同一用法？",
+      "o": [
+        "大概如此吧的「大概」",
+        "恐怕是恕吧的「恐怕」",
+        "擇其善者而從之的「其」",
+        "也許是這樣吧的「也許」"
+      ],
+      "a": 2,
+      "e": "「其恕乎」是揣測語氣；「擇其善者」的其指那些人或言行。",
+      "conceptIds": [
+        "chinese-7-1-l05-wenyan-meaning"
+      ]
+    },
+    {
+      "questionId": "261104130300020",
+      "revision": 1,
+      "number": 70,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "某人主張「三人行必有我師」是叫人把所有人視為無可批評，因此不用辨別是非。最有力的反駁是哪句？",
+      "o": [
+        "學而時習之",
+        "不亦樂乎",
+        "有朋自遠方來",
+        "擇其善者而從之，其不善者而改之"
+      ],
+      "a": 3,
+      "e": "後句明確要求辨識善與不善，並分別效法、反省，排除全盤接受。",
+      "conceptIds": [
+        "chinese-7-1-l05-reasoning-sequence"
+      ]
+    },
+    {
+      "questionId": "261104130300021",
+      "revision": 1,
+      "number": 71,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "若以「觀察→辨別→實踐→反省」建立第二則學習模型，哪個步驟不該省略？",
+      "o": [
+        "對不善者之行也檢視自身",
+        "只追求他人的肯定",
+        "依據對方名氣決定善惡",
+        "先嘲笑才會學得快"
+      ],
+      "a": 0,
+      "e": "第二則從善者學習，也要因不善者反求諸己；不能只停留在觀察或模仿。",
+      "conceptIds": [
+        "chinese-7-1-l05-reasoning-sequence"
+      ]
+    },
+    {
+      "questionId": "261104130300022",
+      "revision": 1,
+      "number": 72,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "學生甲「我討厭受控制，所以任何規則我都不守」；乙「我討厭被霸凌，所以不霸凌別人」。何者更切近恕道？",
+      "o": [
+        "甲，因恕就是拒絕所有規則",
+        "乙，因由己身厭惡之傷害推及他人",
+        "兩者皆是，因只須顧自己感受",
+        "兩者皆非，因恕只是原諒"
+      ],
+      "a": 1,
+      "e": "乙從自身不願承受的霸凌推及他人，甲則把個人偏好推成所有規則皆無效。",
+      "conceptIds": [
+        "chinese-7-1-l05-third-shu"
+      ]
+    },
+    {
+      "questionId": "261104130300023",
+      "revision": 1,
+      "number": 73,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "某同學讀了第二則後說：「看別人做錯，既然我沒犯，就不必在意。」哪項補充最恰當？",
+      "o": [
+        "完全正確，未犯錯不可反省",
+        "必須先責罵對方才算學習",
+        "即使當下未犯，也可視作提醒以後不要重蹈覆轍",
+        "應將所有錯誤視為優點"
+      ],
+      "a": 2,
+      "e": "見不善者而改之可作預防與自省，不必等自己已犯同錯才有意義。",
+      "conceptIds": [
+        "chinese-7-1-l05-reasonable-extension"
+      ]
+    },
+    {
+      "questionId": "261104130300024",
+      "revision": 1,
+      "number": 74,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "一名學生熟悉所有注釋卻只願與成績好的人合作。哪個本課觀念最能補足其盲點？",
+      "o": [
+        "勿施於人只指不打人",
+        "其恕乎表示猜測",
+        "人不知而不慍表示不需合作",
+        "三人行，必有我師焉表示學習對象不限既定菁英"
+      ],
+      "a": 3,
+      "e": "學習對象不受成績排序限制，每人可能有值得借鏡的面向。",
+      "conceptIds": [
+        "chinese-7-1-l05-second-learning-from-others"
+      ]
+    },
+    {
+      "questionId": "261104130300025",
+      "revision": 1,
+      "number": 75,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "從「有朋自遠方來」與「己所不欲，勿施於人」共同推論，何種交友觀最合適？",
+      "o": [
+        "珍惜交流，也尊重朋友的意願與感受",
+        "朋友多才有資格當君子",
+        "只有遠方朋友值得善待",
+        "為維持關係，所有請求都要同意"
+      ],
+      "a": 0,
+      "e": "第一則珍視志友交流，第三則強調尊重與同理，兩者可互補。",
+      "conceptIds": [
+        "chinese-7-1-l05-three-passages-integration"
+      ]
+    },
+    {
+      "questionId": "261104130300026",
+      "revision": 1,
+      "number": 76,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "若有人把「己所不欲，勿施於人」理解成「只要我不介意，就可以對別人做任何事」，錯在何處？",
+      "o": [
+        "錯在孔子不允許交朋友",
+        "把自身容忍度當成所有人的同意，忽略換位思考",
+        "錯在恕只適合父母子女",
+        "只要對人微笑便沒有問題"
+      ],
+      "a": 1,
+      "e": "恕的實踐不可忽略對方實際感受；自己不介意不代表可任意加諸他人。",
+      "conceptIds": [
+        "chinese-7-1-l05-common-misconception"
+      ]
+    },
+    {
+      "questionId": "261104130300027",
+      "revision": 1,
+      "number": 77,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "同學A每天複習並分享學習方法，卻常以別人的缺點開玩笑；同學B不定期複習，卻很體貼。若以三則為整體，哪項評價較合理？",
+      "o": [
+        "A已完整做到全部三則",
+        "B已完整做到全部三則",
+        "兩人各有可取與待改進處，不宜只依單一面向斷言完整修養",
+        "只須學習，待人方式無關緊要"
+      ],
+      "a": 2,
+      "e": "第一、二、三則涵蓋學習、反省與同理，A與B各有做到和不足之處。",
+      "conceptIds": [
+        "chinese-7-1-l05-three-passages-integration"
+      ]
+    },
+    {
+      "questionId": "261104130300028",
+      "revision": 1,
+      "number": 78,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "「君子」在「人不知而不慍，不亦君子乎」與「君子好逑」的意思差異何在？",
+      "o": [
+        "兩者都專指帝王",
+        "前者指俊俏少年，後者指老師",
+        "兩者都僅指有官位的人",
+        "前者強調有德修養者，後者原詩偏指男子"
+      ],
+      "a": 3,
+      "e": "本課君子是有德行修養之人；「窈窕淑女，君子好逑」的君子在語境中指男子。",
+      "conceptIds": [
+        "chinese-7-1-l05-wenyan-meaning"
+      ]
+    },
+    {
+      "questionId": "261104130300029",
+      "revision": 1,
+      "number": 79,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "哪一項最能說明《論語》篇名「學而」「述而」「衛靈公」與全文主旨的關係？",
+      "o": [
+        "篇名多取篇首文字，不應假定篇名完整概括全篇主題",
+        "篇名是依後世考題難度排序",
+        "篇名都是孔子親自寫定的摘要",
+        "篇名必然涵蓋每章唯一議題"
+      ],
+      "a": 0,
+      "e": "《論語》各篇多以篇首字詞命名，不等同該篇各章的主題分類。",
+      "conceptIds": [
+        "chinese-7-1-l05-lunyu-genre"
+      ]
+    },
+    {
+      "questionId": "261104130300030",
+      "revision": 1,
+      "number": 80,
+      "difficulty": "chinese-7-1-l05-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "國文_第一冊_第五課_論語選_教材知識庫",
+        "driveDocumentId": "1VCrN_EOR9bJl_VH0Eb-41FlycBV4J-HQLTwmaKTkndA",
+        "lesson": "第五課〈論語選〉"
+      },
+      "q": "若將「學而時習之」解為「有空時才隨意複習」，哪個判斷最合理？",
+      "o": [
+        "完全正確，時表示隨便",
+        "不精確，時習是時常或按適當時機反覆練習",
+        "正確，因學只表示考試",
+        "不精確，因習指交友而非練習"
+      ],
+      "a": 1,
+      "e": "「時習」強調經常、按時溫習與練習，不能簡化成隨興偶爾做。",
+      "conceptIds": [
+        "chinese-7-1-l05-first-review-learning"
       ]
     }
   ]
