@@ -4,7 +4,7 @@
   // Chinese reading comprehension: one passage = one independent question group.
   // Source questions are not answer-verified; keep selections in page memory only.
   const DATA_URL = 'chapter-bank/chinese/reading-comprehension/passages-001-003.json';
-  const state = { passages: [], index: 0, choices: new Map(), articleScroll: new Map(), questionScroll: new Map(), returnToChinese: null };
+  const state = { passages: [], index: 0, choices: new Map(), articleScroll: new Map(), questionScroll: new Map(), returnToChinese: null, completionCounts: new Map(), openEpoch:0 };
   const $ = (q,root=document) => root.querySelector(q);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const key = id => 'passage-' + id;
@@ -31,6 +31,7 @@
       .crt-choice{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;margin:6px 0;border:1px solid #e0e6ef;border-radius:10px}
       .crt-choice:has(input:checked){background:#eff6ff;border-color:#2563eb}
       .crt-choice input{margin-top:6px;accent-color:#1d4ed8;flex-shrink:0}
+      .crt-completions{display:inline-flex;align-items:center;background:#e8f1ff;border-radius:999px;padding:5px 11px;color:#164194;font-size:.85rem;font-weight:700}
       .crt-muted{color:#64748b;font-size:.91rem}
       .crt-notice{background:#fff8e7;color:#6a4d1b;border:1px solid #f2dfb9;border-radius:10px;padding:10px 13px;font-size:.88rem}
       .crt-actions{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
@@ -43,6 +44,32 @@
     document.head.appendChild(style);
   }
   function current() { return state.passages[state.index]; }
+  function completionKey(p) { return 'chinese-reading-300-p' + String(p.id).padStart(3,'0'); }
+  function hasVerifiedAnswerKey(p) {
+    return Array.isArray(p.questions) && p.questions.length > 0 && p.questions.every(q =>
+      q.answerVerified === true && Number.isInteger(q.a) && q.a >= 0 && q.a < 4
+    );
+  }
+  function completionLabel(p) {
+    if (!hasVerifiedAnswerKey(p)) return '正式完成 0 次｜答案待驗證';
+    const result = state.completionCounts.get(completionKey(p));
+    return result?.status === 'ready'
+      ? '正式完成 ' + result.count + ' 次'
+      : '正式完成次數：' + (result?.status === 'unavailable' ? '暫無法讀取' : '讀取中…');
+  }
+  async function refreshCompletionCount(p, epoch) {
+    if (!hasVerifiedAnswerKey(p)) return;
+    const store = window.ChrisExamHistoryStore;
+    const result = store?.countVerifiedReadingCompletions
+      ? await store.countVerifiedReadingCompletions(completionKey(p), p.questions.map(q => q.questionId))
+      : {count:null,status:'unavailable'};
+    if (epoch !== state.openEpoch) return;
+    state.completionCounts.set(completionKey(p), result);
+    if (current()?.id === p.id) {
+      const label = $('#crtCompletionCount');
+      if (label) label.textContent=completionLabel(p);
+    }
+  }
   function countAnswered(p) {
     const answers = state.choices.get(key(p.id)) || {};
     return p.questions.filter(q => Number.isInteger(answers[q.questionId])).length;
@@ -67,11 +94,12 @@
         <div class="crt-topbar">
           <button class="catalog-back" id="crtBack">← 返回國文</button>
           <span class="crt-muted">國文　›　閱讀測驗訓練　›　第 ${p.id} 篇</span>
+          <span class="crt-completions" id="crtCompletionCount" aria-live="polite">${esc(completionLabel(p))}</span>
         </div>
         <div class="crt-switch">
           <button id="crtPrev" ${state.index===0?'disabled':''}>← 上一篇</button>
           <label>文章 <select id="crtSelect" aria-label="選擇文章">
-          ${state.passages.map((x,i)=>`<option value="${i}" ${i===state.index?'selected':''}>第 ${x.id} 篇｜${esc(x.title)}</option>`).join('')}
+          ${state.passages.map((x,i)=>`<option value="${i}" ${i===state.index?'selected':''}>第 ${x.id} 篇｜${esc(x.title)}｜${esc(completionLabel(x))}</option>`).join('')}
           </select></label>
           <button id="crtNext" ${state.index>=state.passages.length-1?'disabled':''}>下一篇 →</button>
         </div>
@@ -117,6 +145,9 @@
       state.choices.set(key(p.id), currentAnswers);
       $('#crtProgress').textContent = `已選 ${countAnswered(p)} / ${p.questions.length} 題`;
     });
+    refreshCompletionCount(p, state.openEpoch).catch(err =>
+      console.warn('[exam-chinese-reading][count]', err)
+    );
   }
   function switchTo(index) {
     if (!Number.isInteger(index) || index<0 || index>=state.passages.length || index===state.index) return;
@@ -127,6 +158,8 @@
   async function open(returnToChinese) {
     ensureStyle();
     state.returnToChinese=returnToChinese;
+    state.openEpoch += 1;
+    state.completionCounts.clear();
     const target = $('#catalogContent');
     if (!target) return;
     target.innerHTML='<p class="crt-muted">正在載入閱讀測驗文章……</p>';
