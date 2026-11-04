@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "chinese-reading-300",
+  "title": "國語文閱讀測驗訓練",
+  "answerStatus": "unverified",
+  "note": "文字依使用者提供的原始頁面辨識。原書無正式答案頁，因此不自動判分，保留學生選答。原圖中手寫答案僅供核對，不視為官方答案。",
+  "passages": [
+    {
+      "id": 1,
+      "title": "船",
+      "author": "楊喚",
+      "source": {
+        "title": "活用國中國文閱讀測驗300篇",
+        "sourcePage": 7,
+        "sourceFolder": "國中教材參考資料/國文/閱讀測驗訓練/原始檔案",
+        "imageFile": "IMG_20261104_160402.jpg"
+      },
+      "passage": "像一首詩，\n像一張犁，\n被寫在沉默的稿紙上；\n像一張犁，\n划行過哄笑著的土地：\n你，掙脫了港口和繩索，\n向藍眼睛的海走去。\n\n當我想到自己\n是怎樣匍匐在人生的峽谷，\n我乃失聲痛哭了。\n不，不是呀，\n那紛紛滾落的不是眼淚，\n而是一場來考驗自己的大雷雨！",
+      "notes": "原頁第1題部分詞句需再核對；目前忠實保留主要語意。",
+      "questions": [
+        {
+          "questionId": "chinese-reading-300-001-q01",
+          "revision": 1,
+          "originalQuestionNumber": 1,
+          "q": "「船像一首詩，又像一張犁。」這句在修辭學上是",
+          "o": [
+            "人擬物",
+            "以物擬物",
+            "以物擬人",
+            "以人擬人"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-001-q02",
+          "revision": 1,
+          "originalQuestionNumber": 2,
+          "q": "「向藍眼睛的海走去」是說",
+          "o": [
+            "藍色的眼睛",
+            "將藍色的海比擬成人的雙眼",
+            "指似外國人眼珠為藍色",
+            "眼睛所看到的藍色"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-001-q03",
+          "revision": 1,
+          "originalQuestionNumber": 3,
+          "q": "當楊喚「想到自己是怎樣匍匐在人生的峽谷」時的心境認為",
+          "o": [
+            "人生有挫折、坎坷",
+            "前程似錦",
+            "山窮水盡",
+            "柳暗花明又一村"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-001-q04",
+          "revision": 1,
+          "originalQuestionNumber": 4,
+          "q": "「匍匐」的意思是",
+          "o": [
+            "踮足而行",
+            "疾行",
+            "爬行",
+            "漫步"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-001-q05",
+          "revision": 1,
+          "originalQuestionNumber": 5,
+          "q": "詩中「紛紛滾落的」是",
+          "o": [
+            "大雷雨",
+            "眼淚",
+            "繩索",
+            "峽谷巨石"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "失眠夜",
+      "author": "楊喚",
+      "source": {
+        "title": "活用國中國文閱讀測驗300篇",
+        "sourcePage": 7,
+        "sourceFolder": "國中教材參考資料/國文/閱讀測驗訓練/原始檔案",
+        "imageFile": "IMG_20261104_160402.jpg"
+      },
+      "passage": "今夜，又一次\n我免於被封鎖進痛苦的睡眠。\n在沒有燈的屋子裡，\n自己照亮自己。於是\n紙煙乃如一枝枝的粉筆，\n在夜的黑板上，\n我默默地寫著\n人生的問題與答案，\n美麗的童話和詩句。",
+      "notes": "",
+      "questions": [
+        {
+          "questionId": "chinese-reading-300-002-q01",
+          "revision": 1,
+          "originalQuestionNumber": 1,
+          "q": "作者寫這首詩的心情是",
+          "o": [
+            "煩悶的",
+            "可笑的",
+            "痛苦的",
+            "愉悅的"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-002-q02",
+          "revision": 1,
+          "originalQuestionNumber": 2,
+          "q": "作者用什麼「照亮自己」？",
+          "o": [
+            "燈",
+            "星月",
+            "靈思",
+            "書本"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-002-q03",
+          "revision": 1,
+          "originalQuestionNumber": 3,
+          "q": "「紙煙乃如一枝枝的粉筆。」這一句的筆法是",
+          "o": [
+            "譬喻",
+            "擬人法",
+            "寫實法",
+            "象徵法"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-002-q04",
+          "revision": 1,
+          "originalQuestionNumber": 4,
+          "q": "「黑板」指的是",
+          "o": [
+            "牆壁",
+            "桌面",
+            "紙上",
+            "夜幕"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-002-q05",
+          "revision": 1,
+          "originalQuestionNumber": 5,
+          "q": "由詩中我們可知作者當時是正抽著香煙",
+          "o": [
+            "面對著黑夜",
+            "抓住靈思，記下感觸",
+            "望著縷縷白煙，一幕一幕地沉思",
+            "拿著粉筆，在黑板上寫這首詩"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "手",
+      "author": "周澤煌",
+      "source": {
+        "title": "活用國中國文閱讀測驗300篇",
+        "sourcePage": 8,
+        "sourceFolder": "國中教材參考資料/國文/閱讀測驗訓練/原始檔案",
+        "imageFile": "IMG_20261104_160416.jpg"
+      },
+      "passage": "細皮嫩肉的手，寬闊厚大的手，粗糙多繭的手，所有的手都在歲月中寫出了生活。我們一早起來，手便和我們一起操作，穿衣、吃飯、灌溉樹苗、教誨子女，在一雙雙的手下，開拓出一條條生活的大道。不論風吹雨打、冰凍霜侵，手，永遠默默的堅持著為生命而奉獻。\n\n記憶中，母親的手寬闊而粗實，早起晚睡的幹活，即使在嚴冬時凍傷了，她也很少說一聲痛，出一句怨言。有時候，我撫摩著母親的手，那種粗糙、扎刺的感覺，使我意會到她的手，已寫滿了一頁頁歲月艱辛的歷史。\n\n幾乎每個人都從母親推動搖籃的手中慢慢成長茁壯，也幾乎都挨過父親嚴厲可怕的巴掌。\n\n在那種迥然不同的手中，我們逐漸了解人情與是非，知道什麼是該做的，什麼是不該做的。\n\n從手的肌理，我們很容易辨知一個人生活的內容，勞心或勞力，勤奮或怠惰。手，就像一張紀錄的表格，填寫出它實際的作業情形。\n\n但是，世上確實有些人有手而不知善用，有手直如無手，他們好吃懶做，甚至做些危害社會的事；賭博、打架、肇事生非。而有些人由於某種意外的傷害，手殘了，卻始終殘而不廢，他們用一隻手，或以腳代手，兢兢業業營生，營建生活的整個希望。他們用那樣的手，拭去血淚的傷痕，像風一樣永不停息的揮動著生命的瑰麗。\n\n時至今日，儘管科技代替了人力，我們手的勞動減少了，但事實上，仍有很多事等待我們的手去做。所以，我們永遠要善用自己的手。否則，便辜負了上天給了我們一雙手的美意。",
+      "notes": "原文章第8頁，測驗題第9頁。",
+      "questions": [
+        {
+          "questionId": "chinese-reading-300-003-q01",
+          "revision": 1,
+          "originalQuestionNumber": 1,
+          "q": "要辨知一個人的生活內容，可以從什麼地方看得出來？",
+          "o": [
+            "臉上的皺紋",
+            "手上的肌理",
+            "眼角的皺紋",
+            "鬢髮的色澤"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-003-q02",
+          "revision": 1,
+          "originalQuestionNumber": 2,
+          "q": "作者所謂「拭去血淚的傷痕，揮動生命的瑰麗手勢。」這是指誰的手？",
+          "o": [
+            "父親",
+            "母親",
+            "傷殘的人",
+            "肇事的人"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-003-q03",
+          "revision": 1,
+          "originalQuestionNumber": 3,
+          "q": "下列那一個敘述，不符合本文的精神？",
+          "o": [
+            "手雖殘了，仍能開創絢麗的前途",
+            "科技進步，手就可閒置不用",
+            "勤勞的手，永遠為生命而奉獻",
+            "父母的手，指引我們走向光明的坦途"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-003-q04",
+          "revision": 1,
+          "originalQuestionNumber": 4,
+          "q": "本文給予我們最大的啟示是",
+          "o": [
+            "粗糙的手最為珍貴",
+            "不可以為非作歹",
+            "要創造美好的紀錄",
+            "善用萬能的手"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-003-q05",
+          "revision": 1,
+          "originalQuestionNumber": 5,
+          "q": "下列的語詞中，那一句最能夠表現出母愛？",
+          "o": [
+            "推動搖籃的手",
+            "細皮嫩肉的手",
+            "殘而不廢的手",
+            "寬闊厚大的手"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        },
+        {
+          "questionId": "chinese-reading-300-003-q06",
+          "revision": 1,
+          "originalQuestionNumber": 6,
+          "q": "從本文的內容看，手的最大功能是",
+          "o": [
+            "引援鑽營，獲取權勢",
+            "賭博打架，危害社會",
+            "充實生活，開創前途",
+            "兢兢業業，營利謀生"
+          ],
+          "answerVerified": false,
+          "sourceType": "reading-comprehension",
+          "type": "mcq"
+        }
+      ]
+    }
+  ]
+}
