@@ -260,10 +260,61 @@
     return mergeHistoryAttempts(cloud, local).slice(0, limitValue);
   }
 
+  // Reading-training completion is derived from verified full-paper attempts.
+  // Never infer completion from page views, selected options, or unfinished sessions.
+  function isVerifiedReadingCompletion(attempt, examKey, questionIds) {
+    if (!attempt || attempt.examKey !== examKey ||
+        attempt.historyDomain !== 'question' ||
+        attempt.gradingStatus !== 'graded' ||
+        attempt.readingCompletion !== true ||
+        attempt.answerVerified !== true ||
+        attempt.isComplete !== true) return false;
+    const answers = attempt.answers;
+    if (!Array.isArray(answers) || answers.length !== questionIds.length ||
+        Number(attempt.total) !== questionIds.length ||
+        Number(attempt.unanswered) !== 0 ||
+        Number(attempt.correct) + Number(attempt.incorrect) !== questionIds.length) return false;
+    const ids = new Set();
+    for (const answer of answers) {
+      const id = String(answer?.questionId ?? '');
+      if (!questionIds.includes(id) || ids.has(id) ||
+          !Number.isInteger(Number(answer?.selectedIndex)) ||
+          Number(answer.selectedIndex) < 0 || Number(answer.selectedIndex) > 3 ||
+          answer.isCorrect !== true && answer.isCorrect !== false) return false;
+      ids.add(id);
+    }
+    return ids.size === questionIds.length;
+  }
+
+  async function countVerifiedReadingCompletions(examKey, questionIds) {
+    const normalized = String(examKey || '');
+    const ids = Array.isArray(questionIds) ? questionIds.map(String) : [];
+    if (!normalized.startsWith('chinese-reading-300-p') || !ids.length) return { count:0, status:'unavailable' };
+    // Cloud is authoritative for authenticated users; never display a guessed 0 on failure.
+    if (!activeUser?.uid || !db || !firestore) return { count:null, status:'unavailable' };
+    try {
+      const attemptsRef = firestore.collection(db, 'users', activeUser.uid, 'attempts');
+      const result = await firestore.getDocs(firestore.query(
+        attemptsRef, firestore.where('examKey', '==', normalized)
+      ));
+      const valid = result.docs.map(doc => doc.data()).filter(attempt =>
+        isVerifiedReadingCompletion(attempt, normalized, ids)
+      );
+      // One successful grading submission is one document. Prevent duplicate
+      // sync copies with the same submission ID or exact fingerprint.
+      const unique = new Set(valid.map(a => String(a.submissionId || fingerprint(a))));
+      return { count:unique.size, status:'ready' };
+    } catch (error) {
+      console.warn('[FirestoreSync] reading completion count unavailable', error);
+      return { count:null, status:'unavailable' };
+    }
+  }
+
   window.ChrisExamHistoryStore = {
     loadRecentQuestionAttempts,
     loadExamAttempts,
-    loadVocabularyAttempts
+    loadVocabularyAttempts,
+    countVerifiedReadingCompletions
   };
 
   async function initFirestore() {
