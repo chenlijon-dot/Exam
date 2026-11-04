@@ -147,8 +147,8 @@
 
   function scoreInfo(correct, total, ctx) {
     if (ctx.scoreMode === 'percent') {
-      const pct = total ? Math.round(correct * 100 / total) : 0;
-      return { score:pct, prominent:`答對 ${correct} / ${total}`, detail:`正答率 ${pct}%` };
+      const pct = total ? Number((correct * 100 / total).toFixed(1)) : 0;
+      return { score:pct, prominent:`${pct}%`, detail:`答對 ${correct} / ${total} 題` };
     }
     const p = Number(ctx.pointsPerQuestion ?? 5);
     const score = correct * p;
@@ -436,7 +436,7 @@
         (ctx.reviewOnly
           ? `<span class="pill">補習班題庫 ${mcqTotal} 題</span><span class="pill">AI 推定答案｜未官方驗證｜不計分</span>`
           : (ctx.scoreMode === 'percent'
-            ? `<span class="pill">選擇題 ${mcqTotal} 題</span>${handwritingTotal ? `<span class="pill">手寫 ${handwritingTotal} 題｜Firebase Gemini 判題</span>` : ''}<span class="pill">以正答率顯示</span>`
+            ? `<span class="pill">選擇題 ${mcqTotal} 題</span>${handwritingTotal ? `<span class="pill">手寫 ${handwritingTotal} 題｜Firebase Gemini 判題</span>` : ''}<span class="pill">滿分 100%｜各題等權重</span>`
             : `<span class="pill">每題 ${ctx.pointsPerQuestion ?? 5} 分</span><span class="pill">滿分 ${(ctx.pointsPerQuestion ?? 5) * scoredTotal} 分</span>`)) +
         (manualTotal ? `<span class="pill">紙筆練習 ${manualTotal} 題｜不計分</span>` : '');
     }
