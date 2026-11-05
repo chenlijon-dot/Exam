@@ -88,6 +88,150 @@
     }
   }
 
+
+  // Large ChrisTrans dictionary: local IndexedDB storage, no translation network calls.
+  const LARGE_DB_NAME = 'ChrisExamEnglishDictionary';
+  let largeDBPromise = null;
+  let searchVersion = 0;
+  function openLargeDB() {
+    if (!('indexedDB' in window)) return Promise.reject(new Error('此 WebView 不支援 IndexedDB'));
+    if (!largeDBPromise) largeDBPromise = new Promise((resolve, reject) => {
+      const request = indexedDB.open(LARGE_DB_NAME, 1);
+      request.onupgradeneeded = () => {
+        const db = request.result;
+        if (!db.objectStoreNames.contains('entries')) {
+          const store = db.createObjectStore('entries', { keyPath: 'id', autoIncrement: true });
+          store.createIndex('term', 'term', { unique: false });
+        }
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error || new Error('IndexedDB 開啟失敗'));
+    }).catch(error => { largeDBPromise = null; throw error; });
+    return largeDBPromise;
+  }
+  async function searchLarge(term) {
+    if (localStorage.getItem('chrisExamDictionary.largeReady') !== '1') return [];
+    const db = await openLargeDB();
+    return new Promise((resolve, reject) => {
+      const results = [];
+      const tx = db.transaction('entries', 'readonly');
+      const index = tx.objectStore('entries').index('term');
+      const range = IDBKeyRange.bound(term, term + '\uffff');
+      const req = index.openCursor(range);
+      req.onsuccess = () => {
+        const cursor = req.result;
+        if (!cursor || results.length >= 30) return resolve(results);
+        const v = cursor.value;
+        results.push({ w: v.w, p: v.p || '', c: v.c || '' });
+        cursor.continue();
+      };
+      req.onerror = () => reject(req.error || new Error('字典搜尋失敗'));
+      tx.onerror = () => reject(tx.error || new Error('字典搜尋失敗'));
+    });
+  }
+  async function renderCombined(query) {
+    const token = ++searchVersion;
+    const key = String(query || '').trim().toLowerCase();
+    if (!key) return render('');
+    try {
+      const local = await searchLarge(key);
+      if (token !== searchVersion) return;
+      if (!local.length) return render(query);
+      const target = document.getElementById('englishDictResults');
+      if (!target) return;
+      target.replaceChildren();
+      showStatus('ChrisTrans 大型字典：' + local.length + ' 筆結果（最多顯示 30 筆）');
+      for (const item of local) {
+        const card = document.createElement('div');
+        card.className = 'english-dict-entry';
+        const heading = document.createElement('div');
+        heading.className = 'english-dict-head';
+        const word = document.createElement('span');
+        word.className = 'english-dict-word';
+        word.textContent = item.w;
+        const pos = document.createElement('span');
+        pos.className = 'english-dict-pos';
+        pos.textContent = item.p;
+        const meaning = document.createElement('div');
+        meaning.className = 'english-dict-meaning';
+        meaning.textContent = item.c || '本詞條暫無繁體中文釋義';
+        heading.append(word, pos);
+        card.append(heading, meaning);
+        target.appendChild(card);
+      }
+    } catch (error) {
+      if (token === searchVersion) {
+        console.warn('[EnglishDictionary] IndexedDB lookup failed', error);
+        render(query);
+      }
+    }
+  }
+  function parseEntry(raw) {
+    if (!raw || typeof raw.w !== 'string' || !raw.w.trim()) return null;
+    const senses = Array.isArray(raw.s) ? raw.s : [];
+    const zh = senses.map(v => String(v && v.zh || '').trim()).filter(Boolean);
+    const pos = [...new Set(senses.map(v => String(v && v.pos || '').trim()).filter(Boolean))];
+    const ipa = Array.isArray(raw.ipa) ? raw.ipa.map(v => String(v && v.ipa || '').trim()).filter(Boolean) : [];
+    return {
+      term: raw.w.trim().toLowerCase(),
+      w: raw.w.trim(),
+      p: pos.join('/'),
+      c: zh.join('；') + (ipa.length ? (zh.length ? '\n' : '') + 'IPA: ' + ipa.slice(0, 2).join(' / ') : '')
+    };
+  }
+  async function commitBatch(db, batch) {
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction('entries', 'readwrite');
+      const store = tx.objectStore('entries');
+      for (const item of batch) store.add(item);
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(tx.error || new Error('字典寫入失敗'));
+      tx.onabort = () => reject(tx.error || new Error('字典匯入中止'));
+    });
+  }
+  async function importLargeDictionary(file, report) {
+    const db = await openLargeDB();
+    localStorage.removeItem('chrisExamDictionary.largeReady');
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction('entries', 'readwrite');
+      tx.objectStore('entries').clear();
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(tx.error || new Error('清除舊字典失敗'));
+    });
+    // Read small chunks so an Android tablet never needs to hold all 135k objects in memory.
+    let offset = 0, remainder = '', count = 0, batch = [];
+    const chunkSize = 1024 * 1024;
+    while (offset < file.size) {
+      const chunk = await file.slice(offset, offset + chunkSize).text();
+      offset += chunkSize;
+      const combined = remainder + chunk;
+      const lines = combined.split('\n');
+      remainder = lines.pop() || '';
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        const row = parseEntry(JSON.parse(line));
+        if (!row) continue;
+        batch.push(row);
+        count++;
+        if (batch.length >= 300) {
+          await commitBatch(db, batch);
+          batch = [];
+        }
+      }
+      report('匯入中：' + count + ' 筆，檔案已讀取 ' + Math.min(100, Math.round(offset / file.size * 100)) + '%');
+    }
+    if (remainder.trim()) {
+      const last = parseEntry(JSON.parse(remainder));
+      if (last) { batch.push(last); count++; }
+    }
+    if (batch.length) await commitBatch(db, batch);
+    if (count < 1000) throw new Error('字典詞條數過少，請確認匯出檔案正確');
+    localStorage.setItem('chrisExamDictionary.largeReady', '1');
+    localStorage.setItem('chrisExamDictionary.largeCount', String(count));
+    report('匯入完成：' + count + ' 筆。之後查字使用本機 IndexedDB。');
+    return count;
+  }
+
   async function open(options) {
     if (options && typeof options.onBack === 'function') backAction = options.onBack;
     const root = document.getElementById('catalogContent');
@@ -126,12 +270,39 @@
     const results = document.createElement('div');
     results.id = 'englishDictResults';
     results.className = 'english-dict-results';
-    root.replaceChildren(back, breadcrumb, heading, intro, input, hint, status, results);
-    input.addEventListener('input', () => render(input.value));
+    const fileLabel = document.createElement('label');
+    fileLabel.className = 'english-dict-help';
+    fileLabel.textContent = '匯入 ChrisTrans 大型字典（.jsonl）：';
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.jsonl,application/x-ndjson';
+    fileInput.setAttribute('aria-label', '選擇 ChrisTrans 字典匯出檔');
+    const importStatus = document.createElement('div');
+    importStatus.className = 'english-dict-help';
+    importStatus.textContent = localStorage.getItem('chrisExamDictionary.largeReady') === '1'
+      ? '大型字典已安裝：' + (localStorage.getItem('chrisExamDictionary.largeCount') || '?') + ' 筆'
+      : '尚未匯入大型字典；目前可使用 GEPT 初級字庫。';
+    fileInput.addEventListener('change', async () => {
+      const file = fileInput.files && fileInput.files[0];
+      if (!file) return;
+      fileInput.disabled = true;
+      try {
+        await importLargeDictionary(file, message => { importStatus.textContent = message; });
+        renderCombined(input.value);
+      } catch (error) {
+        importStatus.textContent = '匯入失敗：' + (error.message || String(error));
+        console.error('[EnglishDictionary] import failed', error);
+      } finally {
+        fileInput.disabled = false;
+        fileInput.value = '';
+      }
+    });
+    root.replaceChildren(back, breadcrumb, heading, intro, input, hint, fileLabel, fileInput, importStatus, status, results);
+    input.addEventListener('input', () => renderCombined(input.value));
     try {
       await loadWords();
       if (document.getElementById('englishDictInput') === input) {
-        render(input.value);
+        renderCombined(input.value);
         input.focus();
       }
     } catch (error) {
