@@ -89,6 +89,62 @@
   }
 
 
+  // StudentExam Android native SQLite bridge. Plain browsers keep the GEPT fallback.
+  const nativeRequests = new Map();
+  let nativeSerial = 0;
+  window.ChrisExamDictionaryNativeResult = function(requestId, payload) {
+    const id = String(requestId);
+    const pending = nativeRequests.get(id);
+    if (!pending) return;
+    nativeRequests.delete(id);
+    clearTimeout(pending.timer);
+    pending.resolve(payload);
+  };
+  function searchAndroid(word) {
+    if (typeof window.StudentExamNative?.lookupDictionary !== 'function') return Promise.resolve(null);
+    const id = 'dict-' + (++nativeSerial);
+    return new Promise(resolve => {
+      const timer = setTimeout(() => {
+        nativeRequests.delete(id);
+        console.warn('[EnglishDictionary] Android SQLite timeout; GEPT fallback');
+        resolve(null);
+      }, 6000);
+      nativeRequests.set(id, { resolve, timer });
+      try {
+        window.StudentExamNative.lookupDictionary(id, word);
+      } catch (error) {
+        nativeRequests.delete(id);
+        clearTimeout(timer);
+        console.warn('[EnglishDictionary] Android SQLite failed; GEPT fallback', error);
+        resolve(null);
+      }
+    });
+  }
+  function displayEntries(items, statusMessage, ipa) {
+    const target = document.getElementById('englishDictResults');
+    if (!target) return;
+    target.replaceChildren();
+    showStatus(statusMessage);
+    for (const item of items.slice(0, 30)) {
+      const card = document.createElement('div');
+      card.className = 'english-dict-entry';
+      const head = document.createElement('div');
+      head.className = 'english-dict-head';
+      const word = document.createElement('span');
+      word.className = 'english-dict-word';
+      word.textContent = item.w || '';
+      const pos = document.createElement('span');
+      pos.className = 'english-dict-pos';
+      pos.textContent = item.p || '';
+      const meaning = document.createElement('div');
+      meaning.className = 'english-dict-meaning';
+      meaning.textContent = (item.c || '') + (ipa ? '\\nIPA: ' + ipa : '');
+      head.append(word, pos);
+      card.append(head, meaning);
+      target.appendChild(card);
+    }
+  }
+
   // Large ChrisTrans dictionary: local IndexedDB storage, no translation network calls.
   const LARGE_DB_NAME = 'ChrisExamEnglishDictionary';
   let largeDBPromise = null;
@@ -134,6 +190,12 @@
     const key = String(query || '').trim().toLowerCase();
     if (!key) return render('');
     try {
+      const native = await searchAndroid(key);
+      if (token !== searchVersion) return;
+      if (native && native.ok && Array.isArray(native.items) && native.items.length) {
+        displayEntries(native.items, 'ChrisTrans Android SQLite：' + native.items.length + ' 筆中文釋義', native.ipa || '');
+        return;
+      }
       const local = await searchLarge(key);
       if (token !== searchVersion) return;
       if (!local.length) return render(query);
