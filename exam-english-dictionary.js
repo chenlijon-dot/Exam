@@ -47,6 +47,8 @@
       '.english-dict-pos{font-size:.83rem;color:#64748b}',
       '.english-dict-meaning{margin-top:6px;color:#1e293b;line-height:1.65;white-space:pre-wrap}',
       '.english-dict-status{padding:12px 0;color:#475569}',
+      '.english-dict-section{margin-top:8px}',
+      '.english-dict-source{font-size:.82rem;font-weight:700;color:#64748b}',
       '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
     ].join('\n');
     document.head.appendChild(style);
@@ -159,29 +161,48 @@
       .replace(/\r\n?/g, '\n')
       .trim();
   }
-  function displayEntries(items, statusMessage, ipa) {
+  function exactGeptEntries(term) {
+    const rows = window.__GEPT_VOCAB_ROWS;
+    if (!Array.isArray(rows)) return [];
+    return rows.filter(row => String(row.n || row.w || '').trim().toLowerCase() === term);
+  }
+  function splitDictionaryMeanings(value) {
+    return normalizeDictionaryText(value)
+      .split(/[；;]/)
+      .flatMap(part => part.split('\n'))
+      .map(part => part.trim())
+      .filter(part => part && !/^IPA\s*:/i.test(part));
+  }
+  function displayEntries(items, statusMessage, ipa, geptItems = [], sourceName = 'ChrisTrans Android SQLite') {
     const target = document.getElementById('englishDictResults');
     if (!target) return;
     target.replaceChildren();
     const groups = new Map();
-    for (const item of items) {
-      const word = normalizeDictionaryText(item.w);
-      if (!word) continue;
-      const key = word.toLocaleLowerCase('en');
-      if (!groups.has(key)) groups.set(key, { w: word, poses: new Set(), meanings: new Set() });
+    const add = (item, source) => {
+      const word = normalizeDictionaryText(item.w || item.n);
+      if (!word) return;
+      const key = word.toLowerCase();
+      if (!groups.has(key)) {
+        groups.set(key, { word, gept: [], chris: [], seen: new Set(), geptPos: new Set(), chrisPos: new Set() });
+      }
       const group = groups.get(key);
       const pos = normalizeDictionaryText(item.p);
-      if (pos) group.poses.add(pos);
-      const meaning = normalizeDictionaryText(item.c);
-      if (meaning) {
-        for (const part of meaning.split('\n')) {
-          const clean = part.trim();
-          if (clean && !/^IPA\s*:/i.test(clean)) group.meanings.add(clean);
-        }
+      if (pos) (source === 'gept' ? group.geptPos : group.chrisPos).add(pos);
+      for (const meaning of splitDictionaryMeanings(item.c)) {
+        const normalized = meaning.replace(/\s+/g, '').toLowerCase();
+        if (!normalized || group.seen.has(normalized)) continue;
+        group.seen.add(normalized);
+        (source === 'gept' ? group.gept : group.chris).push(meaning);
       }
-    }
+    };
+    // Insert GEPT first, making its classroom-friendly meanings the default.
+    for (const item of geptItems) add(item, 'gept');
+    for (const item of items) add(item, 'chris');
     const phonetic = normalizeDictionaryText(ipa);
-    showStatus('ChrisTrans Android SQLite：' + groups.size + ' 個詞條（' + items.length + ' 筆釋義）');
+    const sourceText = geptItems.length
+      ? 'GEPT + ' + sourceName + '：' + groups.size + ' 個詞條'
+      : sourceName + '：' + groups.size + ' 個詞條';
+    showStatus(sourceText);
     for (const group of Array.from(groups.values()).slice(0, 30)) {
       const card = document.createElement('div');
       card.className = 'english-dict-entry';
@@ -189,16 +210,24 @@
       head.className = 'english-dict-head';
       const word = document.createElement('span');
       word.className = 'english-dict-word';
-      word.textContent = group.w;
-      const pos = document.createElement('span');
-      pos.className = 'english-dict-pos';
-      pos.textContent = Array.from(group.poses).join(' / ');
-      const meaning = document.createElement('div');
-      meaning.className = 'english-dict-meaning';
-      const definitions = Array.from(group.meanings);
-      meaning.textContent = definitions.length ? definitions.join('；') : '（尚無中文釋義）';
-      head.append(word, pos, makeSpeakButton(group.w));
-      card.append(head, meaning);
+      word.textContent = group.word;
+      head.append(word, makeSpeakButton(group.word));
+      card.appendChild(head);
+      const addSection = (label, meanings, poses) => {
+        if (!meanings.length) return;
+        const section = document.createElement('div');
+        section.className = 'english-dict-section';
+        const title = document.createElement('div');
+        title.className = 'english-dict-source';
+        title.textContent = label + (poses.size ? ' · ' + Array.from(poses).join(' / ') : '');
+        const text = document.createElement('div');
+        text.className = 'english-dict-meaning';
+        text.textContent = meanings.join('；');
+        section.append(title, text);
+        card.appendChild(section);
+      };
+      addSection('GEPT 常用詞義', group.gept, group.geptPos);
+      addSection('ChrisTrans 補充詞義', group.chris, group.chrisPos);
       if (phonetic) {
         const ipaLine = document.createElement('div');
         ipaLine.className = 'english-dict-help';
@@ -253,45 +282,33 @@
     const token = ++searchVersion;
     const key = String(query || '').trim().toLowerCase();
     if (!key) return render('');
+    // Exact GEPT meanings must not disappear when ChrisTrans has a partial entry.
+    const gept = exactGeptEntries(key);
     try {
       const native = await searchAndroid(key);
       if (token !== searchVersion) return;
       if (native && native.ok && Array.isArray(native.items) && native.items.length) {
-        displayEntries(native.items, 'ChrisTrans Android SQLite：' + native.items.length + ' 筆中文釋義', native.ipa || '');
+        displayEntries(native.items, '', native.ipa || '', gept, 'ChrisTrans Android SQLite');
         return;
       }
       const local = await searchLarge(key);
       if (token !== searchVersion) return;
-      if (!local.length) return render(query);
-      const target = document.getElementById('englishDictResults');
-      if (!target) return;
-      target.replaceChildren();
-      showStatus('ChrisTrans 大型字典：' + local.length + ' 筆結果（最多顯示 30 筆）');
-      for (const item of local) {
-        const card = document.createElement('div');
-        card.className = 'english-dict-entry';
-        const heading = document.createElement('div');
-        heading.className = 'english-dict-head';
-        const word = document.createElement('span');
-        word.className = 'english-dict-word';
-        word.textContent = item.w;
-        const pos = document.createElement('span');
-        pos.className = 'english-dict-pos';
-        pos.textContent = item.p;
-        const meaning = document.createElement('div');
-        meaning.className = 'english-dict-meaning';
-        meaning.textContent = item.c || '本詞條暫無繁體中文釋義';
-          heading.append(word, pos, makeSpeakButton(item.w || item.n || ''));
-        card.append(heading, meaning);
-        target.appendChild(card);
+      if (local.length) {
+        displayEntries(local, '', '', gept, 'ChrisTrans 大型字典');
+        return;
       }
     } catch (error) {
-      if (token === searchVersion) {
-        console.warn('[EnglishDictionary] IndexedDB lookup failed', error);
-        render(query);
-      }
+      if (token !== searchVersion) return;
+      console.warn('[EnglishDictionary] combined lookup failed; showing GEPT', error);
+    }
+    if (token !== searchVersion) return;
+    if (gept.length) {
+      displayEntries([], '', '', gept, 'GEPT 字庫');
+    } else {
+      render(query);
     }
   }
+
   function parseEntry(raw) {
     if (!raw || typeof raw.w !== 'string' || !raw.w.trim()) return null;
     const senses = Array.isArray(raw.s) ? raw.s : [];
