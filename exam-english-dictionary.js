@@ -120,27 +120,58 @@
       }
     });
   }
+  function normalizeDictionaryText(value) {
+    return String(value == null ? '' : value)
+      .replace(/\\r\\n|\\n|\\r/g, '\n')
+      .replace(/\r\n?/g, '\n')
+      .trim();
+  }
   function displayEntries(items, statusMessage, ipa) {
     const target = document.getElementById('englishDictResults');
     if (!target) return;
     target.replaceChildren();
-    showStatus(statusMessage);
-    for (const item of items.slice(0, 30)) {
+    const groups = new Map();
+    for (const item of items) {
+      const word = normalizeDictionaryText(item.w);
+      if (!word) continue;
+      const key = word.toLocaleLowerCase('en');
+      if (!groups.has(key)) groups.set(key, { w: word, poses: new Set(), meanings: new Set() });
+      const group = groups.get(key);
+      const pos = normalizeDictionaryText(item.p);
+      if (pos) group.poses.add(pos);
+      const meaning = normalizeDictionaryText(item.c);
+      if (meaning) {
+        for (const part of meaning.split('\n')) {
+          const clean = part.trim();
+          if (clean && !/^IPA\s*:/i.test(clean)) group.meanings.add(clean);
+        }
+      }
+    }
+    const phonetic = normalizeDictionaryText(ipa);
+    showStatus('ChrisTrans Android SQLite：' + groups.size + ' 個詞條（' + items.length + ' 筆釋義）');
+    for (const group of Array.from(groups.values()).slice(0, 30)) {
       const card = document.createElement('div');
       card.className = 'english-dict-entry';
       const head = document.createElement('div');
       head.className = 'english-dict-head';
       const word = document.createElement('span');
       word.className = 'english-dict-word';
-      word.textContent = item.w || '';
+      word.textContent = group.w;
       const pos = document.createElement('span');
       pos.className = 'english-dict-pos';
-      pos.textContent = item.p || '';
+      pos.textContent = Array.from(group.poses).join(' / ');
       const meaning = document.createElement('div');
       meaning.className = 'english-dict-meaning';
-      meaning.textContent = (item.c || '') + (ipa ? '\\nIPA: ' + ipa : '');
+      const definitions = Array.from(group.meanings);
+      meaning.textContent = definitions.length ? definitions.join('；') : '（尚無中文釋義）';
       head.append(word, pos);
       card.append(head, meaning);
+      if (phonetic) {
+        const ipaLine = document.createElement('div');
+        ipaLine.className = 'english-dict-help';
+        ipaLine.textContent = 'IPA：' + phonetic;
+        card.appendChild(ipaLine);
+      }
       target.appendChild(card);
     }
   }
@@ -362,7 +393,14 @@
         fileInput.value = '';
       }
     });
-    root.replaceChildren(back, breadcrumb, heading, intro, input, hint, fileLabel, fileInput, importStatus, status, results);
+    const hasNativeDictionary = typeof window.StudentExamNative?.lookupDictionary === 'function';
+    if (hasNativeDictionary) {
+      intro.textContent = '使用平板內建 ChrisTrans SQLite 大型英漢字典；查字不需要翻譯 API。';
+      hint.textContent = '直接輸入英文單字查詢平板本機資料庫。';
+      root.replaceChildren(back, breadcrumb, heading, intro, input, hint, status, results);
+    } else {
+      root.replaceChildren(back, breadcrumb, heading, intro, input, hint, fileLabel, fileInput, importStatus, status, results);
+    }
     input.addEventListener('input', () => renderCombined(input.value));
     try {
       await loadWords();
