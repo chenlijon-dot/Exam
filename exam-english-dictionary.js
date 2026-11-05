@@ -46,9 +46,42 @@
       '.english-dict-word{font-size:1.13rem;font-weight:800;color:#1e40af}',
       '.english-dict-pos{font-size:.83rem;color:#64748b}',
       '.english-dict-meaning{margin-top:6px;color:#1e293b;line-height:1.65;white-space:pre-wrap}',
-      '.english-dict-status{padding:12px 0;color:#475569}'
+      '.english-dict-status{padding:12px 0;color:#475569}',
+      '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
     ].join('\n');
     document.head.appendChild(style);
+  }
+
+  function speakEnglish(word) {
+    const text = String(word || '').trim();
+    if (!text || text.length > 120) return;
+    try {
+      if (typeof window.StudentExamNative?.speakEnglish === 'function') {
+        window.StudentExamNative.speakEnglish(text);
+        return;
+      }
+      if ('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.85;
+        window.speechSynthesis.speak(utterance);
+        return;
+      }
+    } catch (error) {
+      console.warn('[EnglishDictionary] pronunciation error', error);
+    }
+    showStatus('目前裝置無可用的英文發音引擎，請先安裝或啟用英語 TTS。');
+  }
+  function makeSpeakButton(word) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'english-dict-speak';
+    button.textContent = '🔊';
+    button.title = '唸出 ' + String(word || '');
+    button.setAttribute('aria-label', '發音：' + String(word || ''));
+    button.addEventListener('click', () => speakEnglish(word));
+    return button;
   }
 
   function showStatus(message) {
@@ -82,7 +115,7 @@
       const meaning = document.createElement('div');
       meaning.className = 'english-dict-meaning';
       meaning.textContent = item.c || '（尚無中文釋義）';
-      heading.append(word, pos);
+      heading.append(word, pos, makeSpeakButton(item.w || item.n || ''));
       card.append(heading, meaning);
       container.appendChild(card);
     }
@@ -164,7 +197,7 @@
       meaning.className = 'english-dict-meaning';
       const definitions = Array.from(group.meanings);
       meaning.textContent = definitions.length ? definitions.join('；') : '（尚無中文釋義）';
-      head.append(word, pos);
+      head.append(word, pos, makeSpeakButton(group.w));
       card.append(head, meaning);
       if (phonetic) {
         const ipaLine = document.createElement('div');
@@ -248,7 +281,7 @@
         const meaning = document.createElement('div');
         meaning.className = 'english-dict-meaning';
         meaning.textContent = item.c || '本詞條暫無繁體中文釋義';
-        heading.append(word, pos);
+          heading.append(word, pos, makeSpeakButton(item.w || item.n || ''));
         card.append(heading, meaning);
         target.appendChild(card);
       }
