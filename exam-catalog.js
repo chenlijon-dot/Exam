@@ -603,6 +603,33 @@
     $('#backSocial71ChaptersBtn')?.addEventListener('click', () => showSocial71Chapters(areaKey));
   }
 
+  let englishDictionaryScriptPromise = null;
+  async function showEnglishDictionary() {
+    const button = $('#englishDictionaryBtn');
+    if (button) button.disabled = true;
+    try {
+      if (!window.ChrisExamDictionary?.open) {
+        if (!englishDictionaryScriptPromise) {
+          englishDictionaryScriptPromise = new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'exam-english-dictionary.js?v=20261105';
+            script.onload = resolve;
+            script.onerror = () => reject(new Error('字典功能程式載入失敗'));
+            document.head.appendChild(script);
+          }).catch(error => { englishDictionaryScriptPromise = null; throw error; });
+        }
+        await englishDictionaryScriptPromise;
+      }
+      if (!window.ChrisExamDictionary?.open) throw new Error('字典功能未就緒');
+      await window.ChrisExamDictionary.open({ onBack: showEnglishSemesters });
+    } catch (error) {
+      console.error('[EnglishDictionary] open failed', error);
+      alert(error.message || String(error));
+    } finally {
+      if (button?.isConnected) button.disabled = false;
+    }
+  }
+
   function showEnglishSemesters() {
     setHeader('英文科', '選擇年級、學期或全民英檢');
     document.title = '英文科｜國中題庫';
@@ -621,10 +648,15 @@
           <span class="top"><span class="icon">🎧</span><strong>全民英檢（GEPT）</strong><span class="catalog-badge reference">GEPT</span></span>
           <span class="desc">獨立於校內學期教材，規劃初級、中級與中高級等級練習。</span>
         </button>
+        <button class="catalog-card chapter-card" id="englishDictionaryBtn">
+          <span class="top"><span class="icon">📖</span><strong>字典翻譯</strong><span class="catalog-badge reference">英漢字典</span></span>
+          <span class="desc">查詢 GEPT 初級英漢字彙，顯示中文解釋與詞性；字庫載入後可在本機查詢。</span>
+        </button>
       </div>`;
     $('#backSubjectsBtn')?.addEventListener('click', showSubjects);
     ENGLISH_SEMESTERS.forEach(s => $(`[data-english-semester="${s.key}"]`)?.addEventListener('click', () => showEnglishSemester(s.key)));
     $('#englishGeptBtn')?.addEventListener('click', showEnglishGept);
+    $('#englishDictionaryBtn')?.addEventListener('click', showEnglishDictionary);
   }
 
   function showEnglishSemester(semesterKey) {
