@@ -201,8 +201,11 @@
     // Read small chunks so an Android tablet never needs to hold all 135k objects in memory.
     let offset = 0, remainder = '', count = 0, batch = [];
     const chunkSize = 1024 * 1024;
+    const decoder = new TextDecoder('utf-8', { fatal: true });
     while (offset < file.size) {
-      const chunk = await file.slice(offset, offset + chunkSize).text();
+      const last = offset + chunkSize >= file.size;
+      const bytes = await file.slice(offset, offset + chunkSize).arrayBuffer();
+      const chunk = decoder.decode(bytes, { stream: !last });
       offset += chunkSize;
       const combined = remainder + chunk;
       const lines = combined.split('\n');
