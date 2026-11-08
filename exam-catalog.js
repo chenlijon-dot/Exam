@@ -612,7 +612,7 @@
         if (!englishDictionaryScriptPromise) {
           englishDictionaryScriptPromise = new Promise((resolve, reject) => {
             const script = document.createElement('script');
-            script.src = 'exam-english-dictionary.js?v=20261108-v07-prefix2';
+            script.src = 'exam-english-dictionary.js?v=20261108-v07-tree3';
             script.onload = resolve;
             script.onerror = () => reject(new Error('字典功能程式載入失敗'));
             document.head.appendChild(script);
