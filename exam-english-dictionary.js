@@ -101,6 +101,20 @@
     }
     showStatus('目前裝置無可用的英文發音引擎，請先安裝或啟用英語 TTS。');
   }
+  function speakExampleSentence(sentence) {
+    const text = String(sentence || '').trim();
+    if (!text) return;
+    // Current Android bridge allows letters, spaces, apostrophes and hyphens
+    // with a 120-char maximum. Normalize punctuation only for native playback.
+    const nativeText = text.replace(/[^A-Za-z' -]/g, ' ').replace(/\s+/g, ' ').trim();
+    if (nativeText.length > 0 && nativeText.length <= 120 &&
+        typeof window.StudentExamNative?.speakEnglish === 'function') {
+      window.StudentExamNative.speakEnglish(nativeText);
+      return;
+    }
+    // Browser fallback retains the original sentence and punctuation.
+    speakEnglish(text);
+  }
   function makeSpeakButton(word, compact = false) {
     const button = document.createElement('button');
     button.type = 'button';
@@ -110,7 +124,8 @@
     button.setAttribute('aria-label', compact ? '朗讀完整英文例句' : '發音：' + String(word || ''));
     button.addEventListener('click', event => {
       event.stopPropagation();
-      speakEnglish(word);
+      if (compact) speakExampleSentence(word);
+      else speakEnglish(word);
     });
     return button;
   }
