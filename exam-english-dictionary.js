@@ -49,6 +49,20 @@
       '.english-dict-status{padding:12px 0;color:#475569}',
       '.english-dict-section{margin-top:8px}',
       '.english-dict-source{font-size:.82rem;font-weight:700;color:#64748b}',
+      '.english-dict-pronunciations{padding:10px 0;border-top:1px solid #e2e8f0;margin-top:10px}',
+      '.english-dict-pron-line{font-size:.9rem;color:#475569;margin-top:4px;overflow-wrap:anywhere}',
+      '.english-dict-source-panel{margin-top:14px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}',
+      '.english-dict-source-heading{font-size:.96rem;font-weight:800;margin:0;padding:10px 12px;background:#f1f5f9;color:#334155}',
+      '.english-dict-sense{padding:11px 12px;border-top:1px solid #edf2f7}',
+      '.english-dict-sense-meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;font-size:.84rem}',
+      '.english-dict-sense-number{font-weight:800;color:#2563eb}',
+      '.english-dict-sense-id{font-size:.74rem;color:#94a3b8}',
+      '.english-dict-zh{font-weight:600;color:#1e293b;margin-top:5px;white-space:pre-wrap;overflow-wrap:anywhere}',
+      '.english-dict-en{font-size:.92rem;color:#475569;margin-top:5px;white-space:pre-wrap;overflow-wrap:anywhere}',
+      '.english-dict-example{font-size:.88rem;color:#64748b;background:#f8fafc;border-left:3px solid #bfdbfe;padding:8px 10px;margin-top:8px;white-space:pre-wrap;overflow-wrap:anywhere}',
+      '.english-dict-forms{margin-top:12px;border:1px solid #e2e8f0;border-radius:10px;padding:9px 12px;color:#475569}',
+      '.english-dict-forms summary{cursor:pointer;font-weight:700}',
+      '.english-dict-form-row{padding:5px 0;border-top:1px solid #f1f5f9}',
       '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
     ].join('\n');
     document.head.appendChild(style);
@@ -173,69 +187,128 @@
       .map(part => part.trim())
       .filter(part => part && !/^IPA\s*:/i.test(part));
   }
-  function displayEntries(items, statusMessage, ipa, geptItems = [], sourceName = 'ChrisTrans Android SQLite') {
+  function displayEntries(items, statusMessage, ipa, geptItems = [], sourceName = 'ChrisTrans Android SQLite', nativePayload = null) {
     const target = document.getElementById('englishDictResults');
     if (!target) return;
     target.replaceChildren();
-    const groups = new Map();
-    const add = (item, source) => {
-      const word = normalizeDictionaryText(item.w || item.n);
-      if (!word) return;
-      const key = word.toLowerCase();
-      if (!groups.has(key)) {
-        groups.set(key, { word, gept: [], chris: [], seen: new Set(), geptPos: new Set(), chrisPos: new Set() });
-      }
-      const group = groups.get(key);
-      const pos = normalizeDictionaryText(item.p);
-      if (pos) (source === 'gept' ? group.geptPos : group.chrisPos).add(pos);
-      for (const meaning of splitDictionaryMeanings(item.c)) {
-        const normalized = meaning.replace(/\s+/g, '').toLowerCase();
-        if (!normalized || group.seen.has(normalized)) continue;
-        group.seen.add(normalized);
-        (source === 'gept' ? group.gept : group.chris).push(meaning);
-      }
+    const entries = Array.isArray(items) ? items : [];
+    const native = nativePayload && typeof nativePayload === 'object' ? nativePayload : {};
+    const make = (tag, cls, value) => {
+      const node = document.createElement(tag);
+      if (cls) node.className = cls;
+      if (value != null) node.textContent = String(value);
+      return node;
     };
-    // Insert GEPT first, making its classroom-friendly meanings the default.
-    for (const item of geptItems) add(item, 'gept');
-    for (const item of items) add(item, 'chris');
-    const phonetic = normalizeDictionaryText(ipa);
-    const sourceText = geptItems.length
-      ? 'GEPT + ' + sourceName + '：' + groups.size + ' 個詞條'
-      : sourceName + '：' + groups.size + ' 個詞條';
-    showStatus(sourceText);
-    for (const group of Array.from(groups.values()).slice(0, 30)) {
-      const card = document.createElement('div');
-      card.className = 'english-dict-entry';
-      const head = document.createElement('div');
-      head.className = 'english-dict-head';
-      const word = document.createElement('span');
-      word.className = 'english-dict-word';
-      word.textContent = group.word;
-      head.append(word, makeSpeakButton(group.word));
-      card.appendChild(head);
-      const addSection = (label, meanings, poses) => {
-        if (!meanings.length) return;
-        const section = document.createElement('div');
-        section.className = 'english-dict-section';
-        const title = document.createElement('div');
-        title.className = 'english-dict-source';
-        title.textContent = label + (poses.size ? ' · ' + Array.from(poses).join(' / ') : '');
-        const text = document.createElement('div');
-        text.className = 'english-dict-meaning';
-        text.textContent = meanings.join('；');
-        section.append(title, text);
-        card.appendChild(section);
-      };
-      addSection('GEPT 常用詞義', group.gept, group.geptPos);
-      addSection('ChrisTrans 補充詞義', group.chris, group.chrisPos);
-      if (phonetic) {
-        const ipaLine = document.createElement('div');
-        ipaLine.className = 'english-dict-help';
-        ipaLine.textContent = 'IPA：' + phonetic;
-        card.appendChild(ipaLine);
-      }
-      target.appendChild(card);
+    const uniqueWords = [...new Set([...geptItems, ...entries]
+      .map(x => normalizeDictionaryText(x.w || x.n)).filter(Boolean))];
+    const searchWord = uniqueWords[0] ||
+      normalizeDictionaryText(document.getElementById('englishDictInput')?.value);
+    const card = make('article', 'english-dict-entry');
+    const head = make('div', 'english-dict-head');
+    head.append(make('strong', 'english-dict-word', searchWord), makeSpeakButton(searchWord));
+    card.appendChild(head);
+
+    const pron = Array.isArray(native.pronunciations) ? native.pronunciations : [];
+    const seenPron = new Set();
+    const ipaValues = [];
+    for (const p of pron) {
+      const value = normalizeDictionaryText(p?.ipa);
+      if (!value) continue;
+      const accent = normalizeDictionaryText(p?.accent);
+      const source = normalizeDictionaryText(p?.source);
+      const key = [value, accent, source].join('|');
+      if (seenPron.has(key)) continue;
+      seenPron.add(key);
+      ipaValues.push((accent ? accent + ' ' : '') + value + (source ? ' · ' + source : ''));
     }
+    if (!ipaValues.length && normalizeDictionaryText(ipa)) ipaValues.push(normalizeDictionaryText(ipa));
+    if (ipaValues.length) {
+      const pronunciation = make('section', 'english-dict-pronunciations');
+      pronunciation.append(make('div', 'english-dict-source', '英文發音 · IPA'));
+      for (const p of ipaValues) pronunciation.append(make('div', 'english-dict-pron-line', p));
+      card.appendChild(pronunciation);
+    }
+
+    function section(name, records, preferredOrder) {
+      if (!records.length) return;
+      const panel = make('section', 'english-dict-source-panel');
+      const heading = make('h3', 'english-dict-source-heading', name + ' · ' + records.length + ' 筆詞義');
+      panel.appendChild(heading);
+      const ordered = preferredOrder ? [...records].sort((a,b) =>
+        (a.p === 'noun' ? 0 : a.p === 'verb' ? 1 : 2) -
+        (b.p === 'noun' ? 0 : b.p === 'verb' ? 1 : 2)) : records;
+      let count = 0;
+      for (const item of ordered) {
+        const unit = make('div', 'english-dict-sense');
+        const pos = normalizeDictionaryText(item.p || item.pos);
+        const meta = make('div', 'english-dict-sense-meta');
+        meta.append(make('span', 'english-dict-sense-number', String(++count) + '.'));
+        if (pos) meta.append(make('span', 'english-dict-pos', pos));
+        if (item.senseId != null) meta.append(make('span', 'english-dict-sense-id', 'Sense ' + item.senseId));
+        unit.append(meta);
+        // Prefer structured Android V07 fields; never display its preassembled 'c' blob.
+        const structured = item.src != null || item.zh != null || item.en != null;
+        const zh = normalizeDictionaryText(structured ? item.zh : item.c);
+        const en = normalizeDictionaryText(item.en);
+        const exampleEn = normalizeDictionaryText(item.exampleEn);
+        const exampleZh = normalizeDictionaryText(item.exampleZh);
+        if (zh) unit.append(make('div', 'english-dict-zh', zh));
+        if (en) unit.append(make('div', 'english-dict-en', en));
+        if (exampleEn || exampleZh) {
+          const example = make('div', 'english-dict-example');
+          if (exampleEn) example.append(make('div', '', '例句：' + exampleEn));
+          if (exampleZh) example.append(make('div', '', '翻譯：' + exampleZh));
+          unit.append(example);
+        }
+        if (!zh && !en) unit.append(make('div', 'english-dict-en', '（此筆沒有可顯示的詞義）'));
+        panel.append(unit);
+      }
+      card.append(panel);
+    }
+    // Keep GEPT and each native source separate. Never concatenate unrelated meanings.
+    const geptRecords = [];
+    for (const item of geptItems) {
+      for (const meaning of splitDictionaryMeanings(item.c)) {
+        geptRecords.push({p:item.p || '',c:meaning});
+      }
+    }
+    section('GEPT 常用詞義', geptRecords);
+    const bySource = new Map();
+    for (const entry of entries) {
+      const key = normalizeDictionaryText(entry.src) || sourceName;
+      if (!bySource.has(key)) bySource.set(key, []);
+      bySource.get(key).push(entry);
+    }
+    for (const [source, records] of bySource) section(source, records, true);
+
+    const forms = Array.isArray(native.forms) ? native.forms : [];
+    if (forms.length) {
+      const formBox = make('details', 'english-dict-forms');
+      formBox.append(make('summary', '', '詞形變化 · ' + forms.length + ' 筆'));
+      for (const form of forms) {
+        const label = [normalizeDictionaryText(form?.form), normalizeDictionaryText(form?.tags)]
+          .filter(Boolean).join(' — ');
+        if (label) formBox.append(make('div', 'english-dict-form-row', label));
+      }
+      card.append(formBox);
+    }
+    const extras = Array.isArray(native.examples) ? native.examples : [];
+    if (extras.length) {
+      const exampleBox = make('details', 'english-dict-forms');
+      exampleBox.append(make('summary', '', '其他例句 · ' + extras.length + ' 筆'));
+      for (const ex of extras) {
+        const block = make('div', 'english-dict-example');
+        if (ex.en) block.append(make('div','',normalizeDictionaryText(ex.en)));
+        if (ex.zh) block.append(make('div','',normalizeDictionaryText(ex.zh)));
+        if (ex.source) block.append(make('div','english-dict-sense-id',normalizeDictionaryText(ex.source)));
+        exampleBox.append(block);
+      }
+      card.append(exampleBox);
+    }
+    const total = geptRecords.length + entries.length;
+    showStatus(statusMessage || (total ? '找到 ' + total + ' 筆詞義 · ' +
+      (bySource.size + (geptRecords.length ? 1 : 0)) + ' 個來源' : '查無此字'));
+    if (total || ipaValues.length || forms.length) target.appendChild(card);
   }
 
   // Large ChrisTrans dictionary: local IndexedDB storage, no translation network calls.
@@ -288,7 +361,7 @@
       const native = await searchAndroid(key);
       if (token !== searchVersion) return;
       if (native && native.ok && Array.isArray(native.items) && native.items.length) {
-        displayEntries(native.items, '', native.ipa || '', gept, 'ChrisTrans Android SQLite');
+        displayEntries(native.items, '', native.ipa || '', gept, 'ChrisTrans Android SQLite', native);
         return;
       }
       const local = await searchLarge(key);
