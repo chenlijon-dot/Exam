@@ -70,6 +70,9 @@
       '.english-dict-suggestion-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px}',
       '.english-dict-suggestion{display:block;min-width:0;padding:11px 12px;border:1px solid #bfdbfe;border-radius:10px;background:#eff6ff;color:#1e40af;font-size:.98rem;text-align:left;overflow-wrap:anywhere}',
       '.english-dict-en,.english-dict-example{cursor:pointer}',
+      '.english-dict-example-line{display:flex;align-items:flex-start;gap:7px}',
+      '.english-dict-example-text{flex:1;min-width:0;white-space:pre-wrap;overflow-wrap:anywhere}',
+      '.english-dict-speak-sentence{flex-shrink:0;font-size:.95rem;min-width:34px;min-height:30px;padding:3px 5px}',
       '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
     ].join('\n');
     document.head.appendChild(style);
@@ -77,9 +80,11 @@
 
   function speakEnglish(word) {
     const text = String(word || '').trim();
-    if (!text || text.length > 120) return;
+    if (!text || text.length > 1000) return;
     try {
-      if (typeof window.StudentExamNative?.speakEnglish === 'function') {
+      // Android native TTS currently accepts up to 120 characters. Use
+      // WebView speech synthesis for longer complete example sentences.
+      if (text.length <= 120 && typeof window.StudentExamNative?.speakEnglish === 'function') {
         window.StudentExamNative.speakEnglish(text);
         return;
       }
@@ -96,14 +101,17 @@
     }
     showStatus('目前裝置無可用的英文發音引擎，請先安裝或啟用英語 TTS。');
   }
-  function makeSpeakButton(word) {
+  function makeSpeakButton(word, compact = false) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'english-dict-speak';
+    button.className = 'english-dict-speak' + (compact ? ' english-dict-speak-sentence' : '');
     button.textContent = '🔊';
-    button.title = '唸出 ' + String(word || '');
-    button.setAttribute('aria-label', '發音：' + String(word || ''));
-    button.addEventListener('click', () => speakEnglish(word));
+    button.title = compact ? '朗讀完整英文例句' : '唸出 ' + String(word || '');
+    button.setAttribute('aria-label', compact ? '朗讀完整英文例句' : '發音：' + String(word || ''));
+    button.addEventListener('click', event => {
+      event.stopPropagation();
+      speakEnglish(word);
+    });
     return button;
   }
 
@@ -266,7 +274,12 @@
         if (en) unit.append(make('div', 'english-dict-en', en));
         if (exampleEn || exampleZh) {
           const example = make('div', 'english-dict-example');
-          if (exampleEn) example.append(make('div', '', '例句：' + exampleEn));
+          if (exampleEn) {
+            const line = make('div', 'english-dict-example-line');
+            line.append(make('span', 'english-dict-example-text', '例句：' + exampleEn));
+            line.append(makeSpeakButton(exampleEn, true));
+            example.append(line);
+          }
           if (exampleZh) example.append(make('div', '', '翻譯：' + exampleZh));
           unit.append(example);
         }
@@ -308,7 +321,13 @@
       exampleBox.append(make('summary', '', '其他例句 · ' + extras.length + ' 筆'));
       for (const ex of extras) {
         const block = make('div', 'english-dict-example');
-        if (ex.en) block.append(make('div','',normalizeDictionaryText(ex.en)));
+        if (ex.en) {
+          const sentence = normalizeDictionaryText(ex.en);
+          const line = make('div', 'english-dict-example-line');
+          line.append(make('span', 'english-dict-example-text', sentence));
+          line.append(makeSpeakButton(sentence, true));
+          block.append(line);
+        }
         if (ex.zh) block.append(make('div','',normalizeDictionaryText(ex.zh)));
         if (ex.source) block.append(make('div','english-dict-sense-id',normalizeDictionaryText(ex.source)));
         exampleBox.append(block);
@@ -352,6 +371,8 @@
     document.addEventListener('pointerdown', e => {
       dictionaryTapStart = null;
       if (!e.isPrimary || e.button !== 0) return;
+      // Tapping a sentence's audio button must never trigger word lookup.
+      if (e.target?.closest?.('button')) return;
       if (!e.target?.closest?.('.english-dict-en, .english-dict-example')) return;
       dictionaryTapStart = {id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now()};
     }, {passive:true});
