@@ -63,6 +63,9 @@
       '.english-dict-forms{margin-top:12px;border:1px solid #e2e8f0;border-radius:10px;padding:9px 12px;color:#475569}',
       '.english-dict-forms summary{cursor:pointer;font-weight:700}',
       '.english-dict-form-row{padding:5px 0;border-top:1px solid #f1f5f9}',
+      '.english-dict-suggestions{margin:8px 0}',
+      '.english-dict-suggestion-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px}',
+      '.english-dict-suggestion{display:block;min-width:0;padding:11px 12px;border:1px solid #bfdbfe;border-radius:10px;background:#eff6ff;color:#1e40af;font-size:.98rem;text-align:left;overflow-wrap:anywhere}',
       '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
     ].join('\n');
     document.head.appendChild(style);
@@ -351,6 +354,37 @@
       tx.onerror = () => reject(tx.error || new Error('字典搜尋失敗'));
     });
   }
+  // Prefix matches come from the full official V07 word index, not the small GEPT list.
+  function displaySuggestions(matches, total, query, onPick) {
+    const target = document.getElementById('englishDictResults');
+    if (!target) return;
+    target.replaceChildren();
+    const rows = Array.isArray(matches) ? matches : [];
+    const count = Number.isFinite(Number(total)) ? Number(total) : rows.length;
+    showStatus('V07 字首搜尋：找到 ' + count + ' 個詞條' +
+      (count > rows.length ? '（目前顯示前 ' + rows.length + ' 筆，請輸入更多字母縮小範圍）' : ''));
+    const panel = document.createElement('section');
+    panel.className = 'english-dict-suggestions';
+    const tip = document.createElement('div');
+    tip.className = 'english-dict-help';
+    tip.textContent = '點選單字，即可查看 Wiktionary／Qwen V07、FreeDict 和發音資訊。';
+    panel.append(tip);
+    const list = document.createElement('div');
+    list.className = 'english-dict-suggestion-list';
+    for (const item of rows) {
+      const word = normalizeDictionaryText(item?.w);
+      if (!word) continue;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'english-dict-suggestion';
+      button.textContent = word;
+      button.addEventListener('click', () => onPick(word));
+      list.append(button);
+    }
+    panel.append(list);
+    target.append(panel);
+  }
+
   async function renderCombined(query) {
     const token = ++searchVersion;
     const key = String(query || '').trim().toLowerCase();
@@ -362,6 +396,14 @@
       if (token !== searchVersion) return;
       if (native && native.ok && Array.isArray(native.items) && native.items.length) {
         displayEntries(native.items, '', native.ipa || '', gept, 'ChrisTrans Android SQLite', native);
+        return;
+      }
+      if (native && native.ok && Array.isArray(native.suggestions) && native.suggestions.length) {
+        displaySuggestions(native.suggestions, native.totalSuggestions, key, nextWord => {
+          const input = document.getElementById('englishDictInput');
+          if (input) input.value = nextWord;
+          renderCombined(nextWord);
+        });
         return;
       }
       const local = await searchLarge(key);
