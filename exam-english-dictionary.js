@@ -69,6 +69,7 @@
       '.english-dict-suggestions{margin:8px 0}',
       '.english-dict-suggestion-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px}',
       '.english-dict-suggestion{display:block;min-width:0;padding:11px 12px;border:1px solid #bfdbfe;border-radius:10px;background:#eff6ff;color:#1e40af;font-size:.98rem;text-align:left;overflow-wrap:anywhere}',
+      '.english-dict-lookup-selection{position:fixed;z-index:2147483000;padding:9px 13px;border:1px solid #93c5fd;border-radius:10px;background:#1d4ed8;color:#fff;box-shadow:0 5px 16px rgba(15,23,42,.22);font-size:.94rem;font-weight:700;cursor:pointer;touch-action:manipulation}',
       '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
     ].join('\n');
     document.head.appendChild(style);
@@ -320,6 +321,79 @@
     if (total || ipaValues.length || forms.length) target.appendChild(card);
   }
 
+  // Text-selection lookup stays within the current dictionary page.
+  // It supplements Android's Copy/Select All toolbar rather than replacing it.
+  let selectionLookupButton = null;
+  let selectionLookupWord = '';
+  let selectionLookupListenersReady = false;
+  function hideSelectionLookup() {
+    selectionLookupWord = '';
+    if (selectionLookupButton) selectionLookupButton.hidden = true;
+  }
+  function selectionWord() {
+    const target = document.getElementById('englishDictResults');
+    const selection = window.getSelection?.();
+    if (!target || !target.isConnected || !selection || selection.isCollapsed || !selection.rangeCount) return null;
+    const range = selection.getRangeAt(0);
+    const ancestor = range.commonAncestorContainer;
+    if (!target.contains(ancestor)) return null;
+    const word = String(selection.toString() || '').trim();
+    // Accept a single English headword, including apostrophe and hyphen forms.
+    if (!/^[A-Za-z][A-Za-z'-]{0,79}$/.test(word)) return null;
+    const rect = range.getBoundingClientRect();
+    if (!rect || (!rect.width && !rect.height)) return null;
+    return {word,rect};
+  }
+  function showSelectionLookup() {
+    const current = selectionWord();
+    if (!current) return hideSelectionLookup();
+    if (!selectionLookupButton) {
+      selectionLookupButton = document.createElement('button');
+      selectionLookupButton.type = 'button';
+      selectionLookupButton.className = 'english-dict-lookup-selection';
+      selectionLookupButton.setAttribute('aria-label', '使用 ChrisDict 查詢選取的英文單字');
+      // mousedown/touch handling must not clear native text selection before click.
+      selectionLookupButton.addEventListener('pointerdown', e => e.preventDefault());
+      selectionLookupButton.addEventListener('click', () => {
+        const word = selectionLookupWord;
+        hideSelectionLookup();
+        if (!word) return;
+        const input = document.getElementById('englishDictInput');
+        if (!input || !document.getElementById('englishDictResults')) return;
+        input.value = word;
+        window.getSelection?.()?.removeAllRanges();
+        console.info('[EnglishDictionary] selection lookup', word);
+        renderCombined(word);
+        input.scrollIntoView({block:'start',behavior:'smooth'});
+      });
+      document.body.appendChild(selectionLookupButton);
+    }
+    selectionLookupWord = current.word;
+    selectionLookupButton.textContent = '📖 查詢「' + current.word + '」';
+    selectionLookupButton.hidden = false;
+    const width = selectionLookupButton.offsetWidth;
+    const height = selectionLookupButton.offsetHeight;
+    const left = Math.max(8, Math.min(window.innerWidth - width - 8,
+      current.rect.left + current.rect.width / 2 - width / 2));
+    let top = current.rect.top - height - 10;
+    if (top < 8) top = Math.min(window.innerHeight - height - 8,current.rect.bottom + 8);
+    selectionLookupButton.style.left = left + 'px';
+    selectionLookupButton.style.top = Math.max(8,top) + 'px';
+  }
+  function installSelectionLookup() {
+    if (selectionLookupListenersReady) return;
+    selectionLookupListenersReady = true;
+    document.addEventListener('selectionchange', showSelectionLookup);
+    document.addEventListener('pointerup', showSelectionLookup);
+    document.addEventListener('contextmenu', showSelectionLookup);
+    document.addEventListener('scroll', hideSelectionLookup, true);
+    window.addEventListener('resize', hideSelectionLookup);
+    document.addEventListener('pointerdown', e => {
+      if (selectionLookupButton && selectionLookupButton.contains(e.target)) return;
+      if (!document.getElementById('englishDictResults')?.contains(e.target)) hideSelectionLookup();
+    });
+  }
+
   // Large ChrisTrans dictionary: local IndexedDB storage, no translation network calls.
   const LARGE_DB_NAME = 'ChrisExamEnglishDictionary';
   let largeDBPromise = null;
@@ -504,11 +578,13 @@
     const root = document.getElementById('catalogContent');
     if (!root) return;
     addStyles();
+    installSelectionLookup();
+    hideSelectionLookup();
     document.title = '字典翻譯｜英文科';
     const back = document.createElement('button');
     back.className = 'catalog-back';
     back.textContent = '← 返回英文科';
-    back.addEventListener('click', () => { if (backAction) backAction(); });
+    back.addEventListener('click', () => { hideSelectionLookup(); if (backAction) backAction(); });
     const breadcrumb = document.createElement('div');
     breadcrumb.className = 'catalog-path';
     breadcrumb.textContent = '英文　›　字典翻譯';
