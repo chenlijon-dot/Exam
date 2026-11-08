@@ -69,7 +69,7 @@
       '.english-dict-suggestions{margin:8px 0}',
       '.english-dict-suggestion-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:8px}',
       '.english-dict-suggestion{display:block;min-width:0;padding:11px 12px;border:1px solid #bfdbfe;border-radius:10px;background:#eff6ff;color:#1e40af;font-size:.98rem;text-align:left;overflow-wrap:anywhere}',
-      '.english-dict-lookup-selection{position:fixed;z-index:2147483000;padding:9px 13px;border:1px solid #93c5fd;border-radius:10px;background:#1d4ed8;color:#fff;box-shadow:0 5px 16px rgba(15,23,42,.22);font-size:.94rem;font-weight:700;cursor:pointer;touch-action:manipulation}',
+      '.english-dict-en,.english-dict-example{cursor:pointer}',
       '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
     ].join('\n');
     document.head.appendChild(style);
@@ -321,77 +321,57 @@
     if (total || ipaValues.length || forms.length) target.appendChild(card);
   }
 
-  // Text-selection lookup stays within the current dictionary page.
-  // It supplements Android's Copy/Select All toolbar rather than replacing it.
-  let selectionLookupButton = null;
-  let selectionLookupWord = '';
-  let selectionLookupListenersReady = false;
-  function hideSelectionLookup() {
-    selectionLookupWord = '';
-    if (selectionLookupButton) selectionLookupButton.hidden = true;
+  // Quick tap on English definitions/examples: word lookup.
+  // Long press and text selection remain entirely owned by Android WebView.
+  let dictionaryTapStart = null;
+  let dictionaryTapInstalled = false;
+  function englishWordAtPoint(x, y) {
+    const node = document.elementFromPoint(x, y);
+    const area = node?.closest?.('.english-dict-en, .english-dict-example');
+    if (!area || !document.getElementById('englishDictResults')?.contains(area)) return '';
+    // caretRangeFromPoint is supported by Android WebView and avoids changing selection.
+    const range = document.caretRangeFromPoint?.(x, y) || null;
+    if (!range || !area.contains(range.startContainer)) return '';
+    const textNode = range.startContainer;
+    if (textNode.nodeType !== Node.TEXT_NODE) return '';
+    const value = textNode.textContent || '';
+    const offset = range.startOffset;
+    const wordChar = c => /[A-Za-z'-]/.test(c || '');
+    let left = offset, right = offset;
+    // At a word boundary, prefer the letter just before the caret.
+    if (!wordChar(value[left]) && left > 0 && wordChar(value[left - 1])) left--;
+    right = left;
+    while (left > 0 && wordChar(value[left - 1])) left--;
+    while (right < value.length && wordChar(value[right])) right++;
+    const word = value.slice(left, right).replace(/^[-']+|[-']+$/g, '');
+    return /^[A-Za-z][A-Za-z'-]{0,79}$/.test(word) ? word : '';
   }
-  function selectionWord() {
-    const target = document.getElementById('englishDictResults');
-    const selection = window.getSelection?.();
-    if (!target || !target.isConnected || !selection || selection.isCollapsed || !selection.rangeCount) return null;
-    const range = selection.getRangeAt(0);
-    const ancestor = range.commonAncestorContainer;
-    if (!target.contains(ancestor)) return null;
-    const word = String(selection.toString() || '').trim();
-    // Accept a single English headword, including apostrophe and hyphen forms.
-    if (!/^[A-Za-z][A-Za-z'-]{0,79}$/.test(word)) return null;
-    const rect = range.getBoundingClientRect();
-    if (!rect || (!rect.width && !rect.height)) return null;
-    return {word,rect};
-  }
-  function showSelectionLookup() {
-    const current = selectionWord();
-    if (!current) return hideSelectionLookup();
-    if (!selectionLookupButton) {
-      selectionLookupButton = document.createElement('button');
-      selectionLookupButton.type = 'button';
-      selectionLookupButton.className = 'english-dict-lookup-selection';
-      selectionLookupButton.setAttribute('aria-label', '使用 ChrisDict 查詢選取的英文單字');
-      // mousedown/touch handling must not clear native text selection before click.
-      selectionLookupButton.addEventListener('pointerdown', e => e.preventDefault());
-      selectionLookupButton.addEventListener('click', () => {
-        const word = selectionLookupWord;
-        hideSelectionLookup();
-        if (!word) return;
-        const input = document.getElementById('englishDictInput');
-        if (!input || !document.getElementById('englishDictResults')) return;
-        input.value = word;
-        window.getSelection?.()?.removeAllRanges();
-        console.info('[EnglishDictionary] selection lookup', word);
-        renderCombined(word);
-        input.scrollIntoView({block:'start',behavior:'smooth'});
-      });
-      document.body.appendChild(selectionLookupButton);
-    }
-    selectionLookupWord = current.word;
-    selectionLookupButton.textContent = '📖 查詢「' + current.word + '」';
-    selectionLookupButton.hidden = false;
-    const width = selectionLookupButton.offsetWidth;
-    const height = selectionLookupButton.offsetHeight;
-    const left = Math.max(8, Math.min(window.innerWidth - width - 8,
-      current.rect.left + current.rect.width / 2 - width / 2));
-    let top = current.rect.top - height - 10;
-    if (top < 8) top = Math.min(window.innerHeight - height - 8,current.rect.bottom + 8);
-    selectionLookupButton.style.left = left + 'px';
-    selectionLookupButton.style.top = Math.max(8,top) + 'px';
-  }
-  function installSelectionLookup() {
-    if (selectionLookupListenersReady) return;
-    selectionLookupListenersReady = true;
-    document.addEventListener('selectionchange', showSelectionLookup);
-    document.addEventListener('pointerup', showSelectionLookup);
-    document.addEventListener('contextmenu', showSelectionLookup);
-    document.addEventListener('scroll', hideSelectionLookup, true);
-    window.addEventListener('resize', hideSelectionLookup);
+  function installDictionaryTapLookup() {
+    if (dictionaryTapInstalled) return;
+    dictionaryTapInstalled = true;
     document.addEventListener('pointerdown', e => {
-      if (selectionLookupButton && selectionLookupButton.contains(e.target)) return;
-      if (!document.getElementById('englishDictResults')?.contains(e.target)) hideSelectionLookup();
-    });
+      dictionaryTapStart = null;
+      if (!e.isPrimary || e.button !== 0) return;
+      if (!e.target?.closest?.('.english-dict-en, .english-dict-example')) return;
+      dictionaryTapStart = {id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now()};
+    }, {passive:true});
+    document.addEventListener('pointercancel', () => { dictionaryTapStart = null; });
+    document.addEventListener('pointerup', e => {
+      const start = dictionaryTapStart;
+      dictionaryTapStart = null;
+      if (!start || e.pointerId !== start.id) return;
+      if (performance.now() - start.time > 300) return; // long press: system menu
+      if (Math.hypot(e.clientX-start.x,e.clientY-start.y) > 10) return; // scroll/selection
+      if (window.getSelection?.()?.toString().trim()) return; // respect native selection
+      const word = englishWordAtPoint(e.clientX,e.clientY);
+      if (!word) return;
+      const input = document.getElementById('englishDictInput');
+      if (!input || !document.getElementById('englishDictResults')) return;
+      input.value = word;
+      console.info('[EnglishDictionary] tap lookup', word);
+      renderCombined(word);
+      input.scrollIntoView({block:'start',behavior:'smooth'});
+    }, {passive:true});
   }
 
   // Large ChrisTrans dictionary: local IndexedDB storage, no translation network calls.
@@ -578,13 +558,12 @@
     const root = document.getElementById('catalogContent');
     if (!root) return;
     addStyles();
-    installSelectionLookup();
-    hideSelectionLookup();
+    installDictionaryTapLookup();
     document.title = '字典翻譯｜英文科';
     const back = document.createElement('button');
     back.className = 'catalog-back';
     back.textContent = '← 返回英文科';
-    back.addEventListener('click', () => { hideSelectionLookup(); if (backAction) backAction(); });
+    back.addEventListener('click', () => { if (backAction) backAction(); });
     const breadcrumb = document.createElement('div');
     breadcrumb.className = 'catalog-path';
     breadcrumb.textContent = '英文　›　字典翻譯';
