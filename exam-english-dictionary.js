@@ -52,7 +52,10 @@
       '.english-dict-pronunciations{padding:10px 0;border-top:1px solid #e2e8f0;margin-top:10px}',
       '.english-dict-pron-line{font-size:.9rem;color:#475569;margin-top:4px;overflow-wrap:anywhere}',
       '.english-dict-source-panel{margin-top:14px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}',
-      '.english-dict-source-heading{font-size:.96rem;font-weight:800;margin:0;padding:10px 12px;background:#f1f5f9;color:#334155}',
+      '.english-dict-source-heading{display:list-item;list-style-position:inside;font-size:.96rem;font-weight:800;margin:0;padding:11px 12px;background:#f1f5f9;color:#334155;cursor:pointer;user-select:none;touch-action:manipulation}',
+      '.english-dict-source-heading:hover{background:#e8eff8}',
+      '.english-dict-source-heading:focus-visible{outline:2px solid #2563eb;outline-offset:-2px}',
+      '.english-dict-source-panel[open]>.english-dict-source-heading{border-bottom:1px solid #e2e8f0}',
       '.english-dict-sense{padding:11px 12px;border-top:1px solid #edf2f7}',
       '.english-dict-sense-meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;font-size:.84rem}',
       '.english-dict-sense-number{font-weight:800;color:#2563eb}',
@@ -234,8 +237,11 @@
 
     function section(name, records, preferredOrder) {
       if (!records.length) return;
-      const panel = make('section', 'english-dict-source-panel');
-      const heading = make('h3', 'english-dict-source-heading', name + ' · ' + records.length + ' 筆詞義');
+      const panel = make('details', 'english-dict-source-panel');
+      // Open the main Wiktionary/Qwen source initially; keep others compact.
+      if (/Wiktionary\s*\/\s*Qwen/i.test(name)) panel.open = true;
+      const heading = make('summary', 'english-dict-source-heading', name + ' · ' + records.length + ' 筆詞義');
+      heading.setAttribute('aria-label', '展開或收合 ' + name + ' 的 ' + records.length + ' 筆詞義');
       panel.appendChild(heading);
       const ordered = preferredOrder ? [...records].sort((a,b) =>
         (a.p === 'noun' ? 0 : a.p === 'verb' ? 1 : 2) -
