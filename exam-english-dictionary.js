@@ -5,6 +5,9 @@
   const READY = BASE + 'gept-vocab-ready.js';
   let loading = null;
   let backAction = null;
+  // Navigation within dictionary lookups, independent of the English catalog back button.
+  const lookupHistory = [];
+  let lookupBackButton = null;
 
   function loadScript(path) {
     return new Promise((resolve, reject) => {
@@ -73,7 +76,9 @@
       '.english-dict-example-line{display:flex;align-items:flex-start;gap:7px}',
       '.english-dict-example-text{flex:1;min-width:0;white-space:pre-wrap;overflow-wrap:anywhere}',
       '.english-dict-speak-sentence{flex-shrink:0;font-size:.95rem;min-width:34px;min-height:30px;padding:3px 5px}',
-      '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}'
+      '.english-dict-speak{border:1px solid #bfdbfe;border-radius:9px;background:#eff6ff;cursor:pointer;font-size:1.2rem;min-height:36px;min-width:43px;padding:4px 9px}',
+      '.english-dict-previous{display:block;margin:8px 0 10px;padding:9px 13px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border:1px solid #93c5fd;border-radius:10px;background:#eff6ff;color:#1d4ed8;font-size:1rem;font-weight:700;cursor:pointer}',
+      '.english-dict-previous[hidden]{display:none!important}'
     ].join('\n');
     document.head.appendChild(style);
   }
@@ -133,6 +138,40 @@
   function showStatus(message) {
     const el = document.getElementById('englishDictStatus');
     if (el) el.textContent = message;
+  }
+  function updateLookupBackButton() {
+    if (!lookupBackButton) return;
+    const previous = lookupHistory[lookupHistory.length - 1];
+    lookupBackButton.hidden = !previous;
+    lookupBackButton.textContent = previous ? '← 上一個：' + previous.term : '← 上一個';
+    lookupBackButton.setAttribute('aria-label', previous ? '返回上一個查詢：' + previous.term : '返回上一個查詢');
+  }
+  function navigateDictionaryWord(word) {
+    const input = document.getElementById('englishDictInput');
+    if (!input) return;
+    const next = String(word || '').trim();
+    const current = input.value.trim();
+    if (!next || next.toLowerCase() === current.toLowerCase()) return;
+    if (current) lookupHistory.push({term:current, scrollY:window.scrollY});
+    input.value = next;
+    updateLookupBackButton();
+    console.info('[EnglishDictionary] navigate lookup', next, 'depth=' + lookupHistory.length);
+    renderCombined(next);
+    input.scrollIntoView({block:'start',behavior:'smooth'});
+  }
+  async function returnToPreviousLookup() {
+    const previous = lookupHistory.pop();
+    if (!previous) return;
+    const input = document.getElementById('englishDictInput');
+    if (!input) { lookupHistory.push(previous); return; }
+    input.value = previous.term;
+    updateLookupBackButton();
+    console.info('[EnglishDictionary] previous lookup', previous.term, 'depth=' + lookupHistory.length);
+    await renderCombined(previous.term);
+    // Restore the earlier reading position after the asynchronous SQLite lookup.
+    if (document.getElementById('englishDictInput') === input && input.value === previous.term) {
+      requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, previous.scrollY || 0)));
+    }
   }
   function render(query) {
     const container = document.getElementById('englishDictResults');
@@ -403,10 +442,7 @@
       if (!word) return;
       const input = document.getElementById('englishDictInput');
       if (!input || !document.getElementById('englishDictResults')) return;
-      input.value = word;
-      console.info('[EnglishDictionary] tap lookup', word);
-      renderCombined(word);
-      input.scrollIntoView({block:'start',behavior:'smooth'});
+      navigateDictionaryWord(word);
     }, {passive:true});
   }
 
@@ -496,9 +532,7 @@
       }
       if (native && native.ok && Array.isArray(native.suggestions) && native.suggestions.length) {
         displaySuggestions(native.suggestions, native.totalSuggestions, key, nextWord => {
-          const input = document.getElementById('englishDictInput');
-          if (input) input.value = nextWord;
-          renderCombined(nextWord);
+          navigateDictionaryWord(nextWord);
         });
         return;
       }
@@ -591,6 +625,8 @@
 
   async function open(options) {
     if (options && typeof options.onBack === 'function') backAction = options.onBack;
+    lookupHistory.length = 0;
+    lookupBackButton = null;
     const root = document.getElementById('catalogContent');
     if (!root) return;
     addStyles();
@@ -617,6 +653,12 @@
     input.spellcheck = false;
     input.placeholder = '輸入英文，例如 apple、ability、school';
     input.setAttribute('aria-label', '英文單字');
+    const previousButton = document.createElement('button');
+    previousButton.type = 'button';
+    previousButton.className = 'english-dict-previous';
+    previousButton.hidden = true;
+    previousButton.addEventListener('click', returnToPreviousLookup);
+    lookupBackButton = previousButton;
     const hint = document.createElement('p');
     hint.className = 'english-dict-help';
     hint.textContent = '支援完整單字與字首搜尋。第一版不提供整句翻譯或詞形還原。';
@@ -659,11 +701,16 @@
     if (hasNativeDictionary) {
       intro.textContent = '使用平板內建 ChrisTrans SQLite 大型英漢字典；查字不需要翻譯 API。';
       hint.textContent = '直接輸入英文單字查詢平板本機資料庫。';
-      root.replaceChildren(back, breadcrumb, heading, intro, input, hint, status, results);
+      root.replaceChildren(back, breadcrumb, heading, intro, input, previousButton, hint, status, results);
     } else {
-      root.replaceChildren(back, breadcrumb, heading, intro, input, hint, fileLabel, fileInput, importStatus, status, results);
+      root.replaceChildren(back, breadcrumb, heading, intro, input, previousButton, hint, fileLabel, fileInput, importStatus, status, results);
     }
-    input.addEventListener('input', () => renderCombined(input.value));
+    input.addEventListener('input', () => {
+      // Manual searches begin a new navigation chain.
+      lookupHistory.length = 0;
+      updateLookupBackButton();
+      renderCombined(input.value);
+    });
     try {
       await loadWords();
       if (document.getElementById('englishDictInput') === input) {
