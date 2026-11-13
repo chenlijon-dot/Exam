@@ -1,0 +1,930 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-1 植物的維管束｜中等",
+    "difficulty": "science-7-1-u04-s01-medium",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-01",
+    "unit": "4-1 植物的維管束",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "questionCount": 30,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "status": "ready",
+    "sourceMaterial": "七上生物_第四單元_4-1至4-2_植物的運輸構造與物質運輸.md；僅取 4-1，頁177、180～183；原始來源缺178～179",
+    "sourceNote": "依現有4-1辨識教材 p.177、180–183 核對題幹、選項、答案與詳解後啟用；原始來源缺178–179頁。AI協助校對，非人工逐題背書。",
+    "targetQuestionCount": 30,
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "answerAuthority": "使用者提供的4-1教材辨識文字 p.177、180–183（原書 p.178–179 未提供）"
+  },
+  "questions": [
+    {
+      "questionId": "261113224900020",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 1,
+      "q": "高等植物輸送水分與養分的組織集合稱為「＿＿」。",
+      "o": [
+        "維管束",
+        "表皮",
+        "保衛細胞",
+        "葉綠體"
+      ],
+      "a": 0,
+      "e": "木質部與韌皮部共同構成主要的維管束運輸系統。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-vascular-bundle"
+      ],
+      "sourcePage": 177,
+      "sourceNote": "物質運輸與無維管束植物",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900021",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 2,
+      "q": "蘚苔植物缺乏「＿＿」，故主要靠擴散等方式運輸物質。",
+      "o": [
+        "葉綠素",
+        "維管束",
+        "細胞質",
+        "細胞膜"
+      ],
+      "a": 1,
+      "e": "缺乏維管束是蘚苔植物在本節的代表特性。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-nonvascular"
+      ],
+      "sourcePage": 177,
+      "sourceNote": "物質運輸與無維管束植物",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900022",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 3,
+      "q": "植物維管束中的「＿＿」主要運送水分與礦物質。",
+      "o": [
+        "韌皮部",
+        "形成層",
+        "木質部",
+        "葉肉"
+      ],
+      "a": 2,
+      "e": "木質部是輸送水分、礦物質的組織。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-xylem-function"
+      ],
+      "sourcePage": 181,
+      "sourceNote": "木質部韌皮部與單／雙子葉特徵",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900023",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 4,
+      "q": "由葉製造並輸往根部等處的養分，主要經過「＿＿」運輸。",
+      "o": [
+        "角質層",
+        "表皮",
+        "木質部",
+        "韌皮部"
+      ],
+      "a": 3,
+      "e": "韌皮部將有機養分輸送至需要或儲存的器官。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-phloem-function"
+      ],
+      "sourcePage": 181,
+      "sourceNote": "木質部韌皮部與單／雙子葉特徵",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900024",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 5,
+      "q": "向日葵莖的維管束，橫切面常呈「＿＿」排列。",
+      "o": [
+        "環狀",
+        "沒有規律且全在表皮",
+        "散生",
+        "放射狀單束"
+      ],
+      "a": 0,
+      "e": "教材以向日葵為環狀維管束的例子。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-arrangement-dicot"
+      ],
+      "sourcePage": 180,
+      "sourceNote": "莖與葉維管束的相對位置、排列",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900025",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 6,
+      "q": "玉米莖的維管束，橫切面常呈「＿＿」排列。",
+      "o": [
+        "僅中央一束",
+        "散生",
+        "完全沒有",
+        "環狀"
+      ],
+      "a": 1,
+      "e": "教材以玉米為維管束散生的例子。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-arrangement-monocot"
+      ],
+      "sourcePage": 180,
+      "sourceNote": "莖與葉維管束的相對位置、排列",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900026",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 7,
+      "q": "典型雙子葉植物的葉脈為「＿＿」脈。",
+      "o": [
+        "無脈",
+        "同心圓",
+        "網狀",
+        "平行"
+      ],
+      "a": 2,
+      "e": "雙子葉植物的葉脈通常形成網狀分布。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-leaf-vein"
+      ],
+      "sourcePage": 181,
+      "sourceNote": "木質部韌皮部與單／雙子葉特徵",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900027",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 8,
+      "q": "典型單子葉植物的葉脈為「＿＿」脈。",
+      "o": [
+        "放射狀輪紋",
+        "無脈",
+        "網狀",
+        "平行"
+      ],
+      "a": 3,
+      "e": "單子葉植物常以平行脈作為辨識線索。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-leaf-vein"
+      ],
+      "sourcePage": 181,
+      "sourceNote": "木質部韌皮部與單／雙子葉特徵",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900028",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 9,
+      "q": "有形成層的莖，木質部在韌皮部的「＿＿」。",
+      "o": [
+        "內側",
+        "外側",
+        "正上方",
+        "完全分離"
+      ],
+      "a": 0,
+      "e": "莖的木質部靠近中心；韌皮部位於外側。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-stem-position"
+      ],
+      "sourcePage": 180,
+      "sourceNote": "莖與葉維管束的相對位置、排列",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900029",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 10,
+      "q": "有形成層的莖，韌皮部在木質部的「＿＿」。",
+      "o": [
+        "內側",
+        "外側",
+        "中心髓部",
+        "正下方"
+      ],
+      "a": 1,
+      "e": "在莖中韌皮部相對靠外，木質部相對靠內。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-stem-position"
+      ],
+      "sourcePage": 180,
+      "sourceNote": "莖與葉維管束的相對位置、排列",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900030",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 11,
+      "q": "葉脈橫切面中，木質部較接近「＿＿」。",
+      "o": [
+        "外界空氣",
+        "葉緣",
+        "上表皮",
+        "下表皮"
+      ],
+      "a": 2,
+      "e": "葉片維管束的木質部通常朝上表皮。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-leaf-position"
+      ],
+      "sourcePage": 180,
+      "sourceNote": "莖與葉維管束的相對位置、排列",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900031",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 12,
+      "q": "葉脈橫切面中，韌皮部較接近「＿＿」。",
+      "o": [
+        "上表皮",
+        "葉尖",
+        "角質層外側",
+        "下表皮"
+      ],
+      "a": 3,
+      "e": "葉片維管束的韌皮部通常朝下表皮。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-leaf-position"
+      ],
+      "sourcePage": 180,
+      "sourceNote": "莖與葉維管束的相對位置、排列",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900032",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 13,
+      "q": "位於木質部與韌皮部之間、與莖加粗相關的組織是「＿＿」。",
+      "o": [
+        "形成層",
+        "葉肉",
+        "表皮",
+        "根毛"
+      ],
+      "a": 0,
+      "e": "形成層在內外兩種運輸組織之間，能參與莖的加粗。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-cambium-location"
+      ],
+      "sourcePage": 180,
+      "sourceNote": "莖與葉維管束的相對位置、排列",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900033",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 14,
+      "q": "木本植物形成層向內累積的木質部，主要形成「＿＿」。",
+      "o": [
+        "葉肉",
+        "木材",
+        "樹皮",
+        "氣孔"
+      ],
+      "a": 1,
+      "e": "多年向內累積的木質部形成樹幹的木材。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-wood"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900034",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 15,
+      "q": "樹皮包括形成層外的「＿＿」及其他外側部分。",
+      "o": [
+        "髓",
+        "新生木質部",
+        "韌皮部",
+        "中心老木質部"
+      ],
+      "a": 2,
+      "e": "樹皮位於形成層外側，包含韌皮部。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-bark"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900035",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 16,
+      "q": "木本植物主要輸水的部位，是靠近形成層的「＿＿」。",
+      "o": [
+        "韌皮部",
+        "外層樹皮",
+        "老化木質部中央",
+        "新生木質部"
+      ],
+      "a": 3,
+      "e": "靠近形成層的新木質部仍保有主要輸水能力。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-sapwood"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900036",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 17,
+      "q": "樹幹中心很早形成且多已失去輸水功能的是「＿＿」。",
+      "o": [
+        "老木質部",
+        "表皮",
+        "新生韌皮部",
+        "保衛細胞"
+      ],
+      "a": 0,
+      "e": "靠近中心的老木質部多已不再負責水分輸送。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-old-wood"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900037",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 18,
+      "q": "木材橫切面由深淺交替組成的環紋稱為「＿＿」。",
+      "o": [
+        "葉脈",
+        "年輪",
+        "根毛",
+        "氣孔"
+      ],
+      "a": 1,
+      "e": "形成層活動受季節影響，木材可呈現年輪。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-annual-ring"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900038",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 19,
+      "q": "春夏常有較多水分與較適宜生長環境，木質部細胞通常「＿＿」。",
+      "o": [
+        "較小",
+        "全部死亡",
+        "較大",
+        "完全停止分裂"
+      ],
+      "a": 2,
+      "e": "生長較快時，形成的細胞通常較大。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-seasonal-growth"
+      ],
+      "sourcePage": 183,
+      "sourceNote": "年輪季節差異與氣候",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900039",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 20,
+      "q": "秋冬的木質部細胞因生長較慢，體積通常「＿＿」。",
+      "o": [
+        "較大",
+        "必定等於春夏",
+        "不含細胞壁",
+        "較小"
+      ],
+      "a": 3,
+      "e": "生長減緩時，形成的細胞通常較小。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-seasonal-growth"
+      ],
+      "sourcePage": 183,
+      "sourceNote": "年輪季節差異與氣候",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900040",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 21,
+      "q": "年輪中常見較淺色的部分，主要對應「＿＿」的生長。",
+      "o": [
+        "春夏",
+        "無光的任何一天",
+        "完全停止生長期",
+        "秋冬"
+      ],
+      "a": 0,
+      "e": "春夏較大的木質部細胞使木材外觀通常較淺。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-seasonal-growth"
+      ],
+      "sourcePage": 183,
+      "sourceNote": "年輪季節差異與氣候",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900041",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 22,
+      "q": "年輪中常見較深色的部分，主要對應「＿＿」的生長。",
+      "o": [
+        "春夏",
+        "秋冬",
+        "開花後第一天",
+        "種子萌發當天"
+      ],
+      "a": 1,
+      "e": "秋冬較小、排列較緻密的細胞使木材較深。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-seasonal-growth"
+      ],
+      "sourcePage": 183,
+      "sourceNote": "年輪季節差異與氣候",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900042",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 23,
+      "q": "氣候季節差異較大的「＿＿」地區，樹木年輪通常較明顯。",
+      "o": [
+        "全年無季節變化的密閉環境",
+        "熱帶雨林",
+        "溫帶",
+        "全年恒溫的室內"
+      ],
+      "a": 2,
+      "e": "溫帶的四季差異較明顯，年輪通常較易觀察。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-annual-ring-climate"
+      ],
+      "sourcePage": 183,
+      "sourceNote": "年輪季節差異與氣候",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900043",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 24,
+      "q": "熱帶雨林因季節差異通常不如溫帶明顯，年輪相對「＿＿」。",
+      "o": [
+        "每月一定形成一輪",
+        "全由韌皮部構成",
+        "一定完全不存在",
+        "不明顯"
+      ],
+      "a": 3,
+      "e": "年輪明顯程度與生長季節性有關，不代表絕對沒有年輪。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-annual-ring-climate"
+      ],
+      "sourcePage": 183,
+      "sourceNote": "年輪季節差異與氣候",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900044",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 25,
+      "q": "樹幹遭環狀剝除樹皮時，最可能先直接受損的養分運輸組織是「＿＿」。",
+      "o": [
+        "韌皮部",
+        "根毛",
+        "葉肉",
+        "中心老木質部"
+      ],
+      "a": 0,
+      "e": "樹皮包含韌皮部，環狀剝除可能切斷養分下送通道。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-girdling"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900045",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 26,
+      "q": "樹皮連續一圈遭啃食，葉製造的養分最難運送到「＿＿」。",
+      "o": [
+        "葉的葉肉",
+        "根部",
+        "花粉外壁",
+        "葉尖"
+      ],
+      "a": 1,
+      "e": "環狀破壞韌皮部，會妨礙葉製造的養分到達根。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-girdling"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900046",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 27,
+      "q": "樹根長期缺少由葉送來的養分，可能導致根部「＿＿」。",
+      "o": [
+        "形成氣孔",
+        "變成葉片",
+        "死亡",
+        "葉綠素增加"
+      ],
+      "a": 2,
+      "e": "根部缺少有機養分後可逐漸衰弱甚至死亡。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-girdling"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900047",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 28,
+      "q": "根部因缺乏養分受損後，整株植物吸水能力通常會「＿＿」。",
+      "o": [
+        "永久增加",
+        "完全不受影響",
+        "立刻變成養分運輸",
+        "降低"
+      ],
+      "a": 3,
+      "e": "根受損後吸收水分的能力降低，葉片可能逐漸枯萎。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-girdling"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900048",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 29,
+      "q": "即使樹幹中央的部分木材腐朽，樹仍可能活著，主因外圍的「＿＿」仍可輸水。",
+      "o": [
+        "新生木質部",
+        "老化髓部",
+        "全部枯死的樹皮",
+        "中央空洞"
+      ],
+      "a": 0,
+      "e": "許多樹木主要靠近形成層的新木質部輸水。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-sapwood"
+      ],
+      "sourcePage": 182,
+      "sourceNote": "樹皮、形成層、木材、環狀剝皮、年輪",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    },
+    {
+      "questionId": "261113224900049",
+      "revision": 1,
+      "lifecycle": "active",
+      "number": 30,
+      "q": "雙子葉植物莖通常具有「＿＿」，可與其逐年增粗現象關聯。",
+      "o": [
+        "根毛",
+        "形成層",
+        "氣孔",
+        "花粉管"
+      ],
+      "a": 1,
+      "e": "教材以具形成層的雙子葉莖說明木本植物的加粗與木材累積。",
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "conceptIds": [
+        "science-7-1-u04-s01-cambium-growth"
+      ],
+      "sourcePage": 181,
+      "sourceNote": "木質部韌皮部與單／雙子葉特徵",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "reviewStatus": "assistant-reviewed"
+    }
+  ]
+}
