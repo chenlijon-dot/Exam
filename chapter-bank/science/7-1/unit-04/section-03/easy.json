@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-3 人體心血管系統的組成｜簡易",
+    "difficulty": "science-7-1-u04-s03-easy",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-03",
+    "unit": "4-3 人體心血管系統的組成",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "questionCount": 20,
+    "answerableQuestionCount": 20,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "4-3 教材 p.202–213；AI 自編與內容校核，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "自編練習，不是正式校內試題；尚未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261114004300001",
+      "revision": 1,
+      "number": 1,
+      "q": "人體的心血管系統主要由哪三者組成？",
+      "o": [
+        "心臟、血管與血液",
+        "胃、腸道與血液",
+        "淋巴結、神經與骨骼",
+        "心臟、氣管與肺泡"
+      ],
+      "a": 0,
+      "e": "心血管系統由心臟、血管與血液構成。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300002",
+      "revision": 1,
+      "number": 2,
+      "q": "心臟主要由哪一種肌肉構成？",
+      "o": [
+        "肌腱",
+        "心肌",
+        "骨骼肌",
+        "平滑肌"
+      ],
+      "a": 1,
+      "e": "心臟主要由具有橫紋的心肌組成。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300003",
+      "revision": 1,
+      "number": 3,
+      "q": "正常人體心臟共有幾個腔室？",
+      "o": [
+        "兩個",
+        "五個",
+        "四個",
+        "三個"
+      ],
+      "a": 2,
+      "e": "左右各有心房與心室，共四個腔室。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300004",
+      "revision": 1,
+      "number": 4,
+      "q": "心臟的心房位於心室的哪個方向？",
+      "o": [
+        "正外側",
+        "正後方",
+        "下方",
+        "上方"
+      ],
+      "a": 3,
+      "e": "正常心臟的心房位於心室上方。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300005",
+      "revision": 1,
+      "number": 5,
+      "q": "心臟瓣膜的主要作用是什麼？",
+      "o": [
+        "防止血液倒流",
+        "製造紅血球",
+        "吸收氧氣",
+        "分解血糖"
+      ],
+      "a": 0,
+      "e": "瓣膜使血液維持單向流動。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300006",
+      "revision": 1,
+      "number": 6,
+      "q": "左心室直接將血液送入哪一條血管？",
+      "o": [
+        "下大靜脈",
+        "主動脈",
+        "上大靜脈",
+        "肺靜脈"
+      ],
+      "a": 1,
+      "e": "左心室經主動脈將血液送往全身。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300007",
+      "revision": 1,
+      "number": 7,
+      "q": "右心室直接連接哪一條血管？",
+      "o": [
+        "主動脈",
+        "肺靜脈",
+        "肺動脈",
+        "下大靜脈"
+      ],
+      "a": 2,
+      "e": "右心室把血液送入肺動脈。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300008",
+      "revision": 1,
+      "number": 8,
+      "q": "肺靜脈的血液最先流入哪個心臟腔室？",
+      "o": [
+        "右心室",
+        "右心房",
+        "左心室",
+        "左心房"
+      ],
+      "a": 3,
+      "e": "肺靜脈回流的血液進入左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300009",
+      "revision": 1,
+      "number": 9,
+      "q": "把血液從心臟帶離的血管稱為什麼？",
+      "o": [
+        "動脈",
+        "靜脈",
+        "淋巴管",
+        "微血管"
+      ],
+      "a": 0,
+      "e": "動脈依血液離開心臟的方向定義。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300010",
+      "revision": 1,
+      "number": 10,
+      "q": "把血液帶回心臟的血管稱為什麼？",
+      "o": [
+        "膽管",
+        "靜脈",
+        "動脈",
+        "微血管"
+      ],
+      "a": 1,
+      "e": "靜脈負責將血液回送心臟。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300011",
+      "revision": 1,
+      "number": 11,
+      "q": "哪一類血管主要負責與組織交換物質？",
+      "o": [
+        "主動脈",
+        "肺動脈",
+        "微血管",
+        "上大靜脈"
+      ],
+      "a": 2,
+      "e": "微血管壁薄且分布廣，適合物質交換。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300012",
+      "revision": 1,
+      "number": 12,
+      "q": "微血管管壁通常由幾層細胞構成？",
+      "o": [
+        "三層",
+        "五層",
+        "十層",
+        "一層"
+      ],
+      "a": 3,
+      "e": "微血管管壁主要為單層內皮細胞。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300013",
+      "revision": 1,
+      "number": 13,
+      "q": "血液主要分成血漿和哪一部分？",
+      "o": [
+        "血球等有形成分",
+        "淋巴結",
+        "神經纖維",
+        "胃液"
+      ],
+      "a": 0,
+      "e": "教材將血液分成血漿與血球兩部分。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300014",
+      "revision": 1,
+      "number": 14,
+      "q": "血漿最主要的成分是什麼？",
+      "o": [
+        "骨質",
+        "水",
+        "脂肪",
+        "血紅素"
+      ],
+      "a": 1,
+      "e": "血漿約九成為水。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300015",
+      "revision": 1,
+      "number": 15,
+      "q": "哪一種血球主要負責運送氧氣？",
+      "o": [
+        "淋巴結",
+        "白血球",
+        "紅血球",
+        "血小板"
+      ],
+      "a": 2,
+      "e": "紅血球的血紅素有助於氧氣運送。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300016",
+      "revision": 1,
+      "number": 16,
+      "q": "哪一種血球主要參與防禦病原體？",
+      "o": [
+        "血小板",
+        "神經細胞",
+        "紅血球",
+        "白血球"
+      ],
+      "a": 3,
+      "e": "白血球參與吞噬作用與免疫防禦。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300017",
+      "revision": 1,
+      "number": 17,
+      "q": "血小板主要參與下列何種作用？",
+      "o": [
+        "凝血止血",
+        "吸收食物",
+        "製造氧氣",
+        "控制骨骼運動"
+      ],
+      "a": 0,
+      "e": "血小板參與形成血栓與止血過程。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300018",
+      "revision": 1,
+      "number": 18,
+      "q": "一般可在手腕感受到的脈搏，主要來自什麼？",
+      "o": [
+        "骨骼肌週期性顫動",
+        "動脈管壁隨心搏擴張與回彈",
+        "靜脈瓣膜開合",
+        "肺泡擴張"
+      ],
+      "a": 1,
+      "e": "脈搏是動脈管壁隨心臟搏動產生的壓力波。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300019",
+      "revision": 1,
+      "number": 19,
+      "q": "蝗蟲屬於哪一種循環系統？",
+      "o": [
+        "完全沒有體液循環",
+        "哺乳類雙循環",
+        "開放式循環",
+        "閉鎖式循環"
+      ],
+      "a": 2,
+      "e": "昆蟲具有開放式循環。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300020",
+      "revision": 1,
+      "number": 20,
+      "q": "人類具有哪一種循環系統？",
+      "o": [
+        "開放式循環",
+        "只靠擴散而無循環",
+        "沒有微血管的循環",
+        "閉鎖式循環"
+      ],
+      "a": 3,
+      "e": "人體血液維持在心臟與血管內流動，屬閉鎖式循環。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    }
+  ]
+}
