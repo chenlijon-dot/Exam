@@ -1,0 +1,628 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-3 人體心血管系統的組成｜中等",
+    "difficulty": "science-7-1-u04-s03-medium",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-03",
+    "unit": "4-3 人體心血管系統的組成",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "questionCount": 30,
+    "answerableQuestionCount": 30,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "4-3 教材 p.202–213；AI 自編與內容校核，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "自編練習，不是正式校內試題；尚未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261114004300021",
+      "revision": 1,
+      "number": 1,
+      "q": "左心房所連接的回心血管是＿＿。",
+      "o": [
+        "主動脈",
+        "肺靜脈",
+        "上大靜脈",
+        "肺動脈"
+      ],
+      "a": 1,
+      "e": "肺靜脈把肺部回流的血液送入左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300022",
+      "revision": 1,
+      "number": 2,
+      "q": "右心房主要接受＿＿回流的血液。",
+      "o": [
+        "主動脈",
+        "肺動脈",
+        "上、下大靜脈",
+        "肺靜脈"
+      ],
+      "a": 2,
+      "e": "上、下大靜脈將體循環血液送回右心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300023",
+      "revision": 1,
+      "number": 3,
+      "q": "從左心室射出的血液首先進入＿＿。",
+      "o": [
+        "肺靜脈",
+        "上大靜脈",
+        "肺動脈",
+        "主動脈"
+      ],
+      "a": 3,
+      "e": "左心室連接主動脈。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300024",
+      "revision": 1,
+      "number": 4,
+      "q": "從右心室射出的血液首先進入＿＿。",
+      "o": [
+        "肺動脈",
+        "下大靜脈",
+        "肺靜脈",
+        "主動脈"
+      ],
+      "a": 0,
+      "e": "右心室連接肺動脈。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300025",
+      "revision": 1,
+      "number": 5,
+      "q": "位於心房與心室之間的是＿＿。",
+      "o": [
+        "靜脈竇",
+        "房室瓣",
+        "半月瓣",
+        "微血管瓣"
+      ],
+      "a": 1,
+      "e": "房室瓣防止心室收縮時血液倒流回心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300026",
+      "revision": 1,
+      "number": 6,
+      "q": "位於心室與大動脈之間的是＿＿。",
+      "o": [
+        "淋巴瓣",
+        "靜脈瓣",
+        "半月瓣",
+        "房室瓣"
+      ],
+      "a": 2,
+      "e": "主動脈瓣與肺動脈瓣屬半月瓣。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300027",
+      "revision": 1,
+      "number": 7,
+      "q": "第一心音主要與＿＿關閉有關。",
+      "o": [
+        "肺靜脈",
+        "半月瓣",
+        "微血管",
+        "房室瓣"
+      ],
+      "a": 3,
+      "e": "第一心音主要由房室瓣關閉產生。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300028",
+      "revision": 1,
+      "number": 8,
+      "q": "第二心音主要與＿＿關閉有關。",
+      "o": [
+        "半月瓣",
+        "靜脈瓣",
+        "房室瓣",
+        "淋巴結"
+      ],
+      "a": 0,
+      "e": "第二心音主要由主動脈瓣與肺動脈瓣關閉產生。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300029",
+      "revision": 1,
+      "number": 9,
+      "q": "一般而言，三類血管中管壁最厚、彈性較大的是＿＿。",
+      "o": [
+        "微血管",
+        "動脈",
+        "淋巴管",
+        "靜脈"
+      ],
+      "a": 1,
+      "e": "動脈承受較高的血壓，管壁較厚且彈性較大。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300030",
+      "revision": 1,
+      "number": 10,
+      "q": "一般而言，管壁較薄且常具有瓣膜的是＿＿。",
+      "o": [
+        "動脈",
+        "肺泡",
+        "靜脈",
+        "微血管"
+      ],
+      "a": 2,
+      "e": "部分靜脈的瓣膜可幫助防止血液逆流。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300031",
+      "revision": 1,
+      "number": 11,
+      "q": "血液與組織間進行氧氣、養分交換，最主要發生在＿＿。",
+      "o": [
+        "心室",
+        "主動脈",
+        "上下大靜脈",
+        "微血管"
+      ],
+      "a": 3,
+      "e": "微血管的薄壁有利於物質交換。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300032",
+      "revision": 1,
+      "number": 12,
+      "q": "肺動脈內主要流動的是＿＿。",
+      "o": [
+        "缺氧血",
+        "充氧血",
+        "純血漿",
+        "沒有血球的淋巴"
+      ],
+      "a": 0,
+      "e": "肺動脈雖是動脈，仍運送缺氧血到肺。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300033",
+      "revision": 1,
+      "number": 13,
+      "q": "肺靜脈內主要流動的是＿＿。",
+      "o": [
+        "只有白血球的液體",
+        "充氧血",
+        "沒有紅血球的血液",
+        "缺氧血"
+      ],
+      "a": 1,
+      "e": "肺靜脈雖是靜脈，卻運送充氧血回左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300034",
+      "revision": 1,
+      "number": 14,
+      "q": "微血管的管壁通常由＿＿構成。",
+      "o": [
+        "成排骨細胞",
+        "厚厚的軟骨",
+        "單層內皮細胞",
+        "多層骨骼肌"
+      ],
+      "a": 2,
+      "e": "單層細胞有助於物質穿過微血管壁。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300035",
+      "revision": 1,
+      "number": 15,
+      "q": "血漿中的水約占＿＿。",
+      "o": [
+        "10%",
+        "50%",
+        "30%",
+        "90%"
+      ],
+      "a": 3,
+      "e": "參考教材指出血漿約90%是水。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300036",
+      "revision": 1,
+      "number": 16,
+      "q": "成熟的人類紅血球通常＿＿。",
+      "o": [
+        "沒有細胞核",
+        "能自行分裂繁殖",
+        "有兩個細胞核",
+        "有葉綠體"
+      ],
+      "a": 0,
+      "e": "成熟人類紅血球沒有細胞核。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300037",
+      "revision": 1,
+      "number": 17,
+      "q": "成熟紅血球主要呈＿＿形。",
+      "o": [
+        "長方柱",
+        "雙凹圓盤",
+        "立方體",
+        "帶鞭毛的球形"
+      ],
+      "a": 1,
+      "e": "雙凹圓盤有利於氣體交換與血管內通行。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300038",
+      "revision": 1,
+      "number": 18,
+      "q": "有些白血球可以穿過微血管壁，主要參與＿＿。",
+      "o": [
+        "製造膽汁",
+        "產生脈搏",
+        "防禦病原體",
+        "形成骨骼"
+      ],
+      "a": 2,
+      "e": "白血球可離開血管，到組織內參與防禦。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300039",
+      "revision": 1,
+      "number": 19,
+      "q": "血小板的體積與紅、白血球相比，通常＿＿。",
+      "o": [
+        "與白血球相同",
+        "比所有紅血球大",
+        "最大",
+        "最小"
+      ],
+      "a": 3,
+      "e": "血小板為小型細胞碎片，體積通常最小。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300040",
+      "revision": 1,
+      "number": 20,
+      "q": "血液受傷後凝固過程中的重要有形成分是＿＿。",
+      "o": [
+        "血小板",
+        "紅血球",
+        "心肌細胞",
+        "神經元"
+      ],
+      "a": 0,
+      "e": "血小板是止血的重要參與者。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300041",
+      "revision": 1,
+      "number": 21,
+      "q": "心室收縮時，量到的動脈血壓高值稱為＿＿。",
+      "o": [
+        "眼壓",
+        "收縮壓",
+        "舒張壓",
+        "滲透壓"
+      ],
+      "a": 1,
+      "e": "血壓通常以收縮壓及舒張壓表示。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300042",
+      "revision": 1,
+      "number": 22,
+      "q": "心室舒張時，量到的動脈血壓低值稱為＿＿。",
+      "o": [
+        "收縮壓",
+        "心音頻率",
+        "舒張壓",
+        "脈搏次數"
+      ],
+      "a": 2,
+      "e": "舒張壓為心室舒張期的動脈壓代表值。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300043",
+      "revision": 1,
+      "number": 23,
+      "q": "在手腕靠近大拇指一側，通常可觸摸到＿＿的脈搏。",
+      "o": [
+        "橈靜脈",
+        "肺靜脈",
+        "冠狀靜脈",
+        "橈動脈"
+      ],
+      "a": 3,
+      "e": "手腕大拇指側常可觸診橈動脈脈搏。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300044",
+      "revision": 1,
+      "number": 24,
+      "q": "供應心肌本身氧氣及養分的血管主要是＿＿。",
+      "o": [
+        "冠狀動脈",
+        "上大靜脈",
+        "淋巴管",
+        "肺靜脈"
+      ],
+      "a": 0,
+      "e": "心肌需要冠狀動脈供應血液。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300045",
+      "revision": 1,
+      "number": 25,
+      "q": "觀察魚尾鰭時，最細且流速較慢的血管通常是＿＿。",
+      "o": [
+        "主動脈",
+        "微血管",
+        "淋巴結",
+        "大靜脈"
+      ],
+      "a": 1,
+      "e": "魚尾鰭顯微觀察可以辨識微血管。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300046",
+      "revision": 1,
+      "number": 26,
+      "q": "魚尾鰭的血流依序由小動脈流入＿＿，再流至小靜脈。",
+      "o": [
+        "心房",
+        "大動脈",
+        "微血管",
+        "肺靜脈"
+      ],
+      "a": 2,
+      "e": "微血管位於小動脈與小靜脈之間。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300047",
+      "revision": 1,
+      "number": 27,
+      "q": "魚類心臟的腔室組成為＿＿。",
+      "o": [
+        "一心房、二心室",
+        "二心房、二心室",
+        "二心房、一心室",
+        "一心房、一心室"
+      ],
+      "a": 3,
+      "e": "魚類心臟通常具有一心房、一心室。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300048",
+      "revision": 1,
+      "number": 28,
+      "q": "鳥類與哺乳類的心臟均具有＿＿。",
+      "o": [
+        "二心房、二心室",
+        "一心房、一心室",
+        "二心房、一心室",
+        "三心房、一心室"
+      ],
+      "a": 0,
+      "e": "鳥類及哺乳類的心臟為四腔室。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300049",
+      "revision": 1,
+      "number": 29,
+      "q": "昆蟲與蝦子等節肢動物一般具有＿＿。",
+      "o": [
+        "閉鎖式循環",
+        "開放式循環",
+        "人類式雙循環",
+        "沒有循環液"
+      ],
+      "a": 1,
+      "e": "節肢動物多具開放式循環。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300050",
+      "revision": 1,
+      "number": 30,
+      "q": "蚯蚓與人類的血液循環均屬於＿＿。",
+      "o": [
+        "開放式循環",
+        "無心臟式擴散",
+        "閉鎖式循環",
+        "無血管循環"
+      ],
+      "a": 2,
+      "e": "血液限制在血管網路內循環稱為閉鎖式循環。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    }
+  ]
+}
