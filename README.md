@@ -86,6 +86,13 @@ Private `chenlijon-dot/Exam-Record` 仍保留既有 GitHub 同步、machine-read
 ├─ 數學
 ├─ 
 
+### 自然七上 Unit 4／4-3 正式題庫（2026-11-14）
+
+- 4-3〈人體心血管系統的組成〉自編題庫已接入 `chapter-bank/science/7-1/unit-04/section-03/`：`easy.json` 20 題、`medium.json` 30 題（挖空四選一）、`hard.json` 50 題，共 100 題。
+- 每題具有永久 `questionId`、`revision: 1`、四個選項、答案、詳解、`conceptIds`，並標示 `sourceType: practice-generated`；來源為第 202～213 頁教材整理，非學校原卷或官方答案。
+- 正式載入器 `exam-science-unit4-3.js` 沿用 4-1／4-2 的 `activeQuestions` 過濾、百分比計分、共同 `startExam` 引擎與學習歷程；`exam-navigation-fix.js` 已載入模組，`exam-catalog.js` 已開啟 4-3 節點。
+- 已進行遠端逐檔回讀、100 題 ID 唯一性與欄位完整性檢查；**瀏覽器端實際交卷、Firebase 讀寫與 Pages 部署尚待實測**。自編題仍建議教師獨立抽查內容。
+
 ### 自然七上 Unit 3 進度（2026-09-29）
 
 - 3-1〈食物和養分〉已建立新無敵自然自修題庫：整批 census 50 題，其中 30 題具有正式答案 authority 並已啟用作答，20 題等待後續正式解答頁，保留於 `pendingQuestions`。
