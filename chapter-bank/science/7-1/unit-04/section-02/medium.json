@@ -1,0 +1,898 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-2 蒸散作用與養分運輸｜中等",
+    "difficulty": "science-7-1-u04-s02-medium",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-02",
+    "unit": "4-2 蒸散作用與養分運輸",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "questionCount": 30,
+    "answerableQuestionCount": 30,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "使用者提供的 4-2 教材文字 p.184–190、201；AI 自編與校對，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "本批為 AI 協助自編練習，非官方試題；尚未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261113231000021",
+      "revision": 1,
+      "number": 1,
+      "q": "植物葉片內液態水變成氣態並散失的過程稱為「＿＿作用」。",
+      "o": [
+        "蒸散",
+        "發酵",
+        "分解",
+        "授粉"
+      ],
+      "a": 0,
+      "e": "蒸散作用使水分從植物體進入外界空氣，並能形成向上的水分拉力。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000022",
+      "revision": 1,
+      "number": 2,
+      "q": "葉片水蒸氣向外散失時，主要通過「＿＿」。",
+      "o": [
+        "根毛",
+        "氣孔",
+        "韌皮部",
+        "表皮細胞核"
+      ],
+      "a": 1,
+      "e": "葉的氣孔是水蒸氣離開植物體的重要通道。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000023",
+      "revision": 1,
+      "number": 3,
+      "q": "水分蒸散所形成的拉力，沿著維管束的「＿＿」傳遞。",
+      "o": [
+        "表皮",
+        "韌皮部",
+        "木質部",
+        "葉綠體"
+      ],
+      "a": 2,
+      "e": "從根到葉連續的木質部水柱，可把蒸散產生的拉力向下傳遞。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-xylem-water"
+      ]
+    },
+    {
+      "questionId": "261113231000024",
+      "revision": 1,
+      "number": 4,
+      "q": "水分子之間的相互吸引力，有助於木質部水柱維持「＿＿」。",
+      "o": [
+        "不含任何溶質",
+        "完全斷裂",
+        "永久凝固",
+        "連續性"
+      ],
+      "a": 3,
+      "e": "水分子的內聚力有助形成連續水柱，配合蒸散拉力帶動水上升。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-xylem-water"
+      ]
+    },
+    {
+      "questionId": "261113231000025",
+      "revision": 1,
+      "number": 5,
+      "q": "葉片蒸散的水分主要以「＿＿」狀態離開植物。",
+      "o": [
+        "氣態",
+        "金屬態",
+        "澱粉態",
+        "固態"
+      ],
+      "a": 0,
+      "e": "水分在葉內蒸發成水蒸氣後，才能經氣孔擴散出去。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000026",
+      "revision": 1,
+      "number": 6,
+      "q": "植物吸收的水分首先主要由「＿＿」進入植株，再沿維管束上升。",
+      "o": [
+        "花粉",
+        "根",
+        "花瓣",
+        "果實"
+      ],
+      "a": 1,
+      "e": "一般陸生植物主要由根部吸收土壤水分。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000027",
+      "revision": 1,
+      "number": 7,
+      "q": "氣孔開口大小主要由兩個「＿＿細胞」調節。",
+      "o": [
+        "木栓",
+        "根毛",
+        "保衛",
+        "紅血球"
+      ],
+      "a": 2,
+      "e": "成對保衛細胞控制氣孔開閉，以調節水分與氣體交換。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000028",
+      "revision": 1,
+      "number": 8,
+      "q": "保衛細胞吸水而膨壓增大時，氣孔一般會「＿＿」。",
+      "o": [
+        "長成葉脈",
+        "關閉",
+        "消失",
+        "張開"
+      ],
+      "a": 3,
+      "e": "保衛細胞膨脹後向兩旁撐開，使氣孔開放。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-guard-cell"
+      ]
+    },
+    {
+      "questionId": "261113231000029",
+      "revision": 1,
+      "number": 9,
+      "q": "保衛細胞失水、膨壓降低時，氣孔一般會「＿＿」。",
+      "o": [
+        "關閉",
+        "完全擴大",
+        "直接轉成澱粉",
+        "分裂成木質部"
+      ],
+      "a": 0,
+      "e": "保衛細胞失水後體積與膨壓減少，使氣孔關閉或縮小。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-guard-cell"
+      ]
+    },
+    {
+      "questionId": "261113231000030",
+      "revision": 1,
+      "number": 10,
+      "q": "即使是白天，植物明顯缺水時仍可能讓氣孔「＿＿」，以減少失水。",
+      "o": [
+        "持續最大開放",
+        "關閉",
+        "變成根毛",
+        "永遠消失"
+      ],
+      "a": 1,
+      "e": "缺水時氣孔可關閉以保留水分，這是植物的調節反應。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000031",
+      "revision": 1,
+      "number": 11,
+      "q": "氣孔除了水蒸氣外，也是「＿＿」與氧氣進出的通道。",
+      "o": [
+        "澱粉粒",
+        "食鹽晶體",
+        "二氧化碳",
+        "木材"
+      ],
+      "a": 2,
+      "e": "植物與外界交換二氧化碳及氧氣時，常經過葉片氣孔。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000032",
+      "revision": 1,
+      "number": 12,
+      "q": "蒸散作用帶走植物體表的「＿＿」，因此具有調節體溫功能。",
+      "o": [
+        "染色體",
+        "木材",
+        "養分分子",
+        "熱能"
+      ],
+      "a": 3,
+      "e": "水分蒸散需要能量，能讓植物周圍或葉面帶走部分熱量。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000033",
+      "revision": 1,
+      "number": 13,
+      "q": "一般陸生植物氣孔常較多分布在葉片「＿＿」。",
+      "o": [
+        "下表皮",
+        "根冠",
+        "木質部中心",
+        "髓部"
+      ],
+      "a": 0,
+      "e": "許多陸生植物的氣孔分布以下表皮較常見。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000034",
+      "revision": 1,
+      "number": 14,
+      "q": "像睡蓮這類漂浮水面的葉片，氣孔多位於「＿＿」。",
+      "o": [
+        "貼水的下表皮",
+        "上表皮",
+        "花粉管",
+        "水中的根尖"
+      ],
+      "a": 1,
+      "e": "浮水葉要與空氣接觸，氣孔主要分布在上表面。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata-location"
+      ]
+    },
+    {
+      "questionId": "261113231000035",
+      "revision": 1,
+      "number": 15,
+      "q": "水稻與小麥的葉片，氣孔可存在於「＿＿」。",
+      "o": [
+        "只有木質部",
+        "只有根毛",
+        "上下表皮",
+        "只有葉片中肋"
+      ],
+      "a": 2,
+      "e": "教材以水稻、小麥說明禾本科植物上下表皮都可有氣孔。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata-location"
+      ]
+    },
+    {
+      "questionId": "261113231000036",
+      "revision": 1,
+      "number": 16,
+      "q": "移植花木時剪去部分葉片，是為了降低「＿＿作用」。",
+      "o": [
+        "受精",
+        "種子散布",
+        "授粉",
+        "蒸散"
+      ],
+      "a": 3,
+      "e": "根暫時吸水不足時，減少葉面積可降低蒸散失水。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-plant-care"
+      ]
+    },
+    {
+      "questionId": "261113231000037",
+      "revision": 1,
+      "number": 17,
+      "q": "切花梗若讓空氣進入輸水細管，可能造成水柱「＿＿」而妨礙輸水。",
+      "o": [
+        "不連續",
+        "變成韌皮部",
+        "自動補滿養分",
+        "形成更多葉綠素"
+      ],
+      "a": 0,
+      "e": "木質部水柱若被空氣阻隔，蒸散拉力就難以有效傳遞。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-plant-care"
+      ]
+    },
+    {
+      "questionId": "261113231000038",
+      "revision": 1,
+      "number": 18,
+      "q": "重新處理缺水切花時，課本建議將花梗放在「＿＿」中再剪切。",
+      "o": [
+        "沙土",
+        "水",
+        "乾燥空氣",
+        "油脂"
+      ],
+      "a": 1,
+      "e": "在水中剪切可降低空氣重新進入木質部的風險。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-plant-care"
+      ]
+    },
+    {
+      "questionId": "261113231000039",
+      "revision": 1,
+      "number": 19,
+      "q": "芹菜有色溶液實驗中，保留葉片的量筒標為「＿＿」。",
+      "o": [
+        "丁",
+        "丙",
+        "甲",
+        "乙"
+      ],
+      "a": 2,
+      "e": "教材的甲組保留葉片，乙組將葉片全部去除。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000040",
+      "revision": 1,
+      "number": 20,
+      "q": "芹菜有色溶液實驗中，將全部葉片切除的是「＿＿」組。",
+      "o": [
+        "兩組都去葉",
+        "兩組都保留葉",
+        "甲",
+        "乙"
+      ],
+      "a": 3,
+      "e": "乙組去除葉片，用以比較葉片有無對水分散失的影響。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000041",
+      "revision": 1,
+      "number": 21,
+      "q": "芹菜實驗正式開始計時前，兩量筒液面都調整到「＿＿ mL」。",
+      "o": [
+        "10",
+        "25",
+        "5",
+        "1"
+      ],
+      "a": 0,
+      "e": "課本步驟先加液體，最後補足至10 mL再開始計時。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000042",
+      "revision": 1,
+      "number": 22,
+      "q": "教材芹菜實驗每隔「＿＿分鐘」記錄一次量筒液面。",
+      "o": [
+        "60",
+        "10",
+        "2",
+        "40"
+      ],
+      "a": 1,
+      "e": "資料表以10、20、30分鐘為記錄時點。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000043",
+      "revision": 1,
+      "number": 23,
+      "q": "實驗開始前切取的兩枝芹菜葉柄，長度約為「＿＿公分」。",
+      "o": [
+        "100",
+        "250",
+        "25",
+        "2"
+      ],
+      "a": 2,
+      "e": "教材安排兩枝粗細相近、葉柄長約25公分的芹菜。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000044",
+      "revision": 1,
+      "number": 24,
+      "q": "甲組保留葉片，30分鐘後液面讀值為「＿＿ mL」。",
+      "o": [
+        "9.9",
+        "10.0",
+        "8.0",
+        "9.5"
+      ],
+      "a": 3,
+      "e": "教材表格中甲組在30分鐘時的液面為9.5 mL。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000045",
+      "revision": 1,
+      "number": 25,
+      "q": "乙組切除葉片，30分鐘後液面讀值為「＿＿ mL」。",
+      "o": [
+        "9.9",
+        "8.5",
+        "9.5",
+        "7.0"
+      ],
+      "a": 0,
+      "e": "教材表格中乙組在30分鐘時的液面為9.9 mL。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000046",
+      "revision": 1,
+      "number": 26,
+      "q": "芹菜實驗中最主要的操縱變因是「＿＿」。",
+      "o": [
+        "量筒標籤顏色",
+        "是否保留葉片",
+        "量筒放在哪個角落",
+        "記錄者姓名"
+      ],
+      "a": 1,
+      "e": "本實驗藉由保留或切除葉片來比較水分損失。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000047",
+      "revision": 1,
+      "number": 27,
+      "q": "芹菜實驗中觀察到的量筒液面下降量，屬於主要的「＿＿變因」。",
+      "o": [
+        "不需測量",
+        "無關",
+        "應變",
+        "操縱"
+      ],
+      "a": 2,
+      "e": "液面變化是兩組接受不同葉片處理後的觀察結果，屬應變變因。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000048",
+      "revision": 1,
+      "number": 28,
+      "q": "芹菜葉柄切面上被有色溶液染到的輸水部位主要是「＿＿」。",
+      "o": [
+        "氣孔",
+        "角質層",
+        "韌皮部",
+        "木質部"
+      ],
+      "a": 3,
+      "e": "有色溶液隨水分在木質部中移動，因此輸水組織會被染色。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000049",
+      "revision": 1,
+      "number": 29,
+      "q": "植物葉片製造的有機養分主要由「＿＿」輸送到其他器官。",
+      "o": [
+        "韌皮部",
+        "氣孔",
+        "保衛細胞",
+        "木質部"
+      ],
+      "a": 0,
+      "e": "韌皮部負責將光合作用的有機產物運往需要或儲藏的部位。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-phloem"
+      ]
+    },
+    {
+      "questionId": "261113231000050",
+      "revision": 1,
+      "number": 30,
+      "q": "課本中木質部水分以「＿＿」運輸為主，而韌皮部養分可依需要雙向運輸。",
+      "o": [
+        "由氣孔向土壤雙向",
+        "由根向葉單向",
+        "由葉向根單向",
+        "完全不移動"
+      ],
+      "a": 1,
+      "e": "木質部通常將根部吸收的水分向上送至葉片；韌皮部可依器官需求向上或向下運輸。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-phloem"
+      ]
+    }
+  ]
+}

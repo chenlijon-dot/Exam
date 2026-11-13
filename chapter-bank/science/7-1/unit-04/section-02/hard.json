@@ -1,0 +1,1478 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-2 蒸散作用與養分運輸｜困難",
+    "difficulty": "science-7-1-u04-s02-hard",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-02",
+    "unit": "4-2 蒸散作用與養分運輸",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "questionCount": 50,
+    "answerableQuestionCount": 50,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "使用者提供的 4-2 教材文字 p.184–190、201；AI 自編與校對，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "本批為 AI 協助自編練習，非官方試題；尚未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261113231000051",
+      "revision": 1,
+      "number": 1,
+      "q": "某株植物白天光照充足，卻因土壤極乾燥而關閉氣孔。哪項解釋最合理？",
+      "o": [
+        "缺水時保衛細胞調節氣孔，可優先減少失水",
+        "缺水會使木質部立即變韌皮部",
+        "陽光一定會迫使氣孔永久最大開放",
+        "氣孔關閉表示葉片不存在"
+      ],
+      "a": 0,
+      "e": "光照下通常氣孔較開，但缺水反應可使氣孔在白天關閉。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000052",
+      "revision": 1,
+      "number": 2,
+      "q": "如果葉片上的氣孔因環境變化普遍縮小，而根部吸水條件暫時不變，哪項短期變化最合理？",
+      "o": [
+        "韌皮部立即無法運輸任何養分",
+        "水分蒸散與蒸散拉力可能減弱",
+        "水分必定更快從氣孔散失",
+        "木質部立刻停止存在"
+      ],
+      "a": 1,
+      "e": "氣孔縮小通常減少水蒸氣向外擴散，因而可能降低蒸散拉力。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000053",
+      "revision": 1,
+      "number": 3,
+      "q": "老師說「只要葉片存在，水一定會在木質部自行往上流，與葉片失水毫無關係」。哪項訂正較適當？",
+      "o": [
+        "木質部只在葉片製造養分",
+        "氣孔只用來吸收澱粉",
+        "葉片蒸散造成的拉力是木質部水分向上的主要動力之一",
+        "水分不會經過根部"
+      ],
+      "a": 2,
+      "e": "蒸散拉力沿連續木質部水柱傳遞，帶動水向上。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-xylem-water"
+      ]
+    },
+    {
+      "questionId": "261113231000054",
+      "revision": 1,
+      "number": 4,
+      "q": "木質部細管中的水柱被空氣阻斷，為何可能影響高處葉片的水分供應？",
+      "o": [
+        "空氣會把木質部直接變成韌皮部",
+        "根毛會因而立刻消失",
+        "氣孔無法再交換任何氣體",
+        "連續水柱遭破壞，使蒸散拉力不易向下傳遞"
+      ],
+      "a": 3,
+      "e": "水分子的內聚與連續水柱有助傳遞蒸散拉力；氣泡可能造成運輸障礙。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-xylem-water"
+      ]
+    },
+    {
+      "questionId": "261113231000055",
+      "revision": 1,
+      "number": 5,
+      "q": "某人為了讓花束持久，將花梗剪斷後長時間放在空氣中，再插水瓶。若之後花朵缺水，哪個機制最能解釋？",
+      "o": [
+        "空氣可能進入木質部，阻礙連續水柱輸送",
+        "花梗會立刻沒有細胞壁",
+        "水會直接變成養分",
+        "木質部會產生更多氣孔"
+      ],
+      "a": 0,
+      "e": "課本說明切口若引入空氣，會妨礙木質部中的水分運輸。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-plant-care"
+      ]
+    },
+    {
+      "questionId": "261113231000056",
+      "revision": 1,
+      "number": 6,
+      "q": "花店將萎垂切花枝條重新在水中剪切後再插水。這項措施最直接想改善哪件事？",
+      "o": [
+        "使所有氣孔永久關閉",
+        "維持木質部水柱連續、恢復較順暢的吸水",
+        "增加枝條原有葉片數",
+        "將韌皮部轉成木質部"
+      ],
+      "a": 1,
+      "e": "水中重新剪切有助降低空氣進入輸水通道的問題。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-plant-care"
+      ]
+    },
+    {
+      "questionId": "261113231000057",
+      "revision": 1,
+      "number": 7,
+      "q": "氣孔開放能促進二氧化碳進入葉片，但也可能帶來什麼代價？",
+      "o": [
+        "葉片永遠不再散熱",
+        "木質部立即消失",
+        "水蒸氣較容易散出，使植物面臨失水風險",
+        "葉片無法再行光合作用"
+      ],
+      "a": 2,
+      "e": "氣孔兼顧氣體交換與蒸散，兩種功能存在取捨。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000058",
+      "revision": 1,
+      "number": 8,
+      "q": "植物在乾旱時關閉氣孔，可能同時影響下列哪兩件事？",
+      "o": [
+        "增加木材年輪，且不影響葉片",
+        "增加水分散失，且氣體完全不變",
+        "使韌皮部只剩單向輸送",
+        "減少水分蒸散，且限制氣體交換"
+      ],
+      "a": 3,
+      "e": "氣孔既是水蒸氣散失通道，也是氧氣與二氧化碳交換的重要通道。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000059",
+      "revision": 1,
+      "number": 9,
+      "q": "某學生認為「氣孔只負責散失水分，所以關閉氣孔不可能影響光合作用」。哪項訂正最合理？",
+      "o": [
+        "氣孔也與二氧化碳進入葉片有關，關閉可能限制其供應",
+        "葉綠體位於氣孔外空氣中",
+        "二氧化碳只從根毛進入葉片",
+        "氣孔完全由木質部細胞控制"
+      ],
+      "a": 0,
+      "e": "葉片行光合作用需二氧化碳，而氣孔是其進入葉片的重要通道。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000060",
+      "revision": 1,
+      "number": 10,
+      "q": "在其他條件相同時，甲植株保衛細胞膨壓增加，乙植株保衛細胞膨壓下降。最可能觀察到哪種結果？",
+      "o": [
+        "兩者氣孔都立即消失",
+        "甲氣孔較開，乙氣孔較閉",
+        "膨壓對氣孔完全無關",
+        "甲較閉，乙較開"
+      ],
+      "a": 1,
+      "e": "保衛細胞膨壓與氣孔張開程度正相關。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-guard-cell"
+      ]
+    },
+    {
+      "questionId": "261113231000061",
+      "revision": 1,
+      "number": 11,
+      "q": "在白天觀察到氣孔關閉，研究者立即認定這株植物沒有受到陽光。這個推論最大的問題是？",
+      "o": [
+        "保衛細胞沒有調節能力",
+        "白天完全不存在氣體交換",
+        "缺水等因素也可能使白天氣孔關閉",
+        "所有植物都只有夜晚開氣孔"
+      ],
+      "a": 2,
+      "e": "教材明確指出缺水時，即使在白天氣孔也可能關閉。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata"
+      ]
+    },
+    {
+      "questionId": "261113231000062",
+      "revision": 1,
+      "number": 12,
+      "q": "某組以葉面印模觀察睡蓮漂浮葉。若只檢查貼水的下表面卻沒有找到氣孔，最合理的下一步是？",
+      "o": [
+        "認定這株植物無法交換氣體",
+        "認定所有植物的氣孔只在下表面",
+        "將葉片剪掉改看根毛的木材",
+        "改觀察接觸空氣的上表面"
+      ],
+      "a": 3,
+      "e": "浮水睡蓮的氣孔主要分布於上表皮，能直接接觸空氣。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata-location"
+      ]
+    },
+    {
+      "questionId": "261113231000063",
+      "revision": 1,
+      "number": 13,
+      "q": "比較陸生植物與漂浮水面的睡蓮葉。下列何項最能合理說明氣孔位置差異？",
+      "o": [
+        "睡蓮葉下表面接觸水，上表面較適合與空氣交換氣體",
+        "睡蓮完全不需水分",
+        "水中氣孔比空氣中更易散出水蒸氣",
+        "所有陸生植物都沒有上表皮"
+      ],
+      "a": 0,
+      "e": "不同生長環境會影響氣孔的典型分布位置。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata-location"
+      ]
+    },
+    {
+      "questionId": "261113231000064",
+      "revision": 1,
+      "number": 14,
+      "q": "某學生把水稻葉當作一般陸生植物，直接宣稱「上表皮一定完全沒有氣孔」。依教材，應如何判斷？",
+      "o": [
+        "正確，所有禾本科都沒有氣孔",
+        "不正確，水稻上下表皮都可能有氣孔",
+        "正確，所有禾本科只有下表皮有氣孔",
+        "錯誤，因水稻氣孔只在根部"
+      ],
+      "a": 1,
+      "e": "教材指出水稻和小麥等禾本科植物上下表皮都可有氣孔。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata-location"
+      ]
+    },
+    {
+      "questionId": "261113231000065",
+      "revision": 1,
+      "number": 15,
+      "q": "若要比較一般陸生植物葉片上下表皮的氣孔，哪種做法最有利於避免以偏概全？",
+      "o": [
+        "只看下表皮就宣布上表皮必定為零",
+        "不看顯微觀察，完全以顏色猜測",
+        "分別觀察上下表皮，再結合植物種類判讀",
+        "只看葉脈就判定所有氣孔位置"
+      ],
+      "a": 2,
+      "e": "氣孔分布有不同植物類型的例外，例如禾本科兩面都有。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-stomata-location"
+      ]
+    },
+    {
+      "questionId": "261113231000066",
+      "revision": 1,
+      "number": 16,
+      "q": "學生說「蒸散只能使植物失去水，絕對沒有任何好處」。哪項最能反駁？",
+      "o": [
+        "蒸散會取代根部吸水",
+        "蒸散直接製造大量澱粉",
+        "蒸散使氣孔永久無法開閉",
+        "蒸散拉力可協助輸水，也能帶走熱能"
+      ],
+      "a": 3,
+      "e": "蒸散兼具水分上升驅動力與散熱功能。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000067",
+      "revision": 1,
+      "number": 17,
+      "q": "夏日晴天，草地表面有時比附近水泥地涼。若只根據本單元教材，哪項解釋較合理？",
+      "o": [
+        "草地植物蒸散水分時消耗熱能，有助散熱",
+        "草地水分永遠不蒸發",
+        "草地把所有熱能轉成氧氣",
+        "水泥不接受太陽光"
+      ],
+      "a": 0,
+      "e": "水分蒸散時帶走熱能，是植物體溫調節的原因之一。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-cooling"
+      ]
+    },
+    {
+      "questionId": "261113231000068",
+      "revision": 1,
+      "number": 18,
+      "q": "兩棵相似幼苗剛移植，甲被剪除部分葉片，乙維持原狀。若甲較少萎凋，最恰當的初步推論是？",
+      "o": [
+        "保留葉片會讓木質部立即消失",
+        "減少葉面積可能降低蒸散，使吸水與失水較平衡",
+        "剪葉必定使根部瞬間長得兩倍長",
+        "此結果證明所有植物都不需要葉片"
+      ],
+      "a": 1,
+      "e": "剪葉減少蒸散面積，可能降低移植後失水。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-plant-care"
+      ]
+    },
+    {
+      "questionId": "261113231000069",
+      "revision": 1,
+      "number": 19,
+      "q": "芹菜實驗中，甲保留葉、乙去除葉。若要公平比較蒸散，哪項條件最應維持一致？",
+      "o": [
+        "甲用10mL、乙用100mL起始",
+        "甲用水、乙用油",
+        "兩枝葉柄粗細、初始液量及環境條件",
+        "甲曬太陽、乙放冰箱"
+      ],
+      "a": 2,
+      "e": "比較葉片有無時，除操縱變因外，其他重要條件應盡量一致。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000070",
+      "revision": 1,
+      "number": 20,
+      "q": "學生設計芹菜實驗，甲去葉後放在陰涼處，乙留葉後放在強風下，想研究葉片有無影響失水。最主要的問題是？",
+      "o": [
+        "只要兩組都有芹菜就完全公平",
+        "氣孔只存在於根部",
+        "量筒的名稱必須相同",
+        "除了葉片有無，環境條件也不同，難以歸因"
+      ],
+      "a": 3,
+      "e": "控制變因需盡量相同，否則觀察差異不能確定源於葉片。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000071",
+      "revision": 1,
+      "number": 21,
+      "q": "芹菜實驗甲保留葉、乙切除葉。若研究問題是「葉片是否影響水分散失」，哪個是操縱變因？",
+      "o": [
+        "葉片有無",
+        "30分鐘後液面高度",
+        "量筒最後讀值",
+        "有色溶液染到的部位"
+      ],
+      "a": 0,
+      "e": "實驗者主動改變的是葉片有無；液面下降是測得結果。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000072",
+      "revision": 1,
+      "number": 22,
+      "q": "同一芹菜實驗以量筒液面下降量衡量結果，這個量最適合被歸類為什麼？",
+      "o": [
+        "完全無關變因",
+        "應變變因",
+        "操縱變因",
+        "資料記錄者的主觀偏好"
+      ],
+      "a": 1,
+      "e": "葉片處理造成的結果以液面變化表示，是應變變因。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000073",
+      "revision": 1,
+      "number": 23,
+      "q": "芹菜實驗兩組皆從10.0 mL開始，甲30分鐘後剩9.5 mL，乙剩9.9 mL。甲的讀值減少多少？",
+      "o": [
+        "9.5 mL",
+        "0.1 mL",
+        "0.5 mL",
+        "19.4 mL"
+      ],
+      "a": 2,
+      "e": "甲液量下降量為10.0減9.5，等於0.5 mL。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000074",
+      "revision": 1,
+      "number": 24,
+      "q": "甲乙兩量筒開始均10.0mL，30分鐘後分別9.5與9.9mL。兩組液量下降量相差多少？",
+      "o": [
+        "19.4 mL",
+        "0.2 mL",
+        "0.6 mL",
+        "0.4 mL"
+      ],
+      "a": 3,
+      "e": "甲下降0.5mL，乙下降0.1mL，兩者差0.4mL。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000075",
+      "revision": 1,
+      "number": 25,
+      "q": "甲組芹菜10分鐘9.9mL、20分鐘9.7mL、30分鐘9.5mL。哪個時段液量下降最大？",
+      "o": [
+        "10至20分鐘與20至30分鐘相同",
+        "三個時段下降量完全相同",
+        "只有0至10分鐘下降",
+        "0至10分鐘最大"
+      ],
+      "a": 0,
+      "e": "0至10分鐘下降0.1mL，後兩個10分鐘時段都下降0.2mL。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000076",
+      "revision": 1,
+      "number": 26,
+      "q": "乙組10分鐘10.0mL、20分鐘9.9mL、30分鐘9.9mL。依記錄，哪個時段讀值未再下降？",
+      "o": [
+        "0至10分鐘",
+        "20至30分鐘",
+        "0至20分鐘",
+        "10至20分鐘"
+      ],
+      "a": 1,
+      "e": "乙組20與30分鐘讀值同為9.9mL，該時段無可觀察到的讀值下降。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000077",
+      "revision": 1,
+      "number": 27,
+      "q": "依甲組芹菜紀錄，起始10.0mL，30分鐘後9.5mL；若以30分鐘作為時間間隔，平均每10分鐘液量下降約多少？",
+      "o": [
+        "5.00 mL",
+        "1.67 mL",
+        "0.17 mL",
+        "0.50 mL"
+      ],
+      "a": 2,
+      "e": "30分鐘共下降0.5mL，換算每10分鐘平均下降約0.5÷3=0.167mL。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000078",
+      "revision": 1,
+      "number": 28,
+      "q": "芹菜實驗甲組保留葉，液面下降比去葉的乙組多。哪一項結論最貼近實驗能支持的範圍？",
+      "o": [
+        "此結果可直接測出每一氣孔的直徑",
+        "保留葉片可證明所有水分只由葉脈散失",
+        "去葉一定使吸水永遠為零",
+        "保留葉片可能增加植物水分散失"
+      ],
+      "a": 3,
+      "e": "在其他條件相同下，保留葉片的組別液量下降較多，支持葉片促進失水。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000079",
+      "revision": 1,
+      "number": 29,
+      "q": "芹菜去葉組的液面仍略微下降，最嚴謹的推論是？",
+      "o": [
+        "去葉並未使記錄的液量下降完全歸零，不能說無葉就絕無失水",
+        "去葉必然使木質部無法輸水",
+        "所有水都一定只由氣孔排出",
+        "乙組的根已全部死亡"
+      ],
+      "a": 0,
+      "e": "乙組30分鐘仍由10.0降至9.9mL；去葉降低失水，但不是保證完全為零。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000080",
+      "revision": 1,
+      "number": 30,
+      "q": "在芹菜實驗中，若甲乙量筒的水面直接暴露空氣，有一部分液量下降可能來自水面蒸發。要更準確比較葉片造成的差異，哪個做法較合理？",
+      "o": [
+        "讓兩組量筒敞口程度不同",
+        "盡量密封量筒水面只留芹菜通過，減少直接蒸發干擾",
+        "只記錄一組數據",
+        "不用再測量液面"
+      ],
+      "a": 1,
+      "e": "量筒水面蒸發可能混入液量下降，因此應控制非植物蒸散的失水來源。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000081",
+      "revision": 1,
+      "number": 31,
+      "q": "芹菜甲保留葉、乙去葉，兩者染色部位都可見於葉柄。這項結果最直接支持什麼？",
+      "o": [
+        "去葉使所有維管束消失",
+        "只有保留葉片才有木質部",
+        "葉柄內皆有能輸送有色水的木質部",
+        "韌皮部是唯一上行水道"
+      ],
+      "a": 2,
+      "e": "染色可追蹤水沿木質部上行，去葉並不表示葉柄木質部消失。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000082",
+      "revision": 1,
+      "number": 32,
+      "q": "芹菜插入紅色溶液後，葉柄縱切面出現細長紅線，最合理的解釋是？",
+      "o": [
+        "紅線表示氣孔在葉柄中心",
+        "紅線代表植物由空氣製造紅色澱粉",
+        "紅線一定是韌皮部內的有機養分",
+        "紅線追蹤水分沿木質部向上移動"
+      ],
+      "a": 3,
+      "e": "有色水進入輸水組織，縱切可觀察連續的水分運輸路徑。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000083",
+      "revision": 1,
+      "number": 33,
+      "q": "研究者把染色芹菜縱切及橫切結果一起觀察，與只看外觀相比，最大優點是？",
+      "o": [
+        "能同時判斷輸水通道的走向與橫切面位置",
+        "能直接測量葉片每個氣孔數量",
+        "能證明木質部製造葡萄糖",
+        "能從染色推知植物完整樹齡"
+      ],
+      "a": 0,
+      "e": "縱切提供路徑方向，橫切提供染色組織位置，兩者互相補充。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000084",
+      "revision": 1,
+      "number": 34,
+      "q": "若染色芹菜在葉片葉脈也出現顏色，哪項推論最合理？",
+      "o": [
+        "葉片是先把染料從空氣中吸入",
+        "有色水由葉柄輸水構造進入葉脈",
+        "葉片完全沒有木質部",
+        "韌皮部一定改成輸送染料的唯一通路"
+      ],
+      "a": 1,
+      "e": "有色溶液沿木質部上行，可延伸到葉脈的輸水構造。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000085",
+      "revision": 1,
+      "number": 35,
+      "q": "芹菜實驗中切除葉片的乙組，若仍可觀察到葉柄木質部染色，表示哪項敘述比較恰當？",
+      "o": [
+        "染色一定來自光合作用製糖",
+        "去葉會令葉柄全部變成韌皮部",
+        "去葉會減少蒸散，但葉柄本身仍有輸水組織",
+        "木質部只有在葉片存在時才生成"
+      ],
+      "a": 2,
+      "e": "去葉影響蒸散需求，並不會讓葉柄的木質部立即消失。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000086",
+      "revision": 1,
+      "number": 36,
+      "q": "甲乙芹菜染色實驗若使用完全不同濃度的染液，想比較染色程度，最需要警惕什麼？",
+      "o": [
+        "高濃度會使木質部變成根",
+        "只要都染色就可推定水量完全相同",
+        "染液濃度永遠不影響顏色",
+        "染液濃度也會影響觀察，不能單以色深判定水分運輸快慢"
+      ],
+      "a": 3,
+      "e": "比較染色程度需控制染液濃度，否則難以把差異歸因於植物運輸。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000087",
+      "revision": 1,
+      "number": 37,
+      "q": "為何芹菜葉柄要在水中剪取，且切完迅速放入有色溶液？",
+      "o": [
+        "減少空氣進入木質部，維持水柱連續",
+        "讓植物立刻產生果實",
+        "讓紅色染料轉成葡萄糖",
+        "使氣孔在葉柄中生成"
+      ],
+      "a": 0,
+      "e": "水中切取與迅速浸入可降低空氣進入輸水通道的機率。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000088",
+      "revision": 1,
+      "number": 38,
+      "q": "若有學生誤將甲、乙組都去除葉片，這項實驗將最直接失去什麼？",
+      "o": [
+        "觀察葉柄染色的可能",
+        "能比較有葉與無葉的操縱條件",
+        "測量液面所需的量筒",
+        "使用有色溶液的必要性"
+      ],
+      "a": 1,
+      "e": "兩組都無葉就沒有葉片有無的對照差異，難以回答原本研究問題。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000089",
+      "revision": 1,
+      "number": 39,
+      "q": "芹菜實驗若甲從10mL開始、乙從5mL開始，但只比較結束時的液面高低而不計下降量，問題在哪裡？",
+      "o": [
+        "量筒刻度只有在10mL才能閱讀",
+        "兩組終點一定相同",
+        "初始體積不同，直接比較終點讀值可能誤判",
+        "開始液量不同就必定沒有蒸散"
+      ],
+      "a": 2,
+      "e": "應控制起始液量，或至少比較各組相對於起始的下降量。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000090",
+      "revision": 1,
+      "number": 40,
+      "q": "同一組芹菜只量到30分鐘液面下降0.5mL，便說「這0.5mL全都一定從葉片氣孔出去」。哪項評論最嚴謹？",
+      "o": [
+        "一定正確，因液面下降只可能有一個原因",
+        "不能推論，因量筒不能量液體",
+        "完全錯誤，因植物不能吸水",
+        "液量下降可能還受水面蒸發等因素影響，需控制條件才能歸因"
+      ],
+      "a": 3,
+      "e": "量筒讀值是整體液量變化，若未排除其他失水路徑，不能全數等同氣孔蒸散量。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000091",
+      "revision": 1,
+      "number": 41,
+      "q": "若研究者只把芹菜葉片遮住不剪掉，卻宣稱操作與課本「完全切去葉片」相同，哪項評估最合理？",
+      "o": [
+        "遮光與去葉是不同操作，不能直接當成相同操縱條件",
+        "兩者會讓木質部由下往上變為向下",
+        "兩者必定完全等同",
+        "遮光必使葉片消失"
+      ],
+      "a": 0,
+      "e": "遮光保留葉片與氣孔，去葉移除葉面積，兩者影響機制不同。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000092",
+      "revision": 1,
+      "number": 42,
+      "q": "將有葉芹菜放入染液，只觀察到紅色沿葉脈分布。想確定輸水構造，下一步應如何做？",
+      "o": [
+        "只量花瓣長度",
+        "橫切或縱切葉柄，檢查維管束內的染色位置",
+        "用葉片顏色直接判斷韌皮部養分量",
+        "只觀察量筒標籤"
+      ],
+      "a": 1,
+      "e": "教材設計葉柄切片觀察以找出被有色水染到的木質部。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000093",
+      "revision": 1,
+      "number": 43,
+      "q": "某人把芹菜染色實驗當成「證明韌皮部會運送葡萄糖」的實驗，最大的錯誤是？",
+      "o": [
+        "葉柄完全沒有韌皮部",
+        "只有花朵才有木質部",
+        "染液主要追蹤水的路徑，不能直接證明有機養分在韌皮部的運輸",
+        "有色溶液一定完全不進入植物"
+      ],
+      "a": 2,
+      "e": "染色的有色水用來追蹤水分運輸，與光合作用產生的有機養分不同。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-celery-experiment"
+      ]
+    },
+    {
+      "questionId": "261113231000094",
+      "revision": 1,
+      "number": 44,
+      "q": "植物根吸水、葉製造養分。若要標示兩種長距離運輸通路，哪項配對正確？",
+      "o": [
+        "水分主要走韌皮部，養分主要走氣孔",
+        "兩者都只能靠根毛向上",
+        "兩者都直接從表皮外空氣流入",
+        "水分主要走木質部，養分主要走韌皮部"
+      ],
+      "a": 3,
+      "e": "教材以木質部運水、韌皮部運有機養分作為主要分工。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000095",
+      "revision": 1,
+      "number": 45,
+      "q": "一株植物根部需要葉片製造的有機養分，最合理的運輸途徑是？",
+      "o": [
+        "葉片製造後經韌皮部往根運輸",
+        "沿木質部由葉往根作唯一正常路徑",
+        "由葉片透過氣孔把葡萄糖直接吹進土壤",
+        "由根將所有養分先送到葉再不回流"
+      ],
+      "a": 0,
+      "e": "韌皮部可運送葉片製造的養分到根等需要或儲存的器官。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-phloem"
+      ]
+    },
+    {
+      "questionId": "261113231000096",
+      "revision": 1,
+      "number": 46,
+      "q": "某幼芽正在快速生長，需要其他成熟葉片供應有機養分。依教材，哪項推論最合理？",
+      "o": [
+        "木質部是葡萄糖唯一輸送通路",
+        "養分可沿韌皮部朝需要養分的幼芽運送",
+        "養分一定從氣孔進入幼芽",
+        "韌皮部一定只往根單向"
+      ],
+      "a": 1,
+      "e": "韌皮部運輸方向依製造與利用部位而定，不只向下。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-phloem"
+      ]
+    },
+    {
+      "questionId": "261113231000097",
+      "revision": 1,
+      "number": 47,
+      "q": "在正常根葉運輸圖中，學生把「水分」與「葉製造的養分」都畫成由根往葉單向。哪項訂正最恰當？",
+      "o": [
+        "養分只能由葉片氣孔向外散失",
+        "水分一定只由韌皮部輸送",
+        "水分主要經木質部向上；有機養分經韌皮部可依需要向上或向下",
+        "所有物質都只能由葉往根"
+      ],
+      "a": 2,
+      "e": "木質部水分通常由根向上，而韌皮部養分依器官需求可能雙向運送。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-transpiration"
+      ]
+    },
+    {
+      "questionId": "261113231000098",
+      "revision": 1,
+      "number": 48,
+      "q": "若一株植物仍能由根吸水，但韌皮部的有機養分運輸受阻，對根部較可能造成什麼長期後果？",
+      "o": [
+        "根部會立刻製造更多葉綠素",
+        "木質部一定瞬間消失",
+        "根部不需要任何有機養分",
+        "無法正常獲得葉片製造的養分，根部可能衰弱"
+      ],
+      "a": 3,
+      "e": "根部等非光合作用部位也需要由葉供應的有機養分。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-phloem"
+      ]
+    },
+    {
+      "questionId": "261113231000099",
+      "revision": 1,
+      "number": 49,
+      "q": "一棵樹的葉片蒸散十分旺盛。若木質部水柱保持連續，最直接可預期哪種現象？",
+      "o": [
+        "蒸散拉力帶動根部吸收的水向上輸送",
+        "樹皮立刻產生年輪",
+        "氧氣沿木質部被抽成葡萄糖",
+        "韌皮部只准向下送水"
+      ],
+      "a": 0,
+      "e": "葉片失水時水柱內聚力有助傳遞拉力，促使木質部水上升。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-xylem-water"
+      ]
+    },
+    {
+      "questionId": "261113231000100",
+      "revision": 1,
+      "number": 50,
+      "q": "研究者比較「保衛細胞膨壓」與「氣孔開口」，觀察到膨壓愈大開口愈大。最合理的機制解釋是？",
+      "o": [
+        "所有氣孔都由木質部直接拉開",
+        "保衛細胞吸水膨脹並向兩旁彎曲，使氣孔張開",
+        "保衛細胞因失水變成根毛",
+        "膨壓是韌皮部葡萄糖數量"
+      ],
+      "a": 1,
+      "e": "保衛細胞含水變化影響膨壓與形狀，進而調節氣孔開閉。",
+      "sourceType": "practice-generated",
+      "sourceTitle": "七上生物 4-2 教材文字整理",
+      "answerVerified": true,
+      "reviewStatus": "assistant-reviewed-against-available-textbook",
+      "lifecycle": "active",
+      "preserveOptionOrder": false,
+      "optionCanonicalIndices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "conceptIds": [
+        "science-7-1-u04-s02-guard-cell"
+      ]
+    }
+  ]
+}
