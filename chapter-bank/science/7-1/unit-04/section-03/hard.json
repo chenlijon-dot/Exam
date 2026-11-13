@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-3 人體心血管系統的組成｜困難",
+    "difficulty": "science-7-1-u04-s03-hard",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-03",
+    "unit": "4-3 人體心血管系統的組成",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "questionCount": 50,
+    "answerableQuestionCount": 50,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "4-3 教材 p.202–213；AI 自編與內容校核，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "自編練習，不是正式校內試題；尚未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261114004300051",
+      "revision": 1,
+      "number": 1,
+      "q": "某血球從右心房出發，下一個正常經過的心臟腔室為何？",
+      "o": [
+        "主動脈",
+        "左心房",
+        "右心室",
+        "左心室"
+      ],
+      "a": 2,
+      "e": "右心房血液經房室瓣進入右心室。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300052",
+      "revision": 1,
+      "number": 2,
+      "q": "某血球從右心室離開心臟後，最先經過哪一條大血管？",
+      "o": [
+        "肺靜脈",
+        "上大靜脈",
+        "主動脈",
+        "肺動脈"
+      ],
+      "a": 3,
+      "e": "右心室將血液射入肺動脈。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300053",
+      "revision": 1,
+      "number": 3,
+      "q": "血液從肺部回流到心臟時，正確路徑為何？",
+      "o": [
+        "肺靜脈→左心房",
+        "肺動脈→左心房",
+        "肺靜脈→右心室",
+        "主動脈→右心房"
+      ],
+      "a": 0,
+      "e": "肺部氧合後的血液由肺靜脈回左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300054",
+      "revision": 1,
+      "number": 4,
+      "q": "由左心室出發、經身體組織交換後返回心臟，最先返回哪個腔室？",
+      "o": [
+        "左心室",
+        "右心房",
+        "右心室",
+        "左心房"
+      ],
+      "a": 1,
+      "e": "體循環經大靜脈回右心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300055",
+      "revision": 1,
+      "number": 5,
+      "q": "下列哪一段血流方向正確？",
+      "o": [
+        "右心室→肺靜脈→肺部微血管",
+        "左心房→上大靜脈→全身",
+        "右心室→肺動脈→肺部微血管",
+        "左心室→肺動脈→肺部微血管"
+      ],
+      "a": 2,
+      "e": "右心室經肺動脈將缺氧血送往肺部。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300056",
+      "revision": 1,
+      "number": 6,
+      "q": "下列哪一段血流方向正確？",
+      "o": [
+        "肺部微血管→主動脈→左心室",
+        "肺部微血管→肺動脈→右心房",
+        "肺部微血管→上大靜脈→右心房",
+        "肺部微血管→肺靜脈→左心房"
+      ],
+      "a": 3,
+      "e": "肺部充氧後血液經肺靜脈返回左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300057",
+      "revision": 1,
+      "number": 7,
+      "q": "血液由左心房流向左心室時，必須通過哪一類瓣膜？",
+      "o": [
+        "房室瓣",
+        "沒有任何瓣膜",
+        "半月瓣",
+        "靜脈瓣"
+      ],
+      "a": 0,
+      "e": "左心房與左心室間為房室瓣。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300058",
+      "revision": 1,
+      "number": 8,
+      "q": "左心室收縮將血液送往全身時，應打開哪一個出口瓣膜？",
+      "o": [
+        "肺動脈瓣",
+        "主動脈瓣",
+        "左側房室瓣",
+        "右側房室瓣"
+      ],
+      "a": 1,
+      "e": "左心室向主動脈射血時，主動脈瓣開啟。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300059",
+      "revision": 1,
+      "number": 9,
+      "q": "心室收縮初期，哪一類瓣膜關閉以防止血液回流心房？",
+      "o": [
+        "半月瓣",
+        "靜脈瓣",
+        "房室瓣",
+        "微血管壁"
+      ],
+      "a": 2,
+      "e": "房室瓣關閉可避免心室血液倒流。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300060",
+      "revision": 1,
+      "number": 10,
+      "q": "心室舒張、動脈內血液可能回衝時，主要由哪一類瓣膜阻止倒流？",
+      "o": [
+        "房室瓣",
+        "靜脈瓣",
+        "淋巴瓣",
+        "半月瓣"
+      ],
+      "a": 3,
+      "e": "半月瓣關閉防止大動脈血液回流心室。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300061",
+      "revision": 1,
+      "number": 11,
+      "q": "若聽到的第二心音主要出現在心室舒張開始時，關閉的構造最可能為何？",
+      "o": [
+        "主動脈瓣及肺動脈瓣",
+        "左右房室瓣",
+        "上下大靜脈",
+        "左右心房"
+      ],
+      "a": 0,
+      "e": "第二心音主要與兩個半月瓣關閉有關。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300062",
+      "revision": 1,
+      "number": 12,
+      "q": "若瓣膜無法完整關閉，最直接可能造成下列哪種現象？",
+      "o": [
+        "白血球完全消失",
+        "血液逆向流動",
+        "血漿停止含水",
+        "紅血球變成血小板"
+      ],
+      "a": 1,
+      "e": "瓣膜功能不全可能使血液逆流。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300063",
+      "revision": 1,
+      "number": 13,
+      "q": "學生認為「所有動脈都是充氧血」，下列何者可直接反駁？",
+      "o": [
+        "心臟有四個腔室",
+        "主動脈運送充氧血",
+        "肺動脈運送缺氧血",
+        "微血管可交換物質"
+      ],
+      "a": 2,
+      "e": "肺動脈因血流遠離心臟而稱動脈，卻載有缺氧血。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300064",
+      "revision": 1,
+      "number": 14,
+      "q": "學生認為「所有靜脈都是缺氧血」，下列何者可直接反駁？",
+      "o": [
+        "靜脈回流心臟",
+        "靜脈壁較薄",
+        "上大靜脈運送缺氧血",
+        "肺靜脈運送充氧血"
+      ],
+      "a": 3,
+      "e": "肺靜脈把肺部充氧的血送回心臟。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300065",
+      "revision": 1,
+      "number": 15,
+      "q": "若依「血流方向」判別血管，與血液含氧多寡無關的判準是？",
+      "o": [
+        "血液是流離心臟還是流向心臟",
+        "血液顏色深淺",
+        "血液是否經過肺泡",
+        "血紅素攜氧量"
+      ],
+      "a": 0,
+      "e": "動脈與靜脈的分類依血流相對於心臟的方向。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300066",
+      "revision": 1,
+      "number": 16,
+      "q": "把主動脈、一般微血管與大靜脈按血壓由高到低排列，何者合理？",
+      "o": [
+        "三者壓力皆相同",
+        "主動脈→微血管→大靜脈",
+        "大靜脈→微血管→主動脈",
+        "微血管→主動脈→大靜脈"
+      ],
+      "a": 1,
+      "e": "體循環血壓大致由動脈沿微血管至靜脈逐漸下降。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300067",
+      "revision": 1,
+      "number": 17,
+      "q": "量血壓得到 118/76 mmHg，前面的 118 表示什麼？",
+      "o": [
+        "每分鐘脈搏數",
+        "每分鐘心搏數",
+        "收縮壓",
+        "舒張壓"
+      ],
+      "a": 2,
+      "e": "血壓表示法前項是收縮壓，後項是舒張壓。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300068",
+      "revision": 1,
+      "number": 18,
+      "q": "量血壓得到 118/76 mmHg，後面的 76 表示什麼？",
+      "o": [
+        "每分鐘心搏數",
+        "收縮壓",
+        "血漿水分百分比",
+        "舒張壓"
+      ],
+      "a": 3,
+      "e": "後項表示舒張壓。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300069",
+      "revision": 1,
+      "number": 19,
+      "q": "甲運動前脈搏 72 次/分、運動後 108 次/分，增加多少次/分？",
+      "o": [
+        "36",
+        "180",
+        "72",
+        "18"
+      ],
+      "a": 0,
+      "e": "108 減 72 等於 36 次/分。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300070",
+      "revision": 1,
+      "number": 20,
+      "q": "甲運動前脈搏 80 次/分、運動後 120 次/分，運動後是運動前的幾倍？",
+      "o": [
+        "0.5 倍",
+        "1.5 倍",
+        "3 倍",
+        "2 倍"
+      ],
+      "a": 1,
+      "e": "120 ÷ 80 = 1.5。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300071",
+      "revision": 1,
+      "number": 21,
+      "q": "甲運動後量得心搏 104 次/分、脈搏 101 次/分，何者最恰當？",
+      "o": [
+        "脈搏與心搏完全無關",
+        "心搏一定比脈搏多 3 次",
+        "兩者原則接近，少量差異可能是測量誤差",
+        "運動後脈搏應完全消失"
+      ],
+      "a": 2,
+      "e": "一般情況兩者頻率相近；手動測量可能有誤差。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300072",
+      "revision": 1,
+      "number": 22,
+      "q": "用食指與中指觸摸手腕脈搏，主要是感受到什麼？",
+      "o": [
+        "淋巴液在淋巴結內震動",
+        "紅血球擠壓骨頭",
+        "靜脈瓣膜觸碰皮膚",
+        "動脈壁的壓力波動"
+      ],
+      "a": 3,
+      "e": "每次心室射血使動脈產生可觸及的脈動。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-physiology"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300073",
+      "revision": 1,
+      "number": 23,
+      "q": "某圖顯示血球在極細血管內幾乎單列通過、血流很慢，這是哪一類血管？",
+      "o": [
+        "微血管",
+        "肺動脈",
+        "主動脈",
+        "上大靜脈"
+      ],
+      "a": 0,
+      "e": "微血管管徑很小，常見血球單列通過。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300074",
+      "revision": 1,
+      "number": 24,
+      "q": "觀察魚尾鰭：血液由甲流向極細的乙，再流向丙。若乙是微血管，甲、丙最可能分別為何？",
+      "o": [
+        "淋巴管、肺動脈",
+        "小動脈、小靜脈",
+        "小靜脈、小動脈",
+        "肺靜脈、主動脈"
+      ],
+      "a": 1,
+      "e": "血流通常由小動脈到微血管，再到小靜脈。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300075",
+      "revision": 1,
+      "number": 25,
+      "q": "若某種血管管壁加厚到不利物質擴散，最直接受影響的功能是？",
+      "o": [
+        "消化液分泌",
+        "心臟收縮的發動",
+        "血液與組織細胞間的物質交換",
+        "骨骼運動"
+      ],
+      "a": 2,
+      "e": "微血管薄壁是交換效率的重要條件。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300076",
+      "revision": 1,
+      "number": 26,
+      "q": "白血球從血管移動到受傷組織，最常利用哪一類血管的薄壁特性？",
+      "o": [
+        "主動脈",
+        "肺動脈",
+        "心臟瓣膜",
+        "微血管"
+      ],
+      "a": 3,
+      "e": "白血球可穿過微血管壁進入組織。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300077",
+      "revision": 1,
+      "number": 27,
+      "q": "某人的冠狀動脈嚴重阻塞，最直接會使哪一種組織缺血？",
+      "o": [
+        "心肌",
+        "肺泡上皮",
+        "小腸絨毛",
+        "腎臟腎絲球"
+      ],
+      "a": 0,
+      "e": "冠狀動脈負責供應心肌。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300078",
+      "revision": 1,
+      "number": 28,
+      "q": "有人認為心臟腔室內有血液，所以心肌不需要自己的血管，哪個反駁最合理？",
+      "o": [
+        "心肌由骨髓供血",
+        "心肌主要依靠冠狀血管供給氧氣和養分",
+        "心肌不需氧氣",
+        "心臟內沒有血液"
+      ],
+      "a": 1,
+      "e": "心臟腔室的血液不能取代心肌的冠狀循環供血。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-vessels"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300079",
+      "revision": 1,
+      "number": 29,
+      "q": "若分離血液中的液體部分，主要包含水、養分和激素的是？",
+      "o": [
+        "骨髓",
+        "血小板",
+        "血漿",
+        "成熟紅血球"
+      ],
+      "a": 2,
+      "e": "血漿是血液的液體部分，運送多種物質。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300080",
+      "revision": 1,
+      "number": 30,
+      "q": "某物質由內分泌腺分泌，經血液到達遠處器官，這種物質最可能是？",
+      "o": [
+        "血小板",
+        "抗原細胞",
+        "骨髓",
+        "激素"
+      ],
+      "a": 3,
+      "e": "激素可透過血液運輸至標的組織。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300081",
+      "revision": 1,
+      "number": 31,
+      "q": "若成熟紅血球數量顯著下降，最先可能受影響的能力是？",
+      "o": [
+        "氧氣運送",
+        "心臟瓣膜開閉",
+        "凝血因子製造",
+        "病原吞噬"
+      ],
+      "a": 0,
+      "e": "紅血球主要運送氧氣，減少可能造成貧血及運氧能力下降。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300082",
+      "revision": 1,
+      "number": 32,
+      "q": "顯微鏡下大量無核雙凹圓盤狀細胞，最可能為何？",
+      "o": [
+        "白血球",
+        "成熟紅血球",
+        "血小板",
+        "心肌細胞"
+      ],
+      "a": 1,
+      "e": "人類成熟紅血球無核、呈雙凹圓盤。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300083",
+      "revision": 1,
+      "number": 33,
+      "q": "若顯微鏡下看到有細胞核且體積通常大於紅血球的血球，最可能是？",
+      "o": [
+        "血小板",
+        "血漿",
+        "白血球",
+        "成熟紅血球"
+      ],
+      "a": 2,
+      "e": "白血球通常具有細胞核且比紅血球大。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300084",
+      "revision": 1,
+      "number": 34,
+      "q": "某患者傷口周圍出現吞噬入侵細菌的細胞，這些細胞最可能屬於？",
+      "o": [
+        "心肌細胞",
+        "血小板",
+        "紅血球",
+        "白血球"
+      ],
+      "a": 3,
+      "e": "部分白血球可吞噬病原體。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300085",
+      "revision": 1,
+      "number": 35,
+      "q": "若血小板數量明顯偏低，最直接應注意哪個問題？",
+      "o": [
+        "止血功能可能受影響",
+        "肺靜脈內沒有血",
+        "運送氧氣完全停止",
+        "心肌停止產生心音"
+      ],
+      "a": 0,
+      "e": "血小板在初期止血中扮演重要角色。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300086",
+      "revision": 1,
+      "number": 36,
+      "q": "若血漿凝血因子不足，即使血小板存在仍可能出現什麼情形？",
+      "o": [
+        "動脈變成靜脈",
+        "凝血不易",
+        "心臟腔室減少",
+        "紅血球全部有核"
+      ],
+      "a": 1,
+      "e": "凝血因子與血小板共同參與止血機制。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300087",
+      "revision": 1,
+      "number": 37,
+      "q": "某三種血液成分分別是甲（無核雙凹圓盤）、乙（有核防禦細胞）、丙（小碎片），甲乙丙依序為何？",
+      "o": [
+        "紅血球、血小板、白血球",
+        "血小板、白血球、紅血球",
+        "紅血球、白血球、血小板",
+        "白血球、紅血球、血小板"
+      ],
+      "a": 2,
+      "e": "依外形與有無細胞核即可辨別三種血液有形成分。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300088",
+      "revision": 1,
+      "number": 38,
+      "q": "比較成熟紅血球、白血球與血小板，哪一個通常有細胞核？",
+      "o": [
+        "紅血球",
+        "三者皆有核",
+        "血小板",
+        "白血球"
+      ],
+      "a": 3,
+      "e": "人體成熟紅血球無核、血小板無核，白血球有核。",
+      "conceptIds": [
+        "science-7-1-u04-s03-blood-components"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300089",
+      "revision": 1,
+      "number": 39,
+      "q": "若把血液三種有形成分依一般體積由大到小排列，何者正確？",
+      "o": [
+        "白血球→紅血球→血小板",
+        "血小板→紅血球→白血球",
+        "紅血球→白血球→血小板",
+        "三者一樣大"
+      ],
+      "a": 0,
+      "e": "一般白血球最大，血小板最小。",
+      "conceptIds": [
+        "science-7-1-u04-s03-heart-structure"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300090",
+      "revision": 1,
+      "number": 40,
+      "q": "蝗蟲的循環液會流入體腔與組織接觸，應歸類為何者？",
+      "o": [
+        "魚類單循環",
+        "開放式循環",
+        "人類雙循環",
+        "閉鎖式循環"
+      ],
+      "a": 1,
+      "e": "開放式循環的循環液可流入體腔。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300091",
+      "revision": 1,
+      "number": 41,
+      "q": "蚯蚓的血液始終在血管內循環，應歸類為何者？",
+      "o": [
+        "開放式循環",
+        "沒有血管的擴散",
+        "閉鎖式循環",
+        "只有淋巴循環"
+      ],
+      "a": 2,
+      "e": "閉鎖式循環的血液維持於血管內。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300092",
+      "revision": 1,
+      "number": 42,
+      "q": "海綿等構造相對簡單的水生動物為何不一定需要複雜血管網路？",
+      "o": [
+        "具有與人一樣的四腔心臟",
+        "全部組織都能製造血紅素",
+        "沒有細胞需要氧氣",
+        "可藉水流與擴散進行物質交換"
+      ],
+      "a": 3,
+      "e": "簡單動物可藉擴散等方式完成物質交換。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300093",
+      "revision": 1,
+      "number": 43,
+      "q": "魚類血液完成一次全身循環時，通常流經心臟幾次？",
+      "o": [
+        "一次",
+        "三次",
+        "兩次",
+        "四次"
+      ],
+      "a": 0,
+      "e": "魚類為單循環，完整一圈通常通過心臟一次。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300094",
+      "revision": 1,
+      "number": 44,
+      "q": "哺乳類血液完成一次肺循環與體循環的路徑，通常流經心臟幾次？",
+      "o": [
+        "三次",
+        "兩次",
+        "一次",
+        "四次"
+      ],
+      "a": 1,
+      "e": "哺乳類有肺循環與體循環，稱雙循環。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300095",
+      "revision": 1,
+      "number": 45,
+      "q": "哪一組動物的心臟通常均為二心房、二心室？",
+      "o": [
+        "大多數兩生類與魚類",
+        "魚類與兩生類",
+        "鳥類與哺乳類",
+        "昆蟲與蚯蚓"
+      ],
+      "a": 2,
+      "e": "鳥類、哺乳類一般具有四腔心臟。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300096",
+      "revision": 1,
+      "number": 46,
+      "q": "若圖示某脊椎動物心臟僅一心房與一心室，最可能是哪一類？",
+      "o": [
+        "兩生類",
+        "鳥類",
+        "哺乳類",
+        "魚類"
+      ],
+      "a": 3,
+      "e": "魚類典型心臟為一心房、一心室。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300097",
+      "revision": 1,
+      "number": 47,
+      "q": "若圖示某脊椎動物為二心房、一心室，最可能是哪一類？",
+      "o": [
+        "兩生類",
+        "魚類",
+        "鳥類",
+        "哺乳類"
+      ],
+      "a": 0,
+      "e": "兩生類一般為二心房、一心室。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300098",
+      "revision": 1,
+      "number": 48,
+      "q": "下列何者可說明「爬蟲類心臟一定只有三腔」的說法有誤？",
+      "o": [
+        "昆蟲是開放式循環",
+        "鱷魚具有二心房、二心室",
+        "魚類為單循環",
+        "鳥類有兩個心室"
+      ],
+      "a": 1,
+      "e": "鱷魚是爬蟲類中具四腔室心臟的例子。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300099",
+      "revision": 1,
+      "number": 49,
+      "q": "和二心房、一心室相比，鳥類與哺乳類四腔心臟的主要優點是？",
+      "o": [
+        "讓血液直接流入體腔",
+        "完全不需要微血管",
+        "較能區隔充氧血與缺氧血",
+        "使血液只能流經肺部"
+      ],
+      "a": 2,
+      "e": "四腔心臟能將充氧血與缺氧血有效分隔。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114004300100",
+      "revision": 1,
+      "number": 50,
+      "q": "魚尾鰭顯微觀察時，蓋在魚體的棉花保持濕潤主要是為了什麼？",
+      "o": [
+        "使魚尾鰭變成不透明",
+        "加速魚血凝固",
+        "讓動脈變成靜脈",
+        "維持魚體濕潤並減少觀察傷害"
+      ],
+      "a": 3,
+      "e": "教材活動要求以濕棉花保護魚體並維持濕潤。",
+      "conceptIds": [
+        "science-7-1-u04-s03-animal-circulation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    }
+  ]
+}
