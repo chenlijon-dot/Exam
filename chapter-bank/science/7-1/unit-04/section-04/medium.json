@@ -1,0 +1,628 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-4 人體的循環系統｜中等",
+    "difficulty": "science-7-1-u04-s04-medium",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-04",
+    "unit": "4-4 人體的循環系統",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "questionCount": 30,
+    "answerableQuestionCount": 30,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "4-4 教材 p.223–233；AI 自編及教材核對，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "AI 自編練習，未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261114044400021",
+      "revision": 1,
+      "number": 1,
+      "q": "體循環的起點為＿＿。",
+      "o": [
+        "右心房",
+        "右心室",
+        "左心室",
+        "左心房"
+      ],
+      "a": 2,
+      "e": "體循環由左心室開始，經主動脈送往全身。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400022",
+      "revision": 1,
+      "number": 2,
+      "q": "體循環中，血液由組織微血管回流後，最終經大靜脈進入＿＿。",
+      "o": [
+        "左心室",
+        "右心房",
+        "左心房",
+        "右心室"
+      ],
+      "a": 1,
+      "e": "上、下大靜脈的血液回流至右心房。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400023",
+      "revision": 1,
+      "number": 3,
+      "q": "肺循環的起點是＿＿。",
+      "o": [
+        "右心室",
+        "右心房",
+        "左心室",
+        "左心房"
+      ],
+      "a": 0,
+      "e": "右心室將血液推入肺動脈。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400024",
+      "revision": 1,
+      "number": 4,
+      "q": "肺循環結束時，血液由肺靜脈回到＿＿。",
+      "o": [
+        "右心房",
+        "左心室",
+        "右心室",
+        "左心房"
+      ],
+      "a": 3,
+      "e": "肺靜脈連接左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400025",
+      "revision": 1,
+      "number": 5,
+      "q": "在肺循環中，負責把血液送往肺部的血管是＿＿。",
+      "o": [
+        "主動脈",
+        "上大靜脈",
+        "肺動脈",
+        "肺靜脈"
+      ],
+      "a": 2,
+      "e": "肺動脈將右心室射出的血液輸送至肺部。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400026",
+      "revision": 1,
+      "number": 6,
+      "q": "人體氧氣由肺泡進入血液的主要場所是＿＿。",
+      "o": [
+        "上大靜脈",
+        "肺泡壁微血管",
+        "主動脈",
+        "肝門靜脈"
+      ],
+      "a": 1,
+      "e": "肺泡與微血管間進行氣體擴散交換。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400027",
+      "revision": 1,
+      "number": 7,
+      "q": "體循環的組織微血管中，氧氣主要由＿＿擴散到＿＿。",
+      "o": [
+        "血液；組織細胞",
+        "組織細胞；血液",
+        "淋巴；肺泡",
+        "動脈；肺泡"
+      ],
+      "a": 0,
+      "e": "氧氣從微血管的血液進入需要氧氣的組織細胞。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400028",
+      "revision": 1,
+      "number": 8,
+      "q": "在肺泡進行氣體交換後，血液主要經＿＿返回心臟。",
+      "o": [
+        "肺動脈",
+        "主動脈",
+        "肝門靜脈",
+        "肺靜脈"
+      ],
+      "a": 3,
+      "e": "肺靜脈將充氧後的血液送回左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400029",
+      "revision": 1,
+      "number": 9,
+      "q": "心肌的氧氣與養分主要由＿＿供應。",
+      "o": [
+        "淋巴管",
+        "上大靜脈",
+        "冠狀動脈",
+        "肺靜脈"
+      ],
+      "a": 2,
+      "e": "冠狀動脈供應心臟肌肉本身。",
+      "conceptIds": [
+        "science-7-1-u04-s04-coronary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400030",
+      "revision": 1,
+      "number": 10,
+      "q": "小腸吸收的部分養分先經＿＿送往肝臟處理。",
+      "o": [
+        "冠狀動脈",
+        "肝門靜脈",
+        "肺靜脈",
+        "肺動脈"
+      ],
+      "a": 1,
+      "e": "肝門靜脈將消化道來的血液送往肝臟。",
+      "conceptIds": [
+        "science-7-1-u04-s04-portal"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400031",
+      "revision": 1,
+      "number": 11,
+      "q": "一部分血漿離開微血管進入細胞間隙後，稱為＿＿。",
+      "o": [
+        "組織液",
+        "淋巴結",
+        "抗體",
+        "血小板"
+      ],
+      "a": 0,
+      "e": "微血管滲出的液體在組織間稱為組織液。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400032",
+      "revision": 1,
+      "number": 12,
+      "q": "組織液進入＿＿後，便稱為淋巴。",
+      "o": [
+        "主動脈",
+        "肺泡",
+        "心室",
+        "淋巴管"
+      ],
+      "a": 3,
+      "e": "組織液進入淋巴管後稱為淋巴。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400033",
+      "revision": 1,
+      "number": 13,
+      "q": "淋巴中的病原體可在＿＿受到免疫細胞的清除。",
+      "o": [
+        "膽囊",
+        "肺泡",
+        "淋巴結",
+        "主動脈"
+      ],
+      "a": 2,
+      "e": "淋巴結含有多種免疫細胞並能過濾淋巴。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400034",
+      "revision": 1,
+      "number": 14,
+      "q": "淋巴最後主要回到人體的＿＿系統。",
+      "o": [
+        "神經傳導",
+        "靜脈血液循環",
+        "消化液分泌",
+        "呼吸道氣流"
+      ],
+      "a": 1,
+      "e": "淋巴回流至大靜脈，重新加入血液循環。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400035",
+      "revision": 1,
+      "number": 15,
+      "q": "淋巴管內的＿＿可以幫助防止淋巴逆流。",
+      "o": [
+        "瓣膜",
+        "紅血球",
+        "肺泡",
+        "腸絨毛"
+      ],
+      "a": 0,
+      "e": "較大的淋巴管有瓣膜協助單向流動。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400036",
+      "revision": 1,
+      "number": 16,
+      "q": "完整皮膚的阻擋作用屬於人體的第＿＿道防線。",
+      "o": [
+        "二",
+        "三",
+        "四",
+        "一"
+      ],
+      "a": 3,
+      "e": "皮膚與黏膜的屏障屬第一道防線。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400037",
+      "revision": 1,
+      "number": 17,
+      "q": "病原體進入傷口後，吞噬細胞的作用屬於第＿＿道防線。",
+      "o": [
+        "三",
+        "四",
+        "二",
+        "一"
+      ],
+      "a": 2,
+      "e": "吞噬與發炎反應為非專一性的第二道防線。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400038",
+      "revision": 1,
+      "number": 18,
+      "q": "由特定淋巴球對抗特定抗原的作用屬於第＿＿道防線。",
+      "o": [
+        "四",
+        "三",
+        "一",
+        "二"
+      ],
+      "a": 1,
+      "e": "第三道防線為專一性免疫。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400039",
+      "revision": 1,
+      "number": 19,
+      "q": "受傷部位釋放的＿＿可促進血管擴張及增加通透性。",
+      "o": [
+        "組織胺",
+        "血紅素",
+        "膽汁",
+        "胰島素"
+      ],
+      "a": 0,
+      "e": "組織胺等發炎介質會造成局部血管變化。",
+      "conceptIds": [
+        "science-7-1-u04-s04-inflammation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400040",
+      "revision": 1,
+      "number": 20,
+      "q": "發炎部位出現腫脹，主要與微血管通透性增加，使＿＿滲出有關。",
+      "o": [
+        "氧氣泡",
+        "紅骨髓",
+        "膽汁",
+        "血漿液體"
+      ],
+      "a": 3,
+      "e": "血管通透性上升，液體在組織間累積而腫脹。",
+      "conceptIds": [
+        "science-7-1-u04-s04-inflammation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400041",
+      "revision": 1,
+      "number": 21,
+      "q": "吞噬細胞以細胞膜延伸的＿＿包圍病原體。",
+      "o": [
+        "鞭毛",
+        "角質層",
+        "偽足",
+        "纖毛"
+      ],
+      "a": 2,
+      "e": "吞噬細胞形成偽足包裹病原體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-phagocytosis"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400042",
+      "revision": 1,
+      "number": 22,
+      "q": "可分化成漿細胞並參與體液免疫的是＿＿。",
+      "o": [
+        "心肌細胞",
+        "B淋巴球",
+        "紅血球",
+        "血小板"
+      ],
+      "a": 1,
+      "e": "B細胞活化後可分化為漿細胞與記憶B細胞。",
+      "conceptIds": [
+        "science-7-1-u04-s04-bcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400043",
+      "revision": 1,
+      "number": 23,
+      "q": "分泌大量抗體的細胞稱為＿＿。",
+      "o": [
+        "漿細胞",
+        "紅血球",
+        "纖毛細胞",
+        "血小板"
+      ],
+      "a": 0,
+      "e": "漿細胞由B細胞分化，能分泌抗體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-bcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400044",
+      "revision": 1,
+      "number": 24,
+      "q": "B淋巴球主要在＿＿成熟。",
+      "o": [
+        "胸腺",
+        "胃",
+        "肺泡",
+        "骨髓"
+      ],
+      "a": 3,
+      "e": "B細胞主要在骨髓成熟。",
+      "conceptIds": [
+        "science-7-1-u04-s04-bcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400045",
+      "revision": 1,
+      "number": 25,
+      "q": "T淋巴球主要在＿＿成熟。",
+      "o": [
+        "脾臟",
+        "肝門靜脈",
+        "胸腺",
+        "骨髓"
+      ],
+      "a": 2,
+      "e": "T細胞在胸腺成熟。",
+      "conceptIds": [
+        "science-7-1-u04-s04-tcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400046",
+      "revision": 1,
+      "number": 26,
+      "q": "可針對受病毒感染的細胞發揮殺傷作用的是＿＿。",
+      "o": [
+        "漿細胞",
+        "胞毒性T細胞",
+        "紅血球",
+        "血小板"
+      ],
+      "a": 1,
+      "e": "胞毒性T細胞能辨識並殺死受感染的目標細胞。",
+      "conceptIds": [
+        "science-7-1-u04-s04-tcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400047",
+      "revision": 1,
+      "number": 27,
+      "q": "能引發專一性免疫反應、被免疫系統辨識的物質稱為＿＿。",
+      "o": [
+        "抗原",
+        "抗體",
+        "血紅素",
+        "淋巴"
+      ],
+      "a": 0,
+      "e": "抗原是能被免疫系統辨識並引起免疫反應的物質。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400048",
+      "revision": 1,
+      "number": 28,
+      "q": "與特定抗原結合的專一性蛋白質稱為＿＿。",
+      "o": [
+        "組織液",
+        "組織胺",
+        "血紅素",
+        "抗體"
+      ],
+      "a": 3,
+      "e": "抗體是由漿細胞分泌的免疫球蛋白。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400049",
+      "revision": 1,
+      "number": 29,
+      "q": "第二次接觸相同抗原時，反應通常較快且較強，主要與＿＿有關。",
+      "o": [
+        "肺泡表面張力",
+        "肝糖分解",
+        "免疫記憶",
+        "心室瓣膜"
+      ],
+      "a": 2,
+      "e": "記憶淋巴球促使次級免疫反應加快。",
+      "conceptIds": [
+        "science-7-1-u04-s04-memory"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400050",
+      "revision": 1,
+      "number": 30,
+      "q": "注射現成抗體以迅速提供防護，屬於＿＿免疫。",
+      "o": [
+        "發炎性",
+        "被動",
+        "主動",
+        "先天物理性"
+      ],
+      "a": 1,
+      "e": "現成抗體來自體外，屬被動免疫，通常不建立持久免疫記憶。",
+      "conceptIds": [
+        "science-7-1-u04-s04-immunity"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    }
+  ]
+}
