@@ -86,6 +86,14 @@ Private `chenlijon-dot/Exam-Record` 仍保留既有 GitHub 同步、machine-read
 ├─ 數學
 ├─ 
 
+### 自然七上 Unit 4／4-4 正式題庫（2026-11-14）
+
+- 4-4〈人體的循環系統〉自編題庫已建立於 `chapter-bank/science/7-1/unit-04/section-04/`：簡易 `easy.json` 20 題、中等 `medium.json` 30 題（填充式四選一）、困難 `hard.json` 50 題，共 100 題。
+- 題目以教材 p.223～233 為依據，涵蓋體／肺循環、淋巴回流、三道防線、發炎吞噬作用、B／T 細胞、初／次級免疫、主／被動免疫及過敏反應。全部為自編題，非原書或學校原題。
+- 正式題設 `questionId`、`revision:1`、`conceptIds`、四選一、解答及詳解，標示 `sourceType:practice-generated` 與 `lifecycle:active`。
+- `exam-science-unit4-4.js` 共用既有測驗引擎、百分比計分及作答歷程；`exam-navigation-fix.js` 載入模組，`exam-catalog.js` 啟用 4-4 入口。
+- GitHub 遠端 JSON／程式檔可回讀，已完成題數、ID 唯一性、選項與答案完整性檢查。網站瀏覽器實際交卷、Firebase 寫回與 Pages 部署仍需實測，題目內容尚未經教師逐題獨立審核。
+
 ### 自然七上 Unit 4／4-3 正式題庫（2026-11-14）
 
 - 4-3〈人體心血管系統的組成〉自編題庫已接入 `chapter-bank/science/7-1/unit-04/section-03/`：`easy.json` 20 題、`medium.json` 30 題（挖空四選一）、`hard.json` 50 題，共 100 題。
