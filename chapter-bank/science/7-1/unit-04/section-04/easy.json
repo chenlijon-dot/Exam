@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-4 人體的循環系統｜簡易",
+    "difficulty": "science-7-1-u04-s04-easy",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-04",
+    "unit": "4-4 人體的循環系統",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "questionCount": 20,
+    "answerableQuestionCount": 20,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "4-4 教材 p.223–233；AI 自編及教材核對，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "AI 自編練習，未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261114044400001",
+      "revision": 1,
+      "number": 1,
+      "q": "人體的體循環由哪一個心臟腔室開始？",
+      "o": [
+        "右心房",
+        "左心室",
+        "右心室",
+        "左心房"
+      ],
+      "a": 1,
+      "e": "體循環由左心室將血液送入主動脈開始。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400002",
+      "revision": 1,
+      "number": 2,
+      "q": "肺循環由哪一個心臟腔室開始？",
+      "o": [
+        "右心室",
+        "左心室",
+        "右心房",
+        "左心房"
+      ],
+      "a": 0,
+      "e": "右心室把血液送進肺動脈，展開肺循環。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400003",
+      "revision": 1,
+      "number": 3,
+      "q": "體循環的血液最後回到哪個心臟腔室？",
+      "o": [
+        "左心房",
+        "右心室",
+        "左心室",
+        "右心房"
+      ],
+      "a": 3,
+      "e": "體循環經上、下大靜脈回到右心房。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400004",
+      "revision": 1,
+      "number": 4,
+      "q": "肺循環的血液最後回到哪個心臟腔室？",
+      "o": [
+        "右心室",
+        "左心室",
+        "左心房",
+        "右心房"
+      ],
+      "a": 2,
+      "e": "肺靜脈把肺部充氧後的血液送回左心房。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400005",
+      "revision": 1,
+      "number": 5,
+      "q": "離開左心室的血液首先進入哪條大血管？",
+      "o": [
+        "上大靜脈",
+        "主動脈",
+        "肺動脈",
+        "肺靜脈"
+      ],
+      "a": 1,
+      "e": "左心室透過主動脈將血液送往全身。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400006",
+      "revision": 1,
+      "number": 6,
+      "q": "由右心室送往肺臟的血液通過哪條血管？",
+      "o": [
+        "肺動脈",
+        "肺靜脈",
+        "主動脈",
+        "下大靜脈"
+      ],
+      "a": 0,
+      "e": "肺動脈由右心室通往肺臟。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400007",
+      "revision": 1,
+      "number": 7,
+      "q": "人體血液與組織細胞主要在哪裡交換養分和廢物？",
+      "o": [
+        "主動脈",
+        "大靜脈",
+        "心房",
+        "組織微血管"
+      ],
+      "a": 3,
+      "e": "組織微血管的管壁薄，利於物質交換。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400008",
+      "revision": 1,
+      "number": 8,
+      "q": "人體血液與肺泡主要交換哪兩種氣體？",
+      "o": [
+        "水蒸氣與氮氣",
+        "氫氣與氧氣",
+        "氧氣與二氧化碳",
+        "氮氣與氦氣"
+      ],
+      "a": 2,
+      "e": "肺泡微血管主要進行氧氣與二氧化碳交換。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400009",
+      "revision": 1,
+      "number": 9,
+      "q": "組織液進入淋巴管後稱為什麼？",
+      "o": [
+        "胃液",
+        "淋巴",
+        "血漿",
+        "血清"
+      ],
+      "a": 1,
+      "e": "組織間液體進入淋巴管後稱為淋巴。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400010",
+      "revision": 1,
+      "number": 10,
+      "q": "淋巴結在人體防禦上最主要的作用是什麼？",
+      "o": [
+        "協助清除淋巴中的病原體",
+        "直接幫紅血球運氧",
+        "分泌消化液",
+        "製造膽汁"
+      ],
+      "a": 0,
+      "e": "淋巴結有免疫細胞，可協助過濾並清除病原體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400011",
+      "revision": 1,
+      "number": 11,
+      "q": "淋巴最終主要回流進入哪一種血管？",
+      "o": [
+        "動脈",
+        "冠狀動脈",
+        "小腸微血管",
+        "靜脈"
+      ],
+      "a": 3,
+      "e": "淋巴經淋巴管回到靜脈系統。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400012",
+      "revision": 1,
+      "number": 12,
+      "q": "下列哪一個屬於人體第一道防線？",
+      "o": [
+        "記憶B細胞",
+        "胞毒性T細胞",
+        "完整的皮膚",
+        "特定抗體"
+      ],
+      "a": 2,
+      "e": "皮膚及黏膜是阻止病原體進入的第一道防線。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400013",
+      "revision": 1,
+      "number": 13,
+      "q": "傷口出現紅、腫、熱、痛通常是何種反應？",
+      "o": [
+        "凝固作用",
+        "發炎反應",
+        "光合作用",
+        "蒸散作用"
+      ],
+      "a": 1,
+      "e": "發炎反應常見紅、腫、熱、痛等徵象。",
+      "conceptIds": [
+        "science-7-1-u04-s04-inflammation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400014",
+      "revision": 1,
+      "number": 14,
+      "q": "下列哪一種白血球可透過吞噬作用清除病原體？",
+      "o": [
+        "巨噬細胞",
+        "紅血球",
+        "血小板",
+        "心肌細胞"
+      ],
+      "a": 0,
+      "e": "巨噬細胞是具有吞噬能力的免疫細胞。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400015",
+      "revision": 1,
+      "number": 15,
+      "q": "第三道防線主要具有什麼特性？",
+      "o": [
+        "完全不需要免疫細胞",
+        "只靠皮膚角質層",
+        "只能由胃酸完成",
+        "對特定抗原具專一性"
+      ],
+      "a": 3,
+      "e": "第三道防線由淋巴球參與，能針對特定抗原作用。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400016",
+      "revision": 1,
+      "number": 16,
+      "q": "可以分化成漿細胞並產生抗體的是哪種細胞？",
+      "o": [
+        "血小板",
+        "心肌細胞",
+        "B淋巴球",
+        "紅血球"
+      ],
+      "a": 2,
+      "e": "B細胞活化後可分化為分泌抗體的漿細胞。",
+      "conceptIds": [
+        "science-7-1-u04-s04-bcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400017",
+      "revision": 1,
+      "number": 17,
+      "q": "哪一種細胞主要能直接攻擊受病毒感染的細胞？",
+      "o": [
+        "心室肌細胞",
+        "胞毒性T細胞",
+        "成熟紅血球",
+        "血小板"
+      ],
+      "a": 1,
+      "e": "胞毒性T細胞可殺死受感染的目標細胞。",
+      "conceptIds": [
+        "science-7-1-u04-s04-tcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400018",
+      "revision": 1,
+      "number": 18,
+      "q": "疫苗主要利用人體免疫系統的哪一種特性？",
+      "o": [
+        "記憶性",
+        "呼吸運動",
+        "蒸散作用",
+        "血壓下降"
+      ],
+      "a": 0,
+      "e": "疫苗誘發免疫記憶，以利日後快速辨識相同抗原。",
+      "conceptIds": [
+        "science-7-1-u04-s04-memory"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400019",
+      "revision": 1,
+      "number": 19,
+      "q": "下列何者是主動免疫的典型例子？",
+      "o": [
+        "注射現成抗體",
+        "輸入紅血球",
+        "補充生理食鹽水",
+        "接種疫苗"
+      ],
+      "a": 3,
+      "e": "接種疫苗促使自身免疫系統產生反應與記憶，屬主動免疫。",
+      "conceptIds": [
+        "science-7-1-u04-s04-immunity"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400020",
+      "revision": 1,
+      "number": 20,
+      "q": "可能引起打噴嚏、流鼻水等過敏反應的物質稱為什麼？",
+      "o": [
+        "抗體",
+        "血小板",
+        "過敏原",
+        "血紅素"
+      ],
+      "a": 2,
+      "e": "花粉與塵蟎等物質可能成為過敏原。",
+      "conceptIds": [
+        "science-7-1-u04-s04-allergy"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    }
+  ]
+}
