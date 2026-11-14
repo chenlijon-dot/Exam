@@ -1,0 +1,1028 @@
+{
+  "schemaVersion": 3,
+  "exam": {
+    "title": "4-4 人體的循環系統｜困難",
+    "difficulty": "science-7-1-u04-s04-hard",
+    "sourceType": "practice-generated",
+    "subject": "science",
+    "subjectLabel": "自然",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "unit-04",
+    "unitGroupLabel": "單元 4 生物體內的運輸作用",
+    "section": "section-04",
+    "unit": "4-4 人體的循環系統",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "questionCount": 50,
+    "answerableQuestionCount": 50,
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "lifecycle": "active",
+    "answerAuthority": "4-4 教材 p.223–233；AI 自編與教材核對，非官方答案",
+    "reviewStatus": "assistant-reviewed-against-available-textbook",
+    "sourceNote": "AI 自編練習，未經教師逐題獨立審核。"
+  },
+  "questions": [
+    {
+      "questionId": "261114044400051",
+      "revision": 1,
+      "number": 1,
+      "q": "血液從左心室送往手指組織，第一條大血管應是？",
+      "o": [
+        "上大靜脈",
+        "主動脈",
+        "肺動脈",
+        "肺靜脈"
+      ],
+      "a": 1,
+      "e": "體循環由左心室經主動脈輸送血液。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400052",
+      "revision": 1,
+      "number": 2,
+      "q": "全身組織回流的血液首先抵達哪個心臟腔室？",
+      "o": [
+        "右心室",
+        "左心室",
+        "右心房",
+        "左心房"
+      ],
+      "a": 2,
+      "e": "體靜脈回流右心房。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400053",
+      "revision": 1,
+      "number": 3,
+      "q": "右心室收縮後血液首先進入？",
+      "o": [
+        "主動脈",
+        "肺靜脈",
+        "下大靜脈",
+        "肺動脈"
+      ],
+      "a": 3,
+      "e": "右心室連接肺動脈。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400054",
+      "revision": 1,
+      "number": 4,
+      "q": "肺部完成氣體交換後，前往左心室的正確路徑為？",
+      "o": [
+        "肺靜脈→左心房→左心室",
+        "肺動脈→右心房→左心室",
+        "主動脈→右心室→左心室",
+        "大靜脈→右心房→左心室"
+      ],
+      "a": 0,
+      "e": "肺靜脈將血送到左心房再進左心室。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400055",
+      "revision": 1,
+      "number": 5,
+      "q": "由左心室出發經全身再返回左心室，途中必定依序通過？",
+      "o": [
+        "肺靜脈→右心房→主動脈→左心室",
+        "右心房→右心室→肺微血管→左心房",
+        "左心房→肺動脈→右心室→右心房",
+        "右心室→主動脈→肺靜脈→左心房"
+      ],
+      "a": 1,
+      "e": "體循環回右心房後經右心室走肺循環。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400056",
+      "revision": 1,
+      "number": 6,
+      "q": "關於體循環與肺循環，何者合理？",
+      "o": [
+        "肺循環只在運動時運作",
+        "兩者血液完全不相通",
+        "兩者同時運作並互相銜接",
+        "體循環只在白天運作"
+      ],
+      "a": 2,
+      "e": "雙循環透過心臟連成整體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-systemic"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400057",
+      "revision": 1,
+      "number": 7,
+      "q": "哪個例子反駁「動脈一定是充氧血」？",
+      "o": [
+        "主動脈輸出血液",
+        "微血管可交換物質",
+        "肺靜脈回左心房",
+        "肺動脈含氧較少"
+      ],
+      "a": 3,
+      "e": "動脈依血流離心方向定義，肺動脈通常含氧較少。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400058",
+      "revision": 1,
+      "number": 8,
+      "q": "哪個例子反駁「靜脈一定是缺氧血」？",
+      "o": [
+        "肺靜脈含氧較多",
+        "大靜脈回右心房",
+        "靜脈具有瓣膜",
+        "微血管管壁較薄"
+      ],
+      "a": 0,
+      "e": "肺靜脈含氧較多，靜脈按回心方向命名。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400059",
+      "revision": 1,
+      "number": 9,
+      "q": "左、右心室主要泵血目標分別為？",
+      "o": [
+        "兩者只往肺",
+        "左往全身、右往肺",
+        "左往肺、右往全身",
+        "兩者只往肝臟"
+      ],
+      "a": 1,
+      "e": "左心室負責體循環，右心室負責肺循環。",
+      "conceptIds": [
+        "science-7-1-u04-s04-pulmonary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400060",
+      "revision": 1,
+      "number": 10,
+      "q": "肺微血管與手臂微血管的氧氣交換方向最合理的是？",
+      "o": [
+        "兩處都只把氧氣送入血液",
+        "兩處皆無法交換氣體",
+        "肺部氧氣進血、手臂血液送氧至細胞",
+        "肺部血液釋出氧氣、手臂細胞送氧進血"
+      ],
+      "a": 2,
+      "e": "肺泡提供氧氣給血液，組織由血液取得氧氣。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400061",
+      "revision": 1,
+      "number": 11,
+      "q": "肺泡壁氣體交換受阻，最直接影響？",
+      "o": [
+        "骨骼肌形成肌腱",
+        "胃部吸收蛋白質",
+        "肝臟製造膽汁",
+        "血液攝取氧氣的效率"
+      ],
+      "a": 3,
+      "e": "氣體交換障礙降低肺循環充氧效率。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400062",
+      "revision": 1,
+      "number": 12,
+      "q": "組織細胞持續呼吸作用時，氣體通常如何交換？",
+      "o": [
+        "氧氣從血入細胞，二氧化碳反向",
+        "氧氣從細胞入血，二氧化碳反向",
+        "氧氣和二氧化碳全從血入細胞",
+        "二氧化碳只能沿動脈流動"
+      ],
+      "a": 0,
+      "e": "細胞消耗氧氣、產生二氧化碳，形成濃度差。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400063",
+      "revision": 1,
+      "number": 13,
+      "q": "小腸吸收葡萄糖後，先送至肝臟的血管主要是？",
+      "o": [
+        "肺靜脈",
+        "肝門靜脈",
+        "肺動脈",
+        "冠狀動脈"
+      ],
+      "a": 1,
+      "e": "肝門循環先把消化道血液送往肝臟。",
+      "conceptIds": [
+        "science-7-1-u04-s04-portal"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400064",
+      "revision": 1,
+      "number": 14,
+      "q": "部分葡萄糖經肝門靜脈送到肝臟後可能變為？",
+      "o": [
+        "肺泡",
+        "組織胺",
+        "肝糖",
+        "抗體"
+      ],
+      "a": 2,
+      "e": "肝臟可將葡萄糖合成肝糖。",
+      "conceptIds": [
+        "science-7-1-u04-s04-portal"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400065",
+      "revision": 1,
+      "number": 15,
+      "q": "肝臟微血管內血液回心途徑較合理的是？",
+      "o": [
+        "肺靜脈→右心房→左心室",
+        "肝門靜脈→肺動脈→左心房",
+        "主動脈→肝門靜脈→右心室",
+        "肝靜脈→下大靜脈→右心房"
+      ],
+      "a": 3,
+      "e": "肝靜脈接下大靜脈，回到右心房。",
+      "conceptIds": [
+        "science-7-1-u04-s04-portal"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400066",
+      "revision": 1,
+      "number": 16,
+      "q": "供應心肌本身氧氣和養分的主要血管是？",
+      "o": [
+        "冠狀動脈",
+        "肺靜脈",
+        "肝門靜脈",
+        "淋巴管"
+      ],
+      "a": 0,
+      "e": "冠狀動脈直接供血心肌。",
+      "conceptIds": [
+        "science-7-1-u04-s04-coronary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400067",
+      "revision": 1,
+      "number": 17,
+      "q": "冠狀動脈供血不足最直接影響？",
+      "o": [
+        "胃酸形成抗體",
+        "心肌細胞獲得氧氣的量",
+        "皮膚角質增生",
+        "肺泡製造紅血球"
+      ],
+      "a": 1,
+      "e": "心肌靠冠狀循環供應氧氣與養分。",
+      "conceptIds": [
+        "science-7-1-u04-s04-coronary"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400068",
+      "revision": 1,
+      "number": 18,
+      "q": "哪種說法最正確描述淋巴形成？",
+      "o": [
+        "肺泡氣體進入淋巴管稱淋巴",
+        "抗體溶於胃液後稱淋巴",
+        "組織液進入淋巴管後稱為淋巴",
+        "紅血球進入淋巴管後變淋巴"
+      ],
+      "a": 2,
+      "e": "淋巴為組織液進入淋巴管後的液體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400069",
+      "revision": 1,
+      "number": 19,
+      "q": "血液液體成分滲出後形成淋巴的順序是？",
+      "o": [
+        "淋巴→血小板→肺泡",
+        "紅血球→胃液→組織液",
+        "抗體→血漿→肺動脈",
+        "血漿部分滲出→組織液→淋巴"
+      ],
+      "a": 3,
+      "e": "部分血漿先形成組織液，後進入淋巴管。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400070",
+      "revision": 1,
+      "number": 20,
+      "q": "淋巴管回流若遭阻礙，組織可能出現？",
+      "o": [
+        "液體蓄積與腫脹",
+        "紅血球變成抗體",
+        "微血管全部消失",
+        "肺泡停止運輸氮氣"
+      ],
+      "a": 0,
+      "e": "淋巴系統回收組織間多餘液體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400071",
+      "revision": 1,
+      "number": 21,
+      "q": "淋巴結內免疫細胞主要可協助？",
+      "o": [
+        "將氧氣製成葡萄糖",
+        "辨識並清除淋巴中的病原體",
+        "產生心肌收縮",
+        "分泌膽汁"
+      ],
+      "a": 1,
+      "e": "淋巴結參與免疫防禦。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400072",
+      "revision": 1,
+      "number": 22,
+      "q": "促進淋巴單向回流的重要組合為？",
+      "o": [
+        "紅血球收縮與肝糖",
+        "血小板凝血與肺泡擴張",
+        "肌肉收縮、呼吸運動與瓣膜",
+        "胃酸、膽汁與唾液"
+      ],
+      "a": 2,
+      "e": "肌肉及呼吸活動推進淋巴，瓣膜減少逆流。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400073",
+      "revision": 1,
+      "number": 23,
+      "q": "頸部淋巴結腫大時最謹慎的判斷是？",
+      "o": [
+        "一定是肺循環中斷",
+        "一定是肝糖過多",
+        "證明動脈血全部缺氧",
+        "可能有免疫反應，不能單憑此確定病因"
+      ],
+      "a": 3,
+      "e": "淋巴結腫大原因多元，不宜僅據此診斷。",
+      "conceptIds": [
+        "science-7-1-u04-s04-lymph"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400074",
+      "revision": 1,
+      "number": 24,
+      "q": "病原體尚未穿過完整皮膚，最先發揮防禦的是？",
+      "o": [
+        "皮膚及黏膜屏障",
+        "記憶B細胞製造大量抗體",
+        "胞毒性T細胞攻擊皮膚",
+        "紅血球吞噬病原體"
+      ],
+      "a": 0,
+      "e": "第一道防線已存在而可立即阻擋病原體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400075",
+      "revision": 1,
+      "number": 25,
+      "q": "鼻毛、纖毛、黏液共同的防禦功能為何？",
+      "o": [
+        "讓靜脈改成動脈",
+        "攔截並移除外來微粒",
+        "生成肝糖",
+        "分泌血紅素"
+      ],
+      "a": 1,
+      "e": "呼吸道屏障協助排除異物。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400076",
+      "revision": 1,
+      "number": 26,
+      "q": "胃酸抑制部分微生物，屬於哪種防禦？",
+      "o": [
+        "肺循環作用",
+        "抗體製造",
+        "第一道化學性防禦",
+        "第三道細胞免疫"
+      ],
+      "a": 2,
+      "e": "胃酸是非專一性化學屏障。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400077",
+      "revision": 1,
+      "number": 27,
+      "q": "傷口處吞噬細胞聚集並清除病原體，主要屬於？",
+      "o": [
+        "只屬第三道專一性防線",
+        "只屬被動免疫",
+        "只屬淋巴回流",
+        "第二道非專一性防線"
+      ],
+      "a": 3,
+      "e": "吞噬與發炎是先天免疫的重要作用。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400078",
+      "revision": 1,
+      "number": 28,
+      "q": "發炎部位變紅變熱，多與什麼有關？",
+      "o": [
+        "局部血管擴張與血流增加",
+        "血小板直接製造熱量",
+        "紅血球全部變抗體",
+        "肺泡立即消失"
+      ],
+      "a": 0,
+      "e": "局部血流增加常使患部紅與熱。",
+      "conceptIds": [
+        "science-7-1-u04-s04-inflammation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400079",
+      "revision": 1,
+      "number": 29,
+      "q": "發炎患部出現腫脹，最可能因為？",
+      "o": [
+        "肝門靜脈直接連接皮膚",
+        "微血管通透性上升、液體滲入組織",
+        "氧氣全部凝結成固體",
+        "血小板變成淋巴結"
+      ],
+      "a": 1,
+      "e": "組織液增加會形成局部腫脹。",
+      "conceptIds": [
+        "science-7-1-u04-s04-inflammation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400080",
+      "revision": 1,
+      "number": 30,
+      "q": "組織胺釋出後常使周圍血管發生哪種變化？",
+      "o": [
+        "直接轉化為淋巴球",
+        "停止所有物質交換",
+        "擴張且通透性增加",
+        "立即完全閉塞"
+      ],
+      "a": 2,
+      "e": "組織胺等介質促進局部發炎血管反應。",
+      "conceptIds": [
+        "science-7-1-u04-s04-inflammation"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400081",
+      "revision": 1,
+      "number": 31,
+      "q": "吞噬細胞以偽足包住細菌後，通常會？",
+      "o": [
+        "把細菌送進左心房",
+        "將細菌變成紅血球",
+        "直接形成心臟瓣膜",
+        "形成吞噬體並與溶體融合"
+      ],
+      "a": 3,
+      "e": "吞噬體可與溶體融合並分解病原體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-phagocytosis"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400082",
+      "revision": 1,
+      "number": 32,
+      "q": "比較吞噬與抗體結合，哪項正確？",
+      "o": [
+        "吞噬是先天防禦之一，抗體具有專一性",
+        "兩者都只能由血小板執行",
+        "吞噬作用一定需要先接種疫苗",
+        "抗體由紅血球產生"
+      ],
+      "a": 0,
+      "e": "吞噬細胞能清除多種異物，抗體則辨識特定抗原。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400083",
+      "revision": 1,
+      "number": 33,
+      "q": "初次遇到病原體時可立即提供屏障的是？",
+      "o": [
+        "尚未活化的漿細胞",
+        "皮膚與黏膜",
+        "尚未形成的記憶細胞",
+        "剛開始製造的特定抗體"
+      ],
+      "a": 1,
+      "e": "先天屏障無須等待建立特定免疫記憶。",
+      "conceptIds": [
+        "science-7-1-u04-s04-innate"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400084",
+      "revision": 1,
+      "number": 34,
+      "q": "同一種病原體第二次入侵反應通常較快，因為？",
+      "o": [
+        "肺泡製造抗體",
+        "胃酸永久消失",
+        "保留能辨識相同抗原的記憶細胞",
+        "紅血球能記住病原體"
+      ],
+      "a": 2,
+      "e": "免疫記憶可使次級反應更迅速。",
+      "conceptIds": [
+        "science-7-1-u04-s04-memory"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400085",
+      "revision": 1,
+      "number": 35,
+      "q": "抗原與抗體的功能配對何者正確？",
+      "o": [
+        "抗原由心臟瓣膜製造",
+        "抗體是一種血管",
+        "抗原與抗體都屬血小板",
+        "抗原可引發免疫辨識；抗體能專一性結合抗原"
+      ],
+      "a": 3,
+      "e": "抗原是辨識對象，抗體是專一性免疫蛋白。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400086",
+      "revision": 1,
+      "number": 36,
+      "q": "針對甲抗原的抗體是否一定有效結合所有乙抗原？",
+      "o": [
+        "不一定，抗體有專一性",
+        "一定，所有抗體完全相同",
+        "一定，抗體只是脂質",
+        "一定，因為血液只有一種抗原"
+      ],
+      "a": 0,
+      "e": "抗體對應特定抗原，不能任意通用。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400087",
+      "revision": 1,
+      "number": 37,
+      "q": "B細胞活化後，何者可導致抗體分泌量上升？",
+      "o": [
+        "肺泡產生B細胞",
+        "分化為漿細胞",
+        "紅血球變為T細胞",
+        "血小板直接增殖"
+      ],
+      "a": 1,
+      "e": "漿細胞可大量分泌抗體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-bcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400088",
+      "revision": 1,
+      "number": 38,
+      "q": "直接清除被病毒感染的細胞，最具代表性的細胞是？",
+      "o": [
+        "血小板",
+        "心肌細胞",
+        "胞毒性T細胞",
+        "成熟紅血球"
+      ],
+      "a": 2,
+      "e": "胞毒性T細胞參與專一性細胞殺傷。",
+      "conceptIds": [
+        "science-7-1-u04-s04-tcell"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400089",
+      "revision": 1,
+      "number": 39,
+      "q": "B細胞與T細胞成熟部位配對何者正確？",
+      "o": [
+        "B：胸腺；T：骨髓",
+        "B：肺泡；T：胃",
+        "B：主動脈；T：心室",
+        "B：骨髓；T：胸腺"
+      ],
+      "a": 3,
+      "e": "B細胞在骨髓成熟，T細胞在胸腺成熟。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400090",
+      "revision": 1,
+      "number": 40,
+      "q": "體液免疫與細胞免疫的合理配對為？",
+      "o": [
+        "B細胞抗體反應；T細胞相關殺傷",
+        "紅血球運氧；血小板凝血",
+        "心房收縮；心室收縮",
+        "主動脈；肺靜脈"
+      ],
+      "a": 0,
+      "e": "B細胞與抗體主導體液免疫，T細胞參與細胞免疫。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400091",
+      "revision": 1,
+      "number": 41,
+      "q": "相同抗原第二次入侵，抗體反應通常會？",
+      "o": [
+        "完全不受記憶細胞影響",
+        "比初次更快且強",
+        "一定不產生抗體",
+        "比初次更慢且弱"
+      ],
+      "a": 1,
+      "e": "次級免疫常因記憶細胞而加速、增強。",
+      "conceptIds": [
+        "science-7-1-u04-s04-memory"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400092",
+      "revision": 1,
+      "number": 42,
+      "q": "抗體曲線第一次約8天達高峰、第二次約3天，最合理推論？",
+      "o": [
+        "第二次根本沒有免疫反應",
+        "抗體只由紅血球產生",
+        "第二次反應較快，符合免疫記憶",
+        "第一次反應較快"
+      ],
+      "a": 2,
+      "e": "再次接觸相同抗原可加快抗體反應。",
+      "conceptIds": [
+        "science-7-1-u04-s04-memory"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400093",
+      "revision": 1,
+      "number": 43,
+      "q": "疫苗接種與現成免疫血清分別通常屬？",
+      "o": [
+        "被動免疫與主動免疫",
+        "都只屬第一道防線",
+        "都不涉及抗體",
+        "主動免疫與被動免疫"
+      ],
+      "a": 3,
+      "e": "疫苗促使自身建立防禦，現成抗體提供被動保護。",
+      "conceptIds": [
+        "science-7-1-u04-s04-immunity"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400094",
+      "revision": 1,
+      "number": 44,
+      "q": "需要立刻提供特定抗體時，哪種方式通常較快？",
+      "o": [
+        "給予適當現成抗體",
+        "從零開始等待疫苗誘導",
+        "單靠皮膚角質層",
+        "增加紅血球數量"
+      ],
+      "a": 0,
+      "e": "被動免疫可較快提供現成抗體。",
+      "conceptIds": [
+        "science-7-1-u04-s04-immunity"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400095",
+      "revision": 1,
+      "number": 45,
+      "q": "接種疫苗後能較快應對相同抗原，主要因為？",
+      "o": [
+        "淋巴管停止回流",
+        "建立相關免疫記憶",
+        "肺動脈變成淋巴管",
+        "所有紅血球產生抗體"
+      ],
+      "a": 1,
+      "e": "疫苗刺激免疫系統形成記憶。",
+      "conceptIds": [
+        "science-7-1-u04-s04-immunity"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400096",
+      "revision": 1,
+      "number": 46,
+      "q": "注射現成抗體後保護效果逐漸消失，通常因為？",
+      "o": [
+        "紅血球失去細胞核",
+        "肺循環永久停止",
+        "外來抗體逐漸代謝且未建立持久記憶",
+        "外來抗體永久自我複製"
+      ],
+      "a": 2,
+      "e": "被動免疫通常較短暫且無持久記憶。",
+      "conceptIds": [
+        "science-7-1-u04-s04-immunity"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400097",
+      "revision": 1,
+      "number": 47,
+      "q": "花粉季反覆打噴嚏但沒有感染，較可能是？",
+      "o": [
+        "肺循環停止",
+        "心室突然長出淋巴結",
+        "肝糖完全耗盡",
+        "對花粉的過敏反應"
+      ],
+      "a": 3,
+      "e": "花粉可成為過敏原並引發免疫反應。",
+      "conceptIds": [
+        "science-7-1-u04-s04-allergy"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400098",
+      "revision": 1,
+      "number": 48,
+      "q": "相同抗原再次進入體內，反應事件的順序何者合理？",
+      "o": [
+        "抗原刺激→記憶細胞啟動→抗體迅速增加",
+        "抗體增加→抗原首次出現→記憶細胞消失",
+        "血小板先凝血→肺泡形成抗體",
+        "心臟停止→淋巴球形成肺泡"
+      ],
+      "a": 0,
+      "e": "記憶淋巴球在相同抗原刺激後促進快速反應。",
+      "conceptIds": [
+        "science-7-1-u04-s04-memory"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400099",
+      "revision": 1,
+      "number": 49,
+      "q": "第一道與第三道防線的比較何者合理？",
+      "o": [
+        "兩者都不涉及免疫",
+        "第一道阻擋病原體；第三道辨識特定抗原",
+        "第一道完全靠抗體製造",
+        "第三道只靠皮膚角質"
+      ],
+      "a": 1,
+      "e": "第一道是非專一性屏障，第三道為專一性防禦。",
+      "conceptIds": [
+        "science-7-1-u04-s04-adaptive"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261114044400100",
+      "revision": 1,
+      "number": 50,
+      "q": "某人體循環運送氧氣至腿部，氣體交換主要發生在哪裡？",
+      "o": [
+        "主動脈瓣膜",
+        "右心室",
+        "腿部組織微血管",
+        "左心房"
+      ],
+      "a": 2,
+      "e": "組織微血管壁薄且面積大，適合物質交換。",
+      "conceptIds": [
+        "science-7-1-u04-s04-exchange"
+      ],
+      "sourceType": "practice-generated",
+      "answerVerified": true,
+      "lifecycle": "active"
+    }
+  ]
+}
