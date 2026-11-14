@@ -240,7 +240,7 @@
         { key: 'science-7-1-4-1', code: '4-1', title: '植物的維管束', enabled: true, desc: '自編簡易20題、中等挖空30題、困難50題；提供詳解及錯題追蹤' },
         { key: 'science-7-1-4-2', code: '4-2', title: '蒸散作用與養分運輸', enabled: true, desc: '自編簡易20題、中等挖空30題、困難50題；包含芹菜實驗與詳解' },
         { key: 'science-7-1-4-3', code: '4-3', title: '人體心血管系統的組成', enabled: true, desc: '自編簡易20題、中等填充式30題、困難50題；附逐題詳解與錯題追蹤' },
-        { key: 'science-7-1-4-4', code: '4-4', title: '人體的循環系統', enabled: false },
+        { key: 'science-7-1-4-4', code: '4-4', title: '人體的循環系統', enabled: true, desc: '自編簡易20題、中等挖空30題、困難50題；涵蓋循環路徑、淋巴與免疫，附詳解及錯題追蹤' },
         { key: 'science-7-1-core-4', code: '核心素養', title: '人體的專一性防禦作用', enabled: false, type: 'literacy' }
       ]
     },
