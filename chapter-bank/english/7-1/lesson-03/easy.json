@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-03-easy",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 3",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 3｜Let’s Get Some Ideas from RoomGPT｜簡易",
+    "subtitle": "20 題｜字彙、文法、情境與閱讀",
+    "unit": "英文七上｜Lesson 3",
+    "difficulty": "english-7-1-lesson-03-easy",
+    "difficultyLabel": "簡易",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依115學年度康軒版國中英文第一冊Lesson 3 p.41–54 教材辨識檔與教材知識庫自編；非官方試題。"
+  },
+  "questions": [
+    {
+      "questionId": "261115130000001",
+      "revision": 1,
+      "number": 1,
+      "section": "詞彙與結構",
+      "q": "Where do you sleep at night?",
+      "o": [
+        "bedroom",
+        "bathroom",
+        "kitchen",
+        "dining room"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-rooms"
+      ],
+      "e": "bedroom 是臥室。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000002",
+      "revision": 1,
+      "number": 2,
+      "q": "Where do people usually take a shower?",
+      "o": [
+        "dining room",
+        "bathroom",
+        "bedroom",
+        "living room"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-rooms"
+      ],
+      "e": "bathroom 是浴室。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000003",
+      "revision": 1,
+      "number": 3,
+      "q": "We eat dinner in the _____.",
+      "o": [
+        "dining room",
+        "bedroom",
+        "bathroom",
+        "garage"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-rooms"
+      ],
+      "e": "dining room 是餐廳。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000004",
+      "revision": 1,
+      "number": 4,
+      "q": "We watch TV together in the _____.",
+      "o": [
+        "bathroom",
+        "living room",
+        "kitchen",
+        "bedroom"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-rooms"
+      ],
+      "e": "living room 是客廳。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000005",
+      "revision": 1,
+      "number": 5,
+      "q": "My mother cooks dinner in the _____.",
+      "o": [
+        "bedroom",
+        "bathroom",
+        "kitchen",
+        "living room"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-rooms"
+      ],
+      "e": "kitchen 是廚房。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000006",
+      "revision": 1,
+      "number": 6,
+      "q": "The ball is _____ the box. (球在箱子裡)",
+      "o": [
+        "on",
+        "in",
+        "under",
+        "behind"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "in 表示在……裡面。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000007",
+      "revision": 1,
+      "number": 7,
+      "q": "The book is _____ the desk. (書在桌上)",
+      "o": [
+        "under",
+        "between",
+        "on",
+        "behind"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "on 表示在表面上。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000008",
+      "revision": 1,
+      "number": 8,
+      "q": "The cat is _____ the chair. (貓在椅子下方)",
+      "o": [
+        "under",
+        "near",
+        "on",
+        "in front of"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "under 表示在……下方。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000009",
+      "revision": 1,
+      "number": 9,
+      "q": "The school is _____ my house. (學校在我家附近)",
+      "o": [
+        "between",
+        "near",
+        "on",
+        "in"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "near 表示附近。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000010",
+      "revision": 1,
+      "number": 10,
+      "q": "The tree is _____ the house. (樹在房屋後方)",
+      "o": [
+        "in",
+        "behind",
+        "on",
+        "under"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "behind 表示在後方。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000011",
+      "revision": 1,
+      "number": 11,
+      "q": "The bank is _____ the library and the park.",
+      "o": [
+        "under",
+        "between",
+        "on",
+        "in"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "between A and B 表示位於兩者之間。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000012",
+      "revision": 1,
+      "number": 12,
+      "q": "_____ is the phone? It is on the table.",
+      "o": [
+        "Who",
+        "What",
+        "Where",
+        "How"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "Where 用於詢問位置。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000013",
+      "revision": 1,
+      "number": 13,
+      "q": "Where _____ the books?",
+      "o": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "books 是複數，搭配 are。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000014",
+      "revision": 1,
+      "number": 14,
+      "q": "Where is the bag? _____ under the desk.",
+      "o": [
+        "They're",
+        "It's",
+        "I'm",
+        "We're"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "the bag 為單數，回答 It's。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000015",
+      "revision": 1,
+      "number": 15,
+      "q": "_____ quiet, please.",
+      "o": [
+        "Be",
+        "Is",
+        "Are",
+        "Being"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-imperatives"
+      ],
+      "e": "祈使句用原形動詞 Be 開頭。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000016",
+      "revision": 1,
+      "number": 16,
+      "q": "_____ run in the room.",
+      "o": [
+        "Doesn't",
+        "Don't",
+        "Isn't",
+        "Not"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-imperatives"
+      ],
+      "e": "否定祈使句以 Don't + 原形動詞。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000017",
+      "revision": 1,
+      "number": 17,
+      "q": "Let's _____ to the park.",
+      "o": [
+        "going",
+        "goes",
+        "go",
+        "went"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-lets"
+      ],
+      "e": "Let's 後面接原形動詞。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000018",
+      "revision": 1,
+      "number": 18,
+      "q": "This is Jenny. _____ is eleven.",
+      "o": [
+        "Her",
+        "She",
+        "Him",
+        "His"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "She 是女性單數主格。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000019",
+      "revision": 1,
+      "number": 19,
+      "q": "I have a book. This is _____ book.",
+      "o": [
+        "me",
+        "I",
+        "my",
+        "mine"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "名詞 book 前用所有格 my。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000020",
+      "revision": 1,
+      "number": 20,
+      "q": "RoomGPT is an AI _____.",
+      "o": [
+        "tool",
+        "bed",
+        "bathroom",
+        "blanket"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "教材中 RoomGPT 是一種 AI tool。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    }
+  ]
+}
