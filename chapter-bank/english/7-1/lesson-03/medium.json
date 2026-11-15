@@ -1,0 +1,622 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-03-medium",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 3",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 3｜Let’s Get Some Ideas from RoomGPT｜中等",
+    "subtitle": "30 題｜字彙、文法、情境與閱讀",
+    "unit": "英文七上｜Lesson 3",
+    "difficulty": "english-7-1-lesson-03-medium",
+    "difficultyLabel": "中等",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依115學年度康軒版國中英文第一冊Lesson 3 p.41–54 教材辨識檔與教材知識庫自編；非官方試題。"
+  },
+  "questions": [
+    {
+      "questionId": "261115130000101",
+      "revision": 1,
+      "number": 1,
+      "section": "詞彙與結構",
+      "q": "There _____ a book on the desk. Where _____ it?",
+      "o": [
+        "is; is",
+        "are; are",
+        "is; are",
+        "are; is"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "book 單數，兩處均用 is。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000102",
+      "revision": 1,
+      "number": 2,
+      "q": "Where _____ your parents? _____ in the living room.",
+      "o": [
+        "is; He is",
+        "are; They are",
+        "are; It is",
+        "is; They are"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "parents 複數，問 are，答 They are。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000103",
+      "revision": 1,
+      "number": 3,
+      "q": "A: Where is the phone? B: _____ on the table.",
+      "o": [
+        "It are",
+        "It is",
+        "They is",
+        "They are"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "phone 為單數，以 It is 回答。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000104",
+      "revision": 1,
+      "number": 4,
+      "q": "A: Where are your shoes? B: _____ under the bed.",
+      "o": [
+        "It is",
+        "There is",
+        "They are",
+        "He is"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "shoes 為複數，以 They are 回答。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000105",
+      "revision": 1,
+      "number": 5,
+      "q": "The cat is _____ the two boxes.",
+      "o": [
+        "between",
+        "behind",
+        "under",
+        "on"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "兩個箱子之間用 between。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000106",
+      "revision": 1,
+      "number": 6,
+      "q": "The picture is _____ the wall.",
+      "o": [
+        "in",
+        "on",
+        "under",
+        "between"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "畫掛在牆面用 on the wall。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000107",
+      "revision": 1,
+      "number": 7,
+      "q": "The boy stands _____ the classroom door, not behind it.",
+      "o": [
+        "under",
+        "in front of",
+        "between",
+        "in"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "與 behind 相對的是 in front of。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000108",
+      "revision": 1,
+      "number": 8,
+      "q": "Please _____ your photo to RoomGPT first.",
+      "o": [
+        "uploads",
+        "upload",
+        "uploading",
+        "uploaded"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "祈使句以原形 upload 開頭。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000109",
+      "revision": 1,
+      "number": 9,
+      "q": "The first RoomGPT step is to _____.",
+      "o": [
+        "choose a theme",
+        "upload a photo",
+        "buy a bed",
+        "choose a room type"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "依教材流程第一步是 upload a photo。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000110",
+      "revision": 1,
+      "number": 10,
+      "q": "After uploading a photo, users choose a _____.",
+      "o": [
+        "room type",
+        "newspaper",
+        "blanket",
+        "teacher"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "第二步選擇 room type。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000111",
+      "revision": 1,
+      "number": 11,
+      "q": "The last RoomGPT step is to choose a room _____.",
+      "o": [
+        "tool",
+        "theme",
+        "photo",
+        "table"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "第三步選擇 theme。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000112",
+      "revision": 1,
+      "number": 12,
+      "q": "Scott chooses the _____ for his makeover.",
+      "o": [
+        "kitchen",
+        "dining room",
+        "bedroom",
+        "bathroom"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "教材對話中 Scott 選 bedroom。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000113",
+      "revision": 1,
+      "number": 13,
+      "q": "Bella says a big makeover is _____.",
+      "o": [
+        "cheap",
+        "expensive",
+        "small",
+        "quiet"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "expensive 意為昂貴的。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000114",
+      "revision": 1,
+      "number": 14,
+      "q": "A: What is RoomGPT? B: _____ an AI tool.",
+      "o": [
+        "They're",
+        "It's",
+        "I'm",
+        "We're"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "RoomGPT 為單數物件，使用 It's。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000115",
+      "revision": 1,
+      "number": 15,
+      "q": "_____ your homework before dinner, please.",
+      "o": [
+        "Do",
+        "Does",
+        "Doing",
+        "Did"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-imperatives"
+      ],
+      "e": "肯定祈使句以 Do 原形開頭。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000116",
+      "revision": 1,
+      "number": 16,
+      "q": "Please don't _____ in the house.",
+      "o": [
+        "runs",
+        "running",
+        "run",
+        "ran"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-imperatives"
+      ],
+      "e": "don't 後應接原形 run。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000117",
+      "revision": 1,
+      "number": 17,
+      "q": "_____ sad. Let's play a game.",
+      "o": [
+        "Don't be",
+        "Don't is",
+        "Not be",
+        "Doesn't be"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-imperatives"
+      ],
+      "e": "Don't be + 形容詞是正確否定祈使句。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000118",
+      "revision": 1,
+      "number": 18,
+      "q": "Let's not _____ on the desk.",
+      "o": [
+        "draws",
+        "drawing",
+        "draw",
+        "drew"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-lets"
+      ],
+      "e": "Let's not 後接原形 draw。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000119",
+      "revision": 1,
+      "number": 19,
+      "q": "It's late. Let's _____ to bed.",
+      "o": [
+        "going",
+        "went",
+        "go",
+        "goes"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-lets"
+      ],
+      "e": "Let's go to bed 表示建議上床睡覺。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000120",
+      "revision": 1,
+      "number": 20,
+      "q": "The library is quiet. Let's not _____.",
+      "o": [
+        "shouts",
+        "shout",
+        "shouting",
+        "shouted"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-lets"
+      ],
+      "e": "Let's not + 原形動詞 shout。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000121",
+      "revision": 1,
+      "number": 21,
+      "q": "My brother is here. Please say hello to _____.",
+      "o": [
+        "he",
+        "his",
+        "him",
+        "her"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "介系詞 to 後接受格 him。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000122",
+      "revision": 1,
+      "number": 22,
+      "q": "This is my sister. _____ name is Jessie.",
+      "o": [
+        "She",
+        "Her",
+        "Hers",
+        "Him"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "name 前用所有格 Her。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000123",
+      "revision": 1,
+      "number": 23,
+      "q": "_____ are good friends. Our teacher likes us.",
+      "o": [
+        "Us",
+        "We",
+        "Our",
+        "Them"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "句子主詞用 We。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000124",
+      "revision": 1,
+      "number": 24,
+      "q": "The teacher is talking to _____. (我們)",
+      "o": [
+        "our",
+        "we",
+        "us",
+        "ours"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "介系詞 to 後用受格 us。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000125",
+      "revision": 1,
+      "number": 25,
+      "q": "The boys have a dog. _____ dog is cute.",
+      "o": [
+        "Them",
+        "They",
+        "Their",
+        "Theirs"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "dog 前用所有格 Their。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000126",
+      "revision": 1,
+      "number": 26,
+      "q": "Jenny's house is an _____.",
+      "o": [
+        "igloo",
+        "cave",
+        "apartment",
+        "school"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "Jenny 的家是 igloo（冰屋）。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000127",
+      "revision": 1,
+      "number": 27,
+      "q": "Jenny's ice bed is big and _____.",
+      "o": [
+        "soft",
+        "new",
+        "hard",
+        "warm"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "教材指出 ice bed big and hard。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000128",
+      "revision": 1,
+      "number": 28,
+      "q": "Jason lives inside a _____.",
+      "o": [
+        "tent",
+        "cave",
+        "boat",
+        "tower"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "Jason 的房屋在洞穴裡。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000129",
+      "revision": 1,
+      "number": 29,
+      "q": "Jason's bed is next to the _____.",
+      "o": [
+        "table",
+        "kitchen",
+        "school",
+        "bathroom"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "教材記載 Jason 的床在桌子旁。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000130",
+      "revision": 1,
+      "number": 30,
+      "q": "The Smith family needs _____ bedrooms.",
+      "o": [
+        "one",
+        "two",
+        "three",
+        "four"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-house"
+      ],
+      "e": "Read Up 中需要 three bedrooms。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    }
+  ]
+}
