@@ -1,0 +1,822 @@
+{
+  "schemaVersion": 1,
+  "exam": {
+    "key": "english-7-1-lesson-03-hard",
+    "examType": "english-school-lesson-practice",
+    "examTypeLabel": "英文七上 Lesson 3",
+    "subject": "english",
+    "subjectLabel": "英文",
+    "title": "Lesson 3｜Let’s Get Some Ideas from RoomGPT｜困難",
+    "subtitle": "40 題｜字彙、文法、情境與閱讀",
+    "unit": "英文七上｜Lesson 3",
+    "difficulty": "english-7-1-lesson-03-hard",
+    "difficultyLabel": "困難",
+    "scoreMode": "percent",
+    "preserveOptionOrder": false,
+    "analysisEligible": true,
+    "sourceNote": "依115學年度康軒版國中英文第一冊Lesson 3 p.41–54 教材辨識檔與教材知識庫自編；非官方試題。"
+  },
+  "questions": [
+    {
+      "questionId": "261115130000201",
+      "revision": 1,
+      "number": 1,
+      "section": "詞彙與結構",
+      "q": "Choose the correct sentence.",
+      "o": [
+        "Where are the smartphone?",
+        "Where is the smartphone?",
+        "Where the smartphone is?",
+        "Where do the smartphone?"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "smartphone 單數，Where is ...? 詢問位置。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000202",
+      "revision": 1,
+      "number": 2,
+      "q": "Which answer matches 'Where are Scott and Bella?'",
+      "o": [
+        "He is at home.",
+        "It is on the desk.",
+        "They are at Scott's home.",
+        "She is on the desk."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "Scott 與 Bella 是兩人，以 They are 回答。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000203",
+      "revision": 1,
+      "number": 3,
+      "q": "Choose the pair with correct agreement.",
+      "o": [
+        "Where is the chairs? They are here.",
+        "Where are the chair? It is here.",
+        "Where are the chairs? They are here.",
+        "Where is the chair? They are here."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "複數 chairs 對應 are 和 They are。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000204",
+      "revision": 1,
+      "number": 4,
+      "q": "Which sentence correctly tells someone not to run?",
+      "o": [
+        "Don't running here.",
+        "Don't run here.",
+        "Not run here.",
+        "Doesn't run here."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-imperatives"
+      ],
+      "e": "否定祈使句 Don't + 原形。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000205",
+      "revision": 1,
+      "number": 5,
+      "q": "Which sentence is a suggestion rather than an order?",
+      "o": [
+        "Close the door.",
+        "Don't talk.",
+        "Let's open the window.",
+        "Be careful."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-lets"
+      ],
+      "e": "Let's + 原形表示一起做的提議。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000206",
+      "revision": 1,
+      "number": 6,
+      "q": "Choose the correctly formed negative suggestion.",
+      "o": [
+        "Let's don't play.",
+        "Let's not playing.",
+        "Let's not play.",
+        "Not let's play."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-lets"
+      ],
+      "e": "Let's not + 原形動詞。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000207",
+      "revision": 1,
+      "number": 7,
+      "q": "Which sentence uses both pronouns correctly?",
+      "o": [
+        "He likes she.",
+        "Him likes her.",
+        "He likes her.",
+        "His likes she."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "主詞 He，動詞受詞 her。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000208",
+      "revision": 1,
+      "number": 8,
+      "q": "Choose the correct sentence.",
+      "o": [
+        "They are with we.",
+        "Their are with us.",
+        "They are with us.",
+        "Them are with our."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "主格 They 當主詞，with 後接受格 us。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000209",
+      "revision": 1,
+      "number": 9,
+      "q": "Jessie and Ken have different rooms. _____ rooms are upstairs.",
+      "o": [
+        "Them",
+        "Their",
+        "They",
+        "Theirs"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "名詞 rooms 前用所有格 Their。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000210",
+      "revision": 1,
+      "number": 10,
+      "q": "The picture is behind the chair. Which statement is true?",
+      "o": [
+        "The chair is behind the picture.",
+        "The picture is in front of the chair.",
+        "The chair is in front of the picture.",
+        "The picture is under the chair."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "若畫在椅子後，椅子就在畫前。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000211",
+      "revision": 1,
+      "number": 11,
+      "q": "The ball is between the desk and the sofa. What is needed to describe 'between'?",
+      "o": [
+        "One reference object",
+        "Two reference objects",
+        "No reference objects",
+        "A time expression"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "between ... and ... 需要兩個參照物。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000212",
+      "revision": 1,
+      "number": 12,
+      "q": "Which phrase means '在桌子正前方'?",
+      "o": [
+        "behind the table",
+        "in front of the table",
+        "under the table",
+        "inside the table"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-prepositions"
+      ],
+      "e": "in front of 表示在……前面。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000213",
+      "revision": 1,
+      "number": 13,
+      "q": "A phone is on a table. Which question gets this information?",
+      "o": [
+        "Who is the phone?",
+        "Where is the phone?",
+        "How old is the phone?",
+        "What are the phone?"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "以 Where is 詢問單數物件的位置。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000214",
+      "revision": 1,
+      "number": 14,
+      "q": "Choose the correct combination.",
+      "o": [
+        "Where's = Where are",
+        "Where's = Where is",
+        "Where's = Where was",
+        "Where's = Where does"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-where"
+      ],
+      "e": "Where's 是 Where is 的縮寫。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000215",
+      "revision": 1,
+      "number": 15,
+      "q": "Bella: 'What about a makeover?' What is she suggesting?",
+      "o": [
+        "Leaving the house immediately",
+        "Changing the room's appearance",
+        "Buying food for dinner",
+        "Taking a school test"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "makeover 在對話中指房間改造。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000216",
+      "revision": 1,
+      "number": 16,
+      "q": "Which RoomGPT sequence is correct?",
+      "o": [
+        "Theme → photo → type",
+        "Photo → room type → theme",
+        "Room type → theme → photo",
+        "Photo → theme → room type"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "正確順序是上傳照片、選房間類型、選風格。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000217",
+      "revision": 1,
+      "number": 17,
+      "q": "Which step comes immediately BEFORE choosing a room theme?",
+      "o": [
+        "Upload a photo",
+        "Choose a room type",
+        "Buy a smartphone",
+        "Choose a teacher"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "選房間類型後才選主題風格。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000218",
+      "revision": 1,
+      "number": 18,
+      "q": "Which information describes RoomGPT correctly?",
+      "o": [
+        "A type of bed",
+        "An AI tool for room ideas",
+        "A new school subject",
+        "A kitchen utensil"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "RoomGPT 是協助取得室內設計點子的 AI tool。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000219",
+      "revision": 1,
+      "number": 19,
+      "q": "Why does Bella mention that a big makeover is expensive?",
+      "o": [
+        "To warn about potential cost",
+        "To say all changes are free",
+        "To choose a school",
+        "To compare two animals"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "提醒大型改造可能費用高。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000220",
+      "revision": 1,
+      "number": 20,
+      "q": "At Scott's home, Bella cannot find her smartphone. Where is it?",
+      "o": [
+        "Under the bed",
+        "On the table",
+        "Behind the sofa",
+        "In the bathroom"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-roomgpt"
+      ],
+      "e": "Scott 回答手機在桌上。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000221",
+      "revision": 1,
+      "number": 21,
+      "q": "Jenny is eleven; Jason is twenty-one. Who is older?",
+      "o": [
+        "Jenny",
+        "Jason",
+        "They are the same age",
+        "There is not enough age information"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "21 大於 11，Jason 較年長。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000222",
+      "revision": 1,
+      "number": 22,
+      "q": "Which statement about Jenny is supported?",
+      "o": [
+        "She lives inside a cave.",
+        "She sleeps on an ice bed.",
+        "Her blanket is small and old.",
+        "She is twenty-one."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "Jenny 住冰屋，睡冰製的床。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000223",
+      "revision": 1,
+      "number": 23,
+      "q": "Which statement about Jason is supported?",
+      "o": [
+        "His home is an igloo.",
+        "His bed is beside the kitchen.",
+        "His home is inside a cave.",
+        "He is eleven."
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "Jason 的家在洞穴裡。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000224",
+      "revision": 1,
+      "number": 24,
+      "q": "Which detail belongs to Jenny, NOT Jason?",
+      "o": [
+        "Small old blanket",
+        "Bed next to the table",
+        "Big hard ice bed",
+        "House inside a cave"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "big hard ice bed 是 Jenny 的床。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000225",
+      "revision": 1,
+      "number": 25,
+      "q": "Which detail belongs to Jason, NOT Jenny?",
+      "o": [
+        "Eleven years old",
+        "Living in an igloo",
+        "Bed beside the kitchen",
+        "A small, old blanket"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-beds"
+      ],
+      "e": "小而舊的毯子是 Jason 的細節。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000226",
+      "revision": 1,
+      "number": 26,
+      "q": "Which reading method helps locate the ages of Jenny and Jason quickly?",
+      "o": [
+        "Scanning for names and numbers",
+        "Ignoring all numbers",
+        "Reading only the title",
+        "Guessing from pictures"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-reading"
+      ],
+      "e": "Scanning 可鎖定姓名與年齡數字。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000227",
+      "revision": 1,
+      "number": 27,
+      "q": "Which inference best fits a bed made of ice?",
+      "o": [
+        "It is probably soft and warm.",
+        "It is likely hard and cold.",
+        "It is made of wood.",
+        "It must be beside a TV."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-reading"
+      ],
+      "e": "冰床的材質及文章 hard 提示其硬且冷。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000228",
+      "revision": 1,
+      "number": 28,
+      "q": "Which information is NOT supported by the Beds text?",
+      "o": [
+        "Jenny lives in an igloo.",
+        "Jason is twenty-one.",
+        "Jenny's bed is made of ice.",
+        "Jason owns three bedrooms."
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-reading"
+      ],
+      "e": "課文沒有指出 Jason 擁有三間臥室。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000229",
+      "revision": 1,
+      "number": 29,
+      "q": "The Smiths need three bedrooms. A house has only two. What follows?",
+      "o": [
+        "It meets the stated bedroom need.",
+        "It does not meet their stated bedroom need.",
+        "It has too many bedrooms.",
+        "Its kitchen must be large."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-house"
+      ],
+      "e": "需要三間臥室而只有兩間，無法符合需求。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000230",
+      "revision": 1,
+      "number": 30,
+      "q": "Which is true about the house shown to the Smiths?",
+      "o": [
+        "It has two bedrooms and three bathrooms.",
+        "It has three bedrooms and two bathrooms.",
+        "It has one bedroom and one bathroom.",
+        "It has four kitchens."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-house"
+      ],
+      "e": "Read Up 明示三間臥室、兩間浴室。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000231",
+      "revision": 1,
+      "number": 31,
+      "q": "Where is the kitchen in the Smiths' house?",
+      "o": [
+        "Next to the living room",
+        "Inside Ken's classroom",
+        "Behind a cave",
+        "Under a bedroom"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-house"
+      ],
+      "e": "廚房在客廳旁邊。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000232",
+      "revision": 1,
+      "number": 32,
+      "q": "Why might the location appeal to Mrs. Smith?",
+      "o": [
+        "It is far from school.",
+        "It is near Ken's school.",
+        "It has no bathrooms.",
+        "It is inside a cave."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-house"
+      ],
+      "e": "課文提到靠近 Ken 的學校。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000233",
+      "revision": 1,
+      "number": 33,
+      "q": "Ken does not want to share a room with Jessie. What does that mean?",
+      "o": [
+        "He wants to use the same bedroom.",
+        "He prefers not to use one bedroom together.",
+        "He wants to leave school.",
+        "He wants a smaller kitchen."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-house"
+      ],
+      "e": "not want to share 表示不願共用房間。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000234",
+      "revision": 1,
+      "number": 34,
+      "q": "When will Mr. Smith tell Kevin the family's decision?",
+      "o": [
+        "This morning",
+        "At noon",
+        "This evening",
+        "Next month"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-house"
+      ],
+      "e": "教材中說 this evening。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000235",
+      "revision": 1,
+      "number": 35,
+      "q": "What does 'decision' most nearly mean in the house-hunting passage?",
+      "o": [
+        "A choice or final judgment",
+        "A kitchen table",
+        "A bedroom window",
+        "A school uniform"
+      ],
+      "a": 0,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-reading"
+      ],
+      "e": "decision 表示決定。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000236",
+      "revision": 1,
+      "number": 36,
+      "q": "Which word has the short e sound /ɛ/?",
+      "o": [
+        "these",
+        "sleep",
+        "wet",
+        "tea"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronunciation"
+      ],
+      "e": "wet 的 e 發 /ɛ/。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000237",
+      "revision": 1,
+      "number": 37,
+      "q": "Which word has the same vowel sound as 'bee'?",
+      "o": [
+        "egg",
+        "jet",
+        "week",
+        "tell"
+      ],
+      "a": 2,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronunciation"
+      ],
+      "e": "bee 和 week 的母音皆 /i/。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000238",
+      "revision": 1,
+      "number": 38,
+      "q": "Which pair shares the /i/ vowel?",
+      "o": [
+        "wet and jet",
+        "sleep and tea",
+        "egg and these",
+        "tell and seat"
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronunciation"
+      ],
+      "e": "sleep 和 tea 的母音都是 /i/。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000239",
+      "revision": 1,
+      "number": 39,
+      "q": "Which word is NOT pronounced with /i/ in the target vowel?",
+      "o": [
+        "Steve",
+        "teeth",
+        "seat",
+        "egg"
+      ],
+      "a": 3,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronunciation"
+      ],
+      "e": "egg 中 e 為 /ɛ/，其餘 /i/。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    },
+    {
+      "questionId": "261115130000240",
+      "revision": 1,
+      "number": 40,
+      "q": "Choose the sentence with correct subjects, possessives and objects.",
+      "o": [
+        "Her sees he with they.",
+        "She sees him with them.",
+        "Hers sees his with their.",
+        "She sees his with they."
+      ],
+      "a": 1,
+      "fixedOptions": false,
+      "conceptIds": [
+        "english-7-1-l3-pronouns"
+      ],
+      "e": "主格 She，動詞受格 him，介系詞後受格 them。",
+      "sourceType": "practice-generated",
+      "lifecycle": "active"
+    }
+  ]
+}
