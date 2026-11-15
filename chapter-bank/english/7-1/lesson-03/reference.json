@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "key": "english-7-1-lesson-03-reference",
+  "lessonKey": "english-7-1-lesson-03",
+  "subject": "english",
+  "grade": 7,
+  "semester": 1,
+  "volume": "第一冊",
+  "publisher": "康軒",
+  "schoolYear": "115 學年度",
+  "lessonCode": "Lesson 3",
+  "title": "Let’s Get Some Ideas from RoomGPT",
+  "pageRange": "p.41–54",
+  "theme": [
+    "房屋與房間",
+    "位置介系詞",
+    "RoomGPT 室內設計",
+    "世界各地的床鋪"
+  ],
+  "learningGoals": [
+    "熟悉房間與位置相關字彙。",
+    "正確使用 Where is / are 問句及位置介系詞。",
+    "能辨識肯定、否定祈使句及 Let's / Let's not。",
+    "能區分人稱代名詞主格、所有格和受格。",
+    "能理解 RoomGPT 步驟、Beds 與看房閱讀內容。",
+    "能使用 Scanning、Context Clues、Making Inferences。"
+  ],
+  "sections": [
+    {
+      "id": "word-bank",
+      "title": "Word Bank｜房間與位置",
+      "page": "p.41–42",
+      "type": "groups",
+      "groups": [
+        {
+          "label": "房間",
+          "items": [
+            "living room",
+            "dining room",
+            "bedroom",
+            "bathroom",
+            "kitchen"
+          ]
+        },
+        {
+          "label": "位置",
+          "items": [
+            "in",
+            "on",
+            "under",
+            "near",
+            "next to",
+            "between",
+            "behind",
+            "in front of"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogue",
+      "title": "Dialogue｜RoomGPT",
+      "page": "p.43–44",
+      "type": "points",
+      "items": [
+        "Scott 歡迎 Bella 到家中；Bella 建議用 RoomGPT 進行房間改造。",
+        "RoomGPT 是一項 AI tool。",
+        "步驟依序為 upload a photo、choose a room type、choose a room theme。",
+        "Scott 選 bedroom；Bella 提醒 big makeover is expensive。"
+      ]
+    },
+    {
+      "id": "grammar-where",
+      "title": "Grammar 1｜Where 與位置介系詞",
+      "page": "p.45",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "單數問答",
+          "examples": [
+            "Where is the book?",
+            "It is on the table."
+          ]
+        },
+        {
+          "label": "複數問答",
+          "examples": [
+            "Where are the books?",
+            "They are under the table."
+          ]
+        },
+        {
+          "label": "縮寫",
+          "examples": [
+            "Where is → Where's"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grammar-imperatives",
+      "title": "Grammar 2｜祈使句與 Let's",
+      "page": "p.46–47",
+      "type": "patterns",
+      "patterns": [
+        {
+          "label": "肯定與否定祈使句",
+          "examples": [
+            "Be nice.",
+            "Please look at me.",
+            "Don't run in the house."
+          ]
+        },
+        {
+          "label": "Let's",
+          "examples": [
+            "Let's walk.",
+            "Let's not run.",
+            "Let's not draw on the desk."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pronouns",
+      "title": "More to Know｜主格、所有格、受格",
+      "page": "p.48",
+      "type": "table",
+      "columns": [
+        "主格",
+        "所有格",
+        "受格"
+      ],
+      "rows": [
+        [
+          "I",
+          "my",
+          "me"
+        ],
+        [
+          "you",
+          "your",
+          "you"
+        ],
+        [
+          "he",
+          "his",
+          "him"
+        ],
+        [
+          "she",
+          "her",
+          "her"
+        ],
+        [
+          "it",
+          "its",
+          "it"
+        ],
+        [
+          "we",
+          "our",
+          "us"
+        ],
+        [
+          "they",
+          "their",
+          "them"
+        ]
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "Reading｜Beds",
+      "page": "p.49–50",
+      "type": "table",
+      "columns": [
+        "人物",
+        "住所",
+        "床鋪與位置"
+      ],
+      "rows": [
+        [
+          "Jenny（11 歲）",
+          "igloo",
+          "bed beside kitchen；big, hard ice bed"
+        ],
+        [
+          "Jason（21 歲）",
+          "cave",
+          "bed next to table；small, old blanket"
+        ]
+      ]
+    },
+    {
+      "id": "listening",
+      "title": "Listening",
+      "page": "p.51",
+      "type": "points",
+      "items": [
+        "Correct Picture",
+        "Best Response",
+        "Best Answer"
+      ]
+    },
+    {
+      "id": "pronunciation",
+      "title": "Pronunciation",
+      "page": "p.52",
+      "type": "table",
+      "columns": [
+        "拼字",
+        "發音",
+        "例字"
+      ],
+      "rows": [
+        [
+          "e",
+          "/ɛ/",
+          "egg, jet, tell, wet"
+        ],
+        [
+          "e_e",
+          "/i/",
+          "eve, gene, Steve, these"
+        ],
+        [
+          "ee",
+          "/i/",
+          "bee, sleep, teeth, week"
+        ],
+        [
+          "ea",
+          "/i/",
+          "eat, seat, tea, weak"
+        ]
+      ]
+    },
+    {
+      "id": "read-up",
+      "title": "Read Up｜House Hunting",
+      "page": "p.53–54",
+      "type": "points",
+      "items": [
+        "Smith 一家需要 three bedrooms。",
+        "房子 near Ken's school；有 three bedrooms、two bathrooms。",
+        "kitchen next to the living room。",
+        "Ken 不想與 Jessie 共用房間；Mr. Smith 將於 evening 告知決定。"
+      ]
+    },
+    {
+      "id": "exam-focus",
+      "title": "本課高頻考點",
+      "page": "",
+      "type": "points",
+      "items": [
+        "Where is / are 與單複數一致。",
+        "位置介系詞的方向與 between 的兩個參照物。",
+        "Don't / Let's not 後接原形動詞。",
+        "主格、所有格、受格辨識。",
+        "RoomGPT 操作先後順序。",
+        "Beds、House Hunting 的資訊整合與推論。",
+        "e /ɛ/ 與 e_e、ee、ea /i/ 發音對比。"
+      ]
+    }
+  ],
+  "sourceNote": "依 Google Drive 115 學年度康軒版第一冊 Lesson 3 p.41–54 教材辨識檔及教材知識庫整理；屬教材複習參考，不複製課文全文。"
+}
