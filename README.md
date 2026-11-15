@@ -2767,3 +2767,10 @@ moves / 正負數加減移動箭頭
 截至 2026-09-20：
 
 > 本專案目前已形成「Google Drive 教材 evidence／canonical → GitHub Exam catalog 與結構化可作答題庫 → GitHub Pages 線上學習 → Firebase Authentication／Firestore 個人學習歷程 → Firebase AI Logic 學習分析」的主架構。Private Exam-Record 仍保留既有同步、machine-readable curriculum 與舊 AI workflow 的相容用途，但不再是現行學習歷程的主要 authority。題庫內容繼續遵守實體教材／官方原卷優先、GitHub `origin/main` authority、GitHub-first / remote-first、provenance 不丟失的原則；正式歷屆 PDF 圖題目前優先以本機 Image / PDF Crop Annotator 人工框選並保留 `crop_manifest.txt`，再將網站需要的裁圖匯入 GitHub assets；各科 catalog 以實體教材目錄為依據，動態 readiness 則應逐步由 runtime patch 收斂回正式資料來源。
+### 英文七上 Lesson 3 正式題庫（2026-11-15）
+
+- 康軒 115 學年度 Lesson 3〈Let’s Get Some Ideas from RoomGPT〉，教材 p.41–54，依 Google Drive 原始照片、教材辨識檔與 canonical 教材知識庫建置。
+- `chapter-bank/english/7-1/lesson-03/` 已新增 `reference.json` 與自編題 `easy.json` 20 題、`medium.json` 30 題、`hard.json` 40 題，共 90 題。
+- 每題具永久 `questionId`、`revision:1`、四選項、答案、詳解與 `conceptIds`；`sourceType: practice-generated`，百分比計分。
+- `exam-catalog.js` 已啟用第三課的教材與三階題庫，沿用既有英文測驗引擎與學習歷程。
+- GitHub main 遠端逐檔回讀：數量 20/30/40、90 題 ID 唯一、選項答案基本完整性均通過；**瀏覽器實際作答、Firestore 回寫與 Pages 部署狀態尚未實測**。自編題仍應抽查教學品質。
