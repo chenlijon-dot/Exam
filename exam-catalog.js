@@ -70,9 +70,15 @@
     },
     {
       key: 'english-7-1-lesson-03', code: 'Lesson 3', title: 'Let’s Get Some Ideas from RoomGPT', page: 41,
-      type: 'lesson', referenceReady: false, bankMenuReady: false,
+      type: 'lesson', referenceReady: true, bankMenuReady: true,
+      referencePath: 'chapter-bank/english/7-1/lesson-03/reference.json',
+      banks: {
+        easy: 'chapter-bank/english/7-1/lesson-03/easy.json',
+        medium: 'chapter-bank/english/7-1/lesson-03/medium.json',
+        hard: 'chapter-bank/english/7-1/lesson-03/hard.json'
+      },
       detail: 'AI 工具設計你的夢想空間｜世界各地床鋪大不同', readingSkill: 'Scanning 掃讀',
-      desc: '位置、房間；Where 問答、介系詞、祈使句。'
+      desc: '房間與位置、Where 問答、位置介系詞、祈使句、Let’s、代名詞與閱讀；自編簡易20題、中等30題、困難40題。'
     },
     {
       key: 'english-7-1-lesson-04', code: 'Lesson 4', title: 'I Can Listen to Their Songs Again and Again', page: 55,
