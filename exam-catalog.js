@@ -71,6 +71,7 @@
     {
       key: 'english-7-1-lesson-03', code: 'Lesson 3', title: 'Let’s Get Some Ideas from RoomGPT', page: 41,
       type: 'lesson', referenceReady: true, bankMenuReady: true,
+      bankQuestionCounts: { easy: 20, medium: 30, hard: 40 },
       referencePath: 'chapter-bank/english/7-1/lesson-03/reference.json',
       banks: {
         easy: 'chapter-bank/english/7-1/lesson-03/easy.json',
@@ -726,8 +727,8 @@
         </button>
         ${lesson.type === 'ready' ? '' : `
         <button class="catalog-card chapter-card" id="englishLessonBankBtn" ${lesson.bankMenuReady && lesson.banks ? '' : 'disabled'}>
-          <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge ${lesson.bankMenuReady ? 'reference' : 'soon'}">${lesson.bankMenuReady ? '45 題已建立' : '待建'}</span></span>
-          <span class="desc">${lesson.bankMenuReady ? '簡易、中等、困難各 15 題；四選一並附逐題詳解。' : '教材內容確認後，再建立單字、文法、閱讀與各校段考拆解題。'}</span>
+          <span class="top"><strong>📝 章節題庫</strong><span class="catalog-badge ${lesson.bankMenuReady ? 'reference' : 'soon'}">${lesson.bankMenuReady ? `${Object.values(lesson.bankQuestionCounts || { easy: 15, medium: 15, hard: 15 }).reduce((sum, n) => sum + n, 0)} 題已建立` : '待建'}</span></span>
+          <span class="desc">${lesson.bankMenuReady ? `簡易 ${lesson.bankQuestionCounts?.easy || 15} 題、中等 ${lesson.bankQuestionCounts?.medium || 15} 題、困難 ${lesson.bankQuestionCounts?.hard || 15} 題；四選一並附逐題詳解。` : '教材內容確認後，再建立單字、文法、閱讀與各校段考拆解題。'}</span>
         </button>`}
         ${lesson.schoolExamReady && Array.isArray(lesson.schoolExamPaths) ? `
         <button class="catalog-card chapter-card" id="englishSchoolExamBtn">
@@ -829,11 +830,11 @@
       <button class="catalog-back" id="backEnglishLessonBtn">← 返回 ${lesson.code}</button>
       <div class="catalog-path">英文　›　七年級上學期（一上）　›　第一冊　›　${lesson.code}　›　章節題庫</div>
       <h2 class="catalog-title">${lesson.code}　${lesson.title}</h2>
-      <p class="catalog-sub">依本課教材內容自編四選一練習；三種難度各 15 題，每題附詳解。</p>
+      <p class="catalog-sub">依本課教材內容自編四選一練習；簡易 ${lesson.bankQuestionCounts?.easy || 15} 題、中等 ${lesson.bankQuestionCounts?.medium || 15} 題、困難 ${lesson.bankQuestionCounts?.hard || 15} 題，每題附詳解。</p>
       <div class="catalog-grid">
         ${levels.map(level => `
           <button class="catalog-card" data-english-lesson-bank="${level.key}">
-            <span class="top"><span class="icon">${level.icon}</span><strong>${level.label}</strong><span class="catalog-badge reference">15 題</span></span>
+            <span class="top"><span class="icon">${level.icon}</span><strong>${level.label}</strong><span class="catalog-badge reference">${lesson.bankQuestionCounts?.[level.key] || 15} 題</span></span>
             <span class="desc">${level.desc}</span>
           </button>`).join('')}
       </div>`;
@@ -860,7 +861,8 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
-      if (questions.length !== 15) throw new Error(`題數異常：${questions.length}/15`);
+      const expectedCount = lesson.bankQuestionCounts?.[difficultyKey] || 15;
+      if (questions.length !== expectedCount) throw new Error(`題數異常：${questions.length}/${expectedCount}`);
       if (typeof banks === 'undefined' || typeof window.startExam !== 'function') throw new Error('題庫引擎尚未就緒');
 
       const exam = data.exam || {};
