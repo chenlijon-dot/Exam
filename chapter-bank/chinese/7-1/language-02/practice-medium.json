@@ -8,12 +8,11 @@
     "unitGroupLabel": "第一冊",
     "section": "language-02",
     "unit": "語文天地二 閱讀策略與資料檢索",
-    "scoreMode": "fixed",
-    "pointsPerQuestion": 5,
+    "scoreMode": "percent",
     "analysisEligible": false,
     "preserveOptionOrder": false,
     "sourceType": "practice-generated",
-    "sourceNote": "依 Google Drive 語文天地二〈閱讀策略與資料檢索〉canonical 教材知識庫自編；僅使用教材可證實的閱讀策略、摘要、圖像化、資料檢索與資訊可信度概念。",
+    "sourceNote": "依Google Drive語文天地二第95、96～97、100、104～105頁課本影像校對。使用正式閱讀技巧名稱，強調文本情境、摘要、工具選擇、合法引用與來源查證；自編選擇題，不是原課本習題。",
     "source": {
       "type": "practice-generated",
       "authority": "Google Drive canonical",
@@ -28,7 +27,7 @@
   },
   "questions": [
     {
-      "questionId": "260923133000021",
+      "questionId": "261121170200001",
       "revision": 1,
       "number": 1,
       "difficulty": "chinese-7-1-language02-medium",
@@ -40,22 +39,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "小華要在三分鐘內知道一篇長文大致談什麼，最適合先怎麼做？",
+      "q": "閱讀一篇寫「便當店阿媽經營方式」的文章後，學生要比較另一位商人的作法，應優先使用哪一項課本正式列出的閱讀技巧？",
       "o": [
-        "從第一字開始逐字背誦",
-        "先瀏覽標題、段落與重要句，掌握架構",
-        "只查文章中的所有生字",
-        "先把全文改寫成作文"
+        "擷取訊息",
+        "分析比較",
+        "反思評論",
+        "閱讀標題"
       ],
       "a": 1,
-      "e": "時間有限且目標是掌握大意時，先瀏覽／略讀最合適。",
+      "e": "「分析比較」要依相同面向對照人物的做法與差異；閱讀標題、擷取個別資訊不等於完成比較。",
       "conceptIds": [
-        "chinese-7-1-language02-skimming",
-        "chinese-7-1-language02-reading-purpose"
+        "chinese-7-1-language02-analyze-compare"
       ]
     },
     {
-      "questionId": "260923133000022",
+      "questionId": "261121170200002",
       "revision": 1,
       "number": 2,
       "difficulty": "chinese-7-1-language02-medium",
@@ -67,21 +65,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "讀到「天空烏雲密布，路人紛紛撐起傘」，判斷接下來可能下雨，主要運用了哪個策略？",
+      "q": "〈飯包哲學〉中，作者由兩種不同經營態度進一步談做人道理。要找出文章所要表達的核心看法，最適合哪項技巧？",
       "o": [
-        "推論",
-        "摘要",
-        "資料庫",
-        "圖像化"
+        "掌握觀點",
+        "轉成圖像",
+        "連結經驗",
+        "閱讀標題"
       ],
       "a": 0,
-      "e": "讀者依已知線索推導未直接說出的結果，屬於推論。",
+      "e": "「掌握觀點」須從人物、例證和結尾辨明作者的主要主張，而非只記住故事細節。",
       "conceptIds": [
-        "chinese-7-1-language02-inference"
+        "chinese-7-1-language02-grasp-viewpoint"
       ]
     },
     {
-      "questionId": "260923133000023",
+      "questionId": "261121170200003",
       "revision": 1,
       "number": 3,
       "difficulty": "chinese-7-1-language02-medium",
@@ -93,21 +91,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "閱讀一篇文章前，看標題「颱風停班停課新規定」並猜測內容可能談判定原則，這主要是哪一種策略？",
+      "q": "小華看到標題〈如何減少食物浪費〉，猜測文章可能介紹惜食方法；之後再閱讀正文驗證。這首先屬於哪一技巧？",
       "o": [
-        "預測",
-        "摘要",
-        "提問",
-        "交叉比對"
+        "閱讀標題",
+        "擷取訊息",
+        "摘要重點",
+        "反思評論"
       ],
       "a": 0,
-      "e": "依標題先推測內容屬於預測。",
+      "e": "課本「閱讀標題」可在閱讀前先由標題推測內容，再依正文修正，不可將猜測當成已證實的結論。",
       "conceptIds": [
-        "chinese-7-1-language02-prediction"
+        "chinese-7-1-language02-reading-title"
       ]
     },
     {
-      "questionId": "260923133000024",
+      "questionId": "261121170200004",
       "revision": 1,
       "number": 4,
       "difficulty": "chinese-7-1-language02-medium",
@@ -119,21 +117,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "小美讀完一段後問自己：「作者為什麼舉這個例子？」這最符合哪一種策略？",
+      "q": "讀完新聞後，學生表示：「我不同意作者把責任全歸咎於個人，因為文中證據還不夠。」這最符合哪一技巧？",
       "o": [
-        "提問",
-        "略讀",
-        "搜尋引擎",
-        "連結"
+        "反思評論",
+        "擷取訊息",
+        "轉成圖像",
+        "連結經驗"
       ],
       "a": 0,
-      "e": "閱讀中提出問題以檢查理解，是提問策略。",
+      "e": "「反思評論」須對文章主張提出有理由的判斷；不能只寫喜不喜歡而沒有依據。",
       "conceptIds": [
-        "chinese-7-1-language02-questioning"
+        "chinese-7-1-language02-reflect-evaluate"
       ]
     },
     {
-      "questionId": "260923133000025",
+      "questionId": "261121170200005",
       "revision": 1,
       "number": 5,
       "difficulty": "chinese-7-1-language02-medium",
@@ -145,21 +143,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "整理一段文字時，把三個相近觀念合併成一句自己的話，最符合摘要的哪個做法？",
+      "q": "整理〈飯包哲學〉時，將阿媽與茶莊老闆娘的做法、效果各寫在表格兩欄，主要結合了哪些技巧？",
       "o": [
-        "保留所有修飾語",
-        "合併相近概念並重述",
-        "增加新的例子",
-        "改變原文主旨"
+        "閱讀標題與反思評論",
+        "分析比較與轉成圖像",
+        "連結經驗與網路檢索",
+        "掌握觀點與字音辨析"
       ],
       "a": 1,
-      "e": "摘要可合併相近概念，並用自己的話重述。",
+      "e": "表格用於視覺化整理，兩欄對照人物則是分析比較；只是列表而未對照差異仍不算完整比較。",
       "conceptIds": [
-        "chinese-7-1-language02-summary"
+        "chinese-7-1-language02-analyze-compare"
       ]
     },
     {
-      "questionId": "260923133000026",
+      "questionId": "261121170200006",
       "revision": 1,
       "number": 6,
       "difficulty": "chinese-7-1-language02-medium",
@@ -171,7 +169,7 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "一篇文章依時間先後介紹四個階段，若要快速看出順序，最適合轉成哪種圖像？",
+      "q": "文章依時間敘述從問題發生到解決的四個階段，若要清楚呈現先後與因果，哪種整理最合適？",
       "o": [
         "時間線或流程圖",
         "隨機圖片拼貼",
@@ -179,13 +177,13 @@
         "只畫裝飾邊框"
       ],
       "a": 0,
-      "e": "有先後程序的資訊適合以時間線或流程圖呈現關係。",
+      "e": "有順序與因果的資訊適合以時間線、流程圖呈現；圖像化目的是顯示關係，不是美化。",
       "conceptIds": [
         "chinese-7-1-language02-visualization"
       ]
     },
     {
-      "questionId": "260923133000027",
+      "questionId": "261121170200007",
       "revision": 1,
       "number": 7,
       "difficulty": "chinese-7-1-language02-medium",
@@ -197,21 +195,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "學生讀到環保文章後想到自己家中的垃圾分類經驗，主要運用了哪種策略？",
+      "q": "小美讀到關於節約用水的文章，想到家裡曾因停水而儲水的經驗。這屬於哪項正式閱讀技巧？",
       "o": [
-        "連結",
-        "推論",
-        "略讀",
-        "資料庫"
+        "連結經驗",
+        "擷取訊息",
+        "閱讀標題",
+        "分析比較"
       ],
       "a": 0,
-      "e": "將文本與自身經驗連結，屬於連結策略。",
+      "e": "「連結經驗」將文本與自身生活、所見所聞或已學知識建立連結；不是只在文章中找現成資料。",
       "conceptIds": [
-        "chinese-7-1-language02-connection"
+        "chinese-7-1-language02-connect-experience"
       ]
     },
     {
-      "questionId": "260923133000028",
+      "questionId": "261121170200008",
       "revision": 1,
       "number": 8,
       "difficulty": "chinese-7-1-language02-medium",
@@ -223,17 +221,17 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "老師要學生找出一段中最能代表全段意思的句子，這是在訓練哪項能力？",
+      "q": "讀完一段文章，學生標示文中最能回答「誰、何時、何地、做了什麼」的句子，這屬於哪一技巧？",
       "o": [
-        "找重點",
-        "預測",
-        "搜尋引擎",
-        "資料庫"
+        "擷取訊息",
+        "反思評論",
+        "連結經驗",
+        "閱讀標題"
       ],
       "a": 0,
-      "e": "找出核心句是找重點的具體做法。",
+      "e": "擷取訊息是從文章中找出有用的關鍵資料；尚未整合成摘要，也未評論作者觀點。",
       "conceptIds": [
-        "chinese-7-1-language02-key-points"
+        "chinese-7-1-language02-extract-information"
       ]
     },
     {
@@ -290,7 +288,7 @@
       ]
     },
     {
-      "questionId": "260923133000031",
+      "questionId": "261121170200011",
       "revision": 1,
       "number": 11,
       "difficulty": "chinese-7-1-language02-medium",
@@ -302,21 +300,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "要查某一專門領域中格式較一致、範圍明確的資料，哪個選擇較符合教材？",
+      "q": "學校要查臺灣古典詩的專門整理資料，除了搜尋引擎，課本第104頁介紹的哪種資料來源最有針對性？",
       "o": [
-        "特定主題資料庫",
+        "線上資料庫",
         "只看社群貼文",
-        "隨意瀏覽所有網站",
+        "隨意瀏覽無關網站",
         "只問同學印象"
       ],
       "a": 0,
-      "e": "資料庫有特定主題、來源或欄位結構，較適合精準查詢。",
+      "e": "專門學科或主題可利用整理過的線上資料庫，課本並舉詩文資料庫作為例子。",
       "conceptIds": [
-        "chinese-7-1-language02-database"
+        "chinese-7-1-language02-online-database"
       ]
     },
     {
-      "questionId": "260923133000032",
+      "questionId": "261121170200012",
       "revision": 1,
       "number": 12,
       "difficulty": "chinese-7-1-language02-medium",
@@ -328,17 +326,17 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "某網頁沒有作者、沒有機構名稱，也沒有發布日期。依教材，最合理的態度是什麼？",
+      "q": "學生從網站看到一張清楚的照片，準備直接放進公開報告卻不註明來源。依課本，最應先補做什麼？",
       "o": [
-        "因為文字很多所以直接相信",
-        "先保留判斷並尋找其他來源核對",
-        "只要排在搜尋前面就採用",
-        "只看圖片是否漂亮"
+        "只將圖片縮小",
+        "查明授權方式並註明出處",
+        "把圖片改成黑白就免標示",
+        "只要搜尋得到就能任意使用"
       ],
       "a": 1,
-      "e": "來源、作者／機構與日期都是可信度判讀的重要線索。",
+      "e": "課本第105頁強調合法引用及著作權，圖片等資料也需要註明出處與符合使用規範。",
       "conceptIds": [
-        "chinese-7-1-language02-source-evaluation"
+        "chinese-7-1-language02-copyright"
       ]
     },
     {
@@ -369,7 +367,7 @@
       ]
     },
     {
-      "questionId": "260923133000034",
+      "questionId": "261121170200014",
       "revision": 1,
       "number": 14,
       "difficulty": "chinese-7-1-language02-medium",
@@ -381,21 +379,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "下列哪一種情況最需要注意內容可能是廣告而非中立資訊？",
+      "q": "一則商品介紹標示「贊助內容」，並只有單一品牌的宣傳詞。下列哪個判斷較合理？",
       "o": [
-        "文章清楚標示贊助並推銷單一商品",
-        "政府機構公布法規資料",
-        "學校公告行事曆",
-        "資料庫列出研究摘要"
+        "先辨別廣告目的，再核查產品宣稱是否有證據",
+        "只要圖文精美就可直接引用",
+        "贊助內容必定完全錯誤",
+        "按讚數多就代表客觀"
       ],
       "a": 0,
-      "e": "教材提醒判讀網路內容是否可能為廣告、意見或未經查證內容。",
+      "e": "廣告並非必然不實，但有說服消費者的目的，應留意立場並查核證據。",
       "conceptIds": [
-        "chinese-7-1-language02-information-literacy"
+        "chinese-7-1-language02-source-evaluation"
       ]
     },
     {
-      "questionId": "260923133000035",
+      "questionId": "261121170200015",
       "revision": 1,
       "number": 15,
       "difficulty": "chinese-7-1-language02-medium",
@@ -407,17 +405,17 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "做摘要時，把一則長故事中的人物對話、重複例子全刪掉，只保留核心事件與結論，最符合哪項原則？",
+      "q": "以下哪個段落摘要最符合課本「摘要重點」的要求？原文敘述一場活動的目的、做法、結果與數個相似例子。",
       "o": [
-        "刪除枝節，保留核心",
-        "保留所有細節",
-        "加入自己的評價",
-        "改寫成另一個故事"
+        "保留活動目的、主要做法與結果，刪去重複例子",
+        "只留下最後一則例子",
+        "照抄原文每一句",
+        "加入原文未提及的個人感想"
       ],
       "a": 0,
-      "e": "摘要應刪除重複、例示與次要內容，保留核心訊息。",
+      "e": "摘要應保留核心資訊和原來的邏輯，刪除重複的枝節；添加新想法屬評論。",
       "conceptIds": [
-        "chinese-7-1-language02-summary"
+        "chinese-7-1-language02-summarize"
       ]
     },
     {
@@ -447,7 +445,7 @@
       ]
     },
     {
-      "questionId": "260923133000037",
+      "questionId": "261121170200017",
       "revision": 1,
       "number": 17,
       "difficulty": "chinese-7-1-language02-medium",
@@ -459,22 +457,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "閱讀〈飯包哲學〉時，學生先找每段核心句，再辨識作者舉出的例證，這最符合本單元的哪個學習目的？",
+      "q": "在〈飯包哲學〉中，先找出兩位經營者的言行，再推測作者要告訴讀者的道理，依序最接近哪一組技巧？",
       "o": [
-        "練習以策略整理文章資訊",
-        "背誦所有標點符號",
-        "查作者出生日期",
-        "練習書法"
+        "擷取訊息→掌握觀點",
+        "連結經驗→搜尋引擎",
+        "閱讀標題→轉成圖像",
+        "反思評論→字詞檢索"
       ],
       "a": 0,
-      "e": "〈飯包哲學〉是閱讀策略實作文本，用來練習找主旨、抓重點、辨識例證與整理段落資訊。",
+      "e": "先擷取人物言行與事件，後掌握作者借事說理的觀點；不能只記人物名字就當作理解主旨。",
       "conceptIds": [
-        "chinese-7-1-language02-fanbao-practice",
-        "chinese-7-1-language02-key-points"
+        "chinese-7-1-language02-grasp-viewpoint"
       ]
     },
     {
-      "questionId": "260923133000038",
+      "questionId": "261121170200018",
       "revision": 1,
       "number": 18,
       "difficulty": "chinese-7-1-language02-medium",
@@ -486,18 +483,17 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "準備報告時先用搜尋引擎找廣泛線索，再進專題資料庫找精確資料，這種做法最能說明什麼？",
+      "q": "製作報告時，需要先查「刻舟求劍」的字義，再找相關詩文研究。哪種工具搭配最合理？",
       "o": [
-        "可依需求搭配不同檢索工具",
-        "所有工具功能完全相同",
-        "資料庫只能找新聞",
-        "搜尋引擎不能找公開資訊"
+        "先用網路辭典查字詞，再用專題資料庫找研究資料",
+        "兩個問題都只看照片分享網站",
+        "先查影片留言，再直接引用",
+        "只用搜尋結果排名判斷內容"
       ],
       "a": 0,
-      "e": "搜尋引擎適合廣泛搜尋，資料庫較適合特定主題的精準查詢，可依目的搭配。",
+      "e": "網路辭典適合查字音字義，專題資料庫適合查領域資料；工具應依檢索目的選用。",
       "conceptIds": [
-        "chinese-7-1-language02-search-engine",
-        "chinese-7-1-language02-database"
+        "chinese-7-1-language02-retrieval-tools"
       ]
     },
     {
@@ -527,7 +523,7 @@
       ]
     },
     {
-      "questionId": "260923133000040",
+      "questionId": "261121170200020",
       "revision": 1,
       "number": 20,
       "difficulty": "chinese-7-1-language02-medium",
@@ -539,18 +535,17 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "學生搜尋後只因「很多人轉傳」就判定內容正確，這個判斷最大的問題是什麼？",
+      "q": "學生查到同一事件的三篇資料，只有一篇有作者、日期及可檢驗證據。下一步最適當的是？",
       "o": [
-        "沒有檢查來源與證據",
-        "沒有把字放大",
-        "沒有使用心智圖",
-        "沒有逐字抄寫"
+        "先核查有證據的一篇，並與其他可靠來源比對",
+        "只相信轉傳最多的一篇",
+        "只看圖片是否漂亮",
+        "只選標題最驚人的一篇"
       ],
       "a": 0,
-      "e": "可信度應看來源、機構、日期、證據並交叉比對，不是只看傳播量。",
+      "e": "內容、來源與證據必須綜合核對；資訊多或有作者也不保證完全正確。",
       "conceptIds": [
-        "chinese-7-1-language02-information-literacy",
-        "chinese-7-1-language02-source-evaluation"
+        "chinese-7-1-language02-cross-check"
       ]
     }
   ]
