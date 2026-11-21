@@ -8,12 +8,11 @@
     "unitGroupLabel": "第一冊",
     "section": "language-02",
     "unit": "語文天地二 閱讀策略與資料檢索",
-    "scoreMode": "fixed",
-    "pointsPerQuestion": 5,
+    "scoreMode": "percent",
     "analysisEligible": false,
     "preserveOptionOrder": false,
     "sourceType": "practice-generated",
-    "sourceNote": "依 Google Drive 語文天地二〈閱讀策略與資料檢索〉canonical 教材知識庫自編；僅使用教材可證實的閱讀策略、摘要、圖像化、資料檢索與資訊可信度概念。",
+    "sourceNote": "依Google Drive語文天地二第95、96～97、100、104～106頁課本影像校對。以原創短文、比較與證據判讀訓練八種閱讀技巧及合法檢索引用；自編題、非原課本習題。",
     "source": {
       "type": "practice-generated",
       "authority": "Google Drive canonical",
@@ -28,7 +27,7 @@
   },
   "questions": [
     {
-      "questionId": "260923133000041",
+      "questionId": "261121170300001",
       "revision": 1,
       "number": 1,
       "difficulty": "chinese-7-1-language02-hard",
@@ -40,23 +39,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "小安要在十分鐘內判斷一篇長文是否適合作為報告資料。下列流程何者最符合本單元？",
+      "q": "閱讀短文：「店家甲重視客人需求，寧願多花時間使餐點合宜；店家乙只顧擴大規模，卻疏於體察顧客感受。」若要由兩人的做法推得文章旨意，最應先使用哪一組技巧？",
       "o": [
-        "先逐字背完，再看作者",
-        "先略讀掌握主旨，再查看來源、日期與相關性",
-        "只看標題就引用",
-        "先畫插圖，再決定內容是否可信"
+        "只讀標題並推定作者立場",
+        "擷取兩人言行、分析比較，再掌握觀點",
+        "先找華麗詞句並背誦",
+        "只畫店面的外觀"
       ],
       "a": 1,
-      "e": "先依閱讀目的略讀掌握內容，再判讀來源、日期、相關性與可信度，整合了閱讀與資訊檢索。",
+      "e": "必須先根據文中具體言行擷取訊息、分析比較，再歸納作者欲表達的觀點；不能跳過證據。",
       "conceptIds": [
-        "chinese-7-1-language02-reading-purpose",
-        "chinese-7-1-language02-skimming",
-        "chinese-7-1-language02-source-evaluation"
+        "chinese-7-1-language02-multiple-strategies"
       ]
     },
     {
-      "questionId": "260923133000042",
+      "questionId": "261121170300002",
       "revision": 1,
       "number": 2,
       "difficulty": "chinese-7-1-language02-hard",
@@ -68,21 +65,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "某學生摘要一篇文章時保留所有例子，卻刪掉作者的核心結論。這份摘要最主要的錯誤是什麼？",
+      "q": "短文：「圖書館設置無障礙坡道，讓輪椅使用者更容易進出；也增加大字版圖書，便利視力不佳的讀者。」何者最適合作為摘要？",
       "o": [
-        "沒有保留核心訊息",
-        "沒有使用搜尋引擎",
-        "沒有加入更多修飾語",
-        "沒有改成表格"
+        "圖書館改善設施與資源，讓不同需求的讀者更方便使用",
+        "圖書館的坡道很長，圖書也很多",
+        "圖書館外觀很漂亮，附近應有公園",
+        "我最喜歡在圖書館看小說"
       ],
       "a": 0,
-      "e": "摘要應保留中心概念與核心訊息，例示與次要內容反而可刪。",
+      "e": "A保留兩項措施背後的共同目的：滿足不同讀者需求。B只挑細節，C無據推測，D是個人感想。",
       "conceptIds": [
         "chinese-7-1-language02-summary"
       ]
     },
     {
-      "questionId": "260923133000043",
+      "questionId": "261121170300003",
       "revision": 1,
       "number": 3,
       "difficulty": "chinese-7-1-language02-hard",
@@ -94,22 +91,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "閱讀一篇未標明結論的文章時，學生先找各段重點，再根據線索推導作者可能的立場。這同時運用了哪些策略？",
+      "q": "讀短文：「她把尚可食用的剩菜分裝冷藏，隔天加熱食用；一週下來，廚餘明顯減少。」學生說作者一定是環保團體成員。何者最合理？",
       "o": [
-        "找重點與推論",
-        "略讀與資料庫",
-        "預測與關鍵字",
-        "圖像化與搜尋引擎"
+        "可以由行為推得重視減少浪費，但無法斷定她加入環保團體",
+        "既然減少廚餘，就一定任職環保團體",
+        "本文必然在介紹政府政策",
+        "只能確認她討厭烹飪"
       ],
       "a": 0,
-      "e": "先辨識各段核心訊息，再由已知線索推導未明說內容，是找重點與推論的整合。",
+      "e": "文本可支持「減少食物浪費」的判斷，不能由單一行為斷定作者身分；推論必須有足夠證據。",
       "conceptIds": [
-        "chinese-7-1-language02-key-points",
         "chinese-7-1-language02-inference"
       ]
     },
     {
-      "questionId": "260923133000044",
+      "questionId": "261121170300004",
       "revision": 1,
       "number": 4,
       "difficulty": "chinese-7-1-language02-hard",
@@ -121,22 +117,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "下列哪一個做法最能改善「搜尋結果太多又不相關」的問題？",
+      "q": "學生要找「臺灣近五年青少年閱讀習慣」資料，下列哪組檢索方式最精準？",
       "o": [
-        "加入更具代表性的核心詞與限定條件",
-        "把關鍵字全部刪除",
-        "固定只看第一筆結果",
-        "改用更模糊的詞"
+        "青少年 閱讀習慣 臺灣 近五年 調查",
+        "讀書",
+        "我想知道世界上所有人都喜歡什麼",
+        "只查不含時間的早期新聞"
       ],
       "a": 0,
-      "e": "應調整關鍵字並增加適當限定條件，使查詢更精準。",
+      "e": "A包含地區、對象、主題與時間範圍，能有效縮小資料；其餘缺乏關鍵限定條件。",
       "conceptIds": [
-        "chinese-7-1-language02-keywords",
-        "chinese-7-1-language02-query-refinement"
+        "chinese-7-1-language02-keywords"
       ]
     },
     {
-      "questionId": "260923133000045",
+      "questionId": "261121170300005",
       "revision": 1,
       "number": 5,
       "difficulty": "chinese-7-1-language02-hard",
@@ -148,22 +143,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "學生找到兩篇資料：甲由具名機構發布、日期清楚且附證據；乙無作者、無日期，只寫「大家都知道」。依教材，較合理的處理是什麼？",
+      "q": "某份網路文章有明確作者和日期，也附了統計圖，但統計圖沒有資料來源。最適當的判斷是什麼？",
       "o": [
-        "直接採用乙，因為語氣肯定",
-        "優先檢視甲，並再與其他來源交叉比對",
-        "兩篇都同樣可信",
-        "只比較哪篇文章較長"
+        "既然作者具名便完全可信",
+        "先追查統計圖來源及方法，再與其他可信資料比對",
+        "有圖就代表數據正確",
+        "年份新一定比其他資料正確"
       ],
       "a": 1,
-      "e": "來源、作者／機構、日期與證據都是可信度線索；即使甲較完整，仍可再交叉比對。",
+      "e": "具名、日期、圖表可供參考，但統計圖若無來源仍不能驗證。應查核原始資料及交叉比對。",
       "conceptIds": [
-        "chinese-7-1-language02-source-evaluation",
-        "chinese-7-1-language02-cross-check"
+        "chinese-7-1-language02-source-evaluation"
       ]
     },
     {
-      "questionId": "260923133000046",
+      "questionId": "261121170300006",
       "revision": 1,
       "number": 6,
       "difficulty": "chinese-7-1-language02-hard",
@@ -175,21 +169,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "一篇文章介紹「問題→原因→解決方法」。若要讓三者關係最清楚，下列整理方式何者最佳？",
+      "q": "一篇文章先交代問題，再列出兩個原因，最後提出三個解決辦法。要避免誤把原因當結果，哪種圖像化最適當？",
       "o": [
-        "依關係製作流程或架構圖",
-        "隨機畫三張不相連圖片",
-        "把全文原封不動貼進框框",
-        "只列文章字數"
+        "用標示因果箭頭的架構圖，分清問題、原因與辦法",
+        "畫五個彼此無關的插圖",
+        "只用人物照片拼貼",
+        "將全部文字縮成同一小方格"
       ],
       "a": 0,
-      "e": "圖像化應呈現資訊關係與結構，問題、原因、解法適合用流程或架構呈現。",
+      "e": "須忠實呈現原文問題、原因、解決方法的層次及關係，而不只是裝飾版面。",
       "conceptIds": [
         "chinese-7-1-language02-visualization"
       ]
     },
     {
-      "questionId": "260923133000047",
+      "questionId": "261121170300007",
       "revision": 1,
       "number": 7,
       "difficulty": "chinese-7-1-language02-hard",
@@ -201,22 +195,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "學生讀文章前由標題猜內容，閱讀後發現猜錯，再根據正文修正理解。這個過程最能說明什麼？",
+      "q": "讀短文：「操場的樹枝被強風吹落，地面積水，學生改在室內上體育課。」哪一項是文章可直接擷取的訊息，而非額外推測？",
       "o": [
-        "預測可以在閱讀中被驗證與修正",
-        "預測一定正確",
-        "只要預測就不必閱讀",
-        "預測等於摘要"
+        "學校位在颱風路徑正中央",
+        "學生在室內上體育課",
+        "校方已決定停課三天",
+        "所有樹木都被吹倒"
       ],
-      "a": 0,
-      "e": "預測是閱讀起點之一，需由後續文本資訊驗證與修正。",
+      "a": 1,
+      "e": "只有B是原文直接敘述；其他選項加入未明說的天氣強度、停課日期或全部樹木情形。",
       "conceptIds": [
-        "chinese-7-1-language02-prediction",
-        "chinese-7-1-language02-questioning"
+        "chinese-7-1-language02-extract-information"
       ]
     },
     {
-      "questionId": "260923133000048",
+      "questionId": "261121170300008",
       "revision": 1,
       "number": 8,
       "difficulty": "chinese-7-1-language02-hard",
@@ -228,22 +221,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "查詢某議題時，搜尋引擎出現大量一般網頁，但作業要求特定領域的結構化資料。下一步最合理的是什麼？",
+      "q": "查《成語典》的成語釋義與查臺灣古典詩全文，應如何選擇工具？",
       "o": [
-        "改用相關專題資料庫",
-        "繼續只看廣告",
-        "刪掉所有查詢條件",
-        "只問社群留言"
+        "只使用一般圖片搜尋",
+        "前者用網路辭典或成語資料庫，後者用詩文專題資料庫",
+        "兩者都只看影片留言",
+        "以網站美觀作唯一標準"
       ],
-      "a": 0,
-      "e": "當需求轉為特定主題與精準查詢時，資料庫較適合。",
+      "a": 1,
+      "e": "依目的選擇合適工具：釋義以辭典為主，詩文全文則以專門資料庫較適切；不能以外觀替代可信度。",
       "conceptIds": [
-        "chinese-7-1-language02-search-engine",
-        "chinese-7-1-language02-database"
+        "chinese-7-1-language02-retrieval-tools"
       ]
     },
     {
-      "questionId": "260923133000049",
+      "questionId": "261121170300009",
       "revision": 1,
       "number": 9,
       "difficulty": "chinese-7-1-language02-hard",
@@ -255,21 +247,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "下列哪個摘要最符合教材原則？",
+      "q": "短文：「小鎮新設自行車道，居民出門更方便；但部分路口仍須改善號誌。」下列哪一個摘要最忠實？",
       "o": [
-        "保留主旨與關鍵因果，用自己的話精簡重述",
-        "逐字抄下全文",
-        "只保留最有趣的例子",
-        "加入原文沒有的個人評論"
+        "小鎮交通已經完全沒有問題",
+        "自行車道帶來便利，但部分路口安全設施仍待改善",
+        "政府完全不重視交通安全",
+        "居民從此只能騎自行車"
       ],
-      "a": 0,
-      "e": "合格摘要要保留核心與主要邏輯、刪除枝節，並重新組織。",
+      "a": 1,
+      "e": "B同時保留改善成果與尚存問題。其他選項將原文延伸為極端結論或增添沒有的限制。",
       "conceptIds": [
         "chinese-7-1-language02-summary"
       ]
     },
     {
-      "questionId": "260923133000050",
+      "questionId": "261121170300010",
       "revision": 1,
       "number": 10,
       "difficulty": "chinese-7-1-language02-hard",
@@ -281,21 +273,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "某學生把文章畫成心智圖，但把因果關係畫反了。即使圖很漂亮，仍有什麼核心問題？",
+      "q": "學生把文章整理成圖示：「因為大家開始節水→所以發生乾旱」，但原文寫的是「因為乾旱，大家開始節水」。主要錯誤為何？",
       "o": [
-        "沒有忠實呈現原文的關係與結構",
+        "少了一張照片",
+        "把因果順序顛倒，曲解原意",
         "沒有使用足夠顏色",
-        "沒有畫作者肖像",
-        "沒有加入網路連結"
+        "沒有把每句話都照抄"
       ],
-      "a": 0,
-      "e": "圖像化的核心是正確呈現資訊關係與結構。",
+      "a": 1,
+      "e": "圖像化首重資訊結構正確；因果箭頭顛倒會造成理解錯誤。",
       "conceptIds": [
         "chinese-7-1-language02-visualization"
       ]
     },
     {
-      "questionId": "260923133000051",
+      "questionId": "261121170300011",
       "revision": 1,
       "number": 11,
       "difficulty": "chinese-7-1-language02-hard",
@@ -307,22 +299,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "閱讀時發現一句話可能有兩種理解，學生回看前後文並提出「哪個解釋較符合全文？」這同時運用了什麼？",
+      "q": "閱讀一篇介紹城市公園的文章後，學生以「哪些措施真正有助於老人使用？」來檢查作者的建議，並用具體段落說明。這最能表現什麼？",
       "o": [
-        "提問與依上下文理解",
-        "資料庫與廣告判讀",
-        "摘要與搜尋引擎",
-        "圖像化與關鍵字"
+        "只做無關的自由聯想",
+        "擷取證據並反思評論作者觀點",
+        "只閱讀標題就完成評價",
+        "把所有例子省略就算評論"
       ],
-      "a": 0,
-      "e": "學生以問題檢查理解，再利用前後文判斷，符合提問與策略性閱讀。",
+      "a": 1,
+      "e": "反思評論需要提出問題並依文本證據評估主張，不能僅憑個人好惡。",
       "conceptIds": [
-        "chinese-7-1-language02-questioning",
-        "chinese-7-1-language02-reading-purpose"
+        "chinese-7-1-language02-reflect-evaluate"
       ]
     },
     {
-      "questionId": "260923133000052",
+      "questionId": "261121170300012",
       "revision": 1,
       "number": 12,
       "difficulty": "chinese-7-1-language02-hard",
@@ -334,23 +325,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "為研究「臺灣近年閱讀習慣」，下列檢索流程何者最完整？",
+      "q": "研究「網路影片是否影響國中生閱讀時間」，哪一項搜尋、查證與引用流程最完整？",
       "o": [
-        "先選核心關鍵字與時間條件，再查資料並檢視來源、日期、證據",
-        "只輸入「閱讀」並引用第一筆",
-        "搜尋後只看分享數",
-        "只挑符合自己原先想法的資料"
+        "先確定關鍵字與研究對象，再查資料來源及日期、比對研究方法，引用時註明出處",
+        "只看一則熱門短影片，再照抄評論",
+        "只查最符合預設立場的內容",
+        "下載任一圖片後刪除作者姓名"
       ],
       "a": 0,
-      "e": "有效檢索包含適當關鍵字與限定條件，也要判讀來源、日期與證據。",
+      "e": "A涵蓋問題界定、檢索、證據查核及合法引用；其他做法有選擇偏差或著作權問題。",
       "conceptIds": [
-        "chinese-7-1-language02-keywords",
-        "chinese-7-1-language02-query-refinement",
-        "chinese-7-1-language02-source-evaluation"
+        "chinese-7-1-language02-research-workflow"
       ]
     },
     {
-      "questionId": "260923133000053",
+      "questionId": "261121170300013",
       "revision": 1,
       "number": 13,
       "difficulty": "chinese-7-1-language02-hard",
@@ -362,22 +351,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "某篇網路文章與作業主題高度相關，但內容沒有任何證據，且來源不明。下列處理何者最符合教材？",
+      "q": "某學生查到新聞甲與研究報告乙：甲有記者姓名但未提供數據；乙有研究機構、樣本與方法，但發表於十年前。報告要談『今年最新狀況』，應如何處理？",
       "o": [
-        "相關就直接引用",
-        "標記疑慮並找其他可靠來源交叉比對",
-        "因為文字流暢就採用",
-        "因為很新就一定可信"
+        "直接只用甲，因為新聞較短",
+        "比較兩者資訊，另找近期可靠數據，並標出各資料適用的時間",
+        "只用乙，因為有研究兩字",
+        "兩篇資料都永遠不可能使用"
       ],
       "a": 1,
-      "e": "相關性只是判讀的一部分，仍要檢查來源、證據與可信度並交叉比對。",
+      "e": "研究方法完整不代表資料永遠適用；新聞具名也不代表有足夠證據，應補查近期來源與時間適用性。",
       "conceptIds": [
-        "chinese-7-1-language02-source-evaluation",
-        "chinese-7-1-language02-cross-check"
+        "chinese-7-1-language02-source-evaluation"
       ]
     },
     {
-      "questionId": "260923133000054",
+      "questionId": "261121170300014",
       "revision": 1,
       "number": 14,
       "difficulty": "chinese-7-1-language02-hard",
@@ -389,23 +377,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "學生讀〈飯包哲學〉時只記住故事細節，卻說不出各段重點與主旨。依本單元目的，最需要補強哪一組能力？",
+      "q": "閱讀〈飯包哲學〉時，若學生只記得便當的價格與店面大小，卻說不出作者為何比較兩位經營者，主要缺少哪種能力？",
       "o": [
-        "找重點、摘要與重新組織資訊",
-        "只查生字與作者年代",
-        "只練習標點",
-        "只把文章背熟"
+        "只缺乏成語字音辨識",
+        "只缺乏網頁搜尋技巧",
+        "從事件比較中掌握作者觀點",
+        "只缺乏標點符號練習"
       ],
-      "a": 0,
-      "e": "本單元以該文訓練找主旨、抓重點、辨識例證與重新組織資訊。",
+      "a": 2,
+      "e": "若只停留在零碎細節，未經分析比較與主旨歸納，就無法掌握作者透過人物對照所傳達的道理。",
       "conceptIds": [
-        "chinese-7-1-language02-fanbao-practice",
-        "chinese-7-1-language02-key-points",
-        "chinese-7-1-language02-summary"
+        "chinese-7-1-language02-grasp-viewpoint"
       ]
     },
     {
-      "questionId": "260923133000055",
+      "questionId": "261121170300015",
       "revision": 1,
       "number": 15,
       "difficulty": "chinese-7-1-language02-hard",
@@ -417,22 +403,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "同一份資料若用在「快速了解主題」與「撰寫正式報告」，閱讀與檢索方式應如何調整？",
+      "q": "閱讀同一篇資料時，甲想快速判斷是否相關，乙要寫一份需要引用證據的正式報告。最恰當的策略是？",
       "o": [
-        "兩種目的都只能逐字讀",
-        "應依目的選擇略讀、精確查詢與來源判讀等不同策略",
-        "只看篇幅決定",
-        "只看作者名字決定"
+        "兩人都只背標題",
+        "甲先瀏覽標題及重點，乙深入擷取資訊並評估來源與引用合法性",
+        "甲乙都只能逐字照抄",
+        "只要文章有圖，兩人都不必查核"
       ],
       "a": 1,
-      "e": "教材強調閱讀策略與檢索方式要依目的調整，不是所有情況都用同一方法。",
+      "e": "閱讀目的不同，選用策略也不同；正式引用更要查證資料的正確性與合法性。",
       "conceptIds": [
-        "chinese-7-1-language02-reading-purpose",
-        "chinese-7-1-language02-information-literacy"
+        "chinese-7-1-language02-reading-purpose"
       ]
     },
     {
-      "questionId": "260923133000056",
+      "questionId": "261121170300016",
       "revision": 1,
       "number": 16,
       "difficulty": "chinese-7-1-language02-hard",
@@ -444,21 +429,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "下列哪個錯誤最可能讓搜尋越改越差？",
+      "q": "搜尋「臺灣 海岸 垃圾」得到許多無關的旅遊文章，改成哪種查詢較能回應「海洋廢棄物來源」的研究問題？",
       "o": [
-        "根據結果逐步調整關鍵字",
-        "把原本精準的核心詞換成更模糊且無關的詞",
-        "增加必要的時間條件",
-        "改用同義詞測試"
+        "臺灣 海洋廢棄物 來源 調查",
+        "海",
+        "臺灣 好玩",
+        "垃圾 垃圾 垃圾"
       ],
-      "a": 1,
-      "e": "調整查詢應提高相關性；改成更模糊、無關的詞會降低搜尋品質。",
+      "a": 0,
+      "e": "要將問題核心概念化為精確關鍵詞，並加上地區、研究目標限定。",
       "conceptIds": [
         "chinese-7-1-language02-query-refinement"
       ]
     },
     {
-      "questionId": "260923133000057",
+      "questionId": "261121170300017",
       "revision": 1,
       "number": 17,
       "difficulty": "chinese-7-1-language02-hard",
@@ -470,23 +455,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "閱讀文章後，學生先列出各段核心句，再把相近內容合併，最後畫成架構圖。這個流程依序整合了哪些能力？",
+      "q": "讀短文：「校園增設雨水回收桶，清潔人員用回收水澆花，減少使用自來水。」若先摘出重點再畫流程，何者正確？",
       "o": [
-        "找重點→摘要→圖像化",
-        "預測→搜尋引擎→廣告",
-        "資料庫→提問→背誦",
-        "連結→標點→逐字抄寫"
+        "雨水回收→用於澆花→減少自來水使用",
+        "用自來水澆花→製造雨水→回收桶",
+        "清潔人員停止澆花→節水",
+        "雨水回收桶→所有用水都完全不需要"
       ],
       "a": 0,
-      "e": "先辨識核心、再合併重述、最後以圖呈現結構，依序是找重點、摘要、圖像化。",
+      "e": "先擷取措施與目的，再用箭頭呈現正確的使用流程；其餘選項扭曲因果或過度推論。",
       "conceptIds": [
-        "chinese-7-1-language02-key-points",
-        "chinese-7-1-language02-summary",
         "chinese-7-1-language02-visualization"
       ]
     },
     {
-      "questionId": "260923133000058",
+      "questionId": "261121170300018",
       "revision": 1,
       "number": 18,
       "difficulty": "chinese-7-1-language02-hard",
@@ -498,22 +481,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "某學生說：「搜尋引擎排第一的結果一定最可靠。」依教材，最佳反駁是什麼？",
+      "q": "學生表示：「搜尋結果的第一筆一定最可信，因為它排在最上面。」下列何者最能駁斥？",
       "o": [
-        "排名不等於可信度，仍須檢查來源、日期、證據與相關性",
-        "排名第一一定是資料庫",
-        "只要有網址就可靠",
-        "搜尋引擎無法找到任何公開資訊"
+        "搜尋排序不等於可信度，仍需檢查來源、證據與日期",
+        "排名第一就等於學術審查過",
+        "只要網頁有圖片便可靠",
+        "搜尋引擎找不到任何公開資料"
       ],
       "a": 0,
-      "e": "搜尋結果排序不能取代來源判讀與可信度評估。",
+      "e": "排名可能受相關性或廣告等因素影響，不能取代來源查證；應核對證據與資料時效。",
       "conceptIds": [
-        "chinese-7-1-language02-search-engine",
         "chinese-7-1-language02-source-evaluation"
       ]
     },
     {
-      "questionId": "260923133000059",
+      "questionId": "261121170300019",
       "revision": 1,
       "number": 19,
       "difficulty": "chinese-7-1-language02-hard",
@@ -525,22 +507,21 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "要判斷一則網路說法是否可信，下列哪一組檢查最完整？",
+      "q": "寫報告時要引用網站刊登的圖片，下列何者符合課本強調的原則？",
       "o": [
-        "作者／機構、發布日期、證據、與其他來源是否一致",
-        "字體、顏色、圖片大小",
-        "留言數、按讚數、分享數",
-        "網址長度、標題字數、段落數"
+        "圖片從搜尋引擎找到便可任意使用",
+        "只要裁掉浮水印就不必告知作者",
+        "先查清授權或使用條件，並依規定註明來源",
+        "改成灰階就不涉及著作權"
       ],
-      "a": 0,
-      "e": "教材要求注意來源、作者／機構、日期、證據、相關性與交叉比對。",
+      "a": 2,
+      "e": "網路圖片等資訊也應遵守著作權及標明出處；修改外觀或移除標示不會自動取得使用權。",
       "conceptIds": [
-        "chinese-7-1-language02-source-evaluation",
-        "chinese-7-1-language02-cross-check"
+        "chinese-7-1-language02-copyright"
       ]
     },
     {
-      "questionId": "260923133000060",
+      "questionId": "261121170300020",
       "revision": 1,
       "number": 20,
       "difficulty": "chinese-7-1-language02-hard",
@@ -552,19 +533,17 @@
         "driveDocumentId": "1HqxCdmftYGNlrhH6Q100spt5s9ICdAOQRdTBGy4_DyM",
         "lesson": "語文天地二〈閱讀策略與資料檢索〉"
       },
-      "q": "小組研究時，甲負責略讀找主旨，乙把資料整理成表格，丙檢查來源與日期。這三人的工作分別對應什麼？",
+      "q": "小組研究一篇介紹「校園午餐減塑」的短文。甲找出主要措施，乙比較兩種餐具的利弊，丙提出值得改進之處。三人依序運用了哪些技巧？",
       "o": [
-        "閱讀策略、圖像化整理、來源判讀",
-        "標點、背誦、抄寫",
-        "預測、廣告、造句",
-        "資料庫、作者生平、修辭"
+        "閱讀標題、連結經驗、搜尋引擎",
+        "擷取訊息、分析比較、反思評論",
+        "摘要重點、掌握觀點、網路辭典",
+        "轉成圖像、閱讀標題、字音查詢"
       ],
-      "a": 0,
-      "e": "略讀掌握主旨、表格呈現結構、來源日期判讀，正好整合本單元三類核心能力。",
+      "a": 1,
+      "e": "甲從文章找資料是擷取訊息；乙對照利弊是分析比較；丙評估後提出改進則是反思評論。",
       "conceptIds": [
-        "chinese-7-1-language02-skimming",
-        "chinese-7-1-language02-visualization",
-        "chinese-7-1-language02-source-evaluation"
+        "chinese-7-1-language02-multiple-strategies"
       ]
     }
   ]
