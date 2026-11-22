@@ -1,0 +1,245 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "section": "lesson-05",
+    "unit": "第五課 論語選",
+    "title": "第五課〈論語選〉｜學生訂正卷錯題",
+    "subtitle": "原卷19～45題中，與第五課及其延伸相關的錯題 7 題",
+    "difficulty": "chinese-7-1-l05-school-wrong-scan-20261122",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam"
+  },
+  "source": {
+    "school": "校名待核（學生訂正卷）",
+    "year": "未確認",
+    "exam": "七年級上學期國文測驗／學生錯題",
+    "sourceType": "school-exam",
+    "sourceDescription": "學生於對話中提供的原卷第19–45題照片；紅筆劃錯與學生作答可辨識，校名及官方答案卷未提供。",
+    "answerVerified": false,
+    "answerAuthority": "課文原文、題幹語意及前次逐選項解析；非學校官方答案",
+    "sourcePhotos": [
+      "8582.jpg",
+      "8583.jpg",
+      "8584.jpg",
+      "8588.jpg"
+    ],
+    "extractedAt": "2026-11-22"
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l05-wrong-20261122-q19",
+      "revision": 1,
+      "originalQuestionNumber": "19",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第五課〈論語選〉",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "A",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l05-learning-review"
+      ],
+      "q": "孔子所言「學而時習之」的學習方法，與下列何者相同？",
+      "o": [
+        "學而不思則罔，思而不學則殆",
+        "君子病無能焉，不病人之不己知也",
+        "日知其所亡，月無忘其所能",
+        "古之學者為己，今之學者為人。"
+      ],
+      "a": 2,
+      "e": "正解C。A「學而不思則罔」重點在學與思相輔相成，未強調複習；B「君子病無能焉」強調充實自己、不憂他人不了解，偏向「人不知而不慍」；C「日知其所亡，月無忘其所能」強調每日增長新知、定期不忘舊學，與「學而時習之」最相符；D「古之學者為己」比較求學動機，而非學後溫習。學生作答A，容易把學思並重與溫習鞏固混為一談。",
+      "sourcePhoto": "8582.jpg"
+    },
+    {
+      "questionId": "chinese-7-1-l05-wrong-20261122-q22",
+      "revision": 1,
+      "originalQuestionNumber": "22",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第五課〈論語選〉",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "C",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l05-modal-tone"
+      ],
+      "q": "「其恕乎！」這句話所表達的語氣，與下列哪一句話相同？",
+      "o": [
+        "但願人長久，千里共嬋娟",
+        "夕陽無限好，只是近黃昏",
+        "天生我材必有用，千金散盡還復來",
+        "嫦娥應悔偷靈藥，碧海青天夜夜心。"
+      ],
+      "a": 3,
+      "e": "正解D。「其恕乎」的「其」帶有大概、恐怕的推測語氣。A「但願」是祝願；B「只是近黃昏」帶惋惜與感嘆；C「必有用」表肯定、自信；D「應悔」是推想嫦娥可能後悔，屬推測。學生選C，誤把肯定語氣當成推測。",
+      "sourcePhoto": "8582.jpg"
+    },
+    {
+      "questionId": "chinese-7-1-l05-wrong-20261122-q23",
+      "revision": 1,
+      "originalQuestionNumber": "23",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第五課〈論語選〉",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "B",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l05-perseverance"
+      ],
+      "q": "「譬如為山，未成一簣，止，吾止也；譬如平地，雖覆一簣，進，吾往也。」依據這段文字，導致成敗差異的關鍵為何？",
+      "o": [
+        "「為山」與「平地」",
+        "「未成一簣」與「雖覆一簣」",
+        "「吾止」與「吾往」",
+        "「難」與「易」"
+      ],
+      "a": 2,
+      "e": "正解C。A「為山／平地」只是舉例情境，不是勝負因素；B「未成一簣／雖覆一簣」表示進度不同，一個快完成、一個剛起步，卻不必然決定成敗；C「吾止／吾往」分別是自己選擇停止與繼續，是否堅持才是關鍵；D「難／易」不是原文對比的中心。簣：盛土的竹筐。學生選B，把進度差異誤認為成敗原因。",
+      "sourcePhoto": "8582.jpg",
+      "introLabel": "延伸閱讀｜《論語・子罕》"
+    },
+    {
+      "questionId": "chinese-7-1-l05-wrong-20261122-q24",
+      "revision": 1,
+      "originalQuestionNumber": "24",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第五課〈論語選〉／延伸跨文本",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "D",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l05-yanhui-adversity"
+      ],
+      "q": "學校正在舉辦40達人選拔：IQ重理解記憶與學習；AQ重挫折忍受力與樂觀面對逆境；EQ重情緒管理與溝通；MQ重品格禮貌與體貼。孔子讚顏回：「賢哉！回也。一簞食，一瓢飲，在陋巷，人不堪其憂，回也不改其樂。」孔子最有可能推薦顏回參與哪一項選拔？",
+      "o": [
+        "IQ達人",
+        "AQ達人",
+        "EQ達人",
+        "MQ達人"
+      ],
+      "a": 1,
+      "e": "正解B。A智力商數著重理解、記憶與學習，引文未著重此點；B逆境商數重點是面對挫折與困難仍積極適應，顏回貧困中不改其樂，完全吻合；C情緒商數雖涉及調適心情，但題幹凸顯物質貧困這種逆境，AQ更精確；D道德商數指品格道德，顏回雖有德行，此段重心不在禮貌或體貼他人。學生選D，應練習由文章明確情境選出最貼切概念。",
+      "sourcePhoto": "8583.jpg",
+      "introLabel": "延伸閱讀｜顏回安貧樂道；選拔資格表由題幹文字保留"
+    },
+    {
+      "questionId": "chinese-7-1-l05-wrong-20261122-q26",
+      "revision": 1,
+      "originalQuestionNumber": "26",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第五課〈論語選〉／延伸跨文本",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "B",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l05-shu-empathy"
+      ],
+      "q": "庾公乘馬有的盧，或語令賣去。庾云：「賣之必有買者，即復害其主。寧可不安己而移於他人哉？昔孫叔敖殺兩頭蛇以為後人，古之美談，效之，不亦達乎！」下列何者最適合形容文中庾公的行為？",
+      "o": [
+        "我不欲人之加諸我也，吾亦欲無加諸人",
+        "君子病無能焉，不病人之不己知也",
+        "忠告而善道之，不可則止，無自辱焉",
+        "知之者不如好之者，好之者不如樂之者。"
+      ],
+      "a": 0,
+      "e": "正解A。故事中庾公不願將有風險的馬轉賣，使新主人受害。A自己不願遭受的事情，也不加諸他人，呼應「己所不欲，勿施於人」；B指君子憂自己能力不足，不憂別人不認識自己；C指勸告朋友要適可而止；D指學習知之、好之、樂之的不同層次。學生選B，混淆自我修養和推己及人的恕道。",
+      "sourcePhoto": "8583.jpg",
+      "introLabel": "跨文本｜《世說新語》庾公的盧馬；依原卷文字"
+    },
+    {
+      "questionId": "chinese-7-1-l05-wrong-20261122-q41",
+      "revision": 1,
+      "originalQuestionNumber": "41",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第五課〈論語選〉／延伸跨文本",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "D",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l05-confucius-chen-causes"
+      ],
+      "q": "根據〈甲文〉內容，孔子及弟子在陳絕糧的原因最不可能為下列何者？",
+      "o": [
+        "陳、蔡兩國刻意阻撓",
+        "用心講學至廢寢忘食",
+        "接受邀請欲前往楚國",
+        "熟悉各國情勢及缺失"
+      ],
+      "a": 1,
+      "e": "正解B。A陳、蔡兩國大夫派人阻撓，是直接原因；B孔子在受困後仍用心講學，是困境中的反應，不會造成絕糧；C楚昭王邀請孔子前往楚國，觸發陳、蔡大夫的擔憂；D孔子熟悉各國情勢與弊病，令兩國擔心他被楚重用。學生選D，混淆阻撓動機與事後反應。",
+      "sourcePhoto": "8588.jpg",
+      "introLabel": "跨文本閱讀｜甲文：孔子在陳絕糧",
+      "intro": "孔子在周遊列國時，受到楚昭王邀請，便帶弟子前往楚國。途經陳國與蔡國之時，陳、蔡兩國大夫互相謀劃，擔心孔子若為楚國所用，將使兩國處於危險，因此派人阻攔孔子。孔子和弟子無法繼續前行，導致絕糧七日，幾乎沒命。在困境中，孔子仍愈加用心講學，心志更堅，與弟子一起歷練，弦歌不斷。（依上傳原卷〈甲文〉整理）"
+    },
+    {
+      "questionId": "chinese-7-1-l05-wrong-20261122-q42",
+      "revision": 1,
+      "originalQuestionNumber": "42",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第五課〈論語選〉／延伸跨文本",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "D",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l05-confucius-persist"
+      ],
+      "q": "根據〈甲文〉內容，下列何者最能展現孔子在陳絕糧時的精神？",
+      "o": [
+        "踏出去才知道可不可以，不踏出去，永遠不知道行不行",
+        "面對比較心的解憂處方箋：我感謝我自己，成為我自己",
+        "永遠提醒自己速度其次，重要的是無論如何都不能停下",
+        "把心中想要維持的標準放掉，盡力而為也就覺得輕鬆了。"
+      ],
+      "a": 2,
+      "e": "正解C。A強調勇於開始嘗試，但原文重點是受困後仍堅持；B強調自我接納、減少比較，與守志講學不同；C不因困境停下，吻合孔子在絕糧時愈加講學、心志更堅；D降低標準、放下堅持，和孔子未改初衷的表現相反。學生選D，應辨認「持續堅持」與「放下標準」的差別。",
+      "sourcePhoto": "8588.jpg",
+      "introLabel": "跨文本閱讀｜甲文：孔子在陳絕糧",
+      "intro": "孔子在周遊列國時，受到楚昭王邀請，便帶弟子前往楚國。途經陳國與蔡國之時，陳、蔡兩國大夫互相謀劃，擔心孔子若為楚國所用，將使兩國處於危險，因此派人阻攔孔子。孔子和弟子無法繼續前行，導致絕糧七日，幾乎沒命。在困境中，孔子仍愈加用心講學，心志更堅，與弟子一起歷練，弦歌不斷。（依上傳原卷〈甲文〉整理）"
+    }
+  ]
+}
