@@ -1,0 +1,61 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "section": "lesson-06",
+    "unit": "第六課 那默默的一群",
+    "title": "第六課〈那默默的一群〉｜學生訂正卷錯題",
+    "subtitle": "原卷第31題｜具體舉例與概括評價",
+    "difficulty": "chinese-7-1-l06-school-wrong-scan-20261122",
+    "scoreMode": "percent",
+    "analysisEligible": true,
+    "preserveOptionOrder": true,
+    "sourceType": "school-exam"
+  },
+  "source": {
+    "school": "校名待核（學生訂正卷）",
+    "year": "未確認",
+    "exam": "七年級上學期國文測驗／學生錯題",
+    "sourceType": "school-exam",
+    "sourceDescription": "使用者上傳之國文段考紙本照片，第31題學生所選C遭紅筆劃錯；校名與官方解答未提供。",
+    "answerVerified": false,
+    "answerAuthority": "第六課課文與原卷文意判斷；非學校官方答案",
+    "sourcePhotos": [
+      "8584.jpg"
+    ],
+    "extractedAt": "2026-11-22"
+  },
+  "questions": [
+    {
+      "questionId": "chinese-7-1-l06-wrong-20261122-q31",
+      "revision": 1,
+      "originalQuestionNumber": "31",
+      "school": "校名待核（學生訂正卷）",
+      "year": "未確認",
+      "exam": "七年級上學期國文測驗／學生錯題",
+      "sourceType": "school-exam",
+      "lessonMapping": "第六課〈那默默的一群〉",
+      "type": "mcq",
+      "studentWrong": true,
+      "selectedPaperAnswer": "C",
+      "answerVerified": false,
+      "verificationStatus": "student-mark-verified-answer-inferred",
+      "preserveOptionOrder": true,
+      "conceptIds": [
+        "chinese-7-1-l06-illustration-vs-generalization"
+      ],
+      "q": "〈那默默的一群〉先點出道路清潔人員的敬業精神，再舉例說明其特質。下列哪一句不屬於舉例說明？",
+      "o": [
+        "她端著長長的掃把，急急的去追趕一個被風吹跑的空塑膠袋子。",
+        "她們經常拿著掃把在大風中追趕一塊碎紙或是一片落葉什麼的。",
+        "她們不厭其煩的清掃黃黃的泥巴，每天早上一次，持續十幾天。",
+        "這默默的一群，默默的表現著一個勞動者那種敦厚樸實的風範。"
+      ],
+      "a": 3,
+      "e": "正解D。A描寫追趕被風吹走的塑膠袋，是具體行動；B以碎紙、落葉舉出反覆出現的清潔工作情境；C以清掃泥巴十幾天的具體事例表現耐心與敬業；D則直接總結清潔人員敦厚樸實的風範，是概括評價，並非具體事例。學生選C，容易忽略具體事件、時間與人物動作就是舉例。",
+      "sourcePhoto": "8584.jpg"
+    }
+  ]
+}
