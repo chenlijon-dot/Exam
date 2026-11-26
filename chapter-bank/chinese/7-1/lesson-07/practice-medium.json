@@ -1,0 +1,810 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-07",
+    "unit": "第七課 兒時記趣",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依第七課 Google Drive 教材（p.110–121）及114學年度四育、五峰、宜昌國中第三次段考命題方向自編；閱讀短文為自編，非原校試題。",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "七上國文第七課_兒時記趣.md",
+      "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+      "lesson": "第七課〈兒時記趣〉"
+    },
+    "difficulty": "chinese-7-1-l07-medium",
+    "title": "第七課〈兒時記趣〉｜中等",
+    "subtitle": "國文第一冊｜自編題｜中等 30 題",
+    "difficultyLabel": "中等"
+  },
+  "questions": [
+    {
+      "questionId": "261126214000021",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「明察秋毫」中的「秋毫」原指什麼？",
+      "o": [
+        "秋天落下的枯葉",
+        "鳥獸秋天新長的細毛",
+        "極短的時間",
+        "秋季的露水"
+      ],
+      "a": 1,
+      "e": "秋毫引申為極微小的事物。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000022",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「私擬作群鶴舞空」的「擬」可換成何詞？",
+      "o": [
+        "比擬",
+        "擬訂",
+        "模仿聲音",
+        "預測"
+      ],
+      "a": 0,
+      "e": "作者在心中將蚊群比作白鶴。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000023",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「心之所向」指什麼？",
+      "o": [
+        "眼睛所受的傷",
+        "身體前進的方向",
+        "對朋友的承諾",
+        "心中所想到的情景"
+      ],
+      "a": 3,
+      "e": "向指往、到，引申為心念所至。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000024",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「故時有物外之趣」的「故」意思為何？",
+      "o": [
+        "從前",
+        "故意",
+        "所以",
+        "舊有"
+      ],
+      "a": 2,
+      "e": "前述細察是因，物外之趣是果。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000025",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「使之沖煙飛鳴」的「之」代指什麼？",
+      "o": [
+        "白鶴",
+        "煙霧",
+        "蚊子",
+        "蚊帳"
+      ],
+      "a": 2,
+      "e": "被留在帳中並穿煙飛鳴的是蚊子。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000026",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「項為之強」的「之」指什麼？",
+      "o": [
+        "白色蚊帳",
+        "抬頭觀蚊這件事",
+        "脖子",
+        "癩蝦蟆"
+      ],
+      "a": 1,
+      "e": "昂首觀察造成頸部僵硬。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000027",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「驅之別院」的「之」代指何者？",
+      "o": [
+        "癩蝦蟆",
+        "兩隻小蟲",
+        "作者",
+        "花臺"
+      ],
+      "a": 0,
+      "e": "神定後作者捉住並驅逐癩蝦蟆。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000028",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「徐噴以煙」的「以」最適合解為何者？",
+      "o": [
+        "已經",
+        "因為",
+        "認為",
+        "用"
+      ],
+      "a": 3,
+      "e": "煙是噴出的媒介。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000029",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「二蟲盡為所吞」的「為」如何解釋？",
+      "o": [
+        "因為",
+        "成為",
+        "為了",
+        "被"
+      ],
+      "a": 3,
+      "e": "為所構成被動句式。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000030",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「以叢草為林」的「為」最適合解為何者？",
+      "o": [
+        "替",
+        "被",
+        "當作",
+        "由於"
+      ],
+      "a": 2,
+      "e": "以A為B表示把A當作B。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000031",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「蓋一癩蝦蟆也」的「蓋」是何意？",
+      "o": [
+        "遮蔽",
+        "原來是",
+        "大概不會",
+        "建造"
+      ],
+      "a": 1,
+      "e": "此處揭示龐然大物的真實身分。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000032",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「方出神」的「方」表示何意？",
+      "o": [
+        "正在",
+        "四方",
+        "方法",
+        "剛才已經結束"
+      ],
+      "a": 0,
+      "e": "作者當時仍沉浸於想像。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000033",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「神定」意指何者？",
+      "o": [
+        "心神安定下來",
+        "神仙決定事情",
+        "決定開始觀察",
+        "精神更加恍惚"
+      ],
+      "a": 0,
+      "e": "受驚後恢復平靜才捉蝦蟆。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000034",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「或千或百」最適當的理解是什麼？",
+      "o": [
+        "白鶴數量固定為一千",
+        "精確計算出一千一百隻",
+        "只能在百與千之間選一數",
+        "形容蚊群數目很多"
+      ],
+      "a": 3,
+      "e": "此處不在精確報數。",
+      "conceptIds": [
+        "chinese-7-1-l07-sentence-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000035",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「使與臺齊」的行動目的為何？",
+      "o": [
+        "讓蟲蟻排列整齊",
+        "將花臺整修平坦",
+        "使視線接近花臺高度",
+        "避免陽光照射"
+      ],
+      "a": 2,
+      "e": "蹲身可從微小世界的視角觀察。",
+      "conceptIds": [
+        "chinese-7-1-l07-sentence-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000036",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「神遊其中」的正確理解是什麼？",
+      "o": [
+        "身體真的縮小進入草叢",
+        "心神彷彿遊歷想像世界",
+        "睡著後夢見遠方",
+        "離開花臺去旅行"
+      ],
+      "a": 1,
+      "e": "神遊是想像中的遊歷。",
+      "conceptIds": [
+        "chinese-7-1-l07-sentence-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000037",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「夏蚊成雷」主要凸顯何種感受？",
+      "o": [
+        "觸覺上的疼痛",
+        "聽覺上的響亮",
+        "嗅覺上的香氣",
+        "味覺上的苦澀"
+      ],
+      "a": 1,
+      "e": "以雷鳴誇大蚊群嗡嗡聲。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000038",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪個句子最明顯運用誇飾？",
+      "o": [
+        "他的呼喊彷彿震動整座山",
+        "窗外有三棵樹",
+        "他安靜地坐下",
+        "桌上放著一本書"
+      ],
+      "a": 0,
+      "e": "誇張聲勢以強化感受。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000039",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「果如鶴唳雲端」的「如」表現何種手法？",
+      "o": [
+        "倒反",
+        "設問",
+        "借代",
+        "譬喻"
+      ],
+      "a": 3,
+      "e": "以白鶴高鳴比擬蚊群飛鳴。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000040",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「凹者為ㄏㄨㄛˋ」應填哪個字？",
+      "o": [
+        "惑",
+        "豁",
+        "壑",
+        "獲"
+      ],
+      "a": 2,
+      "e": "壑是山谷。",
+      "conceptIds": [
+        "chinese-7-1-l07-orthography"
+      ]
+    },
+    {
+      "questionId": "261126214000041",
+      "revision": 1,
+      "number": 21,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「明察秋ㄏㄠˊ」應填哪個字？",
+      "o": [
+        "壕",
+        "豪",
+        "毫",
+        "嚎"
+      ],
+      "a": 2,
+      "e": "秋毫原指細毛。",
+      "conceptIds": [
+        "chinese-7-1-l07-orthography"
+      ]
+    },
+    {
+      "questionId": "261126214000042",
+      "revision": 1,
+      "number": 22,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪一組括號中的字讀音相同？",
+      "o": [
+        "（強）壯／項為之（強）",
+        "鶴（唳）／風聲鶴（唳）",
+        "（為）所吞／（為）之稱快",
+        "（藐）小／（描）寫"
+      ],
+      "a": 1,
+      "e": "兩個唳均讀ㄌㄧˋ。",
+      "conceptIds": [
+        "chinese-7-1-l07-pronunciation"
+      ]
+    },
+    {
+      "questionId": "261126214000043",
+      "revision": 1,
+      "number": 23,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "下列何種情境最適合用「明察秋毫」形容？",
+      "o": [
+        "從細微痕跡辨認物件差異",
+        "未看清楚就作判斷",
+        "大聲宣揚自己的成績",
+        "對眼前變化毫無察覺"
+      ],
+      "a": 0,
+      "e": "成語強調能察覺細微事物。",
+      "conceptIds": [
+        "chinese-7-1-l07-idiom"
+      ]
+    },
+    {
+      "questionId": "261126214000044",
+      "revision": 1,
+      "number": 24,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「怡然自得」使用最恰當的是何者？",
+      "o": [
+        "他焦急等待失物消息",
+        "他因失火而驚慌奔逃",
+        "他因爭執而怒不可遏",
+        "他在庭院賞花，心情自在"
+      ],
+      "a": 3,
+      "e": "自在愉快符合詞義。",
+      "conceptIds": [
+        "chinese-7-1-l07-idiom"
+      ]
+    },
+    {
+      "questionId": "261126214000045",
+      "revision": 1,
+      "number": 25,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "青雲白鶴的想像場景如何形成？",
+      "o": [
+        "將土礫堆成山丘",
+        "捉來真鶴放入青色布帳",
+        "在山中等待雷雨",
+        "將蚊子留在白帳中並慢慢噴煙"
+      ],
+      "a": 3,
+      "e": "第二段由實物與煙霧構成想像景象。",
+      "conceptIds": [
+        "chinese-7-1-l07-text-content"
+      ]
+    },
+    {
+      "questionId": "261126214000046",
+      "revision": 1,
+      "number": 26,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「以土礫凸者為丘，凹者為壑」說明何事？",
+      "o": [
+        "作者在花臺挖掘水渠",
+        "作者進行地理測量",
+        "從地面高低起伏想像山丘谷地",
+        "作者分辨不同種類昆蟲"
+      ],
+      "a": 2,
+      "e": "實景的形態成為想像依據。",
+      "conceptIds": [
+        "chinese-7-1-l07-text-content"
+      ]
+    },
+    {
+      "questionId": "261126214000047",
+      "revision": 1,
+      "number": 27,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "第一段與後三段的關係為何？",
+      "o": [
+        "先寫結局，再倒敘成年生活",
+        "提出觀察與趣味，後文具體舉例",
+        "各段主旨互不相干",
+        "第一段否定後三段的觀點"
+      ],
+      "a": 1,
+      "e": "總說與分述互相呼應。",
+      "conceptIds": [
+        "chinese-7-1-l07-structure"
+      ]
+    },
+    {
+      "questionId": "261126214000048",
+      "revision": 1,
+      "number": 28,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "《浮生六記》現今原著存有幾記，依教材說法？",
+      "o": [
+        "四記",
+        "六記",
+        "五記",
+        "二記"
+      ],
+      "a": 0,
+      "e": "教材指出後兩記亡佚。",
+      "conceptIds": [
+        "chinese-7-1-l07-literary-knowledge"
+      ]
+    },
+    {
+      "questionId": "261126214000049",
+      "revision": 1,
+      "number": 29,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "〈奇妙的飛行〉中，阿公店裡的白雲實際上是什麼？",
+      "o": [
+        "蒸食物冒出的水蒸氣",
+        "飛機排出的煙",
+        "室外飄來的雲",
+        "棉花堆"
+      ],
+      "a": 0,
+      "e": "作者將蒸氣想像成白雲。",
+      "conceptIds": [
+        "chinese-7-1-l07-extension"
+      ]
+    },
+    {
+      "questionId": "261126214000050",
+      "revision": 1,
+      "number": 30,
+      "difficulty": "chinese-7-1-l07-medium",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「伉儷情深」適合形容哪一種關係？",
+      "o": [
+        "朋友",
+        "師生",
+        "兄弟",
+        "夫妻"
+      ],
+      "a": 3,
+      "e": "教材注釋指夫妻感情深厚。",
+      "conceptIds": [
+        "chinese-7-1-l07-extension"
+      ]
+    }
+  ]
+}

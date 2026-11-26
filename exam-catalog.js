@@ -156,8 +156,8 @@
     },
     {
       key: 'chinese-7-1-lesson-07', code: '第七課', title: '兒時記趣', author: '沈復', page: 110,
-      type: 'lesson', referenceReady: false, bankMenuReady: false,
-      desc: '課次與頁碼已由實體課本目錄確認；題庫待建。'
+      type: 'lesson', referenceReady: true, bankMenuReady: true,
+      desc: 'p.110～121 教材已收錄；簡易 20 題／中等 30 題／困難 50 題自編題已建立。'
     },
     {
       key: 'chinese-7-1-lesson-08', code: '第八課', title: '紙船印象', author: '洪醒夫', page: 122,

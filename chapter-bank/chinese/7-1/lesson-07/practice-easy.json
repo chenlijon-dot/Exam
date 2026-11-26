@@ -1,0 +1,550 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-07",
+    "unit": "第七課 兒時記趣",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依第七課 Google Drive 教材（p.110–121）及114學年度四育、五峰、宜昌國中第三次段考命題方向自編；閱讀短文為自編，非原校試題。",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "七上國文第七課_兒時記趣.md",
+      "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+      "lesson": "第七課〈兒時記趣〉"
+    },
+    "difficulty": "chinese-7-1-l07-easy",
+    "title": "第七課〈兒時記趣〉｜簡易",
+    "subtitle": "國文第一冊｜自編題｜簡易 20 題",
+    "difficultyLabel": "簡易"
+  },
+  "questions": [
+    {
+      "questionId": "261126214000001",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "〈兒時記趣〉的作者是誰？",
+      "o": [
+        "袁枚",
+        "沈復",
+        "歸有光",
+        "蒲松齡"
+      ],
+      "a": 1,
+      "e": "作者為清代沈復。",
+      "conceptIds": [
+        "chinese-7-1-l07-author"
+      ]
+    },
+    {
+      "questionId": "261126214000002",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "沈復的字是什麼？",
+      "o": [
+        "三白",
+        "子瞻",
+        "太白",
+        "退之"
+      ],
+      "a": 0,
+      "e": "沈復字三白，號梅逸。",
+      "conceptIds": [
+        "chinese-7-1-l07-author"
+      ]
+    },
+    {
+      "questionId": "261126214000003",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "本文選自哪一本書？",
+      "o": [
+        "古文觀止",
+        "世說新語",
+        "聊齋志異",
+        "浮生六記"
+      ],
+      "a": 3,
+      "e": "本文節選自沈復的自傳體散文。",
+      "conceptIds": [
+        "chinese-7-1-l07-literary-knowledge"
+      ]
+    },
+    {
+      "questionId": "261126214000004",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "本文所屬的《浮生六記》篇章主題為何？",
+      "o": [
+        "浪遊記快",
+        "坎坷記愁",
+        "閒情記趣",
+        "養生記道"
+      ],
+      "a": 2,
+      "e": "卷二記述日常生活的閒情逸趣。",
+      "conceptIds": [
+        "chinese-7-1-l07-literary-knowledge"
+      ]
+    },
+    {
+      "questionId": "261126214000005",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「余憶童稚時」的「余」指誰？",
+      "o": [
+        "朋友",
+        "剩餘的物品",
+        "我",
+        "孩子們"
+      ],
+      "a": 2,
+      "e": "余是第一人稱代詞。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000006",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「藐小微物」的「藐」讀音為何？",
+      "o": [
+        "ㄇㄠˋ",
+        "ㄇㄧㄠˇ",
+        "ㄇㄧㄠˋ",
+        "ㄇㄧㄡˋ"
+      ],
+      "a": 1,
+      "e": "藐在此讀ㄇㄧㄠˇ。",
+      "conceptIds": [
+        "chinese-7-1-l07-pronunciation"
+      ]
+    },
+    {
+      "questionId": "261126214000007",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「項為之強」的「強」讀音為何？",
+      "o": [
+        "ㄐㄧㄤˋ",
+        "ㄑㄧㄤˊ",
+        "ㄑㄧㄤˇ",
+        "ㄐㄧㄤˊ"
+      ],
+      "a": 0,
+      "e": "強在此指僵硬，讀ㄐㄧㄤˋ。",
+      "conceptIds": [
+        "chinese-7-1-l07-pronunciation"
+      ]
+    },
+    {
+      "questionId": "261126214000008",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「鶴唳雲端」的「唳」讀音為何？",
+      "o": [
+        "ㄌㄧㄝˋ",
+        "ㄌㄟˋ",
+        "ㄌㄧˊ",
+        "ㄌㄧˋ"
+      ],
+      "a": 3,
+      "e": "唳指鳥類高聲鳴叫。",
+      "conceptIds": [
+        "chinese-7-1-l07-pronunciation"
+      ]
+    },
+    {
+      "questionId": "261126214000009",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「素帳」是什麼？",
+      "o": [
+        "青色的布幕",
+        "樸素的衣服",
+        "記帳的簿子",
+        "白色的蚊帳"
+      ],
+      "a": 3,
+      "e": "素在此指白色。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000010",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「徐噴以煙」的「徐」是什麼意思？",
+      "o": [
+        "反覆",
+        "突然",
+        "緩慢",
+        "迅速"
+      ],
+      "a": 2,
+      "e": "徐指慢慢地。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000011",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「項為之強」的「項」指哪裡？",
+      "o": [
+        "肩膀",
+        "脖子的後部",
+        "眼睛",
+        "額頭"
+      ],
+      "a": 1,
+      "e": "昂首太久使頸部僵硬。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000012",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「壑」的意思為何？",
+      "o": [
+        "山谷",
+        "山頂",
+        "樹林",
+        "河流"
+      ],
+      "a": 0,
+      "e": "凹下的土礫被想像為山谷。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000013",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「怡然自得」形容何種心情？",
+      "o": [
+        "愉快而滿足",
+        "驚慌失措",
+        "憤怒不平",
+        "憂愁不安"
+      ],
+      "a": 0,
+      "e": "怡然表示喜悅。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000014",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「呀然」表示什麼？",
+      "o": [
+        "哭泣的樣子",
+        "微笑的樣子",
+        "沉睡的樣子",
+        "吃驚的樣子"
+      ],
+      "a": 3,
+      "e": "作者見二蟲被吞而驚恐。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000015",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "作者把夏日蚊群想像成什麼？",
+      "o": [
+        "猛虎",
+        "蝴蝶",
+        "群鶴",
+        "魚群"
+      ],
+      "a": 2,
+      "e": "第二段寫群鶴舞空。",
+      "conceptIds": [
+        "chinese-7-1-l07-text-content"
+      ]
+    },
+    {
+      "questionId": "261126214000016",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "作者將叢草想像成什麼？",
+      "o": [
+        "高山",
+        "樹林",
+        "湖泊",
+        "城牆"
+      ],
+      "a": 1,
+      "e": "以叢草為林。",
+      "conceptIds": [
+        "chinese-7-1-l07-text-content"
+      ]
+    },
+    {
+      "questionId": "261126214000017",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "作者觀看二蟲相鬥時，哪種動物突然出現？",
+      "o": [
+        "白鶴",
+        "癩蝦蟆",
+        "蜻蜓",
+        "螞蟻"
+      ],
+      "a": 1,
+      "e": "第四段的龐然大物是癩蝦蟆。",
+      "conceptIds": [
+        "chinese-7-1-l07-text-content"
+      ]
+    },
+    {
+      "questionId": "261126214000018",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "作者最後如何處理癩蝦蟆？",
+      "o": [
+        "鞭打後趕到別院",
+        "放入蚊帳",
+        "捉來飼養",
+        "放進水池"
+      ],
+      "a": 0,
+      "e": "課文末句記述鞭數十、驅之別院。",
+      "conceptIds": [
+        "chinese-7-1-l07-text-content"
+      ]
+    },
+    {
+      "questionId": "261126214000019",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "全文以哪個詞語貫串？",
+      "o": [
+        "患難與共",
+        "知足常樂",
+        "勤學苦讀",
+        "物外之趣"
+      ],
+      "a": 3,
+      "e": "第一段提出物外之趣，後三段舉例。",
+      "conceptIds": [
+        "chinese-7-1-l07-theme"
+      ]
+    },
+    {
+      "questionId": "261126214000020",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l07-easy",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "全文四段採取何種結構？",
+      "o": [
+        "首尾都只寫議論",
+        "先分述再總結",
+        "先總說再分述",
+        "完全按照成年經歷排列"
+      ],
+      "a": 2,
+      "e": "第一段總述，後三段分述。",
+      "conceptIds": [
+        "chinese-7-1-l07-structure"
+      ]
+    }
+  ]
+}

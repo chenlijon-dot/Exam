@@ -1,0 +1,1330 @@
+{
+  "exam": {
+    "subject": "chinese",
+    "subjectLabel": "國文",
+    "semester": "7-1",
+    "semesterLabel": "七年級上學期",
+    "unitGroup": "book-1",
+    "unitGroupLabel": "第一冊",
+    "section": "lesson-07",
+    "unit": "第七課 兒時記趣",
+    "scoreMode": "percent",
+    "analysisEligible": false,
+    "preserveOptionOrder": false,
+    "sourceType": "practice-generated",
+    "sourceNote": "依第七課 Google Drive 教材（p.110–121）及114學年度四育、五峰、宜昌國中第三次段考命題方向自編；閱讀短文為自編，非原校試題。",
+    "source": {
+      "type": "practice-generated",
+      "authority": "Google Drive canonical",
+      "documentTitle": "七上國文第七課_兒時記趣.md",
+      "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+      "lesson": "第七課〈兒時記趣〉"
+    },
+    "difficulty": "chinese-7-1-l07-hard",
+    "title": "第七課〈兒時記趣〉｜困難",
+    "subtitle": "國文第一冊｜自編題｜困難 50 題",
+    "difficultyLabel": "困難"
+  },
+  "questions": [
+    {
+      "questionId": "261126214000051",
+      "revision": 1,
+      "number": 1,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "下列哪一組「之」的詞性及作用相同？",
+      "o": [
+        "項為「之」強／物外「之」趣",
+        "物外「之」趣／鳥獸「之」細毛",
+        "驅「之」別院／心「之」所向",
+        "昂首觀「之」／物外「之」趣"
+      ],
+      "a": 1,
+      "e": "第一組皆為結構助詞，其他各組混有代詞。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000052",
+      "revision": 1,
+      "number": 2,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪組「之」雖同為代詞，所指卻不同？",
+      "o": [
+        "使「之」沖煙飛鳴／驅「之」別院",
+        "昂首觀「之」／使「之」沖煙飛鳴",
+        "捉蝦蟆而驅「之」／鞭蝦蟆而逐「之」",
+        "觀蚊而留「之」／留蚊而看「之」"
+      ],
+      "a": 0,
+      "e": "前者蚊子，後者蝦蟆。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000053",
+      "revision": 1,
+      "number": 3,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪組「為」字的意義最接近？",
+      "o": [
+        "盡「為」所吞／身「為」班長",
+        "以叢草「為」林／盡「為」所吞",
+        "「為」民服務／以蟲蟻「為」獸",
+        "項「為」之強／「為」之怡然稱快"
+      ],
+      "a": 3,
+      "e": "兩句皆可解作因為。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000054",
+      "revision": 1,
+      "number": 4,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪一句的「為」和「二蟲盡為所吞」具有相同語法？",
+      "o": [
+        "為朋友準備茶水",
+        "以清水為鏡",
+        "花苗為風雨所摧",
+        "為此喜出望外"
+      ],
+      "a": 2,
+      "e": "為……所……標示被動。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000055",
+      "revision": 1,
+      "number": 5,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪句「以」與「徐噴以煙」的用法最接近？",
+      "o": [
+        "不以物喜",
+        "以叢草為林",
+        "以筆記錄花瓣形狀",
+        "何以如此悲傷"
+      ],
+      "a": 2,
+      "e": "以筆、以煙皆表示工具或媒介。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000056",
+      "revision": 1,
+      "number": 6,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「人問其故」與「故時有物外之趣」的「故」有何差異？",
+      "o": [
+        "前者是故意，後者是從前",
+        "前者是原因，後者是所以",
+        "兩者都是故意",
+        "兩者都是舊有"
+      ],
+      "a": 1,
+      "e": "名詞原因和連接因果的詞不同。",
+      "conceptIds": [
+        "chinese-7-1-l07-function-word"
+      ]
+    },
+    {
+      "questionId": "261126214000057",
+      "revision": 1,
+      "number": 7,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「又留蚊於素帳中」的「於」表達何種關係？",
+      "o": [
+        "動作發生的處所",
+        "動作的原因",
+        "比較的程度",
+        "時間的終點"
+      ],
+      "a": 0,
+      "e": "素帳中是留蚊的地點。",
+      "conceptIds": [
+        "chinese-7-1-l07-syntax"
+      ]
+    },
+    {
+      "questionId": "261126214000058",
+      "revision": 1,
+      "number": 8,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪句補上省略的主語後最合理？",
+      "o": [
+        "（二蟲）驅之別院",
+        "（蚊子）昂首觀之",
+        "（土礫）蹲其身",
+        "（癩蝦蟆）舌一吐而二蟲盡為所吞"
+      ],
+      "a": 3,
+      "e": "吐舌者是癩蝦蟆，其餘主語應為作者。",
+      "conceptIds": [
+        "chinese-7-1-l07-syntax"
+      ]
+    },
+    {
+      "questionId": "261126214000059",
+      "revision": 1,
+      "number": 9,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「作青雲白鶴觀」和「果如鶴唳雲端」的敘述焦點如何轉換？",
+      "o": [
+        "由成年回憶轉為未來預測",
+        "由蚊群實際變形轉為作者否認",
+        "由白鶴的行動轉為癩蝦蟆的聲音",
+        "由作者營造想像轉為所見所聞的效果"
+      ],
+      "a": 3,
+      "e": "前句是觀看方式，後句是比擬效果。",
+      "conceptIds": [
+        "chinese-7-1-l07-syntax"
+      ]
+    },
+    {
+      "questionId": "261126214000060",
+      "revision": 1,
+      "number": 10,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "下列補譯何者錯誤？",
+      "o": [
+        "「蹲其身」：蹲下自己的身子",
+        "「鬥草間」：在草叢間相鬥",
+        "「鞭數十」：拿出數十條鞭子",
+        "「驅之別院」：把牠趕到別院"
+      ],
+      "a": 2,
+      "e": "鞭數十指鞭打數十下，不是鞭子的數量。",
+      "conceptIds": [
+        "chinese-7-1-l07-syntax"
+      ]
+    },
+    {
+      "questionId": "261126214000061",
+      "revision": 1,
+      "number": 11,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「以土礫凸者為丘，凹者為壑」後半句省略了什麼？",
+      "o": [
+        "為丘",
+        "以土礫",
+        "凹者",
+        "壑"
+      ],
+      "a": 1,
+      "e": "後半可補為以土礫凹者為壑。",
+      "conceptIds": [
+        "chinese-7-1-l07-syntax"
+      ]
+    },
+    {
+      "questionId": "261126214000062",
+      "revision": 1,
+      "number": 12,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「項為之強」與「勉強答應」的「強」有何差異？",
+      "o": [
+        "前者僵硬，後者勉力而為",
+        "前者強壯，後者僵硬",
+        "兩者皆指堅強",
+        "兩者皆指強迫他人"
+      ],
+      "a": 0,
+      "e": "兩詞讀音及語義均不同。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000063",
+      "revision": 1,
+      "number": 13,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪句「素」與「素帳」的意思最接近？",
+      "o": [
+        "以素帛包裹物件",
+        "素來勤勉",
+        "素未謀面",
+        "茹素多年"
+      ],
+      "a": 0,
+      "e": "素帛指白色未染的絲織物。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000064",
+      "revision": 1,
+      "number": 14,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「觀之，興正濃」與「興建校舍」的「興」差異為何？",
+      "o": [
+        "兩者都指建造",
+        "兩者都指心情愉快",
+        "前者創建，後者興趣",
+        "前者興致，後者興起建造"
+      ],
+      "a": 3,
+      "e": "興致讀ㄒㄧㄥˋ，興建讀ㄒㄧㄥ。",
+      "conceptIds": [
+        "chinese-7-1-l07-word-meaning"
+      ]
+    },
+    {
+      "questionId": "261126214000065",
+      "revision": 1,
+      "number": 15,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "下列用字何者完全正確？",
+      "o": [
+        "仰首觀鶴，山豁幽深，龐燃大物",
+        "昂首仰望，細查紋裡，貽然自得",
+        "昂首仰望，細察紋理，怡然自得",
+        "藐小微物，鶴淚雲端，呀然驚恐"
+      ],
+      "a": 2,
+      "e": "其餘有紋理、怡然、壑、龐然或唳的誤字。",
+      "conceptIds": [
+        "chinese-7-1-l07-orthography"
+      ]
+    },
+    {
+      "questionId": "261126214000066",
+      "revision": 1,
+      "number": 16,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪句最能同時體現「明察秋毫」與「物外之趣」？",
+      "o": [
+        "計算葉片價格後決定購買",
+        "細看葉脈的分岔，想像自己走在山間道路",
+        "背誦植物名稱而不曾觀察",
+        "看到葉片立刻掃掉"
+      ],
+      "a": 1,
+      "e": "先細察再由形態延伸想像。",
+      "conceptIds": [
+        "chinese-7-1-l07-idiom"
+      ]
+    },
+    {
+      "questionId": "261126214000067",
+      "revision": 1,
+      "number": 17,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「風聲鶴唳」與本課「鶴唳雲端」在情感上有何差異？",
+      "o": [
+        "兩者皆形容恐懼",
+        "前者常形容驚慌疑懼，後者是愉悅想像",
+        "前者形容歡樂，後者形容戰敗",
+        "兩者都指實際看到白鶴"
+      ],
+      "a": 1,
+      "e": "成語與課文語境須分別理解。",
+      "conceptIds": [
+        "chinese-7-1-l07-idiom"
+      ]
+    },
+    {
+      "questionId": "261126214000068",
+      "revision": 1,
+      "number": 18,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪一組詞語的情緒關係最接近「怡然」與「呀然」？",
+      "o": [
+        "欣然／愕然",
+        "欣然／愉然",
+        "悚然／駭然",
+        "茫然／惘然"
+      ],
+      "a": 0,
+      "e": "前者愉快，後者吃驚，情緒有別。",
+      "conceptIds": [
+        "chinese-7-1-l07-idiom"
+      ]
+    },
+    {
+      "questionId": "261126214000069",
+      "revision": 1,
+      "number": 19,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「夏蚊成雷」的誇飾效果主要來自什麼？",
+      "o": [
+        "用反問否定蚊子存在",
+        "強調天候真的發生雷雨",
+        "將蚊群聲響改寫為沉默",
+        "將微小昆蟲的群體聲響放大為雷鳴"
+      ],
+      "a": 3,
+      "e": "聲響的尺度被誇大。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000070",
+      "revision": 1,
+      "number": 20,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「拔山倒樹」與「夏蚊成雷」共同特點何在？",
+      "o": [
+        "用反問強調答案",
+        "記錄實際自然災害",
+        "放大平凡景象的聲勢或規模",
+        "以顏色對比抒情"
+      ],
+      "a": 2,
+      "e": "二者都運用誇飾，但感官焦點不同。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000071",
+      "revision": 1,
+      "number": 21,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「以叢草為林」與「拔山倒樹」的關係何者最合理？",
+      "o": [
+        "後句否定前句所有想像",
+        "兩句分別描寫真森林與真地震",
+        "先建立微觀世界，後以誇飾呈現蝦蟆闖入的震撼",
+        "兩句都是作者成年遊山記錄"
+      ],
+      "a": 2,
+      "e": "想像中的草木成為山林，蝦蟆出現便顯得巨大。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000072",
+      "revision": 1,
+      "number": 22,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪句兼具視覺與聽覺的描寫？",
+      "o": [
+        "淡淡花香飄入屋內",
+        "白色鳥群掠過湖面，鳴聲清亮",
+        "石頭摸起來冰涼",
+        "茶入口微苦而回甘"
+      ],
+      "a": 1,
+      "e": "白色鳥群為視覺，鳴聲為聽覺。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000073",
+      "revision": 1,
+      "number": 23,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "若將「夏蚊成雷」改為「許多蚊子在飛」，主要失去什麼？",
+      "o": [
+        "強烈聲響與誇張帶來的趣味",
+        "蚊子實際存在的資訊",
+        "作者第一人稱身分",
+        "時間先後的全部線索"
+      ],
+      "a": 0,
+      "e": "改句保有蚊群但弱化聲音與表現力。",
+      "conceptIds": [
+        "chinese-7-1-l07-rhetoric"
+      ]
+    },
+    {
+      "questionId": "261126214000074",
+      "revision": 1,
+      "number": 24,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "第二段由「私擬」到「果然」的過程，最能反映什麼？",
+      "o": [
+        "蚊子由昆蟲變成鳥類",
+        "作者認錯物種後得到科學證實",
+        "作者開始懷疑視力",
+        "想像投入到彷彿親見其境"
+      ],
+      "a": 3,
+      "e": "果然描述主觀想像的真切感。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000075",
+      "revision": 1,
+      "number": 25,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「昂首觀之，項為之強」在全文的功能為何？",
+      "o": [
+        "暗示蚊群的危險性",
+        "批評作者不懂保護眼睛",
+        "說明作者從小有頸部疾病",
+        "以身體反應側寫觀賞的專注"
+      ],
+      "a": 3,
+      "e": "長時間抬頭使頸僵硬，反映入神。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000076",
+      "revision": 1,
+      "number": 26,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "第二段與第三段最大的共同點為何？",
+      "o": [
+        "都需要煙霧輔助",
+        "都以驚恐結束",
+        "將日常小物轉換成廣大自然景象",
+        "都描寫作者驅逐動物"
+      ],
+      "a": 2,
+      "e": "兩段均藉想像擴張生活空間。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000077",
+      "revision": 1,
+      "number": 27,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "第三段先寫蹲身再寫神遊，這樣安排有何作用？",
+      "o": [
+        "表示神遊必須先睡著",
+        "交代觀察位置如何促成想像",
+        "說明作者想逃離庭院",
+        "暗示花臺比作者高很多"
+      ],
+      "a": 1,
+      "e": "低視角讓微小景象更容易被想像成山林。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000078",
+      "revision": 1,
+      "number": 28,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "第四段的「蓋一癩蝦蟆也」為何放在「龐然大物」之後？",
+      "o": [
+        "先呈現想像中的巨大形象，再揭露實物",
+        "避免讀者知道蝦蟆的外形",
+        "證明大物是虛構而不存在",
+        "交代蝦蟆成年後的變化"
+      ],
+      "a": 0,
+      "e": "敘述順序形成反差與趣味。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000079",
+      "revision": 1,
+      "number": 29,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "第四段最合理的情緒轉折為何？",
+      "o": [
+        "興致濃厚、突然驚恐、平靜後採取行動",
+        "驚恐、欣喜、睡著",
+        "憤怒、好奇、漠然",
+        "平靜、無聊、喜悅"
+      ],
+      "a": 0,
+      "e": "由興正濃、呀然驚恐到神定可知。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000080",
+      "revision": 1,
+      "number": 30,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "對作者鞭打癩蝦蟆的解讀何者較符合文本且不過度延伸？",
+      "o": [
+        "作者已證明蝦蟆是邪惡動物",
+        "作者一生都厭惡所有兩棲類",
+        "作者主張以鞭打保護自然",
+        "童年想像被破壞後的情緒反應"
+      ],
+      "a": 3,
+      "e": "原文只記童年當下反應，不能推及一生或道德規則。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000081",
+      "revision": 1,
+      "number": 31,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "哪項說法最能區別第二段和第四段的「趣」？",
+      "o": [
+        "第二段無想像，第四段全為虛構",
+        "第二段記成年旅行，第四段記童年",
+        "第二段營造美景，第四段記趣中突發的驚恐",
+        "兩段皆以怡然自得結尾"
+      ],
+      "a": 2,
+      "e": "第四段有趣味也有意外，並非始終愉快。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000082",
+      "revision": 1,
+      "number": 32,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "如果刪除第一段，後文最直接失去何種功能？",
+      "o": [
+        "交代蝦蟆的種類",
+        "統攝三件趣事的觀察與想像主題",
+        "說明蚊帳的顏色",
+        "記錄作者如何趕蝦蟆"
+      ],
+      "a": 1,
+      "e": "第一段總說，使後三段有共同主軸。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000083",
+      "revision": 1,
+      "number": 33,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「明察秋毫」是否足以單獨解釋所有物外之趣？",
+      "o": [
+        "足夠，想像在本文毫無作用",
+        "不足，細察之外還須有豐富想像",
+        "不足，主要還須購買玩具",
+        "足夠，只要看得遠就能獲得相同體驗"
+      ],
+      "a": 1,
+      "e": "課文由仔細觀察進入想像世界。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000084",
+      "revision": 1,
+      "number": 34,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "何者最符合全文實景與想像的對應？",
+      "o": [
+        "蚊群對群鶴、叢草對森林、土礫對丘壑",
+        "蚊群對森林、叢草對白鶴、土礫對昆蟲",
+        "白鶴對癩蝦蟆、煙霧對土礫、草對雷聲",
+        "二蟲對青雲、蚊帳對山丘、蝦蟆對白鶴"
+      ],
+      "a": 0,
+      "e": "對應須以各段原文為準。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000085",
+      "revision": 1,
+      "number": 35,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "「物外之趣」並非什麼？",
+      "o": [
+        "對生活細節產生的新鮮體驗",
+        "從尋常事物延伸出的趣味",
+        "觀察與想像共同帶來的感受",
+        "必須離開現實環境才有的樂趣"
+      ],
+      "a": 3,
+      "e": "物外不是空間上的遠離，而是超越物件原有意義。",
+      "conceptIds": [
+        "chinese-7-1-l07-interpretation"
+      ]
+    },
+    {
+      "questionId": "261126214000086",
+      "revision": 1,
+      "number": 36,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "若研究沈復如何從園林、花草中獲得樂趣，依教材最適合先讀哪一卷？",
+      "o": [
+        "坎坷記愁",
+        "閨房記樂",
+        "閒情記趣",
+        "養生記道"
+      ],
+      "a": 2,
+      "e": "卷二以日常閒情逸致為主題。",
+      "conceptIds": [
+        "chinese-7-1-l07-literary-knowledge"
+      ]
+    },
+    {
+      "questionId": "261126214000087",
+      "revision": 1,
+      "number": 37,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "依教材介紹，下列對《浮生六記》的判斷何者正確？",
+      "o": [
+        "主要是一部軍事史書",
+        "六卷皆完整保存且全為虛構",
+        "以個人經歷及情感為核心，家庭生活占重要地位",
+        "作品只記錄仕途而不談生活"
+      ],
+      "a": 2,
+      "e": "它是自傳體散文，教材特別指出家庭生活。",
+      "conceptIds": [
+        "chinese-7-1-l07-literary-knowledge"
+      ]
+    },
+    {
+      "questionId": "261126214000088",
+      "revision": 1,
+      "number": 38,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "段考延伸文章提及〈中山記歷〉，依教材對版本的說明，應如何理解？",
+      "o": [
+        "只要標題相同就證明所有現存文字是真跡",
+        "可知其原定主題是琉球見聞，但不宜據此認定現存文字必為沈復原作",
+        "教材既稱亡佚，便不可能有任何同名文字",
+        "第五記原定主題是家庭變故"
+      ],
+      "a": 1,
+      "e": "教材指出後兩記亡佚；同名文本與原作身分須區別。",
+      "conceptIds": [
+        "chinese-7-1-l07-literary-knowledge"
+      ]
+    },
+    {
+      "questionId": "261126214000089",
+      "revision": 1,
+      "number": 39,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "《浮生六記》被教材視為珍貴的原因之一為何？",
+      "o": [
+        "古典作品較少以長篇幅記敘家庭生活",
+        "它是最早的漢語字典",
+        "它首次發明文言文",
+        "它完整記錄所有清代帝王"
+      ],
+      "a": 0,
+      "e": "教材以家庭生活書寫的稀有性說明價值。",
+      "conceptIds": [
+        "chinese-7-1-l07-literary-knowledge"
+      ]
+    },
+    {
+      "questionId": "261126214000090",
+      "revision": 1,
+      "number": 40,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "〈奇妙的飛行〉由搭飛機寫到紅龜店，其主要轉折是什麼？",
+      "o": [
+        "由童年遊戲轉為成年經商",
+        "由喜愛甜食轉為討厭阿公",
+        "由真實飛行轉為學習駕駛技術",
+        "由渴望親身穿雲轉為在日常蒸氣中想像飛行"
+      ],
+      "a": 3,
+      "e": "蒸氣與風扇成為替代想像媒介。",
+      "conceptIds": [
+        "chinese-7-1-l07-extension"
+      ]
+    },
+    {
+      "questionId": "261126214000091",
+      "revision": 1,
+      "number": 41,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "〈奇妙的飛行〉以味道分辨兩種點心，最能表現哪種能力？",
+      "o": [
+        "以精確數字計算食物重量",
+        "單靠視覺判斷食物種類",
+        "透過聽覺測量蒸氣速度",
+        "運用嗅覺細察相同外觀下的差異"
+      ],
+      "a": 3,
+      "e": "水氣同樣白，氣味不同。",
+      "conceptIds": [
+        "chinese-7-1-l07-extension"
+      ]
+    },
+    {
+      "questionId": "261126214000092",
+      "revision": 1,
+      "number": 42,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "〈奇妙的飛行〉的大鐵鍋「高興地」發出歡呼聲，主要修辭為何？",
+      "o": [
+        "借代",
+        "設問",
+        "轉化中的擬人",
+        "倒反"
+      ],
+      "a": 2,
+      "e": "賦予鐵鍋人的情緒和行為。",
+      "conceptIds": [
+        "chinese-7-1-l07-extension"
+      ]
+    },
+    {
+      "questionId": "261126214000093",
+      "revision": 1,
+      "number": 43,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "兩篇教材都將尋常事物想像為新奇場景，媒介有何差異？",
+      "o": [
+        "兩人都只靠夢境",
+        "沈復借蚊煙與草土，鄭宗弦借蒸氣與風",
+        "沈復只用嗅覺，鄭宗弦只用聽覺",
+        "兩人都在真實飛機中完成所有幻想"
+      ],
+      "a": 1,
+      "e": "兩篇具體生活場景不同。",
+      "conceptIds": [
+        "chinese-7-1-l07-extension"
+      ]
+    },
+    {
+      "questionId": "261126214000094",
+      "revision": 1,
+      "number": 44,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "阿公提醒「小心燙」在飛行想像中有何作用？",
+      "o": [
+        "提醒讀者想像場景仍有現實環境及安全限制",
+        "證明作者已經真的飛上天空",
+        "說明阿公反對所有想像",
+        "暗示紅龜完全不能食用"
+      ],
+      "a": 0,
+      "e": "蒸氣仍是熱的，想像不能消除現實風險。",
+      "conceptIds": [
+        "chinese-7-1-l07-extension"
+      ]
+    },
+    {
+      "questionId": "261126214000095",
+      "revision": 1,
+      "number": 45,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "閱讀：小庭觀察水滴在葉面聚成圓珠，想像一排小燈籠；拿放大鏡看時，又發現葉脈交錯如路網。何者最符合本課主旨？",
+      "o": [
+        "由具體細節發展出新鮮想像",
+        "不必觀察就可斷定事實",
+        "只要用儀器就能獲得樂趣",
+        "想像必須與實物毫無關聯"
+      ],
+      "a": 0,
+      "e": "水珠與葉脈的觀察提供想像依據。",
+      "conceptIds": [
+        "chinese-7-1-l07-reading"
+      ]
+    },
+    {
+      "questionId": "261126214000096",
+      "revision": 1,
+      "number": 46,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "閱讀：小安見街角石縫長出嫩芽，以為它是攀越峭壁的小旅人；朋友說那只是草，小安回答：「我知道，但換個角度看更有意思。」此回答說明什麼？",
+      "o": [
+        "認為友人沒有視力",
+        "拒絕接受任何事實",
+        "認為草真的能走路",
+        "清楚區分現實與想像仍能享受樂趣"
+      ],
+      "a": 3,
+      "e": "本課的趣味不是將幻想當作客觀事實。",
+      "conceptIds": [
+        "chinese-7-1-l07-reading"
+      ]
+    },
+    {
+      "questionId": "261126214000097",
+      "revision": 1,
+      "number": 47,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "閱讀：老師展示兩片外形相近的葉子，學生先說完全一樣，仔細比較後才發現邊緣鋸齒不同。此事與本課哪句最相應？",
+      "o": [
+        "鞭數十",
+        "驅之別院",
+        "必細察其紋理",
+        "蓋一癩蝦蟆也"
+      ],
+      "a": 2,
+      "e": "細察使人看見原本忽略的差異。",
+      "conceptIds": [
+        "chinese-7-1-l07-reading"
+      ]
+    },
+    {
+      "questionId": "261126214000098",
+      "revision": 1,
+      "number": 48,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "閱讀：甲說「石頭像睡著的象」，乙說「石頭重約兩公斤」。兩人的敘述差別何在？",
+      "o": [
+        "甲是客觀測量，乙是誇飾",
+        "甲用想像比擬，乙描述可測量的特徵",
+        "兩者都只在抒發恐懼",
+        "兩者都不能由觀察得到"
+      ],
+      "a": 1,
+      "e": "想像描述與可驗證的測量屬不同層次。",
+      "conceptIds": [
+        "chinese-7-1-l07-reading"
+      ]
+    },
+    {
+      "questionId": "261126214000099",
+      "revision": 1,
+      "number": 49,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "閱讀：一兒俯視池畔，見蟻負食而行，擬為商旅運糧。風至，蟻散，兒乃笑而起。下列對文意的說明何者最合理？",
+      "o": [
+        "孩子真的指揮商旅運糧",
+        "孩子由觀察螞蟻搬運食物而想像商旅",
+        "風起使孩子遭遇重大災難",
+        "孩子因不懂螞蟻而放棄觀察"
+      ],
+      "a": 1,
+      "e": "擬為表示比擬，乃笑而起呈現輕鬆反應。",
+      "conceptIds": [
+        "chinese-7-1-l07-reading"
+      ]
+    },
+    {
+      "questionId": "261126214000100",
+      "revision": 1,
+      "number": 50,
+      "difficulty": "chinese-7-1-l07-hard",
+      "sourceType": "practice-generated",
+      "source": {
+        "type": "practice-generated",
+        "authority": "Google Drive canonical",
+        "documentTitle": "七上國文第七課_兒時記趣.md",
+        "driveDocumentId": "1hVbJykAH0dp3bNaPh8ciuTbz2QxxYM7O",
+        "lesson": "第七課〈兒時記趣〉"
+      },
+      "q": "閱讀：一兒俯視池畔，見蟻負食而行，擬為商旅運糧。風至，蟻散，兒乃笑而起。若與〈兒時記趣〉末段比較，最恰當的是什麼？",
+      "o": [
+        "都寫想像情境受到外界變化影響，但結尾情緒不同",
+        "兩篇孩子都鞭打動物",
+        "兩篇都描寫群鶴飛鳴",
+        "兩篇都以成年回憶總結人生哲理"
+      ],
+      "a": 0,
+      "e": "此段孩子笑而起，沈復則驚恐後驅蝦蟆。",
+      "conceptIds": [
+        "chinese-7-1-l07-reading"
+      ]
+    }
+  ]
+}

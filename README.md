@@ -1226,6 +1226,8 @@ chapter-bank/chinese/7-1/lesson-06/practice-hard.json
 
 ---
 
+2026-11-26：第七課〈兒時記趣〉自編題庫新增簡易 20／中等 30／困難 50 題，共 100 題，採百分比計分、永久 questionId 與 revision: 1。資料位於 `chapter-bank/chinese/7-1/lesson-07/practice-{easy,medium,hard}.json`，透過 `exam-chinese-school.js` 載入；參考教材與三校段考命題方向，自編與真題分離。
+
 # 17. 自然七上 chapter tree
 
 目前 authority 章節樹：
